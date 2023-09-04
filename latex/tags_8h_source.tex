@@ -1,0 +1,144 @@
+\doxysection{tags.\+h}
+\hypertarget{tags_8h_source}{}\label{tags_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/parallel/tags.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/parallel/tags.h}}
+\mbox{\hyperlink{tags_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00001}00001\ \textcolor{comment}{//\ -\/*-\/\ C++\ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00003}00003\ \textcolor{comment}{//\ Copyright\ (C)\ 2007-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00005}00005\ \textcolor{comment}{//\ This\ file\ is\ part\ of\ the\ GNU\ ISO\ C++\ Library.\ \ This\ library\ is\ free}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00006}00006\ \textcolor{comment}{//\ software;\ you\ can\ redistribute\ it\ and/or\ modify\ it\ under\ the\ terms}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00007}00007\ \textcolor{comment}{//\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by\ the\ Free\ Software}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00008}00008\ \textcolor{comment}{//\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)\ any\ later}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00009}00009\ \textcolor{comment}{//\ version.}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00011}00011\ \textcolor{comment}{//\ This\ library\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,\ but}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00012}00012\ \textcolor{comment}{//\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00013}00013\ \textcolor{comment}{//\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the\ GNU}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00014}00014\ \textcolor{comment}{//\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00016}00016\ \textcolor{comment}{//\ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00017}00017\ \textcolor{comment}{//\ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00018}00018\ \textcolor{comment}{//\ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00020}00020\ \textcolor{comment}{//\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00021}00021\ \textcolor{comment}{//\ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00022}00022\ \textcolor{comment}{//\ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00023}00023\ \textcolor{comment}{//\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00031}00031\ \textcolor{comment}{//\ Written\ by\ Johannes\ Singler\ and\ Felix\ Putze.}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00033}00033\ \textcolor{preprocessor}{\#ifndef\ \_GLIBCXX\_PARALLEL\_TAGS\_H}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00034}00034\ \textcolor{preprocessor}{\#define\ \_GLIBCXX\_PARALLEL\_TAGS\_H\ 1}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00036}00036\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{omp_8h}{omp.h}}>}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00037}00037\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{types_8h}{parallel/types.h}}>}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00039}00039\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace____gnu__parallel}{\_\_gnu\_parallel}}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00040}00040\ \{}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00042}\mbox{\hyperlink{struct____gnu__parallel_1_1sequential__tag}{00042}}\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__parallel_1_1sequential__tag}{sequential\_tag}}\ \{\ \};}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00046}\mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag}{00046}}\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag}{parallel\_tag}}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00047}00047\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00048}00048\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00049}\mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag_a341dd9d34ff8f133cd1fadcfbaf37316}{00049}}\ \ \ \ \ \ \ \mbox{\hyperlink{namespace____gnu__parallel_a05e502e51bfc3233671730f74a44dc6a}{\_ThreadIndex}}\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag_a341dd9d34ff8f133cd1fadcfbaf37316}{\_M\_num\_threads}};}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00051}00051\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00053}\mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag_a078f748f2174e172bc02da9e8858e10e}{00053}}\ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag_a078f748f2174e172bc02da9e8858e10e}{parallel\_tag}}()}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00054}00054\ \ \ \ \ \ \ \{\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag_a341dd9d34ff8f133cd1fadcfbaf37316}{\_M\_num\_threads}}\ =\ 0;\ \}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00058}\mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag_a861ef80b7465fe2984625ebf5f1bea97}{00058}}\ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag_a861ef80b7465fe2984625ebf5f1bea97}{parallel\_tag}}(\mbox{\hyperlink{namespace____gnu__parallel_a05e502e51bfc3233671730f74a44dc6a}{\_ThreadIndex}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_num\_threads}})}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00059}00059\ \ \ \ \ \ \ \{\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag_a341dd9d34ff8f133cd1fadcfbaf37316}{\_M\_num\_threads}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_num\_threads}};\ \}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00063}\mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag_a18b32829b31b902699690b750e190e59}{00063}}\ \ \ \ \ \ \ \mbox{\hyperlink{namespace____gnu__parallel_a05e502e51bfc3233671730f74a44dc6a}{\_ThreadIndex}}\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag_a18b32829b31b902699690b750e190e59}{\_\_get\_num\_threads}}()}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00064}00064\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag_a341dd9d34ff8f133cd1fadcfbaf37316}{\_M\_num\_threads}}\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{omp_8h_a54430ed3c727a27db57290ec784b0b09}{omp\_get\_max\_threads}}();}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag_a341dd9d34ff8f133cd1fadcfbaf37316}{\_M\_num\_threads}};}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00069}00069\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00073}\mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag_ac4b2be3fbb957a3754b13167428ab6eb}{00073}}\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag_ac4b2be3fbb957a3754b13167428ab6eb}{set\_num\_threads}}(\mbox{\hyperlink{namespace____gnu__parallel_a05e502e51bfc3233671730f74a44dc6a}{\_ThreadIndex}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_num\_threads}})}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00074}00074\ \ \ \ \ \ \ \{\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag_a341dd9d34ff8f133cd1fadcfbaf37316}{\_M\_num\_threads}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_num\_threads}};\ \}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00075}00075\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00079}\mbox{\hyperlink{struct____gnu__parallel_1_1default__parallel__tag}{00079}}\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__parallel_1_1default__parallel__tag}{default\_parallel\_tag}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag}{parallel\_tag}}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00080}00080\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00081}\mbox{\hyperlink{struct____gnu__parallel_1_1default__parallel__tag_af745e8c30a90a5f07bb420e6ba95748c}{00081}}\ \ \ \ \ \mbox{\hyperlink{struct____gnu__parallel_1_1default__parallel__tag_af745e8c30a90a5f07bb420e6ba95748c}{default\_parallel\_tag}}()\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00082}\mbox{\hyperlink{struct____gnu__parallel_1_1default__parallel__tag_ad034323650e67b275d9b41e22c71db96}{00082}}\ \ \ \ \ \mbox{\hyperlink{struct____gnu__parallel_1_1default__parallel__tag_ad034323650e67b275d9b41e22c71db96}{default\_parallel\_tag}}(\mbox{\hyperlink{namespace____gnu__parallel_a05e502e51bfc3233671730f74a44dc6a}{\_ThreadIndex}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_num\_threads}})}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00083}00083\ \ \ \ \ :\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag}{parallel\_tag}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_num\_threads}})\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00084}00084\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00088}\mbox{\hyperlink{struct____gnu__parallel_1_1balanced__tag}{00088}}\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__parallel_1_1balanced__tag}{balanced\_tag}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag}{parallel\_tag}}\ \{\ \};}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00092}\mbox{\hyperlink{struct____gnu__parallel_1_1unbalanced__tag}{00092}}\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__parallel_1_1unbalanced__tag}{unbalanced\_tag}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag}{parallel\_tag}}\ \{\ \};}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00096}\mbox{\hyperlink{struct____gnu__parallel_1_1omp__loop__tag}{00096}}\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__parallel_1_1omp__loop__tag}{omp\_loop\_tag}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag}{parallel\_tag}}\ \{\ \};}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00100}\mbox{\hyperlink{struct____gnu__parallel_1_1omp__loop__static__tag}{00100}}\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__parallel_1_1omp__loop__static__tag}{omp\_loop\_static\_tag}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag}{parallel\_tag}}\ \{\ \};}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00104}\mbox{\hyperlink{struct____gnu__parallel_1_1find__tag}{00104}}\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__parallel_1_1find__tag}{find\_tag}}\ \{\ \};}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00109}\mbox{\hyperlink{struct____gnu__parallel_1_1exact__tag}{00109}}\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__parallel_1_1exact__tag}{exact\_tag}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag}{parallel\_tag}}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00110}00110\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00111}\mbox{\hyperlink{struct____gnu__parallel_1_1exact__tag_a6dd099a3f9a6ded5abdf9a6c9682aea7}{00111}}\ \ \ \ \ \mbox{\hyperlink{struct____gnu__parallel_1_1exact__tag_a6dd099a3f9a6ded5abdf9a6c9682aea7}{exact\_tag}}()\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00112}\mbox{\hyperlink{struct____gnu__parallel_1_1exact__tag_a7e13d514ec6e2c8861317c22057fe7d7}{00112}}\ \ \ \ \ \mbox{\hyperlink{struct____gnu__parallel_1_1exact__tag_a7e13d514ec6e2c8861317c22057fe7d7}{exact\_tag}}(\mbox{\hyperlink{namespace____gnu__parallel_a05e502e51bfc3233671730f74a44dc6a}{\_ThreadIndex}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_num\_threads}})}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00113}00113\ \ \ \ \ :\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag}{parallel\_tag}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_num\_threads}})\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00114}00114\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00118}\mbox{\hyperlink{struct____gnu__parallel_1_1sampling__tag}{00118}}\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__parallel_1_1sampling__tag}{sampling\_tag}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag}{parallel\_tag}}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00119}00119\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00120}\mbox{\hyperlink{struct____gnu__parallel_1_1sampling__tag_a868475e1d33d329a744d6b4aa19e4cc6}{00120}}\ \ \ \ \ \mbox{\hyperlink{struct____gnu__parallel_1_1sampling__tag_a868475e1d33d329a744d6b4aa19e4cc6}{sampling\_tag}}()\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00121}\mbox{\hyperlink{struct____gnu__parallel_1_1sampling__tag_ae4f4584ecdf5fe3abf3616452b81f683}{00121}}\ \ \ \ \ \mbox{\hyperlink{struct____gnu__parallel_1_1sampling__tag_ae4f4584ecdf5fe3abf3616452b81f683}{sampling\_tag}}(\mbox{\hyperlink{namespace____gnu__parallel_a05e502e51bfc3233671730f74a44dc6a}{\_ThreadIndex}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_num\_threads}})}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00122}00122\ \ \ \ \ :\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag}{parallel\_tag}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_num\_threads}})\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00123}00123\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00128}\mbox{\hyperlink{struct____gnu__parallel_1_1multiway__mergesort__tag}{00128}}\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__parallel_1_1multiway__mergesort__tag}{multiway\_mergesort\_tag}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag}{parallel\_tag}}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00129}00129\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00130}\mbox{\hyperlink{struct____gnu__parallel_1_1multiway__mergesort__tag_a80a05ea15326f5520cdbbb6229171830}{00130}}\ \ \ \ \ \mbox{\hyperlink{struct____gnu__parallel_1_1multiway__mergesort__tag_a80a05ea15326f5520cdbbb6229171830}{multiway\_mergesort\_tag}}()\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00131}\mbox{\hyperlink{struct____gnu__parallel_1_1multiway__mergesort__tag_aa552fa5609232551f9954e0f936b8ad2}{00131}}\ \ \ \ \ \mbox{\hyperlink{struct____gnu__parallel_1_1multiway__mergesort__tag_aa552fa5609232551f9954e0f936b8ad2}{multiway\_mergesort\_tag}}(\mbox{\hyperlink{namespace____gnu__parallel_a05e502e51bfc3233671730f74a44dc6a}{\_ThreadIndex}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_num\_threads}})}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00132}00132\ \ \ \ \ :\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag}{parallel\_tag}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_num\_threads}})\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00133}00133\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00137}\mbox{\hyperlink{struct____gnu__parallel_1_1multiway__mergesort__exact__tag}{00137}}\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__parallel_1_1multiway__mergesort__exact__tag}{multiway\_mergesort\_exact\_tag}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag}{parallel\_tag}}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00138}00138\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00139}\mbox{\hyperlink{struct____gnu__parallel_1_1multiway__mergesort__exact__tag_aa48dea41c60d968d57650deaec59a3be}{00139}}\ \ \ \ \ \mbox{\hyperlink{struct____gnu__parallel_1_1multiway__mergesort__exact__tag_aa48dea41c60d968d57650deaec59a3be}{multiway\_mergesort\_exact\_tag}}()\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00140}\mbox{\hyperlink{struct____gnu__parallel_1_1multiway__mergesort__exact__tag_abd07e90b8701eebd39fb47d01103d035}{00140}}\ \ \ \ \ \mbox{\hyperlink{struct____gnu__parallel_1_1multiway__mergesort__exact__tag_abd07e90b8701eebd39fb47d01103d035}{multiway\_mergesort\_exact\_tag}}(\mbox{\hyperlink{namespace____gnu__parallel_a05e502e51bfc3233671730f74a44dc6a}{\_ThreadIndex}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_num\_threads}})}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00141}00141\ \ \ \ \ :\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag}{parallel\_tag}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_num\_threads}})\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00142}00142\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00143}00143\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00146}\mbox{\hyperlink{struct____gnu__parallel_1_1multiway__mergesort__sampling__tag}{00146}}\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__parallel_1_1multiway__mergesort__sampling__tag}{multiway\_mergesort\_sampling\_tag}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag}{parallel\_tag}}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00147}00147\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00148}\mbox{\hyperlink{struct____gnu__parallel_1_1multiway__mergesort__sampling__tag_a7b9a0865e4f658010679c11b3889adcf}{00148}}\ \ \ \ \ \mbox{\hyperlink{struct____gnu__parallel_1_1multiway__mergesort__sampling__tag_a7b9a0865e4f658010679c11b3889adcf}{multiway\_mergesort\_sampling\_tag}}()\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00149}\mbox{\hyperlink{struct____gnu__parallel_1_1multiway__mergesort__sampling__tag_ad701e9c8fa6cc8a0f245440b6222183b}{00149}}\ \ \ \ \ \mbox{\hyperlink{struct____gnu__parallel_1_1multiway__mergesort__sampling__tag_ad701e9c8fa6cc8a0f245440b6222183b}{multiway\_mergesort\_sampling\_tag}}(\mbox{\hyperlink{namespace____gnu__parallel_a05e502e51bfc3233671730f74a44dc6a}{\_ThreadIndex}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_num\_threads}})}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00150}00150\ \ \ \ \ :\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag}{parallel\_tag}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_num\_threads}})\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00151}00151\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00155}\mbox{\hyperlink{struct____gnu__parallel_1_1quicksort__tag}{00155}}\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__parallel_1_1quicksort__tag}{quicksort\_tag}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag}{parallel\_tag}}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00156}00156\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00157}\mbox{\hyperlink{struct____gnu__parallel_1_1quicksort__tag_a9b863e902b09711001c8e010bfafe26b}{00157}}\ \ \ \ \ \mbox{\hyperlink{struct____gnu__parallel_1_1quicksort__tag_a9b863e902b09711001c8e010bfafe26b}{quicksort\_tag}}()\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00158}\mbox{\hyperlink{struct____gnu__parallel_1_1quicksort__tag_a42f5c261c233427e48bc89265b133228}{00158}}\ \ \ \ \ \mbox{\hyperlink{struct____gnu__parallel_1_1quicksort__tag_a42f5c261c233427e48bc89265b133228}{quicksort\_tag}}(\mbox{\hyperlink{namespace____gnu__parallel_a05e502e51bfc3233671730f74a44dc6a}{\_ThreadIndex}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_num\_threads}})}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00159}00159\ \ \ \ \ :\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag}{parallel\_tag}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_num\_threads}})\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00160}00160\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00164}\mbox{\hyperlink{struct____gnu__parallel_1_1balanced__quicksort__tag}{00164}}\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__parallel_1_1balanced__quicksort__tag}{balanced\_quicksort\_tag}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag}{parallel\_tag}}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00165}00165\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00166}\mbox{\hyperlink{struct____gnu__parallel_1_1balanced__quicksort__tag_ad5cfc40096147c340f07738ac3aa408f}{00166}}\ \ \ \ \ \mbox{\hyperlink{struct____gnu__parallel_1_1balanced__quicksort__tag_ad5cfc40096147c340f07738ac3aa408f}{balanced\_quicksort\_tag}}()\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00167}\mbox{\hyperlink{struct____gnu__parallel_1_1balanced__quicksort__tag_abfb26b69b125df38338563e298992ee8}{00167}}\ \ \ \ \ \mbox{\hyperlink{struct____gnu__parallel_1_1balanced__quicksort__tag_abfb26b69b125df38338563e298992ee8}{balanced\_quicksort\_tag}}(\mbox{\hyperlink{namespace____gnu__parallel_a05e502e51bfc3233671730f74a44dc6a}{\_ThreadIndex}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_num\_threads}})}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00168}00168\ \ \ \ \ :\ \mbox{\hyperlink{struct____gnu__parallel_1_1parallel__tag}{parallel\_tag}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_num\_threads}})\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00169}00169\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00170}00170\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00171}00171\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00174}\mbox{\hyperlink{struct____gnu__parallel_1_1growing__blocks__tag}{00174}}\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__parallel_1_1growing__blocks__tag}{growing\_blocks\_tag}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct____gnu__parallel_1_1find__tag}{find\_tag}}\ \{\ \};}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00175}00175\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00178}\mbox{\hyperlink{struct____gnu__parallel_1_1constant__size__blocks__tag}{00178}}\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__parallel_1_1constant__size__blocks__tag}{constant\_size\_blocks\_tag}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct____gnu__parallel_1_1find__tag}{find\_tag}}\ \{\ \};}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00179}00179\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00182}\mbox{\hyperlink{struct____gnu__parallel_1_1equal__split__tag}{00182}}\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__parallel_1_1equal__split__tag}{equal\_split\_tag}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{struct____gnu__parallel_1_1find__tag}{find\_tag}}\ \{\ \};}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00183}00183\ \}}
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{tags_8h_source_l00185}00185\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_GLIBCXX\_PARALLEL\_TAGS\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

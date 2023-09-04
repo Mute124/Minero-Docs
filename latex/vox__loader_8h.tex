@@ -1,0 +1,143 @@
+\doxysection{C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/external/vox\+\_\+loader.h File Reference}
+\hypertarget{vox__loader_8h}{}\label{vox__loader_8h}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/external/vox\_loader.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/external/vox\_loader.h}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_vox_color}{Vox\+Color}}
+\item 
+struct \mbox{\hyperlink{struct_vox_vector3}{Vox\+Vector3}}
+\item 
+struct \mbox{\hyperlink{struct_array_vector3}{Array\+Vector3}}
+\item 
+struct \mbox{\hyperlink{struct_array_color}{Array\+Color}}
+\item 
+struct \mbox{\hyperlink{struct_array_u_short}{Array\+UShort}}
+\item 
+struct \mbox{\hyperlink{struct_cube_chunk3_d}{Cube\+Chunk3D}}
+\item 
+struct \mbox{\hyperlink{struct_vox_array3_d}{Vox\+Array3D}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{vox__loader_8h_a52990d4aed79960d1b1e5d99c1278863}{VOX\+\_\+\+MALLOC}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sz}})~\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{malloc}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sz}})
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{vox__loader_8h_a89ed8c33e55dce9511f4ec767b916997}{VOX\+\_\+\+CALLOC}}(n,  \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sz}})~\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{calloc}}(n,\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sz}})
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{vox__loader_8h_aed5ee5a22431e7fd07999869b4dae26f}{VOX\+\_\+\+REALLOC}}(n,  \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sz}})~\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{realloc}}(n,\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sz}})
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{vox__loader_8h_ae91153116919f385bd359f064b8393ab}{VOX\+\_\+\+FREE}}(p)~free(p)
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{vox__loader_8h_a19f61636eea0d83aa319e464f1b64879}{VOX\+\_\+\+SUCCESS}}~(0)
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{vox__loader_8h_ae71e6684ca584e049e062c61dc27043b}{VOX\+\_\+\+ERROR\+\_\+\+FILE\+\_\+\+NOT\+\_\+\+FOUND}}~(-\/1)
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{vox__loader_8h_a3618db529dba01be65652915e3562b13}{VOX\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+FORMAT}}~(-\/2)
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{vox__loader_8h_a75a406f1d3aa6f21e77bca092ad333df}{VOX\+\_\+\+ERROR\+\_\+\+FILE\+\_\+\+VERSION\+\_\+\+NOT\+\_\+\+MATCH}}~(-\/3)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{vox__loader_8h_a5aa75a9fc80f5841011e0d2b58bcaa92}{Vox\+\_\+\+Load\+From\+Memory}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{pvox\+Data}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{vox\+Data\+Size}}, \mbox{\hyperlink{struct_vox_array3_d}{Vox\+Array3D}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{pvoxarray}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{vox__loader_8h_aef08af2fed6d8a5ac8e9b37ffe145e1f}{Vox\+\_\+\+Free\+Arrays}} (\mbox{\hyperlink{struct_vox_array3_d}{Vox\+Array3D}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{voxarray}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{vox__loader_8h_a89ed8c33e55dce9511f4ec767b916997}\label{vox__loader_8h_a89ed8c33e55dce9511f4ec767b916997} 
+\index{vox\_loader.h@{vox\_loader.h}!VOX\_CALLOC@{VOX\_CALLOC}}
+\index{VOX\_CALLOC@{VOX\_CALLOC}!vox\_loader.h@{vox\_loader.h}}
+\doxysubsubsection{\texorpdfstring{VOX\_CALLOC}{VOX\_CALLOC}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} VOX\+\_\+\+CALLOC(\begin{DoxyParamCaption}\item[{}]{n,  }\item[{}]{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sz}} }\end{DoxyParamCaption})~\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{calloc}}(n,\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sz}})}
+
+
+
+Definition at line \mbox{\hyperlink{vox__loader_8h_source_l00058}{58}} of file \mbox{\hyperlink{vox__loader_8h_source}{vox\+\_\+loader.\+h}}.
+
+\Hypertarget{vox__loader_8h_ae71e6684ca584e049e062c61dc27043b}\label{vox__loader_8h_ae71e6684ca584e049e062c61dc27043b} 
+\index{vox\_loader.h@{vox\_loader.h}!VOX\_ERROR\_FILE\_NOT\_FOUND@{VOX\_ERROR\_FILE\_NOT\_FOUND}}
+\index{VOX\_ERROR\_FILE\_NOT\_FOUND@{VOX\_ERROR\_FILE\_NOT\_FOUND}!vox\_loader.h@{vox\_loader.h}}
+\doxysubsubsection{\texorpdfstring{VOX\_ERROR\_FILE\_NOT\_FOUND}{VOX\_ERROR\_FILE\_NOT\_FOUND}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} VOX\+\_\+\+ERROR\+\_\+\+FILE\+\_\+\+NOT\+\_\+\+FOUND~(-\/1)}
+
+
+
+Definition at line \mbox{\hyperlink{vox__loader_8h_source_l00068}{68}} of file \mbox{\hyperlink{vox__loader_8h_source}{vox\+\_\+loader.\+h}}.
+
+\Hypertarget{vox__loader_8h_a75a406f1d3aa6f21e77bca092ad333df}\label{vox__loader_8h_a75a406f1d3aa6f21e77bca092ad333df} 
+\index{vox\_loader.h@{vox\_loader.h}!VOX\_ERROR\_FILE\_VERSION\_NOT\_MATCH@{VOX\_ERROR\_FILE\_VERSION\_NOT\_MATCH}}
+\index{VOX\_ERROR\_FILE\_VERSION\_NOT\_MATCH@{VOX\_ERROR\_FILE\_VERSION\_NOT\_MATCH}!vox\_loader.h@{vox\_loader.h}}
+\doxysubsubsection{\texorpdfstring{VOX\_ERROR\_FILE\_VERSION\_NOT\_MATCH}{VOX\_ERROR\_FILE\_VERSION\_NOT\_MATCH}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} VOX\+\_\+\+ERROR\+\_\+\+FILE\+\_\+\+VERSION\+\_\+\+NOT\+\_\+\+MATCH~(-\/3)}
+
+
+
+Definition at line \mbox{\hyperlink{vox__loader_8h_source_l00070}{70}} of file \mbox{\hyperlink{vox__loader_8h_source}{vox\+\_\+loader.\+h}}.
+
+\Hypertarget{vox__loader_8h_a3618db529dba01be65652915e3562b13}\label{vox__loader_8h_a3618db529dba01be65652915e3562b13} 
+\index{vox\_loader.h@{vox\_loader.h}!VOX\_ERROR\_INVALID\_FORMAT@{VOX\_ERROR\_INVALID\_FORMAT}}
+\index{VOX\_ERROR\_INVALID\_FORMAT@{VOX\_ERROR\_INVALID\_FORMAT}!vox\_loader.h@{vox\_loader.h}}
+\doxysubsubsection{\texorpdfstring{VOX\_ERROR\_INVALID\_FORMAT}{VOX\_ERROR\_INVALID\_FORMAT}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} VOX\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+FORMAT~(-\/2)}
+
+
+
+Definition at line \mbox{\hyperlink{vox__loader_8h_source_l00069}{69}} of file \mbox{\hyperlink{vox__loader_8h_source}{vox\+\_\+loader.\+h}}.
+
+\Hypertarget{vox__loader_8h_ae91153116919f385bd359f064b8393ab}\label{vox__loader_8h_ae91153116919f385bd359f064b8393ab} 
+\index{vox\_loader.h@{vox\_loader.h}!VOX\_FREE@{VOX\_FREE}}
+\index{VOX\_FREE@{VOX\_FREE}!vox\_loader.h@{vox\_loader.h}}
+\doxysubsubsection{\texorpdfstring{VOX\_FREE}{VOX\_FREE}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} VOX\+\_\+\+FREE(\begin{DoxyParamCaption}\item[{}]{p }\end{DoxyParamCaption})~free(p)}
+
+
+
+Definition at line \mbox{\hyperlink{vox__loader_8h_source_l00064}{64}} of file \mbox{\hyperlink{vox__loader_8h_source}{vox\+\_\+loader.\+h}}.
+
+\Hypertarget{vox__loader_8h_a52990d4aed79960d1b1e5d99c1278863}\label{vox__loader_8h_a52990d4aed79960d1b1e5d99c1278863} 
+\index{vox\_loader.h@{vox\_loader.h}!VOX\_MALLOC@{VOX\_MALLOC}}
+\index{VOX\_MALLOC@{VOX\_MALLOC}!vox\_loader.h@{vox\_loader.h}}
+\doxysubsubsection{\texorpdfstring{VOX\_MALLOC}{VOX\_MALLOC}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} VOX\+\_\+\+MALLOC(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sz}} }\end{DoxyParamCaption})~\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{malloc}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sz}})}
+
+
+
+Definition at line \mbox{\hyperlink{vox__loader_8h_source_l00055}{55}} of file \mbox{\hyperlink{vox__loader_8h_source}{vox\+\_\+loader.\+h}}.
+
+\Hypertarget{vox__loader_8h_aed5ee5a22431e7fd07999869b4dae26f}\label{vox__loader_8h_aed5ee5a22431e7fd07999869b4dae26f} 
+\index{vox\_loader.h@{vox\_loader.h}!VOX\_REALLOC@{VOX\_REALLOC}}
+\index{VOX\_REALLOC@{VOX\_REALLOC}!vox\_loader.h@{vox\_loader.h}}
+\doxysubsubsection{\texorpdfstring{VOX\_REALLOC}{VOX\_REALLOC}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} VOX\+\_\+\+REALLOC(\begin{DoxyParamCaption}\item[{}]{n,  }\item[{}]{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sz}} }\end{DoxyParamCaption})~\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{realloc}}(n,\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sz}})}
+
+
+
+Definition at line \mbox{\hyperlink{vox__loader_8h_source_l00061}{61}} of file \mbox{\hyperlink{vox__loader_8h_source}{vox\+\_\+loader.\+h}}.
+
+\Hypertarget{vox__loader_8h_a19f61636eea0d83aa319e464f1b64879}\label{vox__loader_8h_a19f61636eea0d83aa319e464f1b64879} 
+\index{vox\_loader.h@{vox\_loader.h}!VOX\_SUCCESS@{VOX\_SUCCESS}}
+\index{VOX\_SUCCESS@{VOX\_SUCCESS}!vox\_loader.h@{vox\_loader.h}}
+\doxysubsubsection{\texorpdfstring{VOX\_SUCCESS}{VOX\_SUCCESS}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} VOX\+\_\+\+SUCCESS~(0)}
+
+
+
+Definition at line \mbox{\hyperlink{vox__loader_8h_source_l00067}{67}} of file \mbox{\hyperlink{vox__loader_8h_source}{vox\+\_\+loader.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{vox__loader_8h_aef08af2fed6d8a5ac8e9b37ffe145e1f}\label{vox__loader_8h_aef08af2fed6d8a5ac8e9b37ffe145e1f} 
+\index{vox\_loader.h@{vox\_loader.h}!Vox\_FreeArrays@{Vox\_FreeArrays}}
+\index{Vox\_FreeArrays@{Vox\_FreeArrays}!vox\_loader.h@{vox\_loader.h}}
+\doxysubsubsection{\texorpdfstring{Vox\_FreeArrays()}{Vox\_FreeArrays()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} Vox\+\_\+\+Free\+Arrays (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vox_array3_d}{Vox\+Array3D}} \texorpdfstring{$\ast$}{*}}]{voxarray }\end{DoxyParamCaption})}
+
+\Hypertarget{vox__loader_8h_a5aa75a9fc80f5841011e0d2b58bcaa92}\label{vox__loader_8h_a5aa75a9fc80f5841011e0d2b58bcaa92} 
+\index{vox\_loader.h@{vox\_loader.h}!Vox\_LoadFromMemory@{Vox\_LoadFromMemory}}
+\index{Vox\_LoadFromMemory@{Vox\_LoadFromMemory}!vox\_loader.h@{vox\_loader.h}}
+\doxysubsubsection{\texorpdfstring{Vox\_LoadFromMemory()}{Vox\_LoadFromMemory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} Vox\+\_\+\+Load\+From\+Memory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}}]{pvox\+Data,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{vox\+Data\+Size,  }\item[{\mbox{\hyperlink{struct_vox_array3_d}{Vox\+Array3D}} \texorpdfstring{$\ast$}{*}}]{pvoxarray }\end{DoxyParamCaption})}
+

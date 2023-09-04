@@ -1,0 +1,84 @@
+\doxysection{align.\+h}
+\hypertarget{align_8h_source}{}\label{align_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/bits/align.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/bits/align.h}}
+\mbox{\hyperlink{align_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00001}00001\ \textcolor{comment}{//\ align\ implementation\ -\/*-\/\ C++\ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00003}00003\ \textcolor{comment}{//\ Copyright\ (C)\ 2014-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00005}00005\ \textcolor{comment}{//\ This\ file\ is\ part\ of\ the\ GNU\ ISO\ C++\ Library.\ \ This\ library\ is\ free}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00006}00006\ \textcolor{comment}{//\ software;\ you\ can\ redistribute\ it\ and/or\ modify\ it\ under\ the}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00007}00007\ \textcolor{comment}{//\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by\ the}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00008}00008\ \textcolor{comment}{//\ Free\ Software\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00009}00009\ \textcolor{comment}{//\ any\ later\ version.}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00011}00011\ \textcolor{comment}{//\ This\ library\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00012}00012\ \textcolor{comment}{//\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00013}00013\ \textcolor{comment}{//\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00014}00014\ \textcolor{comment}{//\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00016}00016\ \textcolor{comment}{//\ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00017}00017\ \textcolor{comment}{//\ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00018}00018\ \textcolor{comment}{//\ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00020}00020\ \textcolor{comment}{//\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00021}00021\ \textcolor{comment}{//\ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00022}00022\ \textcolor{comment}{//\ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00023}00023\ \textcolor{comment}{//\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00030}00030\ \textcolor{preprocessor}{\#ifndef\ \_GLIBCXX\_ALIGN\_H}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00031}00031\ \textcolor{preprocessor}{\#define\ \_GLIBCXX\_ALIGN\_H\ 1}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00033}00033\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{c_09_09config_8h}{bits/c++config.h}}>}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00035}00035\ \textcolor{preprocessor}{\#include\ <bit>}\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ std::has\_single\_bit}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00036}00036\ \textcolor{preprocessor}{\#include\ <stdint.h>}\ \ \ \ \ \textcolor{comment}{//\ uintptr\_t}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00037}00037\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{assertions_8h}{debug/assertions.h}}>}\ \textcolor{comment}{//\ \_GLIBCXX\_DEBUG\_ASSERT}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00039}\mbox{\hyperlink{group__memory_ga544d74b2d5d0dd2197f5fd6f02691de0}{00039}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacestd}{std}}\ \mbox{\hyperlink{c_09_09config_8h_a44377df0d3503f0b3d9ab316dd8ddf8b}{\_GLIBCXX\_VISIBILITY}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{default}})}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00040}00040\ \{}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00041}00041\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_GLIBCXX\_BEGIN\_NAMESPACE\_VERSION}}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00061}00061\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}*}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00062}00062\ align(\textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_align}},\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_size}},\ \textcolor{keywordtype}{void}*\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ptr}},\ \textcolor{keywordtype}{size\_t}\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_space}})\ \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00063}00063\ \{}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00064}00064\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_space}}\ <\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_size}})}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00065}00065\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00066}00066\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_intptr}}\ =\ \textcolor{keyword}{reinterpret\_cast<}\mbox{\hyperlink{external_2glfw_2deps_2vs2008_2stdint_8h_a31b85deecb45924320becd11d3ee16ce}{uintptr\_t}}\textcolor{keyword}{>}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ptr}});}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00067}00067\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_aligned}}\ =\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_intptr}}\ -\/\ 1u\ +\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_align}})\ \&\ -\/\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_align}};}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00068}00068\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_diff}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_aligned}}\ -\/\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_intptr}};}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00069}00069\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_diff}}\ >\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_space}}\ -\/\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_size}}))}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00070}00070\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00071}00071\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00072}00072\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00073}00073\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_space}}\ -\/=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_diff}};}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00074}00074\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ptr}}\ =\ \textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{void}*\textcolor{keyword}{>}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_aligned}});}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00075}00075\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00076}00076\ \}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00078}00078\ \textcolor{preprocessor}{\#if\ \_\_cplusplus\ >\ 201703L}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00079}00079\ \textcolor{preprocessor}{\#define\ \_\_cpp\_lib\_assume\_aligned\ 201811L}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00090}00090\ \ \ \textcolor{keyword}{template}<\textcolor{keywordtype}{size\_t}\ \_Align,\ \textcolor{keyword}{class}\ \_Tp>}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00091}00091\ \ \ \ \ [[\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{nodiscard}},\_\_gnu\_\_::\_\_always\_inline\_\_]]}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00092}00092\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}*}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00093}00093\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{assume\_aligned}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}*\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ptr}})\ \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00094}00094\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00095}00095\ \ \ \ \ \ \ \textcolor{keyword}{static\_assert}(std::has\_single\_bit(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Align}}));}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00096}00096\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (std::is\_constant\_evaluated())}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00097}00097\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ptr}};}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00098}00098\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00099}00099\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00100}00100\ \ \ \ \ \ \ \textcolor{comment}{//\ This\ function\ is\ expected\ to\ be\ used\ in\ hot\ code,\ where}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00101}00101\ \ \ \ \ \ \ \textcolor{comment}{//\ \_\_glibcxx\_assert\ would\ add\ unwanted\ overhead.}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00102}00102\ \ \ \ \ \ \ \mbox{\hyperlink{assertions_8h_aa2bfb4e74c7be93673913edf15f85504}{\_GLIBCXX\_DEBUG\_ASSERT}}((\mbox{\hyperlink{external_2glfw_2deps_2vs2008_2stdint_8h_a31b85deecb45924320becd11d3ee16ce}{uintptr\_t}})\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ptr}}\ \%\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Align}}\ ==\ 0);}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00103}00103\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}*\textcolor{keyword}{>}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_builtin\_assume\_aligned}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ptr}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Align}}));}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00104}00104\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00105}00105\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00106}00106\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ C++2a}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00108}00108\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_GLIBCXX\_END\_NAMESPACE\_VERSION}}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00109}00109\ \}\ \textcolor{comment}{//\ namespace}}
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{align_8h_source_l00111}00111\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_GLIBCXX\_ALIGN\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

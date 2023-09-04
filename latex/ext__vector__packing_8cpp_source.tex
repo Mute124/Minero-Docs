@@ -1,0 +1,64 @@
+\doxysection{ext\+\_\+vector\+\_\+packing.\+cpp}
+\hypertarget{ext__vector__packing_8cpp_source}{}\label{ext__vector__packing_8cpp_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/glm/test/ext/ext\_vector\_packing.cpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/glm/test/ext/ext\_vector\_packing.cpp}}
+\mbox{\hyperlink{ext__vector__packing_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{vector__packing_8hpp}{glm/ext/vector\_packing.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{ext_2vector__relational_8hpp}{glm/ext/vector\_relational.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{vector__uint2__sized_8hpp}{glm/ext/vector\_uint2\_sized.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{vector__int2__sized_8hpp}{glm/ext/vector\_int2\_sized.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{gtc_2packing_8hpp}{glm/gtc/packing.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{vec2_8hpp}{glm/vec2.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00009}\mbox{\hyperlink{ext__vector__packing_8cpp_a98f1094da9884a4c0c33e3fb2462e2c3}{00009}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{ext__vector__packing_8cpp_a98f1094da9884a4c0c33e3fb2462e2c3}{test\_packUnorm}}()}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00011}00011\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00013}00013\ \ \ \ \ std::vector<glm::vec2>\ A;}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00014}00014\ \ \ \ \ A.push\_back(\mbox{\hyperlink{structglm_1_1vec}{glm::vec2}}(1.0f,\ 0.7f));}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00015}00015\ \ \ \ \ A.push\_back(\mbox{\hyperlink{structglm_1_1vec}{glm::vec2}}(0.5f,\ 0.1f));}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ i\ =\ 0;\ i\ <\ A.size();\ ++i)}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00018}00018\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structglm_1_1vec}{glm::vec2}}\ B(A[i]);}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structglm_1_1vec}{glm::u16vec2}}\ \mbox{\hyperlink{stb__vorbis_8c_ac4cf4b2ab929bd23951a8676eeac086b}{C}}\ =\ glm::packUnorm<glm::uint16>(B);}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structglm_1_1vec}{glm::vec2}}\ D\ =\ glm::unpackUnorm<float>(\mbox{\hyperlink{stb__vorbis_8c_ac4cf4b2ab929bd23951a8676eeac086b}{C}});}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{group__core__func__vector__relational_ga87e53f50b679f5f95c5cb4780311b3dd}{glm::all}}(\mbox{\hyperlink{group__core__func__vector__relational_gaf539cf490630ba648dfd6e36aef910a1}{glm::equal}}(B,\ D,\ 1.0f\ /\ 255.f))\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{assert}}(!\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}});}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00024}00024\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}};}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00027}00027\ \}}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00029}\mbox{\hyperlink{ext__vector__packing_8cpp_aa15232b93a8e254b50d179b0cf6e818f}{00029}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{ext__vector__packing_8cpp_aa15232b93a8e254b50d179b0cf6e818f}{test\_packSnorm}}()}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00030}00030\ \{}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00031}00031\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00033}00033\ \ \ \ \ std::vector<glm::vec2>\ A;}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00034}00034\ \ \ \ \ A.push\_back(\mbox{\hyperlink{structglm_1_1vec}{glm::vec2}}(1.0f,\ 0.0f));}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00035}00035\ \ \ \ \ A.push\_back(\mbox{\hyperlink{structglm_1_1vec}{glm::vec2}}(-\/0.5f,\ -\/0.7f));}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00036}00036\ \ \ \ \ A.push\_back(\mbox{\hyperlink{structglm_1_1vec}{glm::vec2}}(-\/0.1f,\ 0.1f));}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00038}00038\ \ \ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ i\ =\ 0;\ i\ <\ A.size();\ ++i)}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00039}00039\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structglm_1_1vec}{glm::vec2}}\ B(A[i]);}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structglm_1_1vec}{glm::i16vec2}}\ \mbox{\hyperlink{stb__vorbis_8c_ac4cf4b2ab929bd23951a8676eeac086b}{C}}\ =\ glm::packSnorm<glm::int16>(B);}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structglm_1_1vec}{glm::vec2}}\ D\ =\ glm::unpackSnorm<float>(\mbox{\hyperlink{stb__vorbis_8c_ac4cf4b2ab929bd23951a8676eeac086b}{C}});}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{group__core__func__vector__relational_ga87e53f50b679f5f95c5cb4780311b3dd}{glm::all}}(\mbox{\hyperlink{group__core__func__vector__relational_gaf539cf490630ba648dfd6e36aef910a1}{glm::equal}}(B,\ D,\ 1.0f\ /\ 32767.0f\ *\ 2.0f))\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{assert}}(!\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}});}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00045}00045\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00047}00047\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}};}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00048}00048\ \}}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00050}\mbox{\hyperlink{ext__vector__packing_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00050}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{ext__vector__packing_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00051}00051\ \{}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00052}00052\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00054}00054\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{ext__vector__packing_8cpp_a98f1094da9884a4c0c33e3fb2462e2c3}{test\_packUnorm}}();}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00055}00055\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{ext__vector__packing_8cpp_aa15232b93a8e254b50d179b0cf6e818f}{test\_packSnorm}}();}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00057}00057\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}};}
+\DoxyCodeLine{\Hypertarget{ext__vector__packing_8cpp_source_l00058}00058\ \}}
+
+\end{DoxyCode}

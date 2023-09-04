@@ -1,0 +1,54 @@
+\doxysection{C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/include/c++/bits/unordered\+\_\+map.h File Reference}
+\hypertarget{bits_2unordered__map_8h}{}\label{bits_2unordered__map_8h}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/bits/unordered\_map.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/bits/unordered\_map.h}}
+\doxysubsubsection*{Functions}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{namespace}} std \mbox{\hyperlink{bits_2unordered__map_8h_a544d74b2d5d0dd2197f5fd6f02691de0}{\+\_\+\+GLIBCXX\+\_\+\+VISIBILITY}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{default}})
+\end{DoxyCompactItemize}
+
+
+
+\doxysubsection{Detailed Description}
+This is an internal header file, included by other library headers. Do not attempt to use it directly. @headername\{unordered\+\_\+map\} 
+
+Definition in file \mbox{\hyperlink{bits_2unordered__map_8h_source}{unordered\+\_\+map.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{bits_2unordered__map_8h_a544d74b2d5d0dd2197f5fd6f02691de0}\label{bits_2unordered__map_8h_a544d74b2d5d0dd2197f5fd6f02691de0} 
+\index{unordered\_map.h@{unordered\_map.h}!\_GLIBCXX\_VISIBILITY@{\_GLIBCXX\_VISIBILITY}}
+\index{\_GLIBCXX\_VISIBILITY@{\_GLIBCXX\_VISIBILITY}!unordered\_map.h@{unordered\_map.h}}
+\doxysubsubsection{\texorpdfstring{\_GLIBCXX\_VISIBILITY()}{\_GLIBCXX\_VISIBILITY()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{namespace}} std \+\_\+\+GLIBCXX\+\_\+\+VISIBILITY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{default}}}]{ }\end{DoxyParamCaption})}
+
+Base types for unordered\+\_\+map.
+
+Base types for unordered\+\_\+multimap.
+
+A standard container composed of unique keys (containing at most one of each key value) that associates values of another type with the keys.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em \+\_\+\+Key} & Type of key objects. \\
+\hline
+{\em \+\_\+\+Tp} & Type of mapped objects. \\
+\hline
+{\em \+\_\+\+Hash} & Hashing function object type, defaults to hash$<$\+\_\+\+Value$>$. \\
+\hline
+{\em \+\_\+\+Pred} & Predicate function object type, defaults to equal\+\_\+to$<$\+\_\+\+Value$>$. \\
+\hline
+{\em \+\_\+\+Alloc} & Allocator type, defaults to std\+::allocator$<$std\+::pair$<$const \+\_\+\+Key, \+\_\+\+Tp$>$$>$.\\
+\hline
+\end{DoxyTemplParams}
+Meets the requirements of a \href{tables.html\#65}{\texttt{ container}}, and \href{tables.html\#xx}{\texttt{ unordered associative container}}
+
+The resulting value type of the container is std\+::pair$<$const \+\_\+\+Key, \+\_\+\+Tp$>$.
+
+Base is \+\_\+\+Hashtable, dispatched at compile time via template alias \+\_\+\+\_\+umap\+\_\+hashtable.
+
+Public typedefs.
+
+Definition at line \mbox{\hyperlink{bits_2unordered__map_8h_source_l00033}{33}} of file \mbox{\hyperlink{bits_2unordered__map_8h_source}{unordered\+\_\+map.\+h}}.
+

@@ -1,0 +1,72 @@
+\doxysection{drmp3\+\_\+allocation\+\_\+callbacks Struct Reference}
+\hypertarget{structdrmp3__allocation__callbacks}{}\label{structdrmp3__allocation__callbacks}\index{drmp3\_allocation\_callbacks@{drmp3\_allocation\_callbacks}}
+
+
+{\ttfamily \#include "{}dr\+\_\+mp3.\+h"{}}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structdrmp3__allocation__callbacks_a6143e313c75cae01f6aa30544d476dc2}{p\+User\+Data}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structdrmp3__allocation__callbacks_ae3ce36e07e3607556a25b1206b7fde10}{on\+Malloc}} )(\mbox{\hyperlink{stddef_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sz}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structdrmp3__allocation__callbacks_a6143e313c75cae01f6aa30544d476dc2}{p\+User\+Data}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structdrmp3__allocation__callbacks_a4e7e5575a36cf980600bd2d3b82d5550}{on\+Realloc}} )(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}p, \mbox{\hyperlink{stddef_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sz}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structdrmp3__allocation__callbacks_a6143e313c75cae01f6aa30544d476dc2}{p\+User\+Data}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structdrmp3__allocation__callbacks_a02fd70d856ae1a74f2f40f2fa45530f4}{on\+Free}} )(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}p, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structdrmp3__allocation__callbacks_a6143e313c75cae01f6aa30544d476dc2}{p\+User\+Data}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{external_2dr__mp3_8h_source_l00332}{332}} of file \mbox{\hyperlink{external_2dr__mp3_8h_source}{dr\+\_\+mp3.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structdrmp3__allocation__callbacks_a02fd70d856ae1a74f2f40f2fa45530f4}\label{structdrmp3__allocation__callbacks_a02fd70d856ae1a74f2f40f2fa45530f4} 
+\index{drmp3\_allocation\_callbacks@{drmp3\_allocation\_callbacks}!onFree@{onFree}}
+\index{onFree@{onFree}!drmp3\_allocation\_callbacks@{drmp3\_allocation\_callbacks}}
+\doxysubsubsection{\texorpdfstring{onFree}{onFree}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}(\texorpdfstring{$\ast$}{*} drmp3\+\_\+allocation\+\_\+callbacks\+::on\+Free) (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}p, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structdrmp3__allocation__callbacks_a6143e313c75cae01f6aa30544d476dc2}{p\+User\+Data}})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2dr__mp3_8h_source_l00337}{337}} of file \mbox{\hyperlink{external_2dr__mp3_8h_source}{dr\+\_\+mp3.\+h}}.
+
+\Hypertarget{structdrmp3__allocation__callbacks_ae3ce36e07e3607556a25b1206b7fde10}\label{structdrmp3__allocation__callbacks_ae3ce36e07e3607556a25b1206b7fde10} 
+\index{drmp3\_allocation\_callbacks@{drmp3\_allocation\_callbacks}!onMalloc@{onMalloc}}
+\index{onMalloc@{onMalloc}!drmp3\_allocation\_callbacks@{drmp3\_allocation\_callbacks}}
+\doxysubsubsection{\texorpdfstring{onMalloc}{onMalloc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} drmp3\+\_\+allocation\+\_\+callbacks\+::on\+Malloc) (\mbox{\hyperlink{stddef_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sz}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structdrmp3__allocation__callbacks_a6143e313c75cae01f6aa30544d476dc2}{p\+User\+Data}})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2dr__mp3_8h_source_l00335}{335}} of file \mbox{\hyperlink{external_2dr__mp3_8h_source}{dr\+\_\+mp3.\+h}}.
+
+\Hypertarget{structdrmp3__allocation__callbacks_a4e7e5575a36cf980600bd2d3b82d5550}\label{structdrmp3__allocation__callbacks_a4e7e5575a36cf980600bd2d3b82d5550} 
+\index{drmp3\_allocation\_callbacks@{drmp3\_allocation\_callbacks}!onRealloc@{onRealloc}}
+\index{onRealloc@{onRealloc}!drmp3\_allocation\_callbacks@{drmp3\_allocation\_callbacks}}
+\doxysubsubsection{\texorpdfstring{onRealloc}{onRealloc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} drmp3\+\_\+allocation\+\_\+callbacks\+::on\+Realloc) (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}p, \mbox{\hyperlink{stddef_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sz}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structdrmp3__allocation__callbacks_a6143e313c75cae01f6aa30544d476dc2}{p\+User\+Data}})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2dr__mp3_8h_source_l00336}{336}} of file \mbox{\hyperlink{external_2dr__mp3_8h_source}{dr\+\_\+mp3.\+h}}.
+
+\Hypertarget{structdrmp3__allocation__callbacks_a6143e313c75cae01f6aa30544d476dc2}\label{structdrmp3__allocation__callbacks_a6143e313c75cae01f6aa30544d476dc2} 
+\index{drmp3\_allocation\_callbacks@{drmp3\_allocation\_callbacks}!pUserData@{pUserData}}
+\index{pUserData@{pUserData}!drmp3\_allocation\_callbacks@{drmp3\_allocation\_callbacks}}
+\doxysubsubsection{\texorpdfstring{pUserData}{pUserData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}\texorpdfstring{$\ast$}{*} drmp3\+\_\+allocation\+\_\+callbacks\+::p\+User\+Data}
+
+
+
+Definition at line \mbox{\hyperlink{external_2dr__mp3_8h_source_l00334}{334}} of file \mbox{\hyperlink{external_2dr__mp3_8h_source}{dr\+\_\+mp3.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/external/\mbox{\hyperlink{external_2dr__mp3_8h}{dr\+\_\+mp3.\+h}}\end{DoxyCompactItemize}

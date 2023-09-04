@@ -1,0 +1,541 @@
+\doxysection{C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/\+Raylib\+Erosion\+Standalone-\/main/raylib/src/external/glfw/src/win32\+\_\+joystick.c File Reference}
+\hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c}{}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/RaylibErosionStandalone-\/main/raylib/src/external/glfw/src/win32\_joystick.c@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/RaylibErosionStandalone-\/main/raylib/src/external/glfw/src/win32\_joystick.c}}
+{\ttfamily \#include "{}internal.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct___g_l_f_wobjenum_win32}{\+\_\+\+GLFWobjenum\+Win32}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a106797aadafb40536144108a327d7899}{\+\_\+\+GLFW\+\_\+\+TYPE\+\_\+\+AXIS}}~0
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a3e46214f179e9569bbaaf7001c4a84cb}{\+\_\+\+GLFW\+\_\+\+TYPE\+\_\+\+SLIDER}}~1
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a51c03f1b45c64281f526e735075248e1}{\+\_\+\+GLFW\+\_\+\+TYPE\+\_\+\+BUTTON}}~2
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a3af724408ec3bc4c86ecac8241cfa94d}{\+\_\+\+GLFW\+\_\+\+TYPE\+\_\+\+POV}}~3
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a4d04555ffcfbf4bec0bcda3d131213b1}{IID\+\_\+\+IDirect\+Input8W}}~\mbox{\hyperlink{external_2glfw_2src_2win32__joystick_8c_a61566a4905bc51d8ed8a3bd90bd2cbdc}{\+\_\+glfw\+\_\+\+IID\+\_\+\+IDirect\+Input8W}}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_ad7e545cd90e961c82a9505d427b4dc7d}{GUID\+\_\+\+XAxis}}~\mbox{\hyperlink{external_2glfw_2src_2win32__joystick_8c_aba462dda7b15900f15fc2381492c54c6}{\+\_\+glfw\+\_\+\+GUID\+\_\+\+XAxis}}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_afabae522e34742b0de98c5251e522a04}{GUID\+\_\+\+YAxis}}~\mbox{\hyperlink{external_2glfw_2src_2win32__joystick_8c_ae5e80b437492c8e9b65fda3a2ea4d955}{\+\_\+glfw\+\_\+\+GUID\+\_\+\+YAxis}}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a11d0c3ef37335f3320e93ee1ca6c1d61}{GUID\+\_\+\+ZAxis}}~\mbox{\hyperlink{external_2glfw_2src_2win32__joystick_8c_adb51a707ae6c881128a455ba1f02939b}{\+\_\+glfw\+\_\+\+GUID\+\_\+\+ZAxis}}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a1ec981550612e155078ee65c6331c037}{GUID\+\_\+\+Rx\+Axis}}~\mbox{\hyperlink{external_2glfw_2src_2win32__joystick_8c_afbd37b6a68e47c16a4823094aa8d6478}{\+\_\+glfw\+\_\+\+GUID\+\_\+\+Rx\+Axis}}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a891842ba5fedbd93ae1917f1fab9cf00}{GUID\+\_\+\+Ry\+Axis}}~\mbox{\hyperlink{external_2glfw_2src_2win32__joystick_8c_a52664b7a1991374dde774cb8562bb555}{\+\_\+glfw\+\_\+\+GUID\+\_\+\+Ry\+Axis}}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_ac9ea6aa114ab9e0c561ae38da64268f1}{GUID\+\_\+\+Rz\+Axis}}~\mbox{\hyperlink{external_2glfw_2src_2win32__joystick_8c_ab6b4a63d37688c17be9bc2525af4fa6f}{\+\_\+glfw\+\_\+\+GUID\+\_\+\+Rz\+Axis}}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_af300e58c35a975a286a25ef97451a4a7}{GUID\+\_\+\+Slider}}~\mbox{\hyperlink{external_2glfw_2src_2win32__joystick_8c_af88d5c167ab5f760602e48fca82fed8e}{\+\_\+glfw\+\_\+\+GUID\+\_\+\+Slider}}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_ad705b5a7bc731dfc97fb0c68e19ec376}{GUID\+\_\+\+POV}}~\mbox{\hyperlink{external_2glfw_2src_2win32__joystick_8c_a479abd5b76eebed12756a4865b5245fc}{\+\_\+glfw\+\_\+\+GUID\+\_\+\+POV}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{struct___g_l_f_wobjenum_win32}{\+\_\+\+GLFWobjenum\+Win32}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_aef5f9a164492cc20fd00028a77f572b2}{\+\_\+\+GLFWobjenum\+Win32}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_aefcad271a884e7ccbb8b8cfd80d395c8}{get\+Device\+Description}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{external_2glfw_2deps_2mingw_2xinput_8h_acf54f59fb9d30352c7016615d997ee42}{XINPUT\+\_\+\+CAPABILITIES}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{xic}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_ab4cfcd25cc949695256b82ad6476c2b5}{compare\+Joystick\+Objects}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ada771a798be00a696d20928c9a3371e7}{first}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{second}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{external_2glfw_2src_2internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_afb77137cc4bce9bd99ad1c23cfbd19d7}{supports\+XInput}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{GUID}} \texorpdfstring{$\ast$}{*}guid)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a3699f1438e1fa6f4f40eb88dc5d8ca6e}{close\+Joystick}} (\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{js}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{BOOL}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{CALLBACK}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a7f2b3f73a266e6feb64f188a878aa5f8}{device\+Object\+Callback}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{struct_d_i_d_e_v_i_c_e_o_b_j_e_c_t_i_n_s_t_a_n_c_e_w}{DIDEVICEOBJECTINSTANCEW}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{doi}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}user)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{BOOL}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{CALLBACK}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_ab95d095ca842d2374fad7d87406f8d66}{device\+Callback}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{DIDEVICEINSTANCE}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{di}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}user)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_af70e0a81539e43a26ffb84a14a5d6de0}{\+\_\+glfw\+Init\+Joysticks\+Win32}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a219b355c48800354e45f6091d7b2e564}{\+\_\+glfw\+Terminate\+Joysticks\+Win32}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a58cafa45ca625cc01aee93124c190b13}{\+\_\+glfw\+Detect\+Joystick\+Connection\+Win32}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a0075ab897c58609717fddb588970c268}{\+\_\+glfw\+Detect\+Joystick\+Disconnection\+Win32}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a07c7e99222e703fbd67b2c6045d6440f}{\+\_\+glfw\+Platform\+Poll\+Joystick}} (\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{js}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a1e71d9c196e4683cc06c4b54d53f7ef5}{mode}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_ab9fd6c52f91cdf20f1b190a365709033}{\+\_\+glfw\+Platform\+Update\+Gamepad\+GUID}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}guid)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{GUID}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a61566a4905bc51d8ed8a3bd90bd2cbdc}{\+\_\+glfw\+\_\+\+IID\+\_\+\+IDirect\+Input8W}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{GUID}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_aba462dda7b15900f15fc2381492c54c6}{\+\_\+glfw\+\_\+\+GUID\+\_\+\+XAxis}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{GUID}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_ae5e80b437492c8e9b65fda3a2ea4d955}{\+\_\+glfw\+\_\+\+GUID\+\_\+\+YAxis}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{GUID}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_adb51a707ae6c881128a455ba1f02939b}{\+\_\+glfw\+\_\+\+GUID\+\_\+\+ZAxis}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{GUID}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_afbd37b6a68e47c16a4823094aa8d6478}{\+\_\+glfw\+\_\+\+GUID\+\_\+\+Rx\+Axis}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{GUID}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a52664b7a1991374dde774cb8562bb555}{\+\_\+glfw\+\_\+\+GUID\+\_\+\+Ry\+Axis}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{GUID}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_ab6b4a63d37688c17be9bc2525af4fa6f}{\+\_\+glfw\+\_\+\+GUID\+\_\+\+Rz\+Axis}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{GUID}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_af88d5c167ab5f760602e48fca82fed8e}{\+\_\+glfw\+\_\+\+GUID\+\_\+\+Slider}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{GUID}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a479abd5b76eebed12756a4865b5245fc}{\+\_\+glfw\+\_\+\+GUID\+\_\+\+POV}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{external_2glfw_2deps_2mingw_2dinput_8h_a3983f9ef5c77c8401537e88435ea4c0c}{DIOBJECTDATAFORMAT}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a23a17bfc03202651bb313ef3cc1f55ef}{\+\_\+glfw\+Object\+Data\+Formats}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{external_2glfw_2deps_2mingw_2dinput_8h_a34dcd3730c291964ba2a1b8269090f72}{DIDATAFORMAT}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a51217e2894e339bb0fd2ceb2577af519}{\+\_\+glfw\+Data\+Format}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a106797aadafb40536144108a327d7899}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a106797aadafb40536144108a327d7899} 
+\index{win32\_joystick.c@{win32\_joystick.c}!\_GLFW\_TYPE\_AXIS@{\_GLFW\_TYPE\_AXIS}}
+\index{\_GLFW\_TYPE\_AXIS@{\_GLFW\_TYPE\_AXIS}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{\_GLFW\_TYPE\_AXIS}{\_GLFW\_TYPE\_AXIS}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \+\_\+\+GLFW\+\_\+\+TYPE\+\_\+\+AXIS~0}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00035}{35}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a51c03f1b45c64281f526e735075248e1}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a51c03f1b45c64281f526e735075248e1} 
+\index{win32\_joystick.c@{win32\_joystick.c}!\_GLFW\_TYPE\_BUTTON@{\_GLFW\_TYPE\_BUTTON}}
+\index{\_GLFW\_TYPE\_BUTTON@{\_GLFW\_TYPE\_BUTTON}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{\_GLFW\_TYPE\_BUTTON}{\_GLFW\_TYPE\_BUTTON}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \+\_\+\+GLFW\+\_\+\+TYPE\+\_\+\+BUTTON~2}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00037}{37}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a3af724408ec3bc4c86ecac8241cfa94d}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a3af724408ec3bc4c86ecac8241cfa94d} 
+\index{win32\_joystick.c@{win32\_joystick.c}!\_GLFW\_TYPE\_POV@{\_GLFW\_TYPE\_POV}}
+\index{\_GLFW\_TYPE\_POV@{\_GLFW\_TYPE\_POV}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{\_GLFW\_TYPE\_POV}{\_GLFW\_TYPE\_POV}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \+\_\+\+GLFW\+\_\+\+TYPE\+\_\+\+POV~3}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00038}{38}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a3e46214f179e9569bbaaf7001c4a84cb}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a3e46214f179e9569bbaaf7001c4a84cb} 
+\index{win32\_joystick.c@{win32\_joystick.c}!\_GLFW\_TYPE\_SLIDER@{\_GLFW\_TYPE\_SLIDER}}
+\index{\_GLFW\_TYPE\_SLIDER@{\_GLFW\_TYPE\_SLIDER}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{\_GLFW\_TYPE\_SLIDER}{\_GLFW\_TYPE\_SLIDER}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \+\_\+\+GLFW\+\_\+\+TYPE\+\_\+\+SLIDER~1}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00036}{36}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_ad705b5a7bc731dfc97fb0c68e19ec376}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_ad705b5a7bc731dfc97fb0c68e19ec376} 
+\index{win32\_joystick.c@{win32\_joystick.c}!GUID\_POV@{GUID\_POV}}
+\index{GUID\_POV@{GUID\_POV}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{GUID\_POV}{GUID\_POV}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} GUID\+\_\+\+POV~\mbox{\hyperlink{external_2glfw_2src_2win32__joystick_8c_a479abd5b76eebed12756a4865b5245fc}{\+\_\+glfw\+\_\+\+GUID\+\_\+\+POV}}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00082}{82}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a1ec981550612e155078ee65c6331c037}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a1ec981550612e155078ee65c6331c037} 
+\index{win32\_joystick.c@{win32\_joystick.c}!GUID\_RxAxis@{GUID\_RxAxis}}
+\index{GUID\_RxAxis@{GUID\_RxAxis}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{GUID\_RxAxis}{GUID\_RxAxis}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} GUID\+\_\+\+Rx\+Axis~\mbox{\hyperlink{external_2glfw_2src_2win32__joystick_8c_afbd37b6a68e47c16a4823094aa8d6478}{\+\_\+glfw\+\_\+\+GUID\+\_\+\+Rx\+Axis}}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00078}{78}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a891842ba5fedbd93ae1917f1fab9cf00}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a891842ba5fedbd93ae1917f1fab9cf00} 
+\index{win32\_joystick.c@{win32\_joystick.c}!GUID\_RyAxis@{GUID\_RyAxis}}
+\index{GUID\_RyAxis@{GUID\_RyAxis}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{GUID\_RyAxis}{GUID\_RyAxis}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} GUID\+\_\+\+Ry\+Axis~\mbox{\hyperlink{external_2glfw_2src_2win32__joystick_8c_a52664b7a1991374dde774cb8562bb555}{\+\_\+glfw\+\_\+\+GUID\+\_\+\+Ry\+Axis}}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00079}{79}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_ac9ea6aa114ab9e0c561ae38da64268f1}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_ac9ea6aa114ab9e0c561ae38da64268f1} 
+\index{win32\_joystick.c@{win32\_joystick.c}!GUID\_RzAxis@{GUID\_RzAxis}}
+\index{GUID\_RzAxis@{GUID\_RzAxis}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{GUID\_RzAxis}{GUID\_RzAxis}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} GUID\+\_\+\+Rz\+Axis~\mbox{\hyperlink{external_2glfw_2src_2win32__joystick_8c_ab6b4a63d37688c17be9bc2525af4fa6f}{\+\_\+glfw\+\_\+\+GUID\+\_\+\+Rz\+Axis}}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00080}{80}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_af300e58c35a975a286a25ef97451a4a7}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_af300e58c35a975a286a25ef97451a4a7} 
+\index{win32\_joystick.c@{win32\_joystick.c}!GUID\_Slider@{GUID\_Slider}}
+\index{GUID\_Slider@{GUID\_Slider}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{GUID\_Slider}{GUID\_Slider}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} GUID\+\_\+\+Slider~\mbox{\hyperlink{external_2glfw_2src_2win32__joystick_8c_af88d5c167ab5f760602e48fca82fed8e}{\+\_\+glfw\+\_\+\+GUID\+\_\+\+Slider}}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00081}{81}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_ad7e545cd90e961c82a9505d427b4dc7d}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_ad7e545cd90e961c82a9505d427b4dc7d} 
+\index{win32\_joystick.c@{win32\_joystick.c}!GUID\_XAxis@{GUID\_XAxis}}
+\index{GUID\_XAxis@{GUID\_XAxis}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{GUID\_XAxis}{GUID\_XAxis}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} GUID\+\_\+\+XAxis~\mbox{\hyperlink{external_2glfw_2src_2win32__joystick_8c_aba462dda7b15900f15fc2381492c54c6}{\+\_\+glfw\+\_\+\+GUID\+\_\+\+XAxis}}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00075}{75}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_afabae522e34742b0de98c5251e522a04}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_afabae522e34742b0de98c5251e522a04} 
+\index{win32\_joystick.c@{win32\_joystick.c}!GUID\_YAxis@{GUID\_YAxis}}
+\index{GUID\_YAxis@{GUID\_YAxis}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{GUID\_YAxis}{GUID\_YAxis}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} GUID\+\_\+\+YAxis~\mbox{\hyperlink{external_2glfw_2src_2win32__joystick_8c_ae5e80b437492c8e9b65fda3a2ea4d955}{\+\_\+glfw\+\_\+\+GUID\+\_\+\+YAxis}}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00076}{76}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a11d0c3ef37335f3320e93ee1ca6c1d61}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a11d0c3ef37335f3320e93ee1ca6c1d61} 
+\index{win32\_joystick.c@{win32\_joystick.c}!GUID\_ZAxis@{GUID\_ZAxis}}
+\index{GUID\_ZAxis@{GUID\_ZAxis}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{GUID\_ZAxis}{GUID\_ZAxis}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} GUID\+\_\+\+ZAxis~\mbox{\hyperlink{external_2glfw_2src_2win32__joystick_8c_adb51a707ae6c881128a455ba1f02939b}{\+\_\+glfw\+\_\+\+GUID\+\_\+\+ZAxis}}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00077}{77}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a4d04555ffcfbf4bec0bcda3d131213b1}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a4d04555ffcfbf4bec0bcda3d131213b1} 
+\index{win32\_joystick.c@{win32\_joystick.c}!IID\_IDirectInput8W@{IID\_IDirectInput8W}}
+\index{IID\_IDirectInput8W@{IID\_IDirectInput8W}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{IID\_IDirectInput8W}{IID\_IDirectInput8W}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} IID\+\_\+\+IDirect\+Input8W~\mbox{\hyperlink{external_2glfw_2src_2win32__joystick_8c_a61566a4905bc51d8ed8a3bd90bd2cbdc}{\+\_\+glfw\+\_\+\+IID\+\_\+\+IDirect\+Input8W}}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00074}{74}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_aef5f9a164492cc20fd00028a77f572b2}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_aef5f9a164492cc20fd00028a77f572b2} 
+\index{win32\_joystick.c@{win32\_joystick.c}!\_GLFWobjenumWin32@{\_GLFWobjenumWin32}}
+\index{\_GLFWobjenumWin32@{\_GLFWobjenumWin32}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{\_GLFWobjenumWin32}{\_GLFWobjenumWin32}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{struct___g_l_f_wobjenum_win32}{\+\_\+\+GLFWobjenum\+Win32}} \mbox{\hyperlink{struct___g_l_f_wobjenum_win32}{\+\_\+\+GLFWobjenum\+Win32}}}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a58cafa45ca625cc01aee93124c190b13}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a58cafa45ca625cc01aee93124c190b13} 
+\index{win32\_joystick.c@{win32\_joystick.c}!\_glfwDetectJoystickConnectionWin32@{\_glfwDetectJoystickConnectionWin32}}
+\index{\_glfwDetectJoystickConnectionWin32@{\_glfwDetectJoystickConnectionWin32}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwDetectJoystickConnectionWin32()}{\_glfwDetectJoystickConnectionWin32()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Detect\+Joystick\+Connection\+Win32 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00529}{529}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a0075ab897c58609717fddb588970c268}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a0075ab897c58609717fddb588970c268} 
+\index{win32\_joystick.c@{win32\_joystick.c}!\_glfwDetectJoystickDisconnectionWin32@{\_glfwDetectJoystickDisconnectionWin32}}
+\index{\_glfwDetectJoystickDisconnectionWin32@{\_glfwDetectJoystickDisconnectionWin32}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwDetectJoystickDisconnectionWin32()}{\_glfwDetectJoystickDisconnectionWin32()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Detect\+Joystick\+Disconnection\+Win32 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00589}{589}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_af70e0a81539e43a26ffb84a14a5d6de0}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_af70e0a81539e43a26ffb84a14a5d6de0} 
+\index{win32\_joystick.c@{win32\_joystick.c}!\_glfwInitJoysticksWin32@{\_glfwInitJoysticksWin32}}
+\index{\_glfwInitJoysticksWin32@{\_glfwInitJoysticksWin32}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwInitJoysticksWin32()}{\_glfwInitJoysticksWin32()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Init\+Joysticks\+Win32 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00496}{496}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a07c7e99222e703fbd67b2c6045d6440f}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a07c7e99222e703fbd67b2c6045d6440f} 
+\index{win32\_joystick.c@{win32\_joystick.c}!\_glfwPlatformPollJoystick@{\_glfwPlatformPollJoystick}}
+\index{\_glfwPlatformPollJoystick@{\_glfwPlatformPollJoystick}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwPlatformPollJoystick()}{\_glfwPlatformPollJoystick()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+glfw\+Platform\+Poll\+Joystick (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}}]{js,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00606}{606}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_ab9fd6c52f91cdf20f1b190a365709033}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_ab9fd6c52f91cdf20f1b190a365709033} 
+\index{win32\_joystick.c@{win32\_joystick.c}!\_glfwPlatformUpdateGamepadGUID@{\_glfwPlatformUpdateGamepadGUID}}
+\index{\_glfwPlatformUpdateGamepadGUID@{\_glfwPlatformUpdateGamepadGUID}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwPlatformUpdateGamepadGUID()}{\_glfwPlatformUpdateGamepadGUID()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Platform\+Update\+Gamepad\+GUID (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}}]{guid }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00745}{745}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a219b355c48800354e45f6091d7b2e564}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a219b355c48800354e45f6091d7b2e564} 
+\index{win32\_joystick.c@{win32\_joystick.c}!\_glfwTerminateJoysticksWin32@{\_glfwTerminateJoysticksWin32}}
+\index{\_glfwTerminateJoysticksWin32@{\_glfwTerminateJoysticksWin32}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwTerminateJoysticksWin32()}{\_glfwTerminateJoysticksWin32()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Terminate\+Joysticks\+Win32 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00516}{516}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a3699f1438e1fa6f4f40eb88dc5d8ca6e}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a3699f1438e1fa6f4f40eb88dc5d8ca6e} 
+\index{win32\_joystick.c@{win32\_joystick.c}!closeJoystick@{closeJoystick}}
+\index{closeJoystick@{closeJoystick}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{closeJoystick()}{closeJoystick()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} close\+Joystick (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}}]{js }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00257}{257}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_ab4cfcd25cc949695256b82ad6476c2b5}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_ab4cfcd25cc949695256b82ad6476c2b5} 
+\index{win32\_joystick.c@{win32\_joystick.c}!compareJoystickObjects@{compareJoystickObjects}}
+\index{compareJoystickObjects@{compareJoystickObjects}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{compareJoystickObjects()}{compareJoystickObjects()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} compare\+Joystick\+Objects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}}]{first,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}}]{second }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00179}{179}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_ab95d095ca842d2374fad7d87406f8d66}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_ab95d095ca842d2374fad7d87406f8d66} 
+\index{win32\_joystick.c@{win32\_joystick.c}!deviceCallback@{deviceCallback}}
+\index{deviceCallback@{deviceCallback}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{deviceCallback()}{deviceCallback()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{BOOL}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{CALLBACK}} device\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{DIDEVICEINSTANCE}} \texorpdfstring{$\ast$}{*}}]{di,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}}]{user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00346}{346}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a7f2b3f73a266e6feb64f188a878aa5f8}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a7f2b3f73a266e6feb64f188a878aa5f8} 
+\index{win32\_joystick.c@{win32\_joystick.c}!deviceObjectCallback@{deviceObjectCallback}}
+\index{deviceObjectCallback@{deviceObjectCallback}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{deviceObjectCallback()}{deviceObjectCallback()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{BOOL}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{CALLBACK}} device\+Object\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{struct_d_i_d_e_v_i_c_e_o_b_j_e_c_t_i_n_s_t_a_n_c_e_w}{DIDEVICEOBJECTINSTANCEW}} \texorpdfstring{$\ast$}{*}}]{doi,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}}]{user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00274}{274}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_aefcad271a884e7ccbb8b8cfd80d395c8}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_aefcad271a884e7ccbb8b8cfd80d395c8} 
+\index{win32\_joystick.c@{win32\_joystick.c}!getDeviceDescription@{getDeviceDescription}}
+\index{getDeviceDescription@{getDeviceDescription}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{getDeviceDescription()}{getDeviceDescription()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*} get\+Device\+Description (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{external_2glfw_2deps_2mingw_2xinput_8h_acf54f59fb9d30352c7016615d997ee42}{XINPUT\+\_\+\+CAPABILITIES}} \texorpdfstring{$\ast$}{*}}]{xic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00149}{149}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_afb77137cc4bce9bd99ad1c23cfbd19d7}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_afb77137cc4bce9bd99ad1c23cfbd19d7} 
+\index{win32\_joystick.c@{win32\_joystick.c}!supportsXInput@{supportsXInput}}
+\index{supportsXInput@{supportsXInput}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{supportsXInput()}{supportsXInput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{external_2glfw_2src_2internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}} supports\+XInput (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{GUID}} \texorpdfstring{$\ast$}{*}}]{guid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00193}{193}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a479abd5b76eebed12756a4865b5245fc}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a479abd5b76eebed12756a4865b5245fc} 
+\index{win32\_joystick.c@{win32\_joystick.c}!\_glfw\_GUID\_POV@{\_glfw\_GUID\_POV}}
+\index{\_glfw\_GUID\_POV@{\_glfw\_GUID\_POV}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{\_glfw\_GUID\_POV}{\_glfw\_GUID\_POV}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{GUID}} \+\_\+glfw\+\_\+\+GUID\+\_\+\+POV\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\ \ \ \ \{0xa36d02f2,0xc9f3,0x11cf,\{0xbf,0xc7,0x44,0x45,0x53,0x54,0x00,0x00\}\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00071}{71}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_afbd37b6a68e47c16a4823094aa8d6478}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_afbd37b6a68e47c16a4823094aa8d6478} 
+\index{win32\_joystick.c@{win32\_joystick.c}!\_glfw\_GUID\_RxAxis@{\_glfw\_GUID\_RxAxis}}
+\index{\_glfw\_GUID\_RxAxis@{\_glfw\_GUID\_RxAxis}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{\_glfw\_GUID\_RxAxis}{\_glfw\_GUID\_RxAxis}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{GUID}} \+\_\+glfw\+\_\+\+GUID\+\_\+\+Rx\+Axis\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\ \ \ \ \{0xa36d02f4,0xc9f3,0x11cf,\{0xbf,0xc7,0x44,0x45,0x53,0x54,0x00,0x00\}\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00063}{63}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a52664b7a1991374dde774cb8562bb555}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a52664b7a1991374dde774cb8562bb555} 
+\index{win32\_joystick.c@{win32\_joystick.c}!\_glfw\_GUID\_RyAxis@{\_glfw\_GUID\_RyAxis}}
+\index{\_glfw\_GUID\_RyAxis@{\_glfw\_GUID\_RyAxis}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{\_glfw\_GUID\_RyAxis}{\_glfw\_GUID\_RyAxis}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{GUID}} \+\_\+glfw\+\_\+\+GUID\+\_\+\+Ry\+Axis\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\ \ \ \ \{0xa36d02f5,0xc9f3,0x11cf,\{0xbf,0xc7,0x44,0x45,0x53,0x54,0x00,0x00\}\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00065}{65}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_ab6b4a63d37688c17be9bc2525af4fa6f}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_ab6b4a63d37688c17be9bc2525af4fa6f} 
+\index{win32\_joystick.c@{win32\_joystick.c}!\_glfw\_GUID\_RzAxis@{\_glfw\_GUID\_RzAxis}}
+\index{\_glfw\_GUID\_RzAxis@{\_glfw\_GUID\_RzAxis}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{\_glfw\_GUID\_RzAxis}{\_glfw\_GUID\_RzAxis}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{GUID}} \+\_\+glfw\+\_\+\+GUID\+\_\+\+Rz\+Axis\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\ \ \ \ \{0xa36d02e3,0xc9f3,0x11cf,\{0xbf,0xc7,0x44,0x45,0x53,0x54,0x00,0x00\}\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00067}{67}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_af88d5c167ab5f760602e48fca82fed8e}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_af88d5c167ab5f760602e48fca82fed8e} 
+\index{win32\_joystick.c@{win32\_joystick.c}!\_glfw\_GUID\_Slider@{\_glfw\_GUID\_Slider}}
+\index{\_glfw\_GUID\_Slider@{\_glfw\_GUID\_Slider}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{\_glfw\_GUID\_Slider}{\_glfw\_GUID\_Slider}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{GUID}} \+\_\+glfw\+\_\+\+GUID\+\_\+\+Slider\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\ \ \ \ \{0xa36d02e4,0xc9f3,0x11cf,\{0xbf,0xc7,0x44,0x45,0x53,0x54,0x00,0x00\}\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00069}{69}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_aba462dda7b15900f15fc2381492c54c6}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_aba462dda7b15900f15fc2381492c54c6} 
+\index{win32\_joystick.c@{win32\_joystick.c}!\_glfw\_GUID\_XAxis@{\_glfw\_GUID\_XAxis}}
+\index{\_glfw\_GUID\_XAxis@{\_glfw\_GUID\_XAxis}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{\_glfw\_GUID\_XAxis}{\_glfw\_GUID\_XAxis}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{GUID}} \+\_\+glfw\+\_\+\+GUID\+\_\+\+XAxis\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\ \ \ \ \{0xa36d02e0,0xc9f3,0x11cf,\{0xbf,0xc7,0x44,0x45,0x53,0x54,0x00,0x00\}\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00057}{57}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_ae5e80b437492c8e9b65fda3a2ea4d955}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_ae5e80b437492c8e9b65fda3a2ea4d955} 
+\index{win32\_joystick.c@{win32\_joystick.c}!\_glfw\_GUID\_YAxis@{\_glfw\_GUID\_YAxis}}
+\index{\_glfw\_GUID\_YAxis@{\_glfw\_GUID\_YAxis}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{\_glfw\_GUID\_YAxis}{\_glfw\_GUID\_YAxis}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{GUID}} \+\_\+glfw\+\_\+\+GUID\+\_\+\+YAxis\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\ \ \ \ \{0xa36d02e1,0xc9f3,0x11cf,\{0xbf,0xc7,0x44,0x45,0x53,0x54,0x00,0x00\}\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00059}{59}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_adb51a707ae6c881128a455ba1f02939b}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_adb51a707ae6c881128a455ba1f02939b} 
+\index{win32\_joystick.c@{win32\_joystick.c}!\_glfw\_GUID\_ZAxis@{\_glfw\_GUID\_ZAxis}}
+\index{\_glfw\_GUID\_ZAxis@{\_glfw\_GUID\_ZAxis}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{\_glfw\_GUID\_ZAxis}{\_glfw\_GUID\_ZAxis}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{GUID}} \+\_\+glfw\+\_\+\+GUID\+\_\+\+ZAxis\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\ \ \ \ \{0xa36d02e2,0xc9f3,0x11cf,\{0xbf,0xc7,0x44,0x45,0x53,0x54,0x00,0x00\}\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00061}{61}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a61566a4905bc51d8ed8a3bd90bd2cbdc}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a61566a4905bc51d8ed8a3bd90bd2cbdc} 
+\index{win32\_joystick.c@{win32\_joystick.c}!\_glfw\_IID\_IDirectInput8W@{\_glfw\_IID\_IDirectInput8W}}
+\index{\_glfw\_IID\_IDirectInput8W@{\_glfw\_IID\_IDirectInput8W}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{\_glfw\_IID\_IDirectInput8W}{\_glfw\_IID\_IDirectInput8W}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{GUID}} \+\_\+glfw\+\_\+\+IID\+\_\+\+IDirect\+Input8W\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\ \ \ \ \{0xbf798031,0x483a,0x4da2,\{0xaa,0x99,0x5d,0x64,0xed,0x36,0x97,0x00\}\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00055}{55}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a51217e2894e339bb0fd2ceb2577af519}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a51217e2894e339bb0fd2ceb2577af519} 
+\index{win32\_joystick.c@{win32\_joystick.c}!\_glfwDataFormat@{\_glfwDataFormat}}
+\index{\_glfwDataFormat@{\_glfwDataFormat}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwDataFormat}{\_glfwDataFormat}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{external_2glfw_2deps_2mingw_2dinput_8h_a34dcd3730c291964ba2a1b8269090f72}{DIDATAFORMAT}} \+\_\+glfw\+Data\+Format\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{external_2glfw_2deps_2mingw_2dinput_8h_a34dcd3730c291964ba2a1b8269090f72}{DIDATAFORMAT}}),}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct___d_i_o_b_j_e_c_t_d_a_t_a_f_o_r_m_a_t}{DIOBJECTDATAFORMAT}}),}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{external_2glfw_2deps_2mingw_2dinput_8h_a99e515ab8c77718057470b2ea8fc4515}{DIDFT\_ABSAXIS}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_d_i_j_o_y_s_t_a_t_e}{DIJOYSTATE}}),}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{external_2glfw_2src_2win32__joystick_8c_a23a17bfc03202651bb313ef3cc1f55ef}{\_glfwObjectDataFormats}})\ /\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{external_2glfw_2deps_2mingw_2dinput_8h_a3983f9ef5c77c8401537e88435ea4c0c}{DIOBJECTDATAFORMAT}}),}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{external_2glfw_2src_2win32__joystick_8c_a23a17bfc03202651bb313ef3cc1f55ef}{\_glfwObjectDataFormats}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00137}{137}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a23a17bfc03202651bb313ef3cc1f55ef}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_a23a17bfc03202651bb313ef3cc1f55ef} 
+\index{win32\_joystick.c@{win32\_joystick.c}!\_glfwObjectDataFormats@{\_glfwObjectDataFormats}}
+\index{\_glfwObjectDataFormats@{\_glfwObjectDataFormats}!win32\_joystick.c@{win32\_joystick.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwObjectDataFormats}{\_glfwObjectDataFormats}}
+{\footnotesize\ttfamily \mbox{\hyperlink{external_2glfw_2deps_2mingw_2dinput_8h_a3983f9ef5c77c8401537e88435ea4c0c}{DIOBJECTDATAFORMAT}} \+\_\+glfw\+Object\+Data\+Formats\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source_l00087}{87}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2win32__joystick_8c_source}{win32\+\_\+joystick.\+c}}.
+

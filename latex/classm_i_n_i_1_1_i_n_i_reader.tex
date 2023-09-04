@@ -1,0 +1,165 @@
+\doxysection{m\+INI\+::INIReader Class Reference}
+\hypertarget{classm_i_n_i_1_1_i_n_i_reader}{}\label{classm_i_n_i_1_1_i_n_i_reader}\index{mINI::INIReader@{mINI::INIReader}}
+
+
+{\ttfamily \#include "{}ini.\+h"{}}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{using}} \mbox{\hyperlink{classm_i_n_i_1_1_i_n_i_reader_ab2561d08dbf2694aed7eaa5aa4181b4c}{T\+\_\+\+Line\+Data}} = std\+::vector$<$ std\+::string $>$
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{using}} \mbox{\hyperlink{classm_i_n_i_1_1_i_n_i_reader_ac797e3f4dd2bec006bc827e70f8a5373}{T\+\_\+\+Line\+Data\+Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classm_i_n_i_1_1_i_n_i_reader_ab2561d08dbf2694aed7eaa5aa4181b4c}{T\+\_\+\+Line\+Data}} $>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classm_i_n_i_1_1_i_n_i_reader_aa1d5afdd6d06f650652c1bc7fd374bde}{INIReader}} (std\+::string \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \&\mbox{\hyperlink{testhuge_8cpp_a42a21beb8018ac623f4d09db1343b9cf}{filename}}, \mbox{\hyperlink{raylib_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{keep\+Line\+Data}}=\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})
+\item 
+\mbox{\hyperlink{classm_i_n_i_1_1_i_n_i_reader_a499ca38d2f37e1f4bc38669c0a6e536e}{\texorpdfstring{$\sim$}{\string~}\+INIReader}} ()
+\item 
+\mbox{\hyperlink{raylib_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} \mbox{\hyperlink{classm_i_n_i_1_1_i_n_i_reader_a4cb3bf02943c31380cb8fbfb7834a844}{operator$>$$>$}} (\mbox{\hyperlink{namespacem_i_n_i_a7ebad9b80453aa82944eb63fb2782a9d}{INIStructure}} \&\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_a89ce72163394e6aef63b551a8806e93f}{data}})
+\item 
+\mbox{\hyperlink{classm_i_n_i_1_1_i_n_i_reader_ac797e3f4dd2bec006bc827e70f8a5373}{T\+\_\+\+Line\+Data\+Ptr}} \mbox{\hyperlink{classm_i_n_i_1_1_i_n_i_reader_a81a93e1857a329b7dc34dd4bc1d58c20}{get\+Lines}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} \mbox{\hyperlink{classm_i_n_i_1_1_i_n_i_reader_ab1d440967ddda5be8cefc33016681da7}{is\+BOM}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classm_i_n_i_1_1_i_n_i_reader_ab2561d08dbf2694aed7eaa5aa4181b4c}{T\+\_\+\+Line\+Data}} \mbox{\hyperlink{classm_i_n_i_1_1_i_n_i_reader_a88db39e61968629545105ded85e77fc1}{read\+File}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ifstream \mbox{\hyperlink{classm_i_n_i_1_1_i_n_i_reader_ace078f277077ae10cfe3d92e65b56ec7}{file\+Read\+Stream}}
+\item 
+\mbox{\hyperlink{classm_i_n_i_1_1_i_n_i_reader_ac797e3f4dd2bec006bc827e70f8a5373}{T\+\_\+\+Line\+Data\+Ptr}} \mbox{\hyperlink{classm_i_n_i_1_1_i_n_i_reader_a296a6b5fbb96a3528c9497e7d329a58a}{line\+Data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{ini_8h_source_l00329}{329}} of file \mbox{\hyperlink{ini_8h_source}{ini.\+h}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classm_i_n_i_1_1_i_n_i_reader_ab2561d08dbf2694aed7eaa5aa4181b4c}\label{classm_i_n_i_1_1_i_n_i_reader_ab2561d08dbf2694aed7eaa5aa4181b4c} 
+\index{mINI::INIReader@{mINI::INIReader}!T\_LineData@{T\_LineData}}
+\index{T\_LineData@{T\_LineData}!mINI::INIReader@{mINI::INIReader}}
+\doxysubsubsection{\texorpdfstring{T\_LineData}{T\_LineData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{using}} \mbox{\hyperlink{classm_i_n_i_1_1_i_n_i_reader_ab2561d08dbf2694aed7eaa5aa4181b4c}{m\+INI\+::\+INIReader\+::\+T\+\_\+\+Line\+Data}} =  std\+::vector$<$std\+::string$>$}
+
+
+
+Definition at line \mbox{\hyperlink{ini_8h_source_l00332}{332}} of file \mbox{\hyperlink{ini_8h_source}{ini.\+h}}.
+
+\Hypertarget{classm_i_n_i_1_1_i_n_i_reader_ac797e3f4dd2bec006bc827e70f8a5373}\label{classm_i_n_i_1_1_i_n_i_reader_ac797e3f4dd2bec006bc827e70f8a5373} 
+\index{mINI::INIReader@{mINI::INIReader}!T\_LineDataPtr@{T\_LineDataPtr}}
+\index{T\_LineDataPtr@{T\_LineDataPtr}!mINI::INIReader@{mINI::INIReader}}
+\doxysubsubsection{\texorpdfstring{T\_LineDataPtr}{T\_LineDataPtr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{using}} \mbox{\hyperlink{classm_i_n_i_1_1_i_n_i_reader_ac797e3f4dd2bec006bc827e70f8a5373}{m\+INI\+::\+INIReader\+::\+T\+\_\+\+Line\+Data\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classm_i_n_i_1_1_i_n_i_reader_ab2561d08dbf2694aed7eaa5aa4181b4c}{T\+\_\+\+Line\+Data}}$>$}
+
+
+
+Definition at line \mbox{\hyperlink{ini_8h_source_l00333}{333}} of file \mbox{\hyperlink{ini_8h_source}{ini.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classm_i_n_i_1_1_i_n_i_reader_aa1d5afdd6d06f650652c1bc7fd374bde}\label{classm_i_n_i_1_1_i_n_i_reader_aa1d5afdd6d06f650652c1bc7fd374bde} 
+\index{mINI::INIReader@{mINI::INIReader}!INIReader@{INIReader}}
+\index{INIReader@{INIReader}!mINI::INIReader@{mINI::INIReader}}
+\doxysubsubsection{\texorpdfstring{INIReader()}{INIReader()}}
+{\footnotesize\ttfamily m\+INI\+::\+INIReader\+::\+INIReader (\begin{DoxyParamCaption}\item[{std\+::string \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \&}]{filename,  }\item[{\mbox{\hyperlink{raylib_8h_af6a258d8f3ee5206d682d799316314b1}{bool}}}]{keep\+Line\+Data = {\ttfamily \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{ini_8h_source_l00392}{392}} of file \mbox{\hyperlink{ini_8h_source}{ini.\+h}}.
+
+\Hypertarget{classm_i_n_i_1_1_i_n_i_reader_a499ca38d2f37e1f4bc38669c0a6e536e}\label{classm_i_n_i_1_1_i_n_i_reader_a499ca38d2f37e1f4bc38669c0a6e536e} 
+\index{mINI::INIReader@{mINI::INIReader}!````~INIReader@{\texorpdfstring{$\sim$}{\string~}INIReader}}
+\index{````~INIReader@{\texorpdfstring{$\sim$}{\string~}INIReader}!mINI::INIReader@{mINI::INIReader}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}INIReader()}{\string~INIReader()}}
+{\footnotesize\ttfamily m\+INI\+::\+INIReader\+::\texorpdfstring{$\sim$}{\string~}\+INIReader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{ini_8h_source_l00400}{400}} of file \mbox{\hyperlink{ini_8h_source}{ini.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classm_i_n_i_1_1_i_n_i_reader_a81a93e1857a329b7dc34dd4bc1d58c20}\label{classm_i_n_i_1_1_i_n_i_reader_a81a93e1857a329b7dc34dd4bc1d58c20} 
+\index{mINI::INIReader@{mINI::INIReader}!getLines@{getLines}}
+\index{getLines@{getLines}!mINI::INIReader@{mINI::INIReader}}
+\doxysubsubsection{\texorpdfstring{getLines()}{getLines()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classm_i_n_i_1_1_i_n_i_reader_ac797e3f4dd2bec006bc827e70f8a5373}{T\+\_\+\+Line\+Data\+Ptr}} m\+INI\+::\+INIReader\+::get\+Lines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{ini_8h_source_l00437}{437}} of file \mbox{\hyperlink{ini_8h_source}{ini.\+h}}.
+
+\Hypertarget{classm_i_n_i_1_1_i_n_i_reader_a4cb3bf02943c31380cb8fbfb7834a844}\label{classm_i_n_i_1_1_i_n_i_reader_a4cb3bf02943c31380cb8fbfb7834a844} 
+\index{mINI::INIReader@{mINI::INIReader}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!mINI::INIReader@{mINI::INIReader}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} m\+INI\+::\+INIReader\+::operator$>$$>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacem_i_n_i_a7ebad9b80453aa82944eb63fb2782a9d}{INIStructure}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{ini_8h_source_l00402}{402}} of file \mbox{\hyperlink{ini_8h_source}{ini.\+h}}.
+
+\Hypertarget{classm_i_n_i_1_1_i_n_i_reader_a88db39e61968629545105ded85e77fc1}\label{classm_i_n_i_1_1_i_n_i_reader_a88db39e61968629545105ded85e77fc1} 
+\index{mINI::INIReader@{mINI::INIReader}!readFile@{readFile}}
+\index{readFile@{readFile}!mINI::INIReader@{mINI::INIReader}}
+\doxysubsubsection{\texorpdfstring{readFile()}{readFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classm_i_n_i_1_1_i_n_i_reader_ab2561d08dbf2694aed7eaa5aa4181b4c}{T\+\_\+\+Line\+Data}} m\+INI\+::\+INIReader\+::read\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{ini_8h_source_l00341}{341}} of file \mbox{\hyperlink{ini_8h_source}{ini.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classm_i_n_i_1_1_i_n_i_reader_ace078f277077ae10cfe3d92e65b56ec7}\label{classm_i_n_i_1_1_i_n_i_reader_ace078f277077ae10cfe3d92e65b56ec7} 
+\index{mINI::INIReader@{mINI::INIReader}!fileReadStream@{fileReadStream}}
+\index{fileReadStream@{fileReadStream}!mINI::INIReader@{mINI::INIReader}}
+\doxysubsubsection{\texorpdfstring{fileReadStream}{fileReadStream}}
+{\footnotesize\ttfamily std\+::ifstream m\+INI\+::\+INIReader\+::file\+Read\+Stream\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{ini_8h_source_l00338}{338}} of file \mbox{\hyperlink{ini_8h_source}{ini.\+h}}.
+
+\Hypertarget{classm_i_n_i_1_1_i_n_i_reader_ab1d440967ddda5be8cefc33016681da7}\label{classm_i_n_i_1_1_i_n_i_reader_ab1d440967ddda5be8cefc33016681da7} 
+\index{mINI::INIReader@{mINI::INIReader}!isBOM@{isBOM}}
+\index{isBOM@{isBOM}!mINI::INIReader@{mINI::INIReader}}
+\doxysubsubsection{\texorpdfstring{isBOM}{isBOM}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} m\+INI\+::\+INIReader\+::is\+BOM = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}}
+
+
+
+Definition at line \mbox{\hyperlink{ini_8h_source_l00335}{335}} of file \mbox{\hyperlink{ini_8h_source}{ini.\+h}}.
+
+\Hypertarget{classm_i_n_i_1_1_i_n_i_reader_a296a6b5fbb96a3528c9497e7d329a58a}\label{classm_i_n_i_1_1_i_n_i_reader_a296a6b5fbb96a3528c9497e7d329a58a} 
+\index{mINI::INIReader@{mINI::INIReader}!lineData@{lineData}}
+\index{lineData@{lineData}!mINI::INIReader@{mINI::INIReader}}
+\doxysubsubsection{\texorpdfstring{lineData}{lineData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classm_i_n_i_1_1_i_n_i_reader_ac797e3f4dd2bec006bc827e70f8a5373}{T\+\_\+\+Line\+Data\+Ptr}} m\+INI\+::\+INIReader\+::line\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{ini_8h_source_l00339}{339}} of file \mbox{\hyperlink{ini_8h_source}{ini.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/m\+INI-\/master/src/mini/\mbox{\hyperlink{ini_8h}{ini.\+h}}\end{DoxyCompactItemize}

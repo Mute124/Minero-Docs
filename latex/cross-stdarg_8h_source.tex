@@ -1,0 +1,78 @@
+\doxysection{cross-\/stdarg.h}
+\hypertarget{cross-stdarg_8h_source}{}\label{cross-stdarg_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/cross-\/stdarg.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/cross-\/stdarg.h}}
+\mbox{\hyperlink{cross-stdarg_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00001}00001\ \textcolor{comment}{/*\ Copyright\ (C)\ 2002-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00002}00002\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00003}00003\ \textcolor{comment}{\ \ \ This\ file\ is\ part\ of\ GCC.}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00004}00004\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00005}00005\ \textcolor{comment}{\ \ \ GCC\ is\ free\ software;\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00006}00006\ \textcolor{comment}{\ \ \ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00007}00007\ \textcolor{comment}{\ \ \ the\ Free\ Software\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00008}00008\ \textcolor{comment}{\ \ \ any\ later\ version.}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00009}00009\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00010}00010\ \textcolor{comment}{\ \ \ GCC\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00011}00011\ \textcolor{comment}{\ \ \ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00012}00012\ \textcolor{comment}{\ \ \ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00013}00013\ \textcolor{comment}{\ \ \ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00014}00014\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00015}00015\ \textcolor{comment}{\ \ \ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00016}00016\ \textcolor{comment}{\ \ \ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00017}00017\ \textcolor{comment}{\ \ \ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00018}00018\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00019}00019\ \textcolor{comment}{\ \ \ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00020}00020\ \textcolor{comment}{\ \ \ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00021}00021\ \textcolor{comment}{\ \ \ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00022}00022\ \textcolor{comment}{\ \ \ <http://www.gnu.org/licenses/>.\ \ */}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00024}00024\ \textcolor{preprocessor}{\#ifndef\ \_\_CROSS\_STDARG\_H\_INCLUDED}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00025}00025\ \textcolor{preprocessor}{\#define\ \_\_CROSS\_STDARG\_H\_INCLUDED}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00027}00027\ \textcolor{comment}{/*\ Make\ sure\ that\ for\ non\ x64\ targets\ cross\ builtins\ are\ defined.\ \ */}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00028}00028\ \textcolor{preprocessor}{\#ifndef\ \_\_x86\_64\_\_}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00029}00029\ \textcolor{comment}{/*\ Call\ abi\ ms\_abi.\ \ */}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00030}\mbox{\hyperlink{cross-stdarg_8h_a1525e924d3cd37b22b6b4d427f89b903}{00030}}\ \textcolor{preprocessor}{\#define\ \_\_builtin\_ms\_va\_list\ \_\_builtin\_va\_list}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00031}\mbox{\hyperlink{cross-stdarg_8h_a7b9e562e3d2c15ca8ec5c7f724c10d49}{00031}}\ \textcolor{preprocessor}{\#define\ \_\_builtin\_ms\_va\_copy\ \_\_builtin\_va\_copy}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00032}\mbox{\hyperlink{cross-stdarg_8h_ad6996253ad68d0bbb94c45b35a95c12f}{00032}}\ \textcolor{preprocessor}{\#define\ \_\_builtin\_ms\_va\_start\ \_\_builtin\_va\_start}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00033}\mbox{\hyperlink{cross-stdarg_8h_a5bb37614e165e8acf19bf2ea14063ea7}{00033}}\ \textcolor{preprocessor}{\#define\ \_\_builtin\_ms\_va\_end\ \_\_builtin\_va\_end}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00035}00035\ \textcolor{comment}{/*\ Call\ abi\ sysv\_abi.\ \ */}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00036}\mbox{\hyperlink{cross-stdarg_8h_ab9f743298f0aa86c79b489ab798a6a17}{00036}}\ \textcolor{preprocessor}{\#define\ \_\_builtin\_sysv\_va\_list\ \_\_builtin\_va\_list}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00037}\mbox{\hyperlink{cross-stdarg_8h_a284bceb7a4b7ce9f7a733e5e359e7405}{00037}}\ \textcolor{preprocessor}{\#define\ \_\_builtin\_sysv\_va\_copy\ \_\_builtin\_va\_copy}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00038}\mbox{\hyperlink{cross-stdarg_8h_a5276fdd1ebf74380d49db9ce2b3f784d}{00038}}\ \textcolor{preprocessor}{\#define\ \_\_builtin\_sysv\_va\_start\ \_\_builtin\_va\_start}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00039}\mbox{\hyperlink{cross-stdarg_8h_a36f32923789197c0a5592bcabbcc1a20}{00039}}\ \textcolor{preprocessor}{\#define\ \_\_builtin\_sysv\_va\_end\ \_\_builtin\_va\_end}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00040}00040\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00042}\mbox{\hyperlink{cross-stdarg_8h_a095627270ecb10b7ef60dc6670dfc4bf}{00042}}\ \textcolor{preprocessor}{\#define\ \_\_ms\_va\_copy(\_\_d,\_\_s)\ \_\_builtin\_ms\_va\_copy(\_\_d,\_\_s)}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00043}\mbox{\hyperlink{cross-stdarg_8h_a9b1c68106b8448534364e80f14e21be3}{00043}}\ \textcolor{preprocessor}{\#define\ \_\_ms\_va\_start(\_\_v,\_\_l)\ \_\_builtin\_ms\_va\_start(\_\_v,\_\_l)}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00044}\mbox{\hyperlink{cross-stdarg_8h_a831e0e8ed3b37727c38e9f3e1bc74d14}{00044}}\ \textcolor{preprocessor}{\#define\ \_\_ms\_va\_arg(\_\_v,\_\_l)\ \ \ \ \_\_builtin\_va\_arg(\_\_v,\_\_l)}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00045}\mbox{\hyperlink{cross-stdarg_8h_aa6122e138b045e2596c9101e62ceb9f5}{00045}}\ \textcolor{preprocessor}{\#define\ \_\_ms\_va\_end(\_\_v)\ \_\_builtin\_ms\_va\_end(\_\_v)}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00047}\mbox{\hyperlink{cross-stdarg_8h_a968d83fd64cf8cb6e18770328d1a0cb5}{00047}}\ \textcolor{preprocessor}{\#define\ \_\_sysv\_va\_copy(\_\_d,\_\_s)\ \_\_builtin\_sysv\_va\_copy(\_\_d,\_\_s)}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00048}\mbox{\hyperlink{cross-stdarg_8h_a61cf7f180217c98325fc8f169f5d5046}{00048}}\ \textcolor{preprocessor}{\#define\ \_\_sysv\_va\_start(\_\_v,\_\_l)\ \_\_builtin\_sysv\_va\_start(\_\_v,\_\_l)}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00049}\mbox{\hyperlink{cross-stdarg_8h_a019bc9f192e71820be0ded4f8df9658b}{00049}}\ \textcolor{preprocessor}{\#define\ \_\_sysv\_va\_arg(\_\_v,\_\_l)\ \ \_\_builtin\_va\_arg(\_\_v,\_\_l)}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00050}\mbox{\hyperlink{cross-stdarg_8h_a6e8473afb2f9b6d0e36b5aa753f3ec7e}{00050}}\ \textcolor{preprocessor}{\#define\ \_\_sysv\_va\_end(\_\_v)\ \_\_builtin\_sysv\_va\_end(\_\_v)}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00052}00052\ \textcolor{preprocessor}{\#ifndef\ \_\_GNUC\_SYSV\_VA\_LIST}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00053}\mbox{\hyperlink{cross-stdarg_8h_a5ec0acecc2d083a5fdc98330f8a07eda}{00053}}\ \textcolor{preprocessor}{\#define\ \_\_GNUC\_SYSV\_VA\_LIST}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00054}\mbox{\hyperlink{cross-stdarg_8h_abc47bdd5a1f9d65ae334b57610c37021}{00054}}\ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{cross-stdarg_8h_ab9f743298f0aa86c79b489ab798a6a17}{\_\_builtin\_sysv\_va\_list}}\ \mbox{\hyperlink{cross-stdarg_8h_abc47bdd5a1f9d65ae334b57610c37021}{\_\_gnuc\_sysv\_va\_list}};}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00055}00055\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00057}00057\ \textcolor{preprocessor}{\#ifndef\ \_SYSV\_VA\_LIST\_DEFINED}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00058}\mbox{\hyperlink{cross-stdarg_8h_a5fab65a71592b15d5757949ff1e7dcc3}{00058}}\ \textcolor{preprocessor}{\#define\ \_SYSV\_VA\_LIST\_DEFINED}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00059}\mbox{\hyperlink{cross-stdarg_8h_aef357d0b09207eee86ea5bafef470bec}{00059}}\ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{cross-stdarg_8h_abc47bdd5a1f9d65ae334b57610c37021}{\_\_gnuc\_sysv\_va\_list}}\ \mbox{\hyperlink{cross-stdarg_8h_aef357d0b09207eee86ea5bafef470bec}{sysv\_va\_list}};}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00060}00060\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00062}00062\ \textcolor{preprocessor}{\#ifndef\ \_\_GNUC\_MS\_VA\_LIST}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00063}\mbox{\hyperlink{cross-stdarg_8h_a5e4d4454f1cf604b76e34019181ef21a}{00063}}\ \textcolor{preprocessor}{\#define\ \_\_GNUC\_MS\_VA\_LIST}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00064}\mbox{\hyperlink{cross-stdarg_8h_a83c1626001ccdfb80f2c7f0ef99a02d4}{00064}}\ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{cross-stdarg_8h_a1525e924d3cd37b22b6b4d427f89b903}{\_\_builtin\_ms\_va\_list}}\ \mbox{\hyperlink{cross-stdarg_8h_a83c1626001ccdfb80f2c7f0ef99a02d4}{\_\_gnuc\_ms\_va\_list}};}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00065}00065\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00067}00067\ \textcolor{preprocessor}{\#ifndef\ \_MS\_VA\_LIST\_DEFINED}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00068}\mbox{\hyperlink{cross-stdarg_8h_a1db41b1cbbb2f20cddebe51d9fe2cc84}{00068}}\ \textcolor{preprocessor}{\#define\ \_MS\_VA\_LIST\_DEFINED}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00069}\mbox{\hyperlink{cross-stdarg_8h_a2050e4a0f26e8f31533e24bad144e256}{00069}}\ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{cross-stdarg_8h_a83c1626001ccdfb80f2c7f0ef99a02d4}{\_\_gnuc\_ms\_va\_list}}\ \mbox{\hyperlink{cross-stdarg_8h_a2050e4a0f26e8f31533e24bad144e256}{ms\_va\_list}};}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00070}00070\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{cross-stdarg_8h_source_l00072}00072\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_CROSS\_STDARG\_H\_INCLUDED\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

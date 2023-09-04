@@ -1,0 +1,169 @@
+\doxysection{platform.\+h}
+\hypertarget{external_2glfw_2src_2platform_8h_source}{}\label{external_2glfw_2src_2platform_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/external/glfw/src/platform.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/external/glfw/src/platform.h}}
+\mbox{\hyperlink{external_2glfw_2src_2platform_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00001}00001\ \textcolor{comment}{//========================================================================}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00002}00002\ \textcolor{comment}{//\ GLFW\ 3.4\ -\/\ www.glfw.org}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00003}00003\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00004}00004\ \textcolor{comment}{//\ Copyright\ (c)\ 2002-\/2006\ Marcus\ Geelnard}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00005}00005\ \textcolor{comment}{//\ Copyright\ (c)\ 2006-\/2018\ Camilla\ Löwy\ <elmindreda@glfw.org>}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00006}00006\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00007}00007\ \textcolor{comment}{//\ This\ software\ is\ provided\ 'as-\/is',\ without\ any\ express\ or\ implied}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00008}00008\ \textcolor{comment}{//\ warranty.\ In\ no\ event\ will\ the\ authors\ be\ held\ liable\ for\ any\ damages}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00009}00009\ \textcolor{comment}{//\ arising\ from\ the\ use\ of\ this\ software.}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00010}00010\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00011}00011\ \textcolor{comment}{//\ Permission\ is\ granted\ to\ anyone\ to\ use\ this\ software\ for\ any\ purpose,}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00012}00012\ \textcolor{comment}{//\ including\ commercial\ applications,\ and\ to\ alter\ it\ and\ redistribute\ it}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00013}00013\ \textcolor{comment}{//\ freely,\ subject\ to\ the\ following\ restrictions:}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00014}00014\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00015}00015\ \textcolor{comment}{//\ 1.\ The\ origin\ of\ this\ software\ must\ not\ be\ misrepresented;\ you\ must\ not}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00016}00016\ \textcolor{comment}{//\ \ \ \ claim\ that\ you\ wrote\ the\ original\ software.\ If\ you\ use\ this\ software}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00017}00017\ \textcolor{comment}{//\ \ \ \ in\ a\ product,\ an\ acknowledgment\ in\ the\ product\ documentation\ would}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00018}00018\ \textcolor{comment}{//\ \ \ \ be\ appreciated\ but\ is\ not\ required.}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00019}00019\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00020}00020\ \textcolor{comment}{//\ 2.\ Altered\ source\ versions\ must\ be\ plainly\ marked\ as\ such,\ and\ must\ not}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00021}00021\ \textcolor{comment}{//\ \ \ \ be\ misrepresented\ as\ being\ the\ original\ software.}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00022}00022\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00023}00023\ \textcolor{comment}{//\ 3.\ This\ notice\ may\ not\ be\ removed\ or\ altered\ from\ any\ source}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00024}00024\ \textcolor{comment}{//\ \ \ \ distribution.}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00025}00025\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00026}00026\ \textcolor{comment}{//========================================================================}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00028}00028\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2null__platform_8h}{null\_platform.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00030}00030\ \textcolor{preprocessor}{\#if\ defined(\_GLFW\_WIN32)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00031}00031\ \textcolor{preprocessor}{\ \#include\ "{}win32\_platform.h"{}}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00032}00032\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00033}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_ae013c301a079d96c5fce953c5513b367}{00033}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_WIN32\_WINDOW\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00034}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_aa0f8e2d880036b2b2d701a9404ad4ee8}{00034}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_WIN32\_MONITOR\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00035}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_a53b2ba18b1fd997caeeb63b52b915bad}{00035}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_WIN32\_CURSOR\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00036}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_a526b2749de71a7f953b62995c0866bdd}{00036}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_WIN32\_LIBRARY\_WINDOW\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00037}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_a42cbcf5bbaffc75bf3fc25a67d10fd49}{00037}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_WGL\_CONTEXT\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00038}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_ab24918430d19f38297bd784685991aed}{00038}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_WGL\_LIBRARY\_CONTEXT\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00039}00039\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00041}00041\ \textcolor{preprocessor}{\#if\ defined(\_GLFW\_COCOA)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00042}00042\ \textcolor{preprocessor}{\ \#include\ "{}cocoa\_platform.h"{}}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00043}00043\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00044}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_acd8d79114d69e7b88e44f9fa5abcd4c2}{00044}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_COCOA\_WINDOW\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00045}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_acd2a8594724d1cb4d200d686db00e63f}{00045}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_COCOA\_MONITOR\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00046}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_afcac7b86ea52c78eed21395aae7354ae}{00046}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_COCOA\_CURSOR\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00047}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_a6d6dc24460745c47499eeb5190c775e1}{00047}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_COCOA\_LIBRARY\_WINDOW\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00048}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_a2e674dc30fae3d47667c60b5f68d61b4}{00048}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_NSGL\_CONTEXT\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00049}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_ac65a2d98f8d8ea15b4de03b8ac31c02a}{00049}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_NSGL\_LIBRARY\_CONTEXT\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00050}00050\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00052}00052\ \textcolor{preprocessor}{\#if\ defined(\_GLFW\_WAYLAND)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00053}00053\ \textcolor{preprocessor}{\ \#include\ "{}wl\_platform.h"{}}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00054}00054\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00055}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_a01ea65544cb1c590b788181b80b4c0e2}{00055}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_WAYLAND\_WINDOW\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00056}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_a5215215ecf3479de43a9ce26e6cde798}{00056}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_WAYLAND\_MONITOR\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00057}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_a27af24231144adeda7e670168cc01f29}{00057}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_WAYLAND\_CURSOR\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00058}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_ad95df6576b8571ca13b2ea2daa99baf6}{00058}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_WAYLAND\_LIBRARY\_WINDOW\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00059}00059\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00061}00061\ \textcolor{preprocessor}{\#if\ defined(\_GLFW\_X11)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00062}00062\ \textcolor{preprocessor}{\ \#include\ "{}x11\_platform.h"{}}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00063}00063\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00064}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_aef6edd2f9dc6973c646cfd35bd05f88e}{00064}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_X11\_WINDOW\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00065}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_a1e6549323ceaea31752870aa8cefab84}{00065}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_X11\_MONITOR\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00066}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_a833f86207106f052f5c1e56b7ded887a}{00066}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_X11\_CURSOR\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00067}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_a53fac3c9a966ecd172b44b86f9a9e78e}{00067}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_X11\_LIBRARY\_WINDOW\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00068}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_ace99cd1e5ce0d1065365e7f691116962}{00068}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_GLX\_CONTEXT\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00069}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_aac5e34aaf0f4c2ed479d46e918ab6e00}{00069}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_GLX\_LIBRARY\_CONTEXT\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00070}00070\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00072}00072\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2null__joystick_8h}{null\_joystick.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00074}00074\ \textcolor{preprocessor}{\#if\ defined(\_GLFW\_WIN32)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00075}00075\ \textcolor{preprocessor}{\ \#include\ "{}win32\_joystick.h"{}}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00076}00076\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00077}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_ad5e8a74275277325aba807c258486bec}{00077}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_WIN32\_JOYSTICK\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00078}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_a0bf10b2c06235c02567653e103fdf2ee}{00078}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_WIN32\_LIBRARY\_JOYSTICK\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00079}00079\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00081}00081\ \textcolor{preprocessor}{\#if\ defined(\_GLFW\_COCOA)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00082}00082\ \textcolor{preprocessor}{\ \#include\ "{}cocoa\_joystick.h"{}}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00083}00083\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00084}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_ab7894f80e3d5b66568b4819f7a14730b}{00084}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_COCOA\_JOYSTICK\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00085}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_a17b4bc9a0d4791064794502a2b2a5178}{00085}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_COCOA\_LIBRARY\_JOYSTICK\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00086}00086\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00088}00088\ \textcolor{preprocessor}{\#if\ (defined(\_GLFW\_X11)\ ||\ defined(\_GLFW\_WAYLAND))\ \&\&\ defined(\_\_linux\_\_)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00089}00089\ \textcolor{preprocessor}{\ \#include\ "{}linux\_joystick.h"{}}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00090}00090\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00091}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_a8c62eadc230106bdd309c82f4f76b2af}{00091}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_LINUX\_JOYSTICK\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00092}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_a61e004f102ef404c04dcf19c3afe95c7}{00092}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_LINUX\_LIBRARY\_JOYSTICK\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00093}00093\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00095}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_aeba2a99ab73d616c2d826b9eeb071503}{00095}}\ \textcolor{preprocessor}{\#define\ GLFW\_PLATFORM\_WINDOW\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00096}00096\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_WIN32\_WINDOW\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00097}00097\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_COCOA\_WINDOW\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00098}00098\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_WAYLAND\_WINDOW\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00099}00099\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_X11\_WINDOW\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00100}00100\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_NULL\_WINDOW\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00101}00101\ \textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00102}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_a5cfd4a9b9d5acd80f9f8e69f2ad8cf11}{00102}}\ \textcolor{preprocessor}{\#define\ GLFW\_PLATFORM\_MONITOR\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00103}00103\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_WIN32\_MONITOR\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00104}00104\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_COCOA\_MONITOR\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00105}00105\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_WAYLAND\_MONITOR\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00106}00106\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_X11\_MONITOR\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00107}00107\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_NULL\_MONITOR\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00108}00108\ \textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00109}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_a2a500af6253ee087d405329095f9c3d8}{00109}}\ \textcolor{preprocessor}{\#define\ GLFW\_PLATFORM\_CURSOR\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00110}00110\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_WIN32\_CURSOR\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00111}00111\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_COCOA\_CURSOR\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00112}00112\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_WAYLAND\_CURSOR\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00113}00113\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_X11\_CURSOR\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00114}00114\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_NULL\_CURSOR\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00115}00115\ \textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00116}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_a14043b23a33f67e150ba47ba9f380ac9}{00116}}\ \textcolor{preprocessor}{\#define\ GLFW\_PLATFORM\_JOYSTICK\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00117}00117\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_WIN32\_JOYSTICK\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00118}00118\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_COCOA\_JOYSTICK\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00119}00119\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_LINUX\_JOYSTICK\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00121}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_a9be5ee0e1cf535b9a34175652da64bec}{00121}}\ \textcolor{preprocessor}{\#define\ GLFW\_PLATFORM\_LIBRARY\_WINDOW\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00122}00122\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_WIN32\_LIBRARY\_WINDOW\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00123}00123\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_COCOA\_LIBRARY\_WINDOW\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00124}00124\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_WAYLAND\_LIBRARY\_WINDOW\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00125}00125\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_X11\_LIBRARY\_WINDOW\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00126}00126\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_NULL\_LIBRARY\_WINDOW\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00127}00127\ \textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00128}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_a7c452afc3a22525366c4831f8d5105d6}{00128}}\ \textcolor{preprocessor}{\#define\ GLFW\_PLATFORM\_LIBRARY\_JOYSTICK\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00129}00129\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_WIN32\_LIBRARY\_JOYSTICK\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00130}00130\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_COCOA\_LIBRARY\_JOYSTICK\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00131}00131\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_LINUX\_LIBRARY\_JOYSTICK\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00133}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_af410f4bbd3666f1399bfae6c1ea1604b}{00133}}\ \textcolor{preprocessor}{\#define\ GLFW\_PLATFORM\_CONTEXT\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00134}00134\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_WGL\_CONTEXT\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00135}00135\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_NSGL\_CONTEXT\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00136}00136\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_GLX\_CONTEXT\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00137}00137\ }
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00138}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_aab7cee408dd9ba9bcd01b3b26c4a0022}{00138}}\ \textcolor{preprocessor}{\#define\ GLFW\_PLATFORM\_LIBRARY\_CONTEXT\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00139}00139\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_WGL\_LIBRARY\_CONTEXT\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00140}00140\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_NSGL\_LIBRARY\_CONTEXT\_STATE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00141}00141\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ GLFW\_GLX\_LIBRARY\_CONTEXT\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00143}00143\ \textcolor{preprocessor}{\#if\ defined(\_WIN32)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00144}00144\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{win32__thread_8h}{win32\_thread.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00145}00145\ \textcolor{preprocessor}{\ \#define\ GLFW\_PLATFORM\_TLS\_STATE\ \ \ \ GLFW\_WIN32\_TLS\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00146}00146\ \textcolor{preprocessor}{\ \#define\ GLFW\_PLATFORM\_MUTEX\_STATE\ \ GLFW\_WIN32\_MUTEX\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00147}00147\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00148}00148\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2posix__thread_8h}{posix\_thread.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00149}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_a7e712f64447dbf553978537b5d9e3471}{00149}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_PLATFORM\_TLS\_STATE\ \ \ \ GLFW\_POSIX\_TLS\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00150}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_aee84002a03b5ad234ae7a80815469d18}{00150}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_PLATFORM\_MUTEX\_STATE\ \ GLFW\_POSIX\_MUTEX\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00151}00151\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00153}00153\ \textcolor{preprocessor}{\#if\ defined(\_WIN32)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00154}00154\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{win32__time_8h}{win32\_time.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00155}00155\ \textcolor{preprocessor}{\ \#define\ GLFW\_PLATFORM\_LIBRARY\_TIMER\_STATE\ \ GLFW\_WIN32\_LIBRARY\_TIMER\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00156}00156\ \textcolor{preprocessor}{\#elif\ defined(\_\_APPLE\_\_)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00157}00157\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{cocoa__time_8h}{cocoa\_time.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00158}00158\ \textcolor{preprocessor}{\ \#define\ GLFW\_PLATFORM\_LIBRARY\_TIMER\_STATE\ \ GLFW\_COCOA\_LIBRARY\_TIMER\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00159}00159\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00160}00160\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2posix__time_8h}{posix\_time.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00161}\mbox{\hyperlink{external_2glfw_2src_2platform_8h_a38bd6ad5aae7c27f93181c75348d59a9}{00161}}\ \textcolor{preprocessor}{\ \#define\ GLFW\_PLATFORM\_LIBRARY\_TIMER\_STATE\ \ GLFW\_POSIX\_LIBRARY\_TIMER\_STATE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00162}00162\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2src_2platform_8h_source_l00163}00163\ }
+
+\end{DoxyCode}

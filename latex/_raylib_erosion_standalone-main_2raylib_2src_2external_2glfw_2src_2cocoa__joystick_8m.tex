@@ -1,0 +1,143 @@
+\doxysection{C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/\+Raylib\+Erosion\+Standalone-\/main/raylib/src/external/glfw/src/cocoa\+\_\+joystick.m File Reference}
+\hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m}{}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/RaylibErosionStandalone-\/main/raylib/src/external/glfw/src/cocoa\_joystick.m@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/RaylibErosionStandalone-\/main/raylib/src/external/glfw/src/cocoa\_joystick.m}}
+{\ttfamily \#include "{}internal.\+h"{}}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$mach/mach.\+h$>$}\newline
+{\ttfamily \#include $<$mach/mach\+\_\+error.\+h$>$}\newline
+{\ttfamily \#include $<$Core\+Foundation/\+Core\+Foundation.\+h$>$}\newline
+{\ttfamily \#include $<$Kernel/\+IOKit/hidsystem/\+IOHIDUsage\+Tables.\+h$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct___g_l_f_wjoyelement_n_s}{\+\_\+\+GLFWjoyelement\+NS}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{struct___g_l_f_wjoyelement_n_s}{\+\_\+\+GLFWjoyelement\+NS}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_ab6bd3da6c56b26813c15b18611077df1}{\+\_\+\+GLFWjoyelement\+NS}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{long}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_a262bb3770a5691df07b30a5fd7f7cd04}{get\+Element\+Value}} (\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{js}}, \mbox{\hyperlink{struct___g_l_f_wjoyelement_n_s}{\+\_\+\+GLFWjoyelement\+NS}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{element}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{CFComparison\+Result}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_a573e6c265b7f6e10ff88371f6f677966}{compare\+Elements}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{fp}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sp}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}user)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_a3699f1438e1fa6f4f40eb88dc5d8ca6e}{close\+Joystick}} (\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{js}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_a1c45c1249a59405215a3ce6da9aebfb6}{match\+Callback}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}context, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{IOReturn}} \mbox{\hyperlink{core__func__integer_8cpp_a937d4dd628a8858b443a399410d2600b}{result}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sender}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{IOHIDDevice\+Ref}} device)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_ab4d20f8046b9ef17c92b15d7a4bf9fe1}{remove\+Callback}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}context, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{IOReturn}} \mbox{\hyperlink{core__func__integer_8cpp_a937d4dd628a8858b443a399410d2600b}{result}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sender}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{IOHIDDevice\+Ref}} device)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_ac7ecf0f3b0bc7553b98d4f4952413a02}{\+\_\+glfw\+Init\+Joysticks\+NS}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_aea760d1e1b1985f78d5c5a4d38e52e71}{\+\_\+glfw\+Terminate\+Joysticks\+NS}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_a07c7e99222e703fbd67b2c6045d6440f}{\+\_\+glfw\+Platform\+Poll\+Joystick}} (\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{js}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a1e71d9c196e4683cc06c4b54d53f7ef5}{mode}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_ab9fd6c52f91cdf20f1b190a365709033}{\+\_\+glfw\+Platform\+Update\+Gamepad\+GUID}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}guid)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_ab6bd3da6c56b26813c15b18611077df1}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_ab6bd3da6c56b26813c15b18611077df1} 
+\index{cocoa\_joystick.m@{cocoa\_joystick.m}!\_GLFWjoyelementNS@{\_GLFWjoyelementNS}}
+\index{\_GLFWjoyelementNS@{\_GLFWjoyelementNS}!cocoa\_joystick.m@{cocoa\_joystick.m}}
+\doxysubsubsection{\texorpdfstring{\_GLFWjoyelementNS}{\_GLFWjoyelementNS}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{struct___g_l_f_wjoyelement_n_s}{\+\_\+\+GLFWjoyelement\+NS}} \mbox{\hyperlink{struct___g_l_f_wjoyelement_n_s}{\+\_\+\+GLFWjoyelement\+NS}}}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_ac7ecf0f3b0bc7553b98d4f4952413a02}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_ac7ecf0f3b0bc7553b98d4f4952413a02} 
+\index{cocoa\_joystick.m@{cocoa\_joystick.m}!\_glfwInitJoysticksNS@{\_glfwInitJoysticksNS}}
+\index{\_glfwInitJoysticksNS@{\_glfwInitJoysticksNS}!cocoa\_joystick.m@{cocoa\_joystick.m}}
+\doxysubsubsection{\texorpdfstring{\_glfwInitJoysticksNS()}{\_glfwInitJoysticksNS()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Init\+Joysticks\+NS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_source_l00312}{312}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_source}{cocoa\+\_\+joystick.\+m}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_a07c7e99222e703fbd67b2c6045d6440f}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_a07c7e99222e703fbd67b2c6045d6440f} 
+\index{cocoa\_joystick.m@{cocoa\_joystick.m}!\_glfwPlatformPollJoystick@{\_glfwPlatformPollJoystick}}
+\index{\_glfwPlatformPollJoystick@{\_glfwPlatformPollJoystick}!cocoa\_joystick.m@{cocoa\_joystick.m}}
+\doxysubsubsection{\texorpdfstring{\_glfwPlatformPollJoystick()}{\_glfwPlatformPollJoystick()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+glfw\+Platform\+Poll\+Joystick (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}}]{js,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_source_l00406}{406}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_source}{cocoa\+\_\+joystick.\+m}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_ab9fd6c52f91cdf20f1b190a365709033}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_ab9fd6c52f91cdf20f1b190a365709033} 
+\index{cocoa\_joystick.m@{cocoa\_joystick.m}!\_glfwPlatformUpdateGamepadGUID@{\_glfwPlatformUpdateGamepadGUID}}
+\index{\_glfwPlatformUpdateGamepadGUID@{\_glfwPlatformUpdateGamepadGUID}!cocoa\_joystick.m@{cocoa\_joystick.m}}
+\doxysubsubsection{\texorpdfstring{\_glfwPlatformUpdateGamepadGUID()}{\_glfwPlatformUpdateGamepadGUID()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Platform\+Update\+Gamepad\+GUID (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}}]{guid }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_source_l00476}{476}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_source}{cocoa\+\_\+joystick.\+m}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_aea760d1e1b1985f78d5c5a4d38e52e71}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_aea760d1e1b1985f78d5c5a4d38e52e71} 
+\index{cocoa\_joystick.m@{cocoa\_joystick.m}!\_glfwTerminateJoysticksNS@{\_glfwTerminateJoysticksNS}}
+\index{\_glfwTerminateJoysticksNS@{\_glfwTerminateJoysticksNS}!cocoa\_joystick.m@{cocoa\_joystick.m}}
+\doxysubsubsection{\texorpdfstring{\_glfwTerminateJoysticksNS()}{\_glfwTerminateJoysticksNS()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Terminate\+Joysticks\+NS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_source_l00390}{390}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_source}{cocoa\+\_\+joystick.\+m}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_a3699f1438e1fa6f4f40eb88dc5d8ca6e}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_a3699f1438e1fa6f4f40eb88dc5d8ca6e} 
+\index{cocoa\_joystick.m@{cocoa\_joystick.m}!closeJoystick@{closeJoystick}}
+\index{closeJoystick@{closeJoystick}!cocoa\_joystick.m@{cocoa\_joystick.m}}
+\doxysubsubsection{\texorpdfstring{closeJoystick()}{closeJoystick()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} close\+Joystick (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}}]{js }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_source_l00097}{97}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_source}{cocoa\+\_\+joystick.\+m}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_a573e6c265b7f6e10ff88371f6f677966}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_a573e6c265b7f6e10ff88371f6f677966} 
+\index{cocoa\_joystick.m@{cocoa\_joystick.m}!compareElements@{compareElements}}
+\index{compareElements@{compareElements}!cocoa\_joystick.m@{cocoa\_joystick.m}}
+\doxysubsubsection{\texorpdfstring{compareElements()}{compareElements()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{CFComparison\+Result}} compare\+Elements (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}}]{fp,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}}]{sp,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}}]{user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_source_l00078}{78}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_source}{cocoa\+\_\+joystick.\+m}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_a262bb3770a5691df07b30a5fd7f7cd04}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_a262bb3770a5691df07b30a5fd7f7cd04} 
+\index{cocoa\_joystick.m@{cocoa\_joystick.m}!getElementValue@{getElementValue}}
+\index{getElementValue@{getElementValue}!cocoa\_joystick.m@{cocoa\_joystick.m}}
+\doxysubsubsection{\texorpdfstring{getElementValue()}{getElementValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{long}} get\+Element\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}}]{js,  }\item[{\mbox{\hyperlink{struct___g_l_f_wjoyelement_n_s}{\+\_\+\+GLFWjoyelement\+NS}} \texorpdfstring{$\ast$}{*}}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_source_l00058}{58}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_source}{cocoa\+\_\+joystick.\+m}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_a1c45c1249a59405215a3ce6da9aebfb6}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_a1c45c1249a59405215a3ce6da9aebfb6} 
+\index{cocoa\_joystick.m@{cocoa\_joystick.m}!matchCallback@{matchCallback}}
+\index{matchCallback@{matchCallback}!cocoa\_joystick.m@{cocoa\_joystick.m}}
+\doxysubsubsection{\texorpdfstring{matchCallback()}{matchCallback()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} match\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}}]{context,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{IOReturn}}}]{result,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}}]{sender,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{IOHIDDevice\+Ref}}}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_source_l00122}{122}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_source}{cocoa\+\_\+joystick.\+m}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_ab4d20f8046b9ef17c92b15d7a4bf9fe1}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_ab4d20f8046b9ef17c92b15d7a4bf9fe1} 
+\index{cocoa\_joystick.m@{cocoa\_joystick.m}!removeCallback@{removeCallback}}
+\index{removeCallback@{removeCallback}!cocoa\_joystick.m@{cocoa\_joystick.m}}
+\doxysubsubsection{\texorpdfstring{removeCallback()}{removeCallback()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} remove\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}}]{context,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{IOReturn}}}]{result,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}}]{sender,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{IOHIDDevice\+Ref}}}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_source_l00288}{288}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2cocoa__joystick_8m_source}{cocoa\+\_\+joystick.\+m}}.
+

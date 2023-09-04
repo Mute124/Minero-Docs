@@ -1,0 +1,106 @@
+\doxysection{this\+\_\+thread\+\_\+sleep.\+h}
+\hypertarget{this__thread__sleep_8h_source}{}\label{this__thread__sleep_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/bits/this\_thread\_sleep.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/bits/this\_thread\_sleep.h}}
+\mbox{\hyperlink{this__thread__sleep_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00001}00001\ \textcolor{comment}{//\ std::this\_thread::sleep\_for/until\ declarations\ -\/*-\/\ C++\ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00003}00003\ \textcolor{comment}{//\ Copyright\ (C)\ 2008-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00005}00005\ \textcolor{comment}{//\ This\ file\ is\ part\ of\ the\ GNU\ ISO\ C++\ Library.\ \ This\ library\ is\ free}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00006}00006\ \textcolor{comment}{//\ software;\ you\ can\ redistribute\ it\ and/or\ modify\ it\ under\ the}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00007}00007\ \textcolor{comment}{//\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by\ the}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00008}00008\ \textcolor{comment}{//\ Free\ Software\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00009}00009\ \textcolor{comment}{//\ any\ later\ version.}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00011}00011\ \textcolor{comment}{//\ This\ library\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00012}00012\ \textcolor{comment}{//\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00013}00013\ \textcolor{comment}{//\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00014}00014\ \textcolor{comment}{//\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00016}00016\ \textcolor{comment}{//\ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00017}00017\ \textcolor{comment}{//\ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00018}00018\ \textcolor{comment}{//\ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00020}00020\ \textcolor{comment}{//\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00021}00021\ \textcolor{comment}{//\ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00022}00022\ \textcolor{comment}{//\ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00023}00023\ \textcolor{comment}{//\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00030}00030\ \textcolor{preprocessor}{\#ifndef\ \_GLIBCXX\_THIS\_THREAD\_SLEEP\_H}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00031}00031\ \textcolor{preprocessor}{\#define\ \_GLIBCXX\_THIS\_THREAD\_SLEEP\_H\ 1}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00033}00033\ \textcolor{preprocessor}{\#pragma\ GCC\ system\_header}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00035}00035\ \textcolor{preprocessor}{\#if\ \_\_cplusplus\ >=\ 201103L}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00036}00036\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{chrono_8h}{bits/chrono.h}}>}\ \textcolor{comment}{//\ std::chrono::*}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00038}00038\ \textcolor{preprocessor}{\#ifdef\ \_GLIBCXX\_USE\_NANOSLEEP}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00039}00039\ \textcolor{preprocessor}{\#\ include\ <cerrno>}\ \ \textcolor{comment}{//\ errno,\ EINTR}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00040}00040\ \textcolor{preprocessor}{\#\ include\ <\mbox{\hyperlink{_time_8h}{time.h}}>}\ \ \textcolor{comment}{//\ nanosleep}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00041}00041\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00043}00043\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacestd}{std}}\ \mbox{\hyperlink{c_09_09config_8h_a44377df0d3503f0b3d9ab316dd8ddf8b}{\_GLIBCXX\_VISIBILITY}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{default}})}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00044}00044\ \{}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00045}00045\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_GLIBCXX\_BEGIN\_NAMESPACE\_VERSION}}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00056}00056\ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{this\_thread}}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00057}00057\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00058}00058\ \textcolor{preprocessor}{\#ifndef\ \_GLIBCXX\_NO\_SLEEP}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00060}00060\ \textcolor{preprocessor}{\#ifndef\ \_GLIBCXX\_USE\_NANOSLEEP}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00061}00061\ \ \ \ \ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00062}00062\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_sleep\_for}}(chrono::seconds,\ chrono::nanoseconds);}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00063}00063\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00066}00066\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Rep,\ \textcolor{keyword}{typename}\ \_Period>}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00067}00067\ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00068}00068\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sleep\_for}}(\textcolor{keyword}{const}\ chrono::duration<\_Rep,\ \_Period>\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_rtime}})}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00069}00069\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00070}00070\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_rtime}}\ <=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_rtime}}.zero())}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00071}00071\ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00072}00072\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_s}}\ =\ chrono::duration\_cast<chrono::seconds>(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_rtime}});}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00073}00073\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ns}}\ =\ chrono::duration\_cast<chrono::nanoseconds>(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_rtime}}\ -\/\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_s}});}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00074}00074\ \textcolor{preprocessor}{\#ifdef\ \_GLIBCXX\_USE\_NANOSLEEP}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00075}00075\ \ \ \ \ struct\ ::timespec\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ts}}\ =}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00076}00076\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_cast<}std::time\_t\textcolor{keyword}{>}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_s}}.count()),}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{long}\textcolor{keyword}{>}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ns}}.count())}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00079}00079\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00080}00080\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{pthread__time_8h_a7d312dd72997b5c427ad9f37888bc543}{::nanosleep}}(\&\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ts}},\ \&\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ts}})\ ==\ -\/1\ \&\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{errno}}\ ==\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{EINTR}})}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00081}00081\ \ \ \ \ \ \ \{\ \}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00082}00082\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00083}00083\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_sleep\_for}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_s}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ns}});}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00084}00084\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00085}00085\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00088}00088\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Clock,\ \textcolor{keyword}{typename}\ \_Duration>}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00089}00089\ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00090}00090\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sleep\_until}}(\textcolor{keyword}{const}\ chrono::time\_point<\_Clock,\ \_Duration>\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_atime}})}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00091}00091\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00092}00092\ \textcolor{preprocessor}{\#if\ \_\_cplusplus\ >\ 201703L}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00093}00093\ \ \ \ \ \textcolor{keyword}{static\_assert}(chrono::is\_clock\_v<\_Clock>);}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00094}00094\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00095}00095\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_now}}\ =\ \_Clock::now();}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00096}00096\ \ \ \ \ \textcolor{keywordflow}{if}\ (\_Clock::is\_steady)}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00097}00097\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00098}00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_now}}\ <\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_atime}})}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sleep\_for}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_atime}}\ -\/\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_now}});}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00101}00101\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00102}00102\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_now}}\ <\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_atime}})}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00103}00103\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00104}00104\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sleep\_for}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_atime}}\ -\/\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_now}});}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00105}00105\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_now}}\ =\ \_Clock::now();}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00106}00106\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00107}00107\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00108}00108\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !\ NO\_SLEEP}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00109}00109\ \ \ \}\ \textcolor{comment}{//\ namespace\ this\_thread}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00113}00113\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_GLIBCXX\_END\_NAMESPACE\_VERSION}}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00114}00114\ \}\ \textcolor{comment}{//\ namespace}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00115}00115\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ C++11}}
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{this__thread__sleep_8h_source_l00117}00117\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_GLIBCXX\_THIS\_THREAD\_SLEEP\_H}}
+
+\end{DoxyCode}

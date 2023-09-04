@@ -1,0 +1,128 @@
+\doxysection{\+\_\+\+\_\+gnu\+\_\+pbds\+::lu\+\_\+move\+\_\+to\+\_\+front\+\_\+policy\texorpdfstring{$<$}{<} \+\_\+\+Alloc \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class____gnu__pbds_1_1lu__move__to__front__policy}{}\label{class____gnu__pbds_1_1lu__move__to__front__policy}\index{\_\_gnu\_pbds::lu\_move\_to\_front\_policy$<$ \_Alloc $>$@{\_\_gnu\_pbds::lu\_move\_to\_front\_policy$<$ \_Alloc $>$}}
+
+
+{\ttfamily \#include "{}list\+\_\+update\+\_\+policy.\+hpp"{}}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \+\_\+\+Alloc \mbox{\hyperlink{class____gnu__pbds_1_1lu__move__to__front__policy_a31e46737ee583d07e30cb26b0d04faa5}{allocator\+\_\+type}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{struct____gnu__pbds_1_1null__type}{null\+\_\+type}} \mbox{\hyperlink{class____gnu__pbds_1_1lu__move__to__front__policy_acfcd460068d88a84f3931c05942fd979}{metadata\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Metadata on which this functor operates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1rebind__traits}{detail\+::rebind\+\_\+traits}}$<$ \+\_\+\+Alloc, \mbox{\hyperlink{class____gnu__pbds_1_1lu__move__to__front__policy_acfcd460068d88a84f3931c05942fd979}{metadata\+\_\+type}} $>$\+::reference \mbox{\hyperlink{class____gnu__pbds_1_1lu__move__to__front__policy_a5b07b7a2830f74f78990ded81fcccc3b}{metadata\+\_\+reference}}
+\begin{DoxyCompactList}\small\item\em Reference to metadata on which this functor operates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class____gnu__pbds_1_1lu__move__to__front__policy_acfcd460068d88a84f3931c05942fd979}{metadata\+\_\+type}} \mbox{\hyperlink{class____gnu__pbds_1_1lu__move__to__front__policy_afa1064441fc28b323b7b28176686ef65}{operator()}} () \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}}
+\begin{DoxyCompactList}\small\item\em Creates a metadata object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{raylib_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} \mbox{\hyperlink{class____gnu__pbds_1_1lu__move__to__front__policy_a009f2dea97b29bdffa640258f86b6135}{operator()}} (\mbox{\hyperlink{class____gnu__pbds_1_1lu__move__to__front__policy_a5b07b7a2830f74f78990ded81fcccc3b}{metadata\+\_\+reference}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\+\_\+metadata}}) \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{struct____gnu__pbds_1_1null__type}{null\+\_\+type}} \mbox{\hyperlink{class____gnu__pbds_1_1lu__move__to__front__policy_a20df9455ca2a326377e12c52d5fabc05}{s\+\_\+metadata}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc = std\+::allocator$<$char$>$$>$\newline
+class \+\_\+\+\_\+gnu\+\_\+pbds\+::lu\+\_\+move\+\_\+to\+\_\+front\+\_\+policy$<$ \+\_\+\+Alloc $>$}
+A list-\/update policy that unconditionally moves elements to the front of the list. A null type means that each link in a list-\/based container does not actually need metadata. 
+
+Definition at line \mbox{\hyperlink{list__update__policy_8hpp_source_l00058}{58}} of file \mbox{\hyperlink{list__update__policy_8hpp_source}{list\+\_\+update\+\_\+policy.\+hpp}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{class____gnu__pbds_1_1lu__move__to__front__policy_a31e46737ee583d07e30cb26b0d04faa5}\label{class____gnu__pbds_1_1lu__move__to__front__policy_a31e46737ee583d07e30cb26b0d04faa5} 
+\index{\_\_gnu\_pbds::lu\_move\_to\_front\_policy$<$ \_Alloc $>$@{\_\_gnu\_pbds::lu\_move\_to\_front\_policy$<$ \_Alloc $>$}!allocator\_type@{allocator\_type}}
+\index{allocator\_type@{allocator\_type}!\_\_gnu\_pbds::lu\_move\_to\_front\_policy$<$ \_Alloc $>$@{\_\_gnu\_pbds::lu\_move\_to\_front\_policy$<$ \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{allocator\_type}{allocator\_type}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc  = std\+::allocator$<$char$>$$>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \+\_\+\+Alloc \mbox{\hyperlink{class____gnu__pbds_1_1lu__move__to__front__policy}{\+\_\+\+\_\+gnu\+\_\+pbds\+::lu\+\_\+move\+\_\+to\+\_\+front\+\_\+policy}}$<$ \+\_\+\+Alloc $>$\+::allocator\+\_\+type}
+
+
+
+Definition at line \mbox{\hyperlink{list__update__policy_8hpp_source_l00061}{61}} of file \mbox{\hyperlink{list__update__policy_8hpp_source}{list\+\_\+update\+\_\+policy.\+hpp}}.
+
+\Hypertarget{class____gnu__pbds_1_1lu__move__to__front__policy_a5b07b7a2830f74f78990ded81fcccc3b}\label{class____gnu__pbds_1_1lu__move__to__front__policy_a5b07b7a2830f74f78990ded81fcccc3b} 
+\index{\_\_gnu\_pbds::lu\_move\_to\_front\_policy$<$ \_Alloc $>$@{\_\_gnu\_pbds::lu\_move\_to\_front\_policy$<$ \_Alloc $>$}!metadata\_reference@{metadata\_reference}}
+\index{metadata\_reference@{metadata\_reference}!\_\_gnu\_pbds::lu\_move\_to\_front\_policy$<$ \_Alloc $>$@{\_\_gnu\_pbds::lu\_move\_to\_front\_policy$<$ \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{metadata\_reference}{metadata\_reference}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc  = std\+::allocator$<$char$>$$>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1rebind__traits}{detail\+::rebind\+\_\+traits}}$<$\+\_\+\+Alloc,\mbox{\hyperlink{class____gnu__pbds_1_1lu__move__to__front__policy_acfcd460068d88a84f3931c05942fd979}{metadata\+\_\+type}}$>$\+::reference \mbox{\hyperlink{class____gnu__pbds_1_1lu__move__to__front__policy}{\+\_\+\+\_\+gnu\+\_\+pbds\+::lu\+\_\+move\+\_\+to\+\_\+front\+\_\+policy}}$<$ \+\_\+\+Alloc $>$\+::metadata\+\_\+reference}
+
+
+
+Reference to metadata on which this functor operates. 
+
+
+
+Definition at line \mbox{\hyperlink{list__update__policy_8hpp_source_l00069}{69}} of file \mbox{\hyperlink{list__update__policy_8hpp_source}{list\+\_\+update\+\_\+policy.\+hpp}}.
+
+\Hypertarget{class____gnu__pbds_1_1lu__move__to__front__policy_acfcd460068d88a84f3931c05942fd979}\label{class____gnu__pbds_1_1lu__move__to__front__policy_acfcd460068d88a84f3931c05942fd979} 
+\index{\_\_gnu\_pbds::lu\_move\_to\_front\_policy$<$ \_Alloc $>$@{\_\_gnu\_pbds::lu\_move\_to\_front\_policy$<$ \_Alloc $>$}!metadata\_type@{metadata\_type}}
+\index{metadata\_type@{metadata\_type}!\_\_gnu\_pbds::lu\_move\_to\_front\_policy$<$ \_Alloc $>$@{\_\_gnu\_pbds::lu\_move\_to\_front\_policy$<$ \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{metadata\_type}{metadata\_type}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc  = std\+::allocator$<$char$>$$>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{struct____gnu__pbds_1_1null__type}{null\+\_\+type}} \mbox{\hyperlink{class____gnu__pbds_1_1lu__move__to__front__policy}{\+\_\+\+\_\+gnu\+\_\+pbds\+::lu\+\_\+move\+\_\+to\+\_\+front\+\_\+policy}}$<$ \+\_\+\+Alloc $>$\+::metadata\+\_\+type}
+
+
+
+Metadata on which this functor operates. 
+
+
+
+Definition at line \mbox{\hyperlink{list__update__policy_8hpp_source_l00064}{64}} of file \mbox{\hyperlink{list__update__policy_8hpp_source}{list\+\_\+update\+\_\+policy.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class____gnu__pbds_1_1lu__move__to__front__policy_afa1064441fc28b323b7b28176686ef65}\label{class____gnu__pbds_1_1lu__move__to__front__policy_afa1064441fc28b323b7b28176686ef65} 
+\index{\_\_gnu\_pbds::lu\_move\_to\_front\_policy$<$ \_Alloc $>$@{\_\_gnu\_pbds::lu\_move\_to\_front\_policy$<$ \_Alloc $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!\_\_gnu\_pbds::lu\_move\_to\_front\_policy$<$ \_Alloc $>$@{\_\_gnu\_pbds::lu\_move\_to\_front\_policy$<$ \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc  = std\+::allocator$<$char$>$$>$ \\
+\mbox{\hyperlink{class____gnu__pbds_1_1lu__move__to__front__policy_acfcd460068d88a84f3931c05942fd979}{metadata\+\_\+type}} \mbox{\hyperlink{class____gnu__pbds_1_1lu__move__to__front__policy}{\+\_\+\+\_\+gnu\+\_\+pbds\+::lu\+\_\+move\+\_\+to\+\_\+front\+\_\+policy}}$<$ \+\_\+\+Alloc $>$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+::operator}}() (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a metadata object. 
+
+
+
+Definition at line \mbox{\hyperlink{list__update__policy_8hpp_source_l00073}{73}} of file \mbox{\hyperlink{list__update__policy_8hpp_source}{list\+\_\+update\+\_\+policy.\+hpp}}.
+
+\Hypertarget{class____gnu__pbds_1_1lu__move__to__front__policy_a009f2dea97b29bdffa640258f86b6135}\label{class____gnu__pbds_1_1lu__move__to__front__policy_a009f2dea97b29bdffa640258f86b6135} 
+\index{\_\_gnu\_pbds::lu\_move\_to\_front\_policy$<$ \_Alloc $>$@{\_\_gnu\_pbds::lu\_move\_to\_front\_policy$<$ \_Alloc $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!\_\_gnu\_pbds::lu\_move\_to\_front\_policy$<$ \_Alloc $>$@{\_\_gnu\_pbds::lu\_move\_to\_front\_policy$<$ \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc  = std\+::allocator$<$char$>$$>$ \\
+\mbox{\hyperlink{raylib_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} \mbox{\hyperlink{class____gnu__pbds_1_1lu__move__to__front__policy}{\+\_\+\+\_\+gnu\+\_\+pbds\+::lu\+\_\+move\+\_\+to\+\_\+front\+\_\+policy}}$<$ \+\_\+\+Alloc $>$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+::operator}}() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class____gnu__pbds_1_1lu__move__to__front__policy_a5b07b7a2830f74f78990ded81fcccc3b}{metadata\+\_\+reference}}}]{r\+\_\+metadata }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Decides whether a metadata object should be moved to the front of the list. 
+
+Definition at line \mbox{\hyperlink{list__update__policy_8hpp_source_l00079}{79}} of file \mbox{\hyperlink{list__update__policy_8hpp_source}{list\+\_\+update\+\_\+policy.\+hpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class____gnu__pbds_1_1lu__move__to__front__policy_a20df9455ca2a326377e12c52d5fabc05}\label{class____gnu__pbds_1_1lu__move__to__front__policy_a20df9455ca2a326377e12c52d5fabc05} 
+\index{\_\_gnu\_pbds::lu\_move\_to\_front\_policy$<$ \_Alloc $>$@{\_\_gnu\_pbds::lu\_move\_to\_front\_policy$<$ \_Alloc $>$}!s\_metadata@{s\_metadata}}
+\index{s\_metadata@{s\_metadata}!\_\_gnu\_pbds::lu\_move\_to\_front\_policy$<$ \_Alloc $>$@{\_\_gnu\_pbds::lu\_move\_to\_front\_policy$<$ \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{s\_metadata}{s\_metadata}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc  = std\+::allocator$<$char$>$$>$ \\
+\mbox{\hyperlink{struct____gnu__pbds_1_1null__type}{null\+\_\+type}} \mbox{\hyperlink{class____gnu__pbds_1_1lu__move__to__front__policy}{\+\_\+\+\_\+gnu\+\_\+pbds\+::lu\+\_\+move\+\_\+to\+\_\+front\+\_\+policy}}$<$ \+\_\+\+Alloc $>$\+::s\+\_\+metadata\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{list__update__policy_8hpp_source_l00083}{83}} of file \mbox{\hyperlink{list__update__policy_8hpp_source}{list\+\_\+update\+\_\+policy.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/include/c++/ext/pb\+\_\+ds/\mbox{\hyperlink{list__update__policy_8hpp}{list\+\_\+update\+\_\+policy.\+hpp}}\end{DoxyCompactItemize}

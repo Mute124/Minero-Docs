@@ -1,0 +1,27 @@
+var structma__channel__converter =
+[
+    [ "_ownsHeap", "structma__channel__converter.html#a1680d105207442675c40dacb19393012", null ],
+    [ "_pHeap", "structma__channel__converter.html#a80d077f72bf23c6b60c59c9368c21cb6", null ],
+    [ "channelMapIn", "structma__channel__converter.html#a3ca849fc69f188316b95522c679e34ee", null ],
+    [ "channelMapOut", "structma__channel__converter.html#ab2ef7a86c6be7437abace9885470f50e", null ],
+    [ "channelsIn", "structma__channel__converter.html#aa280d8e249e1f322f30022f4fe791191", null ],
+    [ "channelsOut", "structma__channel__converter.html#a70ca08f12e8fe7b3322d8f899a4b9a7b", null ],
+    [ "conversionPath", "structma__channel__converter.html#a353e8d349fdd56bb02939684f9b86ad5", null ],
+    [ "f32", "structma__channel__converter.html#a46a40a07804889a5324a1fd16aa8ac49", null ],
+    [ "f32", "structma__channel__converter.html#aff3d66aa0344c011e406337d176f4dab", null ],
+    [ "format", "structma__channel__converter.html#a989353504ac3cedf31e6f9c319f471c4", null ],
+    [ "isPassthrough", "structma__channel__converter.html#a4d1d74c7775c13becaa9aaf2a53a2b1f", null ],
+    [ "isSimpleMonoExpansion", "structma__channel__converter.html#ab27aaeeef5b7ed3907f7aec149be4c25", null ],
+    [ "isSimpleShuffle", "structma__channel__converter.html#a0b1f222348f2d5c9102849a880b6fe98", null ],
+    [ "isStereoToMono", "structma__channel__converter.html#a14075d9846e6c203d11f217bc69bd9a3", null ],
+    [ "mixingMode", "structma__channel__converter.html#ab0ca09465bad652257c62d464b204eee", null ],
+    [ "pChannelMapIn", "structma__channel__converter.html#a5cd43e90e7fb7ec71ce906fc6c58dd7b", null ],
+    [ "pChannelMapOut", "structma__channel__converter.html#a00d95aff26b601b23098091413440785", null ],
+    [ "pShuffleTable", "structma__channel__converter.html#a3baba47db5e79e3570a15d071fe066d2", null ],
+    [ "s16", "structma__channel__converter.html#a5b6d680b63ab696d273399464468d8ca", null ],
+    [ "s16", "structma__channel__converter.html#a57673aaed30402b15681c2bc800db840", null ],
+    [ "shuffleTable", "structma__channel__converter.html#a23819fbb5583bd027ed4c3d465e29f80", null ],
+    [ "weights", "structma__channel__converter.html#a1fbcf50caa37f467979c3eccbc7f2330", null ],
+    [ "weights", "structma__channel__converter.html#ac6141494e4c74d856f9100f6ed01c0a5", null ],
+    [ "weights", "structma__channel__converter.html#ab3eaded2aaba8d07102f07ce56dcffb9", null ]
+];

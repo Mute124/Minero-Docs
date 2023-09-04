@@ -1,0 +1,124 @@
+\doxysection{debug.\+h}
+\hypertarget{debug_8h_source}{}\label{debug_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/debug/debug.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/debug/debug.h}}
+\mbox{\hyperlink{debug_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00001}00001\ \textcolor{comment}{//\ Debugging\ support\ implementation\ -\/*-\/\ C++\ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00003}00003\ \textcolor{comment}{//\ Copyright\ (C)\ 2003-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00005}00005\ \textcolor{comment}{//\ This\ file\ is\ part\ of\ the\ GNU\ ISO\ C++\ Library.\ \ This\ library\ is\ free}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00006}00006\ \textcolor{comment}{//\ software;\ you\ can\ redistribute\ it\ and/or\ modify\ it\ under\ the}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00007}00007\ \textcolor{comment}{//\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by\ the}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00008}00008\ \textcolor{comment}{//\ Free\ Software\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00009}00009\ \textcolor{comment}{//\ any\ later\ version.}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00011}00011\ \textcolor{comment}{//\ This\ library\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00012}00012\ \textcolor{comment}{//\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00013}00013\ \textcolor{comment}{//\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00014}00014\ \textcolor{comment}{//\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00016}00016\ \textcolor{comment}{//\ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00017}00017\ \textcolor{comment}{//\ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00018}00018\ \textcolor{comment}{//\ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00020}00020\ \textcolor{comment}{//\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00021}00021\ \textcolor{comment}{//\ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00022}00022\ \textcolor{comment}{//\ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00023}00023\ \textcolor{comment}{//\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00029}00029\ \textcolor{preprocessor}{\#ifndef\ \_GLIBCXX\_DEBUG\_MACRO\_SWITCH\_H}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00030}00030\ \textcolor{preprocessor}{\#define\ \_GLIBCXX\_DEBUG\_MACRO\_SWITCH\_H\ 1}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00040}00040\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{assertions_8h}{debug/assertions.h}}>}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00042}00042\ \textcolor{comment}{//\ Debug\ mode\ namespaces.}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00048}00048\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacestd}{std}}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00049}00049\ \{\ }
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00050}00050\ \ \ \textcolor{keyword}{namespace\ }\_\_debug\ \{\ \}\ }
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00051}00051\ \}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00056}00056\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace____gnu__debug}{\_\_gnu\_debug}}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00057}00057\ \{}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00058}00058\ \ \ \textcolor{keyword}{using\ namespace\ }\mbox{\hyperlink{namespacestd_1_1____debug}{std::\_\_debug}};}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00060}00060\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Ite,\ \textcolor{keyword}{typename}\ \_Seq,\ \textcolor{keyword}{typename}\ \_Cat>}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00061}00061\ \ \ \ \ \textcolor{keyword}{struct\ }\_Safe\_iterator;}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00062}00062\ \}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00064}00064\ \textcolor{preprocessor}{\#ifndef\ \_GLIBCXX\_DEBUG}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00066}\mbox{\hyperlink{debug_8h_a16f965ce796ac9c5e5b4cb795808ee35}{00066}}\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_cond(\_Cond,\_Msg)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00067}\mbox{\hyperlink{debug_8h_aae1d39211742988183a3967dad069af6}{00067}}\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_valid\_range(\_First,\_Last)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00068}\mbox{\hyperlink{debug_8h_a8639cfda67f852ea3b94a64ce0381c00}{00068}}\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_can\_increment(\_First,\_Size)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00069}\mbox{\hyperlink{debug_8h_a8242123f4908a0c212008f055e8b49a5}{00069}}\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_can\_increment\_range(\_First1,\_Last1,\_First2)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00070}\mbox{\hyperlink{debug_8h_a425cc6801001e95b92c3788adb476114}{00070}}\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_can\_decrement\_range(\_First1,\_Last1,\_First2)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00071}\mbox{\hyperlink{debug_8h_ae24ded0e9db2a66443dbe5ef88159ae5}{00071}}\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_sorted(\_First,\_Last)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00072}\mbox{\hyperlink{debug_8h_afea476ce40414eae1ce9e897f2afbc0f}{00072}}\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_sorted\_pred(\_First,\_Last,\_Pred)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00073}\mbox{\hyperlink{debug_8h_adae3ef4448d4f709e81ef98897480e14}{00073}}\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_sorted\_set(\_First1,\_Last1,\_First2)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00074}\mbox{\hyperlink{debug_8h_afff34f2e90f64287d0bd3eb6be432ce4}{00074}}\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_sorted\_set\_pred(\_First1,\_Last1,\_First2,\_Pred)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00075}\mbox{\hyperlink{debug_8h_aec059a798cc2e17fd1d5fc382bfd92b7}{00075}}\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_partitioned\_lower(\_First,\_Last,\_Value)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00076}\mbox{\hyperlink{debug_8h_aca4d4ae9d3d05c5c0bf58e3d772d2f2d}{00076}}\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_partitioned\_upper(\_First,\_Last,\_Value)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00077}\mbox{\hyperlink{debug_8h_adb209d74772c3c075e0f501e7f1f958d}{00077}}\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_partitioned\_lower\_pred(\_First,\_Last,\_Value,\_Pred)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00078}\mbox{\hyperlink{debug_8h_a9b99c851575516cb11812f4af6f78300}{00078}}\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_partitioned\_upper\_pred(\_First,\_Last,\_Value,\_Pred)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00079}\mbox{\hyperlink{debug_8h_a3f0b3b0ed4f02224f3b21ffa13caabe4}{00079}}\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_heap(\_First,\_Last)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00080}\mbox{\hyperlink{debug_8h_a59a459561c79df22194a9aabb51c2d78}{00080}}\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_heap\_pred(\_First,\_Last,\_Pred)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00081}\mbox{\hyperlink{debug_8h_a1cbaa8fb8f312c4e1a134758fff21231}{00081}}\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_string(\_String)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00082}\mbox{\hyperlink{debug_8h_a91cfe307287e81114000d301d59830e0}{00082}}\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_string\_len(\_String,\_Len)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00083}\mbox{\hyperlink{debug_8h_ac7e7047575e5ab26f4e9bddd669b6e55}{00083}}\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_irreflexive(\_First,\_Last)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00084}\mbox{\hyperlink{debug_8h_aefc388f0df6cadad2ef5c5c6e8360ebc}{00084}}\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_irreflexive2(\_First,\_Last)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00085}\mbox{\hyperlink{debug_8h_abe9391caaffc0f4981d56df580ef07d9}{00085}}\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_irreflexive\_pred(\_First,\_Last,\_Pred)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00086}\mbox{\hyperlink{debug_8h_a238c23dabd1c7ece6fbd4c95538fb6d8}{00086}}\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_irreflexive\_pred2(\_First,\_Last,\_Pred)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00088}00088\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00090}00090\ \textcolor{preprocessor}{\#\ include\ <\mbox{\hyperlink{macros_8h}{debug/macros.h}}>}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00092}00092\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_cond(\_Cond,\_Msg)\ \_GLIBCXX\_DEBUG\_VERIFY(\_Cond,\_Msg)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00093}00093\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_valid\_range(\_First,\_Last)\ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00094}00094\ \textcolor{preprocessor}{\ \ \_\_glibcxx\_check\_valid\_range(\_First,\_Last)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00095}00095\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_can\_increment(\_First,\_Size)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00096}00096\ \textcolor{preprocessor}{\ \ \_\_glibcxx\_check\_can\_increment(\_First,\_Size)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00097}00097\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_can\_increment\_range(\_First1,\_Last1,\_First2)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00098}00098\ \textcolor{preprocessor}{\ \ \_\_glibcxx\_check\_can\_increment\_range(\_First1,\_Last1,\_First2)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00099}00099\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_can\_decrement\_range(\_First1,\_Last1,\_First2)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00100}00100\ \textcolor{preprocessor}{\ \ \_\_glibcxx\_check\_can\_decrement\_range(\_First1,\_Last1,\_First2)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00101}00101\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_sorted(\_First,\_Last)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00102}00102\ \textcolor{preprocessor}{\ \ \_\_glibcxx\_check\_sorted(\_First,\_Last)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00103}00103\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_sorted\_pred(\_First,\_Last,\_Pred)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00104}00104\ \textcolor{preprocessor}{\ \ \_\_glibcxx\_check\_sorted\_pred(\_First,\_Last,\_Pred)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00105}00105\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_sorted\_set(\_First1,\_Last1,\_First2)\ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00106}00106\ \textcolor{preprocessor}{\ \ \_\_glibcxx\_check\_sorted\_set(\_First1,\_Last1,\_First2)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00107}00107\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_sorted\_set\_pred(\_First1,\_Last1,\_First2,\_Pred)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00108}00108\ \textcolor{preprocessor}{\ \ \_\_glibcxx\_check\_sorted\_set\_pred(\_First1,\_Last1,\_First2,\_Pred)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00109}00109\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_partitioned\_lower(\_First,\_Last,\_Value)\ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00110}00110\ \textcolor{preprocessor}{\ \ \_\_glibcxx\_check\_partitioned\_lower(\_First,\_Last,\_Value)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00111}00111\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_partitioned\_upper(\_First,\_Last,\_Value)\ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00112}00112\ \textcolor{preprocessor}{\ \ \_\_glibcxx\_check\_partitioned\_upper(\_First,\_Last,\_Value)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00113}00113\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_partitioned\_lower\_pred(\_First,\_Last,\_Value,\_Pred)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00114}00114\ \textcolor{preprocessor}{\ \ \_\_glibcxx\_check\_partitioned\_lower\_pred(\_First,\_Last,\_Value,\_Pred)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00115}00115\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_partitioned\_upper\_pred(\_First,\_Last,\_Value,\_Pred)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00116}00116\ \textcolor{preprocessor}{\ \ \_\_glibcxx\_check\_partitioned\_upper\_pred(\_First,\_Last,\_Value,\_Pred)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00117}00117\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_heap(\_First,\_Last)\ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00118}00118\ \textcolor{preprocessor}{\ \ \_\_glibcxx\_check\_heap(\_First,\_Last)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00119}00119\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_heap\_pred(\_First,\_Last,\_Pred)\ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00120}00120\ \textcolor{preprocessor}{\ \ \_\_glibcxx\_check\_heap\_pred(\_First,\_Last,\_Pred)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00121}00121\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_string(\_String)\ \_\_glibcxx\_check\_string(\_String)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00122}00122\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_string\_len(\_String,\_Len)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00123}00123\ \textcolor{preprocessor}{\ \ \_\_glibcxx\_check\_string\_len(\_String,\_Len)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00124}00124\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_irreflexive(\_First,\_Last)\ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00125}00125\ \textcolor{preprocessor}{\ \ \_\_glibcxx\_check\_irreflexive(\_First,\_Last)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00126}00126\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_irreflexive2(\_First,\_Last)\ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00127}00127\ \textcolor{preprocessor}{\ \ \_\_glibcxx\_check\_irreflexive2(\_First,\_Last)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00128}00128\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_irreflexive\_pred(\_First,\_Last,\_Pred)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00129}00129\ \textcolor{preprocessor}{\ \ \_\_glibcxx\_check\_irreflexive\_pred(\_First,\_Last,\_Pred)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00130}00130\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_irreflexive\_pred2(\_First,\_Last,\_Pred)\ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00131}00131\ \textcolor{preprocessor}{\ \ \_\_glibcxx\_check\_irreflexive\_pred2(\_First,\_Last,\_Pred)}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00133}00133\ \textcolor{preprocessor}{\#\ include\ <\mbox{\hyperlink{functions_8h}{debug/functions.h}}>}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00135}00135\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{debug_8h_source_l00137}00137\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_GLIBCXX\_DEBUG\_MACRO\_SWITCH\_H}}
+
+\end{DoxyCode}

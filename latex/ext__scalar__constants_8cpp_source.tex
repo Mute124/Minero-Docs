@@ -1,0 +1,42 @@
+\doxysection{ext\+\_\+scalar\+\_\+constants.\+cpp}
+\hypertarget{ext__scalar__constants_8cpp_source}{}\label{ext__scalar__constants_8cpp_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/glm/test/ext/ext\_scalar\_constants.cpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/glm/test/ext/ext\_scalar\_constants.cpp}}
+\mbox{\hyperlink{ext__scalar__constants_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{scalar__constants_8hpp}{glm/ext/scalar\_constants.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00003}00003\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ valType>}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00004}\mbox{\hyperlink{ext__scalar__constants_8cpp_af17f68449bc92c345f18e4e616ce59ca}{00004}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{ext__scalar__constants_8cpp_af17f68449bc92c345f18e4e616ce59ca}{test\_epsilon}}()}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00006}00006\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00008}00008\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{valType}}\ \textcolor{keyword}{const}\ Test\ =\ glm::epsilon<valType>();}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00009}00009\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ Test\ >\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{valType}}\textcolor{keyword}{>}(0)\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00011}00011\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}};}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00012}00012\ \}}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00014}00014\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ valType>}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00015}\mbox{\hyperlink{ext__scalar__constants_8cpp_ae2c3758ca3a5126ef9ea65256adaa14f}{00015}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{ext__scalar__constants_8cpp_ae2c3758ca3a5126ef9ea65256adaa14f}{test\_pi}}()}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00016}00016\ \{}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00019}00019\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{valType}}\ \textcolor{keyword}{const}\ Test\ =\ glm::pi<valType>();}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00020}00020\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ Test\ >\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{valType}}\textcolor{keyword}{>}(3.14)\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00021}00021\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Test\ <\ static\_cast<valType>}}(3.15)\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00023}00023\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}};}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00024}00024\ \}}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00026}\mbox{\hyperlink{ext__scalar__constants_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00026}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{ext__scalar__constants_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00027}00027\ \{}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00030}00030\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{test\_epsilon<float>}}();}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00031}00031\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{test\_epsilon<double>}}();}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00032}00032\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{test\_pi<float>}}();}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{test\_pi<double>}}();}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}};}
+\DoxyCodeLine{\Hypertarget{ext__scalar__constants_8cpp_source_l00036}00036\ \}}
+
+\end{DoxyCode}

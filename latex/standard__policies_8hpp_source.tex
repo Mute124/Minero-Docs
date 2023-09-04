@@ -1,0 +1,143 @@
+\doxysection{standard\+\_\+policies.\+hpp}
+\hypertarget{standard__policies_8hpp_source}{}\label{standard__policies_8hpp_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/pb\_ds/detail/standard\_policies.hpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/pb\_ds/detail/standard\_policies.hpp}}
+\mbox{\hyperlink{standard__policies_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00001}00001\ \textcolor{comment}{//\ -\/*-\/\ C++\ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00003}00003\ \textcolor{comment}{//\ Copyright\ (C)\ 2005-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00005}00005\ \textcolor{comment}{//\ This\ file\ is\ part\ of\ the\ GNU\ ISO\ C++\ Library.\ \ This\ library\ is\ free}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00006}00006\ \textcolor{comment}{//\ software;\ you\ can\ redistribute\ it\ and/or\ modify\ it\ under\ the\ terms}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00007}00007\ \textcolor{comment}{//\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by\ the\ Free\ Software}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00008}00008\ \textcolor{comment}{//\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)\ any\ later}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00009}00009\ \textcolor{comment}{//\ version.}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00011}00011\ \textcolor{comment}{//\ This\ library\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,\ but}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00012}00012\ \textcolor{comment}{//\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00013}00013\ \textcolor{comment}{//\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the\ GNU}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00014}00014\ \textcolor{comment}{//\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00016}00016\ \textcolor{comment}{//\ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00017}00017\ \textcolor{comment}{//\ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00018}00018\ \textcolor{comment}{//\ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00020}00020\ \textcolor{comment}{//\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00021}00021\ \textcolor{comment}{//\ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00022}00022\ \textcolor{comment}{//\ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00023}00023\ \textcolor{comment}{//\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00025}00025\ \textcolor{comment}{//\ Copyright\ (C)\ 2004\ Ami\ Tavory\ and\ Vladimir\ Dreizin,\ IBM-\/HRL.}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00027}00027\ \textcolor{comment}{//\ Permission\ to\ use,\ copy,\ modify,\ sell,\ and\ distribute\ this\ software}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00028}00028\ \textcolor{comment}{//\ is\ hereby\ granted\ without\ fee,\ provided\ that\ the\ above\ copyright}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00029}00029\ \textcolor{comment}{//\ notice\ appears\ in\ all\ copies,\ and\ that\ both\ that\ copyright\ notice}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00030}00030\ \textcolor{comment}{//\ and\ this\ permission\ notice\ appear\ in\ supporting\ documentation.\ None}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00031}00031\ \textcolor{comment}{//\ of\ the\ above\ authors,\ nor\ IBM\ Haifa\ Research\ Laboratories,\ make\ any}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00032}00032\ \textcolor{comment}{//\ representation\ about\ the\ suitability\ of\ this\ software\ for\ any}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00033}00033\ \textcolor{comment}{//\ purpose.\ It\ is\ provided\ "{}as\ is"{}\ without\ express\ or\ implied}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00034}00034\ \textcolor{comment}{//\ warranty.}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00041}00041\ \textcolor{preprocessor}{\#ifndef\ PB\_DS\_STANDARD\_POLICIES\_HPP}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00042}00042\ \textcolor{preprocessor}{\#define\ PB\_DS\_STANDARD\_POLICIES\_HPP}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00044}00044\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00045}00045\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{hash__policy_8hpp}{ext/pb\_ds/hash\_policy.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00046}00046\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{list__update__policy_8hpp}{ext/pb\_ds/list\_update\_policy.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00047}00047\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{null__node__metadata_8hpp}{ext/pb\_ds/detail/branch\_policy/null\_node\_metadata.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00048}00048\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{tree__policy_8hpp}{ext/pb\_ds/tree\_policy.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00049}00049\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{trie__policy_8hpp}{ext/pb\_ds/trie\_policy.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00050}00050\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{tag__and__trait_8hpp}{ext/pb\_ds/tag\_and\_trait.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00051}00051\ \textcolor{preprocessor}{\#include\ <tr1/functional>}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00053}00053\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace____gnu__pbds}{\_\_gnu\_pbds}}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00054}00054\ \{}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00055}00055\ \ \ \textcolor{keyword}{namespace\ }detail}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00056}00056\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00058}00058\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Key>}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00059}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__hash__fn}{00059}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__hash__fn}{default\_hash\_fn}}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00060}00060\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00062}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__hash__fn_a9d4935ab2b6d39c2dd35d2d6d395b45a}{00062}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ std::tr1::hash<Key>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__hash__fn_a9d4935ab2b6d39c2dd35d2d6d395b45a}{type}};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00063}00063\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00066}00066\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Key>}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00067}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__eq__fn}{00067}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__eq__fn}{default\_eq\_fn}}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00068}00068\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00070}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__eq__fn_a504bba9208637bab17e2da42601884ba}{00070}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ std::equal\_to<Key>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__eq__fn_a504bba9208637bab17e2da42601884ba}{type}};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00071}00071\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00074}00074\ \ \ \ \ \textcolor{keyword}{enum}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00075}00075\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00076}00076\ \ \ \ \ \mbox{\hyperlink{namespace____gnu__pbds_1_1detail_ae4c97053333bc659715c63bf39dc833ba59ecc975d70276b45f2c2c53dd859767}{default\_store\_hash}}\ =\ \textcolor{keyword}{false}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00077}\mbox{\hyperlink{namespace____gnu__pbds_1_1detail_ae4c97053333bc659715c63bf39dc833ba59ecc975d70276b45f2c2c53dd859767}{00077}}\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00080}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__comb__hash__fn}{00080}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__comb__hash__fn}{default\_comb\_hash\_fn}}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00081}00081\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00083}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__comb__hash__fn_acf71610ce6c7a4a66b87e61fbc3e7407}{00083}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{direct\_mask\_range\_hashing<>}}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__comb__hash__fn_acf71610ce6c7a4a66b87e61fbc3e7407}{type}};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00084}00084\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00087}00087\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Comb\_Hash\_Fn>}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00088}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__resize__policy}{00088}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__resize__policy}{default\_resize\_policy}}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00089}00089\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00090}00090\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00091}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__resize__policy_a97e7d7dc83465dc5764eaa6d1a012393}{00091}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{typename}\ Comb\_Hash\_Fn::size\_type\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__resize__policy_a97e7d7dc83465dc5764eaa6d1a012393}{size\_type}};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00093}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__resize__policy_aee30d93fed3210601aeaedbe88f70049}{00093}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{direct\_mask\_range\_hashing<size\_type>}}\ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__resize__policy_aee30d93fed3210601aeaedbe88f70049}{default\_fn}};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00094}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__resize__policy_ac878e2d09a0e177550a40ef28da2f1c9}{00094}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{is\_same<default\_fn,\ Comb\_Hash\_Fn>}}\ \ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__resize__policy_ac878e2d09a0e177550a40ef28da2f1c9}{same\_type}};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00095}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__resize__policy_a2339426eb044ae72d70c09fc578e5f3f}{00095}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{hash\_exponential\_size\_policy<size\_type>}}\ \ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__resize__policy_a2339426eb044ae72d70c09fc578e5f3f}{iftrue}};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00096}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__resize__policy_a3b406069e2228ee7b62c1509defebef0}{00096}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{class____gnu__pbds_1_1hash__prime__size__policy}{hash\_prime\_size\_policy}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__resize__policy_a3b406069e2228ee7b62c1509defebef0}{iffalse}};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00097}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__resize__policy_af6e2c13d55521be553ab11d15cd3e4aa}{00097}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_conditional\_type<same\_type::value,\ iftrue,\ iffalse>}}\ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__resize__policy_af6e2c13d55521be553ab11d15cd3e4aa}{cond\_type}};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00098}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__resize__policy_abfb899d9d48ce7fe31c61723af1bdc2e}{00098}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{typename}\ cond\_type::\_\_type\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__resize__policy_abfb899d9d48ce7fe31c61723af1bdc2e}{size\_policy\_type}};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00100}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__resize__policy_a9bb92f7595070e1f0867541a0690e831}{00100}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{hash\_load\_check\_resize\_trigger<false,\ size\_type>}}\ \ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__resize__policy_a9bb92f7595070e1f0867541a0690e831}{trigger}};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00102}00102\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00104}00104\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{class____gnu__pbds_1_1hash__standard__resize__policy}{hash\_standard\_resize\_policy}}<\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__resize__policy_abfb899d9d48ce7fe31c61723af1bdc2e}{size\_policy\_type}},\ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__resize__policy_a9bb92f7595070e1f0867541a0690e831}{trigger}},\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00105}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__resize__policy_a76f207395a752f928b216799653b005d}{00105}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{false},\ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__resize__policy_a97e7d7dc83465dc5764eaa6d1a012393}{size\_type}}>\ \ \ \ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__resize__policy_a76f207395a752f928b216799653b005d}{type}};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00106}00106\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00109}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__update__policy}{00109}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__update__policy}{default\_update\_policy}}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00110}00110\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00112}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__update__policy_a386b5f8ac62032f7854bec47c859d9b8}{00112}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{lu\_move\_to\_front\_policy<>}}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__update__policy_a386b5f8ac62032f7854bec47c859d9b8}{type}};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00113}00113\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00116}00116\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Comb\_Probe\_Fn>}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00117}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__probe__fn}{00117}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__probe__fn}{default\_probe\_fn}}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00118}00118\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00119}00119\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00120}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__probe__fn_af666881edaca4d01c1db9ed74a566b78}{00120}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{typename}\ Comb\_Probe\_Fn::size\_type\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__probe__fn_af666881edaca4d01c1db9ed74a566b78}{size\_type}};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00121}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__probe__fn_a3d27ab124e13be19c609e6ef72f7bf89}{00121}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{direct\_mask\_range\_hashing<size\_type>}}\ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__probe__fn_a3d27ab124e13be19c609e6ef72f7bf89}{default\_fn}};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00122}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__probe__fn_a2b340bf01f417e39b98b8ac9611cc7d0}{00122}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{is\_same<default\_fn,\ Comb\_Probe\_Fn>}}\ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__probe__fn_a2b340bf01f417e39b98b8ac9611cc7d0}{same\_type}};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00123}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__probe__fn_ab97bf47e6e76a3fa73d60d43d19a1ca1}{00123}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{linear\_probe\_fn<size\_type>}}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__probe__fn_ab97bf47e6e76a3fa73d60d43d19a1ca1}{iftrue}};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00124}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__probe__fn_ac20e4dc2cc9dedc9401175e8e53ff222}{00124}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{quadratic\_probe\_fn<size\_type>}}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__probe__fn_ac20e4dc2cc9dedc9401175e8e53ff222}{iffalse}};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00125}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__probe__fn_af7388d016bdf06e019a0ebfcf7cdf92c}{00125}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_conditional\_type<same\_type::value,\ iftrue,\ iffalse>}}\ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__probe__fn_af7388d016bdf06e019a0ebfcf7cdf92c}{cond\_type}};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00127}00127\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00129}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__probe__fn_a37d9371e79bf6ce01e4bdcc723df1017}{00129}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{typename}\ cond\_type::\_\_type\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__probe__fn_a37d9371e79bf6ce01e4bdcc723df1017}{type}};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00130}00130\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00134}00134\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Key>}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00135}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__trie__access__traits}{00135}}\ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__trie__access__traits}{default\_trie\_access\_traits}};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00137}\mbox{\hyperlink{standard__policies_8hpp_a3f31d5871015b5510146be6eecd373a5}{00137}}\ \textcolor{preprocessor}{\#define\ \_\_dtrie\_alloc\ std::allocator<char>\ \ }}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00138}\mbox{\hyperlink{standard__policies_8hpp_a23ca132d22384d6d1afc0ea0711d4ba7}{00138}}\ \textcolor{preprocessor}{\#define\ \_\_dtrie\_string\ std::basic\_string<Char,\ Char\_Traits,\ \_\_dtrie\_alloc>\ }}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00141}00141\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Char,\ \textcolor{keyword}{typename}\ Char\_Traits>}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00142}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__trie__access__traits_3_01____dtrie__string_01_4}{00142}}\ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__trie__access__traits}{default\_trie\_access\_traits}}<\mbox{\hyperlink{standard__policies_8hpp_a23ca132d22384d6d1afc0ea0711d4ba7}{\_\_dtrie\_string}}>}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00143}00143\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00144}00144\ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00145}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__trie__access__traits_3_01____dtrie__string_01_4_a629216ce9c95ee8a7963c779d9686294}{00145}}\ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{standard__policies_8hpp_a23ca132d22384d6d1afc0ea0711d4ba7}{\_\_dtrie\_string}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__trie__access__traits_3_01____dtrie__string_01_4_a629216ce9c95ee8a7963c779d9686294}{string\_type}};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00146}00146\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00147}00147\ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00149}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__trie__access__traits_3_01____dtrie__string_01_4_a5261f9364e71b6eb2354cd189d476eda}{00149}}\ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{trie\_string\_access\_traits<string\_type>}}\ \ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1default__trie__access__traits_3_01____dtrie__string_01_4_a5261f9364e71b6eb2354cd189d476eda}{type}};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00150}00150\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00152}00152\ \textcolor{preprocessor}{\#undef\ \_\_dtrie\_alloc}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00153}00153\ \textcolor{preprocessor}{\#undef\ \_\_dtrie\_string}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00155}00155\ \ \ \}\ \textcolor{comment}{//\ namespace\ detail}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00156}00156\ \}\ \textcolor{comment}{//\ namespace\ \_\_gnu\_pbds}}
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00157}00157\ }
+\DoxyCodeLine{\Hypertarget{standard__policies_8hpp_source_l00158}00158\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \#ifndef\ PB\_DS\_STANDARD\_POLICIES\_HPP}}
+
+\end{DoxyCode}

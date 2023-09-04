@@ -1,0 +1,342 @@
+\doxysection{cpuid.\+h}
+\hypertarget{cpuid_8h_source}{}\label{cpuid_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/cpuid.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/cpuid.h}}
+\mbox{\hyperlink{cpuid_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00002}00002\ \textcolor{comment}{\ *\ Copyright\ (C)\ 2007-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00004}00004\ \textcolor{comment}{\ *\ This\ file\ is\ free\ software;\ you\ can\ redistribute\ it\ and/or\ modify\ it}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00005}00005\ \textcolor{comment}{\ *\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by\ the}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00006}00006\ \textcolor{comment}{\ *\ Free\ Software\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)\ any}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00007}00007\ \textcolor{comment}{\ *\ later\ version.}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00008}00008\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00009}00009\ \textcolor{comment}{\ *\ This\ file\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,\ but}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00010}00010\ \textcolor{comment}{\ *\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00011}00011\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the\ GNU}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00012}00012\ \textcolor{comment}{\ *\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00013}00013\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00014}00014\ \textcolor{comment}{\ *\ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00015}00015\ \textcolor{comment}{\ *\ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00016}00016\ \textcolor{comment}{\ *\ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00017}00017\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00018}00018\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00019}00019\ \textcolor{comment}{\ *\ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00020}00020\ \textcolor{comment}{\ *\ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00021}00021\ \textcolor{comment}{\ *\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00022}00022\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00024}00024\ \textcolor{preprocessor}{\#ifndef\ \_CPUID\_H\_INCLUDED}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00025}00025\ \textcolor{preprocessor}{\#define\ \_CPUID\_H\_INCLUDED}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00027}00027\ \textcolor{comment}{/*\ \%eax\ */}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00028}\mbox{\hyperlink{cpuid_8h_a5d2244f38a328faaf5353d0acf475ebb}{00028}}\ \textcolor{preprocessor}{\#define\ bit\_AVXVNNI\ (1\ <<\ 4)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00029}\mbox{\hyperlink{cpuid_8h_a93ce3d21a71415fe5a9ca285f640fdc7}{00029}}\ \textcolor{preprocessor}{\#define\ bit\_AVX512BF16\ \ (1\ <<\ 5)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00030}\mbox{\hyperlink{cpuid_8h_a9de64704bd8fe7ead139249cc868368f}{00030}}\ \textcolor{preprocessor}{\#define\ bit\_HRESET\ \ (1\ <<\ 22)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00032}00032\ \textcolor{comment}{/*\ \%ecx\ */}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00033}\mbox{\hyperlink{cpuid_8h_a9a66a1147bb2ce91a61ea0817219268d}{00033}}\ \textcolor{preprocessor}{\#define\ bit\_SSE3\ \ \ \ (1\ <<\ 0)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00034}\mbox{\hyperlink{cpuid_8h_a65c2647d0e41a2c33386a8f36e76f74b}{00034}}\ \textcolor{preprocessor}{\#define\ bit\_PCLMUL\ \ (1\ <<\ 1)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00035}\mbox{\hyperlink{cpuid_8h_a77c7dbaf10b13ef2f9798f2ba45f812b}{00035}}\ \textcolor{preprocessor}{\#define\ bit\_LZCNT\ \ \ (1\ <<\ 5)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00036}\mbox{\hyperlink{cpuid_8h_abf7c619397818789919a00dd0ca091f6}{00036}}\ \textcolor{preprocessor}{\#define\ bit\_SSSE3\ \ \ (1\ <<\ 9)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00037}\mbox{\hyperlink{cpuid_8h_ac14eff35dc022531d51e5b30cc7426d3}{00037}}\ \textcolor{preprocessor}{\#define\ bit\_FMA\ \ \ \ \ (1\ <<\ 12)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00038}\mbox{\hyperlink{cpuid_8h_a5a9eefc6a7ebb022aaafc7cb91e1f456}{00038}}\ \textcolor{preprocessor}{\#define\ bit\_CMPXCHG16B\ \ (1\ <<\ 13)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00039}\mbox{\hyperlink{cpuid_8h_ada6fe7b24e4f2c9b93810e90833eec10}{00039}}\ \textcolor{preprocessor}{\#define\ bit\_SSE4\_1\ \ (1\ <<\ 19)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00040}\mbox{\hyperlink{cpuid_8h_ab5de173303e5fed18313cb76477d78b2}{00040}}\ \textcolor{preprocessor}{\#define\ bit\_SSE4\_2\ \ (1\ <<\ 20)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00041}\mbox{\hyperlink{cpuid_8h_aa9906d419c821b9f58d053a2d2a84095}{00041}}\ \textcolor{preprocessor}{\#define\ bit\_MOVBE\ \ \ (1\ <<\ 22)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00042}\mbox{\hyperlink{cpuid_8h_a9390a497a67797d9f74d32e07973f5ac}{00042}}\ \textcolor{preprocessor}{\#define\ bit\_POPCNT\ \ (1\ <<\ 23)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00043}\mbox{\hyperlink{cpuid_8h_a6d4fe40c7d343304e33039c3f0246120}{00043}}\ \textcolor{preprocessor}{\#define\ bit\_AES\ \ \ \ \ (1\ <<\ 25)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00044}\mbox{\hyperlink{cpuid_8h_af22114166abcfbbfcf1f9a2f6cda1561}{00044}}\ \textcolor{preprocessor}{\#define\ bit\_XSAVE\ \ \ (1\ <<\ 26)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00045}\mbox{\hyperlink{cpuid_8h_a70fc14c9fdf0a79d0108cb4745431211}{00045}}\ \textcolor{preprocessor}{\#define\ bit\_OSXSAVE\ (1\ <<\ 27)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00046}\mbox{\hyperlink{cpuid_8h_aae8da26de884c5807b5c6b1a2670b2dd}{00046}}\ \textcolor{preprocessor}{\#define\ bit\_AVX\ \ \ \ \ (1\ <<\ 28)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00047}\mbox{\hyperlink{cpuid_8h_a8daa54079a2f0f41ab924f5e275a4737}{00047}}\ \textcolor{preprocessor}{\#define\ bit\_F16C\ \ \ \ (1\ <<\ 29)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00048}\mbox{\hyperlink{cpuid_8h_a35c3d8674c28eb3fae8286a73fea4bd9}{00048}}\ \textcolor{preprocessor}{\#define\ bit\_RDRND\ \ \ (1\ <<\ 30)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00050}00050\ \textcolor{comment}{/*\ \%edx\ */}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00051}\mbox{\hyperlink{cpuid_8h_a0200a5ce71d84aad90b1236c7d26886b}{00051}}\ \textcolor{preprocessor}{\#define\ bit\_CMPXCHG8B\ \ \ (1\ <<\ 8)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00052}\mbox{\hyperlink{cpuid_8h_a435f91aa653cce88b2dc0acda83dfb6f}{00052}}\ \textcolor{preprocessor}{\#define\ bit\_CMOV\ \ \ \ (1\ <<\ 15)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00053}\mbox{\hyperlink{cpuid_8h_a5c747adebe3029821e8efbdb89ba6727}{00053}}\ \textcolor{preprocessor}{\#define\ bit\_MMX\ \ \ \ \ (1\ <<\ 23)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00054}\mbox{\hyperlink{cpuid_8h_ab47a9935f2e1f4e69f853a743dbda913}{00054}}\ \textcolor{preprocessor}{\#define\ bit\_FXSAVE\ \ (1\ <<\ 24)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00055}\mbox{\hyperlink{cpuid_8h_a13ae9a1808a69e6e1c1cf39bad66675f}{00055}}\ \textcolor{preprocessor}{\#define\ bit\_SSE\ \ \ \ \ (1\ <<\ 25)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00056}\mbox{\hyperlink{cpuid_8h_af2331cf29bbb77a434d6475ac753967f}{00056}}\ \textcolor{preprocessor}{\#define\ bit\_SSE2\ \ \ \ (1\ <<\ 26)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00058}00058\ \textcolor{comment}{/*\ Extended\ Features\ (\%eax\ ==\ 0x80000001)\ */}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00059}00059\ \textcolor{comment}{/*\ \%ecx\ */}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00060}\mbox{\hyperlink{cpuid_8h_a69c7921501f478457100a64ee19ecf36}{00060}}\ \textcolor{preprocessor}{\#define\ bit\_LAHF\_LM\ (1\ <<\ 0)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00061}\mbox{\hyperlink{cpuid_8h_a490eec265e4eaa288f0eca9245291f35}{00061}}\ \textcolor{preprocessor}{\#define\ bit\_ABM\ \ \ \ \ (1\ <<\ 5)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00062}\mbox{\hyperlink{cpuid_8h_ad6dce7aef9b04f3627e96971edd01b95}{00062}}\ \textcolor{preprocessor}{\#define\ bit\_SSE4a\ \ \ (1\ <<\ 6)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00063}\mbox{\hyperlink{cpuid_8h_a5eb300226dcbb1617a46a045c67245f2}{00063}}\ \textcolor{preprocessor}{\#define\ bit\_PRFCHW\ \ (1\ <<\ 8)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00064}\mbox{\hyperlink{cpuid_8h_adaf213dc88cc9fbbed5c5002104058c5}{00064}}\ \textcolor{preprocessor}{\#define\ bit\_XOP\ \ \ \ \ \ \ \ \ (1\ <<\ 11)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00065}\mbox{\hyperlink{cpuid_8h_a6446dca1b40aef2721f3d6e81595e05c}{00065}}\ \textcolor{preprocessor}{\#define\ bit\_LWP\ \ \ \ \ (1\ <<\ 15)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00066}\mbox{\hyperlink{cpuid_8h_a52414d4826fedf07d4c31c546c5b2e2e}{00066}}\ \textcolor{preprocessor}{\#define\ bit\_FMA4\ \ \ \ \ \ \ \ (1\ <<\ 16)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00067}\mbox{\hyperlink{cpuid_8h_a02a4b30cd6d333df28bee1b4061a508a}{00067}}\ \textcolor{preprocessor}{\#define\ bit\_TBM\ \ \ \ \ \ \ \ \ (1\ <<\ 21)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00068}\mbox{\hyperlink{cpuid_8h_a4d42f36ac15af2e0f6315f6ee90d01ba}{00068}}\ \textcolor{preprocessor}{\#define\ bit\_MWAITX\ \ \ \ \ \ (1\ <<\ 29)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00070}00070\ \textcolor{comment}{/*\ \%edx\ */}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00071}\mbox{\hyperlink{cpuid_8h_a940a8c075d01ece160d9a00a753f9405}{00071}}\ \textcolor{preprocessor}{\#define\ bit\_MMXEXT\ \ (1\ <<\ 22)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00072}\mbox{\hyperlink{cpuid_8h_a15454da08411bfc412465684a6675906}{00072}}\ \textcolor{preprocessor}{\#define\ bit\_LM\ \ \ \ \ \ (1\ <<\ 29)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00073}\mbox{\hyperlink{cpuid_8h_a19acefe41c74022f8bacc8a25169d9de}{00073}}\ \textcolor{preprocessor}{\#define\ bit\_3DNOWP\ \ (1\ <<\ 30)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00074}\mbox{\hyperlink{cpuid_8h_a0ddd4dc7b7faac31f43d11c182aa9a1c}{00074}}\ \textcolor{preprocessor}{\#define\ bit\_3DNOW\ \ \ (1u\ <<\ 31)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00076}00076\ \textcolor{comment}{/*\ \%ebx\ \ */}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00077}\mbox{\hyperlink{cpuid_8h_a1521d8788647f482e0f7158eaa08b265}{00077}}\ \textcolor{preprocessor}{\#define\ bit\_CLZERO\ \ (1\ <<\ 0)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00078}\mbox{\hyperlink{cpuid_8h_ab1c2a9bbf89ffa3e314427cd69cc75cc}{00078}}\ \textcolor{preprocessor}{\#define\ bit\_WBNOINVD\ \ \ \ (1\ <<\ 9)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00080}00080\ \textcolor{comment}{/*\ Extended\ Features\ (\%eax\ ==\ 7)\ */}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00081}00081\ \textcolor{comment}{/*\ \%ebx\ */}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00082}\mbox{\hyperlink{cpuid_8h_aa5c6a03ca077588714b6e8acfe50eb3d}{00082}}\ \textcolor{preprocessor}{\#define\ bit\_FSGSBASE\ \ \ \ (1\ <<\ 0)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00083}\mbox{\hyperlink{cpuid_8h_a027528269e266e9edaadc87d0f458049}{00083}}\ \textcolor{preprocessor}{\#define\ bit\_SGX\ (1\ <<\ 2)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00084}\mbox{\hyperlink{cpuid_8h_abe380d43ca212495d45631e6ce6260f8}{00084}}\ \textcolor{preprocessor}{\#define\ bit\_BMI\ (1\ <<\ 3)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00085}\mbox{\hyperlink{cpuid_8h_afcb9b9a6ea2edef0281b8de488206d6d}{00085}}\ \textcolor{preprocessor}{\#define\ bit\_HLE\ (1\ <<\ 4)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00086}\mbox{\hyperlink{cpuid_8h_ad98186ad16014151d44c0443bf632aaa}{00086}}\ \textcolor{preprocessor}{\#define\ bit\_AVX2\ \ \ \ (1\ <<\ 5)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00087}\mbox{\hyperlink{cpuid_8h_a82d2e70bc2872c4cf255c722e79f71fd}{00087}}\ \textcolor{preprocessor}{\#define\ bit\_BMI2\ \ \ \ (1\ <<\ 8)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00088}\mbox{\hyperlink{cpuid_8h_ae5343bcb5e838d7cf932d13238fd1794}{00088}}\ \textcolor{preprocessor}{\#define\ bit\_RTM\ (1\ <<\ 11)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00089}\mbox{\hyperlink{cpuid_8h_a2802f9f1746a6b3188119362a27ec3b1}{00089}}\ \textcolor{preprocessor}{\#define\ bit\_AVX512F\ (1\ <<\ 16)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00090}\mbox{\hyperlink{cpuid_8h_af46ea94a03841d6fa0d1b3ee0c9016ca}{00090}}\ \textcolor{preprocessor}{\#define\ bit\_AVX512DQ\ \ \ \ (1\ <<\ 17)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00091}\mbox{\hyperlink{cpuid_8h_a53cdfbaf5157c02f12462ee1a2f07bca}{00091}}\ \textcolor{preprocessor}{\#define\ bit\_RDSEED\ \ (1\ <<\ 18)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00092}\mbox{\hyperlink{cpuid_8h_aaccb995a04b48797d1d5d65b6ccda55b}{00092}}\ \textcolor{preprocessor}{\#define\ bit\_ADX\ (1\ <<\ 19)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00093}\mbox{\hyperlink{cpuid_8h_a66a02664a4c2214f9f5ccc881b82e093}{00093}}\ \textcolor{preprocessor}{\#define\ bit\_AVX512IFMA\ \ (1\ <<\ 21)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00094}\mbox{\hyperlink{cpuid_8h_a2c42a88b2ec58e657681cf2a9d715dd1}{00094}}\ \textcolor{preprocessor}{\#define\ bit\_CLFLUSHOPT\ \ (1\ <<\ 23)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00095}\mbox{\hyperlink{cpuid_8h_ab3c2cf5abcbf1c490de2ac5a90e34590}{00095}}\ \textcolor{preprocessor}{\#define\ bit\_CLWB\ \ \ \ (1\ <<\ 24)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00096}\mbox{\hyperlink{cpuid_8h_ace02481f8d2df608687176d06a87e6b8}{00096}}\ \textcolor{preprocessor}{\#define\ bit\_AVX512PF\ \ \ \ (1\ <<\ 26)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00097}\mbox{\hyperlink{cpuid_8h_a2acec294b57533001c685e2b5a500c89}{00097}}\ \textcolor{preprocessor}{\#define\ bit\_AVX512ER\ \ \ \ (1\ <<\ 27)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00098}\mbox{\hyperlink{cpuid_8h_a1a1279a751eeec054c17bf8957bb82f2}{00098}}\ \textcolor{preprocessor}{\#define\ bit\_AVX512CD\ \ \ \ (1\ <<\ 28)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00099}\mbox{\hyperlink{cpuid_8h_a1bb87943c5b64ad807a3a67f25b4098e}{00099}}\ \textcolor{preprocessor}{\#define\ bit\_SHA\ \ \ \ \ (1\ <<\ 29)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00100}\mbox{\hyperlink{cpuid_8h_a60c17d1dcfe49f56ad076ca1a286b58d}{00100}}\ \textcolor{preprocessor}{\#define\ bit\_AVX512BW\ \ \ \ (1\ <<\ 30)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00101}\mbox{\hyperlink{cpuid_8h_afbc288de7321d583ad2976dae9020165}{00101}}\ \textcolor{preprocessor}{\#define\ bit\_AVX512VL\ \ \ \ (1u\ <<\ 31)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00103}00103\ \textcolor{comment}{/*\ \%ecx\ */}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00104}\mbox{\hyperlink{cpuid_8h_a05fb9828a14f3225f88cebd9abb5e001}{00104}}\ \textcolor{preprocessor}{\#define\ bit\_PREFETCHWT1\ \ \ (1\ <<\ 0)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00105}\mbox{\hyperlink{cpuid_8h_a73894deb1b2f2bb64bb983ecf84256b3}{00105}}\ \textcolor{preprocessor}{\#define\ bit\_AVX512VBMI\ \ (1\ <<\ 1)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00106}\mbox{\hyperlink{cpuid_8h_a11ec09968a47f0c24803e9b81c44ce48}{00106}}\ \textcolor{preprocessor}{\#define\ bit\_PKU\ (1\ <<\ 3)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00107}\mbox{\hyperlink{cpuid_8h_aebecb3134411cd13ab316c94d1374474}{00107}}\ \textcolor{preprocessor}{\#define\ bit\_OSPKE\ \ \ (1\ <<\ 4)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00108}\mbox{\hyperlink{cpuid_8h_a78659de4575d63e97c6df5f63f75eddf}{00108}}\ \textcolor{preprocessor}{\#define\ bit\_WAITPKG\ (1\ <<\ 5)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00109}\mbox{\hyperlink{cpuid_8h_a8d556a673b58b5715c6aef272800d3a2}{00109}}\ \textcolor{preprocessor}{\#define\ bit\_AVX512VBMI2\ (1\ <<\ 6)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00110}\mbox{\hyperlink{cpuid_8h_ae40dd97fe232017a6ec2c4d31104b6de}{00110}}\ \textcolor{preprocessor}{\#define\ bit\_SHSTK\ \ \ (1\ <<\ 7)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00111}\mbox{\hyperlink{cpuid_8h_a94fbd5b5bcd3ba449cec374dd4909518}{00111}}\ \textcolor{preprocessor}{\#define\ bit\_GFNI\ \ \ \ (1\ <<\ 8)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00112}\mbox{\hyperlink{cpuid_8h_a9eec13ac5f5498340ef9ac64adb58635}{00112}}\ \textcolor{preprocessor}{\#define\ bit\_VAES\ \ \ \ (1\ <<\ 9)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00113}\mbox{\hyperlink{cpuid_8h_a8c8b9fb00e4cda9a62e524cc95cba922}{00113}}\ \textcolor{preprocessor}{\#define\ bit\_AVX512VNNI\ \ (1\ <<\ 11)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00114}\mbox{\hyperlink{cpuid_8h_a51f545b359197cb5a1f90a9b48ee3bd1}{00114}}\ \textcolor{preprocessor}{\#define\ bit\_VPCLMULQDQ\ \ (1\ <<\ 10)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00115}\mbox{\hyperlink{cpuid_8h_a1fe34c823659728a39fef7c04f4b7cf6}{00115}}\ \textcolor{preprocessor}{\#define\ bit\_AVX512BITALG\ \ \ \ (1\ <<\ 12)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00116}\mbox{\hyperlink{cpuid_8h_adc88602d5b180c0ad975b12f50e427df}{00116}}\ \textcolor{preprocessor}{\#define\ bit\_AVX512VPOPCNTDQ\ (1\ <<\ 14)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00117}\mbox{\hyperlink{cpuid_8h_ad39c5d7ce1564d3bef11915786a9297f}{00117}}\ \textcolor{preprocessor}{\#define\ bit\_RDPID\ \ \ (1\ <<\ 22)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00118}\mbox{\hyperlink{cpuid_8h_aff86b533a6f599f69f513b13696e2ff8}{00118}}\ \textcolor{preprocessor}{\#define\ bit\_MOVDIRI\ (1\ <<\ 27)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00119}\mbox{\hyperlink{cpuid_8h_a68cd5f1d32138eef8c1d781fb60987a7}{00119}}\ \textcolor{preprocessor}{\#define\ bit\_MOVDIR64B\ \ \ (1\ <<\ 28)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00120}\mbox{\hyperlink{cpuid_8h_a5eb9594798f186b4fdfc481a5a4a5438}{00120}}\ \textcolor{preprocessor}{\#define\ bit\_ENQCMD\ \ (1\ <<\ 29)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00121}\mbox{\hyperlink{cpuid_8h_a8ca76f09058c6a8305d1d3342bcc78e1}{00121}}\ \textcolor{preprocessor}{\#define\ bit\_CLDEMOTE\ \ \ \ (1\ <<\ 25)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00122}\mbox{\hyperlink{cpuid_8h_adf596140db9e4c2e145e59116a3d0c4f}{00122}}\ \textcolor{preprocessor}{\#define\ bit\_KL\ \ \ \ \ \ (1\ <<\ 23)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00124}00124\ \textcolor{comment}{/*\ \%edx\ */}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00125}\mbox{\hyperlink{cpuid_8h_aa281b55fd55fa944249fbbd619f4e9b1}{00125}}\ \textcolor{preprocessor}{\#define\ bit\_AVX5124VNNIW\ (1\ <<\ 2)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00126}\mbox{\hyperlink{cpuid_8h_a29b1fc18418791b077d8e83f4c9c9fd1}{00126}}\ \textcolor{preprocessor}{\#define\ bit\_AVX5124FMAPS\ (1\ <<\ 3)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00127}\mbox{\hyperlink{cpuid_8h_a6ecdad31fa9a20202da50c5138665186}{00127}}\ \textcolor{preprocessor}{\#define\ bit\_AVX512VP2INTERSECT\ \ (1\ <<\ 8)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00128}\mbox{\hyperlink{cpuid_8h_a903bd17748746c8e752672e36749d34d}{00128}}\ \textcolor{preprocessor}{\#define\ bit\_AVX512FP16\ \ \ (1\ <<\ 23)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00129}\mbox{\hyperlink{cpuid_8h_ab033b96bb8f1e046e7c734f82ac8c9f6}{00129}}\ \textcolor{preprocessor}{\#define\ bit\_IBT\ (1\ <<\ 20)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00130}\mbox{\hyperlink{cpuid_8h_a1bdd910e6db852425af6c9e008b96a4a}{00130}}\ \textcolor{preprocessor}{\#define\ bit\_UINTR\ (1\ <<\ 5)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00131}\mbox{\hyperlink{cpuid_8h_a770627dee923e0f31118d5cb3ed946f3}{00131}}\ \textcolor{preprocessor}{\#define\ bit\_PCONFIG\ (1\ <<\ 18)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00132}\mbox{\hyperlink{cpuid_8h_a9d543cc04af363cf339d4ebed44f70e8}{00132}}\ \textcolor{preprocessor}{\#define\ bit\_SERIALIZE\ \ \ (1\ <<\ 14)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00133}\mbox{\hyperlink{cpuid_8h_ae8ada809fcc26c32aa6e42b57a67a4c7}{00133}}\ \textcolor{preprocessor}{\#define\ bit\_TSXLDTRK\ \ \ \ (1\ <<\ 16)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00134}\mbox{\hyperlink{cpuid_8h_a829db231c119551f840a7a84dd5c3559}{00134}}\ \textcolor{preprocessor}{\#define\ bit\_AMX\_BF16\ \ \ \ (1\ <<\ 22)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00135}\mbox{\hyperlink{cpuid_8h_ada4dc6aa1a021a012a28214c0ea0634a}{00135}}\ \textcolor{preprocessor}{\#define\ bit\_AMX\_TILE\ \ \ \ (1\ <<\ 24)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00136}\mbox{\hyperlink{cpuid_8h_a7c0f4f248e8299fd064e697e2422e448}{00136}}\ \textcolor{preprocessor}{\#define\ bit\_AMX\_INT8\ \ \ \ (1\ <<\ 25)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00137}00137\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00138}00138\ \textcolor{comment}{/*\ Extended\ State\ Enumeration\ Sub-\/leaf\ (\%eax\ ==\ 0xd,\ \%ecx\ ==\ 1)\ */}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00139}\mbox{\hyperlink{cpuid_8h_ac23d23cef187edb3f26a9e357dbcb04f}{00139}}\ \textcolor{preprocessor}{\#define\ bit\_XSAVEOPT\ \ \ \ (1\ <<\ 0)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00140}\mbox{\hyperlink{cpuid_8h_a86c4b2feffb10752dd39464b742f1afb}{00140}}\ \textcolor{preprocessor}{\#define\ bit\_XSAVEC\ \ (1\ <<\ 1)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00141}\mbox{\hyperlink{cpuid_8h_aa79aea35fbf40f669295e545d261e422}{00141}}\ \textcolor{preprocessor}{\#define\ bit\_XSAVES\ \ (1\ <<\ 3)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00143}00143\ \textcolor{comment}{/*\ PT\ sub\ leaf\ (\%eax\ ==\ 0x14,\ \%ecx\ ==\ 0)\ */}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00144}00144\ \textcolor{comment}{/*\ \%ebx\ */}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00145}\mbox{\hyperlink{cpuid_8h_a0196ff55d2a58c091d9a92304b905810}{00145}}\ \textcolor{preprocessor}{\#define\ bit\_PTWRITE\ (1\ <<\ 4)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00146}00146\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00147}00147\ \textcolor{comment}{/*\ Keylocker\ leaf\ (\%eax\ ==\ 0x19)\ */}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00148}00148\ \textcolor{comment}{/*\ \%ebx\ */}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00149}\mbox{\hyperlink{cpuid_8h_a79b4136ddf496336b26e4ce1be156421}{00149}}\ \textcolor{preprocessor}{\#define\ bit\_AESKLE\ \ (\ 1<<0\ )}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00150}\mbox{\hyperlink{cpuid_8h_a0b7f8fa9bf9d3c6959c343f8c16aea7a}{00150}}\ \textcolor{preprocessor}{\#define\ bit\_WIDEKL\ \ (\ 1<<2\ )}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00153}00153\ \textcolor{comment}{/*\ Signatures\ for\ different\ CPU\ implementations\ as\ returned\ in\ uses}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00154}00154\ \textcolor{comment}{\ \ \ of\ cpuid\ with\ level\ 0.\ \ */}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00155}\mbox{\hyperlink{cpuid_8h_ae29d9e83145d796b5590e79bfc43daf9}{00155}}\ \textcolor{preprocessor}{\#define\ signature\_AMD\_ebx\ \ \ 0x68747541}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00156}\mbox{\hyperlink{cpuid_8h_a9b3834ca1db15bc2190239b8fe7834c8}{00156}}\ \textcolor{preprocessor}{\#define\ signature\_AMD\_ecx\ \ \ 0x444d4163}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00157}\mbox{\hyperlink{cpuid_8h_aaad17d879d4cb595f5e5ea90cfa94910}{00157}}\ \textcolor{preprocessor}{\#define\ signature\_AMD\_edx\ \ \ 0x69746e65}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00158}00158\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00159}\mbox{\hyperlink{cpuid_8h_a1bee9c152b071f15eb357eb24c3801fb}{00159}}\ \textcolor{preprocessor}{\#define\ signature\_CENTAUR\_ebx\ \ \ 0x746e6543}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00160}\mbox{\hyperlink{cpuid_8h_a63d6ab03992dd39e28da54f6cdc7978f}{00160}}\ \textcolor{preprocessor}{\#define\ signature\_CENTAUR\_ecx\ \ \ 0x736c7561}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00161}\mbox{\hyperlink{cpuid_8h_af5992bffbbc24851b6b165459d44b9ab}{00161}}\ \textcolor{preprocessor}{\#define\ signature\_CENTAUR\_edx\ \ \ 0x48727561}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00162}00162\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00163}\mbox{\hyperlink{cpuid_8h_a657c3994ed4f4d594ba184db19eb3415}{00163}}\ \textcolor{preprocessor}{\#define\ signature\_CYRIX\_ebx\ 0x69727943}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00164}\mbox{\hyperlink{cpuid_8h_acdd572fb73d8e8dc180dae2afd80aff6}{00164}}\ \textcolor{preprocessor}{\#define\ signature\_CYRIX\_ecx\ 0x64616574}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00165}\mbox{\hyperlink{cpuid_8h_a0fafa9df3741e10ee3f85663f1bb9f6d}{00165}}\ \textcolor{preprocessor}{\#define\ signature\_CYRIX\_edx\ 0x736e4978}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00167}\mbox{\hyperlink{cpuid_8h_a52ceab3f634a5ca25efe7179f5d6b836}{00167}}\ \textcolor{preprocessor}{\#define\ signature\_INTEL\_ebx\ 0x756e6547}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00168}\mbox{\hyperlink{cpuid_8h_acacb67ab3d1837fdf787666c884db84e}{00168}}\ \textcolor{preprocessor}{\#define\ signature\_INTEL\_ecx\ 0x6c65746e}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00169}\mbox{\hyperlink{cpuid_8h_a1a2c32389501e2494419941597c5aaf0}{00169}}\ \textcolor{preprocessor}{\#define\ signature\_INTEL\_edx\ 0x49656e69}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00170}00170\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00171}\mbox{\hyperlink{cpuid_8h_a9167218e3a53e2bb021ae0cdd16f0fbc}{00171}}\ \textcolor{preprocessor}{\#define\ signature\_TM1\_ebx\ \ \ 0x6e617254}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00172}\mbox{\hyperlink{cpuid_8h_a39d328ec06bb863821ed7bea4df58b11}{00172}}\ \textcolor{preprocessor}{\#define\ signature\_TM1\_ecx\ \ \ 0x55504361}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00173}\mbox{\hyperlink{cpuid_8h_ac7d68b191099d1158ff426d5de861f18}{00173}}\ \textcolor{preprocessor}{\#define\ signature\_TM1\_edx\ \ \ 0x74656d73}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00174}00174\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00175}\mbox{\hyperlink{cpuid_8h_af32afcfdedaf30264d49c1463a003d48}{00175}}\ \textcolor{preprocessor}{\#define\ signature\_TM2\_ebx\ \ \ 0x756e6547}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00176}\mbox{\hyperlink{cpuid_8h_ade44374c5d0cd24512ceb5133a73dcf9}{00176}}\ \textcolor{preprocessor}{\#define\ signature\_TM2\_ecx\ \ \ 0x3638784d}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00177}\mbox{\hyperlink{cpuid_8h_a55db3c6d4c57f4c8a41b1dcbb6ff921c}{00177}}\ \textcolor{preprocessor}{\#define\ signature\_TM2\_edx\ \ \ 0x54656e69}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00178}00178\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00179}\mbox{\hyperlink{cpuid_8h_aecf9fffd103342752afc4235d1317223}{00179}}\ \textcolor{preprocessor}{\#define\ signature\_NSC\_ebx\ \ \ 0x646f6547}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00180}\mbox{\hyperlink{cpuid_8h_a0c83154b6a024223a472b796b7770cda}{00180}}\ \textcolor{preprocessor}{\#define\ signature\_NSC\_ecx\ \ \ 0x43534e20}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00181}\mbox{\hyperlink{cpuid_8h_a2156399f3a733096bd25ac7c1daea826}{00181}}\ \textcolor{preprocessor}{\#define\ signature\_NSC\_edx\ \ \ 0x79622065}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00182}00182\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00183}\mbox{\hyperlink{cpuid_8h_a1ede60d0f1c35b4393e9483868de3e3a}{00183}}\ \textcolor{preprocessor}{\#define\ signature\_NEXGEN\_ebx\ \ \ \ 0x4778654e}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00184}\mbox{\hyperlink{cpuid_8h_aeb60ec011767a5ca58b3976912f5d88b}{00184}}\ \textcolor{preprocessor}{\#define\ signature\_NEXGEN\_ecx\ \ \ \ 0x6e657669}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00185}\mbox{\hyperlink{cpuid_8h_a4173cbb3aad28cf37f062a7d5096a135}{00185}}\ \textcolor{preprocessor}{\#define\ signature\_NEXGEN\_edx\ \ \ \ 0x72446e65}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00186}00186\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00187}\mbox{\hyperlink{cpuid_8h_a299d8b43de0add3456f85735c40df454}{00187}}\ \textcolor{preprocessor}{\#define\ signature\_RISE\_ebx\ \ 0x65736952}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00188}\mbox{\hyperlink{cpuid_8h_a7138e804a2d7aa76e623390e7934af03}{00188}}\ \textcolor{preprocessor}{\#define\ signature\_RISE\_ecx\ \ 0x65736952}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00189}\mbox{\hyperlink{cpuid_8h_afc42d0b0da2535fd531dfc455c408fb6}{00189}}\ \textcolor{preprocessor}{\#define\ signature\_RISE\_edx\ \ 0x65736952}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00190}00190\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00191}\mbox{\hyperlink{cpuid_8h_a78442af1141d1bb56f7a2aa510543957}{00191}}\ \textcolor{preprocessor}{\#define\ signature\_SIS\_ebx\ \ \ 0x20536953}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00192}\mbox{\hyperlink{cpuid_8h_a15be63fad228f3de2faf692ce0ab86ea}{00192}}\ \textcolor{preprocessor}{\#define\ signature\_SIS\_ecx\ \ \ 0x20536953}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00193}\mbox{\hyperlink{cpuid_8h_a0730448e589e694586ef472f142baac3}{00193}}\ \textcolor{preprocessor}{\#define\ signature\_SIS\_edx\ \ \ 0x20536953}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00194}00194\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00195}\mbox{\hyperlink{cpuid_8h_adbf3197b243fb43cc6a6518fb6cbb34a}{00195}}\ \textcolor{preprocessor}{\#define\ signature\_UMC\_ebx\ \ \ 0x20434d55}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00196}\mbox{\hyperlink{cpuid_8h_a1d1b0bac18812bcbb187d70a4e48c844}{00196}}\ \textcolor{preprocessor}{\#define\ signature\_UMC\_ecx\ \ \ 0x20434d55}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00197}\mbox{\hyperlink{cpuid_8h_aa0624da176b0ee89b5876d5155c2defc}{00197}}\ \textcolor{preprocessor}{\#define\ signature\_UMC\_edx\ \ \ 0x20434d55}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00198}00198\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00199}\mbox{\hyperlink{cpuid_8h_a6b68e99fbe00e03d5cd828839c4cbbe7}{00199}}\ \textcolor{preprocessor}{\#define\ signature\_VIA\_ebx\ \ \ 0x20414956}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00200}\mbox{\hyperlink{cpuid_8h_a71f1e105f986dd27289015b1b1a481ce}{00200}}\ \textcolor{preprocessor}{\#define\ signature\_VIA\_ecx\ \ \ 0x20414956}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00201}\mbox{\hyperlink{cpuid_8h_a4b44bc687145fda4760403cc1d841b61}{00201}}\ \textcolor{preprocessor}{\#define\ signature\_VIA\_edx\ \ \ 0x20414956}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00202}00202\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00203}\mbox{\hyperlink{cpuid_8h_ab021341ccc687faa1670c0f595fe162e}{00203}}\ \textcolor{preprocessor}{\#define\ signature\_VORTEX\_ebx\ \ \ \ 0x74726f56}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00204}\mbox{\hyperlink{cpuid_8h_a69590add84a4349077775cf541c45c86}{00204}}\ \textcolor{preprocessor}{\#define\ signature\_VORTEX\_ecx\ \ \ \ 0x436f5320}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00205}\mbox{\hyperlink{cpuid_8h_a58542434d6a5acd4d522352e9f1eea6e}{00205}}\ \textcolor{preprocessor}{\#define\ signature\_VORTEX\_edx\ \ \ \ 0x36387865}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00206}00206\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00207}00207\ \textcolor{preprocessor}{\#ifndef\ \_\_x86\_64\_\_}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00208}00208\ \textcolor{comment}{/*\ At\ least\ one\ cpu\ (Winchip\ 2)\ does\ not\ set\ \%ebx\ and\ \%ecx}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00209}00209\ \textcolor{comment}{\ \ \ for\ cpuid\ leaf\ 1.\ Forcibly\ zero\ the\ two\ registers\ before}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00210}00210\ \textcolor{comment}{\ \ \ calling\ cpuid\ as\ a\ precaution.\ \ */}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00211}\mbox{\hyperlink{cpuid_8h_a0a60b3297b088d11136eb91a8d87b0ee}{00211}}\ \textcolor{preprocessor}{\#define\ \_\_cpuid(level,\ a,\ b,\ c,\ d)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00212}00212\ \textcolor{preprocessor}{\ \ do\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00213}00213\ \textcolor{preprocessor}{\ \ \ \ if\ (\_\_builtin\_constant\_p\ (level)\ \&\&\ (level)\ !=\ 1)\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00214}00214\ \textcolor{preprocessor}{\ \ \ \ \ \ \_\_asm\_\_\ \_\_volatile\_\_\ ("{}cpuid\(\backslash\)n\(\backslash\)t"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00215}00215\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ "{}=a"{}\ (a),\ "{}=b"{}\ (b),\ "{}=c"{}\ (c),\ "{}=d"{}\ (d)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00216}00216\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ "{}0"{}\ (level));\ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00217}00217\ \textcolor{preprocessor}{\ \ \ \ else\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00218}00218\ \textcolor{preprocessor}{\ \ \ \ \ \ \_\_asm\_\_\ \_\_volatile\_\_\ ("{}cpuid\(\backslash\)n\(\backslash\)t"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00219}00219\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ "{}=a"{}\ (a),\ "{}=b"{}\ (b),\ "{}=c"{}\ (c),\ "{}=d"{}\ (d)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00220}00220\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ "{}0"{}\ (level),\ "{}1"{}\ (0),\ "{}2"{}\ (0));\ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00221}00221\ \textcolor{preprocessor}{\ \ \}\ while\ (0)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00222}00222\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00223}00223\ \textcolor{preprocessor}{\#define\ \_\_cpuid(level,\ a,\ b,\ c,\ d)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00224}00224\ \textcolor{preprocessor}{\ \ \_\_asm\_\_\ \_\_volatile\_\_\ ("{}cpuid\(\backslash\)n\(\backslash\)t"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00225}00225\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ :\ "{}=a"{}\ (a),\ "{}=b"{}\ (b),\ "{}=c"{}\ (c),\ "{}=d"{}\ (d)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00226}00226\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ :\ "{}0"{}\ (level))}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00227}00227\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00228}00228\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00229}\mbox{\hyperlink{cpuid_8h_adbce48c7fbd469d3d190242491dcdfa2}{00229}}\ \textcolor{preprocessor}{\#define\ \_\_cpuid\_count(level,\ count,\ a,\ b,\ c,\ d)\ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00230}00230\ \textcolor{preprocessor}{\ \ \_\_asm\_\_\ \_\_volatile\_\_\ ("{}cpuid\(\backslash\)n\(\backslash\)t"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00231}00231\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ :\ "{}=a"{}\ (a),\ "{}=b"{}\ (b),\ "{}=c"{}\ (c),\ "{}=d"{}\ (d)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00232}00232\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ :\ "{}0"{}\ (level),\ "{}2"{}\ (count))}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00233}00233\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00234}00234\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00235}00235\ \textcolor{comment}{/*\ Return\ highest\ supported\ input\ value\ for\ cpuid\ instruction.\ \ ext\ can}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00236}00236\ \textcolor{comment}{\ \ \ be\ either\ 0x0\ or\ 0x80000000\ to\ return\ highest\ supported\ value\ for}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00237}00237\ \textcolor{comment}{\ \ \ basic\ or\ extended\ cpuid\ information.\ \ Function\ returns\ 0\ if\ cpuid}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00238}00238\ \textcolor{comment}{\ \ \ is\ not\ supported\ or\ whatever\ cpuid\ returns\ in\ eax\ register.\ \ If\ sig}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00239}00239\ \textcolor{comment}{\ \ \ pointer\ is\ non-\/null,\ then\ first\ four\ bytes\ of\ the\ signature}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00240}00240\ \textcolor{comment}{\ \ \ (as\ found\ in\ ebx\ register)\ are\ returned\ in\ location\ pointed\ by\ sig.\ \ */}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00241}00241\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00242}00242\ \textcolor{keyword}{static}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_inline}}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00243}\mbox{\hyperlink{cpuid_8h_a3f62ab5c2c8c34048f2fa1b9865f230f}{00243}}\ \mbox{\hyperlink{cpuid_8h_a3f62ab5c2c8c34048f2fa1b9865f230f}{\_\_get\_cpuid\_max}}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ext}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_sig}})}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00244}00244\ \{}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00245}00245\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_eax}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ebx}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ecx}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_edx}};}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00246}00246\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00247}00247\ \textcolor{preprocessor}{\#ifndef\ \_\_x86\_64\_\_}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00248}00248\ \ \ \textcolor{comment}{/*\ See\ if\ we\ can\ use\ cpuid.\ \ On\ AMD64\ we\ always\ can.\ \ */}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00249}00249\ \textcolor{preprocessor}{\#if\ \_\_GNUC\_\_\ >=\ 3}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00250}00250\ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_asm\_\_}}\ (\textcolor{stringliteral}{"{}pushf\{l|d\}\(\backslash\)n\(\backslash\)t"{}}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00251}00251\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}pushf\{l|d\}\(\backslash\)n\(\backslash\)t"{}}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00252}00252\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}pop\{l\}\(\backslash\)t\%0\(\backslash\)n\(\backslash\)t"{}}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00253}00253\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}mov\{l\}\(\backslash\)t\{\%0,\ \%1|\%1,\ \%0\}\(\backslash\)n\(\backslash\)t"{}}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00254}00254\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}xor\{l\}\(\backslash\)t\{\%2,\ \%0|\%0,\ \%2\}\(\backslash\)n\(\backslash\)t"{}}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00255}00255\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}push\{l\}\(\backslash\)t\%0\(\backslash\)n\(\backslash\)t"{}}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00256}00256\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}popf\{l|d\}\(\backslash\)n\(\backslash\)t"{}}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00257}00257\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}pushf\{l|d\}\(\backslash\)n\(\backslash\)t"{}}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00258}00258\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}pop\{l\}\(\backslash\)t\%0\(\backslash\)n\(\backslash\)t"{}}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00259}00259\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}popf\{l|d\}\(\backslash\)n\(\backslash\)t"{}}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00260}00260\ \ \ \ \ \ \ \ :\ \textcolor{stringliteral}{"{}=\&r"{}}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_eax}}),\ \textcolor{stringliteral}{"{}=\&r"{}}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ebx}})}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00261}00261\ \ \ \ \ \ \ \ :\ \textcolor{stringliteral}{"{}i"{}}\ (0x00200000));}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00262}00262\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00263}00263\ \textcolor{comment}{/*\ Host\ GCCs\ older\ than\ 3.0\ weren't\ supporting\ Intel\ asm\ syntax}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00264}00264\ \textcolor{comment}{\ \ \ nor\ alternatives\ in\ i386\ code.\ \ */}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00265}00265\ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_asm\_\_}}\ (\textcolor{stringliteral}{"{}pushfl\(\backslash\)n\(\backslash\)t"{}}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00266}00266\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}pushfl\(\backslash\)n\(\backslash\)t"{}}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00267}00267\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}popl\(\backslash\)t\%0\(\backslash\)n\(\backslash\)t"{}}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00268}00268\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}movl\(\backslash\)t\%0,\ \%1\(\backslash\)n\(\backslash\)t"{}}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00269}00269\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}xorl\(\backslash\)t\%2,\ \%0\(\backslash\)n\(\backslash\)t"{}}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00270}00270\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}pushl\(\backslash\)t\%0\(\backslash\)n\(\backslash\)t"{}}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00271}00271\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}popfl\(\backslash\)n\(\backslash\)t"{}}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00272}00272\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}pushfl\(\backslash\)n\(\backslash\)t"{}}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00273}00273\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}popl\(\backslash\)t\%0\(\backslash\)n\(\backslash\)t"{}}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00274}00274\ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}popfl\(\backslash\)n\(\backslash\)t"{}}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00275}00275\ \ \ \ \ \ \ \ :\ \textcolor{stringliteral}{"{}=\&r"{}}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_eax}}),\ \textcolor{stringliteral}{"{}=\&r"{}}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ebx}})}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00276}00276\ \ \ \ \ \ \ \ :\ \textcolor{stringliteral}{"{}i"{}}\ (0x00200000));}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00277}00277\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00278}00278\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00279}00279\ \ \ \textcolor{keywordflow}{if}\ (!((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_eax}}\ \string^\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ebx}})\ \&\ 0x00200000))}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00280}00280\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00281}00281\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00282}00282\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00283}00283\ \ \ \textcolor{comment}{/*\ Host\ supports\ cpuid.\ \ Return\ highest\ supported\ cpuid\ input\ value.\ \ */}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00284}00284\ \ \ \mbox{\hyperlink{cpuid_8h_a0a60b3297b088d11136eb91a8d87b0ee}{\_\_cpuid}}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ext}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_eax}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ebx}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ecx}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_edx}});}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00285}00285\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00286}00286\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_sig}})}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00287}00287\ \ \ \ \ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_sig}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ebx}};}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00288}00288\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00289}00289\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_eax}};}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00290}00290\ \}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00291}00291\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00292}00292\ \textcolor{comment}{/*\ Return\ cpuid\ data\ for\ requested\ cpuid\ leaf,\ as\ found\ in\ returned}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00293}00293\ \textcolor{comment}{\ \ \ eax,\ ebx,\ ecx\ and\ edx\ registers.\ \ The\ function\ checks\ if\ cpuid\ is}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00294}00294\ \textcolor{comment}{\ \ \ supported\ and\ returns\ 1\ for\ valid\ cpuid\ information\ or\ 0\ for}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00295}00295\ \textcolor{comment}{\ \ \ unsupported\ cpuid\ leaf.\ \ All\ pointers\ are\ required\ to\ be\ non-\/null.\ \ */}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00296}00296\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00297}00297\ \textcolor{keyword}{static}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_inline}}\ \textcolor{keywordtype}{int}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00298}\mbox{\hyperlink{cpuid_8h_a8e6690cf1942a464e981b0eefbd944ad}{00298}}\ \mbox{\hyperlink{cpuid_8h_a8e6690cf1942a464e981b0eefbd944ad}{\_\_get\_cpuid}}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_leaf}},}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00299}00299\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_eax}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ebx}},}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00300}00300\ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ecx}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_edx}})}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00301}00301\ \{}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00302}00302\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ext}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_leaf}}\ \&\ 0x80000000;}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00303}00303\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_maxlevel}}\ =\ \mbox{\hyperlink{cpuid_8h_a3f62ab5c2c8c34048f2fa1b9865f230f}{\_\_get\_cpuid\_max}}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ext}},\ 0);}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00304}00304\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00305}00305\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_maxlevel}}\ ==\ 0\ ||\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_maxlevel}}\ <\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_leaf}})}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00306}00306\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00307}00307\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00308}00308\ \ \ \mbox{\hyperlink{cpuid_8h_a0a60b3297b088d11136eb91a8d87b0ee}{\_\_cpuid}}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_leaf}},\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_eax}},\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ebx}},\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ecx}},\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_edx}});}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00309}00309\ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00310}00310\ \}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00311}00311\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00312}00312\ \textcolor{comment}{/*\ Same\ as\ above,\ but\ sub-\/leaf\ can\ be\ specified.\ \ */}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00313}00313\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00314}00314\ \textcolor{keyword}{static}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_inline}}\ \textcolor{keywordtype}{int}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00315}\mbox{\hyperlink{cpuid_8h_ab272aa1b22612dc72b58d75e38ff8c3a}{00315}}\ \mbox{\hyperlink{cpuid_8h_ab272aa1b22612dc72b58d75e38ff8c3a}{\_\_get\_cpuid\_count}}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_leaf}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_subleaf}},}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00316}00316\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_eax}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ebx}},}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00317}00317\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ecx}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_edx}})}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00318}00318\ \{}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00319}00319\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ext}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_leaf}}\ \&\ 0x80000000;}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00320}00320\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_maxlevel}}\ =\ \mbox{\hyperlink{cpuid_8h_a3f62ab5c2c8c34048f2fa1b9865f230f}{\_\_get\_cpuid\_max}}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ext}},\ 0);}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00321}00321\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00322}00322\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_maxlevel}}\ ==\ 0\ ||\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_maxlevel}}\ <\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_leaf}})}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00323}00323\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00324}00324\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00325}00325\ \ \ \mbox{\hyperlink{cpuid_8h_adbce48c7fbd469d3d190242491dcdfa2}{\_\_cpuid\_count}}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_leaf}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_subleaf}},\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_eax}},\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ebx}},\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_ecx}},\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_edx}});}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00326}00326\ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00327}00327\ \}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00328}00328\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00329}00329\ \textcolor{keyword}{static}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_inline}}\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00330}\mbox{\hyperlink{cpuid_8h_a6e2ac3cad16eb80a0c55a512a6ec0a78}{00330}}\ \mbox{\hyperlink{cpuid_8h_a6e2ac3cad16eb80a0c55a512a6ec0a78}{\_\_cpuidex}}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_cpuid\_info}}[4],\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_leaf}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_subleaf}})}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00331}00331\ \{}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00332}00332\ \ \ \mbox{\hyperlink{cpuid_8h_adbce48c7fbd469d3d190242491dcdfa2}{\_\_cpuid\_count}}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_leaf}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_subleaf}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_cpuid\_info}}[0],\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_cpuid\_info}}[1],}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00333}00333\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_cpuid\_info}}[2],\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_cpuid\_info}}[3]);}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00334}00334\ \}}
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00335}00335\ }
+\DoxyCodeLine{\Hypertarget{cpuid_8h_source_l00336}00336\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_CPUID\_H\_INCLUDED\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

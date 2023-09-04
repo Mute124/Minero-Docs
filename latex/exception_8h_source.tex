@@ -1,0 +1,68 @@
+\doxysection{exception.\+h}
+\hypertarget{exception_8h_source}{}\label{exception_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/bits/exception.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/bits/exception.h}}
+\mbox{\hyperlink{exception_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00001}00001\ \textcolor{comment}{//\ Exception\ Handling\ support\ header\ for\ -\/*-\/\ C++\ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00003}00003\ \textcolor{comment}{//\ Copyright\ (C)\ 2016-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00005}00005\ \textcolor{comment}{//\ This\ file\ is\ part\ of\ GCC.}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00006}00006\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00007}00007\ \textcolor{comment}{//\ GCC\ is\ free\ software;\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00008}00008\ \textcolor{comment}{//\ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00009}00009\ \textcolor{comment}{//\ the\ Free\ Software\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00010}00010\ \textcolor{comment}{//\ any\ later\ version.}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00011}00011\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00012}00012\ \textcolor{comment}{//\ GCC\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00013}00013\ \textcolor{comment}{//\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00014}00014\ \textcolor{comment}{//\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00015}00015\ \textcolor{comment}{//\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00016}00016\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00017}00017\ \textcolor{comment}{//\ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00018}00018\ \textcolor{comment}{//\ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00019}00019\ \textcolor{comment}{//\ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00021}00021\ \textcolor{comment}{//\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00022}00022\ \textcolor{comment}{//\ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00023}00023\ \textcolor{comment}{//\ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00024}00024\ \textcolor{comment}{//\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00031}00031\ \textcolor{preprocessor}{\#ifndef\ \_\_EXCEPTION\_H}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00032}00032\ \textcolor{preprocessor}{\#define\ \_\_EXCEPTION\_H\ 1}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00034}00034\ \textcolor{preprocessor}{\#pragma\ GCC\ system\_header}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00036}00036\ \textcolor{preprocessor}{\#pragma\ GCC\ visibility\ push(default)}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00038}00038\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{c_09_09config_8h}{bits/c++config.h}}>}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00040}00040\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C++"{}}\ \{}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00042}00042\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacestd}{std}}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00043}00043\ \{}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00061}\mbox{\hyperlink{classstd_1_1exception}{00061}}\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classstd_1_1exception}{exception}}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00062}00062\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00063}00063\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00064}\mbox{\hyperlink{classstd_1_1exception_ad84d979d801cefc84d141dfb0b2cae56}{00064}}\ \ \ \ \ \mbox{\hyperlink{classstd_1_1exception_ad84d979d801cefc84d141dfb0b2cae56}{exception}}()\ \mbox{\hyperlink{c_09_09config_8h_af2a92889977e9171e0cbfe6445b6a79f}{\_GLIBCXX\_NOTHROW}}\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00065}\mbox{\hyperlink{classstd_1_1exception_a7932e7fd665b6dedef034379cfcfb8ff}{00065}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classstd_1_1exception_a7932e7fd665b6dedef034379cfcfb8ff}{\string~exception}}()\ \mbox{\hyperlink{c_09_09config_8h_a1871651bd291385f1c36eebfb34eaf69}{\_GLIBCXX\_TXN\_SAFE\_DYN}}\ \mbox{\hyperlink{c_09_09config_8h_af2a92889977e9171e0cbfe6445b6a79f}{\_GLIBCXX\_NOTHROW}};}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00066}00066\ \textcolor{preprocessor}{\#if\ \_\_cplusplus\ >=\ 201103L}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00067}00067\ \ \ \ \ \mbox{\hyperlink{classstd_1_1exception_ad84d979d801cefc84d141dfb0b2cae56}{exception}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classstd_1_1exception}{exception}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00068}00068\ \ \ \ \ \mbox{\hyperlink{classstd_1_1exception}{exception}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classstd_1_1exception}{exception}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00069}00069\ \ \ \ \ \mbox{\hyperlink{classstd_1_1exception_ad84d979d801cefc84d141dfb0b2cae56}{exception}}(\mbox{\hyperlink{classstd_1_1exception}{exception}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00070}00070\ \ \ \ \ \mbox{\hyperlink{classstd_1_1exception}{exception}}\&\ operator=(\mbox{\hyperlink{classstd_1_1exception}{exception}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00071}00071\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00075}00075\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00076}\mbox{\hyperlink{classstd_1_1exception_aaeb5dde11d9e9efd8813c9521294a245}{00076}}\ \ \ \ \ \mbox{\hyperlink{classstd_1_1exception_aaeb5dde11d9e9efd8813c9521294a245}{what}}()\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}}\ \mbox{\hyperlink{c_09_09config_8h_a1871651bd291385f1c36eebfb34eaf69}{\_GLIBCXX\_TXN\_SAFE\_DYN}}\ \mbox{\hyperlink{c_09_09config_8h_af2a92889977e9171e0cbfe6445b6a79f}{\_GLIBCXX\_NOTHROW}};}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00077}00077\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00081}00081\ \}\ \textcolor{comment}{//\ namespace\ std}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00083}00083\ \}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00085}00085\ \textcolor{preprocessor}{\#pragma\ GCC\ visibility\ pop}}
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{exception_8h_source_l00087}00087\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

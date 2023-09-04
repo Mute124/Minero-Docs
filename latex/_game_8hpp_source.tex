@@ -1,0 +1,58 @@
+\doxysection{Game.\+hpp}
+\hypertarget{_game_8hpp_source}{}\label{_game_8hpp_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/Core/Game.hpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/Core/Game.hpp}}
+\mbox{\hyperlink{_game_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}../lib/raylib.h"{}}}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_window_8hpp}{Window.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_game_screen_8h}{GameScreen.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00006}00006\ \textcolor{comment}{//\ Basic\ config\ stuff}}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00007}00007\ \textcolor{comment}{//\ Also\ variables\ such\ as\ player\ should\ go\ here\ that\ way\ created\ objects\ can\ be\ referenced.}}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00008}\mbox{\hyperlink{class_game}{00008}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game}{Game}}}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00010}00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00012}\mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{00012}}\ \ \ \ \ \mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}}()\{}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00014}00014\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00015}\mbox{\hyperlink{class_game_ae3d112ca6e0e55150d2fdbc704474530}{00015}}\ \ \ \ \ \mbox{\hyperlink{class_game_ae3d112ca6e0e55150d2fdbc704474530}{\string~Game}}()\{\};}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00017}\mbox{\hyperlink{class_game_a0eb066b335efd5dd737b0207d6ebc215}{00017}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_a0eb066b335efd5dd737b0207d6ebc215}{targetFPS}}\ =\ 60;}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00018}\mbox{\hyperlink{class_game_a329351d67993953391a6a65db536c017}{00018}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_a329351d67993953391a6a65db536c017}{screenHeight}}\ =\ \mbox{\hyperlink{raylib_8h_ac535bf92354455f81ff741dc13c704cf}{GetScreenHeight}}();}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00019}\mbox{\hyperlink{class_game_ab1ca40d8527bb09e773bb97030b7a5cc}{00019}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_ab1ca40d8527bb09e773bb97030b7a5cc}{screenWidth}}\ =\ \mbox{\hyperlink{raylib_8h_a9eafc763049750ce847ac9b1fb41dfcd}{GetScreenWidth}}();}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00021}00021\ \ \ \ \ \textcolor{comment}{//\ These\ store\ the\ center\ X\ and\ Y.\ Vector2\ didnt\ work\ for\ some\ reason,\ idk}}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00022}\mbox{\hyperlink{class_game_a6707231c56e7433f64dd5eb880e26c4b}{00022}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_a6707231c56e7433f64dd5eb880e26c4b}{middley}}\ =\ (\mbox{\hyperlink{class_game_a329351d67993953391a6a65db536c017}{screenHeight}}\ /\ 2);}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00023}\mbox{\hyperlink{class_game_aeb600021e0a83e3709971d83aacb3034}{00023}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_aeb600021e0a83e3709971d83aacb3034}{middlex}}\ =\ (\mbox{\hyperlink{class_game_ab1ca40d8527bb09e773bb97030b7a5cc}{screenWidth}}\ /\ 2);\ }
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00025}00025\ \ \ \ \ \textcolor{comment}{//\ Returns\ Game\ window\ duh!}}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00026}\mbox{\hyperlink{class_game_a5377b285d2f220ca3aedfdbab5e4ab8c}{00026}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class_window}{Window}}\ \mbox{\hyperlink{class_game_a5377b285d2f220ca3aedfdbab5e4ab8c}{GetGameWindow}}()\ \{\}}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00028}\mbox{\hyperlink{class_game_a1a6936a255c10b137dfce1128837ff61}{00028}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a1a6936a255c10b137dfce1128837ff61}{DisableMouseCursor}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_logman_abfebd4a14b659c3cbcc82c8965ec7fad}{Logman::CustomLog}}(\mbox{\hyperlink{raylib_8h_a53d4e0542e6c07e7792510e986785285a6e98ff471e3ce6c4ef2d75c37ee51837}{LOG\_INFO}},\ \textcolor{stringliteral}{"{}Disabling\ mouse\ cursor"{}},\ \mbox{\hyperlink{external_2miniaudio_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_8h_ac911ba72896bda9254a42a3d2338a0e5}{DisableCursor}}();\ \textcolor{comment}{//\ Limit\ cursor\ to\ relative\ movement\ inside\ the\ window}}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_logman_abfebd4a14b659c3cbcc82c8965ec7fad}{Logman::CustomLog}}(\mbox{\hyperlink{raylib_8h_a53d4e0542e6c07e7792510e986785285a6e98ff471e3ce6c4ef2d75c37ee51837}{LOG\_INFO}},\ \textcolor{stringliteral}{"{}Disabled\ mouse\ cursor"{}},\ \mbox{\hyperlink{external_2miniaudio_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00032}00032\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00034}\mbox{\hyperlink{class_game_ac0b42a6c41416c076d21e74c7feaf1f9}{00034}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_ac0b42a6c41416c076d21e74c7feaf1f9}{EnableMouseCursor}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_logman_abfebd4a14b659c3cbcc82c8965ec7fad}{Logman::CustomLog}}(\mbox{\hyperlink{raylib_8h_a53d4e0542e6c07e7792510e986785285a6e98ff471e3ce6c4ef2d75c37ee51837}{LOG\_INFO}},\ \textcolor{stringliteral}{"{}Enabling\ mouse\ cursor"{}},\ \mbox{\hyperlink{external_2miniaudio_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_8h_afb701d6c2abb3c78832afb61516d5d30}{EnableCursor}}();}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_logman_abfebd4a14b659c3cbcc82c8965ec7fad}{Logman::CustomLog}}(\mbox{\hyperlink{raylib_8h_a53d4e0542e6c07e7792510e986785285a6e98ff471e3ce6c4ef2d75c37ee51837}{LOG\_INFO}},\ \textcolor{stringliteral}{"{}Enabled\ mouse\ cursor"{}},\ \mbox{\hyperlink{external_2miniaudio_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00038}00038\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00040}00040\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00042}00042\ \ \ \ \ \textcolor{comment}{//\ create\ a\ new\ window}}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00043}\mbox{\hyperlink{class_game_a092673f34a8988d51b3fba1ef1e05efc}{00043}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a092673f34a8988d51b3fba1ef1e05efc}{CreateWindow}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ Width,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ Height,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *Title)\ \{\}}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00045}\mbox{\hyperlink{class_game_aa226bb4802d0f81f4d6a467fdf1abc11}{00045}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{_game_screen_8h_a74fa4be11c0eaf0601894bed6ed01402}{GameScreen}}\ \mbox{\hyperlink{class_game_aa226bb4802d0f81f4d6a467fdf1abc11}{currentGameScreen}}\ =\ \mbox{\hyperlink{_game_screen_8h_a74fa4be11c0eaf0601894bed6ed01402ae90de66d8215b01f94324ae4cd562e60}{GameScreen::Main}};\ \textcolor{comment}{//\ what\ menu\ or\ screen\ you\ see}}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00047}\mbox{\hyperlink{class_game_a26efe736bb16320644b61fed4f5d98f2}{00047}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_a26efe736bb16320644b61fed4f5d98f2}{SkipMainMenu}}\ =\ \textcolor{keyword}{true};\ \textcolor{comment}{//\ Debug\ option,\ TODO\ :\ Create\ config\ file\ and\ read\ from\ that\ instead.}}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00049}00049\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00050}\mbox{\hyperlink{class_game_a41f209df29695a14d54c12921934d5d2}{00050}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class_window}{Window}}\ *\mbox{\hyperlink{class_game_a41f209df29695a14d54c12921934d5d2}{gameWindow}}\ =\ \textcolor{keyword}{nullptr};\ \textcolor{comment}{//\ creates\ a\ new\ game\ window.}}
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{_game_8hpp_source_l00052}00052\ \};}
+
+\end{DoxyCode}

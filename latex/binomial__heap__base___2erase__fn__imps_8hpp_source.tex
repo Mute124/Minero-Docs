@@ -1,0 +1,165 @@
+\doxysection{erase\+\_\+fn\+\_\+imps.\+hpp}
+\hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source}{}\label{binomial__heap__base___2erase__fn__imps_8hpp_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/pb\_ds/detail/binomial\_heap\_base\_/erase\_fn\_imps.hpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/pb\_ds/detail/binomial\_heap\_base\_/erase\_fn\_imps.hpp}}
+\mbox{\hyperlink{binomial__heap__base___2erase__fn__imps_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00001}00001\ \textcolor{comment}{//\ -\/*-\/\ C++\ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00003}00003\ \textcolor{comment}{//\ Copyright\ (C)\ 2005-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00005}00005\ \textcolor{comment}{//\ This\ file\ is\ part\ of\ the\ GNU\ ISO\ C++\ Library.\ \ This\ library\ is\ free}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00006}00006\ \textcolor{comment}{//\ software;\ you\ can\ redistribute\ it\ and/or\ modify\ it\ under\ the\ terms}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00007}00007\ \textcolor{comment}{//\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by\ the\ Free\ Software}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00008}00008\ \textcolor{comment}{//\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)\ any\ later}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00009}00009\ \textcolor{comment}{//\ version.}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00011}00011\ \textcolor{comment}{//\ This\ library\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,\ but}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00012}00012\ \textcolor{comment}{//\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00013}00013\ \textcolor{comment}{//\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the\ GNU}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00014}00014\ \textcolor{comment}{//\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00016}00016\ \textcolor{comment}{//\ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00017}00017\ \textcolor{comment}{//\ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00018}00018\ \textcolor{comment}{//\ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00020}00020\ \textcolor{comment}{//\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00021}00021\ \textcolor{comment}{//\ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00022}00022\ \textcolor{comment}{//\ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00023}00023\ \textcolor{comment}{//\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00025}00025\ \textcolor{comment}{//\ Copyright\ (C)\ 2004\ Ami\ Tavory\ and\ Vladimir\ Dreizin,\ IBM-\/HRL.}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00027}00027\ \textcolor{comment}{//\ Permission\ to\ use,\ copy,\ modify,\ sell,\ and\ distribute\ this\ software}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00028}00028\ \textcolor{comment}{//\ is\ hereby\ granted\ without\ fee,\ provided\ that\ the\ above\ copyright}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00029}00029\ \textcolor{comment}{//\ notice\ appears\ in\ all\ copies,\ and\ that\ both\ that\ copyright\ notice}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00030}00030\ \textcolor{comment}{//\ and\ this\ permission\ notice\ appear\ in\ supporting\ documentation.\ None}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00031}00031\ \textcolor{comment}{//\ of\ the\ above\ authors,\ nor\ IBM\ Haifa\ Research\ Laboratories,\ make\ any}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00032}00032\ \textcolor{comment}{//\ representation\ about\ the\ suitability\ of\ this\ software\ for\ any}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00033}00033\ \textcolor{comment}{//\ purpose.\ It\ is\ provided\ "{}as\ is"{}\ without\ express\ or\ implied}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00034}00034\ \textcolor{comment}{//\ warranty.}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00041}00041\ \textcolor{preprocessor}{\#ifdef\ PB\_DS\_CLASS\_C\_DEC}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00043}00043\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00044}00044\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00045}00045\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00046}00046\ pop()}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00047}00047\ \{}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00048}00048\ \ \ \mbox{\hyperlink{binomial__heap__base___8hpp_a93c6da2ea22e1d3384f83937a57633d3}{PB\_DS\_ASSERT\_VALID\_COND}}((*\textcolor{keyword}{this}),\textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00049}00049\ \ \ \mbox{\hyperlink{assertions_8h_aa2bfb4e74c7be93673913edf15f85504}{\_GLIBCXX\_DEBUG\_ASSERT}}(!base\_type::empty());}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00051}00051\ \ \ \mbox{\hyperlink{pconfigintrin_8h_aaca4765a01b6f3cd5edb899a1159f303}{if}}\ (m\_p\_max\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00052}00052\ \ \ \ \ find\_max();}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00054}00054\ \ \ \mbox{\hyperlink{assertions_8h_aa2bfb4e74c7be93673913edf15f85504}{\_GLIBCXX\_DEBUG\_ASSERT}}(m\_p\_max\ !=\ 0);}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00055}00055\ \ \ node\_pointer\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}\ =\ m\_p\_max;}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00056}00056\ \ \ remove\_parentless\_node(m\_p\_max);}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00057}00057\ \ \ base\_type::actual\_erase\_node(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}});}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00058}00058\ \ \ m\_p\_max\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00059}00059\ \ \ \mbox{\hyperlink{binomial__heap__base___8hpp_a93c6da2ea22e1d3384f83937a57633d3}{PB\_DS\_ASSERT\_VALID\_COND}}((*\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{this}}),\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}})}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00060}00060\ \}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00062}00062\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00063}00063\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00064}00064\ \mbox{\hyperlink{bin__search__tree___8hpp_a304b8b73a11afe64bfca54576b91263b}{PB\_DS\_CLASS\_C\_DEC}}::}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00065}00065\ remove\_parentless\_node(node\_pointer\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}})}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00066}00066\ \{}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00067}00067\ \ \ \mbox{\hyperlink{assertions_8h_aa2bfb4e74c7be93673913edf15f85504}{\_GLIBCXX\_DEBUG\_ASSERT}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}\ !=\ 0);}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00068}00068\ \ \ \mbox{\hyperlink{assertions_8h_aa2bfb4e74c7be93673913edf15f85504}{\_GLIBCXX\_DEBUG\_ASSERT}}(base\_type::parent(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}})\ ==\ 0);}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00070}00070\ \ \ node\_pointer\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_cur\_root}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}\ ==\ base\_type::m\_p\_root?}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00071}00071\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}-\/>m\_p\_next\_sibling\ :\ base\_type::m\_p\_root;}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00073}00073\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_cur\_root}}\ !=\ 0)}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00074}00074\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_cur\_root}}-\/>m\_p\_prev\_or\_parent\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00076}00076\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}-\/>m\_p\_prev\_or\_parent\ !=\ 0)}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00077}00077\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}-\/>m\_p\_prev\_or\_parent-\/>m\_p\_next\_sibling\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}-\/>m\_p\_next\_sibling;}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00079}00079\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}-\/>m\_p\_next\_sibling\ !=\ 0)}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00080}00080\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}-\/>m\_p\_next\_sibling-\/>m\_p\_prev\_or\_parent\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}-\/>m\_p\_prev\_or\_parent;}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00082}00082\ \ \ node\_pointer\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_child}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}-\/>m\_p\_l\_child;}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00083}00083\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_child}}\ !=\ 0)}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00084}00084\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00085}00085\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_child}}-\/>m\_p\_prev\_or\_parent\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00086}00086\ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_child}}-\/>m\_p\_next\_sibling\ !=\ 0)}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00087}00087\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_child}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_child}}-\/>m\_p\_next\_sibling;}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00088}00088\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00090}00090\ \ \ m\_p\_max\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00091}00091\ \ \ base\_type::m\_p\_root\ =\ join(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_cur\_root}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_child}});}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00092}00092\ \}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00094}00094\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00095}00095\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00096}00096\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00097}00097\ clear()}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00098}00098\ \{}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00099}00099\ \ \ base\_type::clear();}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00100}00100\ \ \ m\_p\_max\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00101}00101\ \}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00103}00103\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00104}00104\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00105}00105\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00106}00106\ erase(point\_iterator\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{it}})}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00107}00107\ \{}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00108}00108\ \ \ \mbox{\hyperlink{binomial__heap__base___8hpp_a93c6da2ea22e1d3384f83937a57633d3}{PB\_DS\_ASSERT\_VALID\_COND}}((*\textcolor{keyword}{this}),\textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00109}00109\ \ \ \mbox{\hyperlink{assertions_8h_aa2bfb4e74c7be93673913edf15f85504}{\_GLIBCXX\_DEBUG\_ASSERT}}(!base\_type::empty());}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00111}00111\ \ \ base\_type::bubble\_to\_top(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{it}}.m\_p\_nd);}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00112}00112\ \ \ remove\_parentless\_node(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{it}}.m\_p\_nd);}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00113}00113\ \ \ base\_type::actual\_erase\_node(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{it}}.m\_p\_nd);}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00114}00114\ \ \ m\_p\_max\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00115}00115\ \ \ \mbox{\hyperlink{binomial__heap__base___8hpp_a93c6da2ea22e1d3384f83937a57633d3}{PB\_DS\_ASSERT\_VALID\_COND}}((*\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{this}}),\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}})}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00116}00116\ \}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00118}00118\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00119}00119\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{template}}<\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}}\ Pred>}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00120}00120\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}}\ \mbox{\hyperlink{bin__search__tree___8hpp_a304b8b73a11afe64bfca54576b91263b}{PB\_DS\_CLASS\_C\_DEC}}::size\_type}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00121}00121\ \mbox{\hyperlink{bin__search__tree___8hpp_a304b8b73a11afe64bfca54576b91263b}{PB\_DS\_CLASS\_C\_DEC}}::}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00122}00122\ erase\_if(Pred\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{pred}})}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00123}00123\ \{}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00124}00124\ \ \ \mbox{\hyperlink{binomial__heap__base___8hpp_a93c6da2ea22e1d3384f83937a57633d3}{PB\_DS\_ASSERT\_VALID\_COND}}((*\textcolor{keyword}{this}),\textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00126}00126\ \ \ \mbox{\hyperlink{pconfigintrin_8h_aaca4765a01b6f3cd5edb899a1159f303}{if}}\ (base\_type::empty())}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00127}00127\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00128}00128\ \ \ \ \ \ \ \mbox{\hyperlink{binomial__heap__base___8hpp_a93c6da2ea22e1d3384f83937a57633d3}{PB\_DS\_ASSERT\_VALID\_COND}}((*\textcolor{keyword}{this}),\textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00129}00129\ \ \ \ \ \ \ \mbox{\hyperlink{avx512bwintrin_8h_a43575ca181bb42c5fbdbe6c81c9b7cad}{return}}\ 0;}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00130}00130\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00132}00132\ \ \ base\_type::to\_linked\_list();}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00133}00133\ \ \ node\_pointer\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_out}}\ =\ base\_type::prune(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{pred}});}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00134}00134\ \ \ size\_type\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ersd}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00135}00135\ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{while}}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_out}}\ !=\ 0)}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00136}00136\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00137}00137\ \ \ \ \ \ \ ++\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ersd}};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00138}00138\ \ \ \ \ \ \ node\_pointer\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_next}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_out}}-\/>m\_p\_next\_sibling;}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00139}00139\ \ \ \ \ \ \ base\_type::actual\_erase\_node(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_out}});}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00140}00140\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_out}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_next}};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00141}00141\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00143}00143\ \ \ node\_pointer\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_cur}}\ =\ base\_type::m\_p\_root;}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00144}00144\ \ \ base\_type::m\_p\_root\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00145}00145\ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_cur}}\ !=\ 0)}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00146}00146\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00147}00147\ \ \ \ \ \ \ node\_pointer\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_next}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_cur}}-\/>m\_p\_next\_sibling;}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00148}00148\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_cur}}-\/>m\_p\_l\_child\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_cur}}-\/>m\_p\_prev\_or\_parent\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00149}00149\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_cur}}-\/>m\_metadata\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00150}00150\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_cur}}-\/>m\_p\_next\_sibling\ =\ base\_type::m\_p\_root;}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00152}00152\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (base\_type::m\_p\_root\ !=\ 0)}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00153}00153\ \ \ \ \ base\_type::m\_p\_root-\/>m\_p\_prev\_or\_parent\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_cur}};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00155}00155\ \ \ \ \ \ \ base\_type::m\_p\_root\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_cur}};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00156}00156\ \ \ \ \ \ \ base\_type::m\_p\_root\ =\ fix(base\_type::m\_p\_root);}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00157}00157\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_cur}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_next}};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00158}00158\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00160}00160\ \ \ m\_p\_max\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00161}00161\ \ \ \mbox{\hyperlink{binomial__heap__base___8hpp_a93c6da2ea22e1d3384f83937a57633d3}{PB\_DS\_ASSERT\_VALID\_COND}}((*\textcolor{keyword}{this}),\textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00162}00162\ \ \ \mbox{\hyperlink{avx512bwintrin_8h_a43575ca181bb42c5fbdbe6c81c9b7cad}{return}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ersd}};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00163}00163\ \}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___2erase__fn__imps_8hpp_source_l00164}00164\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

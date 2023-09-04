@@ -1,0 +1,141 @@
+\doxysection{constructor\+\_\+destructor\+\_\+fn\+\_\+imps.\+hpp}
+\hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source}{}\label{list__update__map___2constructor__destructor__fn__imps_8hpp_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/pb\_ds/detail/list\_update\_map\_/constructor\_destructor\_fn\_imps.hpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/pb\_ds/detail/list\_update\_map\_/constructor\_destructor\_fn\_imps.hpp}}
+\mbox{\hyperlink{list__update__map___2constructor__destructor__fn__imps_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00001}00001\ \textcolor{comment}{//\ -\/*-\/\ C++\ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00003}00003\ \textcolor{comment}{//\ Copyright\ (C)\ 2005-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00005}00005\ \textcolor{comment}{//\ This\ file\ is\ part\ of\ the\ GNU\ ISO\ C++\ Library.\ \ This\ library\ is\ free}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00006}00006\ \textcolor{comment}{//\ software;\ you\ can\ redistribute\ it\ and/or\ modify\ it\ under\ the\ terms}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00007}00007\ \textcolor{comment}{//\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by\ the\ Free\ Software}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00008}00008\ \textcolor{comment}{//\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)\ any\ later}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00009}00009\ \textcolor{comment}{//\ version.}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00011}00011\ \textcolor{comment}{//\ This\ library\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,\ but}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00012}00012\ \textcolor{comment}{//\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00013}00013\ \textcolor{comment}{//\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the\ GNU}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00014}00014\ \textcolor{comment}{//\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00016}00016\ \textcolor{comment}{//\ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00017}00017\ \textcolor{comment}{//\ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00018}00018\ \textcolor{comment}{//\ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00020}00020\ \textcolor{comment}{//\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00021}00021\ \textcolor{comment}{//\ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00022}00022\ \textcolor{comment}{//\ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00023}00023\ \textcolor{comment}{//\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00025}00025\ \textcolor{comment}{//\ Copyright\ (C)\ 2004\ Ami\ Tavory\ and\ Vladimir\ Dreizin,\ IBM-\/HRL.}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00027}00027\ \textcolor{comment}{//\ Permission\ to\ use,\ copy,\ modify,\ sell,\ and\ distribute\ this\ software}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00028}00028\ \textcolor{comment}{//\ is\ hereby\ granted\ without\ fee,\ provided\ that\ the\ above\ copyright}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00029}00029\ \textcolor{comment}{//\ notice\ appears\ in\ all\ copies,\ and\ that\ both\ that\ copyright\ notice}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00030}00030\ \textcolor{comment}{//\ and\ this\ permission\ notice\ appear\ in\ supporting\ documentation.\ None}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00031}00031\ \textcolor{comment}{//\ of\ the\ above\ authors,\ nor\ IBM\ Haifa\ Research\ Laboratories,\ make\ any}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00032}00032\ \textcolor{comment}{//\ representation\ about\ the\ suitability\ of\ this\ software\ for\ any}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00033}00033\ \textcolor{comment}{//\ purpose.\ It\ is\ provided\ "{}as\ is"{}\ without\ express\ or\ implied}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00034}00034\ \textcolor{comment}{//\ warranty.}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00040}00040\ \textcolor{preprocessor}{\#ifdef\ PB\_DS\_CLASS\_C\_DEC}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00042}00042\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00043}00043\ \textcolor{keyword}{typename}\ PB\_DS\_CLASS\_C\_DEC::entry\_allocator}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00044}00044\ PB\_DS\_CLASS\_C\_DEC::s\_entry\_allocator;}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00046}00046\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00047}00047\ Eq\_Fn\ PB\_DS\_CLASS\_C\_DEC::s\_eq\_fn;}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00049}00049\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00050}00050\ null\_type\ PB\_DS\_CLASS\_C\_DEC::s\_null\_type;}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00052}00052\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00053}00053\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Update\_Policy}}\ PB\_DS\_CLASS\_C\_DEC::s\_update\_policy;}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00055}00055\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00056}00056\ type\_to\_type<}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00057}00057\ \ \ \textcolor{keyword}{typename}\ PB\_DS\_CLASS\_C\_DEC::update\_metadata>\ PB\_DS\_CLASS\_C\_DEC::s\_metadata\_type\_indicator;}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00059}00059\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00060}00060\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ It>}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00061}00061\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00062}00062\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00063}00063\ copy\_from\_range(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{It}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{first\_it}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{It}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{last\_it}})}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00064}00064\ \{}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00065}00065\ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{first\_it}}\ !=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{last\_it}})}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00066}00066\ \ \ \ \ insert(*(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{first\_it}}++));}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00067}00067\ \}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00069}00069\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00070}00070\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00071}00071\ PB\_DS\_LU\_NAME()\ :\ m\_p\_l(0)}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00072}00072\ \{\ \mbox{\hyperlink{binary__heap___8hpp_aee3eacf80388cda3950a668bc1e40110}{PB\_DS\_ASSERT\_VALID}}((*\textcolor{keyword}{this}))\ \}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00074}00074\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00075}00075\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ It>}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00076}00076\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00077}00077\ PB\_DS\_LU\_NAME(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{It}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{first\_it}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{It}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{last\_it}})\ :\ m\_p\_l(0)}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00078}00078\ \{}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00079}00079\ \ \ copy\_from\_range(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{first\_it}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{last\_it}});}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00080}00080\ \ \ \mbox{\hyperlink{binary__heap___8hpp_aee3eacf80388cda3950a668bc1e40110}{PB\_DS\_ASSERT\_VALID}}((*\textcolor{keyword}{this}));}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00081}00081\ \}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00083}00083\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00084}00084\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00085}00085\ PB\_DS\_LU\_NAME(\textcolor{keyword}{const}\ \mbox{\hyperlink{bin__search__tree___8hpp_a304b8b73a11afe64bfca54576b91263b}{PB\_DS\_CLASS\_C\_DEC}}\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{other}})\ :}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00086}00086\ m\_p\_l(0)}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00087}00087\ \{}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00088}00088\ \ \ \mbox{\hyperlink{exception__defines_8h_a130bf0cd31a0783cd03563f46b46915b}{\_\_try}}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00089}00089\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00090}00090\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (const\_iterator\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{it}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{other}}.begin();\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{it}}\ !=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{other}}.end();\ ++\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{it}})}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00091}00091\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00092}00092\ \ \ \ \ \ \ entry\_pointer\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_l}}\ =\ allocate\_new\_entry(*\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{it}},}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ traits\_base::m\_no\_throw\_copies\_indicator);}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00095}00095\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_l}}-\/>m\_p\_next\ =\ m\_p\_l;}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00096}00096\ \ \ \ \ \ \ m\_p\_l\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_l}};}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00097}00097\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00098}00098\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00099}00099\ \ \ \mbox{\hyperlink{exception__defines_8h_a9e51d2f324c18a996a3e4f9a6ba0f6c2}{\_\_catch}}(...)}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00100}00100\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00101}00101\ \ \ \ \ \ \ deallocate\_all();}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00102}00102\ \ \ \ \ \ \ \mbox{\hyperlink{exception__defines_8h_a92ef03a5310b10a4243a6ec8f43494b5}{\_\_throw\_exception\_again}};}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00103}00103\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00104}00104\ \ \ \mbox{\hyperlink{binary__heap___8hpp_aee3eacf80388cda3950a668bc1e40110}{PB\_DS\_ASSERT\_VALID}}((*\textcolor{keyword}{this}))}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00105}00105\ \}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00107}00107\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00108}00108\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00109}00109\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00110}00110\ swap(\mbox{\hyperlink{bin__search__tree___8hpp_a304b8b73a11afe64bfca54576b91263b}{PB\_DS\_CLASS\_C\_DEC}}\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{other}})}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00111}00111\ \{}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00112}00112\ \ \ \mbox{\hyperlink{binary__heap___8hpp_aee3eacf80388cda3950a668bc1e40110}{PB\_DS\_ASSERT\_VALID}}((*\textcolor{keyword}{this}))}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00113}00113\ \ \ \mbox{\hyperlink{binary__heap___8hpp_aee3eacf80388cda3950a668bc1e40110}{PB\_DS\_ASSERT\_VALID}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{other}})}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00114}00114\ \ \ \mbox{\hyperlink{assertions_8h_a784d392bfeacfb0e3e6e0d2719489fb6}{\_GLIBCXX\_DEBUG\_ONLY}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{debug\_base}}::swap(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{other}});)}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00115}00115\ \ \ \mbox{\hyperlink{namespacestd}{std}}::swap(m\_p\_l,\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{other}}.m\_p\_l);}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00116}00116\ \ \ \mbox{\hyperlink{binary__heap___8hpp_aee3eacf80388cda3950a668bc1e40110}{PB\_DS\_ASSERT\_VALID}}((*\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{this}}))}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00117}00117\ \ \ \mbox{\hyperlink{binary__heap___8hpp_aee3eacf80388cda3950a668bc1e40110}{PB\_DS\_ASSERT\_VALID}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{other}})}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00118}00118\ \}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00120}00120\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00121}00121\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00122}00122\ \mbox{\hyperlink{bin__search__tree___8hpp_a304b8b73a11afe64bfca54576b91263b}{PB\_DS\_CLASS\_C\_DEC}}::}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00123}00123\ deallocate\_all()}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00124}00124\ \{}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00125}00125\ \ \ entry\_pointer\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_l}}\ =\ m\_p\_l;}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00126}00126\ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_l}}\ !=\ 0)}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00127}00127\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00128}00128\ \ \ \ \ \ \ entry\_pointer\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_next\_l}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_l}}-\/>m\_p\_next;}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00129}00129\ \ \ \ \ \ \ actual\_erase\_entry(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_l}});}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00130}00130\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_l}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_next\_l}};}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00131}00131\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00132}00132\ \ \ m\_p\_l\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00133}00133\ \}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00135}00135\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00136}00136\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00137}00137\ \string~PB\_DS\_LU\_NAME()}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00138}00138\ \{\ deallocate\_all();\ \}}
+\DoxyCodeLine{\Hypertarget{list__update__map___2constructor__destructor__fn__imps_8hpp_source_l00139}00139\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,456 @@
+\doxysection{stddef.\+h}
+\hypertarget{stddef_8h_source}{}\label{stddef_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/stddef.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/stddef.h}}
+\mbox{\hyperlink{stddef_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00001}00001\ \textcolor{preprocessor}{\#include\_next\ <stddef.h>}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00002}00002\ \textcolor{comment}{/*\ Copyright\ (C)\ 1989-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00003}00003\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00004}00004\ \textcolor{comment}{This\ file\ is\ part\ of\ GCC.}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00005}00005\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00006}00006\ \textcolor{comment}{GCC\ is\ free\ software;\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00007}00007\ \textcolor{comment}{it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00008}00008\ \textcolor{comment}{the\ Free\ Software\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00009}00009\ \textcolor{comment}{any\ later\ version.}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00010}00010\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00011}00011\ \textcolor{comment}{GCC\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00012}00012\ \textcolor{comment}{but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00013}00013\ \textcolor{comment}{MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00014}00014\ \textcolor{comment}{GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00015}00015\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00016}00016\ \textcolor{comment}{Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00017}00017\ \textcolor{comment}{permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00018}00018\ \textcolor{comment}{3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00019}00019\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00020}00020\ \textcolor{comment}{You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00021}00021\ \textcolor{comment}{a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00022}00022\ \textcolor{comment}{see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00023}00023\ \textcolor{comment}{<http://www.gnu.org/licenses/>.\ \ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00025}00025\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00026}00026\ \textcolor{comment}{\ *\ ISO\ C\ Standard:\ \ 7.17\ \ Common\ definitions\ \ <stddef.h>}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00027}00027\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00028}00028\ \textcolor{preprocessor}{\#if\ (!defined(\_STDDEF\_H)\ \&\&\ !defined(\_STDDEF\_H\_)\ \&\&\ !defined(\_ANSI\_STDDEF\_H)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00029}00029\ \textcolor{preprocessor}{\ \ \ \ \ \&\&\ !defined(\_\_STDDEF\_H\_\_))\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00030}00030\ \textcolor{preprocessor}{\ \ \ \ ||\ defined(\_\_need\_wchar\_t)\ ||\ defined(\_\_need\_size\_t)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00031}00031\ \textcolor{preprocessor}{\ \ \ \ ||\ defined(\_\_need\_ptrdiff\_t)\ ||\ defined(\_\_need\_NULL)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00032}00032\ \textcolor{preprocessor}{\ \ \ \ ||\ defined(\_\_need\_wint\_t)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00034}00034\ \textcolor{comment}{/*\ Any\ one\ of\ these\ symbols\ \_\_need\_*\ means\ that\ GNU\ libc}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00035}00035\ \textcolor{comment}{\ \ \ wants\ us\ just\ to\ define\ one\ data\ type.\ \ So\ don't\ define}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00036}00036\ \textcolor{comment}{\ \ \ the\ symbols\ that\ indicate\ this\ file's\ entire\ job\ has\ been\ done.\ \ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00037}00037\ \textcolor{preprocessor}{\#if\ (!defined(\_\_need\_wchar\_t)\ \&\&\ !defined(\_\_need\_size\_t)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00038}00038\ \textcolor{preprocessor}{\ \ \ \ \ \&\&\ !defined(\_\_need\_ptrdiff\_t)\ \&\&\ !defined(\_\_need\_NULL)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00039}00039\ \textcolor{preprocessor}{\ \ \ \ \ \&\&\ !defined(\_\_need\_wint\_t))}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00040}\mbox{\hyperlink{stddef_8h_a65fb66d7555d907b1d7a572f2a25e38a}{00040}}\ \textcolor{preprocessor}{\#define\ \_STDDEF\_H}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00041}\mbox{\hyperlink{stddef_8h_a0ea85916ec8d5f99e3b5a4f140af09d1}{00041}}\ \textcolor{preprocessor}{\#define\ \_STDDEF\_H\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00042}00042\ \textcolor{comment}{/*\ snaroff@next.com\ says\ the\ NeXT\ needs\ this.\ \ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00043}\mbox{\hyperlink{stddef_8h_a4d2203def23b39b2941463be466b8124}{00043}}\ \textcolor{preprocessor}{\#define\ \_ANSI\_STDDEF\_H}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00044}00044\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00046}00046\ \textcolor{preprocessor}{\#ifndef\ \_\_sys\_stdtypes\_h}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00047}00047\ \textcolor{comment}{/*\ This\ avoids\ lossage\ on\ SunOS\ but\ only\ if\ stdtypes.h\ comes\ first.}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00048}00048\ \textcolor{comment}{\ \ \ There's\ no\ way\ to\ win\ with\ the\ other\ order!\ \ Sun\ lossage.\ \ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00050}00050\ \textcolor{preprocessor}{\#if\ defined(\_\_NetBSD\_\_)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00051}00051\ \textcolor{preprocessor}{\#include\ <machine/ansi.h>}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00052}00052\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00054}00054\ \textcolor{preprocessor}{\#if\ defined\ (\_\_FreeBSD\_\_)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00055}00055\ \textcolor{preprocessor}{\#include\ <sys/\_types.h>}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00056}00056\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00058}00058\ \textcolor{preprocessor}{\#if\ defined(\_\_NetBSD\_\_)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00059}00059\ \textcolor{preprocessor}{\#if\ !defined(\_SIZE\_T\_)\ \&\&\ !defined(\_BSD\_SIZE\_T\_)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00060}00060\ \textcolor{preprocessor}{\#define\ \_SIZE\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00061}00061\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00062}00062\ \textcolor{preprocessor}{\#if\ !defined(\_PTRDIFF\_T\_)\ \&\&\ !defined(\_BSD\_PTRDIFF\_T\_)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00063}00063\ \textcolor{preprocessor}{\#define\ \_PTRDIFF\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00064}00064\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00065}00065\ \textcolor{comment}{/*\ On\ BSD/386\ 1.1,\ at\ least,\ machine/ansi.h\ defines\ \_BSD\_WCHAR\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00066}00066\ \textcolor{comment}{\ \ \ instead\ of\ \_WCHAR\_T\_.\ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00067}00067\ \textcolor{preprocessor}{\#if\ !defined(\_WCHAR\_T\_)\ \&\&\ !defined(\_BSD\_WCHAR\_T\_)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00068}00068\ \textcolor{preprocessor}{\#ifndef\ \_BSD\_WCHAR\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00069}00069\ \textcolor{preprocessor}{\#define\ \_WCHAR\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00070}00070\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00071}00071\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00072}00072\ \textcolor{comment}{/*\ Undef\ \_FOO\_T\_\ if\ we\ are\ supposed\ to\ define\ foo\_t.\ \ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00073}00073\ \textcolor{preprocessor}{\#if\ defined\ (\_\_need\_ptrdiff\_t)\ ||\ defined\ (\_STDDEF\_H\_)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00074}00074\ \textcolor{preprocessor}{\#undef\ \_PTRDIFF\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00075}00075\ \textcolor{preprocessor}{\#undef\ \_BSD\_PTRDIFF\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00076}00076\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00077}00077\ \textcolor{preprocessor}{\#if\ defined\ (\_\_need\_size\_t)\ ||\ defined\ (\_STDDEF\_H\_)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00078}00078\ \textcolor{preprocessor}{\#undef\ \_SIZE\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00079}00079\ \textcolor{preprocessor}{\#undef\ \_BSD\_SIZE\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00080}00080\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00081}00081\ \textcolor{preprocessor}{\#if\ defined\ (\_\_need\_wchar\_t)\ ||\ defined\ (\_STDDEF\_H\_)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00082}00082\ \textcolor{preprocessor}{\#undef\ \_WCHAR\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00083}00083\ \textcolor{preprocessor}{\#undef\ \_BSD\_WCHAR\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00084}00084\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00085}00085\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ defined(\_\_NetBSD\_\_)\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00087}00087\ \textcolor{comment}{/*\ Sequent's\ header\ files\ use\ \_PTRDIFF\_T\_\ in\ some\ conflicting\ way.}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00088}00088\ \textcolor{comment}{\ \ \ Just\ ignore\ it.\ \ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00089}00089\ \textcolor{preprocessor}{\#if\ defined\ (\_\_sequent\_\_)\ \&\&\ defined\ (\_PTRDIFF\_T\_)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00090}00090\ \textcolor{preprocessor}{\#undef\ \_PTRDIFF\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00091}00091\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00093}00093\ \textcolor{comment}{/*\ On\ VxWorks,\ <type/vxTypesBase.h>\ may\ have\ defined\ macros\ like}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00094}00094\ \textcolor{comment}{\ \ \ \_TYPE\_size\_t\ which\ will\ typedef\ size\_t.\ \ fixincludes\ patched\ the}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00095}00095\ \textcolor{comment}{\ \ \ vxTypesBase.h\ so\ that\ this\ macro\ is\ only\ defined\ if\ \_GCC\_SIZE\_T\ is}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00096}00096\ \textcolor{comment}{\ \ \ not\ defined,\ and\ so\ that\ defining\ this\ macro\ defines\ \_GCC\_SIZE\_T.}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00097}00097\ \textcolor{comment}{\ \ \ If\ we\ find\ that\ the\ macros\ are\ still\ defined\ at\ this\ point,\ we\ must}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00098}00098\ \textcolor{comment}{\ \ \ invoke\ them\ so\ that\ the\ type\ is\ defined\ as\ expected.\ \ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00099}00099\ \textcolor{preprocessor}{\#if\ defined\ (\_TYPE\_ptrdiff\_t)\ \&\&\ (defined\ (\_\_need\_ptrdiff\_t)\ ||\ defined\ (\_STDDEF\_H\_))}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00100}00100\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_TYPE\_ptrdiff\_t}};}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00101}00101\ \textcolor{preprocessor}{\#undef\ \_TYPE\_ptrdiff\_t}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00102}00102\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00103}00103\ \textcolor{preprocessor}{\#if\ defined\ (\_TYPE\_size\_t)\ \&\&\ (defined\ (\_\_need\_size\_t)\ ||\ defined\ (\_STDDEF\_H\_))}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00104}00104\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_TYPE\_size\_t}};}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00105}00105\ \textcolor{preprocessor}{\#undef\ \_TYPE\_size\_t}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00106}00106\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00107}00107\ \textcolor{preprocessor}{\#if\ defined\ (\_TYPE\_wchar\_t)\ \&\&\ (defined\ (\_\_need\_wchar\_t)\ ||\ defined\ (\_STDDEF\_H\_))}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00108}00108\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_TYPE\_wchar\_t}};}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00109}00109\ \textcolor{preprocessor}{\#undef\ \_TYPE\_wchar\_t}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00110}00110\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00112}00112\ \textcolor{comment}{/*\ In\ case\ nobody\ has\ defined\ these\ types,\ but\ we\ aren't\ running\ under}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00113}00113\ \textcolor{comment}{\ \ \ GCC\ 2.00,\ make\ sure\ that\ \_\_PTRDIFF\_TYPE\_\_,\ \_\_SIZE\_TYPE\_\_,\ and}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00114}00114\ \textcolor{comment}{\ \ \ \_\_WCHAR\_TYPE\_\_\ have\ reasonable\ values.\ \ This\ can\ happen\ if\ the}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00115}00115\ \textcolor{comment}{\ \ \ parts\ of\ GCC\ is\ compiled\ by\ an\ older\ compiler,\ that\ actually}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00116}00116\ \textcolor{comment}{\ \ \ include\ gstddef.h,\ such\ as\ collect2.\ \ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00118}00118\ \textcolor{comment}{/*\ Signed\ type\ of\ difference\ of\ two\ pointers.\ \ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00120}00120\ \textcolor{comment}{/*\ Define\ this\ type\ if\ we\ are\ doing\ the\ whole\ job,}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00121}00121\ \textcolor{comment}{\ \ \ or\ if\ we\ want\ this\ type\ in\ particular.\ \ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00122}00122\ \textcolor{preprocessor}{\#if\ defined\ (\_STDDEF\_H)\ ||\ defined\ (\_\_need\_ptrdiff\_t)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00123}00123\ \textcolor{preprocessor}{\#ifndef\ \_PTRDIFF\_T\ \ }\textcolor{comment}{/*\ in\ case\ <sys/types.h>\ has\ defined\ it.\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00124}00124\ \textcolor{preprocessor}{\#ifndef\ \_T\_PTRDIFF\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00125}00125\ \textcolor{preprocessor}{\#ifndef\ \_T\_PTRDIFF}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00126}00126\ \textcolor{preprocessor}{\#ifndef\ \_\_PTRDIFF\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00127}00127\ \textcolor{preprocessor}{\#ifndef\ \_PTRDIFF\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00128}00128\ \textcolor{preprocessor}{\#ifndef\ \_BSD\_PTRDIFF\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00129}00129\ \textcolor{preprocessor}{\#ifndef\ \_\_\_int\_ptrdiff\_t\_h}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00130}00130\ \textcolor{preprocessor}{\#ifndef\ \_GCC\_PTRDIFF\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00131}00131\ \textcolor{preprocessor}{\#ifndef\ \_PTRDIFF\_T\_DECLARED\ }\textcolor{comment}{/*\ DragonFly\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00132}00132\ \textcolor{preprocessor}{\#ifndef\ \_\_DEFINED\_ptrdiff\_t\ }\textcolor{comment}{/*\ musl\ libc\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00133}\mbox{\hyperlink{stddef_8h_a038a1b9dd0d442575d3fb3c6612146ae}{00133}}\ \textcolor{preprocessor}{\#define\ \_PTRDIFF\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00134}\mbox{\hyperlink{stddef_8h_a1d94fb06e01bfccd4ba7894b226b0cd4}{00134}}\ \textcolor{preprocessor}{\#define\ \_T\_PTRDIFF\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00135}\mbox{\hyperlink{stddef_8h_aacf3b70bdfcd416c7662b5d7031d370b}{00135}}\ \textcolor{preprocessor}{\#define\ \_T\_PTRDIFF}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00136}\mbox{\hyperlink{stddef_8h_ac5f1c329383febc9a9ebbd7042d37e19}{00136}}\ \textcolor{preprocessor}{\#define\ \_\_PTRDIFF\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00137}\mbox{\hyperlink{stddef_8h_adae8ee710a8ee08e5e0b8327e4163276}{00137}}\ \textcolor{preprocessor}{\#define\ \_PTRDIFF\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00138}\mbox{\hyperlink{stddef_8h_a5f4d0b2ab317b7a00053c3f72898cf56}{00138}}\ \textcolor{preprocessor}{\#define\ \_BSD\_PTRDIFF\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00139}\mbox{\hyperlink{stddef_8h_a3ab05a755ba03609fcc91259ec3df0fc}{00139}}\ \textcolor{preprocessor}{\#define\ \_\_\_int\_ptrdiff\_t\_h}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00140}\mbox{\hyperlink{stddef_8h_abd806d590f4ac62835aa187118c296ab}{00140}}\ \textcolor{preprocessor}{\#define\ \_GCC\_PTRDIFF\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00141}\mbox{\hyperlink{stddef_8h_a11fe0b27b8fbde6ca87250d004bea483}{00141}}\ \textcolor{preprocessor}{\#define\ \_PTRDIFF\_T\_DECLARED}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00142}\mbox{\hyperlink{stddef_8h_aeca87c6a5f38d645bfcd59ecea1f8ce5}{00142}}\ \textcolor{preprocessor}{\#define\ \_\_DEFINED\_ptrdiff\_t}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00143}00143\ \textcolor{preprocessor}{\#ifndef\ \_\_PTRDIFF\_TYPE\_\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00144}\mbox{\hyperlink{stddef_8h_a726a020189392103a9404da070536e07}{00144}}\ \textcolor{preprocessor}{\#define\ \_\_PTRDIFF\_TYPE\_\_\ long\ int}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00145}00145\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00146}\mbox{\hyperlink{stddef_8h_a6d26a0475a6d6c897e655cdc5d8019d2}{00146}}\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{stddef_8h_a726a020189392103a9404da070536e07}{\_\_PTRDIFF\_TYPE\_\_}}\ \mbox{\hyperlink{stddef_8h_a6d26a0475a6d6c897e655cdc5d8019d2}{ptrdiff\_t}};}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00147}00147\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_DEFINED\_ptrdiff\_t\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00148}00148\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_PTRDIFF\_T\_DECLARED\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00149}00149\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_GCC\_PTRDIFF\_T\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00150}00150\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_\_int\_ptrdiff\_t\_h\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00151}00151\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_BSD\_PTRDIFF\_T\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00152}00152\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_PTRDIFF\_T\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00153}00153\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_PTRDIFF\_T\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00154}00154\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_T\_PTRDIFF\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00155}00155\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_T\_PTRDIFF\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00156}00156\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_PTRDIFF\_T\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00157}00157\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00158}00158\ \textcolor{comment}{/*\ If\ this\ symbol\ has\ done\ its\ job,\ get\ rid\ of\ it.\ \ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00159}00159\ \textcolor{preprocessor}{\#undef\ \ \_\_need\_ptrdiff\_t}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00161}00161\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_STDDEF\_H\ or\ \_\_need\_ptrdiff\_t.\ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00162}00162\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00163}00163\ \textcolor{comment}{/*\ Unsigned\ type\ of\ \`{}sizeof'\ something.\ \ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00165}00165\ \textcolor{comment}{/*\ Define\ this\ type\ if\ we\ are\ doing\ the\ whole\ job,}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00166}00166\ \textcolor{comment}{\ \ \ or\ if\ we\ want\ this\ type\ in\ particular.\ \ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00167}00167\ \textcolor{preprocessor}{\#if\ defined\ (\_STDDEF\_H)\ ||\ defined\ (\_\_need\_size\_t)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00168}00168\ \textcolor{preprocessor}{\#ifndef\ \_\_size\_t\_\_\ \ }\textcolor{comment}{/*\ BeOS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00169}00169\ \textcolor{preprocessor}{\#ifndef\ \_\_SIZE\_T\_\_\ \ }\textcolor{comment}{/*\ Cray\ Unicos/Mk\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00170}00170\ \textcolor{preprocessor}{\#ifndef\ \_SIZE\_T\ }\textcolor{comment}{/*\ in\ case\ <sys/types.h>\ has\ defined\ it.\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00171}00171\ \textcolor{preprocessor}{\#ifndef\ \_SYS\_SIZE\_T\_H}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00172}00172\ \textcolor{preprocessor}{\#ifndef\ \_T\_SIZE\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00173}00173\ \textcolor{preprocessor}{\#ifndef\ \_T\_SIZE}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00174}00174\ \textcolor{preprocessor}{\#ifndef\ \_\_SIZE\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00175}00175\ \textcolor{preprocessor}{\#ifndef\ \_SIZE\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00176}00176\ \textcolor{preprocessor}{\#ifndef\ \_BSD\_SIZE\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00177}00177\ \textcolor{preprocessor}{\#ifndef\ \_SIZE\_T\_DEFINED\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00178}00178\ \textcolor{preprocessor}{\#ifndef\ \_SIZE\_T\_DEFINED}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00179}00179\ \textcolor{preprocessor}{\#ifndef\ \_BSD\_SIZE\_T\_DEFINED\_\ \ \ \ }\textcolor{comment}{/*\ Darwin\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00180}00180\ \textcolor{preprocessor}{\#ifndef\ \_SIZE\_T\_DECLARED\ \ \ \ }\textcolor{comment}{/*\ FreeBSD\ 5\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00181}00181\ \textcolor{preprocessor}{\#ifndef\ \_\_DEFINED\_size\_t\ \ \ \ }\textcolor{comment}{/*\ musl\ libc\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00182}00182\ \textcolor{preprocessor}{\#ifndef\ \_\_\_int\_size\_t\_h}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00183}00183\ \textcolor{preprocessor}{\#ifndef\ \_GCC\_SIZE\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00184}00184\ \textcolor{preprocessor}{\#ifndef\ \_SIZET\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00185}00185\ \textcolor{preprocessor}{\#ifndef\ \_\_size\_t}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00186}\mbox{\hyperlink{stddef_8h_a18e63e728b6909b6011a1002a8478c0f}{00186}}\ \textcolor{preprocessor}{\#define\ \_\_size\_t\_\_\ \ }\textcolor{comment}{/*\ BeOS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00187}\mbox{\hyperlink{stddef_8h_af1f5f668b061af269cc935bb7a46a03f}{00187}}\ \textcolor{preprocessor}{\#define\ \_\_SIZE\_T\_\_\ \ }\textcolor{comment}{/*\ Cray\ Unicos/Mk\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00188}\mbox{\hyperlink{stddef_8h_a0ba95ba075f659fa991ee3df107aa3c3}{00188}}\ \textcolor{preprocessor}{\#define\ \_SIZE\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00189}\mbox{\hyperlink{stddef_8h_a971acb95781835f9a3c66bc8d6cc33d9}{00189}}\ \textcolor{preprocessor}{\#define\ \_SYS\_SIZE\_T\_H}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00190}\mbox{\hyperlink{stddef_8h_ac650ef6fa21cbfd8143ecd56f8a471f9}{00190}}\ \textcolor{preprocessor}{\#define\ \_T\_SIZE\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00191}\mbox{\hyperlink{stddef_8h_ac42f1daaac079266f95b9fc4b76fbb5c}{00191}}\ \textcolor{preprocessor}{\#define\ \_T\_SIZE}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00192}\mbox{\hyperlink{stddef_8h_a5b685bc7908badbedcff9b74f89e4d0b}{00192}}\ \textcolor{preprocessor}{\#define\ \_\_SIZE\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00193}\mbox{\hyperlink{stddef_8h_ab5337ecca8882c03a4d6ae4d07babe13}{00193}}\ \textcolor{preprocessor}{\#define\ \_SIZE\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00194}\mbox{\hyperlink{stddef_8h_ac75cf1512f77297325bf3caa6cbe9cf2}{00194}}\ \textcolor{preprocessor}{\#define\ \_BSD\_SIZE\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00195}\mbox{\hyperlink{stddef_8h_afe4fa9f8c4b45b2490a7f02ca464a338}{00195}}\ \textcolor{preprocessor}{\#define\ \_SIZE\_T\_DEFINED\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00196}\mbox{\hyperlink{stddef_8h_af8a396943fba96ccd06ef88ee8f790ba}{00196}}\ \textcolor{preprocessor}{\#define\ \_SIZE\_T\_DEFINED}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00197}\mbox{\hyperlink{stddef_8h_a125daa79a68255e6751d882e4f4d2f76}{00197}}\ \textcolor{preprocessor}{\#define\ \_BSD\_SIZE\_T\_DEFINED\_\ \ \ \ }\textcolor{comment}{/*\ Darwin\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00198}\mbox{\hyperlink{stddef_8h_aea04a18df5c00d440ceb9de4c584d17e}{00198}}\ \textcolor{preprocessor}{\#define\ \_SIZE\_T\_DECLARED\ \ \ \ }\textcolor{comment}{/*\ FreeBSD\ 5\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00199}\mbox{\hyperlink{stddef_8h_a19636ba8ff7f2a77b98b69e1646abf7a}{00199}}\ \textcolor{preprocessor}{\#define\ \_\_DEFINED\_size\_t\ \ \ \ }\textcolor{comment}{/*\ musl\ libc\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00200}\mbox{\hyperlink{stddef_8h_aa295f17ab4897db26d5333f9eb4d2235}{00200}}\ \textcolor{preprocessor}{\#define\ \_\_\_int\_size\_t\_h}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00201}\mbox{\hyperlink{stddef_8h_ae25d5f3ba2bf2fc961655033e7490c87}{00201}}\ \textcolor{preprocessor}{\#define\ \_GCC\_SIZE\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00202}\mbox{\hyperlink{stddef_8h_a4c7be8824483e5ee5befc62ec2bcffe7}{00202}}\ \textcolor{preprocessor}{\#define\ \_SIZET\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00203}00203\ \textcolor{preprocessor}{\#if\ defined\ (\_\_FreeBSD\_\_)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00204}00204\ \textcolor{preprocessor}{\ \ ||\ defined(\_\_DragonFly\_\_)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00205}00205\ \textcolor{preprocessor}{\ \ ||\ defined(\_\_FreeBSD\_kernel\_\_)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00206}00206\ \textcolor{preprocessor}{\ \ ||\ defined(\_\_VMS\_\_)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00207}00207\ \textcolor{comment}{/*\ \_\_size\_t\ is\ a\ typedef,\ must\ not\ trash\ it.\ \ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00208}00208\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00209}\mbox{\hyperlink{stddef_8h_aeb277d01686af866ed777fb7da13d9c4}{00209}}\ \textcolor{preprocessor}{\#define\ \_\_size\_t}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00210}00210\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00211}00211\ \textcolor{preprocessor}{\#ifndef\ \_\_SIZE\_TYPE\_\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00212}\mbox{\hyperlink{stddef_8h_ab8d03bfd9e9120480015fc51dc8b8e65}{00212}}\ \textcolor{preprocessor}{\#define\ \_\_SIZE\_TYPE\_\_\ long\ unsigned\ int}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00213}00213\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00214}00214\ \textcolor{preprocessor}{\#if\ !(defined\ (\_\_GNUG\_\_)\ \&\&\ defined\ (size\_t))}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00215}\mbox{\hyperlink{stddef_8h_aa9d55e2f20e580b7445617d0d12fff6e}{00215}}\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{stddef_8h_ab8d03bfd9e9120480015fc51dc8b8e65}{\_\_SIZE\_TYPE\_\_}}\ \mbox{\hyperlink{stddef_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\_t}};}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00216}00216\ \textcolor{preprocessor}{\#ifdef\ \_\_BEOS\_\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00217}00217\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ssize\_t}};}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00218}00218\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_BEOS\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00219}00219\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !(defined\ (\_\_GNUG\_\_)\ \&\&\ defined\ (size\_t))\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00220}00220\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_size\_t\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00221}00221\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_SIZET\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00222}00222\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_GCC\_SIZE\_T\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00223}00223\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_\_int\_size\_t\_h\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00224}00224\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_DEFINED\_size\_t\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00225}00225\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_SIZE\_T\_DECLARED\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00226}00226\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_BSD\_SIZE\_T\_DEFINED\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00227}00227\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_SIZE\_T\_DEFINED\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00228}00228\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_SIZE\_T\_DEFINED\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00229}00229\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_BSD\_SIZE\_T\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00230}00230\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_SIZE\_T\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00231}00231\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_SIZE\_T\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00232}00232\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_T\_SIZE\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00233}00233\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_T\_SIZE\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00234}00234\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_SYS\_SIZE\_T\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00235}00235\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_SIZE\_T\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00236}00236\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_SIZE\_T\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00237}00237\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_size\_t\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00238}00238\ \textcolor{preprocessor}{\#undef\ \ \_\_need\_size\_t}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00239}00239\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_STDDEF\_H\ or\ \_\_need\_size\_t.\ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00240}00240\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00241}00241\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00242}00242\ \textcolor{comment}{/*\ Wide\ character\ type.}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00243}00243\ \textcolor{comment}{\ \ \ Locale-\/writers\ should\ change\ this\ as\ necessary\ to}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00244}00244\ \textcolor{comment}{\ \ \ be\ big\ enough\ to\ hold\ unique\ values\ not\ between\ 0\ and\ 127,}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00245}00245\ \textcolor{comment}{\ \ \ and\ not\ (wchar\_t)\ -\/1,\ for\ each\ defined\ multibyte\ character.\ \ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00246}00246\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00247}00247\ \textcolor{comment}{/*\ Define\ this\ type\ if\ we\ are\ doing\ the\ whole\ job,}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00248}00248\ \textcolor{comment}{\ \ \ or\ if\ we\ want\ this\ type\ in\ particular.\ \ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00249}00249\ \textcolor{preprocessor}{\#if\ defined\ (\_STDDEF\_H)\ ||\ defined\ (\_\_need\_wchar\_t)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00250}00250\ \textcolor{preprocessor}{\#ifndef\ \_\_wchar\_t\_\_\ }\textcolor{comment}{/*\ BeOS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00251}00251\ \textcolor{preprocessor}{\#ifndef\ \_\_WCHAR\_T\_\_\ }\textcolor{comment}{/*\ Cray\ Unicos/Mk\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00252}00252\ \textcolor{preprocessor}{\#ifndef\ \_WCHAR\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00253}00253\ \textcolor{preprocessor}{\#ifndef\ \_T\_WCHAR\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00254}00254\ \textcolor{preprocessor}{\#ifndef\ \_T\_WCHAR}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00255}00255\ \textcolor{preprocessor}{\#ifndef\ \_\_WCHAR\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00256}00256\ \textcolor{preprocessor}{\#ifndef\ \_WCHAR\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00257}00257\ \textcolor{preprocessor}{\#ifndef\ \_BSD\_WCHAR\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00258}00258\ \textcolor{preprocessor}{\#ifndef\ \_BSD\_WCHAR\_T\_DEFINED\_\ \ \ \ }\textcolor{comment}{/*\ Darwin\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00259}00259\ \textcolor{preprocessor}{\#ifndef\ \_BSD\_RUNE\_T\_DEFINED\_\ \ \ \ }\textcolor{comment}{/*\ Darwin\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00260}00260\ \textcolor{preprocessor}{\#ifndef\ \_WCHAR\_T\_DECLARED\ }\textcolor{comment}{/*\ FreeBSD\ 5\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00261}00261\ \textcolor{preprocessor}{\#ifndef\ \_\_DEFINED\_wchar\_t\ }\textcolor{comment}{/*\ musl\ libc\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00262}00262\ \textcolor{preprocessor}{\#ifndef\ \_WCHAR\_T\_DEFINED\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00263}00263\ \textcolor{preprocessor}{\#ifndef\ \_WCHAR\_T\_DEFINED}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00264}00264\ \textcolor{preprocessor}{\#ifndef\ \_WCHAR\_T\_H}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00265}00265\ \textcolor{preprocessor}{\#ifndef\ \_\_\_int\_wchar\_t\_h}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00266}00266\ \textcolor{preprocessor}{\#ifndef\ \_\_INT\_WCHAR\_T\_H}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00267}00267\ \textcolor{preprocessor}{\#ifndef\ \_GCC\_WCHAR\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00268}\mbox{\hyperlink{stddef_8h_a11214e795a1056d7ddb0dc8d08f52db4}{00268}}\ \textcolor{preprocessor}{\#define\ \_\_wchar\_t\_\_\ }\textcolor{comment}{/*\ BeOS\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00269}\mbox{\hyperlink{stddef_8h_aaeb9e24c26c7c01da13b15a6007c2a23}{00269}}\ \textcolor{preprocessor}{\#define\ \_\_WCHAR\_T\_\_\ }\textcolor{comment}{/*\ Cray\ Unicos/Mk\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00270}\mbox{\hyperlink{stddef_8h_a80e5e97acf78a3f3f0db32388519a24f}{00270}}\ \textcolor{preprocessor}{\#define\ \_WCHAR\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00271}\mbox{\hyperlink{stddef_8h_aa3c9f55297d0ac06abe6e91a6f937f3b}{00271}}\ \textcolor{preprocessor}{\#define\ \_T\_WCHAR\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00272}\mbox{\hyperlink{stddef_8h_a173c69c4a0cc3c8adb67f16898ec7b4e}{00272}}\ \textcolor{preprocessor}{\#define\ \_T\_WCHAR}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00273}\mbox{\hyperlink{stddef_8h_a58f4ac3a535b93547e7c646b1f28cf3e}{00273}}\ \textcolor{preprocessor}{\#define\ \_\_WCHAR\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00274}\mbox{\hyperlink{stddef_8h_a755d6d9ee902d07eeee259e0d4b3b9bb}{00274}}\ \textcolor{preprocessor}{\#define\ \_WCHAR\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00275}\mbox{\hyperlink{stddef_8h_a389b6ba59f43bb521509435ddfbb733a}{00275}}\ \textcolor{preprocessor}{\#define\ \_BSD\_WCHAR\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00276}\mbox{\hyperlink{stddef_8h_a8e4984bb64c9c106ab18155295655b4a}{00276}}\ \textcolor{preprocessor}{\#define\ \_WCHAR\_T\_DEFINED\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00277}\mbox{\hyperlink{stddef_8h_adf17d03cf50828d37c13b2eef1f8efd3}{00277}}\ \textcolor{preprocessor}{\#define\ \_WCHAR\_T\_DEFINED}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00278}\mbox{\hyperlink{stddef_8h_a2d335f120bc7eddbefbd1ca7423315de}{00278}}\ \textcolor{preprocessor}{\#define\ \_WCHAR\_T\_H}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00279}\mbox{\hyperlink{stddef_8h_a77498ae594b7f4d3f4410652ea669ebc}{00279}}\ \textcolor{preprocessor}{\#define\ \_\_\_int\_wchar\_t\_h}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00280}\mbox{\hyperlink{stddef_8h_a49769e369366332ae5979332e4e16e64}{00280}}\ \textcolor{preprocessor}{\#define\ \_\_INT\_WCHAR\_T\_H}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00281}\mbox{\hyperlink{stddef_8h_aaaa9029b4e475c09ce81ccaa4ae64249}{00281}}\ \textcolor{preprocessor}{\#define\ \_GCC\_WCHAR\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00282}\mbox{\hyperlink{stddef_8h_a0785a9972dccbcaba95fd7b1cdbceba7}{00282}}\ \textcolor{preprocessor}{\#define\ \_WCHAR\_T\_DECLARED}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00283}\mbox{\hyperlink{stddef_8h_aaf58990d1c823bfbc34a64b2bc2dc0f0}{00283}}\ \textcolor{preprocessor}{\#define\ \_\_DEFINED\_wchar\_t}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00284}00284\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00285}00285\ \textcolor{comment}{/*\ On\ BSD/386\ 1.1,\ at\ least,\ machine/ansi.h\ defines\ \_BSD\_WCHAR\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00286}00286\ \textcolor{comment}{\ \ \ instead\ of\ \_WCHAR\_T\_,\ and\ \_BSD\_RUNE\_T\_\ (which,\ unlike\ the\ other}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00287}00287\ \textcolor{comment}{\ \ \ symbols\ in\ the\ \_FOO\_T\_\ family,\ stays\ defined\ even\ after\ its}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00288}00288\ \textcolor{comment}{\ \ \ corresponding\ type\ is\ defined).\ \ If\ we\ define\ wchar\_t,\ then\ we}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00289}00289\ \textcolor{comment}{\ \ \ must\ undef\ \_WCHAR\_T\_;\ for\ BSD/386\ 1.1\ (and\ perhaps\ others),\ if}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00290}00290\ \textcolor{comment}{\ \ \ we\ undef\ \_WCHAR\_T\_,\ then\ we\ must\ also\ define\ rune\_t,\ since\ }}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00291}00291\ \textcolor{comment}{\ \ \ headers\ like\ runetype.h\ assume\ that\ if\ machine/ansi.h\ is\ included,}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00292}00292\ \textcolor{comment}{\ \ \ and\ \_BSD\_WCHAR\_T\_\ is\ not\ defined,\ then\ rune\_t\ is\ available.}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00293}00293\ \textcolor{comment}{\ \ \ machine/ansi.h\ says,\ "{}Note\ that\ \_WCHAR\_T\_\ and\ \_RUNE\_T\_\ must\ be\ of}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00294}00294\ \textcolor{comment}{\ \ \ the\ same\ type."{}\ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00295}00295\ \textcolor{preprocessor}{\#ifdef\ \_BSD\_WCHAR\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00296}00296\ \textcolor{preprocessor}{\#undef\ \_BSD\_WCHAR\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00297}00297\ \textcolor{preprocessor}{\#ifdef\ \_BSD\_RUNE\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00298}00298\ \textcolor{preprocessor}{\#if\ !defined\ (\_ANSI\_SOURCE)\ \&\&\ !defined\ (\_POSIX\_SOURCE)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00299}00299\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_BSD\_RUNE\_T\_}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{rune\_t}};}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00300}00300\ \textcolor{preprocessor}{\#define\ \_BSD\_WCHAR\_T\_DEFINED\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00301}00301\ \textcolor{preprocessor}{\#define\ \_BSD\_RUNE\_T\_DEFINED\_\ \ \ \ }\textcolor{comment}{/*\ Darwin\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00302}00302\ \textcolor{preprocessor}{\#if\ defined\ (\_\_FreeBSD\_\_)\ \&\&\ (\_\_FreeBSD\_\_\ <\ 5)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00303}00303\ \textcolor{comment}{/*\ Why\ is\ this\ file\ so\ hard\ to\ maintain\ properly?\ \ In\ contrast\ to}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00304}00304\ \textcolor{comment}{\ \ \ the\ comment\ above\ regarding\ BSD/386\ 1.1,\ on\ FreeBSD\ for\ as\ long}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00305}00305\ \textcolor{comment}{\ \ \ as\ the\ symbol\ has\ existed,\ \_BSD\_RUNE\_T\_\ must\ not\ stay\ defined\ or}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00306}00306\ \textcolor{comment}{\ \ \ redundant\ typedefs\ will\ occur\ when\ stdlib.h\ is\ included\ after\ this\ file.\ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00307}00307\ \textcolor{preprocessor}{\#undef\ \_BSD\_RUNE\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00308}00308\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00309}00309\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00310}00310\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00311}00311\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00312}00312\ \textcolor{comment}{/*\ FreeBSD\ 5\ can't\ be\ handled\ well\ using\ "{}traditional"{}\ logic\ above}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00313}00313\ \textcolor{comment}{\ \ \ since\ it\ no\ longer\ defines\ \_BSD\_RUNE\_T\_\ yet\ still\ desires\ to\ export}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00314}00314\ \textcolor{comment}{\ \ \ rune\_t\ in\ some\ cases...\ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00315}00315\ \textcolor{preprocessor}{\#if\ defined\ (\_\_FreeBSD\_\_)\ \&\&\ (\_\_FreeBSD\_\_\ >=\ 5)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00316}00316\ \textcolor{preprocessor}{\#if\ !defined\ (\_ANSI\_SOURCE)\ \&\&\ !defined\ (\_POSIX\_SOURCE)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00317}00317\ \textcolor{preprocessor}{\#if\ \_\_BSD\_VISIBLE}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00318}00318\ \textcolor{preprocessor}{\#ifndef\ \_RUNE\_T\_DECLARED}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00319}00319\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_rune\_t}}\ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{rune\_t}};}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00320}00320\ \textcolor{preprocessor}{\#define\ \_RUNE\_T\_DECLARED}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00321}00321\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00322}00322\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00323}00323\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00324}00324\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00325}00325\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00326}00326\ \textcolor{preprocessor}{\#ifndef\ \_\_WCHAR\_TYPE\_\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00327}\mbox{\hyperlink{stddef_8h_a4f41dbe213ea9662c1fb0f5af562e363}{00327}}\ \textcolor{preprocessor}{\#define\ \_\_WCHAR\_TYPE\_\_\ int}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00328}00328\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00329}00329\ \textcolor{preprocessor}{\#ifndef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00330}\mbox{\hyperlink{stddef_8h_a5f245e933e58ed4d268146a5b1f116ca}{00330}}\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{stddef_8h_a4f41dbe213ea9662c1fb0f5af562e363}{\_\_WCHAR\_TYPE\_\_}}\ \mbox{\hyperlink{stddef_8h_a5f245e933e58ed4d268146a5b1f116ca}{wchar\_t}};}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00331}00331\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00332}00332\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00333}00333\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00334}00334\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00335}00335\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00336}00336\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00337}00337\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00338}00338\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_DEFINED\_wchar\_t\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00339}00339\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_WCHAR\_T\_DECLARED\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00340}00340\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_BSD\_RUNE\_T\_DEFINED\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00341}00341\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00342}00342\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00343}00343\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00344}00344\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00345}00345\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00346}00346\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00347}00347\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00348}00348\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_WCHAR\_T\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00349}00349\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_wchar\_t\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00350}00350\ \textcolor{preprocessor}{\#undef\ \ \_\_need\_wchar\_t}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00351}00351\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_STDDEF\_H\ or\ \_\_need\_wchar\_t.\ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00352}00352\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00353}00353\ \textcolor{preprocessor}{\#if\ defined\ (\_\_need\_wint\_t)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00354}00354\ \textcolor{preprocessor}{\#ifndef\ \_WINT\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00355}00355\ \textcolor{preprocessor}{\#define\ \_WINT\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00356}00356\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00357}00357\ \textcolor{preprocessor}{\#ifndef\ \_\_WINT\_TYPE\_\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00358}00358\ \textcolor{preprocessor}{\#define\ \_\_WINT\_TYPE\_\_\ unsigned\ int}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00359}00359\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00360}00360\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_WINT\_TYPE\_\_}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{wint\_t}};}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00361}00361\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00362}00362\ \textcolor{preprocessor}{\#undef\ \_\_need\_wint\_t}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00363}00363\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00364}00364\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00365}00365\ \textcolor{preprocessor}{\#if\ defined(\_\_NetBSD\_\_)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00366}00366\ \textcolor{comment}{/*\ \ The\ references\ to\ \_GCC\_PTRDIFF\_T\_,\ \_GCC\_SIZE\_T\_,\ and\ \_GCC\_WCHAR\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00367}00367\ \textcolor{comment}{\ \ \ \ are\ probably\ typos\ and\ should\ be\ removed\ before\ 2.8\ is\ released.\ \ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00368}00368\ \textcolor{preprocessor}{\#ifdef\ \_GCC\_PTRDIFF\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00369}00369\ \textcolor{preprocessor}{\#undef\ \_PTRDIFF\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00370}00370\ \textcolor{preprocessor}{\#undef\ \_BSD\_PTRDIFF\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00371}00371\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00372}00372\ \textcolor{preprocessor}{\#ifdef\ \_GCC\_SIZE\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00373}00373\ \textcolor{preprocessor}{\#undef\ \_SIZE\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00374}00374\ \textcolor{preprocessor}{\#undef\ \_BSD\_SIZE\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00375}00375\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00376}00376\ \textcolor{preprocessor}{\#ifdef\ \_GCC\_WCHAR\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00377}00377\ \textcolor{preprocessor}{\#undef\ \_WCHAR\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00378}00378\ \textcolor{preprocessor}{\#undef\ \_BSD\_WCHAR\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00379}00379\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00380}00380\ \textcolor{comment}{/*\ \ The\ following\ ones\ are\ the\ real\ ones.\ \ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00381}00381\ \textcolor{preprocessor}{\#ifdef\ \_GCC\_PTRDIFF\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00382}00382\ \textcolor{preprocessor}{\#undef\ \_PTRDIFF\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00383}00383\ \textcolor{preprocessor}{\#undef\ \_BSD\_PTRDIFF\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00384}00384\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00385}00385\ \textcolor{preprocessor}{\#ifdef\ \_GCC\_SIZE\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00386}00386\ \textcolor{preprocessor}{\#undef\ \_SIZE\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00387}00387\ \textcolor{preprocessor}{\#undef\ \_BSD\_SIZE\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00388}00388\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00389}00389\ \textcolor{preprocessor}{\#ifdef\ \_GCC\_WCHAR\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00390}00390\ \textcolor{preprocessor}{\#undef\ \_WCHAR\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00391}00391\ \textcolor{preprocessor}{\#undef\ \_BSD\_WCHAR\_T\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00392}00392\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00393}00393\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_NetBSD\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00394}00394\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00395}00395\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_sys\_stdtypes\_h\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00396}00396\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00397}00397\ \textcolor{comment}{/*\ A\ null\ pointer\ constant.\ \ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00398}00398\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00399}00399\ \textcolor{preprocessor}{\#if\ defined\ (\_STDDEF\_H)\ ||\ defined\ (\_\_need\_NULL)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00400}00400\ \textcolor{preprocessor}{\#undef\ NULL\ \ \ \ \ }\textcolor{comment}{/*\ in\ case\ <stdio.h>\ has\ defined\ it.\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00401}00401\ \textcolor{preprocessor}{\#ifdef\ \_\_GNUG\_\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00402}00402\ \textcolor{preprocessor}{\#define\ NULL\ \_\_null}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00403}00403\ \textcolor{preprocessor}{\#else\ \ \ }\textcolor{comment}{/*\ G++\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00404}00404\ \textcolor{preprocessor}{\#ifndef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00405}\mbox{\hyperlink{stddef_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{00405}}\ \textcolor{preprocessor}{\#define\ NULL\ ((void\ *)0)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00406}00406\ \textcolor{preprocessor}{\#else\ \ \ }\textcolor{comment}{/*\ C++\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00407}00407\ \textcolor{preprocessor}{\#define\ NULL\ 0}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00408}00408\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ C++\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00409}00409\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ G++\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00410}00410\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ NULL\ not\ defined\ and\ <stddef.h>\ or\ need\ NULL.\ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00411}00411\ \textcolor{preprocessor}{\#undef\ \ \_\_need\_NULL}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00412}00412\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00413}00413\ \textcolor{preprocessor}{\#ifdef\ \_STDDEF\_H}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00414}00414\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00415}00415\ \textcolor{comment}{/*\ Offset\ of\ member\ MEMBER\ in\ a\ struct\ of\ type\ TYPE.\ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00416}\mbox{\hyperlink{stddef_8h_a276e8a32e0bbf024aadd9420b8f2d3b3}{00416}}\ \textcolor{preprocessor}{\#define\ offsetof(TYPE,\ MEMBER)\ \_\_builtin\_offsetof\ (TYPE,\ MEMBER)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00417}00417\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00418}00418\ \textcolor{preprocessor}{\#if\ (defined\ (\_\_STDC\_VERSION\_\_)\ \&\&\ \_\_STDC\_VERSION\_\_\ >=\ 201112L)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00419}00419\ \textcolor{preprocessor}{\ \ ||\ (defined(\_\_cplusplus)\ \&\&\ \_\_cplusplus\ >=\ 201103L)}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00420}00420\ \textcolor{preprocessor}{\#ifndef\ \_GCC\_MAX\_ALIGN\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00421}00421\ \textcolor{preprocessor}{\#define\ \_GCC\_MAX\_ALIGN\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00422}00422\ \textcolor{comment}{/*\ Type\ whose\ alignment\ is\ supported\ in\ every\ context\ and\ is\ at\ least}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00423}00423\ \textcolor{comment}{\ \ \ as\ great\ as\ that\ of\ any\ standard\ type\ not\ using\ alignment}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00424}00424\ \textcolor{comment}{\ \ \ specifiers.\ \ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00425}00425\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00426}00426\ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_max\_align\_ll}}\ \mbox{\hyperlink{avx512bf16intrin_8h_a016eb0ea28cf676c28ca5fdd1709f105}{\_\_attribute\_\_}}((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_aligned\_\_}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_alignof\_\_}}(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}))));}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00427}00427\ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_max\_align\_ld}}\ \mbox{\hyperlink{avx512bf16intrin_8h_a016eb0ea28cf676c28ca5fdd1709f105}{\_\_attribute\_\_}}((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_aligned\_\_}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_alignof\_\_}}(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}))));}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00428}00428\ \ \ \textcolor{comment}{/*\ \_Float128\ is\ defined\ as\ a\ basic\ type,\ so\ max\_align\_t\ must\ be}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00429}00429\ \textcolor{comment}{\ \ \ \ \ sufficiently\ aligned\ for\ it.\ \ This\ code\ must\ work\ in\ C++,\ so\ we}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00430}00430\ \textcolor{comment}{\ \ \ \ \ use\ \_\_float128\ here;\ that\ is\ only\ available\ on\ some}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00431}00431\ \textcolor{comment}{\ \ \ \ \ architectures,\ but\ only\ on\ i386\ is\ extra\ alignment\ needed\ for}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00432}00432\ \textcolor{comment}{\ \ \ \ \ \_\_float128.\ \ */}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00433}00433\ \textcolor{preprocessor}{\#ifdef\ \_\_i386\_\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00434}00434\ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_float128}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_max\_align\_f128}}\ \mbox{\hyperlink{avx512bf16intrin_8h_a016eb0ea28cf676c28ca5fdd1709f105}{\_\_attribute\_\_}}((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_aligned\_\_}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_alignof}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_float128}}))));}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00435}00435\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00436}00436\ \}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{max\_align\_t}};}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00437}00437\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00438}00438\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ C11\ or\ C++11.\ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00439}00439\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00440}00440\ \textcolor{preprocessor}{\#if\ defined(\_\_cplusplus)\ \&\&\ \_\_cplusplus\ >=\ 201103L}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00441}00441\ \textcolor{preprocessor}{\#ifndef\ \_GXX\_NULLPTR\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00442}00442\ \textcolor{preprocessor}{\#define\ \_GXX\_NULLPTR\_T}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00443}00443\ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{decltype}(\textcolor{keyword}{nullptr})\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{nullptr\_t}};}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00444}00444\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00445}00445\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ C++11.\ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00446}00446\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00447}00447\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_STDDEF\_H\ was\ defined\ this\ time\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00448}00448\ }
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00449}00449\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !\_STDDEF\_H\ \&\&\ !\_STDDEF\_H\_\ \&\&\ !\_ANSI\_STDDEF\_H\ \&\&\ !\_\_STDDEF\_H\_\_}}
+\DoxyCodeLine{\Hypertarget{stddef_8h_source_l00450}00450\ \textcolor{comment}{\ \ \ \ \ \ ||\ \_\_need\_XXX\ was\ not\ defined\ before\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

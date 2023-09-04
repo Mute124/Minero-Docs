@@ -1,0 +1,418 @@
+\doxysection{C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/\+Raylib\+Erosion\+Standalone-\/main/raylib/src/external/android/native\+\_\+app\+\_\+glue/android\+\_\+native\+\_\+app\+\_\+glue.c File Reference}
+\hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c}{}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/RaylibErosionStandalone-\/main/raylib/src/external/android/native\_app\_glue/android\_native\_app\_glue.c@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/RaylibErosionStandalone-\/main/raylib/src/external/android/native\_app\_glue/android\_native\_app\_glue.c}}
+{\ttfamily \#include $<$jni.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$sys/resource.\+h$>$}\newline
+{\ttfamily \#include "{}android\+\_\+native\+\_\+app\+\_\+glue.\+h"{}}\newline
+{\ttfamily \#include $<$android/log.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a5512e59d578a380a441a70256af997d0}{LOGI}}(...)~((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+android\+\_\+log\+\_\+print}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANDROID\+\_\+\+LOG\+\_\+\+INFO}}, "{}threaded\+\_\+app"{}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+}}))
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_ae02538a80ad5fc009caec73487d11a8d}{LOGE}}(...)~((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+android\+\_\+log\+\_\+print}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANDROID\+\_\+\+LOG\+\_\+\+ERROR}}, "{}threaded\+\_\+app"{}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+}}))
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_ab78bd305488c62caf8515ee765b1ed49}{LOGV}}(...)~((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+android\+\_\+log\+\_\+print}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANDROID\+\_\+\+LOG\+\_\+\+VERBOSE}}, "{}threaded\+\_\+app"{}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+}}))
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_abf6f79741bbdaf07af45de03ecbe4a2b}{free\+\_\+saved\+\_\+state}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structandroid__app}{android\+\_\+app}})
+\item 
+\mbox{\hyperlink{external_2glfw_2deps_2vs2008_2stdint_8h_aef44329758059c91c76d334e8fc09700}{int8\+\_\+t}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a05d3cc727656e360f4d2bb290ceec365}{android\+\_\+app\+\_\+read\+\_\+cmd}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structandroid__app}{android\+\_\+app}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_acd491a7613bf994264e52d20cb8b5940}{print\+\_\+cur\+\_\+config}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structandroid__app}{android\+\_\+app}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a19fcc2ceab1c8d7f0664f9436950bf18}{android\+\_\+app\+\_\+pre\+\_\+exec\+\_\+cmd}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structandroid__app}{android\+\_\+app}}, \mbox{\hyperlink{external_2glfw_2deps_2vs2008_2stdint_8h_aef44329758059c91c76d334e8fc09700}{int8\+\_\+t}} cmd)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_af0b682de686fba098479227bc5a2f044}{android\+\_\+app\+\_\+post\+\_\+exec\+\_\+cmd}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structandroid__app}{android\+\_\+app}}, \mbox{\hyperlink{external_2glfw_2deps_2vs2008_2stdint_8h_aef44329758059c91c76d334e8fc09700}{int8\+\_\+t}} cmd)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_ad6cb2999c43578c26088c6a5147ccdc1}{app\+\_\+dummy}} ()
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a514ee1a8d4ccaac7457d1c52847e976a}{android\+\_\+app\+\_\+destroy}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structandroid__app}{android\+\_\+app}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a2304d003b52771ef13b7878e27fd0d66}{process\+\_\+input}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*}app, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__poll__source}{android\+\_\+poll\+\_\+source}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_a633906574fe6e39b7f2840bed0e49832}{source}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a109afe717394c73062cf789a9268155c}{process\+\_\+cmd}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*}app, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__poll__source}{android\+\_\+poll\+\_\+source}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_a633906574fe6e39b7f2840bed0e49832}{source}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a2c7a667c04f145d8746cfb7b418a0e71}{android\+\_\+app\+\_\+entry}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_a630cfbd3157b61ef7097600d4b7885b7}{param}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a8da505ccdeecc9744e7e843cd5a3294f}{android\+\_\+app\+\_\+create}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}activity, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}saved\+State, \mbox{\hyperlink{stddef_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} saved\+State\+Size)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a34d66593d9566879f29535cee7b75eb5}{android\+\_\+app\+\_\+write\+\_\+cmd}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structandroid__app}{android\+\_\+app}}, \mbox{\hyperlink{external_2glfw_2deps_2vs2008_2stdint_8h_aef44329758059c91c76d334e8fc09700}{int8\+\_\+t}} cmd)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a19e2fe69c1295d69a8000108b98a6009}{android\+\_\+app\+\_\+set\+\_\+input}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structandroid__app}{android\+\_\+app}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{AInput\+Queue}} \texorpdfstring{$\ast$}{*}input\+Queue)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a11b738f6b22acff8a92f240dd91f5712}{android\+\_\+app\+\_\+set\+\_\+window}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structandroid__app}{android\+\_\+app}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Window}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a92dbce8e3247f6a78126c99877caacb6}{window}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a06d83dfaee2d62ee075c24eb69039e81}{android\+\_\+app\+\_\+set\+\_\+activity\+\_\+state}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structandroid__app}{android\+\_\+app}}, \mbox{\hyperlink{external_2glfw_2deps_2vs2008_2stdint_8h_aef44329758059c91c76d334e8fc09700}{int8\+\_\+t}} cmd)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a56f40f84f39709bb4d89c8433a75dce9}{android\+\_\+app\+\_\+free}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structandroid__app}{android\+\_\+app}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a56759a8bf96f41a99be04b38bb4dd69c}{on\+Destroy}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}activity)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a76fc680c6a1e18e9075981a8440bd0dc}{on\+Start}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}activity)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a28e79b82a1b62e451c6e2a5f8ce4c27c}{on\+Resume}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}activity)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_afe341c9fe4417f835eb608bad18c79b1}{on\+Save\+Instance\+State}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}activity, \mbox{\hyperlink{stddef_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{out\+Len}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a44c7518cf6aaf3001170a3b41694a227}{on\+Pause}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}activity)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_af3d57f3d1c25a2de15fe2f96cad1f289}{on\+Stop}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}activity)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a5c2e102334bceec099d7a6d40c902b31}{on\+Configuration\+Changed}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}activity)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_aa934344afbe7126328439d652dd48ead}{on\+Low\+Memory}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}activity)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a7947bc2d83b0bea14307f98ca78b7bd8}{on\+Window\+Focus\+Changed}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}activity, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} focused)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a3b40afdd3cf4ed539f30fb2bbae01cbe}{on\+Native\+Window\+Created}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}activity, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Window}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a92dbce8e3247f6a78126c99877caacb6}{window}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_ac010252bcdd5dbcbf4898b976f805794}{on\+Native\+Window\+Destroyed}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}activity, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Window}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a92dbce8e3247f6a78126c99877caacb6}{window}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a50cdef0c29f877df39d14e0acad17f8b}{on\+Input\+Queue\+Created}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}activity, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{AInput\+Queue}} \texorpdfstring{$\ast$}{*}queue)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a7000cec842e1d4a4aaa751efe145293f}{on\+Input\+Queue\+Destroyed}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}activity, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{AInput\+Queue}} \texorpdfstring{$\ast$}{*}queue)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{JNIEXPORT}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a6d1ff6aedb4762d41037e7c708179144}{ANative\+Activity\+\_\+on\+Create}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}activity, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}saved\+State, \mbox{\hyperlink{stddef_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} saved\+State\+Size)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_ae02538a80ad5fc009caec73487d11a8d}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_ae02538a80ad5fc009caec73487d11a8d} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!LOGE@{LOGE}}
+\index{LOGE@{LOGE}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{LOGE}{LOGE}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} LOGE(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+android\+\_\+log\+\_\+print}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANDROID\+\_\+\+LOG\+\_\+\+ERROR}}, "{}threaded\+\_\+app"{}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+}}))}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00030}{30}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a5512e59d578a380a441a70256af997d0}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a5512e59d578a380a441a70256af997d0} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!LOGI@{LOGI}}
+\index{LOGI@{LOGI}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{LOGI}{LOGI}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} LOGI(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+android\+\_\+log\+\_\+print}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANDROID\+\_\+\+LOG\+\_\+\+INFO}}, "{}threaded\+\_\+app"{}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+}}))}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00029}{29}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_ab78bd305488c62caf8515ee765b1ed49}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_ab78bd305488c62caf8515ee765b1ed49} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!LOGV@{LOGV}}
+\index{LOGV@{LOGV}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{LOGV}{LOGV}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} LOGV(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+android\+\_\+log\+\_\+print}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANDROID\+\_\+\+LOG\+\_\+\+VERBOSE}}, "{}threaded\+\_\+app"{}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+}}))}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00034}{34}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a6d1ff6aedb4762d41037e7c708179144}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a6d1ff6aedb4762d41037e7c708179144} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!ANativeActivity\_onCreate@{ANativeActivity\_onCreate}}
+\index{ANativeActivity\_onCreate@{ANativeActivity\_onCreate}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{ANativeActivity\_onCreate()}{ANativeActivity\_onCreate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{JNIEXPORT}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} ANative\+Activity\+\_\+on\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}}]{activity,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}}]{saved\+State,  }\item[{\mbox{\hyperlink{stddef_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}}}]{saved\+State\+Size }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00424}{424}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a8da505ccdeecc9744e7e843cd5a3294f}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a8da505ccdeecc9744e7e843cd5a3294f} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!android\_app\_create@{android\_app\_create}}
+\index{android\_app\_create@{android\_app\_create}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{android\_app\_create()}{android\_app\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*} android\+\_\+app\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}}]{activity,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}}]{saved\+State,  }\item[{\mbox{\hyperlink{stddef_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}}}]{saved\+State\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00243}{243}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a514ee1a8d4ccaac7457d1c52847e976a}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a514ee1a8d4ccaac7457d1c52847e976a} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!android\_app\_destroy@{android\_app\_destroy}}
+\index{android\_app\_destroy@{android\_app\_destroy}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{android\_app\_destroy()}{android\_app\_destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} android\+\_\+app\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*}}]{android\+\_\+app }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00174}{174}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a2c7a667c04f145d8746cfb7b418a0e71}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a2c7a667c04f145d8746cfb7b418a0e71} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!android\_app\_entry@{android\_app\_entry}}
+\index{android\_app\_entry@{android\_app\_entry}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{android\_app\_entry()}{android\_app\_entry()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*} android\+\_\+app\+\_\+entry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00208}{208}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a56f40f84f39709bb4d89c8433a75dce9}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a56f40f84f39709bb4d89c8433a75dce9} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!android\_app\_free@{android\_app\_free}}
+\index{android\_app\_free@{android\_app\_free}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{android\_app\_free()}{android\_app\_free()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} android\+\_\+app\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*}}]{android\+\_\+app }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00321}{321}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_af0b682de686fba098479227bc5a2f044}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_af0b682de686fba098479227bc5a2f044} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!android\_app\_post\_exec\_cmd@{android\_app\_post\_exec\_cmd}}
+\index{android\_app\_post\_exec\_cmd@{android\_app\_post\_exec\_cmd}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{android\_app\_post\_exec\_cmd()}{android\_app\_post\_exec\_cmd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} android\+\_\+app\+\_\+post\+\_\+exec\+\_\+cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*}}]{android\+\_\+app,  }\item[{\mbox{\hyperlink{external_2glfw_2deps_2vs2008_2stdint_8h_aef44329758059c91c76d334e8fc09700}{int8\+\_\+t}}}]{cmd }\end{DoxyParamCaption})}
+
+Call with the command returned by \doxylink{raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8h_a05d3cc727656e360f4d2bb290ceec365}{android\+\_\+app\+\_\+read\+\_\+cmd()} to do the final post-\/processing of the given command. You must have done your own actions for the command before calling this function. 
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00146}{146}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a19fcc2ceab1c8d7f0664f9436950bf18}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a19fcc2ceab1c8d7f0664f9436950bf18} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!android\_app\_pre\_exec\_cmd@{android\_app\_pre\_exec\_cmd}}
+\index{android\_app\_pre\_exec\_cmd@{android\_app\_pre\_exec\_cmd}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{android\_app\_pre\_exec\_cmd()}{android\_app\_pre\_exec\_cmd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} android\+\_\+app\+\_\+pre\+\_\+exec\+\_\+cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*}}]{android\+\_\+app,  }\item[{\mbox{\hyperlink{external_2glfw_2deps_2vs2008_2stdint_8h_aef44329758059c91c76d334e8fc09700}{int8\+\_\+t}}}]{cmd }\end{DoxyParamCaption})}
+
+Call with the command returned by \doxylink{raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8h_a05d3cc727656e360f4d2bb290ceec365}{android\+\_\+app\+\_\+read\+\_\+cmd()} to do the initial pre-\/processing of the given command. You can perform your own actions for the command after calling this function. 
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00089}{89}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a05d3cc727656e360f4d2bb290ceec365}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a05d3cc727656e360f4d2bb290ceec365} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!android\_app\_read\_cmd@{android\_app\_read\_cmd}}
+\index{android\_app\_read\_cmd@{android\_app\_read\_cmd}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{android\_app\_read\_cmd()}{android\_app\_read\_cmd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{external_2glfw_2deps_2vs2008_2stdint_8h_aef44329758059c91c76d334e8fc09700}{int8\+\_\+t}} android\+\_\+app\+\_\+read\+\_\+cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*}}]{android\+\_\+app }\end{DoxyParamCaption})}
+
+Call when \doxylink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ALooper\+\_\+poll\+All()} returns LOOPER\+\_\+\+ID\+\_\+\+MAIN, reading the next app command message. 
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00049}{49}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a06d83dfaee2d62ee075c24eb69039e81}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a06d83dfaee2d62ee075c24eb69039e81} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!android\_app\_set\_activity\_state@{android\_app\_set\_activity\_state}}
+\index{android\_app\_set\_activity\_state@{android\_app\_set\_activity\_state}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{android\_app\_set\_activity\_state()}{android\_app\_set\_activity\_state()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} android\+\_\+app\+\_\+set\+\_\+activity\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*}}]{android\+\_\+app,  }\item[{\mbox{\hyperlink{external_2glfw_2deps_2vs2008_2stdint_8h_aef44329758059c91c76d334e8fc09700}{int8\+\_\+t}}}]{cmd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00312}{312}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a19e2fe69c1295d69a8000108b98a6009}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a19e2fe69c1295d69a8000108b98a6009} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!android\_app\_set\_input@{android\_app\_set\_input}}
+\index{android\_app\_set\_input@{android\_app\_set\_input}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{android\_app\_set\_input()}{android\_app\_set\_input()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} android\+\_\+app\+\_\+set\+\_\+input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*}}]{android\+\_\+app,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{AInput\+Queue}} \texorpdfstring{$\ast$}{*}}]{input\+Queue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00287}{287}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a11b738f6b22acff8a92f240dd91f5712}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a11b738f6b22acff8a92f240dd91f5712} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!android\_app\_set\_window@{android\_app\_set\_window}}
+\index{android\_app\_set\_window@{android\_app\_set\_window}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{android\_app\_set\_window()}{android\_app\_set\_window()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} android\+\_\+app\+\_\+set\+\_\+window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*}}]{android\+\_\+app,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Window}} \texorpdfstring{$\ast$}{*}}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00297}{297}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a34d66593d9566879f29535cee7b75eb5}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a34d66593d9566879f29535cee7b75eb5} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!android\_app\_write\_cmd@{android\_app\_write\_cmd}}
+\index{android\_app\_write\_cmd@{android\_app\_write\_cmd}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{android\_app\_write\_cmd()}{android\_app\_write\_cmd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} android\+\_\+app\+\_\+write\+\_\+cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*}}]{android\+\_\+app,  }\item[{\mbox{\hyperlink{external_2glfw_2deps_2vs2008_2stdint_8h_aef44329758059c91c76d334e8fc09700}{int8\+\_\+t}}}]{cmd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00281}{281}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_ad6cb2999c43578c26088c6a5147ccdc1}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_ad6cb2999c43578c26088c6a5147ccdc1} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!app\_dummy@{app\_dummy}}
+\index{app\_dummy@{app\_dummy}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{app\_dummy()}{app\_dummy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} app\+\_\+dummy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00170}{170}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_abf6f79741bbdaf07af45de03ecbe4a2b}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_abf6f79741bbdaf07af45de03ecbe4a2b} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!free\_saved\_state@{free\_saved\_state}}
+\index{free\_saved\_state@{free\_saved\_state}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{free\_saved\_state()}{free\_saved\_state()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} free\+\_\+saved\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*}}]{android\+\_\+app }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00039}{39}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a5c2e102334bceec099d7a6d40c902b31}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a5c2e102334bceec099d7a6d40c902b31} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!onConfigurationChanged@{onConfigurationChanged}}
+\index{onConfigurationChanged@{onConfigurationChanged}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{onConfigurationChanged()}{onConfigurationChanged()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} on\+Configuration\+Changed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}}]{activity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00385}{385}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a56759a8bf96f41a99be04b38bb4dd69c}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a56759a8bf96f41a99be04b38bb4dd69c} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!onDestroy@{onDestroy}}
+\index{onDestroy@{onDestroy}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{onDestroy()}{onDestroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} on\+Destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}}]{activity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00336}{336}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a50cdef0c29f877df39d14e0acad17f8b}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a50cdef0c29f877df39d14e0acad17f8b} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!onInputQueueCreated@{onInputQueueCreated}}
+\index{onInputQueueCreated@{onInputQueueCreated}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{onInputQueueCreated()}{onInputQueueCreated()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} on\+Input\+Queue\+Created (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}}]{activity,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{AInput\+Queue}} \texorpdfstring{$\ast$}{*}}]{queue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00413}{413}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a7000cec842e1d4a4aaa751efe145293f}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a7000cec842e1d4a4aaa751efe145293f} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!onInputQueueDestroyed@{onInputQueueDestroyed}}
+\index{onInputQueueDestroyed@{onInputQueueDestroyed}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{onInputQueueDestroyed()}{onInputQueueDestroyed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} on\+Input\+Queue\+Destroyed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}}]{activity,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{AInput\+Queue}} \texorpdfstring{$\ast$}{*}}]{queue }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00418}{418}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_aa934344afbe7126328439d652dd48ead}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_aa934344afbe7126328439d652dd48ead} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!onLowMemory@{onLowMemory}}
+\index{onLowMemory@{onLowMemory}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{onLowMemory()}{onLowMemory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} on\+Low\+Memory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}}]{activity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00391}{391}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a3b40afdd3cf4ed539f30fb2bbae01cbe}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a3b40afdd3cf4ed539f30fb2bbae01cbe} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!onNativeWindowCreated@{onNativeWindowCreated}}
+\index{onNativeWindowCreated@{onNativeWindowCreated}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{onNativeWindowCreated()}{onNativeWindowCreated()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} on\+Native\+Window\+Created (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}}]{activity,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Window}} \texorpdfstring{$\ast$}{*}}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00403}{403}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_ac010252bcdd5dbcbf4898b976f805794}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_ac010252bcdd5dbcbf4898b976f805794} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!onNativeWindowDestroyed@{onNativeWindowDestroyed}}
+\index{onNativeWindowDestroyed@{onNativeWindowDestroyed}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{onNativeWindowDestroyed()}{onNativeWindowDestroyed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} on\+Native\+Window\+Destroyed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}}]{activity,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Window}} \texorpdfstring{$\ast$}{*}}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00408}{408}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a44c7518cf6aaf3001170a3b41694a227}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a44c7518cf6aaf3001170a3b41694a227} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!onPause@{onPause}}
+\index{onPause@{onPause}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{onPause()}{onPause()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} on\+Pause (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}}]{activity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00375}{375}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a28e79b82a1b62e451c6e2a5f8ce4c27c}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a28e79b82a1b62e451c6e2a5f8ce4c27c} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!onResume@{onResume}}
+\index{onResume@{onResume}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{onResume()}{onResume()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} on\+Resume (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}}]{activity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00346}{346}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_afe341c9fe4417f835eb608bad18c79b1}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_afe341c9fe4417f835eb608bad18c79b1} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!onSaveInstanceState@{onSaveInstanceState}}
+\index{onSaveInstanceState@{onSaveInstanceState}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{onSaveInstanceState()}{onSaveInstanceState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*} on\+Save\+Instance\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}}]{activity,  }\item[{\mbox{\hyperlink{stddef_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{out\+Len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00351}{351}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a76fc680c6a1e18e9075981a8440bd0dc}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a76fc680c6a1e18e9075981a8440bd0dc} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!onStart@{onStart}}
+\index{onStart@{onStart}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{onStart()}{onStart()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} on\+Start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}}]{activity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00341}{341}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_af3d57f3d1c25a2de15fe2f96cad1f289}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_af3d57f3d1c25a2de15fe2f96cad1f289} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!onStop@{onStop}}
+\index{onStop@{onStop}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{onStop()}{onStop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} on\+Stop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}}]{activity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00380}{380}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a7947bc2d83b0bea14307f98ca78b7bd8}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a7947bc2d83b0bea14307f98ca78b7bd8} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!onWindowFocusChanged@{onWindowFocusChanged}}
+\index{onWindowFocusChanged@{onWindowFocusChanged}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{onWindowFocusChanged()}{onWindowFocusChanged()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} on\+Window\+Focus\+Changed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ANative\+Activity}} \texorpdfstring{$\ast$}{*}}]{activity,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{focused }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00397}{397}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_acd491a7613bf994264e52d20cb8b5940}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_acd491a7613bf994264e52d20cb8b5940} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!print\_cur\_config@{print\_cur\_config}}
+\index{print\_cur\_config@{print\_cur\_config}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{print\_cur\_config()}{print\_cur\_config()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} print\+\_\+cur\+\_\+config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*}}]{android\+\_\+app }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00064}{64}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a109afe717394c73062cf789a9268155c}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a109afe717394c73062cf789a9268155c} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!process\_cmd@{process\_cmd}}
+\index{process\_cmd@{process\_cmd}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{process\_cmd()}{process\_cmd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} process\+\_\+cmd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*}}]{app,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__poll__source}{android\+\_\+poll\+\_\+source}} \texorpdfstring{$\ast$}{*}}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00201}{201}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+
+\Hypertarget{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a2304d003b52771ef13b7878e27fd0d66}\label{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_a2304d003b52771ef13b7878e27fd0d66} 
+\index{android\_native\_app\_glue.c@{android\_native\_app\_glue.c}!process\_input@{process\_input}}
+\index{process\_input@{process\_input}!android\_native\_app\_glue.c@{android\_native\_app\_glue.c}}
+\doxysubsubsection{\texorpdfstring{process\_input()}{process\_input()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} process\+\_\+input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__app}{android\+\_\+app}} \texorpdfstring{$\ast$}{*}}]{app,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{structandroid__poll__source}{android\+\_\+poll\+\_\+source}} \texorpdfstring{$\ast$}{*}}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source_l00188}{188}} of file \mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2android_2native__app__glue_2android__native__app__glue_8c_source}{android\+\_\+native\+\_\+app\+\_\+glue.\+c}}.
+

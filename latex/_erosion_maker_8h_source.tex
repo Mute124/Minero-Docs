@@ -1,0 +1,103 @@
+\doxysection{Erosion\+Maker.\+h}
+\hypertarget{_erosion_maker_8h_source}{}\label{_erosion_maker_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/ErosionMaker.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/ErosionMaker.h}}
+\mbox{\hyperlink{_erosion_maker_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ EROSION\_MAKER}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ EROSION\_MAKER}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2raylib_8h}{raylib.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00008}00008\ \textcolor{comment}{//\ used\ to\ sample\ a\ point\ in\ the\ heightmap\ and\ get\ the\ gradient}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00009}\mbox{\hyperlink{struct_height_and_gradient}{00009}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00011}\mbox{\hyperlink{struct_height_and_gradient_a8c52112b0bfda477dcbbb269f71fc316}{00011}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_height_and_gradient_a8c52112b0bfda477dcbbb269f71fc316}{height}};}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00012}\mbox{\hyperlink{struct_height_and_gradient_a110de06401e2d6f3eeeed6477a22e62b}{00012}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_height_and_gradient_a110de06401e2d6f3eeeed6477a22e62b}{gradientX}};}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00013}\mbox{\hyperlink{struct_height_and_gradient_a783e242d850cb6ba9b9b7f2e7bb57f06}{00013}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_height_and_gradient_a783e242d850cb6ba9b9b7f2e7bb57f06}{gradientY}};}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00014}00014\ \}\ \mbox{\hyperlink{struct_height_and_gradient}{HeightAndGradient}};}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00016}00016\ \textcolor{comment}{//\ describes\ the\ shape\ of\ the\ smoothing\ to\ apply\ to\ map\ borders}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00017}\mbox{\hyperlink{_erosion_maker_8h_a0bb3c96a5ae4411bf72bdafaaaaec12a}{00017}}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_erosion_maker_8h_a0bb3c96a5ae4411bf72bdafaaaaec12a}{GradientType}}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00018}00018\ \{}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00019}\mbox{\hyperlink{_erosion_maker_8h_a0bb3c96a5ae4411bf72bdafaaaaec12aa4233fbf0cafb86abcee94b38d769fc59}{00019}}\ \ \ \ \ \mbox{\hyperlink{_erosion_maker_8h_a0bb3c96a5ae4411bf72bdafaaaaec12aa4233fbf0cafb86abcee94b38d769fc59}{SQUARE}}\ =\ 0,}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00020}\mbox{\hyperlink{_erosion_maker_8h_a0bb3c96a5ae4411bf72bdafaaaaec12aaa79c827759ea48f0735386c4b1188911}{00020}}\ \ \ \ \ \mbox{\hyperlink{_erosion_maker_8h_a0bb3c96a5ae4411bf72bdafaaaaec12aaa79c827759ea48f0735386c4b1188911}{CIRCLE}}\ =\ 1,}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00021}\mbox{\hyperlink{_erosion_maker_8h_a0bb3c96a5ae4411bf72bdafaaaaec12aa714f2cc5c292a305e2da3c03bd63916a}{00021}}\ \ \ \ \ \mbox{\hyperlink{_erosion_maker_8h_a0bb3c96a5ae4411bf72bdafaaaaec12aa714f2cc5c292a305e2da3c03bd63916a}{DIAMOND}}\ =\ 2,}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00022}\mbox{\hyperlink{_erosion_maker_8h_a0bb3c96a5ae4411bf72bdafaaaaec12aa9d398750ed310ae69cd070016810e4dc}{00022}}\ \ \ \ \ \mbox{\hyperlink{_erosion_maker_8h_a0bb3c96a5ae4411bf72bdafaaaaec12aa9d398750ed310ae69cd070016810e4dc}{STAR}}\ =\ 3,}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00023}00023\ \};}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00025}00025\ \textcolor{comment}{//\ singleton\ responsible\ for\ simulating\ erosion\ on\ a\ heightmap}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00026}\mbox{\hyperlink{class_erosion_maker}{00026}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_erosion_maker}{ErosionMaker}}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00027}00027\ \{}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00028}00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00029}\mbox{\hyperlink{class_erosion_maker_ae17d133e10e155b6e26674fa588d6453}{00029}}\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_erosion_maker}{ErosionMaker}}\&\ \mbox{\hyperlink{class_erosion_maker_ae17d133e10e155b6e26674fa588d6453}{GetInstance}}()}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00030}00030\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_erosion_maker}{ErosionMaker}}\ instance;\ \textcolor{comment}{//\ Guaranteed\ to\ be\ destroyed.}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Instantiated\ on\ first\ use.}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00036}00036\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00037}\mbox{\hyperlink{class_erosion_maker_a57e38e9fa42629c1ff66d7043d0557ad}{00037}}\ \ \ \ \ \mbox{\hyperlink{class_erosion_maker_a57e38e9fa42629c1ff66d7043d0557ad}{ErosionMaker}}()\ \{\}\ \textcolor{comment}{//\ Constructor?\ (the\ \{\}\ brackets)\ are\ needed\ here.}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00039}00039\ \ \ \ \ \textcolor{comment}{//\ C++\ 03}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00040}00040\ \ \ \ \ \textcolor{comment}{//\ ========}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00041}00041\ \ \ \ \ \textcolor{comment}{//\ Don't\ forget\ to\ declare\ these\ two.\ You\ want\ to\ make\ sure\ they}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00042}00042\ \ \ \ \ \textcolor{comment}{//\ are\ inaccessible(especially\ from\ outside),\ otherwise,\ you\ may\ accidentally\ get\ copies\ of}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00043}00043\ \ \ \ \ \textcolor{comment}{//\ your\ singleton\ appearing.}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00044}\mbox{\hyperlink{class_erosion_maker_aa0ddcb0359378e728fb530b4aa059895}{00044}}\ \ \ \ \ \mbox{\hyperlink{class_erosion_maker_aa0ddcb0359378e728fb530b4aa059895}{ErosionMaker}}(\mbox{\hyperlink{class_erosion_maker}{ErosionMaker}}\ \textcolor{keyword}{const}\&);\ \ \ \textcolor{comment}{//\ Don't\ Implement}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00045}\mbox{\hyperlink{class_erosion_maker_a38c986b3b437984b0a10b34d4a1b0849}{00045}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_erosion_maker_a38c986b3b437984b0a10b34d4a1b0849}{operator=}}(\mbox{\hyperlink{class_erosion_maker}{ErosionMaker}}\ \textcolor{keyword}{const}\&);\ \textcolor{comment}{//\ Don't\ Implement}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00047}00047\ \ \ \ \ \textcolor{comment}{//\ C++\ 11}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00048}00048\ \ \ \ \ \textcolor{comment}{//\ =======}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00049}00049\ \ \ \ \ \textcolor{comment}{//\ We\ can\ use\ the\ better\ technique\ of\ deleting\ the\ methods}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00050}00050\ \ \ \ \ \textcolor{comment}{//\ we\ don't\ want.}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00052}00052\ \ \ \ \ \textcolor{comment}{//\ indices\ and\ weights\ of\ erosion\ brush\ precomputed\ for\ every\ cell}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00053}00053\ \ \ \ \ \textcolor{comment}{//\ it's\ a\ cache\ used\ to\ speed\ up\ the\ area\ of\ effect\ erosion\ of\ a\ droplet}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00054}\mbox{\hyperlink{class_erosion_maker_ad7357b19642bed8acddf78d23fe2ed55}{00054}}\ \ \ \ \ std::vector<std::vector<int>*>*\ \mbox{\hyperlink{class_erosion_maker_ad7357b19642bed8acddf78d23fe2ed55}{erosionBrushIndices}}\ =\ \textcolor{keyword}{nullptr};\ \textcolor{comment}{//\ for\ each\ cell,\ a\ reference\ to\ neighbors\ is\ held}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00055}\mbox{\hyperlink{class_erosion_maker_a616fe597eeb006f7550d0e4e95480fb3}{00055}}\ \ \ \ \ std::vector<std::vector<float>*>*\ \mbox{\hyperlink{class_erosion_maker_a616fe597eeb006f7550d0e4e95480fb3}{erosionBrushWeights}}\ =\ \textcolor{keyword}{nullptr};\ \textcolor{comment}{//\ for\ each\ cell,\ a\ reference\ to\ how\ much\ it\ influences\ neighbors}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00057}\mbox{\hyperlink{class_erosion_maker_ae3e78a5279dba3ccb2f50f560b5d6ab7}{00057}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_erosion_maker_ae3e78a5279dba3ccb2f50f560b5d6ab7}{currentSeed}};\ \textcolor{comment}{//\ current\ random\ seed}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00058}\mbox{\hyperlink{class_erosion_maker_abaf3878cb9b511b263e04e7f519c5d90}{00058}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_erosion_maker_abaf3878cb9b511b263e04e7f519c5d90}{currentErosionRadius}};\ }
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00059}\mbox{\hyperlink{class_erosion_maker_a489559f0bb283788d9fde617d85b3093}{00059}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_erosion_maker_a489559f0bb283788d9fde617d85b3093}{currentMapSize}};}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00061}00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_erosion_maker_a513e9b124315191ec9ae264bcf0da22d}{Initialize}}(\textcolor{keywordtype}{int}\ mapSize,\ \textcolor{keywordtype}{bool}\ resetSeed);\ }
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00062}00062\ \ \ \ \ \mbox{\hyperlink{struct_height_and_gradient}{HeightAndGradient}}\ \mbox{\hyperlink{class_erosion_maker_a4e0359c190ff47874f0c5e2bd12f0312}{CalculateHeightAndGradient}}(std::vector<float>*\ nodes,\ \textcolor{keywordtype}{int}\ mapSize,\ \textcolor{keywordtype}{float}\ posX,\ \textcolor{keywordtype}{float}\ posY);\ \textcolor{comment}{//\ calculates\ height\ and\ gradient\ of\ a\ spot\ in\ the\ map}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00063}00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_erosion_maker_a90cf8a88a392d583d6ebd6377b2850ca}{InitializeBrushIndices}}(\textcolor{keywordtype}{int}\ mapSize,\ \textcolor{keywordtype}{int}\ radius);\ \textcolor{comment}{//\ initialize\ the\ brush\ cache}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00064}00064\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_erosion_maker_aedd4575135934719f6fd2fc4db79a857}{RemapValue}}(\textcolor{keywordtype}{float}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{value}});\ \textcolor{comment}{//\ remaps\ a\ single\ value\ of\ a\ map\ to\ nonlinear\ scale\ in\ order\ to\ smooth\ beach\ areas}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00066}00066\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00067}00067\ \ \ \ \ \textcolor{comment}{//ErosionMaker(ErosionMaker\ const\ \&)\ =\ delete;}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00068}00068\ \ \ \ \ \textcolor{comment}{//void\ operator=(ErosionMaker\ const\ \&)\ =\ delete;}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00070}00070\ \ \ \ \ \textcolor{comment}{//\ Note:\ Scott\ Meyers\ mentions\ in\ his\ Effective\ Modern}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00071}00071\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ C++\ book,\ that\ deleted\ functions\ should\ generally}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00072}00072\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ be\ public\ as\ it\ results\ in\ better\ error\ messages}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00073}00073\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ due\ to\ the\ compilers\ behavior\ to\ check\ accessibility}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00074}00074\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ before\ deleted\ status}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00076}00076\ \ \ \ \ \textcolor{comment}{//int\ seed\ =\ 0;}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00077}\mbox{\hyperlink{class_erosion_maker_ada80269398495d003387712899065a61}{00077}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_erosion_maker_ada80269398495d003387712899065a61}{erosionRadius}}\ =\ 6;\textcolor{comment}{//12;\ //\ Range\ (2,\ 8)}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00079}\mbox{\hyperlink{class_erosion_maker_a4c7d7ab3878902a01645b7e569853d2c}{00079}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_erosion_maker_a4c7d7ab3878902a01645b7e569853d2c}{inertia}}\ =\ 0.05f;\ \textcolor{comment}{//\ range\ (0,\ 1)\ at\ zero,\ water\ will\ instantly\ change\ direction\ to\ flow\ downhill.\ At\ 1,\ water\ will\ never\ change\ direction.\ }}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00080}\mbox{\hyperlink{class_erosion_maker_a145958461d6aaed4636f5f6b4bc57766}{00080}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_erosion_maker_a145958461d6aaed4636f5f6b4bc57766}{sedimentCapacityFactor}}\ =\ 6.0f;\ \textcolor{comment}{//\ multiplier\ for\ how\ much\ sediment\ a\ droplet\ can\ carry}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00081}\mbox{\hyperlink{class_erosion_maker_a7f1fcc0bb9a87e2c1267505e53004e65}{00081}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_erosion_maker_a7f1fcc0bb9a87e2c1267505e53004e65}{minSedimentCapacity}}\ =\ 0.01f;\ \textcolor{comment}{//\ used\ to\ prevent\ carry\ capacity\ getting\ too\ close\ to\ zero\ on\ flatter\ terrain}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00082}\mbox{\hyperlink{class_erosion_maker_a3b33e6f9d2ad0b1be808711c7789fd68}{00082}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_erosion_maker_a3b33e6f9d2ad0b1be808711c7789fd68}{erodeSpeed}}\ =\ 0.3f;\ \textcolor{comment}{//\ range\ (0,\ 1)\ how\ easily\ a\ droplet\ removes\ sediment}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00083}\mbox{\hyperlink{class_erosion_maker_acb95634449d3c7f804f9c3fc766a4630}{00083}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_erosion_maker_acb95634449d3c7f804f9c3fc766a4630}{depositSpeed}}\ =\ 0.3f;\ \textcolor{comment}{//\ range\ (0,\ 1)\ how\ easily\ a\ droplet\ deposits\ sediment}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00084}\mbox{\hyperlink{class_erosion_maker_a7e4593b2f48a8cf116d982a6503004ba}{00084}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_erosion_maker_a7e4593b2f48a8cf116d982a6503004ba}{evaporateSpeed}}\ =\ 0.01f;\ \textcolor{comment}{//\ range\ (0,\ 1)\ droplets\ evaporate\ during\ their\ lifetime,\ reducing\ mass}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00085}\mbox{\hyperlink{class_erosion_maker_a84968a5d762c48d0905a26304edc13a0}{00085}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_erosion_maker_a84968a5d762c48d0905a26304edc13a0}{gravity}}\ =\ 4.0f;\ \textcolor{comment}{//\ determines\ speed\ increase\ of\ the\ droplet\ upon\ a\ slope}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00086}\mbox{\hyperlink{class_erosion_maker_a8a14aa1a5d018f8ac105db4ef88c1615}{00086}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_erosion_maker_a8a14aa1a5d018f8ac105db4ef88c1615}{maxDropletLifetime}}\ =\ 60;}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00088}\mbox{\hyperlink{class_erosion_maker_ab9e42b27af2cbded22a126bb0f15f9d6}{00088}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_erosion_maker_ab9e42b27af2cbded22a126bb0f15f9d6}{initialWaterVolume}}\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00089}\mbox{\hyperlink{class_erosion_maker_a53458611e9186e3b0e767750cc97fc76}{00089}}\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_erosion_maker_a53458611e9186e3b0e767750cc97fc76}{initialSpeed}}\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00091}00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_erosion_maker_a16fc934b9484b727647d827071cac841}{Erode}}(std::vector<float>*\ map,\ \textcolor{keywordtype}{int}\ mapSize,\ \textcolor{keywordtype}{int}\ numIterations\ =\ 1,\ \textcolor{keywordtype}{bool}\ resetSeed\ =\ \textcolor{keyword}{false});\ \textcolor{comment}{//\ applies\ erosion\ to\ the\ map}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00092}00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_erosion_maker_abad42d1d3d1aecfeea9bffc3f10e2f40}{Gradient}}(std::vector<float>*\ map,\ \textcolor{keywordtype}{int}\ mapSize,\ \textcolor{keywordtype}{float}\ normalizedOffset,\ \mbox{\hyperlink{_erosion_maker_8h_a0bb3c96a5ae4411bf72bdafaaaaec12a}{GradientType}}\ gradientType);\ \textcolor{comment}{//\ allpies\ a\ gradient\ to\ the\ map\ in\ order\ to\ get\ flat\ borders}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00093}00093\ \ \ \ \ \mbox{\hyperlink{struct_vector3}{Vector3}}\ \mbox{\hyperlink{class_erosion_maker_a60848ae7b0dbef403350fcd71d456b71}{GetNormal}}(std::vector<float>*\ map,\ \textcolor{keywordtype}{int}\ mapSize,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a4f27f1eebce8c31db01bb39fab9ef561}{y}});\ \textcolor{comment}{//\ gets\ the\ normal\ of\ a\ point\ in\ the\ map\ using\ interpolation}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00094}00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_erosion_maker_a323c5b8e483ad5bb71db4df28e9fd1f6}{Remap}}(std::vector<float>*\ map,\ \textcolor{keywordtype}{int}\ mapSize);\ \textcolor{comment}{//\ applies\ a\ filter\ to\ the\ map\ in\ order\ to\ flatten\ beach\ areas\ by\ remapping\ normalized\ values}}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00095}00095\ \};}
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{_erosion_maker_8h_source_l00097}00097\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

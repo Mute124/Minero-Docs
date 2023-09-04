@@ -1,0 +1,189 @@
+\doxysection{postypes.\+h}
+\hypertarget{postypes_8h_source}{}\label{postypes_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/bits/postypes.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/bits/postypes.h}}
+\mbox{\hyperlink{postypes_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00001}00001\ \textcolor{comment}{//\ Position\ types\ -\/*-\/\ C++\ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00003}00003\ \textcolor{comment}{//\ Copyright\ (C)\ 1997-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00005}00005\ \textcolor{comment}{//\ This\ file\ is\ part\ of\ the\ GNU\ ISO\ C++\ Library.\ \ This\ library\ is\ free}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00006}00006\ \textcolor{comment}{//\ software;\ you\ can\ redistribute\ it\ and/or\ modify\ it\ under\ the}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00007}00007\ \textcolor{comment}{//\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by\ the}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00008}00008\ \textcolor{comment}{//\ Free\ Software\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00009}00009\ \textcolor{comment}{//\ any\ later\ version.}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00011}00011\ \textcolor{comment}{//\ This\ library\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00012}00012\ \textcolor{comment}{//\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00013}00013\ \textcolor{comment}{//\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00014}00014\ \textcolor{comment}{//\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00016}00016\ \textcolor{comment}{//\ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00017}00017\ \textcolor{comment}{//\ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00018}00018\ \textcolor{comment}{//\ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00020}00020\ \textcolor{comment}{//\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00021}00021\ \textcolor{comment}{//\ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00022}00022\ \textcolor{comment}{//\ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00023}00023\ \textcolor{comment}{//\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00030}00030\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00031}00031\ \textcolor{comment}{//\ ISO\ C++\ 14882:\ 27.4.1\ -\/\ Types}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00032}00032\ \textcolor{comment}{//\ ISO\ C++\ 14882:\ 27.4.3\ -\/\ Template\ class\ fpos}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00033}00033\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00035}00035\ \textcolor{preprocessor}{\#ifndef\ \_GLIBCXX\_POSTYPES\_H}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00036}00036\ \textcolor{preprocessor}{\#define\ \_GLIBCXX\_POSTYPES\_H\ 1}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00038}00038\ \textcolor{preprocessor}{\#pragma\ GCC\ system\_header}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00040}00040\ \textcolor{preprocessor}{\#include\ <cwchar>}\ \textcolor{comment}{//\ For\ mbstate\_t}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00042}\mbox{\hyperlink{postypes_8h_a544d74b2d5d0dd2197f5fd6f02691de0}{00042}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacestd}{std}}\ \mbox{\hyperlink{c_09_09config_8h_a44377df0d3503f0b3d9ab316dd8ddf8b}{\_GLIBCXX\_VISIBILITY}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{default}})}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00043}00043\ \{}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00044}00044\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_GLIBCXX\_BEGIN\_NAMESPACE\_VERSION}}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00046}00046\ \ \ \textcolor{comment}{//\ The\ types\ streamoff,\ streampos\ and\ wstreampos\ and\ the\ class}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00047}00047\ \ \ \textcolor{comment}{//\ template\ fpos<>\ are\ described\ in\ clauses\ 21.1.2,\ 21.1.3,\ 27.1.2,}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00048}00048\ \ \ \textcolor{comment}{//\ 27.2,\ 27.4.1,\ 27.4.3\ and\ D.6.\ Despite\ all\ this\ verbiage,\ the}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00049}00049\ \ \ \textcolor{comment}{//\ behaviour\ of\ these\ types\ is\ mostly\ implementation\ defined\ or}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00050}00050\ \ \ \textcolor{comment}{//\ unspecified.\ The\ behaviour\ in\ this\ implementation\ is\ as\ noted}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00051}00051\ \ \ \textcolor{comment}{//\ below.}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00061}00061\ \textcolor{preprocessor}{\#ifdef\ \_\_INT64\_TYPE\_\_}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00062}00062\ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_INT64\_TYPE\_\_}}\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{streamoff}};}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00063}00063\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00064}00064\ \ \ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{streamoff}};}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00065}00065\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00068}00068\ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{stddef_8h_a6d26a0475a6d6c897e655cdc5d8019d2}{ptrdiff\_t}}\ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{streamsize}};\ \textcolor{comment}{//\ Signed\ integral\ type}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00081}00081\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_StateT>}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00082}00082\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{fpos}}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00083}00083\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00084}00084\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00085}00085\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{streamoff}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_off}};}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00086}00086\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_StateT}}\ \ \ \ \ \ \ \ \ \ \ \ \_M\_state;}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00088}00088\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00089}00089\ \ \ \ \ \ \ \textcolor{comment}{//\ The\ standard\ doesn't\ require\ that\ fpos\ objects\ can\ be\ default}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00090}00090\ \ \ \ \ \ \ \textcolor{comment}{//\ constructed.\ This\ implementation\ provides\ a\ default}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00091}00091\ \ \ \ \ \ \ \textcolor{comment}{//\ constructor\ that\ initializes\ the\ offset\ to\ 0\ and\ default}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00092}00092\ \ \ \ \ \ \ \textcolor{comment}{//\ constructs\ the\ state.}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00093}00093\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{fpos}}()}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00094}00094\ \ \ \ \ \ \ :\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_off}}(0),\ \_M\_state()\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00096}00096\ \ \ \ \ \ \ \textcolor{comment}{//\ The\ standard\ requires\ that\ fpos\ objects\ can\ be\ constructed}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00097}00097\ \ \ \ \ \ \ \textcolor{comment}{//\ from\ streamoff\ objects\ using\ the\ constructor\ syntax,\ and}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00098}00098\ \ \ \ \ \ \ \textcolor{comment}{//\ fails\ to\ give\ any\ meaningful\ semantics.\ In\ this}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00099}00099\ \ \ \ \ \ \ \textcolor{comment}{//\ implementation\ implicit\ conversion\ is\ also\ allowed,\ and\ this}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00100}00100\ \ \ \ \ \ \ \textcolor{comment}{//\ constructor\ stores\ the\ streamoff\ as\ the\ offset\ and\ default}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00101}00101\ \ \ \ \ \ \ \textcolor{comment}{//\ constructs\ the\ state.}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00103}00103\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{fpos}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{streamoff}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_off}})}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00104}00104\ \ \ \ \ \ \ :\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_off}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_off}}),\ \_M\_state()\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00106}00106\ \textcolor{preprocessor}{\#if\ \_\_cplusplus\ >=\ 201103L}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00107}00107\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{fpos}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{fpos}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00108}00108\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{fpos}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{fpos}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00109}00109\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\string~fpos}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00110}00110\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00113}00113\ \ \ \ \ \ \ \textcolor{keyword}{operator}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{streamoff}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_off}};\ \}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00116}00116\ \ \ \ \ \ \ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00117}00117\ \ \ \ \ \ \ state(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_StateT}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_st}})}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00118}00118\ \ \ \ \ \ \ \{\ \_M\_state\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_st}};\ \}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00121}00121\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_StateT}}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00122}00122\ \ \ \ \ \ \ state()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00123}00123\ \textcolor{keyword}{\ \ \ \ \ \ }\{\ \textcolor{keywordflow}{return}\ \_M\_state;\ \}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00125}00125\ \ \ \ \ \ \ \textcolor{comment}{//\ The\ standard\ requires\ that\ this\ operator\ must\ be\ defined,\ but}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00126}00126\ \ \ \ \ \ \ \textcolor{comment}{//\ gives\ no\ semantics.\ In\ this\ implementation\ it\ just\ adds\ its}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00127}00127\ \ \ \ \ \ \ \textcolor{comment}{//\ argument\ to\ the\ stored\ offset\ and\ returns\ *this.}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00129}00129\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{fpos}}\&}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00130}00130\ \ \ \ \ \ \ operator+=(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{streamoff}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_off}})}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00131}00131\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00132}00132\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_off}}\ +=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_off}};}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00133}00133\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00134}00134\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00136}00136\ \ \ \ \ \ \ \textcolor{comment}{//\ The\ standard\ requires\ that\ this\ operator\ must\ be\ defined,\ but}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00137}00137\ \ \ \ \ \ \ \textcolor{comment}{//\ gives\ no\ semantics.\ In\ this\ implementation\ it\ just\ subtracts}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00138}00138\ \ \ \ \ \ \ \textcolor{comment}{//\ its\ argument\ from\ the\ stored\ offset\ and\ returns\ *this.}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00140}00140\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{fpos}}\&}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00141}00141\ \ \ \ \ \ \ operator-\/=(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{streamoff}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_off}})}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00142}00142\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00143}00143\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_off}}\ -\/=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_off}};}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00144}00144\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00145}00145\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00146}00146\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00147}00147\ \ \ \ \ \ \ \textcolor{comment}{//\ The\ standard\ requires\ that\ this\ operator\ must\ be\ defined,\ but}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00148}00148\ \ \ \ \ \ \ \textcolor{comment}{//\ defines\ its\ semantics\ only\ in\ terms\ of\ operator-\/.\ In\ this}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00149}00149\ \ \ \ \ \ \ \textcolor{comment}{//\ implementation\ it\ constructs\ a\ copy\ of\ *this,\ adds\ the}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00150}00150\ \ \ \ \ \ \ \textcolor{comment}{//\ argument\ to\ that\ copy\ using\ operator+=\ and\ then\ returns\ the}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00151}00151\ \ \ \ \ \ \ \textcolor{comment}{//\ copy.}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00153}00153\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{fpos}}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00154}00154\ \ \ \ \ \ \ operator+(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{streamoff}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_off}})\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00155}00155\ \textcolor{keyword}{\ \ \ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00156}00156\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{fpos}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_pos}}(*\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00157}00157\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_pos}}\ +=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_off}};}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00158}00158\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_pos}};}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00159}00159\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00161}00161\ \ \ \ \ \ \ \textcolor{comment}{//\ The\ standard\ requires\ that\ this\ operator\ must\ be\ defined,\ but}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00162}00162\ \ \ \ \ \ \ \textcolor{comment}{//\ defines\ its\ semantics\ only\ in\ terms\ of\ operator+.\ In\ this}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00163}00163\ \ \ \ \ \ \ \textcolor{comment}{//\ implementation\ it\ constructs\ a\ copy\ of\ *this,\ subtracts\ the}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00164}00164\ \ \ \ \ \ \ \textcolor{comment}{//\ argument\ from\ that\ copy\ using\ operator-\/=\ and\ then\ returns\ the}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00165}00165\ \ \ \ \ \ \ \textcolor{comment}{//\ copy.}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00167}00167\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{fpos}}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00168}00168\ \ \ \ \ \ \ operator-\/(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{streamoff}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_off}})\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00169}00169\ \textcolor{keyword}{\ \ \ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00170}00170\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{fpos}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_pos}}(*\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00171}00171\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_pos}}\ -\/=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_off}};}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00172}00172\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_pos}};}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00173}00173\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00174}00174\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00175}00175\ \ \ \ \ \ \ \textcolor{comment}{//\ The\ standard\ requires\ that\ this\ operator\ must\ be\ defined,\ but}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00176}00176\ \ \ \ \ \ \ \textcolor{comment}{//\ defines\ its\ semantics\ only\ in\ terms\ of\ operator+.\ In\ this}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00177}00177\ \ \ \ \ \ \ \textcolor{comment}{//\ implementation\ it\ returns\ the\ difference\ between\ the\ offset}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00178}00178\ \ \ \ \ \ \ \textcolor{comment}{//\ stored\ in\ *this\ and\ in\ the\ argument.}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00180}00180\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{streamoff}}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00181}00181\ \ \ \ \ \ \ operator-\/(\textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{fpos}}\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_other}})\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00182}00182\ \textcolor{keyword}{\ \ \ \ \ \ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_off}}\ -\/\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_other}}.\_M\_off;\ \}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00183}00183\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00185}00185\ \ \ \textcolor{comment}{//\ The\ standard\ only\ requires\ that\ operator==\ must\ be\ an}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00186}00186\ \ \ \textcolor{comment}{//\ equivalence\ relation.\ In\ this\ implementation\ two\ fpos<StateT>}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00187}00187\ \ \ \textcolor{comment}{//\ objects\ belong\ to\ the\ same\ equivalence\ class\ if\ the\ contained}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00188}00188\ \ \ \textcolor{comment}{//\ offsets\ compare\ equal.}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00190}00190\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_StateT>}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00191}00191\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00192}00192\ \ \ \ \ operator==(\textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{fpos<\_StateT>}}\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_lhs}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{fpos<\_StateT>}}\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_rhs}})}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00193}00193\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{streamoff}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_lhs}})\ ==\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{streamoff}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_rhs}});\ \}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00194}00194\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00195}00195\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_StateT>}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00196}00196\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00197}00197\ \ \ \ \ operator!=(\textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{fpos<\_StateT>}}\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_lhs}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{fpos<\_StateT>}}\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_rhs}})}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00198}00198\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{streamoff}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_lhs}})\ !=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{streamoff}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_rhs}});\ \}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00199}00199\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00200}00200\ \ \ \textcolor{comment}{//\ Clauses\ 21.1.3.1\ and\ 21.1.3.2\ describe\ streampos\ and\ wstreampos}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00201}00201\ \ \ \textcolor{comment}{//\ as\ implementation\ defined\ types,\ but\ clause\ 27.2\ requires\ that}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00202}00202\ \ \ \textcolor{comment}{//\ they\ must\ both\ be\ typedefs\ for\ fpos<mbstate\_t>}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00204}00204\ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{fpos<mbstate\_t>}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{streampos}};}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00206}00206\ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{fpos<mbstate\_t>}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{wstreampos}};}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00207}00207\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00208}00208\ \textcolor{preprocessor}{\#ifdef\ \_GLIBCXX\_USE\_CHAR8\_T}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00210}00210\ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{fpos<mbstate\_t>}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{u8streampos}};}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00211}00211\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00212}00212\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00213}00213\ \textcolor{preprocessor}{\#if\ \_\_cplusplus\ >=\ 201103L}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00215}00215\ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{fpos<mbstate\_t>}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{u16streampos}};}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00217}00217\ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{fpos<mbstate\_t>}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{u32streampos}};}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00218}00218\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00219}00219\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00220}00220\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_GLIBCXX\_END\_NAMESPACE\_VERSION}}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00221}00221\ \}\ \textcolor{comment}{//\ namespace}}
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00222}00222\ }
+\DoxyCodeLine{\Hypertarget{postypes_8h_source_l00223}00223\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

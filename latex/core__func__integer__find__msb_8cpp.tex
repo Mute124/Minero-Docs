@@ -1,0 +1,264 @@
+\doxysection{C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/glm/test/core/core\+\_\+func\+\_\+integer\+\_\+find\+\_\+msb.cpp File Reference}
+\hypertarget{core__func__integer__find__msb_8cpp}{}\label{core__func__integer__find__msb_8cpp}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/glm/test/core/core\_func\_integer\_find\_msb.cpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/glm/test/core/core\_func\_integer\_find\_msb.cpp}}
+{\ttfamily \#include $<$glm/glm.\+hpp$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{core__func__integer__find__msb_8cpp_aa4d6abc7b58eb11e517993df83b7f0f7}{LE}}~1
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{core__func__integer__find__msb_8cpp_a1f9aca42e2010bb82488684dee1a66ea}{u}}~99
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{core__func__integer__find__msb_8cpp_af90aa2f32f9c39ddd552c1d27f65dbaf}{pop}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{core__func__integer__find__msb_8cpp_abaa1e000f71f22604a6830addf6f8f01}{nlz1}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{core__func__integer__find__msb_8cpp_ae73031cbd6fa525885cea5be27b97558}{nlz1a}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{core__func__integer__find__msb_8cpp_a635a9b105c39b6b680e33038733f3e29}{nlz2}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{core__func__integer__find__msb_8cpp_a26eb10fc78ab8ab90c9ad0a2ed43b0d3}{nlz2a}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{core__func__integer__find__msb_8cpp_a58814a20b9718845bd8a0ee21d9fba36}{nlz3}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{core__func__integer__find__msb_8cpp_aecb119a86a074f58c2a5dda603e6786d}{nlz4}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{core__func__integer__find__msb_8cpp_aa87dd42080b64354f6059fd526df27be}{nlz5}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{core__func__integer__find__msb_8cpp_a465c8ad891cb1c8a9ce7c1362f63030b}{nlz6}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{k}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{core__func__integer__find__msb_8cpp_a541f3c6eb60ecdeaa4261d6cd274ca4b}{nlz7}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{k}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{core__func__integer__find__msb_8cpp_ad0e03185ce1bc747e9326eb9b4c9a5fe}{nlz8}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{k}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{core__func__integer__find__msb_8cpp_aa81ccc96d228349363ce458e7562ada2}{nlz9}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{k}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{core__func__integer__find__msb_8cpp_a4c85d11c045a56af48deb095b12ecd60}{nlz10}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{core__func__integer__find__msb_8cpp_ac58488792a8b43d0a37f3df5f09c4f2b}{nlz10a}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{core__func__integer__find__msb_8cpp_a2bccf6d8981c628215aab54f4dc5e8c8}{nlz10b}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{core__func__integer__find__msb_8cpp_ab34dedbf30a51859090cbab92fa60edb}{error}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a4f27f1eebce8c31db01bb39fab9ef561}{y}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{core__func__integer__find__msb_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{core__func__integer__find__msb_8cpp_a433c7fadd13f3a906e01c9d9f5c8fb09}{errors}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{core__func__integer__find__msb_8cpp_aa4d6abc7b58eb11e517993df83b7f0f7}\label{core__func__integer__find__msb_8cpp_aa4d6abc7b58eb11e517993df83b7f0f7} 
+\index{core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}!LE@{LE}}
+\index{LE@{LE}!core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}}
+\doxysubsubsection{\texorpdfstring{LE}{LE}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} LE~1}
+
+
+
+Definition at line \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source}{core\+\_\+func\+\_\+integer\+\_\+find\+\_\+msb.\+cpp}}.
+
+\Hypertarget{core__func__integer__find__msb_8cpp_a1f9aca42e2010bb82488684dee1a66ea}\label{core__func__integer__find__msb_8cpp_a1f9aca42e2010bb82488684dee1a66ea} 
+\index{core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}!u@{u}}
+\index{u@{u}!core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}}
+\doxysubsubsection{\texorpdfstring{u}{u}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} u~99}
+
+
+
+Definition at line \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source_l00232}{232}} of file \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source}{core\+\_\+func\+\_\+integer\+\_\+find\+\_\+msb.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{core__func__integer__find__msb_8cpp_ab34dedbf30a51859090cbab92fa60edb}\label{core__func__integer__find__msb_8cpp_ab34dedbf30a51859090cbab92fa60edb} 
+\index{core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}!error@{error}}
+\index{error@{error}!core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{x,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{y }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source_l00298}{298}} of file \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source}{core\+\_\+func\+\_\+integer\+\_\+find\+\_\+msb.\+cpp}}.
+
+\Hypertarget{core__func__integer__find__msb_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{core__func__integer__find__msb_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}!main@{main}}
+\index{main@{main}!core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} main (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source_l00304}{304}} of file \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source}{core\+\_\+func\+\_\+integer\+\_\+find\+\_\+msb.\+cpp}}.
+
+\Hypertarget{core__func__integer__find__msb_8cpp_abaa1e000f71f22604a6830addf6f8f01}\label{core__func__integer__find__msb_8cpp_abaa1e000f71f22604a6830addf6f8f01} 
+\index{core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}!nlz1@{nlz1}}
+\index{nlz1@{nlz1}!core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}}
+\doxysubsubsection{\texorpdfstring{nlz1()}{nlz1()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} nlz1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}}}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source}{core\+\_\+func\+\_\+integer\+\_\+find\+\_\+msb.\+cpp}}.
+
+\Hypertarget{core__func__integer__find__msb_8cpp_a4c85d11c045a56af48deb095b12ecd60}\label{core__func__integer__find__msb_8cpp_a4c85d11c045a56af48deb095b12ecd60} 
+\index{core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}!nlz10@{nlz10}}
+\index{nlz10@{nlz10}!core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}}
+\doxysubsubsection{\texorpdfstring{nlz10()}{nlz10()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} nlz10 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}}}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source_l00233}{233}} of file \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source}{core\+\_\+func\+\_\+integer\+\_\+find\+\_\+msb.\+cpp}}.
+
+\Hypertarget{core__func__integer__find__msb_8cpp_ac58488792a8b43d0a37f3df5f09c4f2b}\label{core__func__integer__find__msb_8cpp_ac58488792a8b43d0a37f3df5f09c4f2b} 
+\index{core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}!nlz10a@{nlz10a}}
+\index{nlz10a@{nlz10a}!core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}}
+\doxysubsubsection{\texorpdfstring{nlz10a()}{nlz10a()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} nlz10a (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}}}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source_l00253}{253}} of file \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source}{core\+\_\+func\+\_\+integer\+\_\+find\+\_\+msb.\+cpp}}.
+
+\Hypertarget{core__func__integer__find__msb_8cpp_a2bccf6d8981c628215aab54f4dc5e8c8}\label{core__func__integer__find__msb_8cpp_a2bccf6d8981c628215aab54f4dc5e8c8} 
+\index{core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}!nlz10b@{nlz10b}}
+\index{nlz10b@{nlz10b}!core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}}
+\doxysubsubsection{\texorpdfstring{nlz10b()}{nlz10b()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} nlz10b (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}}}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source_l00277}{277}} of file \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source}{core\+\_\+func\+\_\+integer\+\_\+find\+\_\+msb.\+cpp}}.
+
+\Hypertarget{core__func__integer__find__msb_8cpp_ae73031cbd6fa525885cea5be27b97558}\label{core__func__integer__find__msb_8cpp_ae73031cbd6fa525885cea5be27b97558} 
+\index{core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}!nlz1a@{nlz1a}}
+\index{nlz1a@{nlz1a}!core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}}
+\doxysubsubsection{\texorpdfstring{nlz1a()}{nlz1a()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} nlz1a (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}}}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source}{core\+\_\+func\+\_\+integer\+\_\+find\+\_\+msb.\+cpp}}.
+
+\Hypertarget{core__func__integer__find__msb_8cpp_a635a9b105c39b6b680e33038733f3e29}\label{core__func__integer__find__msb_8cpp_a635a9b105c39b6b680e33038733f3e29} 
+\index{core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}!nlz2@{nlz2}}
+\index{nlz2@{nlz2}!core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}}
+\doxysubsubsection{\texorpdfstring{nlz2()}{nlz2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} nlz2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}}}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source}{core\+\_\+func\+\_\+integer\+\_\+find\+\_\+msb.\+cpp}}.
+
+\Hypertarget{core__func__integer__find__msb_8cpp_a26eb10fc78ab8ab90c9ad0a2ed43b0d3}\label{core__func__integer__find__msb_8cpp_a26eb10fc78ab8ab90c9ad0a2ed43b0d3} 
+\index{core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}!nlz2a@{nlz2a}}
+\index{nlz2a@{nlz2a}!core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}}
+\doxysubsubsection{\texorpdfstring{nlz2a()}{nlz2a()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} nlz2a (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}}}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source_l00060}{60}} of file \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source}{core\+\_\+func\+\_\+integer\+\_\+find\+\_\+msb.\+cpp}}.
+
+\Hypertarget{core__func__integer__find__msb_8cpp_a58814a20b9718845bd8a0ee21d9fba36}\label{core__func__integer__find__msb_8cpp_a58814a20b9718845bd8a0ee21d9fba36} 
+\index{core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}!nlz3@{nlz3}}
+\index{nlz3@{nlz3}!core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}}
+\doxysubsubsection{\texorpdfstring{nlz3()}{nlz3()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} nlz3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source_l00073}{73}} of file \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source}{core\+\_\+func\+\_\+integer\+\_\+find\+\_\+msb.\+cpp}}.
+
+\Hypertarget{core__func__integer__find__msb_8cpp_aecb119a86a074f58c2a5dda603e6786d}\label{core__func__integer__find__msb_8cpp_aecb119a86a074f58c2a5dda603e6786d} 
+\index{core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}!nlz4@{nlz4}}
+\index{nlz4@{nlz4}!core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}}
+\doxysubsubsection{\texorpdfstring{nlz4()}{nlz4()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} nlz4 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}}}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source_l00086}{86}} of file \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source}{core\+\_\+func\+\_\+integer\+\_\+find\+\_\+msb.\+cpp}}.
+
+\Hypertarget{core__func__integer__find__msb_8cpp_aa87dd42080b64354f6059fd526df27be}\label{core__func__integer__find__msb_8cpp_aa87dd42080b64354f6059fd526df27be} 
+\index{core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}!nlz5@{nlz5}}
+\index{nlz5@{nlz5}!core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}}
+\doxysubsubsection{\texorpdfstring{nlz5()}{nlz5()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} nlz5 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}}}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source_l00114}{114}} of file \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source}{core\+\_\+func\+\_\+integer\+\_\+find\+\_\+msb.\+cpp}}.
+
+\Hypertarget{core__func__integer__find__msb_8cpp_a465c8ad891cb1c8a9ce7c1362f63030b}\label{core__func__integer__find__msb_8cpp_a465c8ad891cb1c8a9ce7c1362f63030b} 
+\index{core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}!nlz6@{nlz6}}
+\index{nlz6@{nlz6}!core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}}
+\doxysubsubsection{\texorpdfstring{nlz6()}{nlz6()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} nlz6 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}}}]{k }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source_l00141}{141}} of file \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source}{core\+\_\+func\+\_\+integer\+\_\+find\+\_\+msb.\+cpp}}.
+
+\Hypertarget{core__func__integer__find__msb_8cpp_a541f3c6eb60ecdeaa4261d6cd274ca4b}\label{core__func__integer__find__msb_8cpp_a541f3c6eb60ecdeaa4261d6cd274ca4b} 
+\index{core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}!nlz7@{nlz7}}
+\index{nlz7@{nlz7}!core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}}
+\doxysubsubsection{\texorpdfstring{nlz7()}{nlz7()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} nlz7 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}}}]{k }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source_l00154}{154}} of file \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source}{core\+\_\+func\+\_\+integer\+\_\+find\+\_\+msb.\+cpp}}.
+
+\Hypertarget{core__func__integer__find__msb_8cpp_ad0e03185ce1bc747e9326eb9b4c9a5fe}\label{core__func__integer__find__msb_8cpp_ad0e03185ce1bc747e9326eb9b4c9a5fe} 
+\index{core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}!nlz8@{nlz8}}
+\index{nlz8@{nlz8}!core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}}
+\doxysubsubsection{\texorpdfstring{nlz8()}{nlz8()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} nlz8 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}}}]{k }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source_l00177}{177}} of file \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source}{core\+\_\+func\+\_\+integer\+\_\+find\+\_\+msb.\+cpp}}.
+
+\Hypertarget{core__func__integer__find__msb_8cpp_aa81ccc96d228349363ce458e7562ada2}\label{core__func__integer__find__msb_8cpp_aa81ccc96d228349363ce458e7562ada2} 
+\index{core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}!nlz9@{nlz9}}
+\index{nlz9@{nlz9}!core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}}
+\doxysubsubsection{\texorpdfstring{nlz9()}{nlz9()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} nlz9 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}}}]{k }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source_l00199}{199}} of file \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source}{core\+\_\+func\+\_\+integer\+\_\+find\+\_\+msb.\+cpp}}.
+
+\Hypertarget{core__func__integer__find__msb_8cpp_af90aa2f32f9c39ddd552c1d27f65dbaf}\label{core__func__integer__find__msb_8cpp_af90aa2f32f9c39ddd552c1d27f65dbaf} 
+\index{core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}!pop@{pop}}
+\index{pop@{pop}!core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} pop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}}}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source}{core\+\_\+func\+\_\+integer\+\_\+find\+\_\+msb.\+cpp}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{core__func__integer__find__msb_8cpp_a433c7fadd13f3a906e01c9d9f5c8fb09}\label{core__func__integer__find__msb_8cpp_a433c7fadd13f3a906e01c9d9f5c8fb09} 
+\index{core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}!errors@{errors}}
+\index{errors@{errors}!core\_func\_integer\_find\_msb.cpp@{core\_func\_integer\_find\_msb.cpp}}
+\doxysubsubsection{\texorpdfstring{errors}{errors}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} errors}
+
+
+
+Definition at line \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source_l00297}{297}} of file \mbox{\hyperlink{core__func__integer__find__msb_8cpp_source}{core\+\_\+func\+\_\+integer\+\_\+find\+\_\+msb.\+cpp}}.
+

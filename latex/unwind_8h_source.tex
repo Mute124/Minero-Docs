@@ -1,0 +1,303 @@
+\doxysection{unwind.\+h}
+\hypertarget{unwind_8h_source}{}\label{unwind_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/unwind.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/unwind.h}}
+\mbox{\hyperlink{unwind_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00001}\mbox{\hyperlink{unwind_8h_a18303b9dbcb0c16693d43e92eab3f267}{00001}}\ \textcolor{comment}{/*\ Exception\ handling\ and\ frame\ unwind\ runtime\ interface\ routines.}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00002}00002\ \textcolor{comment}{\ \ \ Copyright\ (C)\ 2001-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00003}00003\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00004}00004\ \textcolor{comment}{\ \ \ This\ file\ is\ part\ of\ GCC.}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00005}00005\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00006}\mbox{\hyperlink{unwind_8h_aa1785f5c87b51d3ad7225379bdbacbc1}{00006}}\ \textcolor{comment}{\ \ \ GCC\ is\ free\ software;\ you\ can\ redistribute\ it\ and/or\ modify\ it}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00007}\mbox{\hyperlink{unwind_8h_a89ff720a977899def1a05d4eceb64076}{00007}}\ \textcolor{comment}{\ \ \ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00008}00008\ \textcolor{comment}{\ \ \ the\ Free\ Software\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00009}00009\ \textcolor{comment}{\ \ \ any\ later\ version.}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00010}00010\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00011}00011\ \textcolor{comment}{\ \ \ GCC\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,\ but\ WITHOUT}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00012}00012\ \textcolor{comment}{\ \ \ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of\ MERCHANTABILITY}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00013}00013\ \textcolor{comment}{\ \ \ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the\ GNU\ General\ Public}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00014}00014\ \textcolor{comment}{\ \ \ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00015}00015\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00016}00016\ \textcolor{comment}{\ \ \ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00017}00017\ \textcolor{comment}{\ \ \ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00018}00018\ \textcolor{comment}{\ \ \ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00019}00019\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00020}00020\ \textcolor{comment}{\ \ \ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00021}00021\ \textcolor{comment}{\ \ \ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00022}00022\ \textcolor{comment}{\ \ \ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00023}00023\ \textcolor{comment}{\ \ \ <http://www.gnu.org/licenses/>.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00025}00025\ \textcolor{comment}{/*\ This\ is\ derived\ from\ the\ C++\ ABI\ for\ IA-\/64.\ \ Where\ we\ diverge}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00026}00026\ \textcolor{comment}{\ \ \ for\ cross-\/architecture\ compatibility\ are\ noted\ with\ "{}@@@"{}.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00028}00028\ \textcolor{preprocessor}{\#ifndef\ \_UNWIND\_H}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00029}00029\ \textcolor{preprocessor}{\#define\ \_UNWIND\_H}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00031}00031\ \textcolor{preprocessor}{\#if\ defined\ (\_\_SEH\_\_)\ \&\&\ !defined\ (\_\_USING\_SJLJ\_EXCEPTIONS\_\_)}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00032}00032\ \textcolor{comment}{/*\ Only\ for\ \_GCC\_specific\_handler.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00033}00033\ \textcolor{preprocessor}{\#include\ <windows.h>}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00034}00034\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00036}00036\ \textcolor{preprocessor}{\#ifndef\ HIDE\_EXPORTS}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00037}00037\ \textcolor{preprocessor}{\#pragma\ GCC\ visibility\ push(default)}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00038}00038\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00040}00040\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00041}00041\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00042}00042\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00044}00044\ \textcolor{comment}{/*\ Level\ 1:\ Base\ ABI\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00046}00046\ \textcolor{comment}{/*\ @@@\ The\ IA-\/64\ ABI\ uses\ uint64\ throughout.\ \ Most\ places\ this\ is}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00047}00047\ \textcolor{comment}{\ \ \ inefficient\ for\ 32-\/bit\ and\ smaller\ machines.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00048}\mbox{\hyperlink{unwind_8h_a5beb53ab4af402f53fd1c764c3ef21ad}{00048}}\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Word}}\ \mbox{\hyperlink{unwind_8h_a5beb53ab4af402f53fd1c764c3ef21ad}{\_\_attribute\_\_}}((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_mode\_\_}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_unwind\_word\_\_}})));}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00049}00049\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{signed}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Sword}}\ \mbox{\hyperlink{unwind_8h_a5beb53ab4af402f53fd1c764c3ef21ad}{\_\_attribute\_\_}}((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_mode\_\_}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_unwind\_word\_\_}})));}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00050}00050\ \textcolor{preprocessor}{\#if\ defined(\_\_ia64\_\_)\ \&\&\ defined(\_\_hpux\_\_)}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00051}00051\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Ptr}}\ \mbox{\hyperlink{unwind_8h_a5beb53ab4af402f53fd1c764c3ef21ad}{\_\_attribute\_\_}}((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_mode\_\_}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_word\_\_}})));}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00052}00052\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00053}00053\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Ptr}}\ \mbox{\hyperlink{unwind_8h_a5beb53ab4af402f53fd1c764c3ef21ad}{\_\_attribute\_\_}}((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_mode\_\_}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_pointer\_\_}})));}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00054}00054\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00055}00055\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Internal\_Ptr}}\ \mbox{\hyperlink{unwind_8h_a5beb53ab4af402f53fd1c764c3ef21ad}{\_\_attribute\_\_}}((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_mode\_\_}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_pointer\_\_}})));}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00057}00057\ \textcolor{comment}{/*\ @@@\ The\ IA-\/64\ ABI\ uses\ a\ 64-\/bit\ word\ to\ identify\ the\ producer\ and}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00058}00058\ \textcolor{comment}{\ \ \ consumer\ of\ an\ exception.\ \ We'll\ go\ along\ with\ this\ for\ now\ even\ on}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00059}00059\ \textcolor{comment}{\ \ \ 32-\/bit\ machines.\ \ We'll\ need\ to\ provide\ some\ other\ option\ for}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00060}00060\ \textcolor{comment}{\ \ \ 16-\/bit\ machines\ and\ for\ machines\ with\ >\ 8\ bits\ per\ byte.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00061}00061\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Exception\_Class}}\ \mbox{\hyperlink{unwind_8h_a5beb53ab4af402f53fd1c764c3ef21ad}{\_\_attribute\_\_}}((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_mode\_\_}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_DI\_\_}})));}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00063}00063\ \textcolor{comment}{/*\ The\ unwind\ interface\ uses\ reason\ codes\ in\ several\ contexts\ to}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00064}00064\ \textcolor{comment}{\ \ \ identify\ the\ reasons\ for\ failures\ or\ other\ actions.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00065}\mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2}{00065}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00066}00066\ \{}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00067}\mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2a41ad850ae0c5b105dca3d223df38af97}{00067}}\ \ \ \mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2a41ad850ae0c5b105dca3d223df38af97}{\_URC\_NO\_REASON}}\ =\ 0,}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00068}\mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2a9fd826377b4f2f85771d886c1a4ce37b}{00068}}\ \ \ \mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2a9fd826377b4f2f85771d886c1a4ce37b}{\_URC\_FOREIGN\_EXCEPTION\_CAUGHT}}\ =\ 1,}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00069}\mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2a30528e6b6930b75402dca7f9af05cf9c}{00069}}\ \ \ \mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2a30528e6b6930b75402dca7f9af05cf9c}{\_URC\_FATAL\_PHASE2\_ERROR}}\ =\ 2,}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00070}\mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2a53bf3ead23368c90ad6a0464eb47097a}{00070}}\ \ \ \mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2a53bf3ead23368c90ad6a0464eb47097a}{\_URC\_FATAL\_PHASE1\_ERROR}}\ =\ 3,}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00071}\mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2afb395219565efdeddd6511bd94388586}{00071}}\ \ \ \mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2afb395219565efdeddd6511bd94388586}{\_URC\_NORMAL\_STOP}}\ =\ 4,}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00072}\mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2ad764c4ff93e12350f072e0cbd70398c5}{00072}}\ \ \ \mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2ad764c4ff93e12350f072e0cbd70398c5}{\_URC\_END\_OF\_STACK}}\ =\ 5,}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00073}\mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2a608f0da2ee309a1c1395063b8b6d028d}{00073}}\ \ \ \mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2a608f0da2ee309a1c1395063b8b6d028d}{\_URC\_HANDLER\_FOUND}}\ =\ 6,}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00074}\mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2a1f57f348816bdd0564bdfd9180e50fc0}{00074}}\ \ \ \mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2a1f57f348816bdd0564bdfd9180e50fc0}{\_URC\_INSTALL\_CONTEXT}}\ =\ 7,}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00075}00075\ \ \ \mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2aceacf011e23d791d187b7b10b599bdb6}{\_URC\_CONTINUE\_UNWIND}}\ =\ 8}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00076}\mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2aceacf011e23d791d187b7b10b599bdb6}{00076}}\ \}\ \mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2}{\_Unwind\_Reason\_Code}};}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00079}00079\ \textcolor{comment}{/*\ The\ unwind\ interface\ uses\ a\ pointer\ to\ an\ exception\ header\ object}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00080}00080\ \textcolor{comment}{\ \ \ as\ its\ representation\ of\ an\ exception\ being\ thrown.\ In\ general,\ the}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00081}00081\ \textcolor{comment}{\ \ \ full\ representation\ of\ an\ exception\ object\ is\ language-\/\ and}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00082}00082\ \textcolor{comment}{\ \ \ implementation-\/specific,\ but\ it\ will\ be\ prefixed\ by\ a\ header}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00083}00083\ \textcolor{comment}{\ \ \ understood\ by\ the\ unwind\ interface.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00085}00085\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct___unwind___exception}{\_Unwind\_Exception}};}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00087}\mbox{\hyperlink{unwind_8h_ac8c21f335bc7c2f0bc6a9ddaee6b9431}{00087}}\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}\ (*\mbox{\hyperlink{unwind_8h_aa315b38b270688a4d979ec71a9f33586}{\_Unwind\_Exception\_Cleanup\_Fn}})\ (\mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2}{\_Unwind\_Reason\_Code}},}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct___unwind___exception}{\_Unwind\_Exception}}\ *);}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00090}\mbox{\hyperlink{struct___unwind___exception}{00090}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct___unwind___exception}{\_Unwind\_Exception}}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00091}00091\ \{}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00092}\mbox{\hyperlink{struct___unwind___exception_ade34d40df51766d7ff384a01237209ae}{00092}}\ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Exception\_Class}}\ \mbox{\hyperlink{struct___unwind___exception_ade34d40df51766d7ff384a01237209ae}{exception\_class}};}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00093}\mbox{\hyperlink{struct___unwind___exception_a44d69c695cdcc6fcde54ae458a69a4c8}{00093}}\ \ \ \mbox{\hyperlink{unwind_8h_aa315b38b270688a4d979ec71a9f33586}{\_Unwind\_Exception\_Cleanup\_Fn}}\ \mbox{\hyperlink{struct___unwind___exception_a44d69c695cdcc6fcde54ae458a69a4c8}{exception\_cleanup}};}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00095}00095\ \textcolor{preprocessor}{\#if\ !defined\ (\_\_USING\_SJLJ\_EXCEPTIONS\_\_)\ \&\&\ defined\ (\_\_SEH\_\_)}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00096}00096\ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Word}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{private\_}}[6];}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00097}00097\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00098}\mbox{\hyperlink{struct___unwind___exception_a90fbbe59c5adade160b6bb21b5f71d3d}{00098}}\ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Word}}\ \mbox{\hyperlink{struct___unwind___exception_a90fbbe59c5adade160b6bb21b5f71d3d}{private\_1}};}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00099}\mbox{\hyperlink{struct___unwind___exception_a5baef90b9b72c2b612cf44326674ef24}{00099}}\ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Word}}\ \mbox{\hyperlink{struct___unwind___exception_a5baef90b9b72c2b612cf44326674ef24}{private\_2}};}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00100}00100\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00102}00102\ \ \ \textcolor{comment}{/*\ @@@\ The\ IA-\/64\ ABI\ says\ that\ this\ structure\ must\ be\ double-\/word\ aligned.}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00103}00103\ \textcolor{comment}{\ \ \ \ \ Taking\ that\ literally\ does\ not\ make\ much\ sense\ generically.\ \ Instead\ we}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00104}00104\ \textcolor{comment}{\ \ \ \ \ provide\ the\ maximum\ alignment\ required\ by\ any\ type\ for\ the\ machine.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00105}00105\ \}\ \mbox{\hyperlink{unwind_8h_a5beb53ab4af402f53fd1c764c3ef21ad}{\_\_attribute\_\_}}((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_aligned\_\_}}));}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00108}00108\ \textcolor{comment}{/*\ The\ ACTIONS\ argument\ to\ the\ personality\ routine\ is\ a\ bitwise\ OR\ of\ one}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00109}00109\ \textcolor{comment}{\ \ \ or\ more\ of\ the\ following\ constants.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00110}\mbox{\hyperlink{unwind_8h_a09fdc8f727b214f5168e3690b0ddfa21}{00110}}\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{unwind_8h_a09fdc8f727b214f5168e3690b0ddfa21}{\_Unwind\_Action}};}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00112}\mbox{\hyperlink{unwind_8h_a1c8c5033d411d165a2aa4cce25800e18}{00112}}\ \textcolor{preprocessor}{\#define\ \_UA\_SEARCH\_PHASE\ \ \ \ 1}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00113}\mbox{\hyperlink{unwind_8h_aa243069e54d5a04a956e0eea738b00a2}{00113}}\ \textcolor{preprocessor}{\#define\ \_UA\_CLEANUP\_PHASE\ \ \ 2}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00114}\mbox{\hyperlink{unwind_8h_adc1ab685451d84ec89f20825718a8a17}{00114}}\ \textcolor{preprocessor}{\#define\ \_UA\_HANDLER\_FRAME\ \ \ 4}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00115}\mbox{\hyperlink{unwind_8h_abe17fc08c7e4f6110aacd4dc3c3d4779}{00115}}\ \textcolor{preprocessor}{\#define\ \_UA\_FORCE\_UNWIND\ \ \ \ 8}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00116}\mbox{\hyperlink{unwind_8h_a4ab70d00aad55702fa031e0b0f622c22}{00116}}\ \textcolor{preprocessor}{\#define\ \_UA\_END\_OF\_STACK\ \ \ \ 16}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00118}00118\ \textcolor{comment}{/*\ The\ target\ can\ override\ this\ macro\ to\ define\ any\ back-\/end-\/specific}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00119}00119\ \textcolor{comment}{\ \ \ attributes\ required\ for\ the\ lowest-\/level\ stack\ frame.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00120}00120\ \textcolor{preprocessor}{\#ifndef\ LIBGCC2\_UNWIND\_ATTRIBUTE}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00121}\mbox{\hyperlink{unwind_8h_a3f191391b2ad80f22385ffdf3b785ae1}{00121}}\ \textcolor{preprocessor}{\#define\ LIBGCC2\_UNWIND\_ATTRIBUTE}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00122}00122\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00124}00124\ \textcolor{comment}{/*\ This\ is\ an\ opaque\ type\ used\ to\ refer\ to\ a\ system-\/specific\ data}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00125}00125\ \textcolor{comment}{\ \ \ structure\ used\ by\ the\ system\ unwinder.\ This\ context\ is\ created\ and}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00126}00126\ \textcolor{comment}{\ \ \ destroyed\ by\ the\ system,\ and\ passed\ to\ the\ personality\ routine}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00127}00127\ \textcolor{comment}{\ \ \ during\ unwinding.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00128}00128\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Context}};}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00130}00130\ \textcolor{comment}{/*\ Raise\ an\ exception,\ passing\ along\ the\ given\ exception\ object.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00131}00131\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2}{\_Unwind\_Reason\_Code}}\ \mbox{\hyperlink{unwind_8h_a3f191391b2ad80f22385ffdf3b785ae1}{LIBGCC2\_UNWIND\_ATTRIBUTE}}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00132}\mbox{\hyperlink{unwind_8h_a5fdc6b896bc6dcbdad62de19575ddcc7}{00132}}\ \mbox{\hyperlink{unwind_8h_a5fdc6b896bc6dcbdad62de19575ddcc7}{\_Unwind\_RaiseException}}\ (\textcolor{keyword}{struct}\ \mbox{\hyperlink{struct___unwind___exception}{\_Unwind\_Exception}}\ *);}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00134}00134\ \textcolor{comment}{/*\ Raise\ an\ exception\ for\ forced\ unwinding.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00136}\mbox{\hyperlink{unwind_8h_a7bcb888c9fda97a1eeff6dc523c504c2}{00136}}\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2}{\_Unwind\_Reason\_Code}}\ (*\mbox{\hyperlink{unwind_8h_a7bcb888c9fda97a1eeff6dc523c504c2}{\_Unwind\_Stop\_Fn}})}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00137}00137\ \ \ \ \ \ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}},\ \mbox{\hyperlink{unwind_8h_a09fdc8f727b214f5168e3690b0ddfa21}{\_Unwind\_Action}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Exception\_Class}},}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00138}00138\ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct___unwind___exception}{\_Unwind\_Exception}}\ *,\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Context}}\ *,\ \textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00140}00140\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2}{\_Unwind\_Reason\_Code}}\ \mbox{\hyperlink{unwind_8h_a3f191391b2ad80f22385ffdf3b785ae1}{LIBGCC2\_UNWIND\_ATTRIBUTE}}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00141}\mbox{\hyperlink{unwind_8h_a52bd6807315630ad5e2de02fe7d863da}{00141}}\ \mbox{\hyperlink{unwind_8h_a52bd6807315630ad5e2de02fe7d863da}{\_Unwind\_ForcedUnwind}}\ (\textcolor{keyword}{struct}\ \mbox{\hyperlink{struct___unwind___exception}{\_Unwind\_Exception}}\ *,\ \mbox{\hyperlink{unwind_8h_a7bcb888c9fda97a1eeff6dc523c504c2}{\_Unwind\_Stop\_Fn}},\ \textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00143}00143\ \textcolor{comment}{/*\ Helper\ to\ invoke\ the\ exception\_cleanup\ routine.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00144}\mbox{\hyperlink{unwind_8h_a17c82e92329af856df9ead3406350b79}{00144}}\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{unwind_8h_a17c82e92329af856df9ead3406350b79}{\_Unwind\_DeleteException}}\ (\textcolor{keyword}{struct}\ \mbox{\hyperlink{struct___unwind___exception}{\_Unwind\_Exception}}\ *);}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00146}00146\ \textcolor{comment}{/*\ Resume\ propagation\ of\ an\ existing\ exception.\ \ This\ is\ used\ after}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00147}00147\ \textcolor{comment}{\ \ \ e.g.\ executing\ cleanup\ code,\ and\ not\ to\ implement\ rethrowing.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00148}00148\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{unwind_8h_a3f191391b2ad80f22385ffdf3b785ae1}{LIBGCC2\_UNWIND\_ATTRIBUTE}}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00149}\mbox{\hyperlink{unwind_8h_a14d9ebf25d0801c5d02a9d26bef9830c}{00149}}\ \mbox{\hyperlink{unwind_8h_a14d9ebf25d0801c5d02a9d26bef9830c}{\_Unwind\_Resume}}\ (\textcolor{keyword}{struct}\ \mbox{\hyperlink{struct___unwind___exception}{\_Unwind\_Exception}}\ *);}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00150}00150\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00151}00151\ \textcolor{comment}{/*\ @@@\ Resume\ propagation\ of\ a\ FORCE\_UNWIND\ exception,\ or\ to\ rethrow}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00152}00152\ \textcolor{comment}{\ \ \ a\ normal\ exception\ that\ was\ handled.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00153}00153\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2}{\_Unwind\_Reason\_Code}}\ \mbox{\hyperlink{unwind_8h_a3f191391b2ad80f22385ffdf3b785ae1}{LIBGCC2\_UNWIND\_ATTRIBUTE}}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00154}\mbox{\hyperlink{unwind_8h_aee02af3d31560ca7afd286981d177920}{00154}}\ \mbox{\hyperlink{unwind_8h_aee02af3d31560ca7afd286981d177920}{\_Unwind\_Resume\_or\_Rethrow}}\ (\textcolor{keyword}{struct}\ \mbox{\hyperlink{struct___unwind___exception}{\_Unwind\_Exception}}\ *);}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00156}00156\ \textcolor{comment}{/*\ @@@\ Use\ unwind\ data\ to\ perform\ a\ stack\ backtrace.\ \ The\ trace\ callback}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00157}00157\ \textcolor{comment}{\ \ \ is\ called\ for\ every\ stack\ frame\ in\ the\ call\ chain,\ but\ no\ cleanup}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00158}00158\ \textcolor{comment}{\ \ \ actions\ are\ performed.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00159}\mbox{\hyperlink{unwind_8h_a7a93af20df595d1d6158fa23bc489e9d}{00159}}\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2}{\_Unwind\_Reason\_Code}}\ (*\mbox{\hyperlink{unwind_8h_a7a93af20df595d1d6158fa23bc489e9d}{\_Unwind\_Trace\_Fn}})}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00160}00160\ \ \ \ \ \ (\textcolor{keyword}{struct\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Context}}\ *,\ \textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00162}00162\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2}{\_Unwind\_Reason\_Code}}\ \mbox{\hyperlink{unwind_8h_a3f191391b2ad80f22385ffdf3b785ae1}{LIBGCC2\_UNWIND\_ATTRIBUTE}}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00163}\mbox{\hyperlink{unwind_8h_a397d10951ad53e2d3c2b32eea2805f32}{00163}}\ \mbox{\hyperlink{unwind_8h_a397d10951ad53e2d3c2b32eea2805f32}{\_Unwind\_Backtrace}}\ (\mbox{\hyperlink{unwind_8h_a7a93af20df595d1d6158fa23bc489e9d}{\_Unwind\_Trace\_Fn}},\ \textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00165}00165\ \textcolor{comment}{/*\ These\ functions\ are\ used\ for\ communicating\ information\ about\ the\ unwind}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00166}00166\ \textcolor{comment}{\ \ \ context\ (i.e.\ the\ unwind\ descriptors\ and\ the\ user\ register\ state)\ between}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00167}00167\ \textcolor{comment}{\ \ \ the\ unwind\ library\ and\ the\ personality\ routine\ and\ landing\ pad.\ \ Only}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00168}00168\ \textcolor{comment}{\ \ \ selected\ registers\ may\ be\ manipulated.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00170}\mbox{\hyperlink{unwind_8h_af2c27f2b761efe66e15efb337a384c52}{00170}}\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Word}}\ \mbox{\hyperlink{unwind_8h_af2c27f2b761efe66e15efb337a384c52}{\_Unwind\_GetGR}}\ (\textcolor{keyword}{struct}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Context}}\ *,\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00171}\mbox{\hyperlink{unwind_8h_a4d9528afb24b3d38fc21fa3251ba687d}{00171}}\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{unwind_8h_a4d9528afb24b3d38fc21fa3251ba687d}{\_Unwind\_SetGR}}\ (\textcolor{keyword}{struct}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Context}}\ *,\ \textcolor{keywordtype}{int},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Word}});}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00172}00172\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00173}\mbox{\hyperlink{unwind_8h_afb807818d0d7c2eefc156e2c7697c401}{00173}}\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Ptr}}\ \mbox{\hyperlink{unwind_8h_afb807818d0d7c2eefc156e2c7697c401}{\_Unwind\_GetIP}}\ (\textcolor{keyword}{struct}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Context}}\ *);}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00174}\mbox{\hyperlink{unwind_8h_a2f3e33d119bc8217909b1f2674b3990d}{00174}}\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Ptr}}\ \mbox{\hyperlink{unwind_8h_a2f3e33d119bc8217909b1f2674b3990d}{\_Unwind\_GetIPInfo}}\ (\textcolor{keyword}{struct}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Context}}\ *,\ \textcolor{keywordtype}{int}\ *);}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00175}\mbox{\hyperlink{unwind_8h_ad9799e7d7cf1f0630a15910fd48a0fe1}{00175}}\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{unwind_8h_ad9799e7d7cf1f0630a15910fd48a0fe1}{\_Unwind\_SetIP}}\ (\textcolor{keyword}{struct}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Context}}\ *,\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Ptr}});}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00177}00177\ \textcolor{comment}{/*\ @@@\ Retrieve\ the\ CFA\ of\ the\ given\ context.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00178}\mbox{\hyperlink{unwind_8h_a3f54fd26ac13708ed3821227ffe93db6}{00178}}\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Word}}\ \mbox{\hyperlink{unwind_8h_a3f54fd26ac13708ed3821227ffe93db6}{\_Unwind\_GetCFA}}\ (\textcolor{keyword}{struct}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Context}}\ *);}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00179}00179\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00180}\mbox{\hyperlink{unwind_8h_aeffeaf5a08a2ce979e3d5ff9678e5ab6}{00180}}\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{unwind_8h_aeffeaf5a08a2ce979e3d5ff9678e5ab6}{\_Unwind\_GetLanguageSpecificData}}\ (\textcolor{keyword}{struct}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Context}}\ *);}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00181}00181\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00182}\mbox{\hyperlink{unwind_8h_a39ffe47b1bc1c2f52a21ef87284f0604}{00182}}\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Ptr}}\ \mbox{\hyperlink{unwind_8h_a39ffe47b1bc1c2f52a21ef87284f0604}{\_Unwind\_GetRegionStart}}\ (\textcolor{keyword}{struct}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Context}}\ *);}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00183}00183\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00185}00185\ \textcolor{comment}{/*\ The\ personality\ routine\ is\ the\ function\ in\ the\ C++\ (or\ other\ language)}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00186}00186\ \textcolor{comment}{\ \ \ runtime\ library\ which\ serves\ as\ an\ interface\ between\ the\ system\ unwind}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00187}00187\ \textcolor{comment}{\ \ \ library\ and\ language-\/specific\ exception\ handling\ semantics.\ \ It\ is}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00188}00188\ \textcolor{comment}{\ \ \ specific\ to\ the\ code\ fragment\ described\ by\ an\ unwind\ info\ block,\ and}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00189}00189\ \textcolor{comment}{\ \ \ it\ is\ always\ referenced\ via\ the\ pointer\ in\ the\ unwind\ info\ block,\ and}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00190}00190\ \textcolor{comment}{\ \ \ hence\ it\ has\ no\ ABI-\/specified\ name.}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00191}00191\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00192}00192\ \textcolor{comment}{\ \ \ Note\ that\ this\ implies\ that\ two\ different\ C++\ implementations\ can}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00193}00193\ \textcolor{comment}{\ \ \ use\ different\ names,\ and\ have\ different\ contents\ in\ the\ language}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00194}00194\ \textcolor{comment}{\ \ \ specific\ data\ area.\ \ Moreover,\ that\ the\ language\ specific\ data}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00195}00195\ \textcolor{comment}{\ \ \ area\ contains\ no\ version\ info\ because\ name\ of\ the\ function\ invoked}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00196}00196\ \textcolor{comment}{\ \ \ provides\ more\ effective\ versioning\ by\ detecting\ at\ link\ time\ the}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00197}00197\ \textcolor{comment}{\ \ \ lack\ of\ code\ to\ handle\ the\ different\ data\ format.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00198}00198\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00199}\mbox{\hyperlink{unwind_8h_af993119cf60777f0bbf2b0909ca4f1cb}{00199}}\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2}{\_Unwind\_Reason\_Code}}\ (*\mbox{\hyperlink{unwind_8h_af993119cf60777f0bbf2b0909ca4f1cb}{\_Unwind\_Personality\_Fn}})}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00200}00200\ \ \ \ \ \ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}},\ \mbox{\hyperlink{unwind_8h_a09fdc8f727b214f5168e3690b0ddfa21}{\_Unwind\_Action}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Exception\_Class}},}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00201}00201\ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct___unwind___exception}{\_Unwind\_Exception}}\ *,\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Context}}\ *);}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00202}00202\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00203}00203\ \textcolor{comment}{/*\ @@@\ The\ following\ alternate\ entry\ points\ are\ for\ setjmp/longjmp}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00204}00204\ \textcolor{comment}{\ \ \ based\ unwinding.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00205}00205\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00206}00206\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{SjLj\_Function\_Context}};}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00207}\mbox{\hyperlink{unwind_8h_a6b67fa1b54986c9a96f0137e0fbe240c}{00207}}\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{unwind_8h_a6b67fa1b54986c9a96f0137e0fbe240c}{\_Unwind\_SjLj\_Register}}\ (\textcolor{keyword}{struct}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{SjLj\_Function\_Context}}\ *);}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00208}\mbox{\hyperlink{unwind_8h_adb8f2cec6a538248fce68366a64004c6}{00208}}\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{unwind_8h_adb8f2cec6a538248fce68366a64004c6}{\_Unwind\_SjLj\_Unregister}}\ (\textcolor{keyword}{struct}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{SjLj\_Function\_Context}}\ *);}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00209}00209\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00210}00210\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2}{\_Unwind\_Reason\_Code}}\ \mbox{\hyperlink{unwind_8h_a3f191391b2ad80f22385ffdf3b785ae1}{LIBGCC2\_UNWIND\_ATTRIBUTE}}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00211}\mbox{\hyperlink{unwind_8h_a6ae26d9a827688844f38f8d5706837b4}{00211}}\ \mbox{\hyperlink{unwind_8h_a6ae26d9a827688844f38f8d5706837b4}{\_Unwind\_SjLj\_RaiseException}}\ (\textcolor{keyword}{struct}\ \mbox{\hyperlink{struct___unwind___exception}{\_Unwind\_Exception}}\ *);}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00212}00212\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2}{\_Unwind\_Reason\_Code}}\ \mbox{\hyperlink{unwind_8h_a3f191391b2ad80f22385ffdf3b785ae1}{LIBGCC2\_UNWIND\_ATTRIBUTE}}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00213}\mbox{\hyperlink{unwind_8h_a8f342914830c4a2b90209ca288f2ca47}{00213}}\ \mbox{\hyperlink{unwind_8h_a8f342914830c4a2b90209ca288f2ca47}{\_Unwind\_SjLj\_ForcedUnwind}}\ (\textcolor{keyword}{struct}\ \mbox{\hyperlink{struct___unwind___exception}{\_Unwind\_Exception}}\ *,\ \mbox{\hyperlink{unwind_8h_a7bcb888c9fda97a1eeff6dc523c504c2}{\_Unwind\_Stop\_Fn}},\ \textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00214}00214\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{unwind_8h_a3f191391b2ad80f22385ffdf3b785ae1}{LIBGCC2\_UNWIND\_ATTRIBUTE}}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00215}\mbox{\hyperlink{unwind_8h_aa3e6d96ec12ad32913d5cee6e9b38ae2}{00215}}\ \mbox{\hyperlink{unwind_8h_aa3e6d96ec12ad32913d5cee6e9b38ae2}{\_Unwind\_SjLj\_Resume}}\ (\textcolor{keyword}{struct}\ \mbox{\hyperlink{struct___unwind___exception}{\_Unwind\_Exception}}\ *);}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00216}00216\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{unwind_8h_a26f33dc6f6d23dc64517389b6b786ac2}{\_Unwind\_Reason\_Code}}\ \mbox{\hyperlink{unwind_8h_a3f191391b2ad80f22385ffdf3b785ae1}{LIBGCC2\_UNWIND\_ATTRIBUTE}}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00217}\mbox{\hyperlink{unwind_8h_ab9820977c98081453bbfc8e00bfc6376}{00217}}\ \mbox{\hyperlink{unwind_8h_ab9820977c98081453bbfc8e00bfc6376}{\_Unwind\_SjLj\_Resume\_or\_Rethrow}}\ (\textcolor{keyword}{struct}\ \mbox{\hyperlink{struct___unwind___exception}{\_Unwind\_Exception}}\ *);}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00218}00218\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00219}00219\ \textcolor{comment}{/*\ @@@\ The\ following\ provide\ access\ to\ the\ base\ addresses\ for\ text}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00220}00220\ \textcolor{comment}{\ \ \ and\ data-\/relative\ addressing\ in\ the\ LDSA.\ \ In\ order\ to\ stay\ link}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00221}00221\ \textcolor{comment}{\ \ \ compatible\ with\ the\ standard\ ABI\ for\ IA-\/64,\ we\ inline\ these.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00222}00222\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00223}00223\ \textcolor{preprocessor}{\#ifdef\ \_\_ia64\_\_}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00224}00224\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Ptr}}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00225}00225\ \mbox{\hyperlink{unwind_8h_a852b60087b48edf3e86055dcaff6ad56}{\_Unwind\_GetDataRelBase}}\ (\textcolor{keyword}{struct}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Context}}\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_C}})}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00226}00226\ \{}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00227}00227\ \ \ \textcolor{comment}{/*\ The\ GP\ is\ stored\ in\ R1.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00228}00228\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{unwind_8h_af2c27f2b761efe66e15efb337a384c52}{\_Unwind\_GetGR}}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_C}},\ 1);}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00229}00229\ \}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00230}00230\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00231}00231\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Ptr}}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00232}00232\ \mbox{\hyperlink{unwind_8h_a1ee680d76f69d55c81036411d8261691}{\_Unwind\_GetTextRelBase}}\ (\textcolor{keyword}{struct}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Context}}\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_C}}\ \mbox{\hyperlink{unwind_8h_a5beb53ab4af402f53fd1c764c3ef21ad}{\_\_attribute\_\_}}\ ((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_unused\_\_}})))}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00233}00233\ \{}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00234}00234\ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_builtin\_abort}}\ ();}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00235}00235\ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00236}00236\ \}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00237}00237\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00238}00238\ \textcolor{comment}{/*\ @@@\ Retrieve\ the\ Backing\ Store\ Pointer\ of\ the\ given\ context.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00239}00239\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Word}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_GetBSP}}\ (\textcolor{keyword}{struct}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Context}}\ *);}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00240}00240\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00241}\mbox{\hyperlink{unwind_8h_a852b60087b48edf3e86055dcaff6ad56}{00241}}\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Ptr}}\ \mbox{\hyperlink{unwind_8h_a852b60087b48edf3e86055dcaff6ad56}{\_Unwind\_GetDataRelBase}}\ (\textcolor{keyword}{struct}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Context}}\ *);}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00242}\mbox{\hyperlink{unwind_8h_a1ee680d76f69d55c81036411d8261691}{00242}}\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Ptr}}\ \mbox{\hyperlink{unwind_8h_a1ee680d76f69d55c81036411d8261691}{\_Unwind\_GetTextRelBase}}\ (\textcolor{keyword}{struct}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Unwind\_Context}}\ *);}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00243}00243\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00244}00244\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00245}00245\ \textcolor{comment}{/*\ @@@\ Given\ an\ address,\ return\ the\ entry\ point\ of\ the\ function\ that}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00246}00246\ \textcolor{comment}{\ \ \ contains\ it.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00247}\mbox{\hyperlink{unwind_8h_a9648034fbc3dc12372af7499b87d7ce3}{00247}}\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ *\ \mbox{\hyperlink{unwind_8h_a9648034fbc3dc12372af7499b87d7ce3}{\_Unwind\_FindEnclosingFunction}}\ (\textcolor{keywordtype}{void}\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{pc}});}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00248}00248\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00249}00249\ \textcolor{preprocessor}{\#ifndef\ \_\_SIZEOF\_LONG\_\_}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00250}00250\ \textcolor{preprocessor}{\ \ \#error\ "{}\_\_SIZEOF\_LONG\_\_\ macro\ not\ defined"{}}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00251}00251\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00252}00252\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00253}00253\ \textcolor{preprocessor}{\#ifndef\ \_\_SIZEOF\_POINTER\_\_}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00254}00254\ \textcolor{preprocessor}{\ \ \#error\ "{}\_\_SIZEOF\_POINTER\_\_\ macro\ not\ defined"{}}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00255}00255\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00256}00256\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00257}00257\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00258}00258\ \textcolor{comment}{/*\ leb128\ type\ numbers\ have\ a\ potentially\ unlimited\ size.}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00259}00259\ \textcolor{comment}{\ \ \ The\ target\ of\ the\ following\ definitions\ of\ \_sleb128\_t\ and\ \_uleb128\_t}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00260}00260\ \textcolor{comment}{\ \ \ is\ to\ have\ efficient\ data\ types\ large\ enough\ to\ hold\ the\ leb128\ type}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00261}00261\ \textcolor{comment}{\ \ \ numbers\ used\ in\ the\ unwind\ code.}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00262}00262\ \textcolor{comment}{\ \ \ Mostly\ these\ types\ will\ simply\ be\ defined\ to\ long\ and\ unsigned\ long}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00263}00263\ \textcolor{comment}{\ \ \ except\ when\ a\ unsigned\ long\ data\ type\ on\ the\ target\ machine\ is\ not}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00264}00264\ \textcolor{comment}{\ \ \ capable\ of\ storing\ a\ pointer.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00265}00265\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00266}00266\ \textcolor{preprocessor}{\#if\ \_\_SIZEOF\_LONG\_\_\ >=\ \_\_SIZEOF\_POINTER\_\_}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00267}\mbox{\hyperlink{unwind_8h_a25493a9c148576f609feb79ffdf3c25f}{00267}}\ \ \ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{unwind_8h_a25493a9c148576f609feb79ffdf3c25f}{\_sleb128\_t}};}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00268}\mbox{\hyperlink{unwind_8h_a0c41ffd43e62cbbd767b1f99c1bbb4ba}{00268}}\ \ \ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{unwind_8h_a0c41ffd43e62cbbd767b1f99c1bbb4ba}{\_uleb128\_t}};}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00269}00269\ \textcolor{preprocessor}{\#elif\ \_\_SIZEOF\_LONG\_LONG\_\_\ >=\ \_\_SIZEOF\_POINTER\_\_}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00270}00270\ \ \ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{unwind_8h_a25493a9c148576f609feb79ffdf3c25f}{\_sleb128\_t}};}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00271}00271\ \ \ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{unwind_8h_a0c41ffd43e62cbbd767b1f99c1bbb4ba}{\_uleb128\_t}};}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00272}00272\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00273}00273\ \textcolor{preprocessor}{\#\ error\ "{}What\ type\ shall\ we\ use\ for\ \_sleb128\_t?"{}}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00274}00274\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00275}00275\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00276}00276\ \textcolor{preprocessor}{\#if\ defined\ (\_\_SEH\_\_)\ \&\&\ !defined\ (\_\_USING\_SJLJ\_EXCEPTIONS\_\_)}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00277}00277\ \textcolor{comment}{/*\ Handles\ the\ mapping\ from\ SEH\ to\ GCC\ interfaces.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00278}00278\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{EXCEPTION\_DISPOSITION}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_GCC\_specific\_handler}}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{PEXCEPTION\_RECORD}},\ \textcolor{keywordtype}{void}\ *,}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00279}00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{PCONTEXT}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{PDISPATCHER\_CONTEXT}},}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00280}00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{unwind_8h_af993119cf60777f0bbf2b0909ca4f1cb}{\_Unwind\_Personality\_Fn}});}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00281}00281\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00282}00282\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00283}00283\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00284}00284\ \}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00285}00285\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00286}00286\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00287}00287\ \textcolor{preprocessor}{\#ifndef\ HIDE\_EXPORTS}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00288}00288\ \textcolor{preprocessor}{\#pragma\ GCC\ visibility\ pop}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00289}00289\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00290}00290\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00291}00291\ \textcolor{comment}{/*\ Additional\ actions\ to\ unwind\ number\ of\ stack\ frames.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00292}\mbox{\hyperlink{unwind_8h_aa3512d12ccc5d073604f91c295ff9ce8}{00292}}\ \textcolor{preprocessor}{\#define\ \_Unwind\_Frames\_Extra(frames)}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00293}00293\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00294}00294\ \textcolor{comment}{/*\ Increment\ frame\ count.\ \ */}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00295}\mbox{\hyperlink{unwind_8h_af565229a166f4efcd3cae6c4c91a3b30}{00295}}\ \textcolor{preprocessor}{\#define\ \_Unwind\_Frames\_Increment(context,\ frames)\ frames++}}
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00296}00296\ }
+\DoxyCodeLine{\Hypertarget{unwind_8h_source_l00297}00297\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ unwind.h\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

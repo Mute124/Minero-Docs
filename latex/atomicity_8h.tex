@@ -1,0 +1,60 @@
+\doxysection{C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/include/c++/ext/atomicity.h File Reference}
+\hypertarget{atomicity_8h}{}\label{atomicity_8h}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/atomicity.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/atomicity.h}}
+{\ttfamily \#include $<$bits/c++config.\+h$>$}\newline
+{\ttfamily \#include $<$bits/gthr.\+h$>$}\newline
+{\ttfamily \#include $<$bits/atomic\+\_\+word.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{atomicity_8h_a9634582b80c53542388c02c94d55a985}{\+\_\+\+GLIBCXX\+\_\+\+READ\+\_\+\+MEM\+\_\+\+BARRIER}}~\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+atomic\+\_\+thread\+\_\+fence}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+\+ATOMIC\+\_\+\+ACQUIRE}})
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{atomicity_8h_a09934f12c7822156e43da7d8304f8923}{\+\_\+\+GLIBCXX\+\_\+\+WRITE\+\_\+\+MEM\+\_\+\+BARRIER}}~\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+atomic\+\_\+thread\+\_\+fence}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+\+ATOMIC\+\_\+\+RELEASE}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{namespace}} \+\_\+\+\_\+gnu\+\_\+cxx \mbox{\hyperlink{atomicity_8h_a56fd5a6be7c55e53e3eb59de5aa1ab9b}{\+\_\+\+GLIBCXX\+\_\+\+VISIBILITY}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{default}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file is a GNU extension to the Standard C++ Library. 
+
+Definition in file \mbox{\hyperlink{atomicity_8h_source}{atomicity.\+h}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{atomicity_8h_a9634582b80c53542388c02c94d55a985}\label{atomicity_8h_a9634582b80c53542388c02c94d55a985} 
+\index{atomicity.h@{atomicity.h}!\_GLIBCXX\_READ\_MEM\_BARRIER@{\_GLIBCXX\_READ\_MEM\_BARRIER}}
+\index{\_GLIBCXX\_READ\_MEM\_BARRIER@{\_GLIBCXX\_READ\_MEM\_BARRIER}!atomicity.h@{atomicity.h}}
+\doxysubsubsection{\texorpdfstring{\_GLIBCXX\_READ\_MEM\_BARRIER}{\_GLIBCXX\_READ\_MEM\_BARRIER}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \+\_\+\+GLIBCXX\+\_\+\+READ\+\_\+\+MEM\+\_\+\+BARRIER~\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+atomic\+\_\+thread\+\_\+fence}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+\+ATOMIC\+\_\+\+ACQUIRE}})}
+
+
+
+Definition at line \mbox{\hyperlink{atomicity_8h_source_l00121}{121}} of file \mbox{\hyperlink{atomicity_8h_source}{atomicity.\+h}}.
+
+\Hypertarget{atomicity_8h_a09934f12c7822156e43da7d8304f8923}\label{atomicity_8h_a09934f12c7822156e43da7d8304f8923} 
+\index{atomicity.h@{atomicity.h}!\_GLIBCXX\_WRITE\_MEM\_BARRIER@{\_GLIBCXX\_WRITE\_MEM\_BARRIER}}
+\index{\_GLIBCXX\_WRITE\_MEM\_BARRIER@{\_GLIBCXX\_WRITE\_MEM\_BARRIER}!atomicity.h@{atomicity.h}}
+\doxysubsubsection{\texorpdfstring{\_GLIBCXX\_WRITE\_MEM\_BARRIER}{\_GLIBCXX\_WRITE\_MEM\_BARRIER}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \+\_\+\+GLIBCXX\+\_\+\+WRITE\+\_\+\+MEM\+\_\+\+BARRIER~\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+atomic\+\_\+thread\+\_\+fence}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+\+ATOMIC\+\_\+\+RELEASE}})}
+
+
+
+Definition at line \mbox{\hyperlink{atomicity_8h_source_l00124}{124}} of file \mbox{\hyperlink{atomicity_8h_source}{atomicity.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{atomicity_8h_a56fd5a6be7c55e53e3eb59de5aa1ab9b}\label{atomicity_8h_a56fd5a6be7c55e53e3eb59de5aa1ab9b} 
+\index{atomicity.h@{atomicity.h}!\_GLIBCXX\_VISIBILITY@{\_GLIBCXX\_VISIBILITY}}
+\index{\_GLIBCXX\_VISIBILITY@{\_GLIBCXX\_VISIBILITY}!atomicity.h@{atomicity.h}}
+\doxysubsubsection{\texorpdfstring{\_GLIBCXX\_VISIBILITY()}{\_GLIBCXX\_VISIBILITY()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{namespace}} \+\_\+\+\_\+gnu\+\_\+cxx \+\_\+\+GLIBCXX\+\_\+\+VISIBILITY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{default}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{atomicity_8h_source_l00041}{41}} of file \mbox{\hyperlink{atomicity_8h_source}{atomicity.\+h}}.
+

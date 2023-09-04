@@ -1,0 +1,49 @@
+\doxysection{C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/include/c++/bits/stl\+\_\+algobase.h File Reference}
+\hypertarget{stl__algobase_8h}{}\label{stl__algobase_8h}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/bits/stl\_algobase.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/bits/stl\_algobase.h}}
+{\ttfamily \#include $<$bits/c++config.\+h$>$}\newline
+{\ttfamily \#include $<$bits/functexcept.\+h$>$}\newline
+{\ttfamily \#include $<$bits/cpp\+\_\+type\+\_\+traits.\+h$>$}\newline
+{\ttfamily \#include $<$ext/type\+\_\+traits.\+h$>$}\newline
+{\ttfamily \#include $<$ext/numeric\+\_\+traits.\+h$>$}\newline
+{\ttfamily \#include $<$bits/stl\+\_\+pair.\+h$>$}\newline
+{\ttfamily \#include $<$bits/stl\+\_\+iterator\+\_\+base\+\_\+types.\+h$>$}\newline
+{\ttfamily \#include $<$bits/stl\+\_\+iterator\+\_\+base\+\_\+funcs.\+h$>$}\newline
+{\ttfamily \#include $<$bits/stl\+\_\+iterator.\+h$>$}\newline
+{\ttfamily \#include $<$bits/concept\+\_\+check.\+h$>$}\newline
+{\ttfamily \#include $<$debug/debug.\+h$>$}\newline
+{\ttfamily \#include $<$bits/move.\+h$>$}\newline
+{\ttfamily \#include $<$bits/predefined\+\_\+ops.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{stl__algobase_8h_aa87556e0d8423250838a4c1317e59bcf}{\+\_\+\+GLIBCXX\+\_\+\+MOVE3}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Tp}},  \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Up}},  \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Vp}})~\mbox{\hyperlink{namespacestd_a4e3366cc5ea1e47fac759952b877ed0d}{std\+::copy}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Tp}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Up}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Vp}})
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{stl__algobase_8h_acb79ce8166cafa1464ff01ecf20eb889}{\+\_\+\+GLIBCXX\+\_\+\+MOVE\+\_\+\+BACKWARD3}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Tp}},  \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Up}},  \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Vp}})~\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{std\+::copy\+\_\+backward}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Tp}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Up}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Vp}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{namespace}} std \mbox{\hyperlink{group__non__mutating__algorithms_ga544d74b2d5d0dd2197f5fd6f02691de0}{\+\_\+\+GLIBCXX\+\_\+\+VISIBILITY}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{default}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is an internal header file, included by other library headers. Do not attempt to use it directly. @headername\{algorithm\} 
+
+Definition in file \mbox{\hyperlink{stl__algobase_8h_source}{stl\+\_\+algobase.\+h}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{stl__algobase_8h_aa87556e0d8423250838a4c1317e59bcf}\label{stl__algobase_8h_aa87556e0d8423250838a4c1317e59bcf} 
+\index{stl\_algobase.h@{stl\_algobase.h}!\_GLIBCXX\_MOVE3@{\_GLIBCXX\_MOVE3}}
+\index{\_GLIBCXX\_MOVE3@{\_GLIBCXX\_MOVE3}!stl\_algobase.h@{stl\_algobase.h}}
+\doxysubsubsection{\texorpdfstring{\_GLIBCXX\_MOVE3}{\_GLIBCXX\_MOVE3}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \+\_\+\+GLIBCXX\+\_\+\+MOVE3(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Tp}},  }\item[{}]{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Up}},  }\item[{}]{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Vp}} }\end{DoxyParamCaption})~\mbox{\hyperlink{namespacestd_a4e3366cc5ea1e47fac759952b877ed0d}{std\+::copy}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Tp}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Up}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Vp}})}
+
+\Hypertarget{stl__algobase_8h_acb79ce8166cafa1464ff01ecf20eb889}\label{stl__algobase_8h_acb79ce8166cafa1464ff01ecf20eb889} 
+\index{stl\_algobase.h@{stl\_algobase.h}!\_GLIBCXX\_MOVE\_BACKWARD3@{\_GLIBCXX\_MOVE\_BACKWARD3}}
+\index{\_GLIBCXX\_MOVE\_BACKWARD3@{\_GLIBCXX\_MOVE\_BACKWARD3}!stl\_algobase.h@{stl\_algobase.h}}
+\doxysubsubsection{\texorpdfstring{\_GLIBCXX\_MOVE\_BACKWARD3}{\_GLIBCXX\_MOVE\_BACKWARD3}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \+\_\+\+GLIBCXX\+\_\+\+MOVE\+\_\+\+BACKWARD3(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Tp}},  }\item[{}]{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Up}},  }\item[{}]{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Vp}} }\end{DoxyParamCaption})~\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{std\+::copy\+\_\+backward}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Tp}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Up}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Vp}})}
+

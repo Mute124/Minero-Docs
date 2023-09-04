@@ -1,0 +1,65 @@
+\doxysection{testhuge.\+cpp}
+\hypertarget{testhuge_8cpp_source}{}\label{testhuge_8cpp_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/mINI-\/master/tests/testhuge.cpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/mINI-\/master/tests/testhuge.cpp}}
+\mbox{\hyperlink{testhuge_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00001}00001\ \textcolor{comment}{/*\ use\ testhuge\ -\/t\ to\ time\ tests\ */}}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{lest_8hpp}{lest.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ini_8h}{mini/ini.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00007}\mbox{\hyperlink{testhuge_8cpp_a42a21beb8018ac623f4d09db1343b9cf}{00007}}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{testhuge_8cpp_a42a21beb8018ac623f4d09db1343b9cf}{filename}}\ =\ \textcolor{stringliteral}{"{}data\_huge.ini"{}};}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00009}\mbox{\hyperlink{testhuge_8cpp_a77bc9307e3cd3ef3b0ec4d091800135e}{00009}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{testhuge_8cpp_a77bc9307e3cd3ef3b0ec4d091800135e}{N\_sections}}\ =\ 20;}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00010}\mbox{\hyperlink{testhuge_8cpp_abf5a32ec5881001f96d263a20c800533}{00010}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{testhuge_8cpp_abf5a32ec5881001f96d263a20c800533}{N\_items\_per\_section}}\ =\ 500;}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00012}\mbox{\hyperlink{testhuge_8cpp_a8a08799f943a9259352e86a2264ca322}{00012}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{testhuge_8cpp_a8a08799f943a9259352e86a2264ca322}{generate\_pretty}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00014}\mbox{\hyperlink{testhuge_8cpp_ada7733ec5ebdad166b1e0017e3a439b8}{00014}}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structlest_1_1test}{lest::test}}\ \mbox{\hyperlink{testhuge_8cpp_ada7733ec5ebdad166b1e0017e3a439b8}{mINI\_tests}}[]\ =\ \{}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00015}00015\ \ \ \ \ \mbox{\hyperlink{lest_8hpp_af2b30344be261ffe1c5aad12ab1f6f07}{CASE}}(\textcolor{stringliteral}{"{}TEST:\ Generate\ a\ huge\ file"{}})}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00016}00016\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Writing\ file..."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classm_i_n_i_1_1_i_n_i_file}{mINI::INIFile}}\ file(\mbox{\hyperlink{testhuge_8cpp_a42a21beb8018ac623f4d09db1343b9cf}{filename}});}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacem_i_n_i_a7ebad9b80453aa82944eb63fb2782a9d}{mINI::INIStructure}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ini}};}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ generate\ data}}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <=\ \mbox{\hyperlink{testhuge_8cpp_a77bc9307e3cd3ef3b0ec4d091800135e}{N\_sections}};\ ++i)}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ section\ =\ \textcolor{stringliteral}{"{}section"{}}\ +\ std::to\_string(i);}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{j}}\ =\ 1;\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{j}}\ <=\ \mbox{\hyperlink{testhuge_8cpp_abf5a32ec5881001f96d263a20c800533}{N\_items\_per\_section}};\ ++\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{j}})}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{j\_str}}\ =\ std::to\_string(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{j}});}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ key\ =\ \textcolor{stringliteral}{"{}key"{}}\ +\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{j\_str}};}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{value}}\ =\ \textcolor{stringliteral}{"{}value"{}}\ +\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{j\_str}};}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ini}}[section][key]\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{value}};}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ generate\ file}}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{lest_8hpp_a3c85f9dc96aa86b427a1f4d9f00dea37}{EXPECT}}(file.\mbox{\hyperlink{classm_i_n_i_1_1_i_n_i_file_a4d5be7c70113c62f31515464e35876e4}{generate}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ini}})\ ==\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00034}00034\ \ \ \ \ \},}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00035}00035\ \ \ \ \ \mbox{\hyperlink{lest_8hpp_af2b30344be261ffe1c5aad12ab1f6f07}{CASE}}(\textcolor{stringliteral}{"{}TEST:\ Read\ a\ huge\ file"{}})}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00036}00036\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ this\ testcase\ relies\ on\ the\ previous\ test\ passing}}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Reading\ file..."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classm_i_n_i_1_1_i_n_i_file}{mINI::INIFile}}\ file(\mbox{\hyperlink{testhuge_8cpp_a42a21beb8018ac623f4d09db1343b9cf}{filename}});}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacem_i_n_i_a7ebad9b80453aa82944eb63fb2782a9d}{mINI::INIStructure}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ini}};}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ read\ from\ file}}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{lest_8hpp_a3c85f9dc96aa86b427a1f4d9f00dea37}{EXPECT}}(file.\mbox{\hyperlink{classm_i_n_i_1_1_i_n_i_file_a0ead9063903c7a465b38d9d772fb0df7}{read}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ini}})\ ==\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{lest_8hpp_a3c85f9dc96aa86b427a1f4d9f00dea37}{EXPECT}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ini}}.size()\ ==\ \mbox{\hyperlink{testhuge_8cpp_a77bc9307e3cd3ef3b0ec4d091800135e}{N\_sections}});}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{it}}\ :\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ini}})}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{lest_8hpp_a3c85f9dc96aa86b427a1f4d9f00dea37}{EXPECT}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{it}}.second.size()\ ==\ \mbox{\hyperlink{testhuge_8cpp_abf5a32ec5881001f96d263a20c800533}{N\_items\_per\_section}});}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00049}00049\ \};}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00051}\mbox{\hyperlink{testhuge_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{00051}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_buttons_2src_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{argc}},\ \textcolor{keywordtype}{char}**\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{argv}})}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00052}00052\ \{}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00053}00053\ \ \ \ \ \textcolor{comment}{//\ run\ tests}}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00054}00054\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{int}\ failures\ =\ \mbox{\hyperlink{namespacelest_a625193eb3dbfcef90fe9519412f96f38}{lest::run}}(\mbox{\hyperlink{testhuge_8cpp_ada7733ec5ebdad166b1e0017e3a439b8}{mINI\_tests}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{argc}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{argv}}))}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00055}00055\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ failures;}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00057}00057\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00058}00058\ \ \ \ \ \textcolor{keywordflow}{return}\ std::cout\ <<\ std::endl\ <<\ \textcolor{stringliteral}{"{}All\ tests\ passed!"{}}\ <<\ std::endl,\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{EXIT\_SUCCESS}};}
+\DoxyCodeLine{\Hypertarget{testhuge_8cpp_source_l00059}00059\ \}}
+
+\end{DoxyCode}

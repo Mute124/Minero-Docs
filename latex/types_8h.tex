@@ -1,0 +1,79 @@
+\doxysection{C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/include/c++/parallel/types.h File Reference}
+\hypertarget{types_8h}{}\label{types_8h}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/parallel/types.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/parallel/types.h}}
+
+
+Basic types and typedefs. This file is a GNU parallel extension to the Standard C++ Library.  
+
+
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$tr1/cstdint$>$}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace____gnu__parallel}{\+\_\+\+\_\+gnu\+\_\+parallel}}
+\begin{DoxyCompactList}\small\item\em GNU parallel code for public use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{external_2glfw_2deps_2vs2008_2stdint_8h_aec6fcb673ff035718c238c8c9d544c47}{uint64\+\_\+t}} \mbox{\hyperlink{namespace____gnu__parallel_a1cbb61a4863a306daa23823d89f9bef1}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+\_\+\+Sequence\+Index}}
+\begin{DoxyCompactList}\small\item\em Unsigned integer to index \+\_\+\+\_\+elements. The total number of elements for each algorithm must fit into this type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{external_2glfw_2deps_2vs2008_2stdint_8h_a273cf69d639a59973b6019625df33e30}{uint16\+\_\+t}} \mbox{\hyperlink{namespace____gnu__parallel_a05e502e51bfc3233671730f74a44dc6a}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+\_\+\+Thread\+Index}}
+\begin{DoxyCompactList}\small\item\em Unsigned integer to index a thread number. The maximum thread number (for each processor) must fit into this type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{external_2glfw_2deps_2vs2008_2stdint_8h_a414156feea104f8f75b4ed9e3121b2f6}{int64\+\_\+t}} \mbox{\hyperlink{namespace____gnu__parallel_aa1171c39f9e5afad6392c7aeefb81115}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+\_\+\+CASable}}
+\begin{DoxyCompactList}\small\item\em Longest compare-\/and-\/swappable integer type on this platform. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace____gnu__parallel_a76f6cbf29b1b8d57762cce1ed9bd01a8}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+\_\+\+Parallelism}} \{ \newline
+\mbox{\hyperlink{namespace____gnu__parallel_a76f6cbf29b1b8d57762cce1ed9bd01a8a7e6aa054fd848be925726fcf7b4eb3ce}{\+\_\+\+\_\+gnu\+\_\+parallel\+::sequential}}
+, \mbox{\hyperlink{namespace____gnu__parallel_a76f6cbf29b1b8d57762cce1ed9bd01a8ac530f35e669c50e9676af20454e1676f}{\+\_\+\+\_\+gnu\+\_\+parallel\+::parallel\+\_\+unbalanced}}
+, \mbox{\hyperlink{namespace____gnu__parallel_a76f6cbf29b1b8d57762cce1ed9bd01a8a44044e5486122945728060ea6de7d32c}{\+\_\+\+\_\+gnu\+\_\+parallel\+::parallel\+\_\+balanced}}
+, \mbox{\hyperlink{namespace____gnu__parallel_a76f6cbf29b1b8d57762cce1ed9bd01a8ad1e39d5a03b2603328b50ada20730bd0}{\+\_\+\+\_\+gnu\+\_\+parallel\+::parallel\+\_\+omp\+\_\+loop}}
+, \newline
+\mbox{\hyperlink{namespace____gnu__parallel_a76f6cbf29b1b8d57762cce1ed9bd01a8aa5624cdd99806daed0060c56908fd043}{\+\_\+\+\_\+gnu\+\_\+parallel\+::parallel\+\_\+omp\+\_\+loop\+\_\+static}}
+, \mbox{\hyperlink{namespace____gnu__parallel_a76f6cbf29b1b8d57762cce1ed9bd01a8aec9d9a6b7777354079bb906baaec2ff4}{\+\_\+\+\_\+gnu\+\_\+parallel\+::parallel\+\_\+taskqueue}}
+ \}
+\begin{DoxyCompactList}\small\item\em Run-\/time equivalents for the compile-\/time tags. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace____gnu__parallel_abfff682f83a1eacf1b43ad2b33a1954f}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+\_\+\+Algorithm\+Strategy}} \{ \mbox{\hyperlink{namespace____gnu__parallel_abfff682f83a1eacf1b43ad2b33a1954fa37e2616a5bd16a59ed974cb15ee77621}{\+\_\+\+\_\+gnu\+\_\+parallel\+::heuristic}}
+, \mbox{\hyperlink{namespace____gnu__parallel_abfff682f83a1eacf1b43ad2b33a1954faac1c5d10c6a74ee87d1936f70ce13eac}{\+\_\+\+\_\+gnu\+\_\+parallel\+::force\+\_\+sequential}}
+, \mbox{\hyperlink{namespace____gnu__parallel_abfff682f83a1eacf1b43ad2b33a1954faac1ea37a901560874ae4c99cec8222f8}{\+\_\+\+\_\+gnu\+\_\+parallel\+::force\+\_\+parallel}}
+ \}
+\begin{DoxyCompactList}\small\item\em Strategies for run-\/time algorithm selection\+: \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace____gnu__parallel_a35bfabad218af713f172257aecd8414e}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+\_\+\+Sort\+Algorithm}} \{ \mbox{\hyperlink{namespace____gnu__parallel_a35bfabad218af713f172257aecd8414eac32ec9cfaaecb3f8d6d0e3af137f54cf}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+MWMS}}
+, \mbox{\hyperlink{namespace____gnu__parallel_a35bfabad218af713f172257aecd8414ea199299b925cb02e7b9248f181984ff15}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+QS}}
+, \mbox{\hyperlink{namespace____gnu__parallel_a35bfabad218af713f172257aecd8414ea1d7a2b1cba7e5948b41b4fdd25d94581}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+QS\+\_\+\+BALANCED}}
+ \}
+\begin{DoxyCompactList}\small\item\em Sorting algorithms\+: \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace____gnu__parallel_abf16f5ba3af149689c7ed95309b7e91d}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+\_\+\+Multiway\+Merge\+Algorithm}} \{ \mbox{\hyperlink{namespace____gnu__parallel_abf16f5ba3af149689c7ed95309b7e91da8eccccfd96ea4a09250f76697f73f331}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+LOSER\+\_\+\+TREE}}
+ \}
+\begin{DoxyCompactList}\small\item\em Merging algorithms\+: \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace____gnu__parallel_a6a4a811c81e2fb4a7722ee69762c7380}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+\_\+\+Partial\+Sum\+Algorithm}} \{ \mbox{\hyperlink{namespace____gnu__parallel_a6a4a811c81e2fb4a7722ee69762c7380a1a5e138ec665495c69af127b6b45d940}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+RECURSIVE}}
+, \mbox{\hyperlink{namespace____gnu__parallel_a6a4a811c81e2fb4a7722ee69762c7380a01c8eb5027df3d240491d18847f308e1}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+LINEAR}}
+ \}
+\begin{DoxyCompactList}\small\item\em Partial sum algorithms\+: recursive, linear. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace____gnu__parallel_ace24b9f316fde5ea598815403cfd02bb}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+\_\+\+Splitting\+Algorithm}} \{ \mbox{\hyperlink{namespace____gnu__parallel_ace24b9f316fde5ea598815403cfd02bba919e1a249327b3621e58077275bca24a}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+SAMPLING}}
+, \mbox{\hyperlink{namespace____gnu__parallel_ace24b9f316fde5ea598815403cfd02bba10b082bfd32bf8674ffd82a18b7e6f0c}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+EXACT}}
+ \}
+\begin{DoxyCompactList}\small\item\em Sorting/merging algorithms\+: sampling, \+\_\+\+\_\+exact. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace____gnu__parallel_a1a75203febda4d2e4fab646bf6a94252}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+\_\+\+Find\+Algorithm}} \{ \mbox{\hyperlink{namespace____gnu__parallel_a1a75203febda4d2e4fab646bf6a94252ace93dfa7c8df564ec0474b122f748195}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+GROWING\+\_\+\+BLOCKS}}
+, \mbox{\hyperlink{namespace____gnu__parallel_a1a75203febda4d2e4fab646bf6a94252ae2073d1b63d6cac8dffb3dadc9232e81}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+CONSTANT\+\_\+\+SIZE\+\_\+\+BLOCKS}}
+, \mbox{\hyperlink{namespace____gnu__parallel_a1a75203febda4d2e4fab646bf6a94252ab313dfe00aade75a64e359424b0a5b9a}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+EQUAL\+\_\+\+SPLIT}}
+ \}
+\begin{DoxyCompactList}\small\item\em Find algorithms\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{namespace____gnu__parallel_add7da76e5782016cb1271e7537f0e94b}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+\_\+\+CASable\+\_\+bits}} = std\+::numeric\+\_\+limits$<$\mbox{\hyperlink{namespace____gnu__parallel_aa1171c39f9e5afad6392c7aeefb81115}{\+\_\+\+CASable}}$>$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+::digits}}
+\begin{DoxyCompactList}\small\item\em Number of bits of \+\_\+\+CASable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{namespace____gnu__parallel_aa1171c39f9e5afad6392c7aeefb81115}{\+\_\+\+CASable}} \mbox{\hyperlink{namespace____gnu__parallel_ad26f1c0a23abae27911dfbd0560a6048}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+\_\+\+CASable\+\_\+mask}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace____gnu__parallel_aa1171c39f9e5afad6392c7aeefb81115}{\+\_\+\+CASable} with the right half of bits set to 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Basic types and typedefs. This file is a GNU parallel extension to the Standard C++ Library. 
+
+
+
+Definition in file \mbox{\hyperlink{types_8h_source}{types.\+h}}.
+

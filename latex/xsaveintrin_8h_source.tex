@@ -1,0 +1,92 @@
+\doxysection{xsaveintrin.\+h}
+\hypertarget{xsaveintrin_8h_source}{}\label{xsaveintrin_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/xsaveintrin.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/xsaveintrin.h}}
+\mbox{\hyperlink{xsaveintrin_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00001}00001\ \textcolor{comment}{/*\ Copyright\ (C)\ 2012-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00002}00002\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00003}00003\ \textcolor{comment}{\ \ \ This\ file\ is\ part\ of\ GCC.}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00004}00004\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00005}00005\ \textcolor{comment}{\ \ \ GCC\ is\ free\ software;\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00006}00006\ \textcolor{comment}{\ \ \ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00007}00007\ \textcolor{comment}{\ \ \ the\ Free\ Software\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00008}00008\ \textcolor{comment}{\ \ \ any\ later\ version.}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00009}00009\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00010}00010\ \textcolor{comment}{\ \ \ GCC\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00011}00011\ \textcolor{comment}{\ \ \ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00012}00012\ \textcolor{comment}{\ \ \ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00013}00013\ \textcolor{comment}{\ \ \ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00014}00014\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00015}00015\ \textcolor{comment}{\ \ \ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00016}00016\ \textcolor{comment}{\ \ \ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00017}00017\ \textcolor{comment}{\ \ \ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00018}00018\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00019}00019\ \textcolor{comment}{\ \ \ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00020}00020\ \textcolor{comment}{\ \ \ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00021}00021\ \textcolor{comment}{\ \ \ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00022}00022\ \textcolor{comment}{\ \ \ <http://www.gnu.org/licenses/>.\ \ */}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00024}00024\ \textcolor{preprocessor}{\#ifndef\ \_X86GPRINTRIN\_H\_INCLUDED}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00025}00025\ \textcolor{preprocessor}{\#\ error\ "{}Never\ use\ <xsaveintrin.h>\ directly;\ include\ <x86gprintrin.h>\ instead."{}}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00026}00026\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00028}00028\ \textcolor{preprocessor}{\#ifndef\ \_XSAVEINTRIN\_H\_INCLUDED}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00029}00029\ \textcolor{preprocessor}{\#define\ \_XSAVEINTRIN\_H\_INCLUDED}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00031}00031\ \textcolor{preprocessor}{\#ifndef\ \_\_XSAVE\_\_}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00032}00032\ \textcolor{preprocessor}{\#pragma\ GCC\ push\_options}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00033}00033\ \textcolor{preprocessor}{\#pragma\ GCC\ target("{}xsave"{})}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00034}\mbox{\hyperlink{xsaveintrin_8h_a4ce9bfa8f861ad2398a078c6d3296d83}{00034}}\ \textcolor{preprocessor}{\#define\ \_\_DISABLE\_XSAVE\_\_}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00035}00035\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_XSAVE\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00037}00037\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_inline}}\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00038}00038\ \mbox{\hyperlink{avx512bf16intrin_8h_a016eb0ea28cf676c28ca5fdd1709f105}{\_\_attribute\_\_}}((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_gnu\_inline\_\_}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_always\_inline\_\_}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_artificial\_\_}}))}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00039}\mbox{\hyperlink{xsaveintrin_8h_aa64b24b4136166eb543e3dc22b59369c}{00039}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_xsave}}\ (\textcolor{keywordtype}{void}\ *\mbox{\hyperlink{adxintrin_8h_a1d87666c870c8f6aab8607f912655510}{\_\_P}},\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{xsaveintrin_8h_aa64b24b4136166eb543e3dc22b59369c}{\_\_M}})}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00040}00040\ \{}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00041}00041\ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_builtin\_ia32\_xsave}}\ (\mbox{\hyperlink{adxintrin_8h_a1d87666c870c8f6aab8607f912655510}{\_\_P}},\ \mbox{\hyperlink{xsaveintrin_8h_aa64b24b4136166eb543e3dc22b59369c}{\_\_M}});}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00042}00042\ \}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00044}00044\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_inline}}\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00045}00045\ \mbox{\hyperlink{avx512bf16intrin_8h_a016eb0ea28cf676c28ca5fdd1709f105}{\_\_attribute\_\_}}((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_gnu\_inline\_\_}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_always\_inline\_\_}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_artificial\_\_}}))}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00046}00046\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_xrstor}}\ (\textcolor{keywordtype}{void}\ *\mbox{\hyperlink{adxintrin_8h_a1d87666c870c8f6aab8607f912655510}{\_\_P}},\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{xsaveintrin_8h_aa64b24b4136166eb543e3dc22b59369c}{\_\_M}})}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00047}00047\ \{}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00048}00048\ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_builtin\_ia32\_xrstor}}\ (\mbox{\hyperlink{adxintrin_8h_a1d87666c870c8f6aab8607f912655510}{\_\_P}},\ \mbox{\hyperlink{xsaveintrin_8h_aa64b24b4136166eb543e3dc22b59369c}{\_\_M}});}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00049}00049\ \}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00051}00051\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_inline}}\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00052}00052\ \mbox{\hyperlink{avx512bf16intrin_8h_a016eb0ea28cf676c28ca5fdd1709f105}{\_\_attribute\_\_}}((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_gnu\_inline\_\_}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_always\_inline\_\_}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_artificial\_\_}}))}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00053}\mbox{\hyperlink{xsaveintrin_8h_a8a3227d99896facab23842251c45bebc}{00053}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_xsetbv}}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{avx5124fmapsintrin_8h_ae59ee037f6e8bf1594011f2e30da5f9c}{\_\_A}},\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{xsaveintrin_8h_a8a3227d99896facab23842251c45bebc}{\_\_V}})}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00054}00054\ \{}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00055}00055\ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_builtin\_ia32\_xsetbv}}\ (\mbox{\hyperlink{avx5124fmapsintrin_8h_ae59ee037f6e8bf1594011f2e30da5f9c}{\_\_A}},\ \mbox{\hyperlink{xsaveintrin_8h_a8a3227d99896facab23842251c45bebc}{\_\_V}});}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00056}00056\ \}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00058}00058\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_inline}}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00059}\mbox{\hyperlink{xsaveintrin_8h_ac66f6679a8e2e923b506cab23423ea48}{00059}}\ \mbox{\hyperlink{avx512bf16intrin_8h_a016eb0ea28cf676c28ca5fdd1709f105}{\_\_attribute\_\_}}((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_gnu\_inline\_\_}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_always\_inline\_\_}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_artificial\_\_}}))}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00060}00060\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_xgetbv}}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{avx5124fmapsintrin_8h_ae59ee037f6e8bf1594011f2e30da5f9c}{\_\_A}})}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00061}00061\ \{}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00062}00062\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_builtin\_ia32\_xgetbv}}\ (\mbox{\hyperlink{avx5124fmapsintrin_8h_ae59ee037f6e8bf1594011f2e30da5f9c}{\_\_A}});}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00063}00063\ \}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00065}00065\ \textcolor{preprocessor}{\#ifdef\ \_\_x86\_64\_\_}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00066}00066\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_inline}}\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00067}00067\ \mbox{\hyperlink{avx512bf16intrin_8h_a016eb0ea28cf676c28ca5fdd1709f105}{\_\_attribute\_\_}}((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_gnu\_inline\_\_}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_always\_inline\_\_}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_artificial\_\_}}))}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00068}00068\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_xsave64}}\ (\textcolor{keywordtype}{void}\ *\mbox{\hyperlink{adxintrin_8h_a1d87666c870c8f6aab8607f912655510}{\_\_P}},\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{xsaveintrin_8h_aa64b24b4136166eb543e3dc22b59369c}{\_\_M}})}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00069}00069\ \{}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00070}00070\ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_builtin\_ia32\_xsave64}}\ (\mbox{\hyperlink{adxintrin_8h_a1d87666c870c8f6aab8607f912655510}{\_\_P}},\ \mbox{\hyperlink{xsaveintrin_8h_aa64b24b4136166eb543e3dc22b59369c}{\_\_M}});}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00071}00071\ \}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00073}00073\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_inline}}\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00074}00074\ \mbox{\hyperlink{avx512bf16intrin_8h_a016eb0ea28cf676c28ca5fdd1709f105}{\_\_attribute\_\_}}((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_gnu\_inline\_\_}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_always\_inline\_\_}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_artificial\_\_}}))}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00075}00075\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_xrstor64}}\ (\textcolor{keywordtype}{void}\ *\mbox{\hyperlink{adxintrin_8h_a1d87666c870c8f6aab8607f912655510}{\_\_P}},\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{xsaveintrin_8h_aa64b24b4136166eb543e3dc22b59369c}{\_\_M}})}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00076}00076\ \{}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00077}00077\ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_builtin\_ia32\_xrstor64}}\ (\mbox{\hyperlink{adxintrin_8h_a1d87666c870c8f6aab8607f912655510}{\_\_P}},\ \mbox{\hyperlink{xsaveintrin_8h_aa64b24b4136166eb543e3dc22b59369c}{\_\_M}});}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00078}00078\ \}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00079}00079\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00081}00081\ \textcolor{preprocessor}{\#ifdef\ \_\_DISABLE\_XSAVE\_\_}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00082}00082\ \textcolor{preprocessor}{\#undef\ \_\_DISABLE\_XSAVE\_\_}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00083}00083\ \textcolor{preprocessor}{\#pragma\ GCC\ pop\_options}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00084}00084\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_DISABLE\_XSAVE\_\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{xsaveintrin_8h_source_l00086}00086\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_XSAVEINTRIN\_H\_INCLUDED\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,38 @@
+\doxysection{Logman.\+hpp}
+\hypertarget{_logman_8hpp_source}{}\label{_logman_8hpp_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/Logging/Logman.hpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/Logging/Logman.hpp}}
+\mbox{\hyperlink{_logman_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_time_8h}{time.h}}>}}
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}../lib/raylib.h"{}}}
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00008}00008\ \textcolor{comment}{//\ handles\ logging\ actions.}}
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00009}\mbox{\hyperlink{class_logman}{00009}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_logman}{Logman}}}
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00011}00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00012}\mbox{\hyperlink{class_logman_a506d9deabe97db8e81edfb5cb43f9788}{00012}}\ \ \ \mbox{\hyperlink{class_logman_a506d9deabe97db8e81edfb5cb43f9788}{Logman}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00013}00013\ \ \ \ \ \mbox{\hyperlink{class_logman_abfebd4a14b659c3cbcc82c8965ec7fad}{Logman::CustomLog}}(\mbox{\hyperlink{raylib_8h_a53d4e0542e6c07e7792510e986785285a6e98ff471e3ce6c4ef2d75c37ee51837}{LOG\_INFO}},\ \textcolor{stringliteral}{"{}Starting\ Logman"{}},\ \mbox{\hyperlink{external_2miniaudio_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});}
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00014}00014\ \ \ \ \ \mbox{\hyperlink{class_logman_abf81468ad0b6fee3116ab9a43ac961ae}{Innit}}();}
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00015}00015\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00017}\mbox{\hyperlink{class_logman_a8ffacf75562879674383f5a056c8a78e}{00017}}\ \ \ \mbox{\hyperlink{class_logman_a8ffacf75562879674383f5a056c8a78e}{\string~Logman}}()}
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00018}00018\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00019}00019\ \ \ \ \ \textcolor{keyword}{delete}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00020}00020\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00022}00022\ \ \ \textcolor{comment}{//\ Custom\ logging\ function.}}
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00023}\mbox{\hyperlink{class_logman_abfebd4a14b659c3cbcc82c8965ec7fad}{00023}}\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_logman_abfebd4a14b659c3cbcc82c8965ec7fad}{CustomLog}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{msgType}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *text,\ \mbox{\hyperlink{stdarg_8h_a8c1b94dabde2c11f430bb83e37bdb0a1}{va\_list}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{args}})\{\}}
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00025}00025\ \ \ \textcolor{comment}{//\ Initializes\ logman}}
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00026}\mbox{\hyperlink{class_logman_abf81468ad0b6fee3116ab9a43ac961ae}{00026}}\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_logman_abf81468ad0b6fee3116ab9a43ac961ae}{Innit}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{class_logman_abfebd4a14b659c3cbcc82c8965ec7fad}{Logman::CustomLog}}(\mbox{\hyperlink{raylib_8h_a53d4e0542e6c07e7792510e986785285a6e98ff471e3ce6c4ef2d75c37ee51837}{LOG\_INFO}},\ \textcolor{stringliteral}{"{}Logman\ Started!\ "{}},\ \mbox{\hyperlink{external_2miniaudio_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});}
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00028}00028\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00030}00030\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00031}00031\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_logman_8hpp_source_l00032}00032\ \};}
+
+\end{DoxyCode}

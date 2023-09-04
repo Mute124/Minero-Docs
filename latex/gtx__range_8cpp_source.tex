@@ -1,0 +1,89 @@
+\doxysection{gtx\+\_\+range.\+cpp}
+\hypertarget{gtx__range_8cpp_source}{}\label{gtx__range_8cpp_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/glm/test/gtx/gtx\_range.cpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/glm/test/gtx/gtx\_range.cpp}}
+\mbox{\hyperlink{gtx__range_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00001}\mbox{\hyperlink{gtx__range_8cpp_abd75661fe7969e19439052a5f69ba5d1}{00001}}\ \textcolor{preprocessor}{\#define\ GLM\_ENABLE\_EXPERIMENTAL}}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{constants_8hpp}{glm/gtc/constants.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{ext_2scalar__relational_8hpp}{glm/ext/scalar\_relational.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{ext_2vector__relational_8hpp}{glm/ext/vector\_relational.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{glm_8hpp}{glm/glm.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#if\ GLM\_HAS\_RANGE\_FOR}}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{range_8hpp}{glm/gtx/range.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00011}00011\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{core__force__ctor__init_8cpp_af24476d4bba2ee03103a47da7cf1fe93}{test\_vec}}()}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00015}00015\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structglm_1_1vec}{glm::ivec3}}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a14cfbe2fc2234f5504618905b69d1e06}{v}}(1,\ 2,\ 3);}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_a22486c0c8d9f7d79a07bf22ecffeeb2f}{count}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structglm_1_1vec}{glm::ivec3}}\ Result(0);}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}}\ :\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a14cfbe2fc2234f5504618905b69d1e06}{v}})}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ Result[\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_a22486c0c8d9f7d79a07bf22ecffeeb2f}{count}}]\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}};}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_a22486c0c8d9f7d79a07bf22ecffeeb2f}{count}}++;}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_a22486c0c8d9f7d79a07bf22ecffeeb2f}{count}}\ ==\ 3\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a14cfbe2fc2234f5504618905b69d1e06}{v}}\ ==\ Result\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00027}00027\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00029}00029\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structglm_1_1vec}{glm::ivec3}}\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a14cfbe2fc2234f5504618905b69d1e06}{v}}(1,\ 2,\ 3);}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}}\ :\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a14cfbe2fc2234f5504618905b69d1e06}{v}})}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{group__core__func__vector__relational_ga87e53f50b679f5f95c5cb4780311b3dd}{glm::all}}(\mbox{\hyperlink{group__core__func__vector__relational_gaf539cf490630ba648dfd6e36aef910a1}{glm::equal}}(\mbox{\hyperlink{raylib_2src_2external_2glad_8h_a14cfbe2fc2234f5504618905b69d1e06}{v}},\ \mbox{\hyperlink{structglm_1_1vec}{glm::ivec3}}(0)))\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00036}00036\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}};}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00037}00037\ \}}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00039}00039\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{core__force__ctor__init_8cpp_a0cf84556e00c0b99d98738d3a64b3cf6}{test\_mat}}()}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00040}00040\ \{}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00043}00043\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__core__matrix_ga7ea7fdeaadbbd94a7d36bf8bb9379fea}{glm::mat4x3}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{m}}(1.0f);}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_a22486c0c8d9f7d79a07bf22ecffeeb2f}{count}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Sum}}\ =\ 0.0f;}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{float}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}}\ :\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{m}})}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_a22486c0c8d9f7d79a07bf22ecffeeb2f}{count}}++;}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Sum}}\ +=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}};}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_a22486c0c8d9f7d79a07bf22ecffeeb2f}{count}}\ ==\ 12\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{group__core__func__vector__relational_gaf539cf490630ba648dfd6e36aef910a1}{glm::equal}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Sum}},\ 3.0f,\ 0.001f)\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00055}00055\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00057}00057\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__core__matrix_ga7ea7fdeaadbbd94a7d36bf8bb9379fea}{glm::mat4x3}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{m}}(1.0f);}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{float}\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}}\ :\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{m}})\ \{\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}}\ =\ 0;\ \}}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structglm_1_1vec}{glm::vec4}}\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a14cfbe2fc2234f5504618905b69d1e06}{v}}(1,\ 1,\ 1,\ 1);}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{group__core__func__vector__relational_ga87e53f50b679f5f95c5cb4780311b3dd}{glm::all}}(\mbox{\hyperlink{group__core__func__vector__relational_gaf539cf490630ba648dfd6e36aef910a1}{glm::equal}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{m}}*\mbox{\hyperlink{raylib_2src_2external_2glad_8h_a14cfbe2fc2234f5504618905b69d1e06}{v}},\ \mbox{\hyperlink{structglm_1_1vec}{glm::vec3}}(0,\ 0,\ 0),\ glm::epsilon<float>()))\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00063}00063\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00065}00065\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}};}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00066}00066\ \}}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00068}00068\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{gtx__range_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00069}00069\ \{}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00070}00070\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00071}00071\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{core__force__ctor__init_8cpp_af24476d4bba2ee03103a47da7cf1fe93}{test\_vec}}();}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00072}00072\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{core__force__ctor__init_8cpp_a0cf84556e00c0b99d98738d3a64b3cf6}{test\_mat}}();}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00073}00073\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}};}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00074}00074\ \}}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00076}00076\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00078}\mbox{\hyperlink{gtx__range_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00078}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{gtx__range_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00079}00079\ \{}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00080}00080\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00081}00081\ \}}
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{gtx__range_8cpp_source_l00083}00083\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//GLM\_HAS\_RANGE\_FOR}}
+
+\end{DoxyCode}

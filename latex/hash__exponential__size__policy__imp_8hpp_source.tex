@@ -1,0 +1,94 @@
+\doxysection{hash\+\_\+exponential\+\_\+size\+\_\+policy\+\_\+imp.\+hpp}
+\hypertarget{hash__exponential__size__policy__imp_8hpp_source}{}\label{hash__exponential__size__policy__imp_8hpp_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/pb\_ds/detail/resize\_policy/hash\_exponential\_size\_policy\_imp.hpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/pb\_ds/detail/resize\_policy/hash\_exponential\_size\_policy\_imp.hpp}}
+\mbox{\hyperlink{hash__exponential__size__policy__imp_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00001}00001\ \textcolor{comment}{//\ -\/*-\/\ C++\ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00003}00003\ \textcolor{comment}{//\ Copyright\ (C)\ 2005-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00005}00005\ \textcolor{comment}{//\ This\ file\ is\ part\ of\ the\ GNU\ ISO\ C++\ Library.\ \ This\ library\ is\ free}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00006}00006\ \textcolor{comment}{//\ software;\ you\ can\ redistribute\ it\ and/or\ modify\ it\ under\ the\ terms}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00007}00007\ \textcolor{comment}{//\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by\ the\ Free\ Software}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00008}00008\ \textcolor{comment}{//\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)\ any\ later}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00009}00009\ \textcolor{comment}{//\ version.}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00011}00011\ \textcolor{comment}{//\ This\ library\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,\ but}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00012}00012\ \textcolor{comment}{//\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00013}00013\ \textcolor{comment}{//\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the\ GNU}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00014}00014\ \textcolor{comment}{//\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00016}00016\ \textcolor{comment}{//\ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00017}00017\ \textcolor{comment}{//\ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00018}00018\ \textcolor{comment}{//\ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00020}00020\ \textcolor{comment}{//\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00021}00021\ \textcolor{comment}{//\ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00022}00022\ \textcolor{comment}{//\ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00023}00023\ \textcolor{comment}{//\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00025}00025\ \textcolor{comment}{//\ Copyright\ (C)\ 2004\ Ami\ Tavory\ and\ Vladimir\ Dreizin,\ IBM-\/HRL.}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00027}00027\ \textcolor{comment}{//\ Permission\ to\ use,\ copy,\ modify,\ sell,\ and\ distribute\ this\ software}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00028}00028\ \textcolor{comment}{//\ is\ hereby\ granted\ without\ fee,\ provided\ that\ the\ above\ copyright}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00029}00029\ \textcolor{comment}{//\ notice\ appears\ in\ all\ copies,\ and\ that\ both\ that\ copyright\ notice}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00030}00030\ \textcolor{comment}{//\ and\ this\ permission\ notice\ appear\ in\ supporting\ documentation.\ None}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00031}00031\ \textcolor{comment}{//\ of\ the\ above\ authors,\ nor\ IBM\ Haifa\ Research\ Laboratories,\ make\ any}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00032}00032\ \textcolor{comment}{//\ representation\ about\ the\ suitability\ of\ this\ software\ for\ any}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00033}00033\ \textcolor{comment}{//\ purpose.\ It\ is\ provided\ "{}as\ is"{}\ without\ express\ or\ implied}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00034}00034\ \textcolor{comment}{//\ warranty.}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00041}00041\ \textcolor{preprocessor}{\#ifdef\ PB\_DS\_CLASS\_C\_DEC}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00043}00043\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00044}00044\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00045}00045\ hash\_exponential\_size\_policy(size\_type\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{start\_size}},\ size\_type\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{grow\_factor}})\ :}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00046}00046\ \ \ m\_start\_size(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{start\_size}}),}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00047}00047\ \ \ m\_grow\_factor(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{grow\_factor}})}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00048}00048\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00050}00050\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00051}00051\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00052}00052\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00053}00053\ swap(\mbox{\hyperlink{bin__search__tree___8hpp_a304b8b73a11afe64bfca54576b91263b}{PB\_DS\_CLASS\_C\_DEC}}\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{other}})}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00054}00054\ \{}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00055}00055\ \ \ std::swap(m\_start\_size,\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{other}}.m\_start\_size);}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00056}00056\ \ \ std::swap(m\_grow\_factor,\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{other}}.m\_grow\_factor);}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00057}00057\ \}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00059}00059\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00060}00060\ \textcolor{keyword}{typename}\ PB\_DS\_CLASS\_C\_DEC::size\_type}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00061}00061\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00062}00062\ get\_nearest\_larger\_size(size\_type\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}})\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00063}00063\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00064}00064\ \ \ size\_type\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ret}}\ =\ m\_start\_size;}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00065}00065\ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ret}}\ <=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}})}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00066}00066\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00067}00067\ \ \ \ \ \ \ \textcolor{keyword}{const}\ size\_type\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{next\_ret}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ret}}*\ \ m\_grow\_factor;}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00068}00068\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{next\_ret}}\ <\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ret}})}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00069}00069\ \ \ \ \ \mbox{\hyperlink{group__exceptions-pbds_gae93c5eb83181c3d6e48cff82bbd24503}{\_\_throw\_insert\_error}}();}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00070}00070\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ret}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{next\_ret}};}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00071}00071\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00072}00072\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ret}};}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00073}00073\ \}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00075}00075\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00076}00076\ \textcolor{keyword}{typename}\ PB\_DS\_CLASS\_C\_DEC::size\_type}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00077}00077\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00078}00078\ get\_nearest\_smaller\_size(size\_type\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}})\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00079}00079\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00080}00080\ \ \ size\_type\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ret}}\ =\ m\_start\_size;}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00081}00081\ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00082}00082\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00083}00083\ \ \ \ \ \ \ \textcolor{keyword}{const}\ size\_type\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{next\_ret}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ret}}*\ \ m\_grow\_factor;}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00084}00084\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{next\_ret}}\ <\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ret}})}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00085}00085\ \ \ \ \ \mbox{\hyperlink{group__exceptions-pbds_ga818802bd13920723c808cb51a406728b}{\_\_throw\_resize\_error}}();}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00086}00086\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{next\_ret}}\ >=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}})}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00087}00087\ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ret}});}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00088}00088\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ret}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{next\_ret}};}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00089}00089\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00090}00090\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{ret}};}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00091}00091\ \}}
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{hash__exponential__size__policy__imp_8hpp_source_l00093}00093\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

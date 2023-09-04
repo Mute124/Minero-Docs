@@ -1,0 +1,45 @@
+\doxysection{logman.\+cpp}
+\hypertarget{logman_8cpp_source}{}\label{logman_8cpp_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/Logging/logman.cpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/Logging/logman.cpp}}
+\mbox{\hyperlink{logman_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_logman_8hpp}{Logman.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00003}00003\ \mbox{\hyperlink{class_logman_a506d9deabe97db8e81edfb5cb43f9788}{Logman::Logman}}()}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00005}00005\ \ \ \ \ \mbox{\hyperlink{raylib_8h_a9154b69ff31327959c2999d92631ac11}{SetTraceLogCallback}}(this-\/>\mbox{\hyperlink{class_logman_abfebd4a14b659c3cbcc82c8965ec7fad}{CustomLog}});}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00006}00006\ \}}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00008}00008\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_logman_abfebd4a14b659c3cbcc82c8965ec7fad}{Logman::CustomLog}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{msgType}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *text,\ \mbox{\hyperlink{stdarg_8h_a8c1b94dabde2c11f430bb83e37bdb0a1}{va\_list}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{args}})}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00011}00011\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{timeStr}}[64]\ =\ \{0\};}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00012}00012\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{time\_t}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{now}}\ =\ time(\mbox{\hyperlink{external_2miniaudio_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{tm}}\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{tm\_info}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{localtime}}(\&\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{now}});}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00016}00016\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{strftime}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{timeStr}},\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{timeStr}}),\ \textcolor{stringliteral}{"{}\%Y-\/\%m-\/\%d\ \%H:\%M:\%S"{}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{tm\_info}});}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00017}00017\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{printf}}(\textcolor{stringliteral}{"{}[\%s]\ "{}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{timeStr}});}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{switch}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{msgType}})}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00020}00020\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{raylib_8h_a53d4e0542e6c07e7792510e986785285a6e98ff471e3ce6c4ef2d75c37ee51837}{LOG\_INFO}}:}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{printf}}(\textcolor{stringliteral}{"{}[INFO]\ :\ "{}});}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{raylib_8h_a53d4e0542e6c07e7792510e986785285a230506cce5c68c3bac5a821c42ed3473}{LOG\_ERROR}}:}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{printf}}(\textcolor{stringliteral}{"{}[ERROR]:\ "{}});}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{raylib_8h_a53d4e0542e6c07e7792510e986785285a8f6fe15bfe15104da6d1b360194a5400}{LOG\_WARNING}}:}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{printf}}(\textcolor{stringliteral}{"{}[WARN]\ :\ "{}});}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{raylib_8h_a53d4e0542e6c07e7792510e986785285ab9f002c6ffbfd511da8090213227454e}{LOG\_DEBUG}}:}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{printf}}(\textcolor{stringliteral}{"{}[DEBUG]:\ "{}});}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00033}00033\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{vprintf}}(text,\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{args}});}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00038}00038\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{printf}}(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{logman_8cpp_source_l00039}00039\ \}}
+
+\end{DoxyCode}

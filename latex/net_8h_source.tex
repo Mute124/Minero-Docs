@@ -1,0 +1,340 @@
+\doxysection{net.\+h}
+\hypertarget{net_8h_source}{}\label{net_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/experimental/bits/net.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/experimental/bits/net.h}}
+\mbox{\hyperlink{net_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00001}00001\ \textcolor{comment}{//\ Networking\ implementation\ details\ -\/*-\/\ C++\ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00003}00003\ \textcolor{comment}{//\ Copyright\ (C)\ 2015-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00005}00005\ \textcolor{comment}{//\ This\ file\ is\ part\ of\ the\ GNU\ ISO\ C++\ Library.\ \ This\ library\ is\ free}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00006}00006\ \textcolor{comment}{//\ software;\ you\ can\ redistribute\ it\ and/or\ modify\ it\ under\ the}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00007}00007\ \textcolor{comment}{//\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by\ the}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00008}00008\ \textcolor{comment}{//\ Free\ Software\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00009}00009\ \textcolor{comment}{//\ any\ later\ version.}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00011}00011\ \textcolor{comment}{//\ This\ library\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00012}00012\ \textcolor{comment}{//\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00013}00013\ \textcolor{comment}{//\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00014}00014\ \textcolor{comment}{//\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00016}00016\ \textcolor{comment}{//\ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00017}00017\ \textcolor{comment}{//\ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00018}00018\ \textcolor{comment}{//\ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00020}00020\ \textcolor{comment}{//\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00021}00021\ \textcolor{comment}{//\ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00022}00022\ \textcolor{comment}{//\ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00023}00023\ \textcolor{comment}{//\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00030}00030\ \textcolor{preprocessor}{\#ifndef\ \_GLIBCXX\_EXPERIMENTAL\_NET\_H}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00031}00031\ \textcolor{preprocessor}{\#define\ \_GLIBCXX\_EXPERIMENTAL\_NET\_H\ 1}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00033}00033\ \textcolor{preprocessor}{\#pragma\ GCC\ system\_header}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00035}00035\ \textcolor{preprocessor}{\#if\ \_\_cplusplus\ >=\ 201402L}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00037}00037\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00038}00038\ \textcolor{preprocessor}{\#include\ <system\_error>}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00039}00039\ \textcolor{preprocessor}{\#include\ <experimental/netfwd>}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00041}00041\ \textcolor{preprocessor}{\#if\ \_\_cplusplus\ >\ 201703L}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00042}00042\ \textcolor{preprocessor}{\#\ include\ <concepts>}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00043}00043\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00045}00045\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacestd}{std}}\ \mbox{\hyperlink{c_09_09config_8h_a44377df0d3503f0b3d9ab316dd8ddf8b}{\_GLIBCXX\_VISIBILITY}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{default}})}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00046}00046\ \{}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00047}00047\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_GLIBCXX\_BEGIN\_NAMESPACE\_VERSION}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00048}00048\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{experimental}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00049}00049\ \{}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00050}00050\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{net}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00051}00051\ \{}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00052}00052\ \textcolor{keyword}{inline}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{raylib_2src_2external_2glad_8h_a0779c3b73f9aa3a0ac5b0139b5d291d9}{v1}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00053}00053\ \{}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00059}00059\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_CompletionToken,\ \textcolor{keyword}{typename}\ \_Signature,\ \textcolor{keyword}{typename}>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00060}00060\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{async\_result}};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00064}00064\ \ \ \textcolor{comment}{//\ A\ type\ denoted\ by\ DEDUCED\ in\ the\ TS.}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00065}00065\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_CompletionToken,\ \textcolor{keyword}{typename}\ \_Signature>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00066}00066\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_deduced\_t}}\ =\ \textcolor{keyword}{typename}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00067}00067\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{async\_result<decay\_t<\_CompletionToken>}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Signature}},\ \textcolor{keywordtype}{void}>\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{::return\_type}};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00069}00069\ \ \ \textcolor{comment}{//\ Trait\ to\ check\ for\ construction\ from\ const/non-\/const\ lvalue/rvalue.}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00070}00070\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Tp>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00071}00071\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_is\_value\_constructible}}\ =\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_and\_}}<}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00072}00072\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{is\_copy\_constructible<\_Tp>}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{is\_move\_constructible<\_Tp>}},}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00073}00073\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{is\_constructible<\_Tp,\ \_Tp\&>}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{is\_constructible<\_Tp,\ const\ \_Tp\&\&>}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00074}00074\ \ \ \ \ \ \ >\mbox{\hyperlink{_gameobj_8h_a890efa53b3d7deeeced6f3a0d6653ed3}{::type}};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00076}00076\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_throw\_on\_error}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00077}00077\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00078}00078\ \ \ \ \ \textcolor{keyword}{explicit}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00079}00079\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_throw\_on\_error}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_msg}})\ :\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_msg}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_msg}})\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00081}00081\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\string~\_\_throw\_on\_error}}()\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{noexcept}}(\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}})}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00082}00082\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00083}00083\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_ec}})}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00084}00084\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_GLIBCXX\_THROW\_OR\_ABORT}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{system\_error}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_ec}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_msg}}));}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00085}00085\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00087}00087\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_throw\_on\_error}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_throw\_on\_error}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00088}00088\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_throw\_on\_error}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_throw\_on\_error}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00090}00090\ \ \ \ \ \textcolor{keyword}{operator}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{error\_code}}\&()\ \textcolor{keyword}{noexcept}\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_ec}};\ \}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00092}00092\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_msg}};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00093}00093\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{error\_code}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_ec}};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00094}00094\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00098}00098\ \ \ \textcolor{comment}{//\ Base\ class\ for\ types\ meeting\ both\ GettableSocketOption\ and}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00099}00099\ \ \ \textcolor{comment}{//\ SettableSocketOption\ requirements.}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00100}00100\ \ \ \textcolor{comment}{//\ The\ bool\ parameter\ allows\ \_\_sockopt\_base<bool>\ to\ have\ a}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00101}00101\ \ \ \textcolor{comment}{//\ \_\_sockopt\_base<int,\ B>\ base\ class\ (so\ that\ its\ \_M\_value\ is\ an\ int)}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00102}00102\ \ \ \textcolor{comment}{//\ but\ to\ have\ that\ be\ a\ distinct\ type\ from\ \_\_sockopt\_base<int>.}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00103}00103\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Tp,\ \textcolor{keywordtype}{bool}\ =\ true>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00104}00104\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_sockopt\_base}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00105}00105\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00106}00106\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_sockopt\_base}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00108}00108\ \ \ \ \ \ \ \textcolor{keyword}{explicit}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00109}00109\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_sockopt\_base}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}\ \mbox{\hyperlink{stdatomic_8h_a15181bfd16829c92971879064b9d8dbb}{\_\_val}})\ \textcolor{keyword}{noexcept}(\textcolor{keyword}{noexcept}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}(std::declval<\_Tp\&>())))}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00110}00110\ \ \ \ \ \ \ :\ \_M\_value(\mbox{\hyperlink{stdatomic_8h_a15181bfd16829c92971879064b9d8dbb}{\_\_val}})}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00111}00111\ \ \ \ \ \ \ \{\ \}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00113}00113\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Protocol>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00114}00114\ \ \ \ \ \textcolor{keywordtype}{void}*}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00115}00115\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_a89ce72163394e6aef63b551a8806e93f}{data}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Protocol}}\&)\ \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00116}00116\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ std::addressof(\_M\_value);\ \}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00118}00118\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Protocol>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00119}00119\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00120}00120\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_a89ce72163394e6aef63b551a8806e93f}{data}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Protocol}}\&)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00121}00121\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ std::addressof(\_M\_value);\ \}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00123}00123\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Protocol>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00124}00124\ \ \ \ \ \textcolor{keywordtype}{size\_t}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00125}00125\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Protocol}}\&)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00126}00126\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{sizeof}(\_M\_value);\ \}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00128}00128\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Protocol>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00129}00129\ \ \ \ \ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00130}00130\ \ \ \ \ resize(\textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Protocol}}\&,\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_s}})}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00131}00131\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00132}00132\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_s}}\ !=\ \textcolor{keyword}{sizeof}(\_M\_value))}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00133}00133\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_throw\_length\_error}}(\textcolor{stringliteral}{"{}invalid\ value\ for\ socket\ option\ resize"{}});}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00134}00134\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00136}00136\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00137}00137\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}\ \_M\_value\ \{\ \};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00138}00138\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00140}00140\ \ \ \textcolor{comment}{//\ Base\ class\ for\ types\ meeting\ BooleanSocketOption\ requirements.}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00141}00141\ \ \ \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00142}00142\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_sockopt\_base}}<\mbox{\hyperlink{raylib_8h_af6a258d8f3ee5206d682d799316314b1}{bool}}>\ :\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_sockopt\_base}}<int,\ false>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00143}00143\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00144}00144\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_sockopt\_base}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00146}00146\ \ \ \ \ \ \ \textcolor{keyword}{explicit}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00147}00147\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_sockopt\_base}}(\textcolor{keywordtype}{bool}\ \mbox{\hyperlink{stdatomic_8h_a15181bfd16829c92971879064b9d8dbb}{\_\_val}})\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{noexcept}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00148}00148\ \ \ \ \ \ \ :\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_sockopt\_base<int,\ false>}}(\mbox{\hyperlink{stdatomic_8h_a15181bfd16829c92971879064b9d8dbb}{\_\_val}})}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00149}00149\ \ \ \ \ \ \ \{\ \}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00150}00150\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00151}00151\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{value}}()\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{noexcept}}\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_M\_value;\ \}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00152}00152\ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \textcolor{keyword}{operator}\ \mbox{\hyperlink{stdbool_8h_abb452686968e48b67397da5f97445f5b}{bool}}()\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{noexcept}}\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{value}}();\ \}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00153}00153\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{operator!}}()\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{noexcept}}\ \{\ \textcolor{keywordflow}{return}\ !\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{value}}();\ \}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00154}00154\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00156}00156\ \ \ \textcolor{comment}{//\ Base\ class\ for\ types\ meeting\ IntegerSocketOption\ requirements.}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00157}00157\ \ \ \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00158}00158\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_sockopt\_base}}<\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}>\ :\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_sockopt\_base}}<int,\ false>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00159}00159\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00160}00160\ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_sockopt\_base}}<\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}},\ \textcolor{keyword}{false}>\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{::\_\_sockopt\_base}};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00162}00162\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{value}}()\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{noexcept}}\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_M\_value;\ \}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00163}00163\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00165}00165\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Derived,\ \textcolor{keyword}{typename}\ \_Tp\ =\ \textcolor{keywordtype}{int}>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00166}00166\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_sockopt\_crtp}}\ :\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_sockopt\_base}}<\_Tp>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00167}00167\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00168}00168\ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_sockopt\_base}}<\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}>\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{::\_\_sockopt\_base}};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00170}00170\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Derived}}\&}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00171}00171\ \ \ \ \ \ \ operator=(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}\ \_\_value)\ \textcolor{keyword}{noexcept}(\textcolor{keyword}{noexcept}(\_\_value\ =\ \_\_value))}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00172}00172\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00173}00173\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_sockopt\_base<\_Tp>::\_M\_value}}\ =\ \_\_value;}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00174}00174\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Derived}}\&\textcolor{keyword}{>}(*this);}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00175}00175\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00177}00177\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Protocol>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00178}00178\ \ \ \ \ \textcolor{keywordtype}{int}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00179}00179\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_a2424d012241ecec8ab2763eddf543736}{level}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Protocol}}\&)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00180}00180\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ \_Derived::\_S\_level;\ \}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00181}00181\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00182}00182\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Protocol>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00183}00183\ \ \ \ \ \textcolor{keywordtype}{int}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00184}00184\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a14d7642df08c5cb68e4fb90cc8a73509}{name}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Protocol}}\&)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00185}00185\ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ \_Derived::\_S\_name;\ \}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00186}00186\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00187}00187\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00188}00188\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_detail}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00189}00189\ \{}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00190}00190\ \textcolor{preprocessor}{\#if\ \_\_cpp\_lib\_concepts}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00191}00191\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Tp>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00192}00192\ \ \ \ \ \textcolor{keyword}{concept\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_protocol\_like}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00193}00193\ \ \ \ \ \ \ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{copyable<\_Tp>}}\ \&\&\ \textcolor{keyword}{requires}\ \{\ \textcolor{keyword}{typename}\ \_Tp::endpoint;\ \};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00194}00194\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00195}00195\ \ \ \textcolor{comment}{//\ Endpoint\ requirements\ for\ non-\/extensible\ implementations.}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00196}00196\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Tp>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00197}00197\ \ \ \ \ \textcolor{keyword}{concept\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_endpoint\_base}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{semiregular<\_Tp>}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00198}00198\ \ \ \ \ \ \ \&\&\ \textcolor{keyword}{requires}\ \ \{\ \textcolor{keyword}{typename}\ \_Tp::protocol\_type;\ \}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00199}00199\ \ \ \ \ \ \ \&\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_protocol\_like<typename\ \_Tp::protocol\_type>}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00200}00200\ \ \ \ \ \ \ \&\&\ \textcolor{keyword}{requires}(\textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_a}})\ \{}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00201}00201\ \ \ \ \ \{\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_a}}.protocol()\ \}\ -\/>\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{same\_as<typename\ \_Tp::protocol\_type>}};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00202}00202\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00203}00203\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00204}00204\ \ \ \textcolor{comment}{//\ Endpoint\ requirements\ for\ extensible\ implementations.}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00205}00205\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Tp>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00206}00206\ \ \ \ \ \textcolor{keyword}{concept\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_endpoint}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_endpoint\_base<\_Tp>}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00207}00207\ \ \ \ \ \ \ \&\&\ \textcolor{keyword}{requires}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_a}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_b}},\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_s}})}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00208}00208\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00209}00209\ \ \ \ \ \{\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_a}}.data()\ \}\ -\/>\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{same\_as<const\ void*>}};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00210}00210\ \ \ \ \ \{\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_b}}.data()\ \}\ -\/>\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{same\_as<void*>}};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00211}00211\ \ \ \ \ \{\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_b}}.size()\ \}\ -\/>\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{same\_as<size\_t>}};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00212}00212\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_b}}.resize(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_s}});}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00213}00213\ \ \ \ \ \{\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_a}}.capacity()\ \}\ -\/>\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{same\_as<size\_t>}};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00214}00214\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00215}00215\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00216}00216\ \ \ \textcolor{comment}{//\ Protocol\ requirements\ for\ non-\/extensible\ implementations.}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00217}00217\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Tp>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00218}00218\ \ \ \ \ \textcolor{keyword}{concept\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_protocol\_base}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_protocol\_like<\_Tp>}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00219}00219\ \ \ \ \ \ \ \&\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_endpoint\_base<typename\ \_Tp::endpoint>}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00220}00220\ \ \ \ \ \ \ \&\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{same\_as<typename\ \_Tp::endpoint::protocol\_type,\ \_Tp>}};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00221}00221\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00222}00222\ \ \ \textcolor{comment}{//\ Protocol\ requirements\ for\ extensible\ implementations.}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00223}00223\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Tp>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00224}00224\ \ \ \ \ \textcolor{keyword}{concept\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_protocol}}\ =\ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_protocol\_base<\_Tp>}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00225}00225\ \ \ \ \ \ \ \&\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_endpoint<typename\ \_Tp::endpoint>}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00226}00226\ \ \ \ \ \ \ \&\&\ \textcolor{keyword}{requires}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_a}})\ \{}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00227}00227\ \ \ \ \ \{\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_a}}.family()\ \}\ -\/>\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{same\_as<int>}};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00228}00228\ \ \ \ \ \{\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_a}}.type()\ \}\ -\/>\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{same\_as<int>}};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00229}00229\ \ \ \ \ \{\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_a}}.protocol()\ \}\ -\/>\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{same\_as<int>}};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00230}00230\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00231}00231\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00232}00232\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Tp>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00233}00233\ \ \ \ \ \textcolor{keyword}{concept\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_acceptable\_protocol}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_protocol<\_Tp>}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00234}00234\ \ \ \ \ \ \ \&\&\ \textcolor{keyword}{requires}\ \{\ \textcolor{keyword}{typename}\ \_Tp::socket;\ \}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00235}00235\ \ \ \ \ \ \ \&\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{move\_constructible<typename\ \_Tp::socket>}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00236}00236\ \ \ \ \ \ \ \&\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{derived\_from<typename\ \_Tp::socket,\ basic\_socket<\_Tp>}}>;}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00237}00237\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00238}00238\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Tp>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00239}00239\ \ \ \ \ \textcolor{keyword}{concept\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_inet\_protocol}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_acceptable\_protocol<\_Tp>}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00240}00240\ \ \ \ \ \ \ \&\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{equality\_comparable<\_Tp>}}\ \&\&\ \textcolor{keyword}{requires}\ \{}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00241}00241\ \ \ \ \ \{\ \_Tp::v4()\ \}\ -\/>\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{same\_as<\_Tp>}};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00242}00242\ \ \ \ \ \{\ \_Tp::v6()\ \}\ -\/>\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{same\_as<\_Tp>}};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00243}00243\ \ \ \ \ \textcolor{keyword}{typename}\ \_Tp::resolver;}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00244}00244\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00245}00245\ \ \ \ \ \ \ \&\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{same\_as<typename\ \_Tp::resolver,\ ip::basic\_resolver<\_Tp>}}>;}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00246}00246\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00247}00247\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00248}00248\ \ \ \textcolor{comment}{//\ Check\ Endpoint\ requirements\ for\ extensible\ implementations}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00249}00249\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Tp,\ \textcolor{keyword}{typename}\ =\ \textcolor{keywordtype}{void}>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00250}00250\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_is\_endpoint}}\ :\ \mbox{\hyperlink{namespace____gnu__pbds_1_1detail_a10f33acc620f2a4d910303f6606f2038}{false\_type}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00251}00251\ \ \ \ \ \{\ \};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00252}00252\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00253}00253\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Tp>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00254}00254\ \ \ \ \ \textcolor{keyword}{auto}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00255}00255\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_endpoint\_reqs}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}*\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_a}}\ =\ \textcolor{keyword}{nullptr},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}*\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_b}}\ =\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00256}00256\ \ \ \ \ -\/>\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{enable\_if\_t}}<\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_and\_}}<}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00257}00257\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{is\_default\_constructible<\_Tp>}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_is\_value\_constructible<\_Tp>}},}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00258}00258\ \ \ \ \ \ \ is\_same<\textcolor{keyword}{decltype}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_a}}-\/>protocol()),\ \textcolor{keyword}{typename}\ \_Tp::protocol\_type>,}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00259}00259\ \ \ \ \ \ \ is\_same<\textcolor{keyword}{decltype}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_a}}-\/>data()),\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*>,}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00260}00260\ \ \ \ \ \ \ is\_same<\textcolor{keyword}{decltype}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_b}}-\/>data()),\ \textcolor{keywordtype}{void}*>,}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00261}00261\ \ \ \ \ \ \ is\_same<\textcolor{keyword}{decltype}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_a}}-\/>size()),\ \textcolor{keywordtype}{size\_t}>,}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00262}00262\ \ \ \ \ \ \ is\_same<\textcolor{keyword}{decltype}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_a}}-\/>capacity()),\ \textcolor{keywordtype}{size\_t}>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00263}00263\ \ \ \ \ \ \ >\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{::value}},}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00264}00264\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_void\_t}}<\ \textcolor{keyword}{typename}\ \_Tp::protocol\_type::endpoint,}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00265}00265\ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{decltype}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_b}}-\/>resize(std::declval<size\_t>()))\ >>;}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00266}00266\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00267}00267\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Tp>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00268}00268\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_is\_endpoint}}<\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{decltype}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_detail}}::\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_endpoint\_reqs}}<\_Tp>())>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00269}00269\ \ \ \ \ :\ \mbox{\hyperlink{namespace____gnu__pbds_1_1detail_ad815331549743ef85b02064545c417a8}{true\_type}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00270}00270\ \ \ \ \ \{\ \};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00271}00271\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00272}00272\ \ \ \textcolor{comment}{//\ Check\ Protocol\ requirements\ for\ extensible\ implementations.}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00273}00273\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Tp,\ \textcolor{keyword}{typename}\ =\ \textcolor{keywordtype}{void}>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00274}00274\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_is\_protocol}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00275}00275\ \ \ \ \ :\ \mbox{\hyperlink{namespace____gnu__pbds_1_1detail_a10f33acc620f2a4d910303f6606f2038}{false\_type}}\ \{\ \};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00276}00276\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00277}00277\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Tp>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00278}00278\ \ \ \ \ \textcolor{keyword}{auto}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00279}00279\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_protocol\_reqs}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}*\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_a}}\ =\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00280}00280\ \ \ \ \ -\/>\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{enable\_if\_t}}<\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_and\_}}<}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00281}00281\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{is\_copy\_constructible<\_Tp>}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{is\_copy\_assignable<\_Tp>}},}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00282}00282\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_is\_endpoint<typename\ \_Tp::endpoint>}},}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00283}00283\ \ \ \ \ \ \ is\_same<\textcolor{keyword}{decltype}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_a}}-\/>family()),\ \textcolor{keywordtype}{int}>,}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00284}00284\ \ \ \ \ \ \ is\_same<\textcolor{keyword}{decltype}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_a}}-\/>type()),\ \textcolor{keywordtype}{int}>,}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00285}00285\ \ \ \ \ \ \ is\_same<\textcolor{keyword}{decltype}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_a}}-\/>protocol()),\ \textcolor{keywordtype}{int}>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00286}00286\ \ \ \ \ \ \ >\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{::value}}>;}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00287}00287\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00288}00288\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Tp>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00289}00289\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_is\_protocol}}<\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{decltype}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_detail}}::\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_protocol\_reqs}}<\_Tp>())>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00290}00290\ \ \ \ \ :\ \mbox{\hyperlink{namespace____gnu__pbds_1_1detail_ad815331549743ef85b02064545c417a8}{true\_type}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00291}00291\ \ \ \ \ \{\ \};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00292}00292\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00293}00293\ \ \ \textcolor{comment}{//\ Check\ AcceptableProtocol\ requirements}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00294}00294\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Tp,\ \textcolor{keyword}{typename}\ =\ \textcolor{keywordtype}{void}>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00295}00295\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_is\_acceptable\_protocol}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00296}00296\ \ \ \ \ :\ \mbox{\hyperlink{namespace____gnu__pbds_1_1detail_a10f33acc620f2a4d910303f6606f2038}{false\_type}}\ \{\ \};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00297}00297\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00298}00298\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Tp>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00299}00299\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_is\_acceptable\_protocol}}<\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_void\_t}}<\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}::socket>>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00300}00300\ \ \ \ \ :\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_and\_}}<\_\_is\_protocol<\_Tp>,\ is\_move\_constructible<typename\ \_Tp::socket>,}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00301}00301\ \ \ \ \ \ \ \ \ \ is\_convertible<typename\ \_Tp::socket*,\ basic\_socket<\_Tp>*>>\mbox{\hyperlink{_gameobj_8h_a890efa53b3d7deeeced6f3a0d6653ed3}{::type}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00302}00302\ \ \ \ \ \{\ \};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00303}00303\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00304}00304\ \ \ \textcolor{comment}{//\ Check\ InternetProtocol\ requirements}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00305}00305\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Tp,\ \textcolor{keyword}{typename}\ =\ \textcolor{keywordtype}{void}>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00306}00306\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_is\_inet\_protocol}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00307}00307\ \ \ \ \ :\ \mbox{\hyperlink{namespace____gnu__pbds_1_1detail_a10f33acc620f2a4d910303f6606f2038}{false\_type}}\ \{\ \};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00308}00308\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00309}00309\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Tp>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00310}00310\ \ \ \ \ \textcolor{keyword}{auto}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00311}00311\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_inet\_proto\_reqs}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}*\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_a}}\ =\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00312}00312\ \ \ \ \ -\/>\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{enable\_if\_t}}<\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_and\_}}<}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00313}00313\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_is\_acceptable\_protocol<\_Tp>}},}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00314}00314\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{is\_same<typename\ \_Tp::resolver,\ ip::basic\_resolver<\_Tp>}}>,}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00315}00315\ \ \ \ \ \ \ is\_same<\textcolor{keyword}{decltype}(\_Tp::v4()),\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}>,}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00316}00316\ \ \ \ \ \ \ is\_same<\textcolor{keyword}{decltype}(\_Tp::v6()),\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}>,}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00317}00317\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{is\_convertible}}<\textcolor{keyword}{decltype}(*\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_a}}\ ==\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_a}}),\ \textcolor{keywordtype}{bool}>,}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00318}00318\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{is\_convertible}}<\textcolor{keyword}{decltype}(*\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_a}}\ !=\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_a}}),\ \textcolor{keywordtype}{bool}>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00319}00319\ \ \ \ \ \ \ >\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{::value}}>;}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00320}00320\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00321}00321\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Tp>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00322}00322\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_is\_inet\_protocol}}<\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{decltype}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_inet\_proto\_reqs}}<\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}>())>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00323}00323\ \ \ \ \ :\ \mbox{\hyperlink{namespace____gnu__pbds_1_1detail_ad815331549743ef85b02064545c417a8}{true\_type}}\ \{\ \};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00324}00324\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00325}00325\ \ \ \textcolor{comment}{//\ Variable\ templates\ for\ requirements\ (with\ same\ names\ as\ concepts\ above).}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00326}00326\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00327}00327\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Tp>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00328}00328\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_endpoint}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_is\_endpoint<\_Tp>::value}};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00329}00329\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Tp>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00330}00330\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_protocol}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_is\_protocol<\_Tp>::value}};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00331}00331\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Tp>}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00332}00332\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_acceptable\_protocol}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_is\_acceptable\_protocol<\_Tp>::value}};}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00333}00333\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00334}00334\ \}\ \textcolor{comment}{//\ namespace\ \_\_detail}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00335}00335\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00337}00337\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00338}00338\ \}\ \textcolor{comment}{//\ namespace\ v1}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00339}00339\ \}\ \textcolor{comment}{//\ namespace\ net}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00340}00340\ \}\ \textcolor{comment}{//\ namespace\ experimental}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00341}00341\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_GLIBCXX\_END\_NAMESPACE\_VERSION}}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00342}00342\ \}\ \textcolor{comment}{//\ namespace\ std}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00343}00343\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00344}00344\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ C++14}}
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00345}00345\ }
+\DoxyCodeLine{\Hypertarget{net_8h_source_l00346}00346\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_GLIBCXX\_EXPERIMENTAL\_NET\_H}}
+
+\end{DoxyCode}

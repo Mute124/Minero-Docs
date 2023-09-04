@@ -1,0 +1,86 @@
+\doxysection{C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/external/glfw/src/platform.c File Reference}
+\hypertarget{platform_8c}{}\label{platform_8c}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/external/glfw/src/platform.c@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/external/glfw/src/platform.c}}
+{\ttfamily \#include "{}internal.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{external_2glfw_2src_2internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}} \mbox{\hyperlink{platform_8c_ac0e7d5f9c3735b1959f87e959b90ce53}{\+\_\+glfw\+Select\+Platform}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{desired\+ID}}, \mbox{\hyperlink{struct___g_l_f_wplatform}{\+\_\+\+GLFWplatform}} \texorpdfstring{$\ast$}{*}platform)
+\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{group__init_gac2d1735162a981fcaa8fb386740aa5ce}{glfw\+Get\+Platform}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})
+\begin{DoxyCompactList}\small\item\em Returns the currently selected platform. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{group__init_ga7b57ba0946498e8621f4d969bbcecfba}{glfw\+Platform\+Supported}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} platform\+ID)
+\begin{DoxyCompactList}\small\item\em Returns whether the library includes support for the specified platform. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__init_gae5952184a0db36e24d1de7805b8b0945}{glfw\+Get\+Version\+String}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})
+\begin{DoxyCompactList}\small\item\em Returns a string describing the compile-\/time configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{platform_8c_af180e926633cde08a05ccbc3af397ee4}{ID}}\\
+\>\mbox{\hyperlink{external_2glfw_2src_2internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{platform_8c_a09fba7fe010bf5874aedf846155a0950}{connect}} )(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}, \mbox{\hyperlink{struct___g_l_f_wplatform}{\_GLFWplatform}} \texorpdfstring{$\ast$}{*})\\
+\} \mbox{\hyperlink{platform_8c_a35288a9cdf80d3b00ea53cebac2d62b9}{supportedPlatforms}} \mbox{[}$\,$\mbox{]}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{platform_8c_ac0e7d5f9c3735b1959f87e959b90ce53}\label{platform_8c_ac0e7d5f9c3735b1959f87e959b90ce53} 
+\index{platform.c@{platform.c}!\_glfwSelectPlatform@{\_glfwSelectPlatform}}
+\index{\_glfwSelectPlatform@{\_glfwSelectPlatform}!platform.c@{platform.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwSelectPlatform()}{\_glfwSelectPlatform()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{external_2glfw_2src_2internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}} \+\_\+glfw\+Select\+Platform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{desired\+ID,  }\item[{\mbox{\hyperlink{struct___g_l_f_wplatform}{\+\_\+\+GLFWplatform}} \texorpdfstring{$\ast$}{*}}]{platform }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{platform_8c_source_l00056}{56}} of file \mbox{\hyperlink{platform_8c_source}{platform.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{platform_8c_a09fba7fe010bf5874aedf846155a0950}\label{platform_8c_a09fba7fe010bf5874aedf846155a0950} 
+\index{platform.c@{platform.c}!connect@{connect}}
+\index{connect@{connect}!platform.c@{platform.c}}
+\doxysubsubsection{\texorpdfstring{connect}{connect}}
+{\footnotesize\ttfamily \mbox{\hyperlink{external_2glfw_2src_2internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}}(\texorpdfstring{$\ast$}{*} connect) (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}, \mbox{\hyperlink{struct___g_l_f_wplatform}{\+\_\+\+GLFWplatform}} \texorpdfstring{$\ast$}{*}) (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{,  }\item[{\mbox{\hyperlink{struct___g_l_f_wplatform}{\+\_\+\+GLFWplatform}} \texorpdfstring{$\ast$}{*}}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{platform_8c_source_l00039}{39}} of file \mbox{\hyperlink{platform_8c_source}{platform.\+c}}.
+
+\Hypertarget{platform_8c_af180e926633cde08a05ccbc3af397ee4}\label{platform_8c_af180e926633cde08a05ccbc3af397ee4} 
+\index{platform.c@{platform.c}!ID@{ID}}
+\index{ID@{ID}!platform.c@{platform.c}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} ID}
+
+
+
+Definition at line \mbox{\hyperlink{platform_8c_source_l00038}{38}} of file \mbox{\hyperlink{platform_8c_source}{platform.\+c}}.
+
+\Hypertarget{platform_8c_a35288a9cdf80d3b00ea53cebac2d62b9}\label{platform_8c_a35288a9cdf80d3b00ea53cebac2d62b9} 
+\index{platform.c@{platform.c}!supportedPlatforms@{supportedPlatforms}}
+\index{supportedPlatforms@{supportedPlatforms}!platform.c@{platform.c}}
+\doxysubsubsection{\texorpdfstring{[struct]}{[struct]}}
+{\footnotesize\ttfamily const struct  \{ ... \}  supported\+Platforms\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

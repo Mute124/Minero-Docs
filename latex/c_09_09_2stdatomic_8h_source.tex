@@ -1,0 +1,132 @@
+\doxysection{stdatomic.\+h}
+\hypertarget{c_09_09_2stdatomic_8h_source}{}\label{c_09_09_2stdatomic_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/stdatomic.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/stdatomic.h}}
+\mbox{\hyperlink{c_09_09_2stdatomic_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00001}00001\ \textcolor{comment}{//\ C\ compatibility\ header\ <stdatomic.h>\ -\/*-\/\ C++\ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00003}00003\ \textcolor{comment}{//\ Copyright\ (C)\ 2022\ The\ GCC\ developers}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00005}00005\ \textcolor{comment}{//\ This\ file\ is\ part\ of\ the\ GNU\ ISO\ C++\ Library.\ \ This\ library\ is\ free}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00006}00006\ \textcolor{comment}{//\ software;\ you\ can\ redistribute\ it\ and/or\ modify\ it\ under\ the}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00007}00007\ \textcolor{comment}{//\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by\ the}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00008}00008\ \textcolor{comment}{//\ Free\ Software\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00009}00009\ \textcolor{comment}{//\ any\ later\ version.}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00011}00011\ \textcolor{comment}{//\ This\ library\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00012}00012\ \textcolor{comment}{//\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00013}00013\ \textcolor{comment}{//\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00014}00014\ \textcolor{comment}{//\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00016}00016\ \textcolor{comment}{//\ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00017}00017\ \textcolor{comment}{//\ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00018}00018\ \textcolor{comment}{//\ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00020}00020\ \textcolor{comment}{//\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00021}00021\ \textcolor{comment}{//\ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00022}00022\ \textcolor{comment}{//\ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00023}00023\ \textcolor{comment}{//\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00029}00029\ \textcolor{preprocessor}{\#ifndef\ \_GLIBCXX\_STDATOMIC\_H}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00030}00030\ \textcolor{preprocessor}{\#define\ \_GLIBCXX\_STDATOMIC\_H}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00032}00032\ \textcolor{preprocessor}{\#if\ \_\_cplusplus\ >\ 202002L}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00033}00033\ \textcolor{preprocessor}{\#include\ <atomic>}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00035}00035\ \textcolor{preprocessor}{\#define\ \_\_cpp\_lib\_stdatomic\_h\ 202011L}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00037}00037\ \textcolor{preprocessor}{\#define\ \_Atomic(\_Tp)\ std::atomic<\_Tp>}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00039}00039\ \textcolor{keyword}{using\ }std::memory\_order;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00040}00040\ \textcolor{keyword}{using\ }std::memory\_order\_relaxed;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00041}00041\ \textcolor{keyword}{using\ }std::memory\_order\_consume;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00042}00042\ \textcolor{keyword}{using\ }std::memory\_order\_acquire;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00043}00043\ \textcolor{keyword}{using\ }std::memory\_order\_release;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00044}00044\ \textcolor{keyword}{using\ }std::memory\_order\_acq\_rel;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00045}00045\ \textcolor{keyword}{using\ }std::memory\_order\_seq\_cst;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00046}00046\ \textcolor{keyword}{using\ }std::atomic\_flag;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00047}00047\ \textcolor{keyword}{using\ }std::atomic\_bool;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00048}00048\ \textcolor{keyword}{using\ }std::atomic\_char;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00049}00049\ \textcolor{keyword}{using\ }std::atomic\_schar;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00050}00050\ \textcolor{keyword}{using\ }std::atomic\_uchar;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00051}00051\ \textcolor{keyword}{using\ }std::atomic\_short;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00052}00052\ \textcolor{keyword}{using\ }std::atomic\_ushort;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00053}00053\ \textcolor{keyword}{using\ }std::atomic\_int;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00054}00054\ \textcolor{keyword}{using\ }std::atomic\_uint;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00055}00055\ \textcolor{keyword}{using\ }std::atomic\_long;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00056}00056\ \textcolor{keyword}{using\ }std::atomic\_ulong;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00057}00057\ \textcolor{keyword}{using\ }std::atomic\_llong;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00058}00058\ \textcolor{keyword}{using\ }std::atomic\_ullong;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00059}00059\ \textcolor{preprocessor}{\#ifdef\ \_GLIBCXX\_USE\_CHAR8\_T}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00060}00060\ \textcolor{keyword}{using\ }std::atomic\_char8\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00061}00061\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00062}00062\ \textcolor{keyword}{using\ }std::atomic\_char16\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00063}00063\ \textcolor{keyword}{using\ }std::atomic\_char32\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00064}00064\ \textcolor{keyword}{using\ }std::atomic\_wchar\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00065}00065\ \textcolor{preprocessor}{\#ifdef\ \_GLIBCXX\_USE\_C99\_STDINT\_TR1}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00066}00066\ \textcolor{keyword}{using\ }std::atomic\_int8\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00067}00067\ \textcolor{keyword}{using\ }std::atomic\_uint8\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00068}00068\ \textcolor{keyword}{using\ }std::atomic\_int16\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00069}00069\ \textcolor{keyword}{using\ }std::atomic\_uint16\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00070}00070\ \textcolor{keyword}{using\ }std::atomic\_int32\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00071}00071\ \textcolor{keyword}{using\ }std::atomic\_uint32\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00072}00072\ \textcolor{keyword}{using\ }std::atomic\_int64\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00073}00073\ \textcolor{keyword}{using\ }std::atomic\_uint64\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00074}00074\ \textcolor{keyword}{using\ }std::atomic\_int\_least8\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00075}00075\ \textcolor{keyword}{using\ }std::atomic\_uint\_least8\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00076}00076\ \textcolor{keyword}{using\ }std::atomic\_int\_least16\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00077}00077\ \textcolor{keyword}{using\ }std::atomic\_uint\_least16\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00078}00078\ \textcolor{keyword}{using\ }std::atomic\_int\_least32\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00079}00079\ \textcolor{keyword}{using\ }std::atomic\_uint\_least32\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00080}00080\ \textcolor{keyword}{using\ }std::atomic\_int\_least64\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00081}00081\ \textcolor{keyword}{using\ }std::atomic\_uint\_least64\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00082}00082\ \textcolor{keyword}{using\ }std::atomic\_int\_fast8\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00083}00083\ \textcolor{keyword}{using\ }std::atomic\_uint\_fast8\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00084}00084\ \textcolor{keyword}{using\ }std::atomic\_int\_fast16\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00085}00085\ \textcolor{keyword}{using\ }std::atomic\_uint\_fast16\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00086}00086\ \textcolor{keyword}{using\ }std::atomic\_int\_fast32\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00087}00087\ \textcolor{keyword}{using\ }std::atomic\_uint\_fast32\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00088}00088\ \textcolor{keyword}{using\ }std::atomic\_int\_fast64\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00089}00089\ \textcolor{keyword}{using\ }std::atomic\_uint\_fast64\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00090}00090\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00091}00091\ \textcolor{keyword}{using\ }std::atomic\_intptr\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00092}00092\ \textcolor{keyword}{using\ }std::atomic\_uintptr\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00093}00093\ \textcolor{keyword}{using\ }std::atomic\_size\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00094}00094\ \textcolor{keyword}{using\ }std::atomic\_ptrdiff\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00095}00095\ \textcolor{preprocessor}{\#ifdef\ \_GLIBCXX\_USE\_C99\_STDINT\_TR1}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00096}00096\ \textcolor{keyword}{using\ }std::atomic\_intmax\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00097}00097\ \textcolor{keyword}{using\ }std::atomic\_uintmax\_t;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00098}00098\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00099}00099\ \textcolor{keyword}{using\ }std::atomic\_is\_lock\_free;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00100}00100\ \textcolor{keyword}{using\ }std::atomic\_load;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00101}00101\ \textcolor{keyword}{using\ }std::atomic\_load\_explicit;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00102}00102\ \textcolor{keyword}{using\ }std::atomic\_store;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00103}00103\ \textcolor{keyword}{using\ }std::atomic\_store\_explicit;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00104}00104\ \textcolor{keyword}{using\ }std::atomic\_exchange;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00105}00105\ \textcolor{keyword}{using\ }std::atomic\_exchange\_explicit;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00106}00106\ \textcolor{keyword}{using\ }std::atomic\_compare\_exchange\_strong;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00107}00107\ \textcolor{keyword}{using\ }std::atomic\_compare\_exchange\_strong\_explicit;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00108}00108\ \textcolor{keyword}{using\ }std::atomic\_compare\_exchange\_weak;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00109}00109\ \textcolor{keyword}{using\ }std::atomic\_compare\_exchange\_weak\_explicit;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00110}00110\ \textcolor{keyword}{using\ }std::atomic\_fetch\_add;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00111}00111\ \textcolor{keyword}{using\ }std::atomic\_fetch\_add\_explicit;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00112}00112\ \textcolor{keyword}{using\ }std::atomic\_fetch\_sub;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00113}00113\ \textcolor{keyword}{using\ }std::atomic\_fetch\_sub\_explicit;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00114}00114\ \textcolor{keyword}{using\ }std::atomic\_fetch\_or;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00115}00115\ \textcolor{keyword}{using\ }std::atomic\_fetch\_or\_explicit;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00116}00116\ \textcolor{keyword}{using\ }std::atomic\_fetch\_xor;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00117}00117\ \textcolor{keyword}{using\ }std::atomic\_fetch\_xor\_explicit;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00118}00118\ \textcolor{keyword}{using\ }std::atomic\_fetch\_and;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00119}00119\ \textcolor{keyword}{using\ }std::atomic\_fetch\_and\_explicit;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00120}00120\ \textcolor{keyword}{using\ }std::atomic\_flag\_test\_and\_set;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00121}00121\ \textcolor{keyword}{using\ }std::atomic\_flag\_test\_and\_set\_explicit;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00122}00122\ \textcolor{keyword}{using\ }std::atomic\_flag\_clear;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00123}00123\ \textcolor{keyword}{using\ }std::atomic\_flag\_clear\_explicit;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00124}00124\ \textcolor{keyword}{using\ }std::atomic\_thread\_fence;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00125}00125\ \textcolor{keyword}{using\ }std::atomic\_signal\_fence;}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00127}00127\ \textcolor{preprocessor}{\#elif\ defined\ \_\_clang\_\_}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00128}00128\ \textcolor{preprocessor}{\#\ include\_next\ <stdatomic.h>}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00129}00129\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ C++23}}
+\DoxyCodeLine{\Hypertarget{c_09_09_2stdatomic_8h_source_l00130}00130\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_GLIBCXX\_STDATOMIC\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,193 @@
+\doxysection{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+\_\+\+QSBThread\+Local\texorpdfstring{$<$}{<} \+\_\+\+RAIter \texorpdfstring{$>$}{>} Struct Template Reference}
+\hypertarget{struct____gnu__parallel_1_1___q_s_b_thread_local}{}\label{struct____gnu__parallel_1_1___q_s_b_thread_local}\index{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$@{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$}}
+
+
+Information local to one thread in the parallel quicksort run.  
+
+
+
+
+{\ttfamily \#include "{}balanced\+\_\+quicksort.\+h"{}}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} std\+::iterator\+\_\+traits$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+RAIter}} $>$ \mbox{\hyperlink{struct____gnu__parallel_1_1___q_s_b_thread_local_a1fb2f487e249373accb75cdb89928c93}{\+\_\+\+Traits\+Type}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \+\_\+\+Traits\+Type\+::difference\+\_\+type \mbox{\hyperlink{struct____gnu__parallel_1_1___q_s_b_thread_local_a6c8c7846694fcbd41d9cbfcd26bf9e0f}{\+\_\+\+Difference\+Type}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} std\+::pair$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+RAIter}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+RAIter}} $>$ \mbox{\hyperlink{struct____gnu__parallel_1_1___q_s_b_thread_local_a4b151f36b1cac07063a9e6ae1ae9fd5a}{\+\_\+\+Piece}}
+\begin{DoxyCompactList}\small\item\em Continuous part of the sequence, described by an iterator pair. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct____gnu__parallel_1_1___q_s_b_thread_local_a47e9a744d2981943c13ac5a0af56f493}{\+\_\+\+QSBThread\+Local}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+queue\+\_\+size}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct____gnu__parallel_1_1___q_s_b_thread_local_a4b151f36b1cac07063a9e6ae1ae9fd5a}{\+\_\+\+Piece}} \mbox{\hyperlink{struct____gnu__parallel_1_1___q_s_b_thread_local_a0018330a1faea8911bb0a8a7ee44f72e}{\+\_\+\+M\+\_\+initial}}
+\begin{DoxyCompactList}\small\item\em Initial piece to work on. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class____gnu__parallel_1_1___restricted_bounded_concurrent_queue}{\+\_\+\+Restricted\+Bounded\+Concurrent\+Queue}}$<$ \mbox{\hyperlink{struct____gnu__parallel_1_1___q_s_b_thread_local_a4b151f36b1cac07063a9e6ae1ae9fd5a}{\+\_\+\+Piece}} $>$ \mbox{\hyperlink{struct____gnu__parallel_1_1___q_s_b_thread_local_ab857deaace34709581c5573bc62afd49}{\+\_\+\+M\+\_\+leftover\+\_\+parts}}
+\begin{DoxyCompactList}\small\item\em Work-\/stealing queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace____gnu__parallel_a05e502e51bfc3233671730f74a44dc6a}{\+\_\+\+Thread\+Index}} \mbox{\hyperlink{struct____gnu__parallel_1_1___q_s_b_thread_local_a0b63568837becdfbbd1f7accc1c05d1d}{\+\_\+\+M\+\_\+num\+\_\+threads}}
+\begin{DoxyCompactList}\small\item\em Number of threads involved in this algorithm. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{volatile}} \mbox{\hyperlink{struct____gnu__parallel_1_1___q_s_b_thread_local_a6c8c7846694fcbd41d9cbfcd26bf9e0f}{\+\_\+\+Difference\+Type}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct____gnu__parallel_1_1___q_s_b_thread_local_a02cf2d3081cda15fa671ec19cb62b551}{\+\_\+\+M\+\_\+elements\+\_\+leftover}}
+\begin{DoxyCompactList}\small\item\em Pointer to a counter of elements left over to sort. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct____gnu__parallel_1_1___q_s_b_thread_local_a4b151f36b1cac07063a9e6ae1ae9fd5a}{\+\_\+\+Piece}} \mbox{\hyperlink{struct____gnu__parallel_1_1___q_s_b_thread_local_aba7a5f9235cc1a847e3754df018eb9b4}{\+\_\+\+M\+\_\+global}}
+\begin{DoxyCompactList}\small\item\em The complete sequence to sort. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+RAIter}}$>$\newline
+struct \+\_\+\+\_\+gnu\+\_\+parallel\+::\+\_\+\+QSBThread\+Local$<$ \+\_\+\+RAIter $>$}
+Information local to one thread in the parallel quicksort run. 
+
+Definition at line \mbox{\hyperlink{balanced__quicksort_8h_source_l00065}{65}} of file \mbox{\hyperlink{balanced__quicksort_8h_source}{balanced\+\_\+quicksort.\+h}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{struct____gnu__parallel_1_1___q_s_b_thread_local_a6c8c7846694fcbd41d9cbfcd26bf9e0f}\label{struct____gnu__parallel_1_1___q_s_b_thread_local_a6c8c7846694fcbd41d9cbfcd26bf9e0f} 
+\index{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$@{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$}!\_DifferenceType@{\_DifferenceType}}
+\index{\_DifferenceType@{\_DifferenceType}!\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$@{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$}}
+\doxysubsubsection{\texorpdfstring{\_DifferenceType}{\_DifferenceType}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+RAIter}} $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \+\_\+\+Traits\+Type\+::difference\+\_\+type \mbox{\hyperlink{struct____gnu__parallel_1_1___q_s_b_thread_local}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+\_\+\+QSBThread\+Local}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+RAIter}} $>$\+::\+\_\+\+Difference\+Type}
+
+
+
+Definition at line \mbox{\hyperlink{balanced__quicksort_8h_source_l00068}{68}} of file \mbox{\hyperlink{balanced__quicksort_8h_source}{balanced\+\_\+quicksort.\+h}}.
+
+\Hypertarget{struct____gnu__parallel_1_1___q_s_b_thread_local_a4b151f36b1cac07063a9e6ae1ae9fd5a}\label{struct____gnu__parallel_1_1___q_s_b_thread_local_a4b151f36b1cac07063a9e6ae1ae9fd5a} 
+\index{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$@{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$}!\_Piece@{\_Piece}}
+\index{\_Piece@{\_Piece}!\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$@{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$}}
+\doxysubsubsection{\texorpdfstring{\_Piece}{\_Piece}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+RAIter}} $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} std\+::pair$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+RAIter}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+RAIter}}$>$ \mbox{\hyperlink{struct____gnu__parallel_1_1___q_s_b_thread_local}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+\_\+\+QSBThread\+Local}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+RAIter}} $>$\+::\+\_\+\+Piece}
+
+
+
+Continuous part of the sequence, described by an iterator pair. 
+
+
+
+Definition at line \mbox{\hyperlink{balanced__quicksort_8h_source_l00072}{72}} of file \mbox{\hyperlink{balanced__quicksort_8h_source}{balanced\+\_\+quicksort.\+h}}.
+
+\Hypertarget{struct____gnu__parallel_1_1___q_s_b_thread_local_a1fb2f487e249373accb75cdb89928c93}\label{struct____gnu__parallel_1_1___q_s_b_thread_local_a1fb2f487e249373accb75cdb89928c93} 
+\index{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$@{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$}!\_TraitsType@{\_TraitsType}}
+\index{\_TraitsType@{\_TraitsType}!\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$@{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$}}
+\doxysubsubsection{\texorpdfstring{\_TraitsType}{\_TraitsType}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+RAIter}} $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} std\+::iterator\+\_\+traits$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+RAIter}}$>$ \mbox{\hyperlink{struct____gnu__parallel_1_1___q_s_b_thread_local}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+\_\+\+QSBThread\+Local}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+RAIter}} $>$\+::\+\_\+\+Traits\+Type}
+
+
+
+Definition at line \mbox{\hyperlink{balanced__quicksort_8h_source_l00067}{67}} of file \mbox{\hyperlink{balanced__quicksort_8h_source}{balanced\+\_\+quicksort.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct____gnu__parallel_1_1___q_s_b_thread_local_a47e9a744d2981943c13ac5a0af56f493}\label{struct____gnu__parallel_1_1___q_s_b_thread_local_a47e9a744d2981943c13ac5a0af56f493} 
+\index{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$@{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$}!\_QSBThreadLocal@{\_QSBThreadLocal}}
+\index{\_QSBThreadLocal@{\_QSBThreadLocal}!\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$@{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$}}
+\doxysubsubsection{\texorpdfstring{\_QSBThreadLocal()}{\_QSBThreadLocal()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+RAIter}} $>$ \\
+\mbox{\hyperlink{struct____gnu__parallel_1_1___q_s_b_thread_local}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+\_\+\+QSBThread\+Local}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+RAIter}} $>$\+::\+\_\+\+QSBThread\+Local (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{\+\_\+\+\_\+queue\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+queue\+\_\+size} & size of the work-\/stealing queue. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{balanced__quicksort_8h_source_l00091}{91}} of file \mbox{\hyperlink{balanced__quicksort_8h_source}{balanced\+\_\+quicksort.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct____gnu__parallel_1_1___q_s_b_thread_local_a02cf2d3081cda15fa671ec19cb62b551}\label{struct____gnu__parallel_1_1___q_s_b_thread_local_a02cf2d3081cda15fa671ec19cb62b551} 
+\index{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$@{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$}!\_M\_elements\_leftover@{\_M\_elements\_leftover}}
+\index{\_M\_elements\_leftover@{\_M\_elements\_leftover}!\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$@{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$}}
+\doxysubsubsection{\texorpdfstring{\_M\_elements\_leftover}{\_M\_elements\_leftover}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+RAIter}} $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{volatile}} \mbox{\hyperlink{struct____gnu__parallel_1_1___q_s_b_thread_local_a6c8c7846694fcbd41d9cbfcd26bf9e0f}{\+\_\+\+Difference\+Type}}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct____gnu__parallel_1_1___q_s_b_thread_local}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+\_\+\+QSBThread\+Local}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+RAIter}} $>$\+::\+\_\+\+M\+\_\+elements\+\_\+leftover}
+
+
+
+Pointer to a counter of elements left over to sort. 
+
+
+
+Definition at line \mbox{\hyperlink{balanced__quicksort_8h_source_l00084}{84}} of file \mbox{\hyperlink{balanced__quicksort_8h_source}{balanced\+\_\+quicksort.\+h}}.
+
+\Hypertarget{struct____gnu__parallel_1_1___q_s_b_thread_local_aba7a5f9235cc1a847e3754df018eb9b4}\label{struct____gnu__parallel_1_1___q_s_b_thread_local_aba7a5f9235cc1a847e3754df018eb9b4} 
+\index{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$@{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$}!\_M\_global@{\_M\_global}}
+\index{\_M\_global@{\_M\_global}!\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$@{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$}}
+\doxysubsubsection{\texorpdfstring{\_M\_global}{\_M\_global}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+RAIter}} $>$ \\
+\mbox{\hyperlink{struct____gnu__parallel_1_1___q_s_b_thread_local_a4b151f36b1cac07063a9e6ae1ae9fd5a}{\+\_\+\+Piece}} \mbox{\hyperlink{struct____gnu__parallel_1_1___q_s_b_thread_local}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+\_\+\+QSBThread\+Local}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+RAIter}} $>$\+::\+\_\+\+M\+\_\+global}
+
+
+
+The complete sequence to sort. 
+
+
+
+Definition at line \mbox{\hyperlink{balanced__quicksort_8h_source_l00087}{87}} of file \mbox{\hyperlink{balanced__quicksort_8h_source}{balanced\+\_\+quicksort.\+h}}.
+
+\Hypertarget{struct____gnu__parallel_1_1___q_s_b_thread_local_a0018330a1faea8911bb0a8a7ee44f72e}\label{struct____gnu__parallel_1_1___q_s_b_thread_local_a0018330a1faea8911bb0a8a7ee44f72e} 
+\index{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$@{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$}!\_M\_initial@{\_M\_initial}}
+\index{\_M\_initial@{\_M\_initial}!\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$@{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$}}
+\doxysubsubsection{\texorpdfstring{\_M\_initial}{\_M\_initial}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+RAIter}} $>$ \\
+\mbox{\hyperlink{struct____gnu__parallel_1_1___q_s_b_thread_local_a4b151f36b1cac07063a9e6ae1ae9fd5a}{\+\_\+\+Piece}} \mbox{\hyperlink{struct____gnu__parallel_1_1___q_s_b_thread_local}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+\_\+\+QSBThread\+Local}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+RAIter}} $>$\+::\+\_\+\+M\+\_\+initial}
+
+
+
+Initial piece to work on. 
+
+
+
+Definition at line \mbox{\hyperlink{balanced__quicksort_8h_source_l00075}{75}} of file \mbox{\hyperlink{balanced__quicksort_8h_source}{balanced\+\_\+quicksort.\+h}}.
+
+\Hypertarget{struct____gnu__parallel_1_1___q_s_b_thread_local_ab857deaace34709581c5573bc62afd49}\label{struct____gnu__parallel_1_1___q_s_b_thread_local_ab857deaace34709581c5573bc62afd49} 
+\index{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$@{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$}!\_M\_leftover\_parts@{\_M\_leftover\_parts}}
+\index{\_M\_leftover\_parts@{\_M\_leftover\_parts}!\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$@{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$}}
+\doxysubsubsection{\texorpdfstring{\_M\_leftover\_parts}{\_M\_leftover\_parts}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+RAIter}} $>$ \\
+\mbox{\hyperlink{class____gnu__parallel_1_1___restricted_bounded_concurrent_queue}{\+\_\+\+Restricted\+Bounded\+Concurrent\+Queue}}$<$\mbox{\hyperlink{struct____gnu__parallel_1_1___q_s_b_thread_local_a4b151f36b1cac07063a9e6ae1ae9fd5a}{\+\_\+\+Piece}}$>$ \mbox{\hyperlink{struct____gnu__parallel_1_1___q_s_b_thread_local}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+\_\+\+QSBThread\+Local}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+RAIter}} $>$\+::\+\_\+\+M\+\_\+leftover\+\_\+parts}
+
+
+
+Work-\/stealing queue. 
+
+
+
+Definition at line \mbox{\hyperlink{balanced__quicksort_8h_source_l00078}{78}} of file \mbox{\hyperlink{balanced__quicksort_8h_source}{balanced\+\_\+quicksort.\+h}}.
+
+\Hypertarget{struct____gnu__parallel_1_1___q_s_b_thread_local_a0b63568837becdfbbd1f7accc1c05d1d}\label{struct____gnu__parallel_1_1___q_s_b_thread_local_a0b63568837becdfbbd1f7accc1c05d1d} 
+\index{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$@{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$}!\_M\_num\_threads@{\_M\_num\_threads}}
+\index{\_M\_num\_threads@{\_M\_num\_threads}!\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$@{\_\_gnu\_parallel::\_QSBThreadLocal$<$ \_RAIter $>$}}
+\doxysubsubsection{\texorpdfstring{\_M\_num\_threads}{\_M\_num\_threads}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+RAIter}} $>$ \\
+\mbox{\hyperlink{namespace____gnu__parallel_a05e502e51bfc3233671730f74a44dc6a}{\+\_\+\+Thread\+Index}} \mbox{\hyperlink{struct____gnu__parallel_1_1___q_s_b_thread_local}{\+\_\+\+\_\+gnu\+\_\+parallel\+::\+\_\+\+QSBThread\+Local}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+RAIter}} $>$\+::\+\_\+\+M\+\_\+num\+\_\+threads}
+
+
+
+Number of threads involved in this algorithm. 
+
+
+
+Definition at line \mbox{\hyperlink{balanced__quicksort_8h_source_l00081}{81}} of file \mbox{\hyperlink{balanced__quicksort_8h_source}{balanced\+\_\+quicksort.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/include/c++/parallel/\mbox{\hyperlink{balanced__quicksort_8h}{balanced\+\_\+quicksort.\+h}}\end{DoxyCompactItemize}

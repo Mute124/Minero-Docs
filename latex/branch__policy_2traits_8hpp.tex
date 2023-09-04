@@ -1,0 +1,50 @@
+\doxysection{C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/include/c++/ext/pb\+\_\+ds/detail/branch\+\_\+policy/traits.hpp File Reference}
+\hypertarget{branch__policy_2traits_8hpp}{}\label{branch__policy_2traits_8hpp}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/pb\_ds/detail/branch\_policy/traits.hpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/pb\_ds/detail/branch\_policy/traits.hpp}}
+{\ttfamily \#include $<$ext/pb\+\_\+ds/detail/types\+\_\+traits.\+hpp$>$}\newline
+{\ttfamily \#include $<$ext/pb\+\_\+ds/detail/bin\+\_\+search\+\_\+tree\+\_\+/traits.\+hpp$>$}\newline
+{\ttfamily \#include $<$ext/pb\+\_\+ds/detail/tree\+\_\+policy/node\+\_\+metadata\+\_\+selector.\+hpp$>$}\newline
+{\ttfamily \#include $<$ext/pb\+\_\+ds/detail/trie\+\_\+policy/node\+\_\+metadata\+\_\+selector.\+hpp$>$}\newline
+{\ttfamily \#include $<$ext/pb\+\_\+ds/detail/rb\+\_\+tree\+\_\+map\+\_\+/traits.\+hpp$>$}\newline
+{\ttfamily \#include $<$ext/pb\+\_\+ds/detail/splay\+\_\+tree\+\_\+/traits.\+hpp$>$}\newline
+{\ttfamily \#include $<$ext/pb\+\_\+ds/detail/ov\+\_\+tree\+\_\+map\+\_\+/traits.\+hpp$>$}\newline
+{\ttfamily \#include $<$ext/pb\+\_\+ds/detail/pat\+\_\+trie\+\_\+/traits.\+hpp$>$}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace____gnu__pbds}{\+\_\+\+\_\+gnu\+\_\+pbds}}
+\begin{DoxyCompactList}\small\item\em GNU extensions for policy-\/based data structures for public use. \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace____gnu__pbds_1_1detail}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{branch__policy_2traits_8hpp_a60a4cde43600043cf4bcfa1ecd9f5e44}{PB\+\_\+\+DS\+\_\+\+DEBUG\+\_\+\+VERIFY}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Cond}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains an implementation class for tree-\/like classes. 
+
+Definition in file \mbox{\hyperlink{branch__policy_2traits_8hpp_source}{traits.\+hpp}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{branch__policy_2traits_8hpp_a60a4cde43600043cf4bcfa1ecd9f5e44}\label{branch__policy_2traits_8hpp_a60a4cde43600043cf4bcfa1ecd9f5e44} 
+\index{traits.hpp@{traits.hpp}!PB\_DS\_DEBUG\_VERIFY@{PB\_DS\_DEBUG\_VERIFY}}
+\index{PB\_DS\_DEBUG\_VERIFY@{PB\_DS\_DEBUG\_VERIFY}!traits.hpp@{traits.hpp}}
+\doxysubsubsection{\texorpdfstring{PB\_DS\_DEBUG\_VERIFY}{PB\_DS\_DEBUG\_VERIFY}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} PB\+\_\+\+DS\+\_\+\+DEBUG\+\_\+\+VERIFY(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Cond}} }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{macros_8h_a259b851136e587d5e47cc695d6fb4bea}{\_GLIBCXX\_DEBUG\_VERIFY\_AT}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Cond}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\#\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Cond}}\textcolor{stringliteral}{"{}\ assertion\ from\ \%1;:\%2;"{}})\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_string(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_FILE\_\_}}).\_M\_integer(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_LINE\_\_}})\ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_file}},\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_line}})}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{branch__policy_2traits_8hpp_source_l00049}{49}} of file \mbox{\hyperlink{branch__policy_2traits_8hpp_source}{traits.\+hpp}}.
+

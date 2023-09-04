@@ -1,0 +1,73 @@
+\doxysection{C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/glm/glm/gtx/scalar\+\_\+multiplication.hpp File Reference}
+\hypertarget{scalar__multiplication_8hpp}{}\label{scalar__multiplication_8hpp}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/glm/glm/gtx/scalar\_multiplication.hpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/glm/glm/gtx/scalar\_multiplication.hpp}}
+{\ttfamily \#include "{}../detail/setup.\+hpp"{}}\newline
+{\ttfamily \#include "{}../vec2.\+hpp"{}}\newline
+{\ttfamily \#include "{}../vec3.\+hpp"{}}\newline
+{\ttfamily \#include "{}../vec4.\+hpp"{}}\newline
+{\ttfamily \#include "{}../mat2x2.\+hpp"{}}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceglm}{glm}}
+\begin{DoxyCompactList}\small\item\em \doxylink{group__core}{Core features} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{scalar__multiplication_8hpp_aa1e74ac9f6e034680f02523fb962bd0c}{GLM\+\_\+\+IMPLEMENT\+\_\+\+SCAL\+\_\+\+MULT}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Vec}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{T}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Vec}} $>$ }\\\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{using}} \mbox{\hyperlink{namespaceglm_a68a5dc6ff1dbac4fda02c3b177afa4aa}{glm\+::return\+\_\+type\+\_\+scalar\+\_\+multiplication}} = \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} std\+::enable\+\_\+if$<$ !std\+::is\+\_\+same$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{T}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{float}} $>$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{\+::value}} \&\&std\+::is\+\_\+arithmetic$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{T}} $>$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{\+::value}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Vec}} $>$\mbox{\hyperlink{_gameobj_8h_a890efa53b3d7deeeced6f3a0d6653ed3}{\+::type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{group__gtx}{Experimental extensions}
+
+\begin{DoxyAuthor}{Author}
+Joshua Moerman
+\end{DoxyAuthor}
+Include \texorpdfstring{$<$}{<}\doxylink{scalar__multiplication_8hpp}{glm/gtx/scalar\+\_\+multiplication.\+hpp}\texorpdfstring{$>$}{>} to use the features of this extension.
+
+Enables scalar multiplication for all types
+
+Since GLSL is very strict about types, the following (often used) combinations do not work\+: double \texorpdfstring{$\ast$}{*} vec4 int \texorpdfstring{$\ast$}{*} vec4 vec4 / int So we\textquotesingle{}ll fix that! Of course "{}float \texorpdfstring{$\ast$}{*} vec4"{} should remain the same (hence the enable\+\_\+if magic) 
+
+Definition in file \mbox{\hyperlink{scalar__multiplication_8hpp_source}{scalar\+\_\+multiplication.\+hpp}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{scalar__multiplication_8hpp_aa1e74ac9f6e034680f02523fb962bd0c}\label{scalar__multiplication_8hpp_aa1e74ac9f6e034680f02523fb962bd0c} 
+\index{scalar\_multiplication.hpp@{scalar\_multiplication.hpp}!GLM\_IMPLEMENT\_SCAL\_MULT@{GLM\_IMPLEMENT\_SCAL\_MULT}}
+\index{GLM\_IMPLEMENT\_SCAL\_MULT@{GLM\_IMPLEMENT\_SCAL\_MULT}!scalar\_multiplication.hpp@{scalar\_multiplication.hpp}}
+\doxysubsubsection{\texorpdfstring{GLM\_IMPLEMENT\_SCAL\_MULT}{GLM\_IMPLEMENT\_SCAL\_MULT}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} GLM\+\_\+\+IMPLEMENT\+\_\+\+SCAL\+\_\+\+MULT(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Vec}} }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{template<typename\ T>\ \(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\ \ \ \ return\_type\_scalar\_multiplication<T,\ Vec>\ \(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\ \ \ \ operator*}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{T}}\ \textcolor{keyword}{const}\&\ s,\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Vec}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{rh}})\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{rh}}\ *=\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(s);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{template<typename\ T>\ \(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\ \ \ \ return\_type\_scalar\_multiplication<T,\ Vec>\ \(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\ \ \ \ operator*}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Vec}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{lh}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{T}}\ \textcolor{keyword}{const}\&\ s)\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{lh}}\ *=\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(s);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{template<typename\ T>\ \(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\ \ \ \ return\_type\_scalar\_multiplication<T,\ Vec>\ \(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\ \ \ \ operator/}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Vec}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{lh}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{T}}\ \textcolor{keyword}{const}\&\ s)\{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{lh}}\ *=\ 1.0f\ /\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(s);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{scalar__multiplication_8hpp_source_l00041}{41}} of file \mbox{\hyperlink{scalar__multiplication_8hpp_source}{scalar\+\_\+multiplication.\+hpp}}.
+

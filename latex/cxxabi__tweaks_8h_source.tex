@@ -1,0 +1,60 @@
+\doxysection{cxxabi\+\_\+tweaks.\+h}
+\hypertarget{cxxabi__tweaks_8h_source}{}\label{cxxabi__tweaks_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/x86\_64-\/w64-\/mingw32/bits/cxxabi\_tweaks.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/x86\_64-\/w64-\/mingw32/bits/cxxabi\_tweaks.h}}
+\mbox{\hyperlink{cxxabi__tweaks_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00001}00001\ \textcolor{comment}{//\ Control\ various\ target\ specific\ ABI\ tweaks.\ \ Generic\ version.}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00003}00003\ \textcolor{comment}{//\ Copyright\ (C)\ 2004-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00005}00005\ \textcolor{comment}{//\ This\ file\ is\ part\ of\ the\ GNU\ ISO\ C++\ Library.\ \ This\ library\ is\ free}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00006}00006\ \textcolor{comment}{//\ software;\ you\ can\ redistribute\ it\ and/or\ modify\ it\ under\ the}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00007}00007\ \textcolor{comment}{//\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by\ the}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00008}00008\ \textcolor{comment}{//\ Free\ Software\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00009}00009\ \textcolor{comment}{//\ any\ later\ version.}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00011}00011\ \textcolor{comment}{//\ This\ library\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00012}00012\ \textcolor{comment}{//\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00013}00013\ \textcolor{comment}{//\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00014}00014\ \textcolor{comment}{//\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00016}00016\ \textcolor{comment}{//\ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00017}00017\ \textcolor{comment}{//\ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00018}00018\ \textcolor{comment}{//\ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00020}00020\ \textcolor{comment}{//\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00021}00021\ \textcolor{comment}{//\ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00022}00022\ \textcolor{comment}{//\ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00023}00023\ \textcolor{comment}{//\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00030}00030\ \textcolor{preprocessor}{\#ifndef\ \_CXXABI\_TWEAKS\_H}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00031}00031\ \textcolor{preprocessor}{\#define\ \_CXXABI\_TWEAKS\_H\ 1}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00033}00033\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00034}00034\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_cxxabiv1}}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00035}00035\ \{}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00036}00036\ \ \ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00037}00037\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00038}00038\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00040}00040\ \ \ \textcolor{comment}{//\ The\ generic\ ABI\ uses\ the\ first\ byte\ of\ a\ 64-\/bit\ guard\ variable.}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00041}\mbox{\hyperlink{cxxabi__tweaks_8h_aa345615307b864d9fe167a798ab4170e}{00041}}\ \textcolor{preprocessor}{\#define\ \_GLIBCXX\_GUARD\_TEST(x)\ (*(char\ *)\ (x)\ !=\ 0)}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00042}\mbox{\hyperlink{cxxabi__tweaks_8h_a47787d38a7d9d469cff7353359861f28}{00042}}\ \textcolor{preprocessor}{\#define\ \_GLIBCXX\_GUARD\_SET(x)\ *(char\ *)\ (x)\ =\ 1}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00043}\mbox{\hyperlink{cxxabi__tweaks_8h_a2372c9b6659f43e8645ae01d4fec62c4}{00043}}\ \textcolor{preprocessor}{\#define\ \_GLIBCXX\_GUARD\_BIT\ \_\_guard\_test\_bit\ (0,\ 1)}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00044}\mbox{\hyperlink{cxxabi__tweaks_8h_aee52e6ee4b301db794309603a70aeb76}{00044}}\ \textcolor{preprocessor}{\#define\ \_GLIBCXX\_GUARD\_PENDING\_BIT\ \_\_guard\_test\_bit\ (1,\ 1)}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00045}\mbox{\hyperlink{cxxabi__tweaks_8h_a9a0be23cd1a2c660761786de216648ad}{00045}}\ \textcolor{preprocessor}{\#define\ \_GLIBCXX\_GUARD\_WAITING\_BIT\ \_\_guard\_test\_bit\ (2,\ 1)}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00046}\mbox{\hyperlink{cxxabi__tweaks_8h_aa5aa60072f4063655d5283b6d7b7ab44}{00046}}\ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_extension\_\_}}\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_guard}}\ \mbox{\hyperlink{avx512bf16intrin_8h_a016eb0ea28cf676c28ca5fdd1709f105}{\_\_attribute\_\_}}((\mbox{\hyperlink{raylib_2src_2external_2glad_8h_a1e71d9c196e4683cc06c4b54d53f7ef5}{mode}}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_DI\_\_}})));}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00048}00048\ \ \ \textcolor{comment}{//\ \_\_cxa\_vec\_ctor\ has\ void\ return\ type.}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00049}\mbox{\hyperlink{cxxabi__tweaks_8h_a9404bce217fed5d7a1cd22067b66e890}{00049}}\ \ \ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{cxxabi__tweaks_8h_a9404bce217fed5d7a1cd22067b66e890}{\_\_cxa\_vec\_ctor\_return\_type}};}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00050}\mbox{\hyperlink{cxxabi__tweaks_8h_ad90821506139e0101a85cecbeee8ec60}{00050}}\ \textcolor{preprocessor}{\#define\ \_GLIBCXX\_CXA\_VEC\_CTOR\_RETURN(x)\ return}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00051}00051\ \ \ \textcolor{comment}{//\ Constructors\ and\ destructors\ do\ not\ return\ a\ value.}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00052}\mbox{\hyperlink{cxxabi__tweaks_8h_ab7bda5cb4fabcfdb7bcf9eb45b901771}{00052}}\ \ \ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{cxxabi__tweaks_8h_ab7bda5cb4fabcfdb7bcf9eb45b901771}{\_\_cxa\_cdtor\_return\_type}};}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00054}00054\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00055}00055\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00056}00056\ \}\ \textcolor{comment}{//\ namespace\ \_\_cxxabiv1}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00057}00057\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{cxxabi__tweaks_8h_source_l00059}00059\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

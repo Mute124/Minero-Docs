@@ -1,0 +1,198 @@
+\doxysection{pthread\+\_\+unistd.\+h}
+\hypertarget{pthread__unistd_8h_source}{}\label{pthread__unistd_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/pthread\_unistd.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/pthread\_unistd.h}}
+\mbox{\hyperlink{pthread__unistd_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00002}00002\ \textcolor{comment}{\ \ \ Copyright\ (c)\ 2011-\/2016\ \ mingw-\/w64\ project}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00003}00003\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00004}00004\ \textcolor{comment}{\ \ \ Permission\ is\ hereby\ granted,\ free\ of\ charge,\ to\ any\ person\ obtaining\ a}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00005}00005\ \textcolor{comment}{\ \ \ copy\ of\ this\ software\ and\ associated\ documentation\ files\ (the\ "{}Software"{}),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00006}00006\ \textcolor{comment}{\ \ \ to\ deal\ in\ the\ Software\ without\ restriction,\ including\ without\ limitation}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00007}00007\ \textcolor{comment}{\ \ \ the\ rights\ to\ use,\ copy,\ modify,\ merge,\ publish,\ distribute,\ sublicense,}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00008}00008\ \textcolor{comment}{\ \ \ and/or\ sell\ copies\ of\ the\ Software,\ and\ to\ permit\ persons\ to\ whom\ the}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00009}00009\ \textcolor{comment}{\ \ \ Software\ is\ furnished\ to\ do\ so,\ subject\ to\ the\ following\ conditions:}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00010}00010\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00011}00011\ \textcolor{comment}{\ \ \ The\ above\ copyright\ notice\ and\ this\ permission\ notice\ shall\ be\ included\ in}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00012}00012\ \textcolor{comment}{\ \ \ all\ copies\ or\ substantial\ portions\ of\ the\ Software.}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00013}00013\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00014}00014\ \textcolor{comment}{\ \ \ THE\ SOFTWARE\ IS\ PROVIDED\ "{}AS\ IS"{},\ WITHOUT\ WARRANTY\ OF\ ANY\ KIND,\ EXPRESS\ OR}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00015}00015\ \textcolor{comment}{\ \ \ IMPLIED,\ INCLUDING\ BUT\ NOT\ LIMITED\ TO\ THE\ WARRANTIES\ OF\ MERCHANTABILITY,}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00016}00016\ \textcolor{comment}{\ \ \ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE\ AND\ NONINFRINGEMENT.\ IN\ NO\ EVENT\ SHALL\ THE}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00017}00017\ \textcolor{comment}{\ \ \ AUTHORS\ OR\ COPYRIGHT\ HOLDERS\ BE\ LIABLE\ FOR\ ANY\ CLAIM,\ DAMAGES\ OR\ OTHER}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00018}00018\ \textcolor{comment}{\ \ \ LIABILITY,\ WHETHER\ IN\ AN\ ACTION\ OF\ CONTRACT,\ TORT\ OR\ OTHERWISE,\ ARISING}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00019}00019\ \textcolor{comment}{\ \ \ FROM,\ OUT\ OF\ OR\ IN\ CONNECTION\ WITH\ THE\ SOFTWARE\ OR\ THE\ USE\ OR\ OTHER}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00020}00020\ \textcolor{comment}{\ \ \ DEALINGS\ IN\ THE\ SOFTWARE.}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00021}00021\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00023}00023\ \textcolor{preprocessor}{\#ifndef\ WIN\_PTHREADS\_UNISTD\_H}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00024}00024\ \textcolor{preprocessor}{\#define\ WIN\_PTHREADS\_UNISTD\_H}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00026}00026\ \textcolor{comment}{/*\ Set\ defines\ described\ by\ the\ POSIX\ Threads\ Extension\ (1003.1c-\/1995)\ */}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00027}00027\ \textcolor{comment}{/*\ \_SC\_THREADS}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00028}00028\ \textcolor{comment}{\ \ Basic\ support\ for\ POSIX\ threads\ is\ available.\ The\ functions}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00029}00029\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00030}00030\ \textcolor{comment}{\ \ pthread\_atfork(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00031}00031\ \textcolor{comment}{\ \ pthread\_attr\_destroy(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00032}00032\ \textcolor{comment}{\ \ pthread\_attr\_getdetachstate(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00033}00033\ \textcolor{comment}{\ \ pthread\_attr\_getschedparam(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00034}00034\ \textcolor{comment}{\ \ pthread\_attr\_init(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00035}00035\ \textcolor{comment}{\ \ pthread\_attr\_setdetachstate(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00036}00036\ \textcolor{comment}{\ \ pthread\_attr\_setschedparam(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00037}00037\ \textcolor{comment}{\ \ pthread\_cancel(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00038}00038\ \textcolor{comment}{\ \ pthread\_cleanup\_push(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00039}00039\ \textcolor{comment}{\ \ pthread\_cleanup\_pop(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00040}00040\ \textcolor{comment}{\ \ pthread\_cond\_broadcast(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00041}00041\ \textcolor{comment}{\ \ pthread\_cond\_destroy(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00042}00042\ \textcolor{comment}{\ \ pthread\_cond\_init(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00043}00043\ \textcolor{comment}{\ \ pthread\_cond\_signal(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00044}00044\ \textcolor{comment}{\ \ pthread\_cond\_timedwait(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00045}00045\ \textcolor{comment}{\ \ pthread\_cond\_wait(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00046}00046\ \textcolor{comment}{\ \ pthread\_condattr\_destroy(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00047}00047\ \textcolor{comment}{\ \ pthread\_condattr\_init(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00048}00048\ \textcolor{comment}{\ \ pthread\_create(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00049}00049\ \textcolor{comment}{\ \ pthread\_detach(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00050}00050\ \textcolor{comment}{\ \ pthread\_equal(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00051}00051\ \textcolor{comment}{\ \ pthread\_exit(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00052}00052\ \textcolor{comment}{\ \ pthread\_getspecific(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00053}00053\ \textcolor{comment}{\ \ pthread\_join(,}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00054}00054\ \textcolor{comment}{\ \ pthread\_key\_create(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00055}00055\ \textcolor{comment}{\ \ pthread\_key\_delete(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00056}00056\ \textcolor{comment}{\ \ pthread\_mutex\_destroy(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00057}00057\ \textcolor{comment}{\ \ pthread\_mutex\_init(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00058}00058\ \textcolor{comment}{\ \ pthread\_mutex\_lock(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00059}00059\ \textcolor{comment}{\ \ pthread\_mutex\_trylock(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00060}00060\ \textcolor{comment}{\ \ pthread\_mutex\_unlock(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00061}00061\ \textcolor{comment}{\ \ pthread\_mutexattr\_destroy(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00062}00062\ \textcolor{comment}{\ \ pthread\_mutexattr\_init(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00063}00063\ \textcolor{comment}{\ \ pthread\_once(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00064}00064\ \textcolor{comment}{\ \ pthread\_rwlock\_destroy(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00065}00065\ \textcolor{comment}{\ \ pthread\_rwlock\_init(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00066}00066\ \textcolor{comment}{\ \ pthread\_rwlock\_rdlock(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00067}00067\ \textcolor{comment}{\ \ pthread\_rwlock\_tryrdlock(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00068}00068\ \textcolor{comment}{\ \ pthread\_rwlock\_trywrlock(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00069}00069\ \textcolor{comment}{\ \ pthread\_rwlock\_unlock(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00070}00070\ \textcolor{comment}{\ \ pthread\_rwlock\_wrlock(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00071}00071\ \textcolor{comment}{\ \ pthread\_rwlockattr\_destroy(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00072}00072\ \textcolor{comment}{\ \ pthread\_rwlockattr\_init(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00073}00073\ \textcolor{comment}{\ \ pthread\_self(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00074}00074\ \textcolor{comment}{\ \ pthread\_setcancelstate(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00075}00075\ \textcolor{comment}{\ \ pthread\_setcanceltype(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00076}00076\ \textcolor{comment}{\ \ pthread\_setspecific(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00077}00077\ \textcolor{comment}{\ \ pthread\_testcancel()}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00078}00078\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00079}00079\ \textcolor{comment}{\ \ are\ present.\ */}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00080}00080\ \textcolor{preprocessor}{\#undef\ \_POSIX\_THREADS}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00081}\mbox{\hyperlink{pthread__unistd_8h_a5e89527a7c4b94907d559a975d5850ce}{00081}}\ \textcolor{preprocessor}{\#define\ \_POSIX\_THREADS\ 200112L}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00083}00083\ \textcolor{comment}{/*\ \_SC\_READER\_WRITER\_LOCKS}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00084}00084\ \textcolor{comment}{\ \ This\ option\ implies\ the\ \_POSIX\_THREADS\ option.\ Conversely,\ under}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00085}00085\ \textcolor{comment}{\ \ POSIX\ 1003.1-\/2001\ the\ \_POSIX\_THREADS\ option\ implies\ this\ option.}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00086}00086\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00087}00087\ \textcolor{comment}{\ \ The\ functions}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00088}00088\ \textcolor{comment}{\ \ pthread\_rwlock\_destroy(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00089}00089\ \textcolor{comment}{\ \ pthread\_rwlock\_init(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00090}00090\ \textcolor{comment}{\ \ pthread\_rwlock\_rdlock(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00091}00091\ \textcolor{comment}{\ \ pthread\_rwlock\_tryrdlock(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00092}00092\ \textcolor{comment}{\ \ pthread\_rwlock\_trywrlock(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00093}00093\ \textcolor{comment}{\ \ pthread\_rwlock\_unlock(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00094}00094\ \textcolor{comment}{\ \ pthread\_rwlock\_wrlock(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00095}00095\ \textcolor{comment}{\ \ pthread\_rwlockattr\_destroy(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00096}00096\ \textcolor{comment}{\ \ pthread\_rwlockattr\_init()}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00097}00097\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00098}00098\ \textcolor{comment}{\ \ are\ present.}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00099}00099\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00100}00100\ \textcolor{preprocessor}{\#undef\ \_POSIX\_READER\_WRITER\_LOCKS}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00101}\mbox{\hyperlink{pthread__unistd_8h_a0de534c83bc64084bd72a2af38c38fc4}{00101}}\ \textcolor{preprocessor}{\#define\ \_POSIX\_READER\_WRITER\_LOCKS\ 200112L}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00103}00103\ \textcolor{comment}{/*\ \_SC\_SPIN\_LOCKS}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00104}00104\ \textcolor{comment}{\ \ This\ option\ implies\ the\ \_POSIX\_THREADS\ and\ \_POSIX\_THREAD\_SAFE\_FUNCTIONS}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00105}00105\ \textcolor{comment}{\ \ options.\ The\ functions}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00106}00106\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00107}00107\ \textcolor{comment}{\ \ pthread\_spin\_destroy(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00108}00108\ \textcolor{comment}{\ \ pthread\_spin\_init(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00109}00109\ \textcolor{comment}{\ \ pthread\_spin\_lock(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00110}00110\ \textcolor{comment}{\ \ pthread\_spin\_trylock(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00111}00111\ \textcolor{comment}{\ \ pthread\_spin\_unlock()}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00112}00112\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00113}00113\ \textcolor{comment}{\ \ are\ present.\ */}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00114}00114\ \textcolor{preprocessor}{\#undef\ \_POSIX\_SPIN\_LOCKS}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00115}\mbox{\hyperlink{pthread__unistd_8h_ad022064435f5624d1112e6dded65456a}{00115}}\ \textcolor{preprocessor}{\#define\ \_POSIX\_SPIN\_LOCKS\ 200112L}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00117}00117\ \textcolor{comment}{/*\ \_SC\_BARRIERS}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00118}00118\ \textcolor{comment}{\ \ This\ option\ implies\ the\ \_POSIX\_THREADS\ and\ \_POSIX\_THREAD\_SAFE\_FUNCTIONS}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00119}00119\ \textcolor{comment}{\ \ options.\ The\ functions}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00120}00120\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00121}00121\ \textcolor{comment}{\ \ pthread\_barrier\_destroy(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00122}00122\ \textcolor{comment}{\ \ pthread\_barrier\_init(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00123}00123\ \textcolor{comment}{\ \ pthread\_barrier\_wait(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00124}00124\ \textcolor{comment}{\ \ pthread\_barrierattr\_destroy(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00125}00125\ \textcolor{comment}{\ \ pthread\_barrierattr\_init()}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00126}00126\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00127}00127\ \textcolor{comment}{\ \ are\ present.}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00128}00128\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00129}00129\ \textcolor{preprocessor}{\#undef\ \_POSIX\_BARRIERS}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00130}\mbox{\hyperlink{pthread__unistd_8h_a1888bb32a3fab081911db6d9b4dd3168}{00130}}\ \textcolor{preprocessor}{\#define\ \_POSIX\_BARRIERS\ 200112L}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00132}00132\ \textcolor{comment}{/*\ \_SC\_TIMEOUTS}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00133}00133\ \textcolor{comment}{\ \ The\ functions}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00134}00134\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00135}00135\ \textcolor{comment}{\ \ mq\_timedreceive(),\ -\/\ not\ supported}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00136}00136\ \textcolor{comment}{\ \ mq\_timedsend(),\ -\/\ not\ supported}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00137}00137\ \textcolor{comment}{\ \ posix\_trace\_timedgetnext\_event(),\ -\/\ not\ supported}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00138}00138\ \textcolor{comment}{\ \ pthread\_mutex\_timedlock(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00139}00139\ \textcolor{comment}{\ \ pthread\_rwlock\_timedrdlock(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00140}00140\ \textcolor{comment}{\ \ pthread\_rwlock\_timedwrlock(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00141}00141\ \textcolor{comment}{\ \ sem\_timedwait(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00142}00142\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00143}00143\ \textcolor{comment}{\ \ are\ present.\ */}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00144}00144\ \textcolor{preprocessor}{\#undef\ \_POSIX\_TIMEOUTS}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00145}\mbox{\hyperlink{pthread__unistd_8h_a71b925a59ac03ebfed790866a9fe90b6}{00145}}\ \textcolor{preprocessor}{\#define\ \_POSIX\_TIMEOUTS\ 200112L}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00146}00146\ }
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00147}00147\ \textcolor{comment}{/*\ \_SC\_TIMERS\ -\/\ not\ supported}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00148}00148\ \textcolor{comment}{\ \ The\ functions}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00149}00149\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00150}00150\ \textcolor{comment}{\ \ clock\_getres(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00151}00151\ \textcolor{comment}{\ \ clock\_gettime(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00152}00152\ \textcolor{comment}{\ \ clock\_settime(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00153}00153\ \textcolor{comment}{\ \ nanosleep(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00154}00154\ \textcolor{comment}{\ \ timer\_create(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00155}00155\ \textcolor{comment}{\ \ timer\_delete(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00156}00156\ \textcolor{comment}{\ \ timer\_gettime(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00157}00157\ \textcolor{comment}{\ \ timer\_getoverrun(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00158}00158\ \textcolor{comment}{\ \ timer\_settime()}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00159}00159\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00160}00160\ \textcolor{comment}{\ \ are\ present.\ \ */}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00161}00161\ \textcolor{comment}{/*\ \#undef\ \_POSIX\_TIMERS\ */}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00162}00162\ }
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00163}00163\ \textcolor{comment}{/*\ \_SC\_CLOCK\_SELECTION}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00164}00164\ \textcolor{comment}{\ \ \ This\ option\ implies\ the\ \_POSIX\_TIMERS\ option.\ The\ functions}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00165}00165\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00166}00166\ \textcolor{comment}{\ \ \ pthread\_condattr\_getclock(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00167}00167\ \textcolor{comment}{\ \ \ pthread\_condattr\_setclock(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00168}00168\ \textcolor{comment}{\ \ \ clock\_nanosleep()}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00169}00169\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00170}00170\ \textcolor{comment}{\ \ \ are\ present.}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00171}00171\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00172}00172\ \textcolor{preprocessor}{\#undef\ \_POSIX\_CLOCK\_SELECTION}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00173}\mbox{\hyperlink{pthread__unistd_8h_a095f0861017b1f645da83916f50c9360}{00173}}\ \textcolor{preprocessor}{\#define\ \_POSIX\_CLOCK\_SELECTION\ 200112}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00174}00174\ }
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00175}00175\ \textcolor{comment}{/*\ \_SC\_SEMAPHORES}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00176}00176\ \textcolor{comment}{\ \ The\ include\ file\ <semaphore.h>\ is\ present.\ The\ functions}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00177}00177\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00178}00178\ \textcolor{comment}{\ \ sem\_close(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00179}00179\ \textcolor{comment}{\ \ sem\_destroy(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00180}00180\ \textcolor{comment}{\ \ sem\_getvalue(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00181}00181\ \textcolor{comment}{\ \ sem\_init(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00182}00182\ \textcolor{comment}{\ \ sem\_open(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00183}00183\ \textcolor{comment}{\ \ sem\_post(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00184}00184\ \textcolor{comment}{\ \ sem\_trywait(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00185}00185\ \textcolor{comment}{\ \ sem\_unlink(),}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00186}00186\ \textcolor{comment}{\ \ sem\_wait()}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00187}00187\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00188}00188\ \textcolor{comment}{\ \ are\ present.\ */}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00189}00189\ \textcolor{preprocessor}{\#undef\ \_POSIX\_SEMAPHORES}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00190}\mbox{\hyperlink{pthread__unistd_8h_a65caa0d043930a3106a15a641d9e6049}{00190}}\ \textcolor{preprocessor}{\#define\ \_POSIX\_SEMAPHORES\ 200112}}
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00191}00191\ }
+\DoxyCodeLine{\Hypertarget{pthread__unistd_8h_source_l00192}00192\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ WIN\_PTHREADS\_UNISTD\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

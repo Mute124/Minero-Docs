@@ -1,0 +1,65 @@
+\doxysection{Terrain\+Triangle.\+h}
+\hypertarget{_terrain_triangle_8h_source}{}\label{_terrain_triangle_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/TerrainTriangle.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/TerrainTriangle.h}}
+\mbox{\hyperlink{_terrain_triangle_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_globals_8h}{Globals.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{raylib_8h}{lib/raylib.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{raymath_8h}{lib/raymath.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_gameobj_8h}{Gameobj.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00016}\mbox{\hyperlink{class_terrain_triangle}{00016}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_terrain_triangle}{TerrainTriangle}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_object}{GameObject}}\ \{}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00018}00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00020}00020\ \ }
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00021}00021\ \ \ \textcolor{comment}{//\ has\ to\ be\ long\ since\ there\ will\ be\ alot.}}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00022}\mbox{\hyperlink{class_terrain_triangle_ae632902965d8fbe3f77002d6a5ae1874}{00022}}\ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_terrain_triangle_ae632902965d8fbe3f77002d6a5ae1874}{m\_id}};}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00023}\mbox{\hyperlink{class_terrain_triangle_ab48a51107fe90fb0f96a2c3e6d1bdbf4}{00023}}\ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_shader}{Shader}}\ \mbox{\hyperlink{class_terrain_triangle_ab48a51107fe90fb0f96a2c3e6d1bdbf4}{shader}};}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00024}\mbox{\hyperlink{class_terrain_triangle_a8749acecf198f863ff56e4458e60eeca}{00024}}\ \ \ \mbox{\hyperlink{struct_model}{Model}}\ \mbox{\hyperlink{class_terrain_triangle_a8749acecf198f863ff56e4458e60eeca}{m\_model}};}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00025}\mbox{\hyperlink{class_terrain_triangle_acc6dc5111b30f608da1dd3b21baf7783}{00025}}\ \ \ \mbox{\hyperlink{struct_mesh}{Mesh}}\ \mbox{\hyperlink{class_terrain_triangle_acc6dc5111b30f608da1dd3b21baf7783}{m\_mesh}};}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00026}\mbox{\hyperlink{class_terrain_triangle_a1801129a944dbf3ed3040ecd070f4c52}{00026}}\ \ \ \mbox{\hyperlink{struct_color}{Color}}\ \mbox{\hyperlink{class_terrain_triangle_a1801129a944dbf3ed3040ecd070f4c52}{m\_color}};}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00027}\mbox{\hyperlink{class_terrain_triangle_a24a11eaca35d1e6e8c7bf62759f64efc}{00027}}\ \ \ TriVert\ \mbox{\hyperlink{class_terrain_triangle_a24a11eaca35d1e6e8c7bf62759f64efc}{m\_vert}};}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00028}00028\ \ \ }
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00029}\mbox{\hyperlink{class_terrain_triangle_ab889b3a5db301ae6347f0f0122b3c3e4}{00029}}\ \ \ \mbox{\hyperlink{struct_texture2_d}{Texture2D}}\ \mbox{\hyperlink{class_terrain_triangle_ab889b3a5db301ae6347f0f0122b3c3e4}{m\_tex}};}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00030}00030\ \ \ }
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00031}\mbox{\hyperlink{class_terrain_triangle_a586b271e9cc098cbd6a54d7b86f0bdb7}{00031}}\ \ \ \mbox{\hyperlink{struct_vector3}{Vector3}}\ \mbox{\hyperlink{class_terrain_triangle_a586b271e9cc098cbd6a54d7b86f0bdb7}{m\_position}};}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00033}00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00034}00034\ \ \ }
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00035}\mbox{\hyperlink{class_terrain_triangle_a7032ebf7d8addd223bc41cd8bd34a92f}{00035}}\ \ \ \mbox{\hyperlink{class_terrain_triangle_a7032ebf7d8addd223bc41cd8bd34a92f}{TerrainTriangle}}(\mbox{\hyperlink{struct_shader}{Shader}}\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a57b2a96adb1d51204909a82d861e395e}{shader}},\ TriVert\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Verticies}})\ :\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a57b2a96adb1d51204909a82d861e395e}{shader}}(\mbox{\hyperlink{raylib_2src_2external_2glad_8h_a57b2a96adb1d51204909a82d861e395e}{shader}}),\ \mbox{\hyperlink{class_terrain_triangle_a24a11eaca35d1e6e8c7bf62759f64efc}{m\_vert}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Verticies}})\ \{}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00036}00036\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00037}00037\ \ \ \ \ this-\/>m\_tex\ =\ \mbox{\hyperlink{raylib_8h_ae5f5951ef8996ca3457dd14280d992ce}{LoadTextureFromImage}}(\mbox{\hyperlink{raylib_8h_ad6503cb62ad62c293f2f35bd41d76792}{GenImageColor}}(10,\ 10,\ \mbox{\hyperlink{raylib_8h_acfbc006ea433ad708fdee3e82996e721}{GREEN}}));}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00038}00038\ \ \ \ \ this-\/>m\_mesh\ =\ GenMeshCustom(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Verticies}});}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00039}00039\ \ \ \ \ this-\/>m\_model\ =\ \mbox{\hyperlink{raylib_8h_a655da88e444808b72a16f11c4fd49531}{LoadModelFromMesh}}(this-\/>m\_mesh);}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00040}00040\ \ \ \ \ this-\/>m\_model.\mbox{\hyperlink{struct_model_ab79d1760e684bff4b731f3711b3c47fe}{materials}}[0].\mbox{\hyperlink{struct_material_a1a1e50dfb46cf79db10c67841f87d9c2}{shader}}\ =\ \mbox{\hyperlink{class_terrain_triangle_ab48a51107fe90fb0f96a2c3e6d1bdbf4}{shader}};}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00041}00041\ \ \ \ \ this-\/>m\_model.\mbox{\hyperlink{struct_model_ab79d1760e684bff4b731f3711b3c47fe}{materials}}[0].\mbox{\hyperlink{struct_material_a1a1e50dfb46cf79db10c67841f87d9c2}{shader}}.\mbox{\hyperlink{struct_shader_a52b7b94253d65e967336c712cc8c2653}{locs}}[\mbox{\hyperlink{raylib_8h_a04338a0bace0288b57053da5e53762b4ad0a3e3c04328fdf62f00f6b9d48c0d39}{SHADER\_LOC\_VECTOR\_VIEW}}]\ =\ \mbox{\hyperlink{raylib_8h_a14366d40e4a57227af1191850cbafebb}{GetShaderLocation}}(this-\/>shader,\ \textcolor{stringliteral}{"{}viewPos"{}});}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00042}00042\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00043}00043\ \ \ \ \ this-\/>m\_model.\mbox{\hyperlink{struct_model_ab79d1760e684bff4b731f3711b3c47fe}{materials}}[0].\mbox{\hyperlink{struct_material_a3d2c91a8d97bc80fad93f37936509bce}{maps}}[\mbox{\hyperlink{raylib_8h_adf9935560a5519a0fa249c2da3fc59fa}{MATERIAL\_MAP\_DIFFUSE}}].\mbox{\hyperlink{struct_material_map_ad89d26ae9df4ba66257f698935563560}{texture}}\ =\ \mbox{\hyperlink{class_terrain_triangle_ab889b3a5db301ae6347f0f0122b3c3e4}{m\_tex}};}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00044}00044\ \ \ \ \ this-\/>m\_model.\mbox{\hyperlink{struct_model_ab79d1760e684bff4b731f3711b3c47fe}{materials}}[0].\mbox{\hyperlink{struct_material_a3d2c91a8d97bc80fad93f37936509bce}{maps}}[\mbox{\hyperlink{raylib_8h_adf9935560a5519a0fa249c2da3fc59fa}{MATERIAL\_MAP\_DIFFUSE}}].\mbox{\hyperlink{struct_material_map_a7b8084743275ee9cf897a4b74d976925}{value}}\ =\ 10.0f;}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00046}00046\ \ \ \ \ this-\/>m\_id\ =\ \mbox{\hyperlink{class_game_object_ac1bdf03b00db44f9194d080aa7b5260c}{RegisterObj}}();}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00047}00047\ \ \ \ \ this-\/>m\_vert\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Verticies}};}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00049}00049\ \ \ \ \ this-\/>m\_position\ =\ (\mbox{\hyperlink{struct_vector3}{Vector3}})\{this-\/>m\_vert.v1.\mbox{\hyperlink{struct_vector3_a7e2d3237b29a2f29d7b3d8b2934e35f2}{x}}\ /\ 2,this-\/>m\_vert.v2.y\ /\ 2,\ this-\/>m\_vert.v3.z\ /\ 2\ \};}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00050}00050\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00051}\mbox{\hyperlink{class_terrain_triangle_a8119e365b48faac6e2fd95d6ec388b44}{00051}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_terrain_triangle_a8119e365b48faac6e2fd95d6ec388b44}{GetType}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ 0;\ \}}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00052}\mbox{\hyperlink{class_terrain_triangle_abb6ca1653800d20b3bddfb2f879183a3}{00052}}\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_terrain_triangle_abb6ca1653800d20b3bddfb2f879183a3}{SetModel}}()\textcolor{keyword}{\ const\ override\ }\{\}}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00054}\mbox{\hyperlink{class_terrain_triangle_aeaa3c2e7024b1f54a6631e4fba2df0af}{00054}}\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_terrain_triangle_aeaa3c2e7024b1f54a6631e4fba2df0af}{Draw}}()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00056}00056\ \ \ \ \ \mbox{\hyperlink{raylib_8h_aa5550a8579e522a3532b466fe08727aa}{DrawModel}}(this-\/>m\_model,\ this-\/>m\_position,\ 1.0f,\ \mbox{\hyperlink{raylib_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}});}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00057}00057\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00058}00058\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_terrain_triangle_8h_source_l00059}00059\ \};}
+
+\end{DoxyCode}

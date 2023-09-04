@@ -1,0 +1,74 @@
+\doxysection{Noise\+Calculator.\+cpp}
+\hypertarget{_noise_calculator_8cpp_source}{}\label{_noise_calculator_8cpp_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/Smooth-\/Infinite-\/Voxel-\/Terrain-\/master/NoiseCalculator.cpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/Smooth-\/Infinite-\/Voxel-\/Terrain-\/master/NoiseCalculator.cpp}}
+\mbox{\hyperlink{_noise_calculator_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00001}00001\ \textcolor{comment}{//\ Fill\ out\ your\ copyright\ notice\ in\ the\ Description\ page\ of\ Project\ Settings.}}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}PolyVox\_Test.h"{}}}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00004}00004\ \textcolor{comment}{//\#include\ "{}TerrainGenManager.h"{}}}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_simplex_noise_b_p_library_8h}{SimplexNoiseBPLibrary.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_noise_calculator_8h}{NoiseCalculator.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00008}\mbox{\hyperlink{class_noise_calculator_af0cf1a5bdcf79863d4ab0c118edb7353}{00008}}\ \mbox{\hyperlink{class_noise_calculator_a8eba302db074654b471853ae257f557e}{NoiseCalculator::NoiseCalculator}}(\mbox{\hyperlink{class_a_terrain_gen_manager}{ATerrainGenManager}}*\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{chunk}},\ FVector\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{loc}})}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00010}00010\ \ \ \ \ \mbox{\hyperlink{class_noise_calculator_a99fe4e6d9ac8aa73ec3a54a44107300d}{genchunk}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{chunk}};}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00011}00011\ \ \ \ \ \mbox{\hyperlink{class_noise_calculator_a840ec6233fc85e9c75a63380fd0b3f2d}{chunkloc}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{loc}};}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00012}00012\ \ \ \ \ \mbox{\hyperlink{class_noise_calculator_ae333b2e13a7ebd2ca1481c49191c43a3}{Thread}}\ =\ FRunnableThread::Create(\textcolor{keyword}{this},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{TEXT}}(\textcolor{stringliteral}{"{}NoiseCalculator"{}}),\ 0,\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{TPri\_BelowNormal}});}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00013}00013\ \}}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00015}\mbox{\hyperlink{class_noise_calculator_a8eba302db074654b471853ae257f557e}{00015}}\ \mbox{\hyperlink{class_noise_calculator_a8eba302db074654b471853ae257f557e}{NoiseCalculator::NoiseCalculator}}()}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00016}00016\ \{}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00017}00017\ \ \ \ \ \mbox{\hyperlink{class_noise_calculator_ae333b2e13a7ebd2ca1481c49191c43a3}{Thread}}\ =\ FRunnableThread::Create(\textcolor{keyword}{this},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{TEXT}}(\textcolor{stringliteral}{"{}NoiseCalculator"{}}),\ 0,\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{TPri\_BelowNormal}});}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00018}00018\ \}}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00020}\mbox{\hyperlink{class_noise_calculator_afbfe31c07bdcad5e92f5f31be1e44ceb}{00020}}\ \mbox{\hyperlink{class_noise_calculator_afbfe31c07bdcad5e92f5f31be1e44ceb}{NoiseCalculator::\string~NoiseCalculator}}()}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{class_noise_calculator_ae333b2e13a7ebd2ca1481c49191c43a3}{Thread}};}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{class_noise_calculator_ae333b2e13a7ebd2ca1481c49191c43a3}{Thread}}\ =\ \mbox{\hyperlink{external_2miniaudio_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00024}00024\ \}}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00026}\mbox{\hyperlink{class_noise_calculator_aae1b9dd2e76b842e0f5886421638f304}{00026}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_noise_calculator_aae1b9dd2e76b842e0f5886421638f304}{NoiseCalculator::Init}}()}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00027}00027\ \{}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00031}\mbox{\hyperlink{class_noise_calculator_a95f3964dfc0ff2e9e0d75a12395fb9cb}{00031}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_noise_calculator_a95f3964dfc0ff2e9e0d75a12395fb9cb}{NoiseCalculator::Stop}}()}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00032}00032\ \{}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{class_noise_calculator_ad870f051a90986b73bd4f96984f7c168}{isThreadFinished}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00034}00034\ \}}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00036}\mbox{\hyperlink{class_noise_calculator_aceefcde4d792b73c6efb72769b4a459d}{00036}}\ \mbox{\hyperlink{stb__vorbis_8c_a1134b580f8da4de94ca6b1de4d37975e}{uint32}}\ \mbox{\hyperlink{class_noise_calculator_aceefcde4d792b73c6efb72769b4a459d}{NoiseCalculator::Run}}()}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00037}00037\ \{}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00038}00038\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{UE\_LOG}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{LogTemp}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{TEXT}}(\textcolor{stringliteral}{"{}Spawning\ chunk"{}}))}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00039}00039\ \ \ \ \ FVector\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{loc}}\ =\ \mbox{\hyperlink{class_noise_calculator_a99fe4e6d9ac8aa73ec3a54a44107300d}{genchunk}}-\/>GetActorLocation();}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00040}00040\ \ \ \ \ FVector\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{loc}}\ =\ FVector(0.0f,\ 0.0f,\ -\/10.0f);}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00041}00041\ \ \ \ \ \mbox{\hyperlink{class_noise_calculator_a99fe4e6d9ac8aa73ec3a54a44107300d}{genchunk}}-\/>\mbox{\hyperlink{class_a_terrain_gen_manager_a75423a3b06705b3fdb217bae1058659b}{initialize}}(\mbox{\hyperlink{class_noise_calculator_a840ec6233fc85e9c75a63380fd0b3f2d}{chunkloc}}.X\ /\ 200.0f,\ \mbox{\hyperlink{class_noise_calculator_a840ec6233fc85e9c75a63380fd0b3f2d}{chunkloc}}.Y\ /\ 200.0f,\ -\/10.0f);}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00042}00042\ \ \ \ \ \mbox{\hyperlink{class_noise_calculator_a99fe4e6d9ac8aa73ec3a54a44107300d}{genchunk}}-\/>\mbox{\hyperlink{class_a_terrain_gen_manager_a03f62272e65ea0ec959740e6209108b8}{SetGenLoc}}(\mbox{\hyperlink{class_noise_calculator_a840ec6233fc85e9c75a63380fd0b3f2d}{chunkloc}}.X\ /\ 200.0f,\ \mbox{\hyperlink{class_noise_calculator_a840ec6233fc85e9c75a63380fd0b3f2d}{chunkloc}}.Y\ /\ 200.0f,\ -\/10.0f);}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00043}00043\ \ \ \ \ \mbox{\hyperlink{class_noise_calculator_ad870f051a90986b73bd4f96984f7c168}{isThreadFinished}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00045}00045\ \}}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00047}\mbox{\hyperlink{class_noise_calculator_a9ab1f4dc75a858ddb123fc82cef11bb8}{00047}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_noise_calculator_a9ab1f4dc75a858ddb123fc82cef11bb8}{NoiseCalculator::EnsureCompletion}}()}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00048}00048\ \{}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00049}00049\ \ \ \ \ \mbox{\hyperlink{class_noise_calculator_a95f3964dfc0ff2e9e0d75a12395fb9cb}{Stop}}();}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00050}00050\ \ \ \ \ \mbox{\hyperlink{class_noise_calculator_ae333b2e13a7ebd2ca1481c49191c43a3}{Thread}}-\/>WaitForCompletion();}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00051}00051\ \}}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00053}\mbox{\hyperlink{class_noise_calculator_aa7f51d0cb607b8044e4817cb13ce1a8b}{00053}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_noise_calculator_aa7f51d0cb607b8044e4817cb13ce1a8b}{NoiseCalculator::ShutDown}}()}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00054}00054\ \{}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00055}00055\ \}}
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_noise_calculator_8cpp_source_l00068}00068\ }
+
+\end{DoxyCode}

@@ -1,0 +1,53 @@
+\doxysection{C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/include/c++/ext/rc\+\_\+string\+\_\+base.h File Reference}
+\hypertarget{rc__string__base_8h}{}\label{rc__string__base_8h}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/rc\_string\_base.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/rc\_string\_base.h}}
+{\ttfamily \#include $<$ext/atomicity.\+h$>$}\newline
+{\ttfamily \#include $<$ext/alloc\+\_\+traits.\+h$>$}\newline
+{\ttfamily \#include $<$bits/stl\+\_\+iterator\+\_\+base\+\_\+funcs.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{namespace}} \+\_\+\+\_\+gnu\+\_\+cxx \mbox{\hyperlink{rc__string__base_8h_a56fd5a6be7c55e53e3eb59de5aa1ab9b}{\+\_\+\+GLIBCXX\+\_\+\+VISIBILITY}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{default}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is an internal header file, included by other library headers. Do not attempt to use it directly. @headername\{\doxylink{vstring_8h}{ext/vstring.\+h}\} 
+
+Definition in file \mbox{\hyperlink{rc__string__base_8h_source}{rc\+\_\+string\+\_\+base.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{rc__string__base_8h_a56fd5a6be7c55e53e3eb59de5aa1ab9b}\label{rc__string__base_8h_a56fd5a6be7c55e53e3eb59de5aa1ab9b} 
+\index{rc\_string\_base.h@{rc\_string\_base.h}!\_GLIBCXX\_VISIBILITY@{\_GLIBCXX\_VISIBILITY}}
+\index{\_GLIBCXX\_VISIBILITY@{\_GLIBCXX\_VISIBILITY}!rc\_string\_base.h@{rc\_string\_base.h}}
+\doxysubsubsection{\texorpdfstring{\_GLIBCXX\_VISIBILITY()}{\_GLIBCXX\_VISIBILITY()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{namespace}} \+\_\+\+\_\+gnu\+\_\+cxx \+\_\+\+GLIBCXX\+\_\+\+VISIBILITY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{default}}}]{ }\end{DoxyParamCaption})}
+
+Documentation? What\textquotesingle{}s that? Nathan Myers \href{mailto:ncm@cantrip.org}{\texttt{ ncm@cantrip.\+org}}.
+
+A string looks like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Rep}}]}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_length}}}
+\DoxyCodeLine{[\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_rc\_string\_base<char\_type>}}]\ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_capacity}}}
+\DoxyCodeLine{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_dataplus}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_refcount}}}
+\DoxyCodeLine{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_p}}\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unnamed}}\ array\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{of}}\ char\_type}
+
+\end{DoxyCode}
+
+
+Where the \+\_\+\+M\+\_\+p points to the first character in the string, and you cast it to a pointer-\/to-\/\+\_\+\+Rep and subtract 1 to get a pointer to the header.
+
+This approach has the enormous advantage that a string object requires only one allocation. All the ugliness is confined within a single pair of inline functions, which each compile to a single {\itshape add} instruction\+: \+\_\+\+Rep\+::\+\_\+\+M\+\_\+refdata(), and \+\_\+\+\_\+rc\+\_\+string\+\_\+base\+::\+\_\+\+M\+\_\+rep(); and the allocation function which gets a block of raw bytes and with room enough and constructs a \+\_\+\+Rep object at the front.
+
+The reason you want \+\_\+\+M\+\_\+data pointing to the character array and not the \+\_\+\+Rep is so that the debugger can see the string contents. (Probably we should add a non-\/inline member to get the \+\_\+\+Rep for the debugger to use, so users can check the actual string length.)
+
+Note that the \+\_\+\+Rep object is a POD so that you can have a static {\itshape empty string} \+\_\+\+Rep object already {\itshape constructed} before static constructors have run. The reference-\/count encoding is chosen so that a 0 indicates one reference, so you never try to destroy the empty-\/string \+\_\+\+Rep object.
+
+All but the last paragraph is considered pretty conventional for a C++ string implementation.
+
+Definition at line \mbox{\hyperlink{rc__string__base_8h_source_l00037}{37}} of file \mbox{\hyperlink{rc__string__base_8h_source}{rc\+\_\+string\+\_\+base.\+h}}.
+

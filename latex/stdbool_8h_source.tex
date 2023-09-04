@@ -1,0 +1,58 @@
+\doxysection{stdbool.\+h}
+\hypertarget{stdbool_8h_source}{}\label{stdbool_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/stdbool.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/stdbool.h}}
+\mbox{\hyperlink{stdbool_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00001}00001\ \textcolor{comment}{/*\ Copyright\ (C)\ 1998-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00002}00002\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00003}00003\ \textcolor{comment}{This\ file\ is\ part\ of\ GCC.}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00004}00004\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00005}00005\ \textcolor{comment}{GCC\ is\ free\ software;\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00006}00006\ \textcolor{comment}{it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00007}00007\ \textcolor{comment}{the\ Free\ Software\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00008}00008\ \textcolor{comment}{any\ later\ version.}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00009}00009\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00010}00010\ \textcolor{comment}{GCC\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00011}00011\ \textcolor{comment}{but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00012}00012\ \textcolor{comment}{MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00013}00013\ \textcolor{comment}{GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00014}00014\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00015}00015\ \textcolor{comment}{Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00016}00016\ \textcolor{comment}{permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00017}00017\ \textcolor{comment}{3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00018}00018\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00019}00019\ \textcolor{comment}{You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00020}00020\ \textcolor{comment}{a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00021}00021\ \textcolor{comment}{see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00022}00022\ \textcolor{comment}{<http://www.gnu.org/licenses/>.\ \ */}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00024}00024\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00025}00025\ \textcolor{comment}{\ *\ ISO\ C\ Standard:\ \ 7.16\ \ Boolean\ type\ and\ values\ \ <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00026}00026\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00028}00028\ \textcolor{preprocessor}{\#ifndef\ \_STDBOOL\_H}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00029}00029\ \textcolor{preprocessor}{\#define\ \_STDBOOL\_H}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00031}00031\ \textcolor{preprocessor}{\#ifndef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00033}\mbox{\hyperlink{stdbool_8h_abb452686968e48b67397da5f97445f5b}{00033}}\ \textcolor{preprocessor}{\#define\ bool\ \ \ \ \_Bool}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00034}00034\ \textcolor{preprocessor}{\#if\ defined\ \_\_STDC\_VERSION\_\_\ \&\&\ \_\_STDC\_VERSION\_\_\ >\ 201710L}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00035}00035\ \textcolor{preprocessor}{\#define\ true\ \ \ \ ((\_Bool)+1u)}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00036}00036\ \textcolor{preprocessor}{\#define\ false\ \ \ ((\_Bool)+0u)}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00037}00037\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00038}\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{00038}}\ \textcolor{preprocessor}{\#define\ true\ \ \ \ 1}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00039}\mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{00039}}\ \textcolor{preprocessor}{\#define\ false\ \ \ 0}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00040}00040\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00042}00042\ \textcolor{preprocessor}{\#else\ }\textcolor{comment}{/*\ \_\_cplusplus\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00044}00044\ \textcolor{comment}{/*\ Supporting\ \_Bool\ in\ C++\ is\ a\ GCC\ extension.\ \ */}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00045}00045\ \textcolor{preprocessor}{\#define\ \_Bool\ \ \ bool}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00047}00047\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_cplusplus\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00049}00049\ \textcolor{comment}{/*\ Signal\ that\ all\ the\ definitions\ are\ present.\ \ */}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00050}\mbox{\hyperlink{stdbool_8h_a665b0cc9ee2ced31785321d55cde349e}{00050}}\ \textcolor{preprocessor}{\#define\ \_\_bool\_true\_false\_are\_defined\ \ \ 1}}
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{stdbool_8h_source_l00052}00052\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ stdbool.h\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,52 @@
+\doxysection{spline.\+hpp}
+\hypertarget{spline_8hpp_source}{}\label{spline_8hpp_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/glm/glm/gtx/spline.hpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/glm/glm/gtx/spline.hpp}}
+\mbox{\hyperlink{spline_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00013}00013\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00015}00015\ \textcolor{comment}{//\ Dependency:}}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}../glm.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}../gtx/optimum\_pow.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00019}00019\ \textcolor{preprocessor}{\#if\ GLM\_MESSAGES\ ==\ GLM\_ENABLE\ \&\&\ !defined(GLM\_EXT\_INCLUDED)}}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00020}00020\ \textcolor{preprocessor}{\#\ \ \ ifndef\ GLM\_ENABLE\_EXPERIMENTAL}}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00021}00021\ \textcolor{preprocessor}{\#\ \ \ \ \ \ \ pragma\ message("{}GLM:\ GLM\_GTX\_spline\ is\ an\ experimental\ extension\ and\ may\ change\ in\ the\ future.\ Use\ \#define\ GLM\_ENABLE\_EXPERIMENTAL\ before\ including\ it,\ if\ you\ really\ want\ to\ use\ it."{})}}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00022}00022\ \textcolor{preprocessor}{\#\ \ \ else}}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00023}00023\ \textcolor{preprocessor}{\#\ \ \ \ \ \ \ pragma\ message("{}GLM:\ GLM\_GTX\_spline\ extension\ included"{})}}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00024}00024\ \textcolor{preprocessor}{\#\ \ \ endif}}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00025}00025\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00027}00027\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceglm}{glm}}}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00028}00028\ \{}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00034}00034\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ genType>}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00035}00035\ \ \ \ \ \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{genType}}\ \mbox{\hyperlink{namespacecatmull_rom}{catmullRom}}(}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{genType}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a0779c3b73f9aa3a0ac5b0139b5d291d9}{v1}},}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{genType}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a9a09a1837922b2b806f4589096a52049}{v2}},}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{genType}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_acc806b31cbf466ceba6555983d8b814d}{v3}},}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{genType}}\ \textcolor{keyword}{const}\&\ v4,}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ genType::value\_type\ \textcolor{keyword}{const}\&\ s);}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00044}00044\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ genType>}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00045}00045\ \ \ \ \ \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{genType}}\ \mbox{\hyperlink{namespacehermite}{hermite}}(}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{genType}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a0779c3b73f9aa3a0ac5b0139b5d291d9}{v1}},}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{genType}}\ \textcolor{keyword}{const}\&\ t1,}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{genType}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a9a09a1837922b2b806f4589096a52049}{v2}},}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{genType}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{t2}},}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ genType::value\_type\ \textcolor{keyword}{const}\&\ s);}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00054}00054\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ genType>}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00055}00055\ \ \ \ \ \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{genType}}\ \mbox{\hyperlink{namespacecubic}{cubic}}(}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{genType}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a0779c3b73f9aa3a0ac5b0139b5d291d9}{v1}},}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{genType}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a9a09a1837922b2b806f4589096a52049}{v2}},}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{genType}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_acc806b31cbf466ceba6555983d8b814d}{v3}},}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{genType}}\ \textcolor{keyword}{const}\&\ v4,}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ genType::value\_type\ \textcolor{keyword}{const}\&\ s);}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00063}00063\ \}\textcolor{comment}{//namespace\ glm}}
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{spline_8hpp_source_l00065}00065\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{spline_8inl}{spline.inl}}"{}}}
+
+\end{DoxyCode}

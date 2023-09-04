@@ -1,0 +1,157 @@
+\doxysection{core\+\_\+type\+\_\+mat4x2.\+cpp}
+\hypertarget{core__type__mat4x2_8cpp_source}{}\label{core__type__mat4x2_8cpp_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/glm/test/core/core\_type\_mat4x2.cpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/glm/test/core/core\_type\_mat4x2.cpp}}
+\mbox{\hyperlink{core__type__mat4x2_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{constants_8hpp}{glm/gtc/constants.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{ext_2scalar__relational_8hpp}{glm/ext/scalar\_relational.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{ext_2vector__relational_8hpp}{glm/ext/vector\_relational.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{matrix__relational_8hpp}{glm/ext/matrix\_relational.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{mat2x2_8hpp}{glm/mat2x2.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{mat2x3_8hpp}{glm/mat2x3.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{mat2x4_8hpp}{glm/mat2x4.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{mat3x2_8hpp}{glm/mat3x2.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{mat3x3_8hpp}{glm/mat3x3.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{mat3x4_8hpp}{glm/mat3x4.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{mat4x2_8hpp}{glm/mat4x2.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{mat4x3_8hpp}{glm/mat4x3.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{mat4x4_8hpp}{glm/mat4x4.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00016}\mbox{\hyperlink{core__type__mat4x2_8cpp_acdb3407c71084c81be86fa36ce385486}{00016}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{core__type__mat4x2_8cpp_acdb3407c71084c81be86fa36ce385486}{test\_operators}}()}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00017}00017\ \{}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00018}00018\ \ \ \ \ \mbox{\hyperlink{group__core__matrix_ga4b19a88b7ff2e16fb6a9a2b6102fd462}{glm::mat4x2}}\ l(1.0f);}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00019}00019\ \ \ \ \ \mbox{\hyperlink{group__core__matrix_ga4b19a88b7ff2e16fb6a9a2b6102fd462}{glm::mat4x2}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{m}}(1.0f);}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00020}00020\ \ \ \ \ \mbox{\hyperlink{structglm_1_1vec}{glm::vec4}}\ \mbox{\hyperlink{core__func__integer__find__lsb_8cpp_a1f9aca42e2010bb82488684dee1a66ea}{u}}(1.0f);}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00021}00021\ \ \ \ \ \mbox{\hyperlink{structglm_1_1vec}{glm::vec2}}\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a14cfbe2fc2234f5504618905b69d1e06}{v}}(1.0f);}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}}\ =\ 1.0f;}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{structglm_1_1vec}{glm::vec2}}\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_ac8729153468b5dcf13f971b21d84d4e5}{a}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{m}}\ *\ \mbox{\hyperlink{core__func__integer__find__lsb_8cpp_a1f9aca42e2010bb82488684dee1a66ea}{u}};}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00024}00024\ \ \ \ \ \mbox{\hyperlink{structglm_1_1vec}{glm::vec4}}\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a6eba317e3cf44d6d26c04a5a8f197dcb}{b}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a14cfbe2fc2234f5504618905b69d1e06}{v}}\ *\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{m}};}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{group__core__matrix_ga4b19a88b7ff2e16fb6a9a2b6102fd462}{glm::mat4x2}}\ n\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}}\ /\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{m}};}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{group__core__matrix_ga4b19a88b7ff2e16fb6a9a2b6102fd462}{glm::mat4x2}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{o}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{m}}\ /\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}};}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{group__core__matrix_ga4b19a88b7ff2e16fb6a9a2b6102fd462}{glm::mat4x2}}\ p\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}}\ *\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{m}};}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00028}00028\ \ \ \ \ \mbox{\hyperlink{group__core__matrix_ga4b19a88b7ff2e16fb6a9a2b6102fd462}{glm::mat4x2}}\ q\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{m}}\ *\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}};}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{stb__vorbis_8c_a5c71a5e59a53413cd6c270266d63b031}{R}}\ =\ \mbox{\hyperlink{group__core__func__vector__relational_ga911b3f8e41459dd551ccb6d385d91061}{glm::any}}(\mbox{\hyperlink{group__core__func__vector__relational_ga72957353fbfdfef1eef742d997a5b32a}{glm::notEqual}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{m}},\ q,\ glm::epsilon<float>()));}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{S}}\ =\ \mbox{\hyperlink{group__core__func__vector__relational_ga87e53f50b679f5f95c5cb4780311b3dd}{glm::all}}(\mbox{\hyperlink{group__core__func__vector__relational_gaf539cf490630ba648dfd6e36aef910a1}{glm::equal}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{m}},\ l,\ glm::epsilon<float>()));}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{S}}\ \&\&\ !\mbox{\hyperlink{stb__vorbis_8c_a5c71a5e59a53413cd6c270266d63b031}{R}})\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00033}00033\ \}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00035}\mbox{\hyperlink{core__type__mat4x2_8cpp_a17aa46ae12632630c94faf975838fa09}{00035}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{core__type__mat4x2_8cpp_a17aa46ae12632630c94faf975838fa09}{test\_ctr}}()}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00036}00036\ \{}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00037}00037\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}(0);}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00039}00039\ \textcolor{preprocessor}{\#if(GLM\_HAS\_INITIALIZER\_LISTS)}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00040}00040\ \ \ \ \ \mbox{\hyperlink{group__core__matrix_ga4b19a88b7ff2e16fb6a9a2b6102fd462}{glm::mat4x2}}\ m0(}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structglm_1_1vec}{glm::vec2}}(0,\ 1),\ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structglm_1_1vec}{glm::vec2}}(2,\ 3),}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structglm_1_1vec}{glm::vec2}}(4,\ 5),}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structglm_1_1vec}{glm::vec2}}(6,\ 7));}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00046}00046\ \ \ \ \ \mbox{\hyperlink{group__core__matrix_ga4b19a88b7ff2e16fb6a9a2b6102fd462}{glm::mat4x2}}\ m1\{0,\ 1,\ 2,\ 3,\ 4,\ 5,\ 6,\ 7\};}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00048}00048\ \ \ \ \ \mbox{\hyperlink{group__core__matrix_ga4b19a88b7ff2e16fb6a9a2b6102fd462}{glm::mat4x2}}\ m2\{}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \{0,\ 1\},}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \{2,\ 3\},}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \{4,\ 5\},}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \{6,\ 7\}\};}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00054}00054\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{group__core__func__vector__relational_ga87e53f50b679f5f95c5cb4780311b3dd}{glm::all}}(\mbox{\hyperlink{group__core__func__vector__relational_gaf539cf490630ba648dfd6e36aef910a1}{glm::equal}}(m0,\ m2,\ glm::epsilon<float>()))\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00055}00055\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{group__core__func__vector__relational_ga87e53f50b679f5f95c5cb4780311b3dd}{glm::all}}(\mbox{\hyperlink{group__core__func__vector__relational_gaf539cf490630ba648dfd6e36aef910a1}{glm::equal}}(m1,\ m2,\ glm::epsilon<float>()))\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00057}00057\ \ \ \ \ std::vector<glm::mat4x2>\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a0779c3b73f9aa3a0ac5b0139b5d291d9}{v1}}\{}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \{0,\ 1,\ 2,\ 3,\ 4,\ 5,\ 6,\ 7\},}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \{0,\ 1,\ 2,\ 3,\ 4,\ 5,\ 6,\ 7\}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00060}00060\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00062}00062\ \ \ \ \ std::vector<glm::mat4x2>\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a9a09a1837922b2b806f4589096a52049}{v2}}\{}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 0,\ 1\},}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 4,\ 5\},}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 8,\ 9\},}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 12,\ 13\}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 0,\ 1\},}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 4,\ 5\},}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 8,\ 9\},}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ 12,\ 13\}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00075}00075\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00077}00077\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{//GLM\_HAS\_INITIALIZER\_LISTS}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00079}00079\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}};}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00080}00080\ \}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00082}00082\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacecast}{cast}}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00083}00083\ \{}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00084}00084\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ genType>}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00085}00085\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespacecast_aafe5aa7ebf87a2161c5bd32091fa2803}{entry}}()}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00086}00086\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{genType}}\ A(1.0f);}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__core__matrix_ga4b19a88b7ff2e16fb6a9a2b6102fd462}{glm::mat4x2}}\ B(A);}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__core__matrix_ga4b19a88b7ff2e16fb6a9a2b6102fd462}{glm::mat4x2}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Identity}}(1.0f);}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{group__core__func__vector__relational_ga87e53f50b679f5f95c5cb4780311b3dd}{glm::all}}(\mbox{\hyperlink{group__core__func__vector__relational_gaf539cf490630ba648dfd6e36aef910a1}{glm::equal}}(B,\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Identity}},\ glm::epsilon<float>()))\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}};}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00096}00096\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00098}00098\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespacecast_a1f6f6fb4697b0914aaba759642a5cad7}{test}}()}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00099}00099\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{entry<glm::mat2x2>}}();}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{entry<glm::mat2x3>}}();}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{entry<glm::mat2x4>}}();}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{entry<glm::mat3x2>}}();}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{entry<glm::mat3x3>}}();}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{entry<glm::mat3x4>}}();}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00108}00108\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{entry<glm::mat4x2>}}();}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{entry<glm::mat4x3>}}();}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{entry<glm::mat4x4>}}();}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}};}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00113}00113\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00114}00114\ \}\textcolor{comment}{//namespace\ cast}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00116}\mbox{\hyperlink{core__type__mat4x2_8cpp_a06c04bc70fd90c977eacc47cb8a5231a}{00116}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{core__type__mat4x2_8cpp_a06c04bc70fd90c977eacc47cb8a5231a}{test\_size}}()}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00117}00117\ \{}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00118}00118\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00120}00120\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ 32\ ==\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{group__core__matrix_ga4b19a88b7ff2e16fb6a9a2b6102fd462}{glm::mat4x2}})\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00121}00121\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ 64\ ==\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{group__core__matrix_gaca46cac9e98fb91e340c6606004cb872}{glm::dmat4x2}})\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00122}00122\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{group__core__matrix_ga4b19a88b7ff2e16fb6a9a2b6102fd462}{glm::mat4x2}}().length()\ ==\ 4\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00123}00123\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{group__core__matrix_gaca46cac9e98fb91e340c6606004cb872}{glm::dmat4x2}}().length()\ ==\ 4\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00124}00124\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ glm::mat4x2::length()\ ==\ 4\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00125}00125\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ glm::dmat4x2::length()\ ==\ 4\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00127}00127\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}};}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00128}00128\ \}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00130}\mbox{\hyperlink{core__type__mat4x2_8cpp_a77a5904ea200520bd78fd327293f0ebe}{00130}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{core__type__mat4x2_8cpp_a77a5904ea200520bd78fd327293f0ebe}{test\_constexpr}}()}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00131}00131\ \{}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00132}00132\ \textcolor{preprocessor}{\#if\ GLM\_HAS\_CONSTEXPR}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00133}00133\ \ \ \ \ \textcolor{keyword}{static\_assert}(glm::mat4x2::length()\ ==\ 4,\ \textcolor{stringliteral}{"{}GLM:\ Failed\ constexpr"{}});}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00134}00134\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00136}00136\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00137}00137\ \}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00139}\mbox{\hyperlink{core__type__mat4x2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00139}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{core__type__mat4x2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00140}00140\ \{}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00141}00141\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00143}00143\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{namespacecast_a1f6f6fb4697b0914aaba759642a5cad7}{cast::test}}();}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00144}00144\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{core__type__mat4x2_8cpp_a17aa46ae12632630c94faf975838fa09}{test\_ctr}}();}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00145}00145\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{core__type__mat4x2_8cpp_acdb3407c71084c81be86fa36ce385486}{test\_operators}}();}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00146}00146\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{core__type__mat4x2_8cpp_a06c04bc70fd90c977eacc47cb8a5231a}{test\_size}}();}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00147}00147\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{core__type__mat4x2_8cpp_a77a5904ea200520bd78fd327293f0ebe}{test\_constexpr}}();}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00149}00149\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}};}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00150}00150\ \}}
+\DoxyCodeLine{\Hypertarget{core__type__mat4x2_8cpp_source_l00151}00151\ }
+
+\end{DoxyCode}

@@ -1,0 +1,83 @@
+\doxysection{find\+\_\+fn\+\_\+imps.\+hpp}
+\hypertarget{binary__heap___2find__fn__imps_8hpp_source}{}\label{binary__heap___2find__fn__imps_8hpp_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/pb\_ds/detail/binary\_heap\_/find\_fn\_imps.hpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/pb\_ds/detail/binary\_heap\_/find\_fn\_imps.hpp}}
+\mbox{\hyperlink{binary__heap___2find__fn__imps_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00001}00001\ \textcolor{comment}{//\ -\/*-\/\ C++\ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00003}00003\ \textcolor{comment}{//\ Copyright\ (C)\ 2005-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00005}00005\ \textcolor{comment}{//\ This\ file\ is\ part\ of\ the\ GNU\ ISO\ C++\ Library.\ \ This\ library\ is\ free}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00006}00006\ \textcolor{comment}{//\ software;\ you\ can\ redistribute\ it\ and/or\ modify\ it\ under\ the\ terms}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00007}00007\ \textcolor{comment}{//\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by\ the\ Free\ Software}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00008}00008\ \textcolor{comment}{//\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)\ any\ later}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00009}00009\ \textcolor{comment}{//\ version.}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00011}00011\ \textcolor{comment}{//\ This\ library\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,\ but}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00012}00012\ \textcolor{comment}{//\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00013}00013\ \textcolor{comment}{//\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the\ GNU}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00014}00014\ \textcolor{comment}{//\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00016}00016\ \textcolor{comment}{//\ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00017}00017\ \textcolor{comment}{//\ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00018}00018\ \textcolor{comment}{//\ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00020}00020\ \textcolor{comment}{//\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00021}00021\ \textcolor{comment}{//\ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00022}00022\ \textcolor{comment}{//\ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00023}00023\ \textcolor{comment}{//\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00025}00025\ \textcolor{comment}{//\ Copyright\ (C)\ 2004\ Ami\ Tavory\ and\ Vladimir\ Dreizin,\ IBM-\/HRL.}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00027}00027\ \textcolor{comment}{//\ Permission\ to\ use,\ copy,\ modify,\ sell,\ and\ distribute\ this\ software}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00028}00028\ \textcolor{comment}{//\ is\ hereby\ granted\ without\ fee,\ provided\ that\ the\ above\ copyright}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00029}00029\ \textcolor{comment}{//\ notice\ appears\ in\ all\ copies,\ and\ that\ both\ that\ copyright\ notice}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00030}00030\ \textcolor{comment}{//\ and\ this\ permission\ notice\ appear\ in\ supporting\ documentation.\ None}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00031}00031\ \textcolor{comment}{//\ of\ the\ above\ authors,\ nor\ IBM\ Haifa\ Research\ Laboratories,\ make\ any}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00032}00032\ \textcolor{comment}{//\ representation\ about\ the\ suitability\ of\ this\ software\ for\ any}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00033}00033\ \textcolor{comment}{//\ purpose.\ It\ is\ provided\ "{}as\ is"{}\ without\ express\ or\ implied}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00034}00034\ \textcolor{comment}{//\ warranty.}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00041}00041\ \textcolor{preprocessor}{\#ifdef\ PB\_DS\_CLASS\_C\_DEC}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00043}00043\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00044}00044\ \textcolor{keyword}{inline}\ \textcolor{keyword}{typename}\ PB\_DS\_CLASS\_C\_DEC::const\_reference}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00045}00045\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00046}00046\ top()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00047}00047\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00048}00048\ \ \ \mbox{\hyperlink{binary__heap___8hpp_aee3eacf80388cda3950a668bc1e40110}{PB\_DS\_ASSERT\_VALID}}((*\textcolor{keyword}{this}))}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00049}00049\ \ \ \mbox{\hyperlink{assertions_8h_aa2bfb4e74c7be93673913edf15f85504}{\_GLIBCXX\_DEBUG\_ASSERT}}(!empty());}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00050}00050\ \ \ \mbox{\hyperlink{avx512bwintrin_8h_a43575ca181bb42c5fbdbe6c81c9b7cad}{return}}\ top\_imp(s\_no\_throw\_copies\_ind);}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00051}00051\ \}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00053}00053\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00054}00054\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{inline}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}}\ \mbox{\hyperlink{bin__search__tree___8hpp_a304b8b73a11afe64bfca54576b91263b}{PB\_DS\_CLASS\_C\_DEC}}::const\_reference}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00055}00055\ \mbox{\hyperlink{bin__search__tree___8hpp_a304b8b73a11afe64bfca54576b91263b}{PB\_DS\_CLASS\_C\_DEC}}::}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00056}00056\ top\_imp(true\_type)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00057}00057\ \textcolor{keyword}{}\{\ \textcolor{keywordflow}{return}\ *m\_a\_entries;\ \}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00059}00059\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00060}00060\ \textcolor{keyword}{inline}\ \textcolor{keyword}{typename}\ PB\_DS\_CLASS\_C\_DEC::const\_reference}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00061}00061\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00062}00062\ top\_imp(false\_type)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00063}00063\ \textcolor{keyword}{}\{\ \textcolor{keywordflow}{return}\ **m\_a\_entries;\ \}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00065}00065\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00066}00066\ \textcolor{keyword}{inline}\ \textcolor{keyword}{typename}\ PB\_DS\_CLASS\_C\_DEC::size\_type}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00067}00067\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00068}00068\ left\_child(size\_type\ i)}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00069}00069\ \{\ \textcolor{keywordflow}{return}\ i\ *\ 2\ +\ 1;\ \}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00071}00071\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00072}00072\ \textcolor{keyword}{inline}\ \textcolor{keyword}{typename}\ PB\_DS\_CLASS\_C\_DEC::size\_type}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00073}00073\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00074}00074\ right\_child(size\_type\ i)}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00075}00075\ \{\ \textcolor{keywordflow}{return}\ i\ *\ 2\ +\ 2;\ \}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00077}00077\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00078}00078\ \textcolor{keyword}{inline}\ \textcolor{keyword}{typename}\ PB\_DS\_CLASS\_C\_DEC::size\_type}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00079}00079\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00080}00080\ parent(size\_type\ i)}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00081}00081\ \{\ \textcolor{keywordflow}{return}\ (i\ -\/\ 1)\ /\ 2;\ \}}
+\DoxyCodeLine{\Hypertarget{binary__heap___2find__fn__imps_8hpp_source_l00082}00082\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

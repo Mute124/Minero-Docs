@@ -1,0 +1,193 @@
+\doxysection{C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/glm/test/ext/ext\+\_\+vector\+\_\+common.cpp File Reference}
+\hypertarget{ext__vector__common_8cpp}{}\label{ext__vector__common_8cpp}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/glm/test/ext/ext\_vector\_common.cpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/glm/test/ext/ext\_vector\_common.cpp}}
+{\ttfamily \#include $<$glm/ext/vector\+\_\+common.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/ext/vector\+\_\+bool1.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/ext/vector\+\_\+bool1\+\_\+precision.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/ext/vector\+\_\+bool2.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/ext/vector\+\_\+bool2\+\_\+precision.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/ext/vector\+\_\+bool3.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/ext/vector\+\_\+bool3\+\_\+precision.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/ext/vector\+\_\+bool4.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/ext/vector\+\_\+bool4\+\_\+precision.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/ext/vector\+\_\+float1.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/ext/vector\+\_\+float1\+\_\+precision.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/ext/vector\+\_\+float2.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/ext/vector\+\_\+float2\+\_\+precision.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/ext/vector\+\_\+float3.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/ext/vector\+\_\+float3\+\_\+precision.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/ext/vector\+\_\+float4.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/ext/vector\+\_\+float4\+\_\+precision.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/ext/vector\+\_\+double1.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/ext/vector\+\_\+double1\+\_\+precision.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/ext/vector\+\_\+double2.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/ext/vector\+\_\+double2\+\_\+precision.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/ext/vector\+\_\+double3.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/ext/vector\+\_\+double3\+\_\+precision.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/ext/vector\+\_\+double4.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/ext/vector\+\_\+double4\+\_\+precision.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/ext/vector\+\_\+relational.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/ext/scalar\+\_\+constants.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/vector\+\_\+relational.\+hpp$>$}\newline
+{\ttfamily \#include $<$glm/common.\+hpp$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{ext__vector__common_8cpp_aaac1cc18b02a2d46d30b51ccbf950509}{GLM\+\_\+\+NAN}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{T}})~(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static\+\_\+cast}}$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{T}}$>$(0.\+0f) / \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static\+\_\+cast}}$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{T}}$>$(0.\+0f))
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{vec\+Type}} $>$ }\\\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{ext__vector__common_8cpp_ad9484106c2c31169151539562b127657}{test\+\_\+min}} ()
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{vec\+Type}} $>$ }\\\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{ext__vector__common_8cpp_af52af331e5944d1563bf5da7d01430db}{test\+\_\+min\+\_\+nan}} ()
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{vec\+Type}} $>$ }\\\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{ext__vector__common_8cpp_abe4cb75ced1363a9167c5dc6d9416720}{test\+\_\+max}} ()
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{vec\+Type}} $>$ }\\\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{ext__vector__common_8cpp_a4a482addfc5342e73a10334590306537}{test\+\_\+max\+\_\+nan}} ()
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{vec\+Type}} $>$ }\\\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{ext__vector__common_8cpp_a22fd862be47c7c232769a6bc9ecce2ee}{test\+\_\+fmin}} ()
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{vec\+Type}} $>$ }\\\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{ext__vector__common_8cpp_abe6d439352cecd6b6b73bfc8959de0f7}{test\+\_\+fmax}} ()
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{ext__vector__common_8cpp_a3d1d24e402c48a65f077120832780f60}{test\+\_\+clamp}} ()
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{ext__vector__common_8cpp_a671a99577c3cc90ed3b8a383e1433a07}{test\+\_\+repeat}} ()
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{ext__vector__common_8cpp_ac90f4b07a19d9f717ced63600f505bcb}{test\+\_\+mirror\+Clamp}} ()
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{ext__vector__common_8cpp_a17d986f064309bcf3cba7307a82305c3}{test\+\_\+mirror\+Repeat}} ()
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{ext__vector__common_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{ext__vector__common_8cpp_aaac1cc18b02a2d46d30b51ccbf950509}\label{ext__vector__common_8cpp_aaac1cc18b02a2d46d30b51ccbf950509} 
+\index{ext\_vector\_common.cpp@{ext\_vector\_common.cpp}!GLM\_NAN@{GLM\_NAN}}
+\index{GLM\_NAN@{GLM\_NAN}!ext\_vector\_common.cpp@{ext\_vector\_common.cpp}}
+\doxysubsubsection{\texorpdfstring{GLM\_NAN}{GLM\_NAN}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} GLM\+\_\+\+NAN(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{T}} }\end{DoxyParamCaption})~(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static\+\_\+cast}}$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{T}}$>$(0.\+0f) / \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static\+\_\+cast}}$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{T}}$>$(0.\+0f))}
+
+
+
+Definition at line \mbox{\hyperlink{ext__vector__common_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{ext__vector__common_8cpp_source}{ext\+\_\+vector\+\_\+common.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{ext__vector__common_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{ext__vector__common_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{ext\_vector\_common.cpp@{ext\_vector\_common.cpp}!main@{main}}
+\index{main@{main}!ext\_vector\_common.cpp@{ext\_vector\_common.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} main (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ext__vector__common_8cpp_source_l00306}{306}} of file \mbox{\hyperlink{ext__vector__common_8cpp_source}{ext\+\_\+vector\+\_\+common.\+cpp}}.
+
+\Hypertarget{ext__vector__common_8cpp_a3d1d24e402c48a65f077120832780f60}\label{ext__vector__common_8cpp_a3d1d24e402c48a65f077120832780f60} 
+\index{ext\_vector\_common.cpp@{ext\_vector\_common.cpp}!test\_clamp@{test\_clamp}}
+\index{test\_clamp@{test\_clamp}!ext\_vector\_common.cpp@{ext\_vector\_common.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_clamp()}{test\_clamp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} test\+\_\+clamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{ext__vector__common_8cpp_source_l00230}{230}} of file \mbox{\hyperlink{ext__vector__common_8cpp_source}{ext\+\_\+vector\+\_\+common.\+cpp}}.
+
+\Hypertarget{ext__vector__common_8cpp_abe6d439352cecd6b6b73bfc8959de0f7}\label{ext__vector__common_8cpp_abe6d439352cecd6b6b73bfc8959de0f7} 
+\index{ext\_vector\_common.cpp@{ext\_vector\_common.cpp}!test\_fmax@{test\_fmax}}
+\index{test\_fmax@{test\_fmax}!ext\_vector\_common.cpp@{ext\_vector\_common.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_fmax()}{test\_fmax()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{vec\+Type}} $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} test\+\_\+fmax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{ext__vector__common_8cpp_source_l00199}{199}} of file \mbox{\hyperlink{ext__vector__common_8cpp_source}{ext\+\_\+vector\+\_\+common.\+cpp}}.
+
+\Hypertarget{ext__vector__common_8cpp_a22fd862be47c7c232769a6bc9ecce2ee}\label{ext__vector__common_8cpp_a22fd862be47c7c232769a6bc9ecce2ee} 
+\index{ext\_vector\_common.cpp@{ext\_vector\_common.cpp}!test\_fmin@{test\_fmin}}
+\index{test\_fmin@{test\_fmin}!ext\_vector\_common.cpp@{ext\_vector\_common.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_fmin()}{test\_fmin()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{vec\+Type}} $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} test\+\_\+fmin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{ext__vector__common_8cpp_source_l00167}{167}} of file \mbox{\hyperlink{ext__vector__common_8cpp_source}{ext\+\_\+vector\+\_\+common.\+cpp}}.
+
+\Hypertarget{ext__vector__common_8cpp_abe4cb75ced1363a9167c5dc6d9416720}\label{ext__vector__common_8cpp_abe4cb75ced1363a9167c5dc6d9416720} 
+\index{ext\_vector\_common.cpp@{ext\_vector\_common.cpp}!test\_max@{test\_max}}
+\index{test\_max@{test\_max}!ext\_vector\_common.cpp@{ext\_vector\_common.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_max()}{test\_max()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{vec\+Type}} $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} test\+\_\+max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{ext__vector__common_8cpp_source_l00104}{104}} of file \mbox{\hyperlink{ext__vector__common_8cpp_source}{ext\+\_\+vector\+\_\+common.\+cpp}}.
+
+\Hypertarget{ext__vector__common_8cpp_a4a482addfc5342e73a10334590306537}\label{ext__vector__common_8cpp_a4a482addfc5342e73a10334590306537} 
+\index{ext\_vector\_common.cpp@{ext\_vector\_common.cpp}!test\_max\_nan@{test\_max\_nan}}
+\index{test\_max\_nan@{test\_max\_nan}!ext\_vector\_common.cpp@{ext\_vector\_common.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_max\_nan()}{test\_max\_nan()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{vec\+Type}} $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} test\+\_\+max\+\_\+nan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{ext__vector__common_8cpp_source_l00135}{135}} of file \mbox{\hyperlink{ext__vector__common_8cpp_source}{ext\+\_\+vector\+\_\+common.\+cpp}}.
+
+\Hypertarget{ext__vector__common_8cpp_ad9484106c2c31169151539562b127657}\label{ext__vector__common_8cpp_ad9484106c2c31169151539562b127657} 
+\index{ext\_vector\_common.cpp@{ext\_vector\_common.cpp}!test\_min@{test\_min}}
+\index{test\_min@{test\_min}!ext\_vector\_common.cpp@{ext\_vector\_common.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_min()}{test\_min()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{vec\+Type}} $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} test\+\_\+min (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{ext__vector__common_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{ext__vector__common_8cpp_source}{ext\+\_\+vector\+\_\+common.\+cpp}}.
+
+\Hypertarget{ext__vector__common_8cpp_af52af331e5944d1563bf5da7d01430db}\label{ext__vector__common_8cpp_af52af331e5944d1563bf5da7d01430db} 
+\index{ext\_vector\_common.cpp@{ext\_vector\_common.cpp}!test\_min\_nan@{test\_min\_nan}}
+\index{test\_min\_nan@{test\_min\_nan}!ext\_vector\_common.cpp@{ext\_vector\_common.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_min\_nan()}{test\_min\_nan()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{vec\+Type}} $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} test\+\_\+min\+\_\+nan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{ext__vector__common_8cpp_source_l00072}{72}} of file \mbox{\hyperlink{ext__vector__common_8cpp_source}{ext\+\_\+vector\+\_\+common.\+cpp}}.
+
+\Hypertarget{ext__vector__common_8cpp_ac90f4b07a19d9f717ced63600f505bcb}\label{ext__vector__common_8cpp_ac90f4b07a19d9f717ced63600f505bcb} 
+\index{ext\_vector\_common.cpp@{ext\_vector\_common.cpp}!test\_mirrorClamp@{test\_mirrorClamp}}
+\index{test\_mirrorClamp@{test\_mirrorClamp}!ext\_vector\_common.cpp@{ext\_vector\_common.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_mirrorClamp()}{test\_mirrorClamp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} test\+\_\+mirror\+Clamp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{ext__vector__common_8cpp_source_l00268}{268}} of file \mbox{\hyperlink{ext__vector__common_8cpp_source}{ext\+\_\+vector\+\_\+common.\+cpp}}.
+
+\Hypertarget{ext__vector__common_8cpp_a17d986f064309bcf3cba7307a82305c3}\label{ext__vector__common_8cpp_a17d986f064309bcf3cba7307a82305c3} 
+\index{ext\_vector\_common.cpp@{ext\_vector\_common.cpp}!test\_mirrorRepeat@{test\_mirrorRepeat}}
+\index{test\_mirrorRepeat@{test\_mirrorRepeat}!ext\_vector\_common.cpp@{ext\_vector\_common.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_mirrorRepeat()}{test\_mirrorRepeat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} test\+\_\+mirror\+Repeat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{ext__vector__common_8cpp_source_l00287}{287}} of file \mbox{\hyperlink{ext__vector__common_8cpp_source}{ext\+\_\+vector\+\_\+common.\+cpp}}.
+
+\Hypertarget{ext__vector__common_8cpp_a671a99577c3cc90ed3b8a383e1433a07}\label{ext__vector__common_8cpp_a671a99577c3cc90ed3b8a383e1433a07} 
+\index{ext\_vector\_common.cpp@{ext\_vector\_common.cpp}!test\_repeat@{test\_repeat}}
+\index{test\_repeat@{test\_repeat}!ext\_vector\_common.cpp@{ext\_vector\_common.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_repeat()}{test\_repeat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} test\+\_\+repeat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{ext__vector__common_8cpp_source_l00249}{249}} of file \mbox{\hyperlink{ext__vector__common_8cpp_source}{ext\+\_\+vector\+\_\+common.\+cpp}}.
+

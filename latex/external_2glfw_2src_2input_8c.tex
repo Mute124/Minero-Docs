@@ -1,0 +1,411 @@
+\doxysection{C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/external/glfw/src/input.c File Reference}
+\hypertarget{external_2glfw_2src_2input_8c}{}\label{external_2glfw_2src_2input_8c}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/external/glfw/src/input.c@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/external/glfw/src/input.c}}
+{\ttfamily \#include "{}internal.\+h"{}}\newline
+{\ttfamily \#include "{}mappings.\+h"{}}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$float.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{external_2glfw_2src_2input_8c_af05e8b8bf6c333e9b40f3480b9d88241}{\+\_\+\+GLFW\+\_\+\+STICK}}~3
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{external_2glfw_2src_2input_8c_a5bf4fa1f0b519aa53c409cfa43c09287}{\+\_\+\+GLFW\+\_\+\+JOYSTICK\+\_\+\+AXIS}}~1
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{external_2glfw_2src_2input_8c_a582c697f7502aae03c949fde57daaf56}{\+\_\+\+GLFW\+\_\+\+JOYSTICK\+\_\+\+BUTTON}}~2
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{external_2glfw_2src_2input_8c_aa05206ef4ae4fc35573852aa9d26c811}{\+\_\+\+GLFW\+\_\+\+JOYSTICK\+\_\+\+HATBIT}}~3
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{external_2glfw_2src_2input_8c_a6b070f8acf319f3e9394d2dd687f1dc0}{GLFW\+\_\+\+MOD\+\_\+\+MASK}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{external_2glfw_2src_2internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}} \mbox{\hyperlink{external_2glfw_2src_2input_8c_a3ccc79c571bf64a643210de19a8fac14}{init\+Joysticks}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{struct___g_l_f_wmapping}{\+\_\+\+GLFWmapping}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{external_2glfw_2src_2input_8c_a95d566da875c2a8fb47f751f05f23a9b}{find\+Mapping}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}guid)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{external_2glfw_2src_2internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}} \mbox{\hyperlink{external_2glfw_2src_2input_8c_a3c35bad739ae02de9462e82710fc26ef}{is\+Valid\+Element\+For\+Joystick}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{struct___g_l_f_wmapelement}{\+\_\+\+GLFWmapelement}} \texorpdfstring{$\ast$}{*}e, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{js}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{struct___g_l_f_wmapping}{\+\_\+\+GLFWmapping}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{external_2glfw_2src_2input_8c_ab48ace22f592a713f2e8224c6c927fa1}{find\+Valid\+Mapping}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{js}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{external_2glfw_2src_2internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}} \mbox{\hyperlink{external_2glfw_2src_2input_8c_af24737afe84f3598a6e893571413c2ad}{parse\+Mapping}} (\mbox{\hyperlink{struct___g_l_f_wmapping}{\+\_\+\+GLFWmapping}} \texorpdfstring{$\ast$}{*}mapping, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2glad_8h_a5ef8ce60531c971745798ebb9f61a5d8}{string}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{external_2glfw_2src_2input_8c_aba4a5bf53c475cf2dc3e594c3c5034ab}{\+\_\+glfw\+Input\+Key}} (\mbox{\hyperlink{struct___g_l_f_wwindow}{\+\_\+\+GLFWwindow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a92dbce8e3247f6a78126c99877caacb6}{window}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} key, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{scancode}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} action, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} mods)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{external_2glfw_2src_2input_8c_aa778fa9144afadb49baa95f0178d3d3e}{\+\_\+glfw\+Input\+Char}} (\mbox{\hyperlink{struct___g_l_f_wwindow}{\+\_\+\+GLFWwindow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a92dbce8e3247f6a78126c99877caacb6}{window}}, \mbox{\hyperlink{external_2glfw_2deps_2vs2008_2stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{codepoint}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} mods, \mbox{\hyperlink{external_2glfw_2src_2internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{plain}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{external_2glfw_2src_2input_8c_a65b98312da830a2c65b36543f119a7fa}{\+\_\+glfw\+Input\+Scroll}} (\mbox{\hyperlink{struct___g_l_f_wwindow}{\+\_\+\+GLFWwindow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a92dbce8e3247f6a78126c99877caacb6}{window}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{double}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ac20a0ffebf4c476650fcfa0633066f0e}{xoffset}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{double}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_a76dfb6803dcff61037ba688b7f4242b8}{yoffset}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{external_2glfw_2src_2input_8c_ae259527976c9b13341aa3e4587d0353e}{\+\_\+glfw\+Input\+Mouse\+Click}} (\mbox{\hyperlink{struct___g_l_f_wwindow}{\+\_\+\+GLFWwindow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a92dbce8e3247f6a78126c99877caacb6}{window}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{button}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} action, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} mods)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{external_2glfw_2src_2input_8c_a973210bc0a11cc09fb55574ec5491bed}{\+\_\+glfw\+Input\+Cursor\+Pos}} (\mbox{\hyperlink{struct___g_l_f_wwindow}{\+\_\+\+GLFWwindow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a92dbce8e3247f6a78126c99877caacb6}{window}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{double}} xpos, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{double}} ypos)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{external_2glfw_2src_2input_8c_a507361a8b8610b4daee7e83aa056f339}{\+\_\+glfw\+Input\+Cursor\+Enter}} (\mbox{\hyperlink{struct___g_l_f_wwindow}{\+\_\+\+GLFWwindow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a92dbce8e3247f6a78126c99877caacb6}{window}}, \mbox{\hyperlink{external_2glfw_2src_2internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{entered}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{external_2glfw_2src_2input_8c_a3a90fb32fec8ddd068b64671d1e85596}{\+\_\+glfw\+Input\+Drop}} (\mbox{\hyperlink{struct___g_l_f_wwindow}{\+\_\+\+GLFWwindow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a92dbce8e3247f6a78126c99877caacb6}{window}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_a22486c0c8d9f7d79a07bf22ecffeeb2f}{count}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}paths)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{external_2glfw_2src_2input_8c_a3f053fce7ffb1aeb2ebdee3674a8fee2}{\+\_\+glfw\+Input\+Joystick}} (\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{js}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{event}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{external_2glfw_2src_2input_8c_ab91e3f3a89daff3809c3817a57a4f523}{\+\_\+glfw\+Input\+Joystick\+Axis}} (\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{js}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} axis, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{float}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{value}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{external_2glfw_2src_2input_8c_af1048006805591e17cc431c016f539f5}{\+\_\+glfw\+Input\+Joystick\+Button}} (\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{js}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{button}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{value}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{external_2glfw_2src_2input_8c_aca3d4e257b8212cf2a713f9a1069ff08}{\+\_\+glfw\+Input\+Joystick\+Hat}} (\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{js}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{hat}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{value}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{external_2glfw_2src_2input_8c_a1dab257a37caa6b39cfe9924c2487db6}{\+\_\+glfw\+Init\+Gamepad\+Mappings}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})
+\item 
+\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{external_2glfw_2src_2input_8c_a2c66222336290a7e0868f16e9e74ae14}{\+\_\+glfw\+Alloc\+Joystick}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a14d7642df08c5cb68e4fb90cc8a73509}{name}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}guid, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} axis\+Count, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} button\+Count, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} hat\+Count)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{external_2glfw_2src_2input_8c_aef69e836bb7cfec79044fd23b367eb62}{\+\_\+glfw\+Free\+Joystick}} (\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{js}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{external_2glfw_2src_2input_8c_acf1fbc03e8d658a35f70544df858fe6c}{\+\_\+glfw\+Center\+Cursor\+In\+Content\+Area}} (\mbox{\hyperlink{struct___g_l_f_wwindow}{\+\_\+\+GLFWwindow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a92dbce8e3247f6a78126c99877caacb6}{window}})
+\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{group__input_ga1248dd5b1e566b2817e71547564d6af9}{glfw\+Get\+Input\+Mode}} (\mbox{\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{GLFWwindow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a48fc485a2a8834589d1f1afeec65193c}{handle}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a1e71d9c196e4683cc06c4b54d53f7ef5}{mode}})
+\begin{DoxyCompactList}\small\item\em Returns the value of an input option for the specified window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{group__input_gae1eb729d2dd91dc33fd60e150a6e1684}{glfw\+Set\+Input\+Mode}} (\mbox{\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{GLFWwindow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a48fc485a2a8834589d1f1afeec65193c}{handle}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a1e71d9c196e4683cc06c4b54d53f7ef5}{mode}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{value}})
+\begin{DoxyCompactList}\small\item\em Sets an input option for the specified window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{group__input_ga9b83d8957a566b22b3b768c7d1d4be03}{glfw\+Raw\+Mouse\+Motion\+Supported}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})
+\begin{DoxyCompactList}\small\item\em Returns whether raw mouse motion is supported. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__input_ga98293ec4493cfe8e7df8ff22ee402b46}{glfw\+Get\+Key\+Name}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} key, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{scancode}})
+\begin{DoxyCompactList}\small\item\em Returns the layout-\/specific name of the specified printable key. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{group__input_ga3ea3b9d74f8352506068620980e01fe5}{glfw\+Get\+Key\+Scancode}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} key)
+\begin{DoxyCompactList}\small\item\em Returns the platform-\/specific scancode of the specified key. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{group__input_ga7d8ad8ffaf272808f04e1d5d33ec8859}{glfw\+Get\+Key}} (\mbox{\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{GLFWwindow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a48fc485a2a8834589d1f1afeec65193c}{handle}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} key)
+\begin{DoxyCompactList}\small\item\em Returns the last reported state of a keyboard key for the specified window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{group__input_ga6da5efb04f700c312a57a169fa9393a0}{glfw\+Get\+Mouse\+Button}} (\mbox{\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{GLFWwindow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a48fc485a2a8834589d1f1afeec65193c}{handle}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{button}})
+\begin{DoxyCompactList}\small\item\em Returns the last reported state of a mouse button for the specified window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{group__input_gad289438eb7cf53d11eca685373f44105}{glfw\+Get\+Cursor\+Pos}} (\mbox{\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{GLFWwindow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a48fc485a2a8834589d1f1afeec65193c}{handle}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{double}} \texorpdfstring{$\ast$}{*}xpos, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{double}} \texorpdfstring{$\ast$}{*}ypos)
+\begin{DoxyCompactList}\small\item\em Retrieves the position of the cursor relative to the content area of the window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{group__input_gaaf152cc93418acb0ba342e3f4af922bc}{glfw\+Set\+Cursor\+Pos}} (\mbox{\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{GLFWwindow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a48fc485a2a8834589d1f1afeec65193c}{handle}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{double}} xpos, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{double}} ypos)
+\begin{DoxyCompactList}\small\item\em Sets the position of the cursor, relative to the content area of the window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{group__input_ga89261ae18c75e863aaf2656ecdd238f4}{GLFWcursor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__input_ga21fc9f020f062db88813aa722c30ba2c}{glfw\+Create\+Cursor}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{struct_g_l_f_wimage}{GLFWimage}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0a221b005894579fea3b9eb7bfc2ee71}{image}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} xhot, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} yhot)
+\begin{DoxyCompactList}\small\item\em Creates a custom cursor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{group__input_ga89261ae18c75e863aaf2656ecdd238f4}{GLFWcursor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__input_gab7c5b6023b39a0021b1fcdabd1d15f09}{glfw\+Create\+Standard\+Cursor}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} shape)
+\begin{DoxyCompactList}\small\item\em Creates a cursor with a standard shape. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{group__input_ga27556b7122117bc1bbb4bb3cc003ea43}{glfw\+Destroy\+Cursor}} (\mbox{\hyperlink{group__input_ga89261ae18c75e863aaf2656ecdd238f4}{GLFWcursor}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a48fc485a2a8834589d1f1afeec65193c}{handle}})
+\begin{DoxyCompactList}\small\item\em Destroys a cursor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{group__input_gafaf103cea2f43530cff7de4e01126a4f}{glfw\+Set\+Cursor}} (\mbox{\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{GLFWwindow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{window\+Handle}}, \mbox{\hyperlink{group__input_ga89261ae18c75e863aaf2656ecdd238f4}{GLFWcursor}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{cursor\+Handle}})
+\begin{DoxyCompactList}\small\item\em Sets the cursor for the window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{group__input_ga5bd751b27b90f865d2ea613533f0453c}{GLFWkeyfun}} \mbox{\hyperlink{group__input_gaa4cbcb81b939b8800e44cea971ddae47}{glfw\+Set\+Key\+Callback}} (\mbox{\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{GLFWwindow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a48fc485a2a8834589d1f1afeec65193c}{handle}}, \mbox{\hyperlink{group__input_ga5bd751b27b90f865d2ea613533f0453c}{GLFWkeyfun}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{cbfun}})
+\begin{DoxyCompactList}\small\item\em Sets the key callback. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{group__input_ga1ab90a55cf3f58639b893c0f4118cb6e}{GLFWcharfun}} \mbox{\hyperlink{group__input_gad3d7e6e3134fa034cc1604162579585e}{glfw\+Set\+Char\+Callback}} (\mbox{\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{GLFWwindow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a48fc485a2a8834589d1f1afeec65193c}{handle}}, \mbox{\hyperlink{group__input_ga1ab90a55cf3f58639b893c0f4118cb6e}{GLFWcharfun}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{cbfun}})
+\begin{DoxyCompactList}\small\item\em Sets the Unicode character callback. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{group__input_gac3cf64f90b6219c05ac7b7822d5a4b8f}{GLFWcharmodsfun}} \mbox{\hyperlink{group__input_ga359a8529c2eb06e6e2173168f30ac99c}{glfw\+Set\+Char\+Mods\+Callback}} (\mbox{\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{GLFWwindow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a48fc485a2a8834589d1f1afeec65193c}{handle}}, \mbox{\hyperlink{group__input_gac3cf64f90b6219c05ac7b7822d5a4b8f}{GLFWcharmodsfun}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{cbfun}})
+\begin{DoxyCompactList}\small\item\em Sets the Unicode character with modifiers callback. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{group__input_ga0184dcb59f6d85d735503dcaae809727}{GLFWmousebuttonfun}} \mbox{\hyperlink{group__input_gab8f17646f43cdca14e5095512618fdf6}{glfw\+Set\+Mouse\+Button\+Callback}} (\mbox{\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{GLFWwindow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a48fc485a2a8834589d1f1afeec65193c}{handle}}, \mbox{\hyperlink{group__input_ga0184dcb59f6d85d735503dcaae809727}{GLFWmousebuttonfun}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{cbfun}})
+\begin{DoxyCompactList}\small\item\em Sets the mouse button callback. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{group__input_gad6fae41b3ac2e4209aaa87b596c57f68}{GLFWcursorposfun}} \mbox{\hyperlink{group__input_ga74124d0eff27040fd10e4df9e17d129c}{glfw\+Set\+Cursor\+Pos\+Callback}} (\mbox{\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{GLFWwindow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a48fc485a2a8834589d1f1afeec65193c}{handle}}, \mbox{\hyperlink{group__input_gad6fae41b3ac2e4209aaa87b596c57f68}{GLFWcursorposfun}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{cbfun}})
+\begin{DoxyCompactList}\small\item\em Sets the cursor position callback. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{group__input_gaa93dc4818ac9ab32532909d53a337cbe}{GLFWcursorenterfun}} \mbox{\hyperlink{group__input_gacdb3490e374c8bc08549c6f173ffa7c2}{glfw\+Set\+Cursor\+Enter\+Callback}} (\mbox{\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{GLFWwindow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a48fc485a2a8834589d1f1afeec65193c}{handle}}, \mbox{\hyperlink{group__input_gaa93dc4818ac9ab32532909d53a337cbe}{GLFWcursorenterfun}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{cbfun}})
+\begin{DoxyCompactList}\small\item\em Sets the cursor enter/leave callback. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{group__input_gaf656112c33de3efdb227fa58f0134cf5}{GLFWscrollfun}} \mbox{\hyperlink{group__input_gaa786b59f19ad8525d251cda8e0d7d29b}{glfw\+Set\+Scroll\+Callback}} (\mbox{\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{GLFWwindow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a48fc485a2a8834589d1f1afeec65193c}{handle}}, \mbox{\hyperlink{group__input_gaf656112c33de3efdb227fa58f0134cf5}{GLFWscrollfun}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{cbfun}})
+\begin{DoxyCompactList}\small\item\em Sets the scroll callback. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{group__input_gaaba73c3274062c18723b7f05862d94b2}{GLFWdropfun}} \mbox{\hyperlink{group__input_ga8bab819b7b0ef9bc1a38e58c577c1d13}{glfw\+Set\+Drop\+Callback}} (\mbox{\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{GLFWwindow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a48fc485a2a8834589d1f1afeec65193c}{handle}}, \mbox{\hyperlink{group__input_gaaba73c3274062c18723b7f05862d94b2}{GLFWdropfun}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{cbfun}})
+\begin{DoxyCompactList}\small\item\em Sets the path drop callback. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{group__input_gacb1b7dfd79df673d48814c06fc436eff}{glfw\+Joystick\+Present}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{jid}})
+\begin{DoxyCompactList}\small\item\em Returns whether the specified joystick is present. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{float}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__input_gacd46b9f8d9d12dc50e45d7fe0ad32b23}{glfw\+Get\+Joystick\+Axes}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{jid}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_a22486c0c8d9f7d79a07bf22ecffeeb2f}{count}})
+\begin{DoxyCompactList}\small\item\em Returns the values of all axes of the specified joystick. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__input_ga91cdcb462a3e17c647a55496eff7d0ee}{glfw\+Get\+Joystick\+Buttons}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{jid}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_a22486c0c8d9f7d79a07bf22ecffeeb2f}{count}})
+\begin{DoxyCompactList}\small\item\em Returns the state of all buttons of the specified joystick. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__input_gaf0f00897c4d010af7bd1aea1f6193e6f}{glfw\+Get\+Joystick\+Hats}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{jid}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_a22486c0c8d9f7d79a07bf22ecffeeb2f}{count}})
+\begin{DoxyCompactList}\small\item\em Returns the state of all hats of the specified joystick. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__input_ga4b46e05195db3c2fc336cf69fc6c7128}{glfw\+Get\+Joystick\+Name}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{jid}})
+\begin{DoxyCompactList}\small\item\em Returns the name of the specified joystick. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__input_ga2c6a8b6e27cb8a8be7a0d020d9fd051c}{glfw\+Get\+Joystick\+GUID}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{jid}})
+\begin{DoxyCompactList}\small\item\em Returns the SDL compatible GUID of the specified joystick. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{group__input_ga3a8999c2d2634c7bcf4a04f1ec64895c}{glfw\+Set\+Joystick\+User\+Pointer}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{jid}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2glad_8h_aca2093d4756bde9a55b94e9ff8d9c623}{pointer}})
+\begin{DoxyCompactList}\small\item\em Sets the user pointer of the specified joystick. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__input_ga95c348e4b4308c44c59825def0d1367e}{glfw\+Get\+Joystick\+User\+Pointer}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{jid}})
+\begin{DoxyCompactList}\small\item\em Returns the user pointer of the specified joystick. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{group__input_gaa21ad5986ae9a26077a40142efb56243}{GLFWjoystickfun}} \mbox{\hyperlink{group__input_gad90f60a4c0e04629928305b53e96154a}{glfw\+Set\+Joystick\+Callback}} (\mbox{\hyperlink{group__input_gaa21ad5986ae9a26077a40142efb56243}{GLFWjoystickfun}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{cbfun}})
+\begin{DoxyCompactList}\small\item\em Sets the joystick configuration callback. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{group__input_ga276a2aec236a671a99f6f0a9be7fa3fc}{glfw\+Update\+Gamepad\+Mappings}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2glad_8h_a5ef8ce60531c971745798ebb9f61a5d8}{string}})
+\begin{DoxyCompactList}\small\item\em Adds the specified SDL\+\_\+\+Game\+Controller\+DB gamepad mappings. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{group__input_gac9720b6e5062a5fc5fc0bb4be6dc04a0}{glfw\+Joystick\+Is\+Gamepad}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{jid}})
+\begin{DoxyCompactList}\small\item\em Returns whether the specified joystick has a gamepad mapping. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__input_gab7a03c6ca8aa55a52b750d862d106ffe}{glfw\+Get\+Gamepad\+Name}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{jid}})
+\begin{DoxyCompactList}\small\item\em Returns the human-\/readable gamepad name for the specified joystick. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{group__input_ga6e138d3b0761546f5a12546f367501d6}{glfw\+Get\+Gamepad\+State}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{jid}}, \mbox{\hyperlink{struct_g_l_f_wgamepadstate}{GLFWgamepadstate}} \texorpdfstring{$\ast$}{*}state)
+\begin{DoxyCompactList}\small\item\em Retrieves the state of the specified joystick remapped as a gamepad. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{group__input_ga7a580309bbc185a0459c3559021d2fd7}{glfw\+Set\+Clipboard\+String}} (\mbox{\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{GLFWwindow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a48fc485a2a8834589d1f1afeec65193c}{handle}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2glad_8h_a5ef8ce60531c971745798ebb9f61a5d8}{string}})
+\begin{DoxyCompactList}\small\item\em Sets the clipboard to the specified string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__input_ga315b28b05797d00fe7cdf1ecfdc638dc}{glfw\+Get\+Clipboard\+String}} (\mbox{\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{GLFWwindow}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a48fc485a2a8834589d1f1afeec65193c}{handle}})
+\begin{DoxyCompactList}\small\item\em Returns the contents of the clipboard as a string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{double}} \mbox{\hyperlink{group__input_ga03d4a1039b8662c71eeb40beea8cb622}{glfw\+Get\+Time}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})
+\begin{DoxyCompactList}\small\item\em Returns the GLFW time. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{group__input_ga94360a3628a09f32708f83cc3fa48590}{glfw\+Set\+Time}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{double}} time)
+\begin{DoxyCompactList}\small\item\em Sets the GLFW time. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{external_2glfw_2deps_2vs2008_2stdint_8h_aec6fcb673ff035718c238c8c9d544c47}{uint64\+\_\+t}} \mbox{\hyperlink{group__input_gaa00c3e32227eb70b3968fca0bfe4ae26}{glfw\+Get\+Timer\+Value}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})
+\begin{DoxyCompactList}\small\item\em Returns the current value of the raw timer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{external_2glfw_2deps_2vs2008_2stdint_8h_aec6fcb673ff035718c238c8c9d544c47}{uint64\+\_\+t}} \mbox{\hyperlink{group__input_gaa92d10b10013372778efbf6367714371}{glfw\+Get\+Timer\+Frequency}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})
+\begin{DoxyCompactList}\small\item\em Returns the frequency, in Hz, of the raw timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{external_2glfw_2src_2input_8c_a5bf4fa1f0b519aa53c409cfa43c09287}\label{external_2glfw_2src_2input_8c_a5bf4fa1f0b519aa53c409cfa43c09287} 
+\index{input.c@{input.c}!\_GLFW\_JOYSTICK\_AXIS@{\_GLFW\_JOYSTICK\_AXIS}}
+\index{\_GLFW\_JOYSTICK\_AXIS@{\_GLFW\_JOYSTICK\_AXIS}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{\_GLFW\_JOYSTICK\_AXIS}{\_GLFW\_JOYSTICK\_AXIS}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \+\_\+\+GLFW\+\_\+\+JOYSTICK\+\_\+\+AXIS~1}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2input_8c_source_l00043}{43}} of file \mbox{\hyperlink{external_2glfw_2src_2input_8c_source}{input.\+c}}.
+
+\Hypertarget{external_2glfw_2src_2input_8c_a582c697f7502aae03c949fde57daaf56}\label{external_2glfw_2src_2input_8c_a582c697f7502aae03c949fde57daaf56} 
+\index{input.c@{input.c}!\_GLFW\_JOYSTICK\_BUTTON@{\_GLFW\_JOYSTICK\_BUTTON}}
+\index{\_GLFW\_JOYSTICK\_BUTTON@{\_GLFW\_JOYSTICK\_BUTTON}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{\_GLFW\_JOYSTICK\_BUTTON}{\_GLFW\_JOYSTICK\_BUTTON}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \+\_\+\+GLFW\+\_\+\+JOYSTICK\+\_\+\+BUTTON~2}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2input_8c_source_l00044}{44}} of file \mbox{\hyperlink{external_2glfw_2src_2input_8c_source}{input.\+c}}.
+
+\Hypertarget{external_2glfw_2src_2input_8c_aa05206ef4ae4fc35573852aa9d26c811}\label{external_2glfw_2src_2input_8c_aa05206ef4ae4fc35573852aa9d26c811} 
+\index{input.c@{input.c}!\_GLFW\_JOYSTICK\_HATBIT@{\_GLFW\_JOYSTICK\_HATBIT}}
+\index{\_GLFW\_JOYSTICK\_HATBIT@{\_GLFW\_JOYSTICK\_HATBIT}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{\_GLFW\_JOYSTICK\_HATBIT}{\_GLFW\_JOYSTICK\_HATBIT}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \+\_\+\+GLFW\+\_\+\+JOYSTICK\+\_\+\+HATBIT~3}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2input_8c_source_l00045}{45}} of file \mbox{\hyperlink{external_2glfw_2src_2input_8c_source}{input.\+c}}.
+
+\Hypertarget{external_2glfw_2src_2input_8c_af05e8b8bf6c333e9b40f3480b9d88241}\label{external_2glfw_2src_2input_8c_af05e8b8bf6c333e9b40f3480b9d88241} 
+\index{input.c@{input.c}!\_GLFW\_STICK@{\_GLFW\_STICK}}
+\index{\_GLFW\_STICK@{\_GLFW\_STICK}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{\_GLFW\_STICK}{\_GLFW\_STICK}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \+\_\+\+GLFW\+\_\+\+STICK~3}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2input_8c_source_l00040}{40}} of file \mbox{\hyperlink{external_2glfw_2src_2input_8c_source}{input.\+c}}.
+
+\Hypertarget{external_2glfw_2src_2input_8c_a6b070f8acf319f3e9394d2dd687f1dc0}\label{external_2glfw_2src_2input_8c_a6b070f8acf319f3e9394d2dd687f1dc0} 
+\index{input.c@{input.c}!GLFW\_MOD\_MASK@{GLFW\_MOD\_MASK}}
+\index{GLFW\_MOD\_MASK@{GLFW\_MOD\_MASK}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{GLFW\_MOD\_MASK}{GLFW\_MOD\_MASK}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} GLFW\+\_\+\+MOD\+\_\+\+MASK}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{group__mods_ga14994d3196c290aaa347248e51740274}{GLFW\_MOD\_SHIFT}}\ |\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__mods_ga6ed94871c3208eefd85713fa929d45aa}{GLFW\_MOD\_CONTROL}}\ |\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__mods_gad2acd5633463c29e07008687ea73c0f4}{GLFW\_MOD\_ALT}}\ |\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__mods_ga6b64ba10ea0227cf6f42efd0a220aba1}{GLFW\_MOD\_SUPER}}\ |\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__mods_gaefeef8fcf825a6e43e241b337897200f}{GLFW\_MOD\_CAPS\_LOCK}}\ |\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__mods_ga64e020b8a42af8376e944baf61feecbe}{GLFW\_MOD\_NUM\_LOCK}})}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2input_8c_source_l00047}{47}} of file \mbox{\hyperlink{external_2glfw_2src_2input_8c_source}{input.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{external_2glfw_2src_2input_8c_a2c66222336290a7e0868f16e9e74ae14}\label{external_2glfw_2src_2input_8c_a2c66222336290a7e0868f16e9e74ae14} 
+\index{input.c@{input.c}!\_glfwAllocJoystick@{\_glfwAllocJoystick}}
+\index{\_glfwAllocJoystick@{\_glfwAllocJoystick}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwAllocJoystick()}{\_glfwAllocJoystick()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*} \+\_\+glfw\+Alloc\+Joystick (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}}]{name,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}}]{guid,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{axis\+Count,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{button\+Count,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{hat\+Count }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2input_8c_source_l00502}{502}} of file \mbox{\hyperlink{external_2glfw_2src_2input_8c_source}{input.\+c}}.
+
+\Hypertarget{external_2glfw_2src_2input_8c_acf1fbc03e8d658a35f70544df858fe6c}\label{external_2glfw_2src_2input_8c_acf1fbc03e8d658a35f70544df858fe6c} 
+\index{input.c@{input.c}!\_glfwCenterCursorInContentArea@{\_glfwCenterCursorInContentArea}}
+\index{\_glfwCenterCursorInContentArea@{\_glfwCenterCursorInContentArea}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwCenterCursorInContentArea()}{\_glfwCenterCursorInContentArea()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Center\+Cursor\+In\+Content\+Area (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wwindow}{\+\_\+\+GLFWwindow}} \texorpdfstring{$\ast$}{*}}]{window }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2input_8c_source_l00548}{548}} of file \mbox{\hyperlink{external_2glfw_2src_2input_8c_source}{input.\+c}}.
+
+\Hypertarget{external_2glfw_2src_2input_8c_aef69e836bb7cfec79044fd23b367eb62}\label{external_2glfw_2src_2input_8c_aef69e836bb7cfec79044fd23b367eb62} 
+\index{input.c@{input.c}!\_glfwFreeJoystick@{\_glfwFreeJoystick}}
+\index{\_glfwFreeJoystick@{\_glfwFreeJoystick}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwFreeJoystick()}{\_glfwFreeJoystick()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Free\+Joystick (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}}]{js }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2input_8c_source_l00538}{538}} of file \mbox{\hyperlink{external_2glfw_2src_2input_8c_source}{input.\+c}}.
+
+\Hypertarget{external_2glfw_2src_2input_8c_a1dab257a37caa6b39cfe9924c2487db6}\label{external_2glfw_2src_2input_8c_a1dab257a37caa6b39cfe9924c2487db6} 
+\index{input.c@{input.c}!\_glfwInitGamepadMappings@{\_glfwInitGamepadMappings}}
+\index{\_glfwInitGamepadMappings@{\_glfwInitGamepadMappings}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwInitGamepadMappings()}{\_glfwInitGamepadMappings()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Init\+Gamepad\+Mappings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2input_8c_source_l00487}{487}} of file \mbox{\hyperlink{external_2glfw_2src_2input_8c_source}{input.\+c}}.
+
+\Hypertarget{external_2glfw_2src_2input_8c_aa778fa9144afadb49baa95f0178d3d3e}\label{external_2glfw_2src_2input_8c_aa778fa9144afadb49baa95f0178d3d3e} 
+\index{input.c@{input.c}!\_glfwInputChar@{\_glfwInputChar}}
+\index{\_glfwInputChar@{\_glfwInputChar}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwInputChar()}{\_glfwInputChar()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Input\+Char (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wwindow}{\+\_\+\+GLFWwindow}} \texorpdfstring{$\ast$}{*}}]{window,  }\item[{\mbox{\hyperlink{external_2glfw_2deps_2vs2008_2stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t}}}]{codepoint,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{mods,  }\item[{\mbox{\hyperlink{external_2glfw_2src_2internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}}}]{plain }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2input_8c_source_l00311}{311}} of file \mbox{\hyperlink{external_2glfw_2src_2input_8c_source}{input.\+c}}.
+
+\Hypertarget{external_2glfw_2src_2input_8c_a507361a8b8610b4daee7e83aa056f339}\label{external_2glfw_2src_2input_8c_a507361a8b8610b4daee7e83aa056f339} 
+\index{input.c@{input.c}!\_glfwInputCursorEnter@{\_glfwInputCursorEnter}}
+\index{\_glfwInputCursorEnter@{\_glfwInputCursorEnter}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwInputCursorEnter()}{\_glfwInputCursorEnter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Input\+Cursor\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wwindow}{\+\_\+\+GLFWwindow}} \texorpdfstring{$\ast$}{*}}]{window,  }\item[{\mbox{\hyperlink{external_2glfw_2src_2internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}}}]{entered }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2input_8c_source_l00395}{395}} of file \mbox{\hyperlink{external_2glfw_2src_2input_8c_source}{input.\+c}}.
+
+\Hypertarget{external_2glfw_2src_2input_8c_a973210bc0a11cc09fb55574ec5491bed}\label{external_2glfw_2src_2input_8c_a973210bc0a11cc09fb55574ec5491bed} 
+\index{input.c@{input.c}!\_glfwInputCursorPos@{\_glfwInputCursorPos}}
+\index{\_glfwInputCursorPos@{\_glfwInputCursorPos}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwInputCursorPos()}{\_glfwInputCursorPos()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Input\+Cursor\+Pos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wwindow}{\+\_\+\+GLFWwindow}} \texorpdfstring{$\ast$}{*}}]{window,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{double}}}]{xpos,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{double}}}]{ypos }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2input_8c_source_l00375}{375}} of file \mbox{\hyperlink{external_2glfw_2src_2input_8c_source}{input.\+c}}.
+
+\Hypertarget{external_2glfw_2src_2input_8c_a3a90fb32fec8ddd068b64671d1e85596}\label{external_2glfw_2src_2input_8c_a3a90fb32fec8ddd068b64671d1e85596} 
+\index{input.c@{input.c}!\_glfwInputDrop@{\_glfwInputDrop}}
+\index{\_glfwInputDrop@{\_glfwInputDrop}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwInputDrop()}{\_glfwInputDrop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Input\+Drop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wwindow}{\+\_\+\+GLFWwindow}} \texorpdfstring{$\ast$}{*}}]{window,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{count,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{paths }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2input_8c_source_l00406}{406}} of file \mbox{\hyperlink{external_2glfw_2src_2input_8c_source}{input.\+c}}.
+
+\Hypertarget{external_2glfw_2src_2input_8c_a3f053fce7ffb1aeb2ebdee3674a8fee2}\label{external_2glfw_2src_2input_8c_a3f053fce7ffb1aeb2ebdee3674a8fee2} 
+\index{input.c@{input.c}!\_glfwInputJoystick@{\_glfwInputJoystick}}
+\index{\_glfwInputJoystick@{\_glfwInputJoystick}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwInputJoystick()}{\_glfwInputJoystick()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Input\+Joystick (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}}]{js,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{event }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2input_8c_source_l00418}{418}} of file \mbox{\hyperlink{external_2glfw_2src_2input_8c_source}{input.\+c}}.
+
+\Hypertarget{external_2glfw_2src_2input_8c_ab91e3f3a89daff3809c3817a57a4f523}\label{external_2glfw_2src_2input_8c_ab91e3f3a89daff3809c3817a57a4f523} 
+\index{input.c@{input.c}!\_glfwInputJoystickAxis@{\_glfwInputJoystickAxis}}
+\index{\_glfwInputJoystickAxis@{\_glfwInputJoystickAxis}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwInputJoystickAxis()}{\_glfwInputJoystickAxis()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Input\+Joystick\+Axis (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}}]{js,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{axis,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{float}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2input_8c_source_l00434}{434}} of file \mbox{\hyperlink{external_2glfw_2src_2input_8c_source}{input.\+c}}.
+
+\Hypertarget{external_2glfw_2src_2input_8c_af1048006805591e17cc431c016f539f5}\label{external_2glfw_2src_2input_8c_af1048006805591e17cc431c016f539f5} 
+\index{input.c@{input.c}!\_glfwInputJoystickButton@{\_glfwInputJoystickButton}}
+\index{\_glfwInputJoystickButton@{\_glfwInputJoystickButton}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwInputJoystickButton()}{\_glfwInputJoystickButton()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Input\+Joystick\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}}]{js,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{button,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2input_8c_source_l00445}{445}} of file \mbox{\hyperlink{external_2glfw_2src_2input_8c_source}{input.\+c}}.
+
+\Hypertarget{external_2glfw_2src_2input_8c_aca3d4e257b8212cf2a713f9a1069ff08}\label{external_2glfw_2src_2input_8c_aca3d4e257b8212cf2a713f9a1069ff08} 
+\index{input.c@{input.c}!\_glfwInputJoystickHat@{\_glfwInputJoystickHat}}
+\index{\_glfwInputJoystickHat@{\_glfwInputJoystickHat}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwInputJoystickHat()}{\_glfwInputJoystickHat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Input\+Joystick\+Hat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}}]{js,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{hat,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2input_8c_source_l00457}{457}} of file \mbox{\hyperlink{external_2glfw_2src_2input_8c_source}{input.\+c}}.
+
+\Hypertarget{external_2glfw_2src_2input_8c_aba4a5bf53c475cf2dc3e594c3c5034ab}\label{external_2glfw_2src_2input_8c_aba4a5bf53c475cf2dc3e594c3c5034ab} 
+\index{input.c@{input.c}!\_glfwInputKey@{\_glfwInputKey}}
+\index{\_glfwInputKey@{\_glfwInputKey}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwInputKey()}{\_glfwInputKey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Input\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wwindow}{\+\_\+\+GLFWwindow}} \texorpdfstring{$\ast$}{*}}]{window,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{key,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{scancode,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{action,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{mods }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2input_8c_source_l00274}{274}} of file \mbox{\hyperlink{external_2glfw_2src_2input_8c_source}{input.\+c}}.
+
+\Hypertarget{external_2glfw_2src_2input_8c_ae259527976c9b13341aa3e4587d0353e}\label{external_2glfw_2src_2input_8c_ae259527976c9b13341aa3e4587d0353e} 
+\index{input.c@{input.c}!\_glfwInputMouseClick@{\_glfwInputMouseClick}}
+\index{\_glfwInputMouseClick@{\_glfwInputMouseClick}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwInputMouseClick()}{\_glfwInputMouseClick()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Input\+Mouse\+Click (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wwindow}{\+\_\+\+GLFWwindow}} \texorpdfstring{$\ast$}{*}}]{window,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{button,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{action,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{mods }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2input_8c_source_l00349}{349}} of file \mbox{\hyperlink{external_2glfw_2src_2input_8c_source}{input.\+c}}.
+
+\Hypertarget{external_2glfw_2src_2input_8c_a65b98312da830a2c65b36543f119a7fa}\label{external_2glfw_2src_2input_8c_a65b98312da830a2c65b36543f119a7fa} 
+\index{input.c@{input.c}!\_glfwInputScroll@{\_glfwInputScroll}}
+\index{\_glfwInputScroll@{\_glfwInputScroll}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwInputScroll()}{\_glfwInputScroll()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Input\+Scroll (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wwindow}{\+\_\+\+GLFWwindow}} \texorpdfstring{$\ast$}{*}}]{window,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{double}}}]{xoffset,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{double}}}]{yoffset }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2input_8c_source_l00335}{335}} of file \mbox{\hyperlink{external_2glfw_2src_2input_8c_source}{input.\+c}}.
+
+\Hypertarget{external_2glfw_2src_2input_8c_a95d566da875c2a8fb47f751f05f23a9b}\label{external_2glfw_2src_2input_8c_a95d566da875c2a8fb47f751f05f23a9b} 
+\index{input.c@{input.c}!findMapping@{findMapping}}
+\index{findMapping@{findMapping}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{findMapping()}{findMapping()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{struct___g_l_f_wmapping}{\+\_\+\+GLFWmapping}} \texorpdfstring{$\ast$}{*} find\+Mapping (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}}]{guid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2input_8c_source_l00072}{72}} of file \mbox{\hyperlink{external_2glfw_2src_2input_8c_source}{input.\+c}}.
+
+\Hypertarget{external_2glfw_2src_2input_8c_ab48ace22f592a713f2e8224c6c927fa1}\label{external_2glfw_2src_2input_8c_ab48ace22f592a713f2e8224c6c927fa1} 
+\index{input.c@{input.c}!findValidMapping@{findValidMapping}}
+\index{findValidMapping@{findValidMapping}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{findValidMapping()}{findValidMapping()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{struct___g_l_f_wmapping}{\+\_\+\+GLFWmapping}} \texorpdfstring{$\ast$}{*} find\+Valid\+Mapping (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}}]{js }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2input_8c_source_l00102}{102}} of file \mbox{\hyperlink{external_2glfw_2src_2input_8c_source}{input.\+c}}.
+
+\Hypertarget{external_2glfw_2src_2input_8c_a3ccc79c571bf64a643210de19a8fac14}\label{external_2glfw_2src_2input_8c_a3ccc79c571bf64a643210de19a8fac14} 
+\index{input.c@{input.c}!initJoysticks@{initJoysticks}}
+\index{initJoysticks@{initJoysticks}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{initJoysticks()}{initJoysticks()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{external_2glfw_2src_2internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}} init\+Joysticks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2input_8c_source_l00056}{56}} of file \mbox{\hyperlink{external_2glfw_2src_2input_8c_source}{input.\+c}}.
+
+\Hypertarget{external_2glfw_2src_2input_8c_a3c35bad739ae02de9462e82710fc26ef}\label{external_2glfw_2src_2input_8c_a3c35bad739ae02de9462e82710fc26ef} 
+\index{input.c@{input.c}!isValidElementForJoystick@{isValidElementForJoystick}}
+\index{isValidElementForJoystick@{isValidElementForJoystick}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{isValidElementForJoystick()}{isValidElementForJoystick()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{external_2glfw_2src_2internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}} is\+Valid\+Element\+For\+Joystick (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{struct___g_l_f_wmapelement}{\+\_\+\+GLFWmapelement}} \texorpdfstring{$\ast$}{*}}]{e,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}}]{js }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2input_8c_source_l00087}{87}} of file \mbox{\hyperlink{external_2glfw_2src_2input_8c_source}{input.\+c}}.
+
+\Hypertarget{external_2glfw_2src_2input_8c_af24737afe84f3598a6e893571413c2ad}\label{external_2glfw_2src_2input_8c_af24737afe84f3598a6e893571413c2ad} 
+\index{input.c@{input.c}!parseMapping@{parseMapping}}
+\index{parseMapping@{parseMapping}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{parseMapping()}{parseMapping()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{external_2glfw_2src_2internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}} parse\+Mapping (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wmapping}{\+\_\+\+GLFWmapping}} \texorpdfstring{$\ast$}{*}}]{mapping,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2input_8c_source_l00127}{127}} of file \mbox{\hyperlink{external_2glfw_2src_2input_8c_source}{input.\+c}}.
+

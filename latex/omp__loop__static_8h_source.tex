@@ -1,0 +1,98 @@
+\doxysection{omp\+\_\+loop\+\_\+static.\+h}
+\hypertarget{omp__loop__static_8h_source}{}\label{omp__loop__static_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/parallel/omp\_loop\_static.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/parallel/omp\_loop\_static.h}}
+\mbox{\hyperlink{omp__loop__static_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00001}00001\ \textcolor{comment}{//\ -\/*-\/\ C++\ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00003}00003\ \textcolor{comment}{//\ Copyright\ (C)\ 2007-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00005}00005\ \textcolor{comment}{//\ This\ file\ is\ part\ of\ the\ GNU\ ISO\ C++\ Library.\ \ This\ library\ is\ free}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00006}00006\ \textcolor{comment}{//\ software;\ you\ can\ redistribute\ it\ and/or\ modify\ it\ under\ the\ terms}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00007}00007\ \textcolor{comment}{//\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by\ the\ Free\ Software}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00008}00008\ \textcolor{comment}{//\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)\ any\ later}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00009}00009\ \textcolor{comment}{//\ version.}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00011}00011\ \textcolor{comment}{//\ This\ library\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,\ but}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00012}00012\ \textcolor{comment}{//\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00013}00013\ \textcolor{comment}{//\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the\ GNU}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00014}00014\ \textcolor{comment}{//\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00016}00016\ \textcolor{comment}{//\ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00017}00017\ \textcolor{comment}{//\ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00018}00018\ \textcolor{comment}{//\ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00020}00020\ \textcolor{comment}{//\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00021}00021\ \textcolor{comment}{//\ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00022}00022\ \textcolor{comment}{//\ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00023}00023\ \textcolor{comment}{//\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00031}00031\ \textcolor{comment}{//\ Written\ by\ Felix\ Putze.}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00033}00033\ \textcolor{preprocessor}{\#ifndef\ \_GLIBCXX\_PARALLEL\_OMP\_LOOP\_STATIC\_H}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00034}00034\ \textcolor{preprocessor}{\#define\ \_GLIBCXX\_PARALLEL\_OMP\_LOOP\_STATIC\_H\ 1}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00036}00036\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{omp_8h}{omp.h}}>}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00038}00038\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{settings_8h}{parallel/settings.h}}>}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00039}00039\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{basic__iterator_8h}{parallel/basic\_iterator.h}}>}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00041}00041\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace____gnu__parallel}{\_\_gnu\_parallel}}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00042}00042\ \{}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00060}00060\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_RAIter}},}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00061}00061\ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Op}},}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00062}00062\ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Fu}},}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00063}00063\ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Red}},}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00064}00064\ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Result}}>}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00065}00065\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Op}}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00066}\mbox{\hyperlink{namespace____gnu__parallel_adfc9f0a346a7f323e8a3ba07b772587d}{00066}}\ \ \ \ \ \mbox{\hyperlink{namespace____gnu__parallel_adfc9f0a346a7f323e8a3ba07b772587d}{\_\_for\_each\_template\_random\_access\_omp\_loop\_static}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_RAIter}}\ \_\_begin,}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_RAIter}}\ \_\_end,\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Op}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_o}},}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Fu}}\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_f}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Red}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_r}},}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Result}}\ \_\_base,}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Result}}\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_output}},}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00071}00071\ \ \ \ \ \ \ \textcolor{keyword}{typename}\ std::iterator\_traits<\_RAIter>::difference\_type\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_bound}})}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00072}00072\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00073}00073\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{typename}\ std::iterator\_traits<\_RAIter>::difference\_type}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00074}00074\ \ \ \ \ \_DifferenceType;}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00076}00076\ \ \ \ \ \ \ \_DifferenceType\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_length}}\ =\ \_\_end\ -\/\ \_\_begin;}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00077}00077\ \ \ \ \ \ \ \mbox{\hyperlink{namespace____gnu__parallel_a05e502e51bfc3233671730f74a44dc6a}{\_ThreadIndex}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_num\_threads}}\ =\ std::min<\_DifferenceType>}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00078}00078\ \ \ \ \ (\mbox{\hyperlink{namespace____gnu__parallel_aa72851b809c2b314bc09580c3512f281}{\_\_get\_max\_threads}}(),\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_length}});}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00080}00080\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Result}}\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_thread\_results}};}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00082}00082\ \textcolor{preprocessor}{\#\ \ \ \ \ pragma\ omp\ parallel\ num\_threads(\_\_num\_threads)}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00083}00083\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00084}00084\ \textcolor{preprocessor}{\#\ \ \ \ \ \ \ pragma\ omp\ single}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00085}00085\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00086}00086\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_num\_threads}}\ =\ \mbox{\hyperlink{omp_8h_ac42ead04531fd33507e3d3a6f648b200}{omp\_get\_num\_threads}}();}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00087}00087\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_thread\_results}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Result}}[\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_num\_threads}}];}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00089}00089\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{namespace____gnu__parallel_a05e502e51bfc3233671730f74a44dc6a}{\_ThreadIndex}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_i}}\ =\ 0;\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_i}}\ <\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_num\_threads}};\ ++\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_i}})}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00090}00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_thread\_results}}[\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_i}}]\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Result}}();}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00091}00091\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00093}00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace____gnu__parallel_a05e502e51bfc3233671730f74a44dc6a}{\_ThreadIndex}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_iam}}\ =\ \mbox{\hyperlink{omp_8h_aa03cf372d8266eef024262a68d304e1b}{omp\_get\_thread\_num}}();}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00095}00095\ \textcolor{preprocessor}{\#pragma\ omp\ for\ schedule(static,\ \_Settings::get().workstealing\_chunk\_size)}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\_DifferenceType\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_pos}}\ =\ 0;\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_pos}}\ <\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_length}};\ ++\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_pos}})}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_thread\_results}}[\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_iam}}]\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_r}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_thread\_results}}[\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_iam}}],}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_f}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_o}},\ \_\_begin+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_pos}}));}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00099}00099\ \ \ \ \ \ \ \}\ \textcolor{comment}{//parallel}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00101}00101\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{namespace____gnu__parallel_a05e502e51bfc3233671730f74a44dc6a}{\_ThreadIndex}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_i}}\ =\ 0;\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_i}}\ <\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_num\_threads}};\ ++\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_i}})}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00102}00102\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_output}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_r}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_output}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_thread\_results}}[\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_i}}]);}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00104}00104\ \ \ \ \ \ \ \textcolor{keyword}{delete}\ []\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_thread\_results}};}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00106}00106\ \ \ \ \ \ \ \textcolor{comment}{//\ Points\ to\ last\ element\ processed\ (needed\ as\ return\ value\ for}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00107}00107\ \ \ \ \ \ \ \textcolor{comment}{//\ some\ algorithms\ like\ transform).}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00108}00108\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_f}}.finish\_iterator\ =\ \_\_begin\ +\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_length}};}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00110}00110\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_o}};}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00111}00111\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00113}00113\ \}\ \textcolor{comment}{//\ end\ namespace}}
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{omp__loop__static_8h_source_l00115}00115\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_GLIBCXX\_PARALLEL\_OMP\_LOOP\_STATIC\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

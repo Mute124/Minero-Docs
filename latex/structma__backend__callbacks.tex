@@ -1,0 +1,180 @@
+\doxysection{ma\+\_\+backend\+\_\+callbacks Struct Reference}
+\hypertarget{structma__backend__callbacks}{}\label{structma__backend__callbacks}\index{ma\_backend\_callbacks@{ma\_backend\_callbacks}}
+
+
+{\ttfamily \#include "{}miniaudio.\+h"{}}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{external_2miniaudio_8h_ad1a04e53edf78c58e00613a1207bc881}{ma\+\_\+result}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structma__backend__callbacks_a7a90252e54d7f66cf6fc54c18cacecd1}{on\+Context\+Init}} )(\mbox{\hyperlink{external_2miniaudio_8h_ade3d007a03012ce1b7bf1a7669db3213}{ma\+\_\+context}} \texorpdfstring{$\ast$}{*}p\+Context, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{external_2miniaudio_8h_a350343dbad146a4449c38c39da09fcd0}{ma\+\_\+context\+\_\+config}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\+Config}}, \mbox{\hyperlink{structma__backend__callbacks}{ma\+\_\+backend\+\_\+callbacks}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\+Callbacks}})
+\item 
+\mbox{\hyperlink{external_2miniaudio_8h_ad1a04e53edf78c58e00613a1207bc881}{ma\+\_\+result}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structma__backend__callbacks_ac53a206df82391293600aca6ef2173b9}{on\+Context\+Uninit}} )(\mbox{\hyperlink{external_2miniaudio_8h_ade3d007a03012ce1b7bf1a7669db3213}{ma\+\_\+context}} \texorpdfstring{$\ast$}{*}p\+Context)
+\item 
+\mbox{\hyperlink{external_2miniaudio_8h_ad1a04e53edf78c58e00613a1207bc881}{ma\+\_\+result}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structma__backend__callbacks_ade30dc2dc011e30a1dc54ef2bb782e08}{on\+Context\+Enumerate\+Devices}} )(\mbox{\hyperlink{external_2miniaudio_8h_ade3d007a03012ce1b7bf1a7669db3213}{ma\+\_\+context}} \texorpdfstring{$\ast$}{*}p\+Context, \mbox{\hyperlink{external_2miniaudio_8h_ab27587a4d849c878f7ed0471b79fa50a}{ma\+\_\+enum\+\_\+devices\+\_\+callback\+\_\+proc}} callback, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}p\+User\+Data)
+\item 
+\mbox{\hyperlink{external_2miniaudio_8h_ad1a04e53edf78c58e00613a1207bc881}{ma\+\_\+result}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structma__backend__callbacks_ac83037a2a8ccf56aa9dde7e3f23c8080}{on\+Context\+Get\+Device\+Info}} )(\mbox{\hyperlink{external_2miniaudio_8h_ade3d007a03012ce1b7bf1a7669db3213}{ma\+\_\+context}} \texorpdfstring{$\ast$}{*}p\+Context, \mbox{\hyperlink{external_2miniaudio_8h_a47643cf7ad53bfbc605a23a5a9545cc1}{ma\+\_\+device\+\_\+type}} device\+Type, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{unionma__device__id}{ma\+\_\+device\+\_\+id}} \texorpdfstring{$\ast$}{*}p\+Device\+ID, \mbox{\hyperlink{structma__device__info}{ma\+\_\+device\+\_\+info}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\+Device\+Info}})
+\item 
+\mbox{\hyperlink{external_2miniaudio_8h_ad1a04e53edf78c58e00613a1207bc881}{ma\+\_\+result}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structma__backend__callbacks_a65185b25e6b480a39566046252e4df46}{on\+Device\+Init}} )(\mbox{\hyperlink{external_2miniaudio_8h_a9c271ff318d0525f593c5397b1853688}{ma\+\_\+device}} \texorpdfstring{$\ast$}{*}p\+Device, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{external_2miniaudio_8h_aa601045d4020167a7d991c31b5797b50}{ma\+\_\+device\+\_\+config}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\+Config}}, \mbox{\hyperlink{structma__device__descriptor}{ma\+\_\+device\+\_\+descriptor}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\+Descriptor\+Playback}}, \mbox{\hyperlink{structma__device__descriptor}{ma\+\_\+device\+\_\+descriptor}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\+Descriptor\+Capture}})
+\item 
+\mbox{\hyperlink{external_2miniaudio_8h_ad1a04e53edf78c58e00613a1207bc881}{ma\+\_\+result}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structma__backend__callbacks_a4f0017de3b83ae0a870c851999f44cae}{on\+Device\+Uninit}} )(\mbox{\hyperlink{external_2miniaudio_8h_a9c271ff318d0525f593c5397b1853688}{ma\+\_\+device}} \texorpdfstring{$\ast$}{*}p\+Device)
+\item 
+\mbox{\hyperlink{external_2miniaudio_8h_ad1a04e53edf78c58e00613a1207bc881}{ma\+\_\+result}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structma__backend__callbacks_a6957420a1cb860465c28a7f6154d2b28}{on\+Device\+Start}} )(\mbox{\hyperlink{external_2miniaudio_8h_a9c271ff318d0525f593c5397b1853688}{ma\+\_\+device}} \texorpdfstring{$\ast$}{*}p\+Device)
+\item 
+\mbox{\hyperlink{external_2miniaudio_8h_ad1a04e53edf78c58e00613a1207bc881}{ma\+\_\+result}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structma__backend__callbacks_a1fac3ea46120e3d40c98a93af6d38d88}{on\+Device\+Stop}} )(\mbox{\hyperlink{external_2miniaudio_8h_a9c271ff318d0525f593c5397b1853688}{ma\+\_\+device}} \texorpdfstring{$\ast$}{*}p\+Device)
+\item 
+\mbox{\hyperlink{external_2miniaudio_8h_ad1a04e53edf78c58e00613a1207bc881}{ma\+\_\+result}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structma__backend__callbacks_a55ae6cd6b68b46363c883f6ab2048d22}{on\+Device\+Read}} )(\mbox{\hyperlink{external_2miniaudio_8h_a9c271ff318d0525f593c5397b1853688}{ma\+\_\+device}} \texorpdfstring{$\ast$}{*}p\+Device, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\+Frames}}, \mbox{\hyperlink{external_2miniaudio_8h_a46937d096112f0d30ba68ef4d568b287}{ma\+\_\+uint32}} frame\+Count, \mbox{\hyperlink{external_2miniaudio_8h_a46937d096112f0d30ba68ef4d568b287}{ma\+\_\+uint32}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\+Frames\+Read}})
+\item 
+\mbox{\hyperlink{external_2miniaudio_8h_ad1a04e53edf78c58e00613a1207bc881}{ma\+\_\+result}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structma__backend__callbacks_a51dc0f3af5c8d22b387b49195a1857de}{on\+Device\+Write}} )(\mbox{\hyperlink{external_2miniaudio_8h_a9c271ff318d0525f593c5397b1853688}{ma\+\_\+device}} \texorpdfstring{$\ast$}{*}p\+Device, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\+Frames}}, \mbox{\hyperlink{external_2miniaudio_8h_a46937d096112f0d30ba68ef4d568b287}{ma\+\_\+uint32}} frame\+Count, \mbox{\hyperlink{external_2miniaudio_8h_a46937d096112f0d30ba68ef4d568b287}{ma\+\_\+uint32}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\+Frames\+Written}})
+\item 
+\mbox{\hyperlink{external_2miniaudio_8h_ad1a04e53edf78c58e00613a1207bc881}{ma\+\_\+result}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structma__backend__callbacks_a89f3c928eadaafe1fa8bf50939c7aa84}{on\+Device\+Data\+Loop}} )(\mbox{\hyperlink{external_2miniaudio_8h_a9c271ff318d0525f593c5397b1853688}{ma\+\_\+device}} \texorpdfstring{$\ast$}{*}p\+Device)
+\item 
+\mbox{\hyperlink{external_2miniaudio_8h_ad1a04e53edf78c58e00613a1207bc881}{ma\+\_\+result}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structma__backend__callbacks_aaea754348a4cc5f714128ebd61b1e721}{on\+Device\+Data\+Loop\+Wakeup}} )(\mbox{\hyperlink{external_2miniaudio_8h_a9c271ff318d0525f593c5397b1853688}{ma\+\_\+device}} \texorpdfstring{$\ast$}{*}p\+Device)
+\item 
+\mbox{\hyperlink{external_2miniaudio_8h_ad1a04e53edf78c58e00613a1207bc881}{ma\+\_\+result}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structma__backend__callbacks_a6674c8d6f45272df8866ea9dfddbd7ca}{on\+Device\+Get\+Info}} )(\mbox{\hyperlink{external_2miniaudio_8h_a9c271ff318d0525f593c5397b1853688}{ma\+\_\+device}} \texorpdfstring{$\ast$}{*}p\+Device, \mbox{\hyperlink{external_2miniaudio_8h_a47643cf7ad53bfbc605a23a5a9545cc1}{ma\+\_\+device\+\_\+type}} \mbox{\hyperlink{_gameobj_8h_a890efa53b3d7deeeced6f3a0d6653ed3}{type}}, \mbox{\hyperlink{structma__device__info}{ma\+\_\+device\+\_\+info}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\+Device\+Info}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{external_2miniaudio_8h_source_l06939}{6939}} of file \mbox{\hyperlink{external_2miniaudio_8h_source}{miniaudio.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structma__backend__callbacks_ade30dc2dc011e30a1dc54ef2bb782e08}\label{structma__backend__callbacks_ade30dc2dc011e30a1dc54ef2bb782e08} 
+\index{ma\_backend\_callbacks@{ma\_backend\_callbacks}!onContextEnumerateDevices@{onContextEnumerateDevices}}
+\index{onContextEnumerateDevices@{onContextEnumerateDevices}!ma\_backend\_callbacks@{ma\_backend\_callbacks}}
+\doxysubsubsection{\texorpdfstring{onContextEnumerateDevices}{onContextEnumerateDevices}}
+{\footnotesize\ttfamily \mbox{\hyperlink{external_2miniaudio_8h_ad1a04e53edf78c58e00613a1207bc881}{ma\+\_\+result}}(\texorpdfstring{$\ast$}{*} ma\+\_\+backend\+\_\+callbacks\+::on\+Context\+Enumerate\+Devices) (\mbox{\hyperlink{external_2miniaudio_8h_ade3d007a03012ce1b7bf1a7669db3213}{ma\+\_\+context}} \texorpdfstring{$\ast$}{*}p\+Context, \mbox{\hyperlink{external_2miniaudio_8h_ab27587a4d849c878f7ed0471b79fa50a}{ma\+\_\+enum\+\_\+devices\+\_\+callback\+\_\+proc}} callback, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}p\+User\+Data)}
+
+
+
+Definition at line \mbox{\hyperlink{external_2miniaudio_8h_source_l06943}{6943}} of file \mbox{\hyperlink{external_2miniaudio_8h_source}{miniaudio.\+h}}.
+
+\Hypertarget{structma__backend__callbacks_ac83037a2a8ccf56aa9dde7e3f23c8080}\label{structma__backend__callbacks_ac83037a2a8ccf56aa9dde7e3f23c8080} 
+\index{ma\_backend\_callbacks@{ma\_backend\_callbacks}!onContextGetDeviceInfo@{onContextGetDeviceInfo}}
+\index{onContextGetDeviceInfo@{onContextGetDeviceInfo}!ma\_backend\_callbacks@{ma\_backend\_callbacks}}
+\doxysubsubsection{\texorpdfstring{onContextGetDeviceInfo}{onContextGetDeviceInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{external_2miniaudio_8h_ad1a04e53edf78c58e00613a1207bc881}{ma\+\_\+result}}(\texorpdfstring{$\ast$}{*} ma\+\_\+backend\+\_\+callbacks\+::on\+Context\+Get\+Device\+Info) (\mbox{\hyperlink{external_2miniaudio_8h_ade3d007a03012ce1b7bf1a7669db3213}{ma\+\_\+context}} \texorpdfstring{$\ast$}{*}p\+Context, \mbox{\hyperlink{external_2miniaudio_8h_a47643cf7ad53bfbc605a23a5a9545cc1}{ma\+\_\+device\+\_\+type}} device\+Type, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{unionma__device__id}{ma\+\_\+device\+\_\+id}} \texorpdfstring{$\ast$}{*}p\+Device\+ID, \mbox{\hyperlink{structma__device__info}{ma\+\_\+device\+\_\+info}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\+Device\+Info}})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2miniaudio_8h_source_l06944}{6944}} of file \mbox{\hyperlink{external_2miniaudio_8h_source}{miniaudio.\+h}}.
+
+\Hypertarget{structma__backend__callbacks_a7a90252e54d7f66cf6fc54c18cacecd1}\label{structma__backend__callbacks_a7a90252e54d7f66cf6fc54c18cacecd1} 
+\index{ma\_backend\_callbacks@{ma\_backend\_callbacks}!onContextInit@{onContextInit}}
+\index{onContextInit@{onContextInit}!ma\_backend\_callbacks@{ma\_backend\_callbacks}}
+\doxysubsubsection{\texorpdfstring{onContextInit}{onContextInit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{external_2miniaudio_8h_ad1a04e53edf78c58e00613a1207bc881}{ma\+\_\+result}}(\texorpdfstring{$\ast$}{*} ma\+\_\+backend\+\_\+callbacks\+::on\+Context\+Init) (\mbox{\hyperlink{external_2miniaudio_8h_ade3d007a03012ce1b7bf1a7669db3213}{ma\+\_\+context}} \texorpdfstring{$\ast$}{*}p\+Context, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{external_2miniaudio_8h_a350343dbad146a4449c38c39da09fcd0}{ma\+\_\+context\+\_\+config}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\+Config}}, \mbox{\hyperlink{structma__backend__callbacks}{ma\+\_\+backend\+\_\+callbacks}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\+Callbacks}})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2miniaudio_8h_source_l06941}{6941}} of file \mbox{\hyperlink{external_2miniaudio_8h_source}{miniaudio.\+h}}.
+
+\Hypertarget{structma__backend__callbacks_ac53a206df82391293600aca6ef2173b9}\label{structma__backend__callbacks_ac53a206df82391293600aca6ef2173b9} 
+\index{ma\_backend\_callbacks@{ma\_backend\_callbacks}!onContextUninit@{onContextUninit}}
+\index{onContextUninit@{onContextUninit}!ma\_backend\_callbacks@{ma\_backend\_callbacks}}
+\doxysubsubsection{\texorpdfstring{onContextUninit}{onContextUninit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{external_2miniaudio_8h_ad1a04e53edf78c58e00613a1207bc881}{ma\+\_\+result}}(\texorpdfstring{$\ast$}{*} ma\+\_\+backend\+\_\+callbacks\+::on\+Context\+Uninit) (\mbox{\hyperlink{external_2miniaudio_8h_ade3d007a03012ce1b7bf1a7669db3213}{ma\+\_\+context}} \texorpdfstring{$\ast$}{*}p\+Context)}
+
+
+
+Definition at line \mbox{\hyperlink{external_2miniaudio_8h_source_l06942}{6942}} of file \mbox{\hyperlink{external_2miniaudio_8h_source}{miniaudio.\+h}}.
+
+\Hypertarget{structma__backend__callbacks_a89f3c928eadaafe1fa8bf50939c7aa84}\label{structma__backend__callbacks_a89f3c928eadaafe1fa8bf50939c7aa84} 
+\index{ma\_backend\_callbacks@{ma\_backend\_callbacks}!onDeviceDataLoop@{onDeviceDataLoop}}
+\index{onDeviceDataLoop@{onDeviceDataLoop}!ma\_backend\_callbacks@{ma\_backend\_callbacks}}
+\doxysubsubsection{\texorpdfstring{onDeviceDataLoop}{onDeviceDataLoop}}
+{\footnotesize\ttfamily \mbox{\hyperlink{external_2miniaudio_8h_ad1a04e53edf78c58e00613a1207bc881}{ma\+\_\+result}}(\texorpdfstring{$\ast$}{*} ma\+\_\+backend\+\_\+callbacks\+::on\+Device\+Data\+Loop) (\mbox{\hyperlink{external_2miniaudio_8h_a9c271ff318d0525f593c5397b1853688}{ma\+\_\+device}} \texorpdfstring{$\ast$}{*}p\+Device)}
+
+
+
+Definition at line \mbox{\hyperlink{external_2miniaudio_8h_source_l06951}{6951}} of file \mbox{\hyperlink{external_2miniaudio_8h_source}{miniaudio.\+h}}.
+
+\Hypertarget{structma__backend__callbacks_aaea754348a4cc5f714128ebd61b1e721}\label{structma__backend__callbacks_aaea754348a4cc5f714128ebd61b1e721} 
+\index{ma\_backend\_callbacks@{ma\_backend\_callbacks}!onDeviceDataLoopWakeup@{onDeviceDataLoopWakeup}}
+\index{onDeviceDataLoopWakeup@{onDeviceDataLoopWakeup}!ma\_backend\_callbacks@{ma\_backend\_callbacks}}
+\doxysubsubsection{\texorpdfstring{onDeviceDataLoopWakeup}{onDeviceDataLoopWakeup}}
+{\footnotesize\ttfamily \mbox{\hyperlink{external_2miniaudio_8h_ad1a04e53edf78c58e00613a1207bc881}{ma\+\_\+result}}(\texorpdfstring{$\ast$}{*} ma\+\_\+backend\+\_\+callbacks\+::on\+Device\+Data\+Loop\+Wakeup) (\mbox{\hyperlink{external_2miniaudio_8h_a9c271ff318d0525f593c5397b1853688}{ma\+\_\+device}} \texorpdfstring{$\ast$}{*}p\+Device)}
+
+
+
+Definition at line \mbox{\hyperlink{external_2miniaudio_8h_source_l06952}{6952}} of file \mbox{\hyperlink{external_2miniaudio_8h_source}{miniaudio.\+h}}.
+
+\Hypertarget{structma__backend__callbacks_a6674c8d6f45272df8866ea9dfddbd7ca}\label{structma__backend__callbacks_a6674c8d6f45272df8866ea9dfddbd7ca} 
+\index{ma\_backend\_callbacks@{ma\_backend\_callbacks}!onDeviceGetInfo@{onDeviceGetInfo}}
+\index{onDeviceGetInfo@{onDeviceGetInfo}!ma\_backend\_callbacks@{ma\_backend\_callbacks}}
+\doxysubsubsection{\texorpdfstring{onDeviceGetInfo}{onDeviceGetInfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{external_2miniaudio_8h_ad1a04e53edf78c58e00613a1207bc881}{ma\+\_\+result}}(\texorpdfstring{$\ast$}{*} ma\+\_\+backend\+\_\+callbacks\+::on\+Device\+Get\+Info) (\mbox{\hyperlink{external_2miniaudio_8h_a9c271ff318d0525f593c5397b1853688}{ma\+\_\+device}} \texorpdfstring{$\ast$}{*}p\+Device, \mbox{\hyperlink{external_2miniaudio_8h_a47643cf7ad53bfbc605a23a5a9545cc1}{ma\+\_\+device\+\_\+type}} \mbox{\hyperlink{_gameobj_8h_a890efa53b3d7deeeced6f3a0d6653ed3}{type}}, \mbox{\hyperlink{structma__device__info}{ma\+\_\+device\+\_\+info}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\+Device\+Info}})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2miniaudio_8h_source_l06953}{6953}} of file \mbox{\hyperlink{external_2miniaudio_8h_source}{miniaudio.\+h}}.
+
+\Hypertarget{structma__backend__callbacks_a65185b25e6b480a39566046252e4df46}\label{structma__backend__callbacks_a65185b25e6b480a39566046252e4df46} 
+\index{ma\_backend\_callbacks@{ma\_backend\_callbacks}!onDeviceInit@{onDeviceInit}}
+\index{onDeviceInit@{onDeviceInit}!ma\_backend\_callbacks@{ma\_backend\_callbacks}}
+\doxysubsubsection{\texorpdfstring{onDeviceInit}{onDeviceInit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{external_2miniaudio_8h_ad1a04e53edf78c58e00613a1207bc881}{ma\+\_\+result}}(\texorpdfstring{$\ast$}{*} ma\+\_\+backend\+\_\+callbacks\+::on\+Device\+Init) (\mbox{\hyperlink{external_2miniaudio_8h_a9c271ff318d0525f593c5397b1853688}{ma\+\_\+device}} \texorpdfstring{$\ast$}{*}p\+Device, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{external_2miniaudio_8h_aa601045d4020167a7d991c31b5797b50}{ma\+\_\+device\+\_\+config}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\+Config}}, \mbox{\hyperlink{structma__device__descriptor}{ma\+\_\+device\+\_\+descriptor}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\+Descriptor\+Playback}}, \mbox{\hyperlink{structma__device__descriptor}{ma\+\_\+device\+\_\+descriptor}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\+Descriptor\+Capture}})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2miniaudio_8h_source_l06945}{6945}} of file \mbox{\hyperlink{external_2miniaudio_8h_source}{miniaudio.\+h}}.
+
+\Hypertarget{structma__backend__callbacks_a55ae6cd6b68b46363c883f6ab2048d22}\label{structma__backend__callbacks_a55ae6cd6b68b46363c883f6ab2048d22} 
+\index{ma\_backend\_callbacks@{ma\_backend\_callbacks}!onDeviceRead@{onDeviceRead}}
+\index{onDeviceRead@{onDeviceRead}!ma\_backend\_callbacks@{ma\_backend\_callbacks}}
+\doxysubsubsection{\texorpdfstring{onDeviceRead}{onDeviceRead}}
+{\footnotesize\ttfamily \mbox{\hyperlink{external_2miniaudio_8h_ad1a04e53edf78c58e00613a1207bc881}{ma\+\_\+result}}(\texorpdfstring{$\ast$}{*} ma\+\_\+backend\+\_\+callbacks\+::on\+Device\+Read) (\mbox{\hyperlink{external_2miniaudio_8h_a9c271ff318d0525f593c5397b1853688}{ma\+\_\+device}} \texorpdfstring{$\ast$}{*}p\+Device, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\+Frames}}, \mbox{\hyperlink{external_2miniaudio_8h_a46937d096112f0d30ba68ef4d568b287}{ma\+\_\+uint32}} frame\+Count, \mbox{\hyperlink{external_2miniaudio_8h_a46937d096112f0d30ba68ef4d568b287}{ma\+\_\+uint32}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\+Frames\+Read}})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2miniaudio_8h_source_l06949}{6949}} of file \mbox{\hyperlink{external_2miniaudio_8h_source}{miniaudio.\+h}}.
+
+\Hypertarget{structma__backend__callbacks_a6957420a1cb860465c28a7f6154d2b28}\label{structma__backend__callbacks_a6957420a1cb860465c28a7f6154d2b28} 
+\index{ma\_backend\_callbacks@{ma\_backend\_callbacks}!onDeviceStart@{onDeviceStart}}
+\index{onDeviceStart@{onDeviceStart}!ma\_backend\_callbacks@{ma\_backend\_callbacks}}
+\doxysubsubsection{\texorpdfstring{onDeviceStart}{onDeviceStart}}
+{\footnotesize\ttfamily \mbox{\hyperlink{external_2miniaudio_8h_ad1a04e53edf78c58e00613a1207bc881}{ma\+\_\+result}}(\texorpdfstring{$\ast$}{*} ma\+\_\+backend\+\_\+callbacks\+::on\+Device\+Start) (\mbox{\hyperlink{external_2miniaudio_8h_a9c271ff318d0525f593c5397b1853688}{ma\+\_\+device}} \texorpdfstring{$\ast$}{*}p\+Device)}
+
+
+
+Definition at line \mbox{\hyperlink{external_2miniaudio_8h_source_l06947}{6947}} of file \mbox{\hyperlink{external_2miniaudio_8h_source}{miniaudio.\+h}}.
+
+\Hypertarget{structma__backend__callbacks_a1fac3ea46120e3d40c98a93af6d38d88}\label{structma__backend__callbacks_a1fac3ea46120e3d40c98a93af6d38d88} 
+\index{ma\_backend\_callbacks@{ma\_backend\_callbacks}!onDeviceStop@{onDeviceStop}}
+\index{onDeviceStop@{onDeviceStop}!ma\_backend\_callbacks@{ma\_backend\_callbacks}}
+\doxysubsubsection{\texorpdfstring{onDeviceStop}{onDeviceStop}}
+{\footnotesize\ttfamily \mbox{\hyperlink{external_2miniaudio_8h_ad1a04e53edf78c58e00613a1207bc881}{ma\+\_\+result}}(\texorpdfstring{$\ast$}{*} ma\+\_\+backend\+\_\+callbacks\+::on\+Device\+Stop) (\mbox{\hyperlink{external_2miniaudio_8h_a9c271ff318d0525f593c5397b1853688}{ma\+\_\+device}} \texorpdfstring{$\ast$}{*}p\+Device)}
+
+
+
+Definition at line \mbox{\hyperlink{external_2miniaudio_8h_source_l06948}{6948}} of file \mbox{\hyperlink{external_2miniaudio_8h_source}{miniaudio.\+h}}.
+
+\Hypertarget{structma__backend__callbacks_a4f0017de3b83ae0a870c851999f44cae}\label{structma__backend__callbacks_a4f0017de3b83ae0a870c851999f44cae} 
+\index{ma\_backend\_callbacks@{ma\_backend\_callbacks}!onDeviceUninit@{onDeviceUninit}}
+\index{onDeviceUninit@{onDeviceUninit}!ma\_backend\_callbacks@{ma\_backend\_callbacks}}
+\doxysubsubsection{\texorpdfstring{onDeviceUninit}{onDeviceUninit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{external_2miniaudio_8h_ad1a04e53edf78c58e00613a1207bc881}{ma\+\_\+result}}(\texorpdfstring{$\ast$}{*} ma\+\_\+backend\+\_\+callbacks\+::on\+Device\+Uninit) (\mbox{\hyperlink{external_2miniaudio_8h_a9c271ff318d0525f593c5397b1853688}{ma\+\_\+device}} \texorpdfstring{$\ast$}{*}p\+Device)}
+
+
+
+Definition at line \mbox{\hyperlink{external_2miniaudio_8h_source_l06946}{6946}} of file \mbox{\hyperlink{external_2miniaudio_8h_source}{miniaudio.\+h}}.
+
+\Hypertarget{structma__backend__callbacks_a51dc0f3af5c8d22b387b49195a1857de}\label{structma__backend__callbacks_a51dc0f3af5c8d22b387b49195a1857de} 
+\index{ma\_backend\_callbacks@{ma\_backend\_callbacks}!onDeviceWrite@{onDeviceWrite}}
+\index{onDeviceWrite@{onDeviceWrite}!ma\_backend\_callbacks@{ma\_backend\_callbacks}}
+\doxysubsubsection{\texorpdfstring{onDeviceWrite}{onDeviceWrite}}
+{\footnotesize\ttfamily \mbox{\hyperlink{external_2miniaudio_8h_ad1a04e53edf78c58e00613a1207bc881}{ma\+\_\+result}}(\texorpdfstring{$\ast$}{*} ma\+\_\+backend\+\_\+callbacks\+::on\+Device\+Write) (\mbox{\hyperlink{external_2miniaudio_8h_a9c271ff318d0525f593c5397b1853688}{ma\+\_\+device}} \texorpdfstring{$\ast$}{*}p\+Device, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\+Frames}}, \mbox{\hyperlink{external_2miniaudio_8h_a46937d096112f0d30ba68ef4d568b287}{ma\+\_\+uint32}} frame\+Count, \mbox{\hyperlink{external_2miniaudio_8h_a46937d096112f0d30ba68ef4d568b287}{ma\+\_\+uint32}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\+Frames\+Written}})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2miniaudio_8h_source_l06950}{6950}} of file \mbox{\hyperlink{external_2miniaudio_8h_source}{miniaudio.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/external/\mbox{\hyperlink{external_2miniaudio_8h}{miniaudio.\+h}}\end{DoxyCompactItemize}

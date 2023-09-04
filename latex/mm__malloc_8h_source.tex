@@ -1,0 +1,84 @@
+\doxysection{mm\+\_\+malloc.\+h}
+\hypertarget{mm__malloc_8h_source}{}\label{mm__malloc_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/mm\_malloc.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/mm\_malloc.h}}
+\mbox{\hyperlink{mm__malloc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00001}00001\ \textcolor{comment}{/*\ Copyright\ (C)\ 2004-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00002}00002\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00003}00003\ \textcolor{comment}{\ \ \ This\ file\ is\ part\ of\ GCC.}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00004}00004\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00005}00005\ \textcolor{comment}{\ \ \ GCC\ is\ free\ software;\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00006}00006\ \textcolor{comment}{\ \ \ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00007}00007\ \textcolor{comment}{\ \ \ the\ Free\ Software\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00008}00008\ \textcolor{comment}{\ \ \ any\ later\ version.}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00009}00009\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00010}00010\ \textcolor{comment}{\ \ \ GCC\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00011}00011\ \textcolor{comment}{\ \ \ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00012}00012\ \textcolor{comment}{\ \ \ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00013}00013\ \textcolor{comment}{\ \ \ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00014}00014\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00015}00015\ \textcolor{comment}{\ \ \ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00016}00016\ \textcolor{comment}{\ \ \ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00017}00017\ \textcolor{comment}{\ \ \ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00018}00018\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00019}00019\ \textcolor{comment}{\ \ \ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00020}00020\ \textcolor{comment}{\ \ \ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00021}00021\ \textcolor{comment}{\ \ \ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00022}00022\ \textcolor{comment}{\ \ \ <http://www.gnu.org/licenses/>.\ \ */}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00024}00024\ \textcolor{preprocessor}{\#ifndef\ \_MM\_MALLOC\_H\_INCLUDED}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00025}00025\ \textcolor{preprocessor}{\#define\ \_MM\_MALLOC\_H\_INCLUDED}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00027}00027\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00028}00028\ \textcolor{preprocessor}{\#if\ \_\_STDC\_HOSTED\_\_}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00029}00029\ \textcolor{preprocessor}{\#include\ <errno.h>}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00030}00030\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00032}00032\ \textcolor{keyword}{static}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_inline\_\_}}\ \textcolor{keywordtype}{void}\ *\ }
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00033}\mbox{\hyperlink{mm__malloc_8h_afbf0104749c4417607a7ffb344945ac2}{00033}}\ \mbox{\hyperlink{mm__malloc_8h_afbf0104749c4417607a7ffb344945ac2}{\_mm\_malloc}}\ (\textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_size}},\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_align}})}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00034}00034\ \{}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00035}00035\ \ \ \textcolor{keywordtype}{void}\ *\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_malloc\_ptr}};}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00036}00036\ \ \ \textcolor{keywordtype}{void}\ *\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_aligned\_ptr}};}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00038}00038\ \ \ \textcolor{comment}{/*\ Error\ if\ align\ is\ not\ a\ power\ of\ two.\ \ */}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00039}00039\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_align}}\ \&\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_align}}\ -\/\ 1))}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00040}00040\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00041}00041\ \textcolor{preprocessor}{\#if\ \_\_STDC\_HOSTED\_\_}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00042}00042\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{errno}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{EINVAL}};}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00043}00043\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00044}00044\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ((\textcolor{keywordtype}{void}\ *)\ 0);}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00045}00045\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00047}00047\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_size}}\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{return}\ ((\textcolor{keywordtype}{void}\ *)\ 0);}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00050}00050\ \ \textcolor{comment}{/*\ Assume\ malloc'd\ pointer\ is\ aligned\ at\ least\ to\ sizeof\ (void*).}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00051}00051\ \textcolor{comment}{\ \ \ \ If\ necessary,\ add\ another\ sizeof\ (void*)\ to\ store\ the\ value}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00052}00052\ \textcolor{comment}{\ \ \ \ returned\ by\ malloc.\ Effectively\ this\ enforces\ a\ minimum\ alignment}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00053}00053\ \textcolor{comment}{\ \ \ \ of\ sizeof\ double.\ */}\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00054}00054\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_align}}\ <\ 2\ *\ \textcolor{keyword}{sizeof}\ (\textcolor{keywordtype}{void}\ *))}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00055}00055\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_align}}\ =\ 2\ *\ \textcolor{keyword}{sizeof}\ (\textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00057}00057\ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_malloc\_ptr}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{malloc}}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_size}}\ +\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_align}});}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00058}00058\ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_malloc\_ptr}})}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00059}00059\ \ \ \ \ \textcolor{keywordflow}{return}\ ((\textcolor{keywordtype}{void}\ *)\ 0);}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00061}00061\ \ \ \textcolor{comment}{/*\ Align\ \ We\ have\ at\ least\ sizeof\ (void\ *)\ space\ below\ malloc'd\ ptr.\ */}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00062}00062\ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_aligned\_ptr}}\ =\ (\textcolor{keywordtype}{void}\ *)\ (((\textcolor{keywordtype}{size\_t})\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_malloc\_ptr}}\ +\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_align}})}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\ \string~((\mbox{\hyperlink{stddef_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\_t}})\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_align}})\ -\/\ 1));}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00065}00065\ \ \ \textcolor{comment}{/*\ Store\ the\ original\ pointer\ just\ before\ p.\ \ */}\ \ }
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00066}00066\ \ \ ((\textcolor{keywordtype}{void}\ **)\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_aligned\_ptr}})[-\/1]\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_malloc\_ptr}};}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00068}00068\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_aligned\_ptr}};}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00069}00069\ \}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00071}00071\ \textcolor{keyword}{static}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_inline\_\_}}\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00072}\mbox{\hyperlink{mm__malloc_8h_a6632c0aa91cb8b054726b4a473421872}{00072}}\ \mbox{\hyperlink{mm__malloc_8h_a6632c0aa91cb8b054726b4a473421872}{\_mm\_free}}\ (\textcolor{keywordtype}{void}\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_aligned\_ptr}})}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00073}00073\ \{}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00074}00074\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_aligned\_ptr}})}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00075}00075\ \ \ \ \ free\ (((\textcolor{keywordtype}{void}\ **)\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_aligned\_ptr}})[-\/1]);}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00076}00076\ \}}
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{mm__malloc_8h_source_l00078}00078\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_MM\_MALLOC\_H\_INCLUDED\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

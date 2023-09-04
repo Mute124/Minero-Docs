@@ -1,0 +1,92 @@
+\doxysection{C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/include/c++/ext/pb\+\_\+ds/detail/rb\+\_\+tree\+\_\+map\+\_\+/rb\+\_\+tree\+\_\+.hpp File Reference}
+\hypertarget{rb__tree___8hpp}{}\label{rb__tree___8hpp}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/pb\_ds/detail/rb\_tree\_map\_/rb\_tree\_.hpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/pb\_ds/detail/rb\_tree\_map\_/rb\_tree\_.hpp}}
+{\ttfamily \#include $<$ext/pb\+\_\+ds/detail/standard\+\_\+policies.\+hpp$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$debug/debug.\+h$>$}\newline
+{\ttfamily \#include $<$ext/pb\+\_\+ds/detail/rb\+\_\+tree\+\_\+map\+\_\+/constructors\+\_\+destructor\+\_\+fn\+\_\+imps.\+hpp$>$}\newline
+{\ttfamily \#include $<$ext/pb\+\_\+ds/detail/rb\+\_\+tree\+\_\+map\+\_\+/insert\+\_\+fn\+\_\+imps.\+hpp$>$}\newline
+{\ttfamily \#include $<$ext/pb\+\_\+ds/detail/rb\+\_\+tree\+\_\+map\+\_\+/erase\+\_\+fn\+\_\+imps.\+hpp$>$}\newline
+{\ttfamily \#include $<$ext/pb\+\_\+ds/detail/rb\+\_\+tree\+\_\+map\+\_\+/debug\+\_\+fn\+\_\+imps.\+hpp$>$}\newline
+{\ttfamily \#include $<$ext/pb\+\_\+ds/detail/rb\+\_\+tree\+\_\+map\+\_\+/split\+\_\+join\+\_\+fn\+\_\+imps.\+hpp$>$}\newline
+{\ttfamily \#include $<$ext/pb\+\_\+ds/detail/rb\+\_\+tree\+\_\+map\+\_\+/info\+\_\+fn\+\_\+imps.\+hpp$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1_p_b___d_s___r_b___t_r_e_e___n_a_m_e}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::\+PB\+\_\+\+DS\+\_\+\+RB\+\_\+\+TREE\+\_\+\+NAME$<$ Key, Mapped, Cmp\+\_\+\+Fn, Node\+\_\+\+And\+\_\+\+It\+\_\+\+Traits, \+\_\+\+Alloc $>$}}
+\begin{DoxyCompactList}\small\item\em Red-\/\+Black tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace____gnu__pbds}{\+\_\+\+\_\+gnu\+\_\+pbds}}
+\begin{DoxyCompactList}\small\item\em GNU extensions for policy-\/based data structures for public use. \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace____gnu__pbds_1_1detail}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{rb__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\+\_\+\+DS\+\_\+\+CLASS\+\_\+\+T\+\_\+\+DEC}}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{rb__tree___8hpp_a304b8b73a11afe64bfca54576b91263b}{PB\+\_\+\+DS\+\_\+\+CLASS\+\_\+\+C\+\_\+\+DEC}}~    PB\+\_\+\+DS\+\_\+\+RB\+\_\+\+TREE\+\_\+\+NAME$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Key}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Mapped}}, Cmp\+\_\+\+Fn, Node\+\_\+\+And\+\_\+\+It\+\_\+\+Traits, \+\_\+\+Alloc$>$
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{rb__tree___8hpp_a2131639232584a509463036a9aae9534}{PB\+\_\+\+DS\+\_\+\+RB\+\_\+\+TREE\+\_\+\+BASE}}~    \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{PB\+\_\+\+DS\+\_\+\+RB\+\_\+\+TREE\+\_\+\+BASE\+\_\+\+NAME}}$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Key}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Mapped}}, Cmp\+\_\+\+Fn, Node\+\_\+\+And\+\_\+\+It\+\_\+\+Traits, \+\_\+\+Alloc$>$
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{rb__tree___8hpp_aab7f010e7d119791c979b0a32848c437}{PB\+\_\+\+DS\+\_\+\+STRUCT\+\_\+\+ONLY\+\_\+\+ASSERT\+\_\+\+VALID}}(\mbox{\hyperlink{core__type__vec4_8cpp_a50b69e8e55167990c85f65e0a656e294a58833a3110c570fb05130d40c365d1e4}{X}})~  \mbox{\hyperlink{assertions_8h_a784d392bfeacfb0e3e6e0d2719489fb6}{\+\_\+\+GLIBCXX\+\_\+\+DEBUG\+\_\+\+ONLY}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{X.\+structure\+\_\+only\+\_\+assert\+\_\+valid}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+\+FILE\+\_\+\+\_\+}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+\+LINE\+\_\+\+\_\+}});)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains an implementation for Red Black trees. 
+
+Definition in file \mbox{\hyperlink{rb__tree___8hpp_source}{rb\+\_\+tree\+\_\+.\+hpp}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{rb__tree___8hpp_a304b8b73a11afe64bfca54576b91263b}\label{rb__tree___8hpp_a304b8b73a11afe64bfca54576b91263b} 
+\index{rb\_tree\_.hpp@{rb\_tree\_.hpp}!PB\_DS\_CLASS\_C\_DEC@{PB\_DS\_CLASS\_C\_DEC}}
+\index{PB\_DS\_CLASS\_C\_DEC@{PB\_DS\_CLASS\_C\_DEC}!rb\_tree\_.hpp@{rb\_tree\_.hpp}}
+\doxysubsubsection{\texorpdfstring{PB\_DS\_CLASS\_C\_DEC}{PB\_DS\_CLASS\_C\_DEC}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} PB\+\_\+\+DS\+\_\+\+CLASS\+\_\+\+C\+\_\+\+DEC~    PB\+\_\+\+DS\+\_\+\+RB\+\_\+\+TREE\+\_\+\+NAME$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Key}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Mapped}}, Cmp\+\_\+\+Fn, Node\+\_\+\+And\+\_\+\+It\+\_\+\+Traits, \+\_\+\+Alloc$>$}
+
+
+
+Definition at line \mbox{\hyperlink{rb__tree___8hpp_source_l00065}{65}} of file \mbox{\hyperlink{rb__tree___8hpp_source}{rb\+\_\+tree\+\_\+.\+hpp}}.
+
+\Hypertarget{rb__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}\label{rb__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff} 
+\index{rb\_tree\_.hpp@{rb\_tree\_.hpp}!PB\_DS\_CLASS\_T\_DEC@{PB\_DS\_CLASS\_T\_DEC}}
+\index{PB\_DS\_CLASS\_T\_DEC@{PB\_DS\_CLASS\_T\_DEC}!rb\_tree\_.hpp@{rb\_tree\_.hpp}}
+\doxysubsubsection{\texorpdfstring{PB\_DS\_CLASS\_T\_DEC}{PB\_DS\_CLASS\_T\_DEC}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} PB\+\_\+\+DS\+\_\+\+CLASS\+\_\+\+T\+\_\+\+DEC}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Key}},\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Mapped}},\ \textcolor{keyword}{typename}\ Cmp\_Fn,\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ Node\_And\_It\_Traits,\ \textcolor{keyword}{typename}\ \_Alloc>}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{rb__tree___8hpp_source_l00051}{51}} of file \mbox{\hyperlink{rb__tree___8hpp_source}{rb\+\_\+tree\+\_\+.\+hpp}}.
+
+\Hypertarget{rb__tree___8hpp_a2131639232584a509463036a9aae9534}\label{rb__tree___8hpp_a2131639232584a509463036a9aae9534} 
+\index{rb\_tree\_.hpp@{rb\_tree\_.hpp}!PB\_DS\_RB\_TREE\_BASE@{PB\_DS\_RB\_TREE\_BASE}}
+\index{PB\_DS\_RB\_TREE\_BASE@{PB\_DS\_RB\_TREE\_BASE}!rb\_tree\_.hpp@{rb\_tree\_.hpp}}
+\doxysubsubsection{\texorpdfstring{PB\_DS\_RB\_TREE\_BASE}{PB\_DS\_RB\_TREE\_BASE}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} PB\+\_\+\+DS\+\_\+\+RB\+\_\+\+TREE\+\_\+\+BASE~    \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{PB\+\_\+\+DS\+\_\+\+RB\+\_\+\+TREE\+\_\+\+BASE\+\_\+\+NAME}}$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Key}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Mapped}}, Cmp\+\_\+\+Fn, Node\+\_\+\+And\+\_\+\+It\+\_\+\+Traits, \+\_\+\+Alloc$>$}
+
+
+
+Definition at line \mbox{\hyperlink{rb__tree___8hpp_source_l00068}{68}} of file \mbox{\hyperlink{rb__tree___8hpp_source}{rb\+\_\+tree\+\_\+.\+hpp}}.
+
+\Hypertarget{rb__tree___8hpp_aab7f010e7d119791c979b0a32848c437}\label{rb__tree___8hpp_aab7f010e7d119791c979b0a32848c437} 
+\index{rb\_tree\_.hpp@{rb\_tree\_.hpp}!PB\_DS\_STRUCT\_ONLY\_ASSERT\_VALID@{PB\_DS\_STRUCT\_ONLY\_ASSERT\_VALID}}
+\index{PB\_DS\_STRUCT\_ONLY\_ASSERT\_VALID@{PB\_DS\_STRUCT\_ONLY\_ASSERT\_VALID}!rb\_tree\_.hpp@{rb\_tree\_.hpp}}
+\doxysubsubsection{\texorpdfstring{PB\_DS\_STRUCT\_ONLY\_ASSERT\_VALID}{PB\_DS\_STRUCT\_ONLY\_ASSERT\_VALID}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} PB\+\_\+\+DS\+\_\+\+STRUCT\+\_\+\+ONLY\+\_\+\+ASSERT\+\_\+\+VALID(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{core__type__vec4_8cpp_a50b69e8e55167990c85f65e0a656e294a58833a3110c570fb05130d40c365d1e4}{X}} }\end{DoxyParamCaption})~  \mbox{\hyperlink{assertions_8h_a784d392bfeacfb0e3e6e0d2719489fb6}{\+\_\+\+GLIBCXX\+\_\+\+DEBUG\+\_\+\+ONLY}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{X.\+structure\+\_\+only\+\_\+assert\+\_\+valid}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+\+FILE\+\_\+\+\_\+}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+\+LINE\+\_\+\+\_\+}});)}
+
+
+
+Definition at line \mbox{\hyperlink{rb__tree___8hpp_source_l00231}{231}} of file \mbox{\hyperlink{rb__tree___8hpp_source}{rb\+\_\+tree\+\_\+.\+hpp}}.
+

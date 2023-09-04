@@ -1,0 +1,167 @@
+\doxysection{type\+\_\+utils.\+hpp}
+\hypertarget{type__utils_8hpp_source}{}\label{type__utils_8hpp_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/pb\_ds/detail/type\_utils.hpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/pb\_ds/detail/type\_utils.hpp}}
+\mbox{\hyperlink{type__utils_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00001}00001\ \textcolor{comment}{//\ -\/*-\/\ C++\ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00003}00003\ \textcolor{comment}{//\ Copyright\ (C)\ 2005-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00005}00005\ \textcolor{comment}{//\ This\ file\ is\ part\ of\ the\ GNU\ ISO\ C++\ Library.\ \ This\ library\ is\ free}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00006}00006\ \textcolor{comment}{//\ software;\ you\ can\ redistribute\ it\ and/or\ modify\ it\ under\ the\ terms}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00007}00007\ \textcolor{comment}{//\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by\ the\ Free\ Software}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00008}00008\ \textcolor{comment}{//\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)\ any\ later}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00009}00009\ \textcolor{comment}{//\ version.}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00011}00011\ \textcolor{comment}{//\ This\ library\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,\ but}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00012}00012\ \textcolor{comment}{//\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00013}00013\ \textcolor{comment}{//\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the\ GNU}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00014}00014\ \textcolor{comment}{//\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00016}00016\ \textcolor{comment}{//\ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00017}00017\ \textcolor{comment}{//\ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00018}00018\ \textcolor{comment}{//\ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00020}00020\ \textcolor{comment}{//\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00021}00021\ \textcolor{comment}{//\ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00022}00022\ \textcolor{comment}{//\ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00023}00023\ \textcolor{comment}{//\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00025}00025\ \textcolor{comment}{//\ Copyright\ (C)\ 2004\ Ami\ Tavory\ and\ Vladimir\ Dreizin,\ IBM-\/HRL.}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00027}00027\ \textcolor{comment}{//\ Permission\ to\ use,\ copy,\ modify,\ sell,\ and\ distribute\ this\ software}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00028}00028\ \textcolor{comment}{//\ is\ hereby\ granted\ without\ fee,\ provided\ that\ the\ above\ copyright}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00029}00029\ \textcolor{comment}{//\ notice\ appears\ in\ all\ copies,\ and\ that\ both\ that\ copyright\ notice}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00030}00030\ \textcolor{comment}{//\ and\ this\ permission\ notice\ appear\ in\ supporting\ documentation.\ None}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00031}00031\ \textcolor{comment}{//\ of\ the\ above\ authors,\ nor\ IBM\ Haifa\ Research\ Laboratories,\ make\ any}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00032}00032\ \textcolor{comment}{//\ representation\ about\ the\ suitability\ of\ this\ software\ for\ any}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00033}00033\ \textcolor{comment}{//\ purpose.\ It\ is\ provided\ "{}as\ is"{}\ without\ express\ or\ implied}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00034}00034\ \textcolor{comment}{//\ warranty.}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00042}00042\ \textcolor{preprocessor}{\#ifndef\ PB\_DS\_TYPE\_UTILS\_HPP}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00043}00043\ \textcolor{preprocessor}{\#define\ PB\_DS\_TYPE\_UTILS\_HPP}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00045}00045\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00046}00046\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00047}00047\ \textcolor{preprocessor}{\#include\ <tr1/type\_traits>}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00048}00048\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{type__traits_8h}{ext/type\_traits.h}}>}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00049}00049\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{ext_2numeric__traits_8h}{ext/numeric\_traits.h}}>}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00051}00051\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace____gnu__pbds}{\_\_gnu\_pbds}}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00052}00052\ \{}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00053}00053\ \ \ \textcolor{keyword}{namespace\ }detail}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00054}00054\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00055}00055\ \ \ \ \ \textcolor{keyword}{using\ }std::tr1::is\_same;}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00056}00056\ \ \ \ \ \textcolor{keyword}{using\ }std::tr1::is\_const;}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00057}00057\ \ \ \ \ \textcolor{keyword}{using\ }std::tr1::is\_pointer;}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00058}00058\ \ \ \ \ \textcolor{keyword}{using\ }std::tr1::is\_reference;}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00059}00059\ \ \ \ \ \textcolor{keyword}{using\ }std::tr1::is\_fundamental;}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00060}00060\ \ \ \ \ \textcolor{keyword}{using\ }std::tr1::is\_member\_object\_pointer;}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00061}00061\ \ \ \ \ \textcolor{keyword}{using\ }std::tr1::is\_member\_pointer;}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00062}00062\ \ \ \ \ \textcolor{keyword}{using\ }std::tr1::is\_base\_of;}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00063}00063\ \ \ \ \ \textcolor{keyword}{using\ }std::tr1::remove\_const;}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00064}00064\ \ \ \ \ \textcolor{keyword}{using\ }std::tr1::remove\_reference;}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00066}00066\ \ \ \ \ \textcolor{comment}{//\ Need\ integral\_const<bool,\ true>\ <-\/>\ integral\_const<int,\ 1>,\ so}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00067}00067\ \ \ \ \ \textcolor{comment}{//\ because\ of\ this\ use\ the\ following\ typedefs\ instead\ of\ importing}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00068}00068\ \ \ \ \ \textcolor{comment}{//\ std::tr1's.}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00069}00069\ \ \ \ \ \textcolor{keyword}{using\ }std::tr1::integral\_constant;}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00070}\mbox{\hyperlink{namespace____gnu__pbds_1_1detail_ad815331549743ef85b02064545c417a8}{00070}}\ \ \ \ \ \textcolor{keyword}{typedef}\ std::tr1::integral\_constant<int,\ 1>\ \mbox{\hyperlink{namespace____gnu__pbds_1_1detail_ad815331549743ef85b02064545c417a8}{true\_type}};}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00071}\mbox{\hyperlink{namespace____gnu__pbds_1_1detail_a10f33acc620f2a4d910303f6606f2038}{00071}}\ \ \ \ \ \textcolor{keyword}{typedef}\ std::tr1::integral\_constant<int,\ 0>\ \mbox{\hyperlink{namespace____gnu__pbds_1_1detail_a10f33acc620f2a4d910303f6606f2038}{false\_type}};}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00073}00073\ \ \ \ \ \textcolor{keyword}{using\ }\_\_gnu\_cxx::\_\_conditional\_type;}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00074}00074\ \ \ \ \ \textcolor{keyword}{using\ }\_\_gnu\_cxx::\_\_numeric\_traits;}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00076}00076\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00077}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1is__const__pointer}{00077}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1is__const__pointer}{is\_const\_pointer}}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00078}00078\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00079}00079\ \ \ \ \ \ \ \textcolor{keyword}{enum}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00080}00080\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00081}00081\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{value}}\ =\ is\_const<T>::value\ \&\&\ is\_pointer<T>::value}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00082}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1is__const__pointer_a9fc521df4edf9d753f4e2c5c3ab1b704afd7992517df3a608083179269d503a4c}{00082}}\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00083}00083\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00085}00085\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00086}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1is__const__reference}{00086}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1is__const__reference}{is\_const\_reference}}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00087}00087\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00088}00088\ \ \ \ \ \ \ \textcolor{keyword}{enum}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00089}00089\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00090}00090\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{value}}\ =\ is\_const<T>::value\ \&\&\ is\_reference<T>::value}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00091}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1is__const__reference_ace8841f9c3f4d230fd759847f7ee205caf9d89354f3bae286aea1cea65b9c4d40}{00091}}\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00092}00092\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00094}00094\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00095}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1is__simple}{00095}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1is__simple}{is\_simple}}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00096}00096\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00097}00097\ \ \ \ \ \ \ \textcolor{keyword}{enum}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00098}00098\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00099}00099\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{value}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{is\_fundamental<typename\ remove\_const<T>::type}}>\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{::value}}\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00100}00100\ \ \ \ \ \ \ ||\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{is\_pointer<typename\ remove\_const<T>::type}}>\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{::value}}\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00101}00101\ \ \ \ \ \ \ ||\ is\_member\_pointer<T>::value\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00102}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1is__simple_a4c2a96bbed2b6bd57f837bcb6d55f784a1bfb0c94d949472cfbcdd3e7c85faec3}{00102}}\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00103}00103\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00105}00105\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00106}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1is__pair}{00106}}\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1is__pair}{is\_pair}}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00107}00107\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00108}00108\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00109}00109\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ U>}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00110}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1is__pair_1_1is__pair__imp}{00110}}\ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1is__pair_1_1is__pair__imp}{is\_pair\_imp}}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00111}00111\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00112}00112\ \ \ \ \ \textcolor{keyword}{enum}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00113}00113\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{value}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00115}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1is__pair_1_1is__pair__imp_aa7717de059e9755c69ee200c93ca169face1f9c5f6af8ab022516c7f49059b2b0}{00115}}\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00116}00116\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00118}00118\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ U,\ \textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00119}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1is__pair_1_1is__pair__imp_3_01std_1_1pair_3_01_u_00_01_v_01_4_01_4}{00119}}\ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1is__pair_1_1is__pair__imp}{is\_pair\_imp}}<\mbox{\hyperlink{namespacestd}{std}}::pair<U,V>\ >}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00120}00120\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00121}00121\ \ \ \ \ \textcolor{keyword}{enum}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00122}00122\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00123}00123\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{value}}\ =\ 1}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00124}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1is__pair_1_1is__pair__imp_3_01std_1_1pair_3_01_u_00_01_v_01_4_01_4_aace66a1752c68d5325f81c117b342ad5a9d5e4483d795156b9d386accd508ba7e}{00124}}\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00125}00125\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00127}00127\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00128}00128\ \ \ \ \ \ \ \textcolor{keyword}{enum}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00129}00129\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00130}00130\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{value}}\ =\ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1is__pair_1_1is__pair__imp_aa7717de059e9755c69ee200c93ca169face1f9c5f6af8ab022516c7f49059b2b0}{is\_pair\_imp<T>::value}}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00131}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1is__pair_a202db7f73f971c0bee5a137f3158d85caa7a2fb1e394f168efce81dc5d3822f98}{00131}}\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00132}00132\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00134}00134\ \ \ \ \ \textcolor{comment}{//\ Use\ C++11's\ static\_assert\ if\ possible.}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00135}00135\ \textcolor{preprocessor}{\#if\ \_\_cplusplus\ >=\ 201103L}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00136}00136\ \textcolor{preprocessor}{\#define\ PB\_DS\_STATIC\_ASSERT(UNIQUE,\ E)\ \ static\_assert(E,\ \#UNIQUE)}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00137}00137\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00138}00138\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keywordtype}{bool}>}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00139}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1____static__assert}{00139}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1____static__assert}{\_\_static\_assert}};}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00140}00140\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00141}00141\ \ \ \ \ \textcolor{keyword}{template}<>}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00142}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1____static__assert_3_01true_01_4}{00142}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1____static__assert}{\_\_static\_assert}}<\mbox{\hyperlink{stdbool_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}>}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00143}00143\ \ \ \ \ \{\ \};}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00144}00144\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00145}00145\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keywordtype}{int}>}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00146}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1____static__assert__dumclass}{00146}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1____static__assert__dumclass}{\_\_static\_assert\_dumclass}}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00147}00147\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00148}00148\ \ \ \ \ \ \ \textcolor{keyword}{enum}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00149}00149\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00150}00150\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a14cfbe2fc2234f5504618905b69d1e06}{v}}\ =\ 1}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00151}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1____static__assert__dumclass_ad9c40d38b4ae8d060089ad2108b28685ad1f4be71ebf632215ec015da991d7565}{00151}}\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00152}00152\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00153}00153\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00154}\mbox{\hyperlink{type__utils_8hpp_a0610a49e32a86da761a7bd14b8fddc33}{00154}}\ \textcolor{preprocessor}{\#define\ PB\_DS\_STATIC\_ASSERT(UNIQUE,\ E)\ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00155}00155\ \textcolor{preprocessor}{\ \ \ \ typedef\ \_\_gnu\_pbds::detail::\_\_static\_assert\_dumclass<sizeof(\_\_gnu\_pbds::detail::\_\_static\_assert<bool(E)>)>\ UNIQUE\#\#\_\_static\_assert\_type}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00156}00156\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00157}00157\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00158}00158\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00159}00159\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Type>}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00160}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1type__to__type}{00160}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1type__to__type}{type\_to\_type}}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00161}00161\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00162}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1type__to__type_a71c0bcce3c66fbe208aa77d03c93fc5e}{00162}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ Type\ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1type__to__type_a71c0bcce3c66fbe208aa77d03c93fc5e}{type}};}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00163}00163\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00164}00164\ \ \ \}\ \textcolor{comment}{//\ namespace\ detail}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00165}00165\ \}\ \textcolor{comment}{//\ namespace\ \_\_gnu\_pbds}}
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{type__utils_8hpp_source_l00167}00167\ \textcolor{preprocessor}{\#endif\ }}
+
+\end{DoxyCode}

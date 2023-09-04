@@ -1,0 +1,72 @@
+\doxysection{assertions.\+h}
+\hypertarget{assertions_8h_source}{}\label{assertions_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/debug/assertions.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/debug/assertions.h}}
+\mbox{\hyperlink{assertions_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00001}00001\ \textcolor{comment}{//\ Debugging\ support\ implementation\ -\/*-\/\ C++\ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00003}00003\ \textcolor{comment}{//\ Copyright\ (C)\ 2003-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00005}00005\ \textcolor{comment}{//\ This\ file\ is\ part\ of\ the\ GNU\ ISO\ C++\ Library.\ \ This\ library\ is\ free}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00006}00006\ \textcolor{comment}{//\ software;\ you\ can\ redistribute\ it\ and/or\ modify\ it\ under\ the}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00007}00007\ \textcolor{comment}{//\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by\ the}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00008}00008\ \textcolor{comment}{//\ Free\ Software\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00009}00009\ \textcolor{comment}{//\ any\ later\ version.}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00011}00011\ \textcolor{comment}{//\ This\ library\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00012}00012\ \textcolor{comment}{//\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00013}00013\ \textcolor{comment}{//\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00014}00014\ \textcolor{comment}{//\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00016}00016\ \textcolor{comment}{//\ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00017}00017\ \textcolor{comment}{//\ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00018}00018\ \textcolor{comment}{//\ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00020}00020\ \textcolor{comment}{//\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00021}00021\ \textcolor{comment}{//\ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00022}00022\ \textcolor{comment}{//\ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00023}00023\ \textcolor{comment}{//\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00029}00029\ \textcolor{preprocessor}{\#ifndef\ \_GLIBCXX\_DEBUG\_ASSERTIONS\_H}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00030}00030\ \textcolor{preprocessor}{\#define\ \_GLIBCXX\_DEBUG\_ASSERTIONS\_H\ 1}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00032}00032\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{c_09_09config_8h}{bits/c++config.h}}>}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00034}00034\ \textcolor{preprocessor}{\#ifndef\ \_GLIBCXX\_DEBUG}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00036}\mbox{\hyperlink{assertions_8h_aa2bfb4e74c7be93673913edf15f85504}{00036}}\ \textcolor{preprocessor}{\#\ define\ \_GLIBCXX\_DEBUG\_ASSERT(\_Condition)}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00037}\mbox{\hyperlink{assertions_8h_a6f2ef543506606e8ea3dbf0c52e61c5d}{00037}}\ \textcolor{preprocessor}{\#\ define\ \_GLIBCXX\_DEBUG\_PEDASSERT(\_Condition)}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00038}\mbox{\hyperlink{assertions_8h_a784d392bfeacfb0e3e6e0d2719489fb6}{00038}}\ \textcolor{preprocessor}{\#\ define\ \_GLIBCXX\_DEBUG\_ONLY(\_Statement)}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00040}00040\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00042}00042\ \textcolor{preprocessor}{\#ifndef\ \_GLIBCXX\_ASSERTIONS}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00043}\mbox{\hyperlink{assertions_8h_afc160a4474786727ca2476c94856ddb3}{00043}}\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_non\_empty\_range(\_First,\_Last)}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00044}\mbox{\hyperlink{assertions_8h_a208d3b3e6bd58e9f7f62942c3261fc9b}{00044}}\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_nonempty()}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00045}\mbox{\hyperlink{assertions_8h_ab8d8aa1a9d4e3e7b8dbee295f1a9f115}{00045}}\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_subscript(\_N)}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00046}00046\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00048}00048\ \textcolor{comment}{//\ Verify\ that\ [\_First,\ \_Last)\ forms\ a\ non-\/empty\ iterator\ range.}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00049}00049\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_non\_empty\_range(\_First,\_Last)\ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00050}00050\ \textcolor{preprocessor}{\ \ \_\_glibcxx\_assert(\_First\ !=\ \_Last)}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00051}00051\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_subscript(\_N)\ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00052}00052\ \textcolor{preprocessor}{\ \ \_\_glibcxx\_assert(\_N\ <\ this-\/>size())}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00053}00053\ \textcolor{comment}{//\ Verify\ that\ the\ container\ is\ nonempty}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00054}00054\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_requires\_nonempty()\ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00055}00055\ \textcolor{preprocessor}{\ \ \_\_glibcxx\_assert(!this-\/>empty())}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00056}00056\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00058}00058\ \textcolor{preprocessor}{\#ifdef\ \_GLIBCXX\_DEBUG}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00059}00059\ \textcolor{preprocessor}{\#\ define\ \_GLIBCXX\_DEBUG\_ASSERT(\_Condition)\ \_\_glibcxx\_assert(\_Condition)}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00061}00061\ \textcolor{preprocessor}{\#\ ifdef\ \_GLIBCXX\_DEBUG\_PEDANTIC}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00062}00062\ \textcolor{preprocessor}{\#\ \ define\ \_GLIBCXX\_DEBUG\_PEDASSERT(\_Condition)\ \_GLIBCXX\_DEBUG\_ASSERT(\_Condition)}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00063}00063\ \textcolor{preprocessor}{\#\ else}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00064}00064\ \textcolor{preprocessor}{\#\ \ define\ \_GLIBCXX\_DEBUG\_PEDASSERT(\_Condition)}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00065}00065\ \textcolor{preprocessor}{\#\ endif}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00067}00067\ \textcolor{preprocessor}{\#\ define\ \_GLIBCXX\_DEBUG\_ONLY(\_Statement)\ \_Statement}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00068}00068\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{assertions_8h_source_l00070}00070\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_GLIBCXX\_DEBUG\_ASSERTIONS}}
+
+\end{DoxyCode}

@@ -1,0 +1,211 @@
+\doxysection{binomial\+\_\+heap\+\_\+base\+\_\+.\+hpp}
+\hypertarget{binomial__heap__base___8hpp_source}{}\label{binomial__heap__base___8hpp_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/pb\_ds/detail/binomial\_heap\_base\_/binomial\_heap\_base\_.hpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/pb\_ds/detail/binomial\_heap\_base\_/binomial\_heap\_base\_.hpp}}
+\mbox{\hyperlink{binomial__heap__base___8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00001}00001\ \textcolor{comment}{//\ -\/*-\/\ C++\ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00003}00003\ \textcolor{comment}{//\ Copyright\ (C)\ 2005-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00005}00005\ \textcolor{comment}{//\ This\ file\ is\ part\ of\ the\ GNU\ ISO\ C++\ Library.\ \ This\ library\ is\ free}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00006}00006\ \textcolor{comment}{//\ software;\ you\ can\ redistribute\ it\ and/or\ modify\ it\ under\ the\ terms}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00007}00007\ \textcolor{comment}{//\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by\ the\ Free\ Software}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00008}00008\ \textcolor{comment}{//\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)\ any\ later}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00009}00009\ \textcolor{comment}{//\ version.}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00011}00011\ \textcolor{comment}{//\ This\ library\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,\ but}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00012}00012\ \textcolor{comment}{//\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00013}00013\ \textcolor{comment}{//\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the\ GNU}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00014}00014\ \textcolor{comment}{//\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00016}00016\ \textcolor{comment}{//\ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00017}00017\ \textcolor{comment}{//\ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00018}00018\ \textcolor{comment}{//\ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00020}00020\ \textcolor{comment}{//\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00021}00021\ \textcolor{comment}{//\ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00022}00022\ \textcolor{comment}{//\ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00023}00023\ \textcolor{comment}{//\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00025}00025\ \textcolor{comment}{//\ Copyright\ (C)\ 2004\ Ami\ Tavory\ and\ Vladimir\ Dreizin,\ IBM-\/HRL.}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00027}00027\ \textcolor{comment}{//\ Permission\ to\ use,\ copy,\ modify,\ sell,\ and\ distribute\ this\ software}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00028}00028\ \textcolor{comment}{//\ is\ hereby\ granted\ without\ fee,\ provided\ that\ the\ above\ copyright}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00029}00029\ \textcolor{comment}{//\ notice\ appears\ in\ all\ copies,\ and\ that\ both\ that\ copyright\ notice}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00030}00030\ \textcolor{comment}{//\ and\ this\ permission\ notice\ appear\ in\ supporting\ documentation.\ None}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00031}00031\ \textcolor{comment}{//\ of\ the\ above\ authors,\ nor\ IBM\ Haifa\ Research\ Laboratories,\ make\ any}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00032}00032\ \textcolor{comment}{//\ representation\ about\ the\ suitability\ of\ this\ software\ for\ any}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00033}00033\ \textcolor{comment}{//\ purpose.\ It\ is\ provided\ "{}as\ is"{}\ without\ express\ or\ implied}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00034}00034\ \textcolor{comment}{//\ warranty.}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00041}00041\ \textcolor{preprocessor}{\#ifndef\ PB\_DS\_BINOMIAL\_HEAP\_BASE\_HPP}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00042}00042\ \textcolor{preprocessor}{\#define\ PB\_DS\_BINOMIAL\_HEAP\_BASE\_HPP}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00044}00044\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00045}00045\ \textcolor{comment}{\ *\ Binomial\ heap\ base.}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00046}00046\ \textcolor{comment}{\ *\ Vuillemin\ J\ is\ the\ mastah.}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00047}00047\ \textcolor{comment}{\ *\ Modified\ from\ CLRS.}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00048}00048\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00050}00050\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{debug_8h}{debug/debug.h}}>}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00051}00051\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{cond__dealtor_8hpp}{ext/pb\_ds/detail/cond\_dealtor.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00052}00052\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{type__utils_8hpp}{ext/pb\_ds/detail/type\_utils.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00053}00053\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{left__child__next__sibling__heap___8hpp}{ext/pb\_ds/detail/left\_child\_next\_sibling\_heap\_/left\_child\_next\_sibling\_heap\_.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00055}00055\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace____gnu__pbds}{\_\_gnu\_pbds}}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00056}00056\ \{}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00057}00057\ \ \ \textcolor{keyword}{namespace\ }detail}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00058}00058\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00059}\mbox{\hyperlink{binomial__heap__base___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{00059}}\ \textcolor{preprocessor}{\#define\ PB\_DS\_CLASS\_T\_DEC\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00060}00060\ \textcolor{preprocessor}{\ \ \ \ template<typename\ Value\_Type,\ typename\ Cmp\_Fn,\ typename\ \_Alloc>}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00062}\mbox{\hyperlink{binomial__heap__base___8hpp_a304b8b73a11afe64bfca54576b91263b}{00062}}\ \textcolor{preprocessor}{\#define\ PB\_DS\_CLASS\_C\_DEC\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00063}00063\ \textcolor{preprocessor}{\ \ \ \ binomial\_heap\_base<Value\_Type,\ Cmp\_Fn,\ \_Alloc>}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00065}00065\ \textcolor{preprocessor}{\#ifdef\ \_GLIBCXX\_DEBUG}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00066}00066\ \textcolor{preprocessor}{\#define\ PB\_DS\_B\_HEAP\_BASE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00067}00067\ \textcolor{preprocessor}{\ \ left\_child\_next\_sibling\_heap<Value\_Type,\ Cmp\_Fn,\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00068}00068\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ typename\ \_Alloc::size\_type,\ \ \_Alloc,\ false>}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00069}00069\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00070}\mbox{\hyperlink{binomial__heap__base___8hpp_a0034677f42e84240aa9c530ec95f0812}{00070}}\ \textcolor{preprocessor}{\#define\ PB\_DS\_B\_HEAP\_BASE\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00071}00071\ \textcolor{preprocessor}{\ \ left\_child\_next\_sibling\_heap<Value\_Type,\ Cmp\_Fn,\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00072}00072\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ typename\ \_Alloc::size\_type,\ \_Alloc>}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00073}00073\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00076}00076\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Value\_Type,\ \textcolor{keyword}{typename}\ Cmp\_Fn,\ \textcolor{keyword}{typename}\ \_Alloc>}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00077}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base}{00077}}\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base}{binomial\_heap\_base}}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00078}00078\ \ \ \ \ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{binomial__heap__base___8hpp_a0034677f42e84240aa9c530ec95f0812}{PB\_DS\_B\_HEAP\_BASE}}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00079}00079\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00080}00080\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00081}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a28caa7bab5a79a9241c9b6bde0507ad2}{00081}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{rebind\_traits<\_Alloc,\ Value\_Type>}}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a28caa7bab5a79a9241c9b6bde0507ad2}{\_\_rebind\_v}};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00082}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_aefdb385c4c5f57559afb5df774126e8a}{00082}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{binomial__heap__base___8hpp_a0034677f42e84240aa9c530ec95f0812}{PB\_DS\_B\_HEAP\_BASE}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_aefdb385c4c5f57559afb5df774126e8a}{base\_type}};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00084}00084\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00085}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a242dae194dc3dcb65b3eba42d71a7ecb}{00085}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{typename}\ base\_type::node\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a242dae194dc3dcb65b3eba42d71a7ecb}{node}};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00086}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a30a1017829fc70fa34e9cc031eefc9fb}{00086}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{typename}\ base\_type::node\_pointer\ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a30a1017829fc70fa34e9cc031eefc9fb}{node\_pointer}};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00087}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a2eefeacd8ac163547e3e09963f88e1b3}{00087}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{typename}\ base\_type::node\_const\_pointer\ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a2eefeacd8ac163547e3e09963f88e1b3}{node\_const\_pointer}};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00089}00089\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00090}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_aaf983aa4ec6c5cea9c874a3adf28a8ce}{00090}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\_Type}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_aaf983aa4ec6c5cea9c874a3adf28a8ce}{value\_type}};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00091}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_af50ddb3879254f8812fcfaf4b030f975}{00091}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ Cmp\_Fn\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_af50ddb3879254f8812fcfaf4b030f975}{cmp\_fn}};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00092}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a128f7d6351c0f628117eb22e98f32570}{00092}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \_Alloc\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a128f7d6351c0f628117eb22e98f32570}{allocator\_type}};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00093}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_aab3ccf18d06098b7db49b97ce4ab5b63}{00093}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{typename}\ \_Alloc::size\_type\ \ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_aab3ccf18d06098b7db49b97ce4ab5b63}{size\_type}};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00094}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a2ca3f60ecb1a5e127f1b6d7b8f5fb726}{00094}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{typename}\ \_Alloc::difference\_type\ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a2ca3f60ecb1a5e127f1b6d7b8f5fb726}{difference\_type}};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00096}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a9be874021d0564fcb3f045802f0ea24c}{00096}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{typename}\ \_\_rebind\_v::pointer\ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a9be874021d0564fcb3f045802f0ea24c}{pointer}};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00097}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_afb162b33597207de5e4c766f1bed1f20}{00097}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{typename}\ \_\_rebind\_v::const\_pointer\ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_afb162b33597207de5e4c766f1bed1f20}{const\_pointer}};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00098}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a729e49e51a2192c03613d0ed5728c5df}{00098}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{typename}\ \_\_rebind\_v::reference\ \ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a729e49e51a2192c03613d0ed5728c5df}{reference}};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00099}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a0f6c88b27cb5bd76d320084ed3d92055}{00099}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{typename}\ \_\_rebind\_v::const\_reference\ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a0f6c88b27cb5bd76d320084ed3d92055}{const\_reference}};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00101}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_ac6903adfd9b1dfffc868132acc97b910}{00101}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{typename}\ base\_type::point\_const\_iterator\ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_ac6903adfd9b1dfffc868132acc97b910}{point\_const\_iterator}};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00102}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_acc75d9039e19d22e167916e9d1c3b0f2}{00102}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{typename}\ base\_type::point\_iterator\ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_acc75d9039e19d22e167916e9d1c3b0f2}{point\_iterator}};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00103}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_ae93c865d1c167206d98ba746da35e85c}{00103}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{typename}\ base\_type::const\_iterator\ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_ae93c865d1c167206d98ba746da35e85c}{const\_iterator}};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00104}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_ae830358561718aac7f3b165a916df07b}{00104}}\ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{typename}\ base\_type::iterator\ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_ae830358561718aac7f3b165a916df07b}{iterator}};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00106}00106\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00108}00108\ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_acc75d9039e19d22e167916e9d1c3b0f2}{point\_iterator}}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00109}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_acf85b93c36881f98cd20edc69a1a660b}{00109}}\ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_acf85b93c36881f98cd20edc69a1a660b}{push}}(\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a0f6c88b27cb5bd76d320084ed3d92055}{const\_reference}});}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00111}00111\ \ \ \ \ \ \ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00112}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_ab0d9ed0fac5c863883e00052c8f10df7}{00112}}\ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_ab0d9ed0fac5c863883e00052c8f10df7}{modify}}(\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_acc75d9039e19d22e167916e9d1c3b0f2}{point\_iterator}},\ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a0f6c88b27cb5bd76d320084ed3d92055}{const\_reference}});}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00114}00114\ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a0f6c88b27cb5bd76d320084ed3d92055}{const\_reference}}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00115}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a0491ec3d62e64d3f642c9a44b7d0ca6d}{00115}}\ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a0491ec3d62e64d3f642c9a44b7d0ca6d}{top}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00117}00117\ \ \ \ \ \ \ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00118}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a20ec60234d547e895167a20a738ddb31}{00118}}\ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a20ec60234d547e895167a20a738ddb31}{pop}}();}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00120}00120\ \ \ \ \ \ \ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00121}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_aedcd55b77c25fc51905285c820e5f19c}{00121}}\ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_aedcd55b77c25fc51905285c820e5f19c}{erase}}(\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_acc75d9039e19d22e167916e9d1c3b0f2}{point\_iterator}});}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00123}00123\ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00124}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_af94148f35fa303153d9c047159769e36}{00124}}\ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_af94148f35fa303153d9c047159769e36}{clear}}();}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00126}00126\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Pred>}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00127}00127\ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_aab3ccf18d06098b7db49b97ce4ab5b63}{size\_type}}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00128}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a2884d5d07e50eec1dc2de7671b5ef48e}{00128}}\ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a2884d5d07e50eec1dc2de7671b5ef48e}{erase\_if}}(Pred);}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00130}00130\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Pred>}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00131}00131\ \ \ \ \ \ \ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00132}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a5d04d1e7b57c3a529e612dd9ba79fdb8}{00132}}\ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a5d04d1e7b57c3a529e612dd9ba79fdb8}{split}}(Pred,\ \mbox{\hyperlink{bin__search__tree___8hpp_a304b8b73a11afe64bfca54576b91263b}{PB\_DS\_CLASS\_C\_DEC}}\&);}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00134}00134\ \ \ \ \ \ \ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00135}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a9981df57663cacb466792d131bc44ba3}{00135}}\ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a9981df57663cacb466792d131bc44ba3}{join}}(\mbox{\hyperlink{bin__search__tree___8hpp_a304b8b73a11afe64bfca54576b91263b}{PB\_DS\_CLASS\_C\_DEC}}\&);}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00137}00137\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00139}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_af3b1712d5b38bd401bf51f8e3b7571c3}{00139}}\ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_af3b1712d5b38bd401bf51f8e3b7571c3}{binomial\_heap\_base}}();}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00140}00140\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00141}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_acd5eef507877bd3655f69b247c898c80}{00141}}\ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_acd5eef507877bd3655f69b247c898c80}{binomial\_heap\_base}}(\textcolor{keyword}{const}\ Cmp\_Fn\&);}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00143}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_af9646a231558c7d3b8140f78509cb2be}{00143}}\ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_af9646a231558c7d3b8140f78509cb2be}{binomial\_heap\_base}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{bin__search__tree___8hpp_a304b8b73a11afe64bfca54576b91263b}{PB\_DS\_CLASS\_C\_DEC}}\&);}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00144}00144\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00145}00145\ \ \ \ \ \ \ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00146}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_ae28b272db3851d8a3a400b88fa0a557f}{00146}}\ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_ae28b272db3851d8a3a400b88fa0a557f}{swap}}(\mbox{\hyperlink{bin__search__tree___8hpp_a304b8b73a11afe64bfca54576b91263b}{PB\_DS\_CLASS\_C\_DEC}}\&);}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00148}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a1de6c5a10c51c2395e3503be277e121a}{00148}}\ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a1de6c5a10c51c2395e3503be277e121a}{\string~binomial\_heap\_base}}();}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00149}00149\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00150}00150\ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ It>}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00151}00151\ \ \ \ \ \ \ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00152}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a9a0fc5d45ca3c1dbc89ae1f24fcc9896}{00152}}\ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a9a0fc5d45ca3c1dbc89ae1f24fcc9896}{copy\_from\_range}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{It}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{It}});}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00153}00153\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00154}00154\ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00155}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a179a9da20074df8a20ee189626ecb7dd}{00155}}\ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a179a9da20074df8a20ee189626ecb7dd}{find\_max}}();}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00156}00156\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00157}00157\ \textcolor{preprocessor}{\#ifdef\ \_GLIBCXX\_DEBUG}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00158}00158\ \ \ \ \ \ \ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00159}00159\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{assert\_valid}}(\textcolor{keywordtype}{bool},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\ \textcolor{keywordtype}{int})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00161}00161\ \ \ \ \ \ \ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00162}00162\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{assert\_max}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\ \textcolor{keywordtype}{int})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00163}00163\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00165}00165\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00167}00167\ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a30a1017829fc70fa34e9cc031eefc9fb}{node\_pointer}}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00168}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_afa8d9771dcd1ae4ad347e0e5b83f3ffa}{00168}}\ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_afa8d9771dcd1ae4ad347e0e5b83f3ffa}{fix}}(\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a30a1017829fc70fa34e9cc031eefc9fb}{node\_pointer}})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00170}00170\ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00171}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a0bcae64a31baf582970f6b62c9615634}{00171}}\ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a0bcae64a31baf582970f6b62c9615634}{insert\_node}}(\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a30a1017829fc70fa34e9cc031eefc9fb}{node\_pointer}});}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00172}00172\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00173}00173\ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00174}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_aa8928ebb3ab70913aa7ee96f5d316e9b}{00174}}\ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_aa8928ebb3ab70913aa7ee96f5d316e9b}{remove\_parentless\_node}}(\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a30a1017829fc70fa34e9cc031eefc9fb}{node\_pointer}});}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00175}00175\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00176}00176\ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a30a1017829fc70fa34e9cc031eefc9fb}{node\_pointer}}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00177}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_ae41edfdc31b02658f3ebecfcc8c224d7}{00177}}\ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_ae41edfdc31b02658f3ebecfcc8c224d7}{join}}(\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a30a1017829fc70fa34e9cc031eefc9fb}{node\_pointer}},\ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a30a1017829fc70fa34e9cc031eefc9fb}{node\_pointer}})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00178}00178\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00179}00179\ \textcolor{preprocessor}{\#ifdef\ \_GLIBCXX\_DEBUG}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00180}00180\ \ \ \ \ \ \ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00181}00181\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{assert\_node\_consistent}}(\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a2eefeacd8ac163547e3e09963f88e1b3}{node\_const\_pointer}},\ \textcolor{keywordtype}{bool},\ \textcolor{keywordtype}{bool},}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\ \textcolor{keywordtype}{int})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00183}00183\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00185}00185\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00186}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_af56fa45256cfa94b934d79c3308f7966}{00186}}\ \ \ \ \ \ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_a30a1017829fc70fa34e9cc031eefc9fb}{node\_pointer}}\ \ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1binomial__heap__base_af56fa45256cfa94b934d79c3308f7966}{m\_p\_max}};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00187}00187\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00189}\mbox{\hyperlink{binomial__heap__base___8hpp_a93c6da2ea22e1d3384f83937a57633d3}{00189}}\ \textcolor{preprocessor}{\#define\ PB\_DS\_ASSERT\_VALID\_COND(X,\ \_StrictlyBinomial)\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00190}00190\ \textcolor{preprocessor}{\ \ \_GLIBCXX\_DEBUG\_ONLY(X.assert\_valid(\_StrictlyBinomial,\_\_FILE\_\_,\ \_\_LINE\_\_);)}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00191}00191\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00192}\mbox{\hyperlink{binomial__heap__base___8hpp_a5e93595ce71fff38d3f1732cd9fce201}{00192}}\ \textcolor{preprocessor}{\#define\ PB\_DS\_ASSERT\_BASE\_NODE\_CONSISTENT(\_Node,\ \_Bool)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00193}00193\ \textcolor{preprocessor}{\ \ \_GLIBCXX\_DEBUG\_ONLY(base\_type::assert\_node\_consistent(\_Node,\ \_Bool,\ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00194}00194\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_FILE\_\_,\ \_\_LINE\_\_);)}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00195}00195\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00196}00196\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{binomial__heap__base___2constructors__destructor__fn__imps_8hpp}{ext/pb\_ds/detail/binomial\_heap\_base\_/constructors\_destructor\_fn\_imps.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00197}00197\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{binomial__heap__base___2debug__fn__imps_8hpp}{ext/pb\_ds/detail/binomial\_heap\_base\_/debug\_fn\_imps.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00198}00198\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{binomial__heap__base___2find__fn__imps_8hpp}{ext/pb\_ds/detail/binomial\_heap\_base\_/find\_fn\_imps.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00199}00199\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{binomial__heap__base___2insert__fn__imps_8hpp}{ext/pb\_ds/detail/binomial\_heap\_base\_/insert\_fn\_imps.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00200}00200\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{binomial__heap__base___2erase__fn__imps_8hpp}{ext/pb\_ds/detail/binomial\_heap\_base\_/erase\_fn\_imps.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00201}00201\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{binomial__heap__base___2split__join__fn__imps_8hpp}{ext/pb\_ds/detail/binomial\_heap\_base\_/split\_join\_fn\_imps.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00202}00202\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00203}00203\ \textcolor{preprocessor}{\#undef\ PB\_DS\_ASSERT\_BASE\_NODE\_CONSISTENT}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00204}00204\ \textcolor{preprocessor}{\#undef\ PB\_DS\_ASSERT\_VALID\_COND}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00205}00205\ \textcolor{preprocessor}{\#undef\ PB\_DS\_CLASS\_C\_DEC}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00206}00206\ \textcolor{preprocessor}{\#undef\ PB\_DS\_CLASS\_T\_DEC}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00207}00207\ \textcolor{preprocessor}{\#undef\ PB\_DS\_B\_HEAP\_BASE}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00208}00208\ \ \ \}\ \textcolor{comment}{//\ namespace\ detail}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00209}00209\ \}\ \textcolor{comment}{//\ namespace\ \_\_gnu\_pbds}}
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00210}00210\ }
+\DoxyCodeLine{\Hypertarget{binomial__heap__base___8hpp_source_l00211}00211\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

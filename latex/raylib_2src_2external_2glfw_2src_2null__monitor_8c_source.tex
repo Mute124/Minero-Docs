@@ -1,0 +1,80 @@
+\doxysection{null\+\_\+monitor.\+c}
+\hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source}{}\label{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/raylib/src/external/glfw/src/null\_monitor.c@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/raylib/src/external/glfw/src/null\_monitor.c}}
+\mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2null__monitor_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00001}00001\ \textcolor{comment}{//========================================================================}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00002}00002\ \textcolor{comment}{//\ GLFW\ 3.4\ -\/\ www.glfw.org}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00003}00003\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00004}00004\ \textcolor{comment}{//\ Copyright\ (c)\ 2016\ Google\ Inc.}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00005}00005\ \textcolor{comment}{//\ Copyright\ (c)\ 2016-\/2019\ Camilla\ Löwy\ <elmindreda@glfw.org>}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00006}00006\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00007}00007\ \textcolor{comment}{//\ This\ software\ is\ provided\ 'as-\/is',\ without\ any\ express\ or\ implied}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00008}00008\ \textcolor{comment}{//\ warranty.\ In\ no\ event\ will\ the\ authors\ be\ held\ liable\ for\ any\ damages}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00009}00009\ \textcolor{comment}{//\ arising\ from\ the\ use\ of\ this\ software.}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00010}00010\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00011}00011\ \textcolor{comment}{//\ Permission\ is\ granted\ to\ anyone\ to\ use\ this\ software\ for\ any\ purpose,}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00012}00012\ \textcolor{comment}{//\ including\ commercial\ applications,\ and\ to\ alter\ it\ and\ redistribute\ it}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00013}00013\ \textcolor{comment}{//\ freely,\ subject\ to\ the\ following\ restrictions:}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00014}00014\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00015}00015\ \textcolor{comment}{//\ 1.\ The\ origin\ of\ this\ software\ must\ not\ be\ misrepresented;\ you\ must\ not}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00016}00016\ \textcolor{comment}{//\ \ \ \ claim\ that\ you\ wrote\ the\ original\ software.\ If\ you\ use\ this\ software}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00017}00017\ \textcolor{comment}{//\ \ \ \ in\ a\ product,\ an\ acknowledgment\ in\ the\ product\ documentation\ would}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00018}00018\ \textcolor{comment}{//\ \ \ \ be\ appreciated\ but\ is\ not\ required.}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00019}00019\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00020}00020\ \textcolor{comment}{//\ 2.\ Altered\ source\ versions\ must\ be\ plainly\ marked\ as\ such,\ and\ must\ not}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00021}00021\ \textcolor{comment}{//\ \ \ \ be\ misrepresented\ as\ being\ the\ original\ software.}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00022}00022\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00023}00023\ \textcolor{comment}{//\ 3.\ This\ notice\ may\ not\ be\ removed\ or\ altered\ from\ any\ source}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00024}00024\ \textcolor{comment}{//\ \ \ \ distribution.}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00025}00025\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00026}00026\ \textcolor{comment}{//========================================================================}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00027}00027\ \textcolor{comment}{//\ It\ is\ fine\ to\ use\ C99\ in\ this\ file\ because\ it\ will\ not\ be\ built\ with\ VS}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00028}00028\ \textcolor{comment}{//========================================================================}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00030}00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_raylib_erosion_standalone-main_2raylib_2src_2external_2glfw_2src_2internal_8h}{internal.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00037}\mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2null__monitor_8c_a0dcf01b53eb877c4e823ba63fe8ecbca}{00037}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2null__monitor_8c_a0dcf01b53eb877c4e823ba63fe8ecbca}{\_glfwPlatformFreeMonitor}}(\mbox{\hyperlink{struct___g_l_f_wmonitor}{\_GLFWmonitor}}*\ monitor)}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00038}00038\ \{}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00039}00039\ \}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00041}\mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2null__monitor_8c_ac3047b94f0248b06b160f08992939796}{00041}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2null__monitor_8c_ac3047b94f0248b06b160f08992939796}{\_glfwPlatformGetMonitorPos}}(\mbox{\hyperlink{struct___g_l_f_wmonitor}{\_GLFWmonitor}}*\ monitor,\ \textcolor{keywordtype}{int}*\ xpos,\ \textcolor{keywordtype}{int}*\ ypos)}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00042}00042\ \{}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00043}00043\ \}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00045}\mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2null__monitor_8c_acaffbb192928a16cf1742151757a867c}{00045}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2null__monitor_8c_acaffbb192928a16cf1742151757a867c}{\_glfwPlatformGetMonitorContentScale}}(\mbox{\hyperlink{struct___g_l_f_wmonitor}{\_GLFWmonitor}}*\ monitor,}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}*\ xscale,\ \textcolor{keywordtype}{float}*\ yscale)}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00047}00047\ \{}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{if}\ (xscale)}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00049}00049\ \ \ \ \ \ \ \ \ *xscale\ =\ 1.f;}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00050}00050\ \ \ \ \ \textcolor{keywordflow}{if}\ (yscale)}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00051}00051\ \ \ \ \ \ \ \ \ *yscale\ =\ 1.f;}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00052}00052\ \}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00054}\mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2null__monitor_8c_ad3bed68d40919e525ddd445bcde90b2b}{00054}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2null__monitor_8c_ad3bed68d40919e525ddd445bcde90b2b}{\_glfwPlatformGetMonitorWorkarea}}(\mbox{\hyperlink{struct___g_l_f_wmonitor}{\_GLFWmonitor}}*\ monitor,}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}*\ xpos,\ \textcolor{keywordtype}{int}*\ ypos,}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}*\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a3ce386e55bbeb900c1b23e064b89bd04}{width}},\ \textcolor{keywordtype}{int}*\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_aedd0ea77029b98ce91e47c19addcb68f}{height}})}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00057}00057\ \{}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00058}00058\ \}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00060}\mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2null__monitor_8c_a73fdd392c9c021474747f2a663600cb4}{00060}}\ \mbox{\hyperlink{struct_g_l_f_wvidmode}{GLFWvidmode}}*\ \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2null__monitor_8c_a73fdd392c9c021474747f2a663600cb4}{\_glfwPlatformGetVideoModes}}(\mbox{\hyperlink{struct___g_l_f_wmonitor}{\_GLFWmonitor}}*\ monitor,\ \textcolor{keywordtype}{int}*\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{found}})}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00061}00061\ \{}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00062}00062\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{external_2miniaudio_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00063}00063\ \}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00065}\mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2null__monitor_8c_ab8336e546a783459b673772b591ffacd}{00065}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2null__monitor_8c_ab8336e546a783459b673772b591ffacd}{\_glfwPlatformGetVideoMode}}(\mbox{\hyperlink{struct___g_l_f_wmonitor}{\_GLFWmonitor}}*\ monitor,\ \mbox{\hyperlink{struct_g_l_f_wvidmode}{GLFWvidmode}}*\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a1e71d9c196e4683cc06c4b54d53f7ef5}{mode}})}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00066}00066\ \{}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00067}00067\ \}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00069}\mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2null__monitor_8c_ac4bf2f5025cc6800bbe44615e5404c36}{00069}}\ \mbox{\hyperlink{external_2glfw_2src_2internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}}\ \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2null__monitor_8c_ac4bf2f5025cc6800bbe44615e5404c36}{\_glfwPlatformGetGammaRamp}}(\mbox{\hyperlink{struct___g_l_f_wmonitor}{\_GLFWmonitor}}*\ monitor,\ \mbox{\hyperlink{struct_g_l_f_wgammaramp}{GLFWgammaramp}}*\ ramp)}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00070}00070\ \{}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00071}00071\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group__init_gac877fe3b627d21ef3a0a23e0a73ba8c5}{GLFW\_FALSE}};}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00072}00072\ \}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00074}\mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2null__monitor_8c_abcaf1fc34700bd62b558caccce3ab45b}{00074}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2null__monitor_8c_abcaf1fc34700bd62b558caccce3ab45b}{\_glfwPlatformSetGammaRamp}}(\mbox{\hyperlink{struct___g_l_f_wmonitor}{\_GLFWmonitor}}*\ monitor,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_g_l_f_wgammaramp}{GLFWgammaramp}}*\ ramp)}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00075}00075\ \{}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00076}00076\ \}}
+\DoxyCodeLine{\Hypertarget{raylib_2src_2external_2glfw_2src_2null__monitor_8c_source_l00077}00077\ }
+
+\end{DoxyCode}

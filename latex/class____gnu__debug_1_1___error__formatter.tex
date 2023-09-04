@@ -1,0 +1,416 @@
+\doxysection{\+\_\+\+\_\+gnu\+\_\+debug\+::\+\_\+\+Error\+\_\+formatter Class Reference}
+\hypertarget{class____gnu__debug_1_1___error__formatter}{}\label{class____gnu__debug_1_1___error__formatter}\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}
+
+
+{\ttfamily \#include "{}formatter.\+h"{}}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct____gnu__debug_1_1___error__formatter_1_1___is__instance}{\+\_\+\+Is\+\_\+instance}}
+\item 
+struct \mbox{\hyperlink{struct____gnu__debug_1_1___error__formatter_1_1___is__iterator}{\+\_\+\+Is\+\_\+iterator}}
+\item 
+struct \mbox{\hyperlink{struct____gnu__debug_1_1___error__formatter_1_1___is__iterator__value__type}{\+\_\+\+Is\+\_\+iterator\+\_\+value\+\_\+type}}
+\item 
+struct \mbox{\hyperlink{struct____gnu__debug_1_1___error__formatter_1_1___is__sequence}{\+\_\+\+Is\+\_\+sequence}}
+\item 
+struct \mbox{\hyperlink{struct____gnu__debug_1_1___error__formatter_1_1___parameter}{\+\_\+\+Parameter}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a1180f06ca044daa7d7d332ba70e66d01}{\+\_\+\+Constness}} \{ \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a1180f06ca044daa7d7d332ba70e66d01af216aac2cb64ec612432876d09b1ac98}{\+\_\+\+\_\+unknown\+\_\+constness}}
+, \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a1180f06ca044daa7d7d332ba70e66d01a867a58f7d84640bbae4b1af89887dd11}{\+\_\+\+\_\+const\+\_\+iterator}}
+, \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a1180f06ca044daa7d7d332ba70e66d01a1606b4e47dec2983e812838e6eec7c95}{\+\_\+\+\_\+mutable\+\_\+iterator}}
+, \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a1180f06ca044daa7d7d332ba70e66d01a0c35accd976f2ce94213ab04b6240821}{\+\_\+\+\_\+last\+\_\+constness}}
+ \}
+\begin{DoxyCompactList}\small\item\em Whether an iterator is constant, mutable, or unknown. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117}{\+\_\+\+Iterator\+\_\+state}} \{ \newline
+\mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117a8978f7e6e68f61f5d0a24d74017e0178}{\+\_\+\+\_\+unknown\+\_\+state}}
+, \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117ae6c25834794355e5ac39844912aee3d2}{\+\_\+\+\_\+singular}}
+, \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117a25aebd9f16c6ab7eadcad45695aa26c7}{\+\_\+\+\_\+begin}}
+, \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117a401fd67ba183988502bc877eb7e89500}{\+\_\+\+\_\+middle}}
+, \newline
+\mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117add807da6cefb687dce5c5eded662016d}{\+\_\+\+\_\+end}}
+, \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117a8edbc38278786497468903869ceee9f5}{\+\_\+\+\_\+before\+\_\+begin}}
+, \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117a3efbbdad7062b901949bb1614d9ff917}{\+\_\+\+\_\+rbegin}}
+, \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117a97ddd4a70ce8c0a6a8ce23db6a123c3b}{\+\_\+\+\_\+rmiddle}}
+, \newline
+\mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117a2b0914d9abb3a238f42205bedc07faea}{\+\_\+\+\_\+rend}}
+, \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117a909f89f1216a0c552b40f54083107516}{\+\_\+\+\_\+last\+\_\+state}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Iterator $>$ }\\\mbox{\hyperlink{class____gnu__debug_1_1___error__formatter}{\+\_\+\+Error\+\_\+formatter}} \& \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a7b197a6913998803392bc026a284943e}{\+\_\+\+M\+\_\+iterator}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \+\_\+\+Iterator \&\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+it}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+name}}=0)
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Iterator $>$ }\\\mbox{\hyperlink{class____gnu__debug_1_1___error__formatter}{\+\_\+\+Error\+\_\+formatter}} \& \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_ad6320a27d088ec838bdcd0e3c04efbe9}{\+\_\+\+M\+\_\+iterator\+\_\+value\+\_\+type}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \+\_\+\+Iterator \&\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+it}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+name}}=0)
+\item 
+\mbox{\hyperlink{class____gnu__debug_1_1___error__formatter}{\+\_\+\+Error\+\_\+formatter}} \& \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_acb4a3696b0d06bbb2a068792f4c2073a}{\+\_\+\+M\+\_\+integer}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{long}} \+\_\+\+\_\+value, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+name}}=0)
+\item 
+\mbox{\hyperlink{class____gnu__debug_1_1___error__formatter}{\+\_\+\+Error\+\_\+formatter}} \& \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a57dd1573017dd67b52431d44bea4b074}{\+\_\+\+M\+\_\+string}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}\+\_\+\+\_\+value, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+name}}=0)
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Sequence}} $>$ }\\\mbox{\hyperlink{class____gnu__debug_1_1___error__formatter}{\+\_\+\+Error\+\_\+formatter}} \& \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a3a55d71f0ce6edcf705b8a90d858efc3}{\+\_\+\+M\+\_\+sequence}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Sequence}} \&\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+seq}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+name}}=0)
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Type $>$ }\\\mbox{\hyperlink{class____gnu__debug_1_1___error__formatter}{\+\_\+\+Error\+\_\+formatter}} \& \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a27a5246876e114bf919b275a19af234a}{\+\_\+\+M\+\_\+instance}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \+\_\+\+Type \&\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+inst}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+name}}=0)
+\item 
+\mbox{\hyperlink{class____gnu__debug_1_1___error__formatter}{\+\_\+\+Error\+\_\+formatter}} \& \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a72ae69c08748151d860d133f508c5a93}{\+\_\+\+M\+\_\+message}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+text}})
+\item 
+\mbox{\hyperlink{class____gnu__debug_1_1___error__formatter}{\+\_\+\+Error\+\_\+formatter}} \& \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_aade166b28f179eb5664b71cab4c87796}{\+\_\+\+M\+\_\+message}} (\mbox{\hyperlink{namespace____gnu__debug_aeb7af2ed24147dfab032febcea3f4fb3}{\+\_\+\+Debug\+\_\+msg\+\_\+id}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+id}}) \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}}  \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{throw}} ()
+\item 
+\mbox{\hyperlink{c_09_09config_8h_acfcd3fa89932cf2891467b72a60eaeb2}{\+\_\+\+GLIBCXX\+\_\+\+NORETURN}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a675ee707603c96a05a971379bfd370af}{\+\_\+\+M\+\_\+error}} () \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}}
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Tp}} $>$ }\\\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a5b1e35dd027be3aaacaf7e519d71103a}{\+\_\+\+M\+\_\+format\+\_\+word}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Tp}}) \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{c_09_09config_8h_a3974823b6483d7c91a0f93c24c66d625}{\+\_\+\+GLIBCXX\+\_\+\+DEPRECATED}}  \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{throw}} ()
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a3f4b069b9194d6504bbde9146a5e6b39}{\+\_\+\+M\+\_\+print\+\_\+word}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+word}}) \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{c_09_09config_8h_a3974823b6483d7c91a0f93c24c66d625}{\+\_\+\+GLIBCXX\+\_\+\+DEPRECATED}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a0598c1f7007be14be140f90d797c3296}{\+\_\+\+M\+\_\+print\+\_\+string}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}\+\_\+\+\_\+string) \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{c_09_09config_8h_a3974823b6483d7c91a0f93c24c66d625}{\+\_\+\+GLIBCXX\+\_\+\+DEPRECATED}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter}{\+\_\+\+Error\+\_\+formatter}} \& \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a25c0c7e0d91e72958140c51abfad7d63}{\+\_\+\+S\+\_\+at}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+file}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+line}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+function}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_ab0ffe7a5c761baec4dd33fe34d88736dad9949daa59aaed2c57f8f5862243b2bc}{\+\_\+\+\_\+max\+\_\+parameters}} = 9
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a077bafd01667815c225d1d10a16cf416}{\+\_\+\+Error\+\_\+formatter}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+file}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+line}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+function}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a8a22a89e4a6a295e080b5d829b0a6799}{\+\_\+\+M\+\_\+get\+\_\+max\+\_\+length}} () \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{c_09_09config_8h_a3974823b6483d7c91a0f93c24c66d625}{\+\_\+\+GLIBCXX\+\_\+\+DEPRECATED}}  \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{throw}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_adc7b5dc6cf4bccb37fa7493b5a82ad86}{\+\_\+\+M\+\_\+file}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a549a566eaf0dec3281f8a209aaa69287}{\+\_\+\+M\+\_\+line}}
+\item 
+\mbox{\hyperlink{struct____gnu__debug_1_1___error__formatter_1_1___parameter}{\+\_\+\+Parameter}} \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_ac70dbcecda1a6b34b04fe576a1ce3e18}{\+\_\+\+M\+\_\+parameters}} \mbox{[}\mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_ab0ffe7a5c761baec4dd33fe34d88736dad9949daa59aaed2c57f8f5862243b2bc}{\+\_\+\+\_\+max\+\_\+parameters}}\mbox{]}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a73adec6e32aff6686877892cfae4df5f}{\+\_\+\+M\+\_\+num\+\_\+parameters}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a2b988cb6e75f8954d61dabcfa5815a35}{\+\_\+\+M\+\_\+text}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a6cda25b1f6defa31f24b173e7c8ff071}{\+\_\+\+M\+\_\+function}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{formatter_8h_source_l00158}{158}} of file \mbox{\hyperlink{formatter_8h_source}{formatter.\+h}}.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class____gnu__debug_1_1___error__formatter_ab0ffe7a5c761baec4dd33fe34d88736d}\label{class____gnu__debug_1_1___error__formatter_ab0ffe7a5c761baec4dd33fe34d88736d} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{anonymous}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{enum}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_\_max\_parameters@{\_\_max\_parameters}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_\_max\_parameters@{\_\_max\_parameters}}}\Hypertarget{class____gnu__debug_1_1___error__formatter_ab0ffe7a5c761baec4dd33fe34d88736dad9949daa59aaed2c57f8f5862243b2bc}\label{class____gnu__debug_1_1___error__formatter_ab0ffe7a5c761baec4dd33fe34d88736dad9949daa59aaed2c57f8f5862243b2bc} 
+\+\_\+\+\_\+max\+\_\+parameters&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{formatter_8h_source_l00575}{575}} of file \mbox{\hyperlink{formatter_8h_source}{formatter.\+h}}.
+
+\Hypertarget{class____gnu__debug_1_1___error__formatter_a1180f06ca044daa7d7d332ba70e66d01}\label{class____gnu__debug_1_1___error__formatter_a1180f06ca044daa7d7d332ba70e66d01} 
+\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_Constness@{\_Constness}}
+\index{\_Constness@{\_Constness}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}
+\doxysubsubsection{\texorpdfstring{\_Constness}{\_Constness}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{enum}} \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a1180f06ca044daa7d7d332ba70e66d01}{\+\_\+\+\_\+gnu\+\_\+debug\+::\+\_\+\+Error\+\_\+formatter\+::\+\_\+\+Constness}}}
+
+
+
+Whether an iterator is constant, mutable, or unknown. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_\_unknown\_constness@{\_\_unknown\_constness}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_\_unknown\_constness@{\_\_unknown\_constness}}}\Hypertarget{class____gnu__debug_1_1___error__formatter_a1180f06ca044daa7d7d332ba70e66d01af216aac2cb64ec612432876d09b1ac98}\label{class____gnu__debug_1_1___error__formatter_a1180f06ca044daa7d7d332ba70e66d01af216aac2cb64ec612432876d09b1ac98} 
+\+\_\+\+\_\+unknown\+\_\+constness&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_\_const\_iterator@{\_\_const\_iterator}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_\_const\_iterator@{\_\_const\_iterator}}}\Hypertarget{class____gnu__debug_1_1___error__formatter_a1180f06ca044daa7d7d332ba70e66d01a867a58f7d84640bbae4b1af89887dd11}\label{class____gnu__debug_1_1___error__formatter_a1180f06ca044daa7d7d332ba70e66d01a867a58f7d84640bbae4b1af89887dd11} 
+\+\_\+\+\_\+const\+\_\+iterator&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_\_mutable\_iterator@{\_\_mutable\_iterator}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_\_mutable\_iterator@{\_\_mutable\_iterator}}}\Hypertarget{class____gnu__debug_1_1___error__formatter_a1180f06ca044daa7d7d332ba70e66d01a1606b4e47dec2983e812838e6eec7c95}\label{class____gnu__debug_1_1___error__formatter_a1180f06ca044daa7d7d332ba70e66d01a1606b4e47dec2983e812838e6eec7c95} 
+\+\_\+\+\_\+mutable\+\_\+iterator&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_\_last\_constness@{\_\_last\_constness}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_\_last\_constness@{\_\_last\_constness}}}\Hypertarget{class____gnu__debug_1_1___error__formatter_a1180f06ca044daa7d7d332ba70e66d01a0c35accd976f2ce94213ab04b6240821}\label{class____gnu__debug_1_1___error__formatter_a1180f06ca044daa7d7d332ba70e66d01a0c35accd976f2ce94213ab04b6240821} 
+\+\_\+\+\_\+last\+\_\+constness&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{formatter_8h_source_l00168}{168}} of file \mbox{\hyperlink{formatter_8h_source}{formatter.\+h}}.
+
+\Hypertarget{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117}\label{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117} 
+\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_Iterator\_state@{\_Iterator\_state}}
+\index{\_Iterator\_state@{\_Iterator\_state}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}
+\doxysubsubsection{\texorpdfstring{\_Iterator\_state}{\_Iterator\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{enum}} \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117}{\+\_\+\+\_\+gnu\+\_\+debug\+::\+\_\+\+Error\+\_\+formatter\+::\+\_\+\+Iterator\+\_\+state}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_\_unknown\_state@{\_\_unknown\_state}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_\_unknown\_state@{\_\_unknown\_state}}}\Hypertarget{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117a8978f7e6e68f61f5d0a24d74017e0178}\label{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117a8978f7e6e68f61f5d0a24d74017e0178} 
+\+\_\+\+\_\+unknown\+\_\+state&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_\_singular@{\_\_singular}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_\_singular@{\_\_singular}}}\Hypertarget{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117ae6c25834794355e5ac39844912aee3d2}\label{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117ae6c25834794355e5ac39844912aee3d2} 
+\+\_\+\+\_\+singular&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_\_begin@{\_\_begin}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_\_begin@{\_\_begin}}}\Hypertarget{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117a25aebd9f16c6ab7eadcad45695aa26c7}\label{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117a25aebd9f16c6ab7eadcad45695aa26c7} 
+\+\_\+\+\_\+begin&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_\_middle@{\_\_middle}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_\_middle@{\_\_middle}}}\Hypertarget{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117a401fd67ba183988502bc877eb7e89500}\label{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117a401fd67ba183988502bc877eb7e89500} 
+\+\_\+\+\_\+middle&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_\_end@{\_\_end}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_\_end@{\_\_end}}}\Hypertarget{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117add807da6cefb687dce5c5eded662016d}\label{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117add807da6cefb687dce5c5eded662016d} 
+\+\_\+\+\_\+end&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_\_before\_begin@{\_\_before\_begin}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_\_before\_begin@{\_\_before\_begin}}}\Hypertarget{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117a8edbc38278786497468903869ceee9f5}\label{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117a8edbc38278786497468903869ceee9f5} 
+\+\_\+\+\_\+before\+\_\+begin&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_\_rbegin@{\_\_rbegin}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_\_rbegin@{\_\_rbegin}}}\Hypertarget{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117a3efbbdad7062b901949bb1614d9ff917}\label{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117a3efbbdad7062b901949bb1614d9ff917} 
+\+\_\+\+\_\+rbegin&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_\_rmiddle@{\_\_rmiddle}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_\_rmiddle@{\_\_rmiddle}}}\Hypertarget{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117a97ddd4a70ce8c0a6a8ce23db6a123c3b}\label{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117a97ddd4a70ce8c0a6a8ce23db6a123c3b} 
+\+\_\+\+\_\+rmiddle&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_\_rend@{\_\_rend}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_\_rend@{\_\_rend}}}\Hypertarget{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117a2b0914d9abb3a238f42205bedc07faea}\label{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117a2b0914d9abb3a238f42205bedc07faea} 
+\+\_\+\+\_\+rend&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{\_\_last\_state@{\_\_last\_state}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_\_last\_state@{\_\_last\_state}}}\Hypertarget{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117a909f89f1216a0c552b40f54083107516}\label{class____gnu__debug_1_1___error__formatter_a8f479e42fdef4e240489dddab7da6117a909f89f1216a0c552b40f54083107516} 
+\+\_\+\+\_\+last\+\_\+state&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{formatter_8h_source_l00177}{177}} of file \mbox{\hyperlink{formatter_8h_source}{formatter.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class____gnu__debug_1_1___error__formatter_a077bafd01667815c225d1d10a16cf416}\label{class____gnu__debug_1_1___error__formatter_a077bafd01667815c225d1d10a16cf416} 
+\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_Error\_formatter@{\_Error\_formatter}}
+\index{\_Error\_formatter@{\_Error\_formatter}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}
+\doxysubsubsection{\texorpdfstring{\_Error\_formatter()}{\_Error\_formatter()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+gnu\+\_\+debug\+::\+\_\+\+Error\+\_\+formatter\+::\+\_\+\+Error\+\_\+formatter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+file,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{\+\_\+\+\_\+line,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{formatter_8h_source_l00564}{564}} of file \mbox{\hyperlink{formatter_8h_source}{formatter.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class____gnu__debug_1_1___error__formatter_a675ee707603c96a05a971379bfd370af}\label{class____gnu__debug_1_1___error__formatter_a675ee707603c96a05a971379bfd370af} 
+\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_M\_error@{\_M\_error}}
+\index{\_M\_error@{\_M\_error}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}
+\doxysubsubsection{\texorpdfstring{\_M\_error()}{\_M\_error()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{c_09_09config_8h_acfcd3fa89932cf2891467b72a60eaeb2}{\+\_\+\+GLIBCXX\+\_\+\+NORETURN}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+\+\_\+gnu\+\_\+debug\+::\+\_\+\+Error\+\_\+formatter\+::\+\_\+\+M\+\_\+error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class____gnu__debug_1_1___error__formatter_a5b1e35dd027be3aaacaf7e519d71103a}\label{class____gnu__debug_1_1___error__formatter_a5b1e35dd027be3aaacaf7e519d71103a} 
+\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_M\_format\_word@{\_M\_format\_word}}
+\index{\_M\_format\_word@{\_M\_format\_word}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}
+\doxysubsubsection{\texorpdfstring{\_M\_format\_word()}{\_M\_format\_word()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Tp}} $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+\+\_\+gnu\+\_\+debug\+::\+\_\+\+Error\+\_\+formatter\+::\+\_\+\+M\+\_\+format\+\_\+word (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}}]{,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}}]{,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Tp}}}]{ }\end{DoxyParamCaption}) const throw ( ) }
+
+\Hypertarget{class____gnu__debug_1_1___error__formatter_a8a22a89e4a6a295e080b5d829b0a6799}\label{class____gnu__debug_1_1___error__formatter_a8a22a89e4a6a295e080b5d829b0a6799} 
+\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_M\_get\_max\_length@{\_M\_get\_max\_length}}
+\index{\_M\_get\_max\_length@{\_M\_get\_max\_length}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}
+\doxysubsubsection{\texorpdfstring{\_M\_get\_max\_length()}{\_M\_get\_max\_length()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+\+\_\+gnu\+\_\+debug\+::\+\_\+\+Error\+\_\+formatter\+::\+\_\+\+M\+\_\+get\+\_\+max\+\_\+length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const throw ( ) \hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class____gnu__debug_1_1___error__formatter_a27a5246876e114bf919b275a19af234a}\label{class____gnu__debug_1_1___error__formatter_a27a5246876e114bf919b275a19af234a} 
+\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_M\_instance@{\_M\_instance}}
+\index{\_M\_instance@{\_M\_instance}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}
+\doxysubsubsection{\texorpdfstring{\_M\_instance()}{\_M\_instance()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Type $>$ \\
+\mbox{\hyperlink{class____gnu__debug_1_1___error__formatter}{\+\_\+\+Error\+\_\+formatter}} \& \+\_\+\+\_\+gnu\+\_\+debug\+::\+\_\+\+Error\+\_\+formatter\+::\+\_\+\+M\+\_\+instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \+\_\+\+Type \&}]{\+\_\+\+\_\+inst,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+name = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{formatter_8h_source_l00530}{530}} of file \mbox{\hyperlink{formatter_8h_source}{formatter.\+h}}.
+
+\Hypertarget{class____gnu__debug_1_1___error__formatter_acb4a3696b0d06bbb2a068792f4c2073a}\label{class____gnu__debug_1_1___error__formatter_acb4a3696b0d06bbb2a068792f4c2073a} 
+\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_M\_integer@{\_M\_integer}}
+\index{\_M\_integer@{\_M\_integer}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}
+\doxysubsubsection{\texorpdfstring{\_M\_integer()}{\_M\_integer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter}{\+\_\+\+Error\+\_\+formatter}} \& \+\_\+\+\_\+gnu\+\_\+debug\+::\+\_\+\+Error\+\_\+formatter\+::\+\_\+\+M\+\_\+integer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{long}}}]{\+\_\+\+\_\+value,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+name = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{formatter_8h_source_l00503}{503}} of file \mbox{\hyperlink{formatter_8h_source}{formatter.\+h}}.
+
+\Hypertarget{class____gnu__debug_1_1___error__formatter_a7b197a6913998803392bc026a284943e}\label{class____gnu__debug_1_1___error__formatter_a7b197a6913998803392bc026a284943e} 
+\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_M\_iterator@{\_M\_iterator}}
+\index{\_M\_iterator@{\_M\_iterator}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}
+\doxysubsubsection{\texorpdfstring{\_M\_iterator()}{\_M\_iterator()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Iterator $>$ \\
+\mbox{\hyperlink{class____gnu__debug_1_1___error__formatter}{\+\_\+\+Error\+\_\+formatter}} \& \+\_\+\+\_\+gnu\+\_\+debug\+::\+\_\+\+Error\+\_\+formatter\+::\+\_\+\+M\+\_\+iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \+\_\+\+Iterator \&}]{\+\_\+\+\_\+it,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+name = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{formatter_8h_source_l00483}{483}} of file \mbox{\hyperlink{formatter_8h_source}{formatter.\+h}}.
+
+\Hypertarget{class____gnu__debug_1_1___error__formatter_ad6320a27d088ec838bdcd0e3c04efbe9}\label{class____gnu__debug_1_1___error__formatter_ad6320a27d088ec838bdcd0e3c04efbe9} 
+\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_M\_iterator\_value\_type@{\_M\_iterator\_value\_type}}
+\index{\_M\_iterator\_value\_type@{\_M\_iterator\_value\_type}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}
+\doxysubsubsection{\texorpdfstring{\_M\_iterator\_value\_type()}{\_M\_iterator\_value\_type()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Iterator $>$ \\
+\mbox{\hyperlink{class____gnu__debug_1_1___error__formatter}{\+\_\+\+Error\+\_\+formatter}} \& \+\_\+\+\_\+gnu\+\_\+debug\+::\+\_\+\+Error\+\_\+formatter\+::\+\_\+\+M\+\_\+iterator\+\_\+value\+\_\+type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \+\_\+\+Iterator \&}]{\+\_\+\+\_\+it,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+name = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{formatter_8h_source_l00493}{493}} of file \mbox{\hyperlink{formatter_8h_source}{formatter.\+h}}.
+
+\Hypertarget{class____gnu__debug_1_1___error__formatter_aade166b28f179eb5664b71cab4c87796}\label{class____gnu__debug_1_1___error__formatter_aade166b28f179eb5664b71cab4c87796} 
+\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_M\_message@{\_M\_message}}
+\index{\_M\_message@{\_M\_message}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}
+\doxysubsubsection{\texorpdfstring{\_M\_message()}{\_M\_message()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter}{\+\_\+\+Error\+\_\+formatter}} \& \+\_\+\+\_\+gnu\+\_\+debug\+::\+\_\+\+Error\+\_\+formatter\+::\+\_\+\+M\+\_\+message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace____gnu__debug_aeb7af2ed24147dfab032febcea3f4fb3}{\+\_\+\+Debug\+\_\+msg\+\_\+id}}}]{\+\_\+\+\_\+id }\end{DoxyParamCaption}) const throw ( ) }
+
+\Hypertarget{class____gnu__debug_1_1___error__formatter_a72ae69c08748151d860d133f508c5a93}\label{class____gnu__debug_1_1___error__formatter_a72ae69c08748151d860d133f508c5a93} 
+\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_M\_message@{\_M\_message}}
+\index{\_M\_message@{\_M\_message}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}
+\doxysubsubsection{\texorpdfstring{\_M\_message()}{\_M\_message()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter}{\+\_\+\+Error\+\_\+formatter}} \& \+\_\+\+\_\+gnu\+\_\+debug\+::\+\_\+\+Error\+\_\+formatter\+::\+\_\+\+M\+\_\+message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{formatter_8h_source_l00539}{539}} of file \mbox{\hyperlink{formatter_8h_source}{formatter.\+h}}.
+
+\Hypertarget{class____gnu__debug_1_1___error__formatter_a0598c1f7007be14be140f90d797c3296}\label{class____gnu__debug_1_1___error__formatter_a0598c1f7007be14be140f90d797c3296} 
+\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_M\_print\_string@{\_M\_print\_string}}
+\index{\_M\_print\_string@{\_M\_print\_string}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}
+\doxysubsubsection{\texorpdfstring{\_M\_print\_string()}{\_M\_print\_string()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+\+\_\+gnu\+\_\+debug\+::\+\_\+\+Error\+\_\+formatter\+::\+\_\+\+M\+\_\+print\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+string }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class____gnu__debug_1_1___error__formatter_a3f4b069b9194d6504bbde9146a5e6b39}\label{class____gnu__debug_1_1___error__formatter_a3f4b069b9194d6504bbde9146a5e6b39} 
+\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_M\_print\_word@{\_M\_print\_word}}
+\index{\_M\_print\_word@{\_M\_print\_word}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}
+\doxysubsubsection{\texorpdfstring{\_M\_print\_word()}{\_M\_print\_word()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+\+\_\+gnu\+\_\+debug\+::\+\_\+\+Error\+\_\+formatter\+::\+\_\+\+M\+\_\+print\+\_\+word (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+word }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class____gnu__debug_1_1___error__formatter_a3a55d71f0ce6edcf705b8a90d858efc3}\label{class____gnu__debug_1_1___error__formatter_a3a55d71f0ce6edcf705b8a90d858efc3} 
+\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_M\_sequence@{\_M\_sequence}}
+\index{\_M\_sequence@{\_M\_sequence}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}
+\doxysubsubsection{\texorpdfstring{\_M\_sequence()}{\_M\_sequence()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Sequence}} $>$ \\
+\mbox{\hyperlink{class____gnu__debug_1_1___error__formatter}{\+\_\+\+Error\+\_\+formatter}} \& \+\_\+\+\_\+gnu\+\_\+debug\+::\+\_\+\+Error\+\_\+formatter\+::\+\_\+\+M\+\_\+sequence (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+Sequence}} \&}]{\+\_\+\+\_\+seq,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+name = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{formatter_8h_source_l00520}{520}} of file \mbox{\hyperlink{formatter_8h_source}{formatter.\+h}}.
+
+\Hypertarget{class____gnu__debug_1_1___error__formatter_a57dd1573017dd67b52431d44bea4b074}\label{class____gnu__debug_1_1___error__formatter_a57dd1573017dd67b52431d44bea4b074} 
+\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_M\_string@{\_M\_string}}
+\index{\_M\_string@{\_M\_string}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}
+\doxysubsubsection{\texorpdfstring{\_M\_string()}{\_M\_string()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter}{\+\_\+\+Error\+\_\+formatter}} \& \+\_\+\+\_\+gnu\+\_\+debug\+::\+\_\+\+Error\+\_\+formatter\+::\+\_\+\+M\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+value,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+name = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{formatter_8h_source_l00511}{511}} of file \mbox{\hyperlink{formatter_8h_source}{formatter.\+h}}.
+
+\Hypertarget{class____gnu__debug_1_1___error__formatter_a25c0c7e0d91e72958140c51abfad7d63}\label{class____gnu__debug_1_1___error__formatter_a25c0c7e0d91e72958140c51abfad7d63} 
+\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_S\_at@{\_S\_at}}
+\index{\_S\_at@{\_S\_at}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}
+\doxysubsubsection{\texorpdfstring{\_S\_at()}{\_S\_at()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{class____gnu__debug_1_1___error__formatter}{\+\_\+\+Error\+\_\+formatter}} \& \+\_\+\+\_\+gnu\+\_\+debug\+::\+\_\+\+Error\+\_\+formatter\+::\+\_\+\+S\+\_\+at (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+file,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{\+\_\+\+\_\+line,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{formatter_8h_source_l00586}{586}} of file \mbox{\hyperlink{formatter_8h_source}{formatter.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class____gnu__debug_1_1___error__formatter_adc7b5dc6cf4bccb37fa7493b5a82ad86}\label{class____gnu__debug_1_1___error__formatter_adc7b5dc6cf4bccb37fa7493b5a82ad86} 
+\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_M\_file@{\_M\_file}}
+\index{\_M\_file@{\_M\_file}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}
+\doxysubsubsection{\texorpdfstring{\_M\_file}{\_M\_file}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}}\texorpdfstring{$\ast$}{*} \+\_\+\+\_\+gnu\+\_\+debug\+::\+\_\+\+Error\+\_\+formatter\+::\+\_\+\+M\+\_\+file\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{formatter_8h_source_l00577}{577}} of file \mbox{\hyperlink{formatter_8h_source}{formatter.\+h}}.
+
+\Hypertarget{class____gnu__debug_1_1___error__formatter_a6cda25b1f6defa31f24b173e7c8ff071}\label{class____gnu__debug_1_1___error__formatter_a6cda25b1f6defa31f24b173e7c8ff071} 
+\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_M\_function@{\_M\_function}}
+\index{\_M\_function@{\_M\_function}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}
+\doxysubsubsection{\texorpdfstring{\_M\_function}{\_M\_function}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}}\texorpdfstring{$\ast$}{*} \+\_\+\+\_\+gnu\+\_\+debug\+::\+\_\+\+Error\+\_\+formatter\+::\+\_\+\+M\+\_\+function\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{formatter_8h_source_l00582}{582}} of file \mbox{\hyperlink{formatter_8h_source}{formatter.\+h}}.
+
+\Hypertarget{class____gnu__debug_1_1___error__formatter_a549a566eaf0dec3281f8a209aaa69287}\label{class____gnu__debug_1_1___error__formatter_a549a566eaf0dec3281f8a209aaa69287} 
+\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_M\_line@{\_M\_line}}
+\index{\_M\_line@{\_M\_line}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}
+\doxysubsubsection{\texorpdfstring{\_M\_line}{\_M\_line}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+\+\_\+gnu\+\_\+debug\+::\+\_\+\+Error\+\_\+formatter\+::\+\_\+\+M\+\_\+line\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{formatter_8h_source_l00578}{578}} of file \mbox{\hyperlink{formatter_8h_source}{formatter.\+h}}.
+
+\Hypertarget{class____gnu__debug_1_1___error__formatter_a73adec6e32aff6686877892cfae4df5f}\label{class____gnu__debug_1_1___error__formatter_a73adec6e32aff6686877892cfae4df5f} 
+\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_M\_num\_parameters@{\_M\_num\_parameters}}
+\index{\_M\_num\_parameters@{\_M\_num\_parameters}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}
+\doxysubsubsection{\texorpdfstring{\_M\_num\_parameters}{\_M\_num\_parameters}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+\+\_\+gnu\+\_\+debug\+::\+\_\+\+Error\+\_\+formatter\+::\+\_\+\+M\+\_\+num\+\_\+parameters\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{formatter_8h_source_l00580}{580}} of file \mbox{\hyperlink{formatter_8h_source}{formatter.\+h}}.
+
+\Hypertarget{class____gnu__debug_1_1___error__formatter_ac70dbcecda1a6b34b04fe576a1ce3e18}\label{class____gnu__debug_1_1___error__formatter_ac70dbcecda1a6b34b04fe576a1ce3e18} 
+\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_M\_parameters@{\_M\_parameters}}
+\index{\_M\_parameters@{\_M\_parameters}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}
+\doxysubsubsection{\texorpdfstring{\_M\_parameters}{\_M\_parameters}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct____gnu__debug_1_1___error__formatter_1_1___parameter}{\+\_\+\+Parameter}} \+\_\+\+\_\+gnu\+\_\+debug\+::\+\_\+\+Error\+\_\+formatter\+::\+\_\+\+M\+\_\+parameters\mbox{[}\mbox{\hyperlink{class____gnu__debug_1_1___error__formatter_ab0ffe7a5c761baec4dd33fe34d88736dad9949daa59aaed2c57f8f5862243b2bc}{\+\_\+\+\_\+max\+\_\+parameters}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{formatter_8h_source_l00579}{579}} of file \mbox{\hyperlink{formatter_8h_source}{formatter.\+h}}.
+
+\Hypertarget{class____gnu__debug_1_1___error__formatter_a2b988cb6e75f8954d61dabcfa5815a35}\label{class____gnu__debug_1_1___error__formatter_a2b988cb6e75f8954d61dabcfa5815a35} 
+\index{\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}!\_M\_text@{\_M\_text}}
+\index{\_M\_text@{\_M\_text}!\_\_gnu\_debug::\_Error\_formatter@{\_\_gnu\_debug::\_Error\_formatter}}
+\doxysubsubsection{\texorpdfstring{\_M\_text}{\_M\_text}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}}\texorpdfstring{$\ast$}{*} \+\_\+\+\_\+gnu\+\_\+debug\+::\+\_\+\+Error\+\_\+formatter\+::\+\_\+\+M\+\_\+text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{formatter_8h_source_l00581}{581}} of file \mbox{\hyperlink{formatter_8h_source}{formatter.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/include/c++/debug/\mbox{\hyperlink{formatter_8h}{formatter.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,41 @@
+\doxysection{Flashlight.\+cpp}
+\hypertarget{_flashlight_8cpp_source}{}\label{_flashlight_8cpp_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/Flashlight.cpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/Flashlight.cpp}}
+\mbox{\hyperlink{_flashlight_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_flashlight_8h}{Flashlight.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00003}00003\ \mbox{\hyperlink{class_flashlight_a4941f312326dd0b2b3421fe023a8648b}{Flashlight::Flashlight}}(\mbox{\hyperlink{struct_camera3_d}{Camera}}\ PlayerCameraData,\ \mbox{\hyperlink{struct_shader}{Shader}}\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a57b2a96adb1d51204909a82d861e395e}{shader}})\ :\ m\_light\_source()}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00005}00005\ \ \ \ \ this-\/>m\_light\_source\ =\ \mbox{\hyperlink{_raylib_erosion_standalone-main_2src_2rlights_8h_abe9ec05affb57212ff0912a6d13e8ca1}{CreateLight}}(\mbox{\hyperlink{_raylib_erosion_standalone-main_2src_2rlights_8h_adc3ec8293e6a97ebe43f0196b9a7f638ab12dea138375f6dfacbd2ffbb98135a0}{LIGHT\_DIRECTIONAL}},\ PlayerCameraData.\mbox{\hyperlink{struct_camera3_d_a78c3d3310cebdfe1054e10f62c8d15ce}{position}},\ PlayerCameraData.\mbox{\hyperlink{struct_camera3_d_ae87720bc94914ae37215b5057dba2c07}{target}},\ \mbox{\hyperlink{raylib_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}},\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a57b2a96adb1d51204909a82d861e395e}{shader}});}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00006}00006\ \}}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00008}00008\ \mbox{\hyperlink{class_flashlight_a0a6deafe16e5ec05723ed35f92707bff}{Flashlight::\string~Flashlight}}()}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{delete}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00011}00011\ \}}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00013}00013\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_flashlight_a1bdbfafd53d77b3c93238e3af81ead63}{Flashlight::Switch}}()}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00014}00014\ \{}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{class_flashlight_ab3e93b57cc21a6a179ed04c08938368b}{m\_light\_source}}.\mbox{\hyperlink{struct_light_a6dfed8051e33dde2baaef3e50d74084e}{enabled}})}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00016}00016\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_flashlight_ab3e93b57cc21a6a179ed04c08938368b}{m\_light\_source}}.\mbox{\hyperlink{struct_light_a6dfed8051e33dde2baaef3e50d74084e}{enabled}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00018}00018\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (!this-\/>\mbox{\hyperlink{class_flashlight_ab3e93b57cc21a6a179ed04c08938368b}{m\_light\_source}}.\mbox{\hyperlink{struct_light_a6dfed8051e33dde2baaef3e50d74084e}{enabled}})}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00020}00020\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_flashlight_ab3e93b57cc21a6a179ed04c08938368b}{m\_light\_source}}.\mbox{\hyperlink{struct_light_a6dfed8051e33dde2baaef3e50d74084e}{enabled}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00022}00022\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00023}00023\ \}}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00025}00025\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_flashlight_ad390fe8d47714fd7043726a39bc8796e}{Flashlight::Update}}(\mbox{\hyperlink{struct_shader}{Shader}}\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a57b2a96adb1d51204909a82d861e395e}{shader}},\ \mbox{\hyperlink{struct_vector3}{Vector3}}\ PlayerPos,\ \mbox{\hyperlink{struct_vector3}{Vector3}}\ PlayerTarget)}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00026}00026\ \{}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00027}00027\ \ \ \ \ this-\/>\mbox{\hyperlink{class_flashlight_ab3e93b57cc21a6a179ed04c08938368b}{m\_light\_source}}.\mbox{\hyperlink{struct_light_aaf0e960606cf34ba827b5fef2c74b042}{position}}\ =\ PlayerPos;}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00028}00028\ \ \ \ \ this-\/>\mbox{\hyperlink{class_flashlight_ab3e93b57cc21a6a179ed04c08938368b}{m\_light\_source}}.\mbox{\hyperlink{struct_light_ada0bd72079232cbfaba34001229e8cfa}{target}}\ =\ PlayerTarget;}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00029}00029\ \ \ \ \ \mbox{\hyperlink{_raylib_erosion_standalone-main_2src_2rlights_8h_a147b7e5788024577fc8abb7df32e4c5c}{UpdateLightValues}}(\mbox{\hyperlink{raylib_2src_2external_2glad_8h_a57b2a96adb1d51204909a82d861e395e}{shader}},\ this-\/>\mbox{\hyperlink{class_flashlight_ab3e93b57cc21a6a179ed04c08938368b}{m\_light\_source}});}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00030}00030\ \}}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00032}00032\ \mbox{\hyperlink{struct_light}{Light}}\ \mbox{\hyperlink{class_flashlight_a4e235cee983f9eeda8caa71783409252}{Flashlight::GetLight}}()}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00033}00033\ \{}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{class_flashlight_ab3e93b57cc21a6a179ed04c08938368b}{m\_light\_source}};}
+\DoxyCodeLine{\Hypertarget{_flashlight_8cpp_source_l00035}00035\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,93 @@
+\doxysection{time\+\_\+members.\+h}
+\hypertarget{time__members_8h_source}{}\label{time__members_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/x86\_64-\/w64-\/mingw32/bits/time\_members.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/x86\_64-\/w64-\/mingw32/bits/time\_members.h}}
+\mbox{\hyperlink{time__members_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00001}00001\ \textcolor{comment}{//\ std::time\_get,\ std::time\_put\ implementation,\ generic\ version\ -\/*-\/\ C++\ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00003}00003\ \textcolor{comment}{//\ Copyright\ (C)\ 2001-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00005}00005\ \textcolor{comment}{//\ This\ file\ is\ part\ of\ the\ GNU\ ISO\ C++\ Library.\ \ This\ library\ is\ free}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00006}00006\ \textcolor{comment}{//\ software;\ you\ can\ redistribute\ it\ and/or\ modify\ it\ under\ the}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00007}00007\ \textcolor{comment}{//\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by\ the}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00008}00008\ \textcolor{comment}{//\ Free\ Software\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00009}00009\ \textcolor{comment}{//\ any\ later\ version.}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00011}00011\ \textcolor{comment}{//\ This\ library\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00012}00012\ \textcolor{comment}{//\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00013}00013\ \textcolor{comment}{//\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00014}00014\ \textcolor{comment}{//\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00016}00016\ \textcolor{comment}{//\ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00017}00017\ \textcolor{comment}{//\ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00018}00018\ \textcolor{comment}{//\ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00020}00020\ \textcolor{comment}{//\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00021}00021\ \textcolor{comment}{//\ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00022}00022\ \textcolor{comment}{//\ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00023}00023\ \textcolor{comment}{//\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00030}00030\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00031}00031\ \textcolor{comment}{//\ ISO\ C++\ 14882:\ 22.2.5.1.2\ -\/\ time\_get\ functions}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00032}00032\ \textcolor{comment}{//\ ISO\ C++\ 14882:\ 22.2.5.3.2\ -\/\ time\_put\ functions}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00033}00033\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00035}00035\ \textcolor{comment}{//\ Written\ by\ Benjamin\ Kosnik\ <bkoz@redhat.com>}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00037}\mbox{\hyperlink{time__members_8h_a544d74b2d5d0dd2197f5fd6f02691de0}{00037}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacestd}{std}}\ \mbox{\hyperlink{c_09_09config_8h_a44377df0d3503f0b3d9ab316dd8ddf8b}{\_GLIBCXX\_VISIBILITY}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{default}})}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00038}00038\ \{}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00039}00039\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_GLIBCXX\_BEGIN\_NAMESPACE\_VERSION}}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00041}00041\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_CharT>}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00042}00042\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_timepunct<\_CharT>::\_\_timepunct}}(\textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_refs}})}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00043}00043\ \ \ \ \ :\ facet(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_refs}}),\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_data}}(0)}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00044}00044\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00045}00045\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_name\_timepunct}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_S\_get\_c\_name}}();}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00046}00046\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_initialize\_timepunct}}();}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00049}00049\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_CharT>}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00050}00050\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_timepunct<\_CharT>::\_\_timepunct}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_cache\_type}}*\ \_\_cache,\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_refs}})}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00051}00051\ \ \ \ \ :\ facet(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_refs}}),\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_data}}(\_\_cache)}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00052}00052\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00053}00053\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_name\_timepunct}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_S\_get\_c\_name}}();}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00054}00054\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_initialize\_timepunct}}();}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00055}00055\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00057}00057\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_CharT>}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00058}00058\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_timepunct<\_CharT>::\_\_timepunct}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_c\_locale}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_cloc}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_s}},}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_refs}})}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00060}00060\ \ \ \ \ :\ facet(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_refs}}),\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_data}}(0)}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00061}00061\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00062}00062\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_builtin\_strcmp}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_s}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_S\_get\_c\_name}}())\ !=\ 0)}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00063}00063\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00064}00064\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_len}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_builtin\_strlen}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_s}})\ +\ 1;}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00065}00065\ \ \ \ \ \ \ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{xmmintrin_8h_ad56bf6b8c22ee698e455f99196a1fe12}{\_\_tmp}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{char}[\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_len}}];}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00066}00066\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_builtin\_memcpy}}(\mbox{\hyperlink{xmmintrin_8h_ad56bf6b8c22ee698e455f99196a1fe12}{\_\_tmp}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_s}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_len}});}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00067}00067\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_name\_timepunct}}\ =\ \mbox{\hyperlink{xmmintrin_8h_ad56bf6b8c22ee698e455f99196a1fe12}{\_\_tmp}};}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00068}00068\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00069}00069\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00070}00070\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_name\_timepunct}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_S\_get\_c\_name}}();}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00072}00072\ \ \ \ \ \ \ \mbox{\hyperlink{exception__defines_8h_a130bf0cd31a0783cd03563f46b46915b}{\_\_try}}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00073}00073\ \ \ \ \ \{\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_initialize\_timepunct}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_cloc}});\ \}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00074}00074\ \ \ \ \ \ \ \mbox{\hyperlink{exception__defines_8h_a9e51d2f324c18a996a3e4f9a6ba0f6c2}{\_\_catch}}(...)}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00075}00075\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00076}00076\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_name\_timepunct}}\ !=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_S\_get\_c\_name}}())}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ []\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_name\_timepunct}};}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00078}00078\ \ \ \ \ \ \ \mbox{\hyperlink{exception__defines_8h_a92ef03a5310b10a4243a6ec8f43494b5}{\_\_throw\_exception\_again}};}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00079}00079\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00080}00080\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00082}00082\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_CharT>}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00083}00083\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_timepunct<\_CharT>::\string~\_\_timepunct}}()}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00084}00084\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00085}00085\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_name\_timepunct}}\ !=\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_S\_get\_c\_name}}())}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00086}00086\ \ \ \ \ \textcolor{keyword}{delete}\ []\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_name\_timepunct}};}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00087}00087\ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_data}};}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00088}00088\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_S\_destroy\_c\_locale}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_M\_c\_locale\_timepunct}});}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00089}00089\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00091}00091\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_GLIBCXX\_END\_NAMESPACE\_VERSION}}}
+\DoxyCodeLine{\Hypertarget{time__members_8h_source_l00092}00092\ \}\ \textcolor{comment}{//\ namespace}}
+
+\end{DoxyCode}

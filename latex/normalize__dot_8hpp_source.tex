@@ -1,0 +1,33 @@
+\doxysection{normalize\+\_\+dot.\+hpp}
+\hypertarget{normalize__dot_8hpp_source}{}\label{normalize__dot_8hpp_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/glm/glm/gtx/normalize\_dot.hpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/glm/glm/gtx/normalize\_dot.hpp}}
+\mbox{\hyperlink{normalize__dot_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00014}00014\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00016}00016\ \textcolor{comment}{//\ Dependency:}}
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}../gtx/fast\_square\_root.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00019}00019\ \textcolor{preprocessor}{\#if\ GLM\_MESSAGES\ ==\ GLM\_ENABLE\ \&\&\ !defined(GLM\_EXT\_INCLUDED)}}
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00020}00020\ \textcolor{preprocessor}{\#\ \ \ ifndef\ GLM\_ENABLE\_EXPERIMENTAL}}
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00021}00021\ \textcolor{preprocessor}{\#\ \ \ \ \ \ \ pragma\ message("{}GLM:\ GLM\_GTX\_normalize\_dot\ is\ an\ experimental\ extension\ and\ may\ change\ in\ the\ future.\ Use\ \#define\ GLM\_ENABLE\_EXPERIMENTAL\ before\ including\ it,\ if\ you\ really\ want\ to\ use\ it."{})}}
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00022}00022\ \textcolor{preprocessor}{\#\ \ \ else}}
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00023}00023\ \textcolor{preprocessor}{\#\ \ \ \ \ \ \ pragma\ message("{}GLM:\ GLM\_GTX\_normalize\_dot\ extension\ included"{})}}
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00024}00024\ \textcolor{preprocessor}{\#\ \ \ endif}}
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00025}00025\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00027}00027\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceglm}{glm}}}
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00028}00028\ \{}
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00036}00036\ \ \ \ \ \textcolor{keyword}{template}<length\_t\ L,\ \textcolor{keyword}{typename}\ T,\ qualifier\ Q>}
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{T}}\ \mbox{\hyperlink{group__gtx__normalize__dot_gacb140a2b903115d318c8b0a2fb5a5daa}{normalizeDot}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{vec<L,\ T,\ Q>}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{vec<L,\ T,\ Q>}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a4f27f1eebce8c31db01bb39fab9ef561}{y}});}
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00043}00043\ \ \ \ \ \textcolor{keyword}{template}<length\_t\ L,\ \textcolor{keyword}{typename}\ T,\ qualifier\ Q>}
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00044}00044\ \ \ \ \ \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{T}}\ \mbox{\hyperlink{group__gtx__normalize__dot_ga2746fb9b5bd22b06b2f7c8babba5de9e}{fastNormalizeDot}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{vec<L,\ T,\ Q>}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{vec<L,\ T,\ Q>}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a4f27f1eebce8c31db01bb39fab9ef561}{y}});}
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00047}00047\ \}\textcolor{comment}{//namespace\ glm}}
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{normalize__dot_8hpp_source_l00049}00049\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{normalize__dot_8inl}{normalize\_dot.inl}}"{}}}
+
+\end{DoxyCode}

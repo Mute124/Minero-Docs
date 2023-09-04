@@ -1,0 +1,432 @@
+\doxysection{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap\texorpdfstring{$<$}{<} Value\+\_\+\+Type, Cmp\+\_\+\+Fn, \+\_\+\+Alloc \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap}{}\label{class____gnu__pbds_1_1detail_1_1pairing__heap}\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+
+
+{\ttfamily \#include "{}pairing\+\_\+heap\+\_\+.\+hpp"{}}
+
+Inheritance diagram for \+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap\texorpdfstring{$<$}{<} Value\+\_\+\+Type, Cmp\+\_\+\+Fn, \+\_\+\+Alloc \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class____gnu__pbds_1_1detail_1_1pairing__heap}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a2bb15a0a877b728adaf1923b2c57f5b7}{value\+\_\+type}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} Cmp\+\_\+\+Fn \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_ab0ce1d7f275eee2251fecfbadbefc4d8}{cmp\+\_\+fn}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \+\_\+\+Alloc \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_affb9cee3f2335a2366470042762dc486}{allocator\+\_\+type}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \+\_\+\+Alloc\+::size\+\_\+type \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a55be681080384ce49fc63a0a57de15d6}{size\+\_\+type}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \+\_\+\+Alloc\+::difference\+\_\+type \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a1ad1b6c4a2ace2c7766581e1e9aa207a}{difference\+\_\+type}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \+\_\+\+\_\+rebind\+\_\+a\+::pointer \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_ad6f0277352b7c2704c5d5609468b1cbb}{pointer}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \+\_\+\+\_\+rebind\+\_\+a\+::const\+\_\+pointer \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_ace634e265c3676a565e932ff9c5e1d50}{const\+\_\+pointer}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \+\_\+\+\_\+rebind\+\_\+a\+::reference \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a4d3033173c9b23b272d71f874d888946}{reference}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \+\_\+\+\_\+rebind\+\_\+a\+::const\+\_\+reference \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a043a1006004c4689ef9f18a2acf09e8f}{const\+\_\+reference}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} base\+\_\+type\+::point\+\_\+const\+\_\+iterator \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a4dfc5adc16aa20c300de53248791eb70}{point\+\_\+const\+\_\+iterator}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} base\+\_\+type\+::point\+\_\+iterator \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_af1fd012c582f549e51b7deb9fa53e26e}{point\+\_\+iterator}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} base\+\_\+type\+::const\+\_\+iterator \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_ab2a57cb4dc216eb313f7558d9ec7476c}{const\+\_\+iterator}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} base\+\_\+type\+::iterator \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a36b80d54eb225972bbfc83d5d506bae6}{iterator}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a902088163f836ae21cd7932306c05b52}{pairing\+\_\+heap}} ()
+\item 
+\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a9cd11a0c4702e225f9dd79faba93c8a9}{pairing\+\_\+heap}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} Cmp\+\_\+\+Fn \&)
+\item 
+\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a709d5ff157ca331d71df2d2adfe31389}{pairing\+\_\+heap}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{pairing\+\_\+heap}} \&)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_af81cf6b2f7c1a26b9144bd8e435267f6}{swap}} (\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{pairing\+\_\+heap}} \&)
+\item 
+\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a41ff6ae0a7ed88dc75acec4902e28c91}{\texorpdfstring{$\sim$}{\string~}pairing\+\_\+heap}} ()
+\item 
+\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_af1fd012c582f549e51b7deb9fa53e26e}{point\+\_\+iterator}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a2cc6b820c0b2e295e86c2f7405ea8b88}{push}} (\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a043a1006004c4689ef9f18a2acf09e8f}{const\+\_\+reference}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_ab3864e026d6ef9fbb057c68c6396a627}{modify}} (\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_af1fd012c582f549e51b7deb9fa53e26e}{point\+\_\+iterator}}, \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a043a1006004c4689ef9f18a2acf09e8f}{const\+\_\+reference}})
+\item 
+\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a043a1006004c4689ef9f18a2acf09e8f}{const\+\_\+reference}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a370da62befe9cb8b0790b98296e579cb}{top}} () \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_ad3e4b5c5520527e15dd5ec49cde45ca0}{pop}} ()
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_ad370be6a5dc634750c21d76c8b7c834a}{erase}} (\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_af1fd012c582f549e51b7deb9fa53e26e}{point\+\_\+iterator}})
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Pred $>$ }\\\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a55be681080384ce49fc63a0a57de15d6}{size\+\_\+type}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a7cde208b72a3e9e85af58440ce4a2f8d}{erase\+\_\+if}} (Pred)
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Pred $>$ }\\\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a1e1eb585e2c326b7a4947ab3eb00e025}{split}} (Pred, \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{pairing\+\_\+heap}} \&)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a30828af736733923f0d7beff26e7cf86}{join}} (\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{pairing\+\_\+heap}} \&)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{It}} $>$ }\\\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a328579aec3e380588de205c3aaa407aa}{copy\+\_\+from\+\_\+range}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{It}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{It}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{pairing__heap___8hpp_aa5b9f118d9a53e31c4a6c552fef0dd1e}{PB\+\_\+\+DS\+\_\+\+P\+\_\+\+HEAP\+\_\+\+BASE}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a8516e73e6c0ce37236222057a0e66066}{base\+\_\+type}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} base\+\_\+type\+::node\+\_\+pointer \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a2d0aea850b5a5774b51db0a56972680a}{node\+\_\+pointer}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1rebind__traits}{rebind\+\_\+traits}}$<$ \+\_\+\+Alloc, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} $>$ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a87f8aff716027c2861c9509652e6db9f}{\+\_\+\+\_\+rebind\+\_\+a}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a63fea17b077322f712c86a4e1a58d00a}{push\+\_\+imp}} (\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a2d0aea850b5a5774b51db0a56972680a}{node\+\_\+pointer}})
+\item 
+\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a2d0aea850b5a5774b51db0a56972680a}{node\+\_\+pointer}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a812103170dde5b1414a9a00ff233b830}{join\+\_\+node\+\_\+children}} (\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a2d0aea850b5a5774b51db0a56972680a}{node\+\_\+pointer}})
+\item 
+\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a2d0aea850b5a5774b51db0a56972680a}{node\+\_\+pointer}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_aa7cdc2159a7246a2212a9cd7a4e57195}{forward\+\_\+join}} (\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a2d0aea850b5a5774b51db0a56972680a}{node\+\_\+pointer}}, \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a2d0aea850b5a5774b51db0a56972680a}{node\+\_\+pointer}})
+\item 
+\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a2d0aea850b5a5774b51db0a56972680a}{node\+\_\+pointer}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_af1668ceac08870a51440d8510f320c77}{back\+\_\+join}} (\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a2d0aea850b5a5774b51db0a56972680a}{node\+\_\+pointer}}, \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a2d0aea850b5a5774b51db0a56972680a}{node\+\_\+pointer}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_ab5aeef077c49be582eb11653062278d1}{remove\+\_\+node}} (\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a2d0aea850b5a5774b51db0a56972680a}{node\+\_\+pointer}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc$>$\newline
+class \+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap$<$ Value\+\_\+\+Type, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$}
+Pairing heap. 
+
+Definition at line \mbox{\hyperlink{pairing__heap___8hpp_source_l00077}{77}} of file \mbox{\hyperlink{pairing__heap___8hpp_source}{pairing\+\_\+heap\+\_\+.\+hpp}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_a87f8aff716027c2861c9509652e6db9f}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_a87f8aff716027c2861c9509652e6db9f} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!\_\_rebind\_a@{\_\_rebind\_a}}
+\index{\_\_rebind\_a@{\_\_rebind\_a}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{\_\_rebind\_a}{\_\_rebind\_a}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1rebind__traits}{rebind\+\_\+traits}}$<$\+\_\+\+Alloc, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}$>$ \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::\+\_\+\+\_\+rebind\+\_\+a\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{pairing__heap___8hpp_source_l00083}{83}} of file \mbox{\hyperlink{pairing__heap___8hpp_source}{pairing\+\_\+heap\+\_\+.\+hpp}}.
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_affb9cee3f2335a2366470042762dc486}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_affb9cee3f2335a2366470042762dc486} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!allocator\_type@{allocator\_type}}
+\index{allocator\_type@{allocator\_type}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{allocator\_type}{allocator\_type}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \+\_\+\+Alloc \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::allocator\+\_\+type}
+
+
+
+Definition at line \mbox{\hyperlink{pairing__heap___8hpp_source_l00088}{88}} of file \mbox{\hyperlink{pairing__heap___8hpp_source}{pairing\+\_\+heap\+\_\+.\+hpp}}.
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_a8516e73e6c0ce37236222057a0e66066}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_a8516e73e6c0ce37236222057a0e66066} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!base\_type@{base\_type}}
+\index{base\_type@{base\_type}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{base\_type}{base\_type}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{pairing__heap___8hpp_aa5b9f118d9a53e31c4a6c552fef0dd1e}{PB\+\_\+\+DS\+\_\+\+P\+\_\+\+HEAP\+\_\+\+BASE}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::base\+\_\+type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{pairing__heap___8hpp_source_l00080}{80}} of file \mbox{\hyperlink{pairing__heap___8hpp_source}{pairing\+\_\+heap\+\_\+.\+hpp}}.
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_ab0ce1d7f275eee2251fecfbadbefc4d8}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_ab0ce1d7f275eee2251fecfbadbefc4d8} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!cmp\_fn@{cmp\_fn}}
+\index{cmp\_fn@{cmp\_fn}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{cmp\_fn}{cmp\_fn}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} Cmp\+\_\+\+Fn \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::cmp\+\_\+fn}
+
+
+
+Definition at line \mbox{\hyperlink{pairing__heap___8hpp_source_l00087}{87}} of file \mbox{\hyperlink{pairing__heap___8hpp_source}{pairing\+\_\+heap\+\_\+.\+hpp}}.
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_ab2a57cb4dc216eb313f7558d9ec7476c}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_ab2a57cb4dc216eb313f7558d9ec7476c} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!const\_iterator@{const\_iterator}}
+\index{const\_iterator@{const\_iterator}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{const\_iterator}{const\_iterator}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} base\+\_\+type\+::const\+\_\+iterator \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::const\+\_\+iterator}
+
+
+
+Definition at line \mbox{\hyperlink{pairing__heap___8hpp_source_l00099}{99}} of file \mbox{\hyperlink{pairing__heap___8hpp_source}{pairing\+\_\+heap\+\_\+.\+hpp}}.
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_ace634e265c3676a565e932ff9c5e1d50}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_ace634e265c3676a565e932ff9c5e1d50} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!const\_pointer@{const\_pointer}}
+\index{const\_pointer@{const\_pointer}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{const\_pointer}{const\_pointer}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \+\_\+\+\_\+rebind\+\_\+a\+::const\+\_\+pointer \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::const\+\_\+pointer}
+
+
+
+Definition at line \mbox{\hyperlink{pairing__heap___8hpp_source_l00093}{93}} of file \mbox{\hyperlink{pairing__heap___8hpp_source}{pairing\+\_\+heap\+\_\+.\+hpp}}.
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_a043a1006004c4689ef9f18a2acf09e8f}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_a043a1006004c4689ef9f18a2acf09e8f} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!const\_reference@{const\_reference}}
+\index{const\_reference@{const\_reference}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{const\_reference}{const\_reference}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \+\_\+\+\_\+rebind\+\_\+a\+::const\+\_\+reference \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::const\+\_\+reference}
+
+
+
+Definition at line \mbox{\hyperlink{pairing__heap___8hpp_source_l00095}{95}} of file \mbox{\hyperlink{pairing__heap___8hpp_source}{pairing\+\_\+heap\+\_\+.\+hpp}}.
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_a1ad1b6c4a2ace2c7766581e1e9aa207a}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_a1ad1b6c4a2ace2c7766581e1e9aa207a} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!difference\_type@{difference\_type}}
+\index{difference\_type@{difference\_type}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{difference\_type}{difference\_type}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \+\_\+\+Alloc\+::difference\+\_\+type \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::difference\+\_\+type}
+
+
+
+Definition at line \mbox{\hyperlink{pairing__heap___8hpp_source_l00090}{90}} of file \mbox{\hyperlink{pairing__heap___8hpp_source}{pairing\+\_\+heap\+\_\+.\+hpp}}.
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_a36b80d54eb225972bbfc83d5d506bae6}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_a36b80d54eb225972bbfc83d5d506bae6} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!iterator@{iterator}}
+\index{iterator@{iterator}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{iterator}{iterator}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} base\+\_\+type\+::iterator \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::iterator}
+
+
+
+Definition at line \mbox{\hyperlink{pairing__heap___8hpp_source_l00100}{100}} of file \mbox{\hyperlink{pairing__heap___8hpp_source}{pairing\+\_\+heap\+\_\+.\+hpp}}.
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_a2d0aea850b5a5774b51db0a56972680a}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_a2d0aea850b5a5774b51db0a56972680a} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!node\_pointer@{node\_pointer}}
+\index{node\_pointer@{node\_pointer}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{node\_pointer}{node\_pointer}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} base\+\_\+type\+::node\+\_\+pointer \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::node\+\_\+pointer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{pairing__heap___8hpp_source_l00081}{81}} of file \mbox{\hyperlink{pairing__heap___8hpp_source}{pairing\+\_\+heap\+\_\+.\+hpp}}.
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_a4dfc5adc16aa20c300de53248791eb70}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_a4dfc5adc16aa20c300de53248791eb70} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!point\_const\_iterator@{point\_const\_iterator}}
+\index{point\_const\_iterator@{point\_const\_iterator}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{point\_const\_iterator}{point\_const\_iterator}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} base\+\_\+type\+::point\+\_\+const\+\_\+iterator \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::point\+\_\+const\+\_\+iterator}
+
+
+
+Definition at line \mbox{\hyperlink{pairing__heap___8hpp_source_l00097}{97}} of file \mbox{\hyperlink{pairing__heap___8hpp_source}{pairing\+\_\+heap\+\_\+.\+hpp}}.
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_af1fd012c582f549e51b7deb9fa53e26e}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_af1fd012c582f549e51b7deb9fa53e26e} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!point\_iterator@{point\_iterator}}
+\index{point\_iterator@{point\_iterator}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{point\_iterator}{point\_iterator}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} base\+\_\+type\+::point\+\_\+iterator \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::point\+\_\+iterator}
+
+
+
+Definition at line \mbox{\hyperlink{pairing__heap___8hpp_source_l00098}{98}} of file \mbox{\hyperlink{pairing__heap___8hpp_source}{pairing\+\_\+heap\+\_\+.\+hpp}}.
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_ad6f0277352b7c2704c5d5609468b1cbb}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_ad6f0277352b7c2704c5d5609468b1cbb} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!pointer@{pointer}}
+\index{pointer@{pointer}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \+\_\+\+\_\+rebind\+\_\+a\+::pointer \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\mbox{\hyperlink{raylib_2src_2external_2glad_8h_aca2093d4756bde9a55b94e9ff8d9c623}{\+::pointer}}}
+
+
+
+Definition at line \mbox{\hyperlink{pairing__heap___8hpp_source_l00092}{92}} of file \mbox{\hyperlink{pairing__heap___8hpp_source}{pairing\+\_\+heap\+\_\+.\+hpp}}.
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_a4d3033173c9b23b272d71f874d888946}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_a4d3033173c9b23b272d71f874d888946} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!reference@{reference}}
+\index{reference@{reference}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \+\_\+\+\_\+rebind\+\_\+a\+::reference \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::reference}
+
+
+
+Definition at line \mbox{\hyperlink{pairing__heap___8hpp_source_l00094}{94}} of file \mbox{\hyperlink{pairing__heap___8hpp_source}{pairing\+\_\+heap\+\_\+.\+hpp}}.
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_a55be681080384ce49fc63a0a57de15d6}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_a55be681080384ce49fc63a0a57de15d6} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!size\_type@{size\_type}}
+\index{size\_type@{size\_type}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{size\_type}{size\_type}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \+\_\+\+Alloc\+::size\+\_\+type \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::size\+\_\+type}
+
+
+
+Definition at line \mbox{\hyperlink{pairing__heap___8hpp_source_l00089}{89}} of file \mbox{\hyperlink{pairing__heap___8hpp_source}{pairing\+\_\+heap\+\_\+.\+hpp}}.
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_a2bb15a0a877b728adaf1923b2c57f5b7}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_a2bb15a0a877b728adaf1923b2c57f5b7} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::value\+\_\+type}
+
+
+
+Definition at line \mbox{\hyperlink{pairing__heap___8hpp_source_l00086}{86}} of file \mbox{\hyperlink{pairing__heap___8hpp_source}{pairing\+\_\+heap\+\_\+.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_a902088163f836ae21cd7932306c05b52}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_a902088163f836ae21cd7932306c05b52} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!pairing\_heap@{pairing\_heap}}
+\index{pairing\_heap@{pairing\_heap}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{pairing\_heap()}{pairing\_heap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::pairing\+\_\+heap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_a9cd11a0c4702e225f9dd79faba93c8a9}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_a9cd11a0c4702e225f9dd79faba93c8a9} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!pairing\_heap@{pairing\_heap}}
+\index{pairing\_heap@{pairing\_heap}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{pairing\_heap()}{pairing\_heap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::pairing\+\_\+heap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} Cmp\+\_\+\+Fn \&}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_a709d5ff157ca331d71df2d2adfe31389}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_a709d5ff157ca331d71df2d2adfe31389} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!pairing\_heap@{pairing\_heap}}
+\index{pairing\_heap@{pairing\_heap}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{pairing\_heap()}{pairing\_heap()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::pairing\+\_\+heap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$ \&}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_a41ff6ae0a7ed88dc75acec4902e28c91}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_a41ff6ae0a7ed88dc75acec4902e28c91} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!````~pairing\_heap@{\texorpdfstring{$\sim$}{\string~}pairing\_heap}}
+\index{````~pairing\_heap@{\texorpdfstring{$\sim$}{\string~}pairing\_heap}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}pairing\_heap()}{\string~pairing\_heap()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{pairing\+\_\+heap}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_af1668ceac08870a51440d8510f320c77}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_af1668ceac08870a51440d8510f320c77} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!back\_join@{back\_join}}
+\index{back\_join@{back\_join}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{back\_join()}{back\_join()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a2d0aea850b5a5774b51db0a56972680a}{node\+\_\+pointer}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::back\+\_\+join (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a2d0aea850b5a5774b51db0a56972680a}{node\+\_\+pointer}}}]{,  }\item[{\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a2d0aea850b5a5774b51db0a56972680a}{node\+\_\+pointer}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_a328579aec3e380588de205c3aaa407aa}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_a328579aec3e380588de205c3aaa407aa} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!copy\_from\_range@{copy\_from\_range}}
+\index{copy\_from\_range@{copy\_from\_range}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{copy\_from\_range()}{copy\_from\_range()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{It}} $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::copy\+\_\+from\+\_\+range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{It}}}]{,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{It}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_ad370be6a5dc634750c21d76c8b7c834a}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_ad370be6a5dc634750c21d76c8b7c834a} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!erase@{erase}}
+\index{erase@{erase}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::erase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_af1fd012c582f549e51b7deb9fa53e26e}{point\+\_\+iterator}}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_a7cde208b72a3e9e85af58440ce4a2f8d}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_a7cde208b72a3e9e85af58440ce4a2f8d} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!erase\_if@{erase\_if}}
+\index{erase\_if@{erase\_if}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{erase\_if()}{erase\_if()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Pred $>$ \\
+\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a55be681080384ce49fc63a0a57de15d6}{size\+\_\+type}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::erase\+\_\+if (\begin{DoxyParamCaption}\item[{Pred}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_aa7cdc2159a7246a2212a9cd7a4e57195}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_aa7cdc2159a7246a2212a9cd7a4e57195} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!forward\_join@{forward\_join}}
+\index{forward\_join@{forward\_join}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{forward\_join()}{forward\_join()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a2d0aea850b5a5774b51db0a56972680a}{node\+\_\+pointer}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::forward\+\_\+join (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a2d0aea850b5a5774b51db0a56972680a}{node\+\_\+pointer}}}]{,  }\item[{\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a2d0aea850b5a5774b51db0a56972680a}{node\+\_\+pointer}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_a30828af736733923f0d7beff26e7cf86}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_a30828af736733923f0d7beff26e7cf86} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!join@{join}}
+\index{join@{join}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::join (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$ \&}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_a812103170dde5b1414a9a00ff233b830}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_a812103170dde5b1414a9a00ff233b830} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!join\_node\_children@{join\_node\_children}}
+\index{join\_node\_children@{join\_node\_children}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{join\_node\_children()}{join\_node\_children()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a2d0aea850b5a5774b51db0a56972680a}{node\+\_\+pointer}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::join\+\_\+node\+\_\+children (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a2d0aea850b5a5774b51db0a56972680a}{node\+\_\+pointer}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_ab3864e026d6ef9fbb057c68c6396a627}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_ab3864e026d6ef9fbb057c68c6396a627} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!modify@{modify}}
+\index{modify@{modify}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{modify()}{modify()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::modify (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_af1fd012c582f549e51b7deb9fa53e26e}{point\+\_\+iterator}}}]{,  }\item[{\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a043a1006004c4689ef9f18a2acf09e8f}{const\+\_\+reference}}}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_ad3e4b5c5520527e15dd5ec49cde45ca0}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_ad3e4b5c5520527e15dd5ec49cde45ca0} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!pop@{pop}}
+\index{pop@{pop}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_a2cc6b820c0b2e295e86c2f7405ea8b88}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_a2cc6b820c0b2e295e86c2f7405ea8b88} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!push@{push}}
+\index{push@{push}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_af1fd012c582f549e51b7deb9fa53e26e}{point\+\_\+iterator}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a043a1006004c4689ef9f18a2acf09e8f}{const\+\_\+reference}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_a63fea17b077322f712c86a4e1a58d00a}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_a63fea17b077322f712c86a4e1a58d00a} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!push\_imp@{push\_imp}}
+\index{push\_imp@{push\_imp}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{push\_imp()}{push\_imp()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::push\+\_\+imp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a2d0aea850b5a5774b51db0a56972680a}{node\+\_\+pointer}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_ab5aeef077c49be582eb11653062278d1}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_ab5aeef077c49be582eb11653062278d1} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!remove\_node@{remove\_node}}
+\index{remove\_node@{remove\_node}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{remove\_node()}{remove\_node()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::remove\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a2d0aea850b5a5774b51db0a56972680a}{node\+\_\+pointer}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_a1e1eb585e2c326b7a4947ab3eb00e025}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_a1e1eb585e2c326b7a4947ab3eb00e025} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!split@{split}}
+\index{split@{split}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{split()}{split()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Pred $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::split (\begin{DoxyParamCaption}\item[{Pred}]{,  }\item[{\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$ \&}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_af81cf6b2f7c1a26b9144bd8e435267f6}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_af81cf6b2f7c1a26b9144bd8e435267f6} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!swap@{swap}}
+\index{swap@{swap}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$ \&}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class____gnu__pbds_1_1detail_1_1pairing__heap_a370da62befe9cb8b0790b98296e579cb}\label{class____gnu__pbds_1_1detail_1_1pairing__heap_a370da62befe9cb8b0790b98296e579cb} 
+\index{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}!top@{top}}
+\index{top@{top}!\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$@{\_\_gnu\_pbds::detail::pairing\_heap$<$ Value\_Type, Cmp\_Fn, \_Alloc $>$}}
+\doxysubsubsection{\texorpdfstring{top()}{top()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}} , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} Cmp\+\_\+\+Fn , \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}} \+\_\+\+Alloc $>$ \\
+\mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap_a043a1006004c4689ef9f18a2acf09e8f}{const\+\_\+reference}} \mbox{\hyperlink{class____gnu__pbds_1_1detail_1_1pairing__heap}{\+\_\+\+\_\+gnu\+\_\+pbds\+::detail\+::pairing\+\_\+heap}}$<$ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Value\+\_\+\+Type}}, Cmp\+\_\+\+Fn, \+\_\+\+Alloc $>$\+::top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/include/c++/ext/pb\+\_\+ds/detail/pairing\+\_\+heap\+\_\+/\mbox{\hyperlink{pairing__heap___8hpp}{pairing\+\_\+heap\+\_\+.\+hpp}}\end{DoxyCompactItemize}

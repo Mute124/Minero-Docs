@@ -1,0 +1,155 @@
+\doxysection{C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/external/glfw/src/cocoa\+\_\+joystick.m File Reference}
+\hypertarget{external_2glfw_2src_2cocoa__joystick_8m}{}\label{external_2glfw_2src_2cocoa__joystick_8m}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/external/glfw/src/cocoa\_joystick.m@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/external/glfw/src/cocoa\_joystick.m}}
+{\ttfamily \#include "{}internal.\+h"{}}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$mach/mach.\+h$>$}\newline
+{\ttfamily \#include $<$mach/mach\+\_\+error.\+h$>$}\newline
+{\ttfamily \#include $<$Core\+Foundation/\+Core\+Foundation.\+h$>$}\newline
+{\ttfamily \#include $<$Kernel/\+IOKit/hidsystem/\+IOHIDUsage\+Tables.\+h$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct___g_l_f_wjoyelement_n_s}{\+\_\+\+GLFWjoyelement\+NS}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{struct___g_l_f_wjoyelement_n_s}{\+\_\+\+GLFWjoyelement\+NS}} \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_ab6bd3da6c56b26813c15b18611077df1}{\+\_\+\+GLFWjoyelement\+NS}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{long}} \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_a262bb3770a5691df07b30a5fd7f7cd04}{get\+Element\+Value}} (\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{js}}, \mbox{\hyperlink{struct___g_l_f_wjoyelement_n_s}{\+\_\+\+GLFWjoyelement\+NS}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{element}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{CFComparison\+Result}} \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_a573e6c265b7f6e10ff88371f6f677966}{compare\+Elements}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{fp}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sp}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}user)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_a3699f1438e1fa6f4f40eb88dc5d8ca6e}{close\+Joystick}} (\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{js}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_a1c45c1249a59405215a3ce6da9aebfb6}{match\+Callback}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}context, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{IOReturn}} \mbox{\hyperlink{core__func__integer_8cpp_a937d4dd628a8858b443a399410d2600b}{result}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sender}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{IOHIDDevice\+Ref}} device)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_ab4d20f8046b9ef17c92b15d7a4bf9fe1}{remove\+Callback}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}context, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{IOReturn}} \mbox{\hyperlink{core__func__integer_8cpp_a937d4dd628a8858b443a399410d2600b}{result}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sender}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{IOHIDDevice\+Ref}} device)
+\item 
+\mbox{\hyperlink{external_2glfw_2src_2internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}} \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_ac8c394752f844948b4582ee0d04106d3}{\+\_\+glfw\+Init\+Joysticks\+Cocoa}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_a5a66e720d7aee763c2edef561cc025e6}{\+\_\+glfw\+Terminate\+Joysticks\+Cocoa}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})
+\item 
+\mbox{\hyperlink{external_2glfw_2src_2internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}} \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_aa45f4ad5ab0c90630b8b63f53c97db18}{\+\_\+glfw\+Poll\+Joystick\+Cocoa}} (\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{js}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a1e71d9c196e4683cc06c4b54d53f7ef5}{mode}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_a5b38f073f70b5ff5887391af47d9f019}{\+\_\+glfw\+Get\+Mapping\+Name\+Cocoa}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_a87f3fa1e202e7ba6872cae9a5a18accd}{\+\_\+glfw\+Update\+Gamepad\+GUIDCocoa}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}guid)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{external_2glfw_2src_2cocoa__joystick_8m_ab6bd3da6c56b26813c15b18611077df1}\label{external_2glfw_2src_2cocoa__joystick_8m_ab6bd3da6c56b26813c15b18611077df1} 
+\index{cocoa\_joystick.m@{cocoa\_joystick.m}!\_GLFWjoyelementNS@{\_GLFWjoyelementNS}}
+\index{\_GLFWjoyelementNS@{\_GLFWjoyelementNS}!cocoa\_joystick.m@{cocoa\_joystick.m}}
+\doxysubsubsection{\texorpdfstring{\_GLFWjoyelementNS}{\_GLFWjoyelementNS}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{struct___g_l_f_wjoyelement_n_s}{\+\_\+\+GLFWjoyelement\+NS}} \mbox{\hyperlink{struct___g_l_f_wjoyelement_n_s}{\+\_\+\+GLFWjoyelement\+NS}}}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{external_2glfw_2src_2cocoa__joystick_8m_a5b38f073f70b5ff5887391af47d9f019}\label{external_2glfw_2src_2cocoa__joystick_8m_a5b38f073f70b5ff5887391af47d9f019} 
+\index{cocoa\_joystick.m@{cocoa\_joystick.m}!\_glfwGetMappingNameCocoa@{\_glfwGetMappingNameCocoa}}
+\index{\_glfwGetMappingNameCocoa@{\_glfwGetMappingNameCocoa}!cocoa\_joystick.m@{cocoa\_joystick.m}}
+\doxysubsubsection{\texorpdfstring{\_glfwGetMappingNameCocoa()}{\_glfwGetMappingNameCocoa()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*} \+\_\+glfw\+Get\+Mapping\+Name\+Cocoa (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_source_l00462}{462}} of file \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_source}{cocoa\+\_\+joystick.\+m}}.
+
+\Hypertarget{external_2glfw_2src_2cocoa__joystick_8m_ac8c394752f844948b4582ee0d04106d3}\label{external_2glfw_2src_2cocoa__joystick_8m_ac8c394752f844948b4582ee0d04106d3} 
+\index{cocoa\_joystick.m@{cocoa\_joystick.m}!\_glfwInitJoysticksCocoa@{\_glfwInitJoysticksCocoa}}
+\index{\_glfwInitJoysticksCocoa@{\_glfwInitJoysticksCocoa}!cocoa\_joystick.m@{cocoa\_joystick.m}}
+\doxysubsubsection{\texorpdfstring{\_glfwInitJoysticksCocoa()}{\_glfwInitJoysticksCocoa()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{external_2glfw_2src_2internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}} \+\_\+glfw\+Init\+Joysticks\+Cocoa (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_source_l00303}{303}} of file \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_source}{cocoa\+\_\+joystick.\+m}}.
+
+\Hypertarget{external_2glfw_2src_2cocoa__joystick_8m_aa45f4ad5ab0c90630b8b63f53c97db18}\label{external_2glfw_2src_2cocoa__joystick_8m_aa45f4ad5ab0c90630b8b63f53c97db18} 
+\index{cocoa\_joystick.m@{cocoa\_joystick.m}!\_glfwPollJoystickCocoa@{\_glfwPollJoystickCocoa}}
+\index{\_glfwPollJoystickCocoa@{\_glfwPollJoystickCocoa}!cocoa\_joystick.m@{cocoa\_joystick.m}}
+\doxysubsubsection{\texorpdfstring{\_glfwPollJoystickCocoa()}{\_glfwPollJoystickCocoa()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{external_2glfw_2src_2internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}} \+\_\+glfw\+Poll\+Joystick\+Cocoa (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}}]{js,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_source_l00396}{396}} of file \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_source}{cocoa\+\_\+joystick.\+m}}.
+
+\Hypertarget{external_2glfw_2src_2cocoa__joystick_8m_a5a66e720d7aee763c2edef561cc025e6}\label{external_2glfw_2src_2cocoa__joystick_8m_a5a66e720d7aee763c2edef561cc025e6} 
+\index{cocoa\_joystick.m@{cocoa\_joystick.m}!\_glfwTerminateJoysticksCocoa@{\_glfwTerminateJoysticksCocoa}}
+\index{\_glfwTerminateJoysticksCocoa@{\_glfwTerminateJoysticksCocoa}!cocoa\_joystick.m@{cocoa\_joystick.m}}
+\doxysubsubsection{\texorpdfstring{\_glfwTerminateJoysticksCocoa()}{\_glfwTerminateJoysticksCocoa()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Terminate\+Joysticks\+Cocoa (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_source_l00380}{380}} of file \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_source}{cocoa\+\_\+joystick.\+m}}.
+
+\Hypertarget{external_2glfw_2src_2cocoa__joystick_8m_a87f3fa1e202e7ba6872cae9a5a18accd}\label{external_2glfw_2src_2cocoa__joystick_8m_a87f3fa1e202e7ba6872cae9a5a18accd} 
+\index{cocoa\_joystick.m@{cocoa\_joystick.m}!\_glfwUpdateGamepadGUIDCocoa@{\_glfwUpdateGamepadGUIDCocoa}}
+\index{\_glfwUpdateGamepadGUIDCocoa@{\_glfwUpdateGamepadGUIDCocoa}!cocoa\_joystick.m@{cocoa\_joystick.m}}
+\doxysubsubsection{\texorpdfstring{\_glfwUpdateGamepadGUIDCocoa()}{\_glfwUpdateGamepadGUIDCocoa()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Update\+Gamepad\+GUIDCocoa (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*}}]{guid }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_source_l00467}{467}} of file \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_source}{cocoa\+\_\+joystick.\+m}}.
+
+\Hypertarget{external_2glfw_2src_2cocoa__joystick_8m_a3699f1438e1fa6f4f40eb88dc5d8ca6e}\label{external_2glfw_2src_2cocoa__joystick_8m_a3699f1438e1fa6f4f40eb88dc5d8ca6e} 
+\index{cocoa\_joystick.m@{cocoa\_joystick.m}!closeJoystick@{closeJoystick}}
+\index{closeJoystick@{closeJoystick}!cocoa\_joystick.m@{cocoa\_joystick.m}}
+\doxysubsubsection{\texorpdfstring{closeJoystick()}{closeJoystick()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} close\+Joystick (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}}]{js }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_source_l00097}{97}} of file \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_source}{cocoa\+\_\+joystick.\+m}}.
+
+\Hypertarget{external_2glfw_2src_2cocoa__joystick_8m_a573e6c265b7f6e10ff88371f6f677966}\label{external_2glfw_2src_2cocoa__joystick_8m_a573e6c265b7f6e10ff88371f6f677966} 
+\index{cocoa\_joystick.m@{cocoa\_joystick.m}!compareElements@{compareElements}}
+\index{compareElements@{compareElements}!cocoa\_joystick.m@{cocoa\_joystick.m}}
+\doxysubsubsection{\texorpdfstring{compareElements()}{compareElements()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{CFComparison\+Result}} compare\+Elements (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}}]{fp,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}}]{sp,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}}]{user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_source_l00078}{78}} of file \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_source}{cocoa\+\_\+joystick.\+m}}.
+
+\Hypertarget{external_2glfw_2src_2cocoa__joystick_8m_a262bb3770a5691df07b30a5fd7f7cd04}\label{external_2glfw_2src_2cocoa__joystick_8m_a262bb3770a5691df07b30a5fd7f7cd04} 
+\index{cocoa\_joystick.m@{cocoa\_joystick.m}!getElementValue@{getElementValue}}
+\index{getElementValue@{getElementValue}!cocoa\_joystick.m@{cocoa\_joystick.m}}
+\doxysubsubsection{\texorpdfstring{getElementValue()}{getElementValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{long}} get\+Element\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wjoystick}{\+\_\+\+GLFWjoystick}} \texorpdfstring{$\ast$}{*}}]{js,  }\item[{\mbox{\hyperlink{struct___g_l_f_wjoyelement_n_s}{\+\_\+\+GLFWjoyelement\+NS}} \texorpdfstring{$\ast$}{*}}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_source_l00058}{58}} of file \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_source}{cocoa\+\_\+joystick.\+m}}.
+
+\Hypertarget{external_2glfw_2src_2cocoa__joystick_8m_a1c45c1249a59405215a3ce6da9aebfb6}\label{external_2glfw_2src_2cocoa__joystick_8m_a1c45c1249a59405215a3ce6da9aebfb6} 
+\index{cocoa\_joystick.m@{cocoa\_joystick.m}!matchCallback@{matchCallback}}
+\index{matchCallback@{matchCallback}!cocoa\_joystick.m@{cocoa\_joystick.m}}
+\doxysubsubsection{\texorpdfstring{matchCallback()}{matchCallback()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} match\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}}]{context,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{IOReturn}}}]{result,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}}]{sender,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{IOHIDDevice\+Ref}}}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_source_l00118}{118}} of file \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_source}{cocoa\+\_\+joystick.\+m}}.
+
+\Hypertarget{external_2glfw_2src_2cocoa__joystick_8m_ab4d20f8046b9ef17c92b15d7a4bf9fe1}\label{external_2glfw_2src_2cocoa__joystick_8m_ab4d20f8046b9ef17c92b15d7a4bf9fe1} 
+\index{cocoa\_joystick.m@{cocoa\_joystick.m}!removeCallback@{removeCallback}}
+\index{removeCallback@{removeCallback}!cocoa\_joystick.m@{cocoa\_joystick.m}}
+\doxysubsubsection{\texorpdfstring{removeCallback()}{removeCallback()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} remove\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}}]{context,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{IOReturn}}}]{result,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}}]{sender,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{IOHIDDevice\+Ref}}}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_source_l00283}{283}} of file \mbox{\hyperlink{external_2glfw_2src_2cocoa__joystick_8m_source}{cocoa\+\_\+joystick.\+m}}.
+

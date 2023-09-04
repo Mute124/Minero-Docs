@@ -1,0 +1,407 @@
+\doxysection{macros.\+h}
+\hypertarget{macros_8h_source}{}\label{macros_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/debug/macros.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/debug/macros.h}}
+\mbox{\hyperlink{macros_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00001}00001\ \textcolor{comment}{//\ Debugging\ support\ implementation\ -\/*-\/\ C++\ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00003}00003\ \textcolor{comment}{//\ Copyright\ (C)\ 2003-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00005}00005\ \textcolor{comment}{//\ This\ file\ is\ part\ of\ the\ GNU\ ISO\ C++\ Library.\ \ This\ library\ is\ free}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00006}00006\ \textcolor{comment}{//\ software;\ you\ can\ redistribute\ it\ and/or\ modify\ it\ under\ the}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00007}00007\ \textcolor{comment}{//\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by\ the}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00008}00008\ \textcolor{comment}{//\ Free\ Software\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00009}00009\ \textcolor{comment}{//\ any\ later\ version.}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00011}00011\ \textcolor{comment}{//\ This\ library\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00012}00012\ \textcolor{comment}{//\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00013}00013\ \textcolor{comment}{//\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00014}00014\ \textcolor{comment}{//\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00016}00016\ \textcolor{comment}{//\ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00017}00017\ \textcolor{comment}{//\ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00018}00018\ \textcolor{comment}{//\ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00020}00020\ \textcolor{comment}{//\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00021}00021\ \textcolor{comment}{//\ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00022}00022\ \textcolor{comment}{//\ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00023}00023\ \textcolor{comment}{//\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00029}00029\ \textcolor{preprocessor}{\#ifndef\ \_GLIBCXX\_DEBUG\_MACROS\_H}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00030}00030\ \textcolor{preprocessor}{\#define\ \_GLIBCXX\_DEBUG\_MACROS\_H\ 1}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00041}\mbox{\hyperlink{macros_8h_a8228a265b64188eaf05a08e318bdbbca}{00041}}\ \textcolor{preprocessor}{\#define\ \_GLIBCXX\_DEBUG\_VERIFY\_COND\_AT(\_Cond,\_ErrMsg,\_File,\_Line,\_Func)\ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00042}00042\ \textcolor{preprocessor}{\ \ if\ (\_\_builtin\_expect(!bool(\_Cond),\ false))\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00043}00043\ \textcolor{preprocessor}{\ \ \ \ \_\_gnu\_debug::\_Error\_formatter::\_S\_at(\_File,\ \_Line,\ \_Func)\ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00044}00044\ \textcolor{preprocessor}{\ \ \ \ \ \ .\_ErrMsg.\_M\_error()}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00046}\mbox{\hyperlink{macros_8h_a5b5a04708b7031375f34b1e664f1e384}{00046}}\ \textcolor{preprocessor}{\#define\ \_GLIBCXX\_DEBUG\_VERIFY\_AT\_F(\_Cond,\_ErrMsg,\_File,\_Line,\_Func)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00047}00047\ \textcolor{preprocessor}{\ \ do\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00048}00048\ \textcolor{preprocessor}{\ \ \ \ \_\_glibcxx\_constexpr\_assert(\_Cond);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00049}00049\ \textcolor{preprocessor}{\ \ \ \ \_GLIBCXX\_DEBUG\_VERIFY\_COND\_AT(\_Cond,\_ErrMsg,\_File,\_Line,\_Func);\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00050}00050\ \textcolor{preprocessor}{\ \ \}\ while\ (false)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00052}\mbox{\hyperlink{macros_8h_a259b851136e587d5e47cc695d6fb4bea}{00052}}\ \textcolor{preprocessor}{\#define\ \_GLIBCXX\_DEBUG\_VERIFY\_AT(\_Cond,\_ErrMsg,\_File,\_Line)\ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00053}00053\ \textcolor{preprocessor}{\ \ \_GLIBCXX\_DEBUG\_VERIFY\_AT\_F(\_Cond,\_ErrMsg,\_File,\_Line,\_\_PRETTY\_FUNCTION\_\_)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00055}\mbox{\hyperlink{macros_8h_abc21d6cf6063d6d47494b08a8f1ba3be}{00055}}\ \textcolor{preprocessor}{\#define\ \_GLIBCXX\_DEBUG\_VERIFY(\_Cond,\_ErrMsg)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00056}00056\ \textcolor{preprocessor}{\ \ \_GLIBCXX\_DEBUG\_VERIFY\_AT\_F(\_Cond,\ \_ErrMsg,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00057}00057\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_PRETTY\_FUNCTION\_\_)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00059}00059\ \textcolor{comment}{//\ Verify\ that\ [\_First,\ \_Last)\ forms\ a\ valid\ iterator\ range.}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00060}\mbox{\hyperlink{macros_8h_a5712e2c598e03f91470952cf5b6fe8d2}{00060}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_valid\_range(\_First,\_Last)\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00061}00061\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\_\_gnu\_debug::\_\_valid\_range(\_First,\ \_Last),\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00062}00062\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_valid\_range)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00063}00063\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First,\ \#\_First)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00064}00064\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Last,\ \#\_Last))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00066}\mbox{\hyperlink{macros_8h_a5944e899640ec0852389a6d07e0b9b61}{00066}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_valid\_range\_at(\_First,\_Last,\_File,\_Line,\_Func)\ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00067}00067\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY\_AT\_F(\_\_gnu\_debug::\_\_valid\_range(\_First,\ \_Last),\ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00068}00068\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_valid\_range)\ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00069}00069\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First,\ \#\_First)\ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00070}00070\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Last,\ \#\_Last),\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00071}00071\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_File,\_Line,\_Func)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00073}\mbox{\hyperlink{macros_8h_a3feecb348a86e8cfcb82c62cb0ecae5e}{00073}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_valid\_range2(\_First,\_Last,\_Dist)\ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00074}00074\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\_\_gnu\_debug::\_\_valid\_range(\_First,\ \_Last,\ \_Dist),\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00075}00075\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_valid\_range)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00076}00076\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First,\ \#\_First)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00077}00077\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Last,\ \#\_Last))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00079}\mbox{\hyperlink{macros_8h_ad801dca99ec542225b4b1127b8d81568}{00079}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_valid\_constructor\_range(\_First,\_Last)\ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00080}00080\ \textcolor{preprocessor}{\ \ \_\_gnu\_debug::\_\_check\_valid\_range(\_First,\ \_Last,\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00081}00081\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \_\_PRETTY\_FUNCTION\_\_)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00083}00083\ \textcolor{comment}{//\ Verify\ that\ [\_First,\ \_Last)\ forms\ a\ non-\/empty\ iterator\ range.}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00084}\mbox{\hyperlink{macros_8h_a0304c954358053090ceda238af27f33d}{00084}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_non\_empty\_range(\_First,\_Last)\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00085}00085\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\_First\ !=\ \_Last,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00086}00086\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_non\_empty\_range)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00087}00087\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First,\ \#\_First)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00088}00088\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Last,\ \#\_Last))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00090}00090\ \textcolor{comment}{//\ Verify\ that\ [\_First,\ \_First\ +\ \_Size)\ forms\ a\ valid\ range.}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00091}\mbox{\hyperlink{macros_8h_a74b434f88b61e2dc19911ec516f415b2}{00091}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_can\_increment(\_First,\_Size)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00092}00092\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\_\_gnu\_debug::\_\_can\_advance(\_First,\ \_Size),\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00093}00093\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_iter\_subscript\_oob)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00094}00094\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First,\ \#\_First)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00095}00095\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_integer(\_Size,\ \#\_Size))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00097}\mbox{\hyperlink{macros_8h_afdfb68e070e2be6552d43a66c3f21866}{00097}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_can\_increment\_dist(\_First,\_Dist,\_Way)\ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00098}00098\ \textcolor{preprocessor}{\ \ \_GLIBCXX\_DEBUG\_VERIFY(\_\_gnu\_debug::\_\_can\_advance(\_First,\ \_Dist,\ \_Way),\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00099}00099\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_iter\_subscript\_oob)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00100}00100\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First,\ \#\_First)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00101}00101\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_integer(\_Way\ *\ \_Dist.first,\ \#\_Dist))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00103}\mbox{\hyperlink{macros_8h_a819a66fb19888b82d487445e55de11c8}{00103}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_can\_increment\_range(\_First1,\_Last1,\_First2)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00104}00104\ \textcolor{preprocessor}{\ \ do\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00105}00105\ \textcolor{preprocessor}{\ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00106}00106\ \textcolor{preprocessor}{\ \ \ \ typename\ \_\_gnu\_debug::\_Distance\_traits<\_\_decltype(\_First1)>::\_\_type\ \_\_dist;\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00107}00107\ \textcolor{preprocessor}{\ \ \ \ \_GLIBCXX\_DEBUG\_VERIFY\_AT\_F(\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00108}00108\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_\_gnu\_debug::\_\_valid\_range(\_First1,\ \_Last1,\ \_\_dist),\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00109}00109\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_valid\_range)\ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00110}00110\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First1,\ \#\_First1)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00111}00111\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Last1,\ \#\_Last1),\ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00112}00112\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_\_FILE\_\_,\_\_LINE\_\_,\_\_PRETTY\_FUNCTION\_\_);\ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00113}00113\ \textcolor{preprocessor}{\ \ \ \ \_GLIBCXX\_DEBUG\_VERIFY\_AT\_F(\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00114}00114\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_\_gnu\_debug::\_\_can\_advance(\_First2,\ \_\_dist,\ 1),\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00115}00115\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_iter\_subscript\_oob)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00116}00116\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First2,\ \#\_First2)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00117}00117\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ .\_M\_integer(\_\_dist.first),\ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00118}00118\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_\_FILE\_\_,\_\_LINE\_\_,\_\_PRETTY\_FUNCTION\_\_);\ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00119}00119\ \textcolor{preprocessor}{\ \ \}\ while(false)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00121}\mbox{\hyperlink{macros_8h_ac98c157db5536fea6df0dad932e7b595}{00121}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_can\_decrement\_range(\_First1,\_Last1,\_First2)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00122}00122\ \textcolor{preprocessor}{\ \ do\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00123}00123\ \textcolor{preprocessor}{\ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00124}00124\ \textcolor{preprocessor}{\ \ \ \ typename\ \_\_gnu\_debug::\_Distance\_traits<\_\_decltype(\_First1)>::\_\_type\ \_\_dist;\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00125}00125\ \textcolor{preprocessor}{\ \ \ \ \_GLIBCXX\_DEBUG\_VERIFY\_AT\_F(\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00126}00126\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_\_gnu\_debug::\_\_valid\_range(\_First1,\ \_Last1,\ \_\_dist),\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00127}00127\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_valid\_range)\ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00128}00128\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First1,\ \#\_First1)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00129}00129\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Last1,\ \#\_Last1),\ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00130}00130\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_\_FILE\_\_,\_\_LINE\_\_,\_\_PRETTY\_FUNCTION\_\_);\ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00131}00131\ \textcolor{preprocessor}{\ \ \ \ \_GLIBCXX\_DEBUG\_VERIFY\_AT\_F(\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00132}00132\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_\_gnu\_debug::\_\_can\_advance(\_First2,\ \_\_dist,\ -\/1),\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00133}00133\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_iter\_subscript\_oob)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00134}00134\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First2,\ \#\_First2)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00135}00135\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ .\_M\_integer(-\/\_\_dist.first),\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00136}00136\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_\_FILE\_\_,\_\_LINE\_\_,\_\_PRETTY\_FUNCTION\_\_);\ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00137}00137\ \textcolor{preprocessor}{\ \ \}\ while(false)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00146}\mbox{\hyperlink{macros_8h_a14508f9347d4fb4566b1a16f8ce685d5}{00146}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_insert(\_Position)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00147}00147\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(!\_Position.\_M\_singular(),\ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00148}00148\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_insert\_singular)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00149}00149\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_sequence(*this,\ "{}this"{})\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00150}00150\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Position,\ \#\_Position));\ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00151}00151\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\_Position.\_M\_attached\_to(this),\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00152}00152\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_insert\_different)\ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00153}00153\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_sequence(*this,\ "{}this"{})\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00154}00154\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Position,\ \#\_Position))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00163}\mbox{\hyperlink{macros_8h_a0d4085848ee3a3f00e1ab06ef535565f}{00163}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_insert\_after(\_Position)\ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00164}00164\ \textcolor{preprocessor}{\_\_glibcxx\_check\_insert(\_Position);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00165}00165\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(!\_Position.\_M\_is\_end(),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00166}00166\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_insert\_after\_end)\ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00167}00167\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_sequence(*this,\ "{}this"{})\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00168}00168\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Position,\ \#\_Position))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00180}\mbox{\hyperlink{macros_8h_af3d576c2f08ec3b6f9ee1880e4a495a1}{00180}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_insert\_range(\_Position,\_First,\_Last,\_Dist)\ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00181}00181\ \textcolor{preprocessor}{\_\_glibcxx\_check\_valid\_range2(\_First,\_Last,\_Dist);\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00182}00182\ \textcolor{preprocessor}{\_\_glibcxx\_check\_insert(\_Position);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00183}00183\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\_\_gnu\_debug::\_\_foreign\_iterator(\_Position,\_First,\_Last),\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00184}00184\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_insert\_range\_from\_self)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00185}00185\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First,\ \#\_First)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00186}00186\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Last,\ \#\_Last)\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00187}00187\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_sequence(*this,\ "{}this"{}))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00199}\mbox{\hyperlink{macros_8h_a74088af7168ba8d52eb5d000b1bc7a19}{00199}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_insert\_range\_after(\_Position,\_First,\_Last,\_Dist)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00200}00200\ \textcolor{preprocessor}{\_\_glibcxx\_check\_valid\_range2(\_First,\_Last,\_Dist);\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00201}00201\ \textcolor{preprocessor}{\_\_glibcxx\_check\_insert\_after(\_Position);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00202}00202\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\_\_gnu\_debug::\_\_foreign\_iterator(\_Position,\_First,\_Last),\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00203}00203\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_insert\_range\_from\_self)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00204}00204\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First,\ \#\_First)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00205}00205\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Last,\ \#\_Last)\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00206}00206\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_sequence(*this,\ "{}this"{}))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00207}00207\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00212}\mbox{\hyperlink{macros_8h_a991c7e564ec0f174f81e0b65bdd236cf}{00212}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_erase(\_Position)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00213}00213\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\_Position.\_M\_dereferenceable(),\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00214}00214\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_erase\_bad)\ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00215}00215\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_sequence(*this,\ "{}this"{})\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00216}00216\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Position,\ \#\_Position));\ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00217}00217\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\_Position.\_M\_attached\_to(this),\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00218}00218\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_erase\_different)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00219}00219\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_sequence(*this,\ "{}this"{})\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00220}00220\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Position,\ \#\_Position))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00221}00221\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00222}00222\ \textcolor{preprocessor}{\#if\ \_\_cplusplus\ >=\ 201103L}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00223}00223\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_check\_erase2(\_CPosition)\ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00224}00224\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\_CPosition\ !=\ \_M\_base().cend(),\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00225}00225\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_erase\_bad)\ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00226}00226\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_sequence(*this,\ "{}this"{})\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00227}00227\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_CPosition,\ \#\_CPosition));}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00228}00228\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00229}00229\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00234}\mbox{\hyperlink{macros_8h_a1163c4caa47de6274b07329922c7fef5}{00234}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_erase\_after(\_Position)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00235}00235\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\_Position.\_M\_before\_dereferenceable(),\ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00236}00236\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_erase\_after\_bad)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00237}00237\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_sequence(*this,\ "{}this"{})\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00238}00238\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Position,\ \#\_Position));\ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00239}00239\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\_Position.\_M\_attached\_to(this),\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00240}00240\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_erase\_different)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00241}00241\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_sequence(*this,\ "{}this"{})\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00242}00242\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Position,\ \#\_Position))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00243}00243\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00248}\mbox{\hyperlink{macros_8h_a7f5f459ee711afceff11d342059a5bcd}{00248}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_erase\_range(\_First,\_Last)\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00249}00249\ \textcolor{preprocessor}{\_\_glibcxx\_check\_valid\_range(\_First,\_Last);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00250}00250\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\_First.\_M\_attached\_to(this),\ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00251}00251\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_erase\_different)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00252}00252\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_sequence(*this,\ "{}this"{})\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00253}00253\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First,\ \#\_First)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00254}00254\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Last,\ \#\_Last))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00255}00255\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00260}\mbox{\hyperlink{macros_8h_afef6cd40efd0755ceefbda6499a27e78}{00260}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_erase\_range\_after(\_First,\_Last)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00261}00261\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(!\_First.\_M\_singular()\ \&\&\ !\_Last.\_M\_singular(),\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00262}00262\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_erase\_different)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00263}00263\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_sequence(*this,\ "{}this"{})\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00264}00264\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First,\ \#\_First)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00265}00265\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Last,\ \#\_Last));\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00266}00266\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\_First.\_M\_can\_compare(\_Last),\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00267}00267\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_erase\_different)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00268}00268\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_sequence(*this,\ "{}this"{})\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00269}00269\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First,\ \#\_First)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00270}00270\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Last,\ \#\_Last));\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00271}00271\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\_First.\_M\_attached\_to(this),\ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00272}00272\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_erase\_different)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00273}00273\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_sequence(*this,\ "{}this"{})\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00274}00274\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First,\ \#\_First));\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00275}00275\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\_First\ !=\ \_Last,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00276}00276\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_valid\_range2)\ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00277}00277\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_sequence(*this,\ "{}this"{})\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00278}00278\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First,\ \#\_First)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00279}00279\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Last,\ \#\_Last));\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00280}00280\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\_First.\_M\_incrementable(),\ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00281}00281\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_valid\_range2)\ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00282}00282\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_sequence(*this,\ "{}this"{})\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00283}00283\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First,\ \#\_First)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00284}00284\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Last,\ \#\_Last));\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00285}00285\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(!\_Last.\_M\_is\_before\_begin(),\ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00286}00286\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_valid\_range2)\ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00287}00287\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_sequence(*this,\ "{}this"{})\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00288}00288\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First,\ \#\_First)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00289}00289\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Last,\ \#\_Last))\ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00290}00290\ \textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00291}00291\ \textcolor{comment}{//\ Verify\ that\ the\ subscript\ \_N\ is\ less\ than\ the\ container's\ size.}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00292}\mbox{\hyperlink{macros_8h_a61dea879b96ea726124fe02cc27adc7c}{00292}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_subscript(\_N)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00293}00293\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\_N\ <\ this-\/>size(),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00294}00294\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_subscript\_oob)\ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00295}00295\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_sequence(*this,\ "{}this"{})\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00296}00296\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_integer(\_N,\ \#\_N)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00297}00297\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_integer(this-\/>size(),\ "{}size"{}))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00298}00298\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00299}00299\ \textcolor{comment}{//\ Verify\ that\ the\ bucket\ \_N\ is\ less\ than\ the\ container's\ buckets\ count.}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00300}\mbox{\hyperlink{macros_8h_a5aa82067fce99b592438df07be7445c0}{00300}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_bucket\_index(\_N)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00301}00301\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\_N\ <\ this-\/>bucket\_count(),\ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00302}00302\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_bucket\_index\_oob)\ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00303}00303\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_sequence(*this,\ "{}this"{})\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00304}00304\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_integer(\_N,\ \#\_N)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00305}00305\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_integer(this-\/>bucket\_count(),\ "{}size"{}))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00306}00306\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00307}00307\ \textcolor{comment}{//\ Verify\ that\ the\ container\ is\ nonempty}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00308}\mbox{\hyperlink{macros_8h_aab798d530e4a545a2194f0f443f09c6c}{00308}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_nonempty()\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00309}00309\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(!\ this-\/>empty(),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00310}00310\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_empty)\ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00311}00311\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_sequence(*this,\ "{}this"{}))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00312}00312\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00313}00313\ \textcolor{comment}{//\ Verify\ that\ a\ predicate\ is\ irreflexive}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00314}\mbox{\hyperlink{macros_8h_a0636b9fefc87dcc0c0b38c626023a582}{00314}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_irreflexive(\_First,\_Last)\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00315}00315\ \textcolor{preprocessor}{\ \ \_GLIBCXX\_DEBUG\_VERIFY(\_First\ ==\ \_Last\ ||\ !(*\_First\ <\ *\_First),\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00316}00316\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_irreflexive\_ordering)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00317}00317\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator\_value\_type(\_First,\ "{}<\ operator\ type"{}))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00318}00318\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00319}00319\ \textcolor{preprocessor}{\#if\ \_\_cplusplus\ >=\ 201103L}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00320}00320\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_check\_irreflexive2(\_First,\_Last)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00321}00321\ \textcolor{preprocessor}{\ \ \_GLIBCXX\_DEBUG\_VERIFY(\_First\ ==\ \_Last\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00322}00322\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ ||\ \_\_gnu\_debug::\_\_is\_irreflexive(\_First),\ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00323}00323\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_irreflexive\_ordering)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00324}00324\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator\_value\_type(\_First,\ "{}<\ operator\ type"{}))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00325}00325\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00326}\mbox{\hyperlink{macros_8h_ae0e918fd2af44fb9f20fdbf4e2908dfd}{00326}}\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_check\_irreflexive2(\_First,\_Last)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00327}00327\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00328}00328\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00329}\mbox{\hyperlink{macros_8h_a93d6a52f0d3cd00803d8c447b7e05fd0}{00329}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_irreflexive\_pred(\_First,\_Last,\_Pred)\ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00330}00330\ \textcolor{preprocessor}{\ \ \_GLIBCXX\_DEBUG\_VERIFY(\_First\ ==\ \_Last\ ||\ !\_Pred(*\_First,\ *\_First),\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00331}00331\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_irreflexive\_ordering)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00332}00332\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ .\_M\_instance(\_Pred,\ "{}functor"{})\ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00333}00333\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator\_value\_type(\_First,\ "{}ordered\ type"{}))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00334}00334\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00335}00335\ \textcolor{preprocessor}{\#if\ \_\_cplusplus\ >=\ 201103L}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00336}00336\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_check\_irreflexive\_pred2(\_First,\_Last,\_Pred)\ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00337}00337\ \textcolor{preprocessor}{\ \ \_GLIBCXX\_DEBUG\_VERIFY(\_First\ ==\ \_Last\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00338}00338\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ ||\_\_gnu\_debug::\_\_is\_irreflexive\_pred(\_First,\ \_Pred),\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00339}00339\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_irreflexive\_ordering)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00340}00340\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ .\_M\_instance(\_Pred,\ "{}functor"{})\ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00341}00341\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator\_value\_type(\_First,\ "{}ordered\ type"{}))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00342}00342\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00343}\mbox{\hyperlink{macros_8h_ab6f0db6c68539de8f9872032218d1c15}{00343}}\ \textcolor{preprocessor}{\#\ define\ \_\_glibcxx\_check\_irreflexive\_pred2(\_First,\_Last,\_Pred)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00344}00344\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00345}00345\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00346}00346\ \textcolor{comment}{//\ Verify\ that\ the\ iterator\ range\ [\_First,\ \_Last)\ is\ sorted}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00347}\mbox{\hyperlink{macros_8h_ab1b0b4d32e4e4f078d9e6b882cf24503}{00347}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_sorted(\_First,\_Last)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00348}00348\ \textcolor{preprocessor}{\_\_glibcxx\_check\_valid\_range(\_First,\_Last);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00349}00349\ \textcolor{preprocessor}{\_\_glibcxx\_check\_irreflexive(\_First,\_Last);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00350}00350\ \textcolor{preprocessor}{\ \_GLIBCXX\_DEBUG\_VERIFY(\_\_gnu\_debug::\_\_check\_sorted(\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00351}00351\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_\_gnu\_debug::\_\_base(\_First),\ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00352}00352\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_\_gnu\_debug::\_\_base(\_Last)),\ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00353}00353\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_unsorted)\ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00354}00354\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First,\ \#\_First)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00355}00355\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Last,\ \#\_Last))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00356}00356\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00359}\mbox{\hyperlink{macros_8h_a43708f78d7d3c93f88659ac067b89db0}{00359}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_sorted\_pred(\_First,\_Last,\_Pred)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00360}00360\ \textcolor{preprocessor}{\_\_glibcxx\_check\_valid\_range(\_First,\_Last);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00361}00361\ \textcolor{preprocessor}{\_\_glibcxx\_check\_irreflexive\_pred(\_First,\_Last,\_Pred);\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00362}00362\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\_\_gnu\_debug::\_\_check\_sorted(\ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00363}00363\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_\_gnu\_debug::\_\_base(\_First),\ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00364}00364\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_\_gnu\_debug::\_\_base(\_Last),\ \_Pred),\ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00365}00365\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_unsorted\_pred)\ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00366}00366\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First,\ \#\_First)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00367}00367\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Last,\ \#\_Last)\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00368}00368\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_string(\#\_Pred))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00369}00369\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00370}00370\ \textcolor{comment}{//\ Special\ variant\ for\ std::merge,\ std::includes,\ std::set\_*}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00371}\mbox{\hyperlink{macros_8h_a2186cf72aa73a93da5747c32b8475293}{00371}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_sorted\_set(\_First1,\_Last1,\_First2)\ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00372}00372\ \textcolor{preprocessor}{\_\_glibcxx\_check\_valid\_range(\_First1,\_Last1);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00373}00373\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00374}00374\ \textcolor{preprocessor}{\ \ \_\_gnu\_debug::\_\_check\_sorted\_set(\_\_gnu\_debug::\_\_base(\_First1),\ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00375}00375\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_gnu\_debug::\_\_base(\_Last1),\ \_First2),\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00376}00376\ \textcolor{preprocessor}{\ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_unsorted)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00377}00377\ \textcolor{preprocessor}{\ \ .\_M\_iterator(\_First1,\ \#\_First1)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00378}00378\ \textcolor{preprocessor}{\ \ .\_M\_iterator(\_Last1,\ \#\_Last1))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00379}00379\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00380}00380\ \textcolor{comment}{//\ Likewise\ with\ a\ \_Pred.}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00381}\mbox{\hyperlink{macros_8h_a12cc360ac1b74092781795dbedc2cdc3}{00381}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_sorted\_set\_pred(\_First1,\_Last1,\_First2,\_Pred)\ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00382}00382\ \textcolor{preprocessor}{\_\_glibcxx\_check\_valid\_range(\_First1,\_Last1);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00383}00383\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00384}00384\ \textcolor{preprocessor}{\ \ \_\_gnu\_debug::\_\_check\_sorted\_set(\_\_gnu\_debug::\_\_base(\_First1),\ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00385}00385\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_gnu\_debug::\_\_base(\_Last1),\ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00386}00386\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_First2,\ \_Pred),\ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00387}00387\ \textcolor{preprocessor}{\ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_unsorted\_pred)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00388}00388\ \textcolor{preprocessor}{\ \ .\_M\_iterator(\_First1,\ \#\_First1)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00389}00389\ \textcolor{preprocessor}{\ \ .\_M\_iterator(\_Last1,\ \#\_Last1)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00390}00390\ \textcolor{preprocessor}{\ \ .\_M\_string(\#\_Pred))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00391}00391\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00394}\mbox{\hyperlink{macros_8h_a509251efdabc63ef4a39a9c2b892c58c}{00394}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_partitioned\_lower(\_First,\_Last,\_Value)\ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00395}00395\ \textcolor{preprocessor}{\_\_glibcxx\_check\_valid\_range(\_First,\_Last);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00396}00396\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\_\_gnu\_debug::\_\_check\_partitioned\_lower(\ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00397}00397\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_\_gnu\_debug::\_\_base(\_First),\ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00398}00398\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_\_gnu\_debug::\_\_base(\_Last),\ \_Value),\ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00399}00399\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_unpartitioned)\ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00400}00400\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First,\ \#\_First)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00401}00401\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Last,\ \#\_Last)\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00402}00402\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_string(\#\_Value))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00403}00403\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00404}\mbox{\hyperlink{macros_8h_a2d094d7e02609cfc0a258b4f6d62cdf5}{00404}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_partitioned\_upper(\_First,\_Last,\_Value)\ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00405}00405\ \textcolor{preprocessor}{\_\_glibcxx\_check\_valid\_range(\_First,\_Last);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00406}00406\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\_\_gnu\_debug::\_\_check\_partitioned\_upper(\ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00407}00407\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_\_gnu\_debug::\_\_base(\_First),\ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00408}00408\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_\_gnu\_debug::\_\_base(\_Last),\ \_Value),\ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00409}00409\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_unpartitioned)\ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00410}00410\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First,\ \#\_First)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00411}00411\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Last,\ \#\_Last)\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00412}00412\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_string(\#\_Value))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00413}00413\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00416}\mbox{\hyperlink{macros_8h_ad6ba08219f25b99db407f7ff7dc2c595}{00416}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_partitioned\_lower\_pred(\_First,\_Last,\_Value,\_Pred)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00417}00417\ \textcolor{preprocessor}{\_\_glibcxx\_check\_valid\_range(\_First,\_Last);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00418}00418\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\_\_gnu\_debug::\_\_check\_partitioned\_lower(\ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00419}00419\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_\_gnu\_debug::\_\_base(\_First),\ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00420}00420\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_\_gnu\_debug::\_\_base(\_Last),\ \_Value,\ \_Pred),\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00421}00421\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_unpartitioned\_pred)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00422}00422\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First,\ \#\_First)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00423}00423\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Last,\ \#\_Last)\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00424}00424\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_string(\#\_Pred)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00425}00425\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_string(\#\_Value))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00426}00426\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00429}\mbox{\hyperlink{macros_8h_acf798c501271ab717db55d658c67c9a5}{00429}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_partitioned\_upper\_pred(\_First,\_Last,\_Value,\_Pred)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00430}00430\ \textcolor{preprocessor}{\_\_glibcxx\_check\_valid\_range(\_First,\_Last);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00431}00431\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\_\_gnu\_debug::\_\_check\_partitioned\_upper(\ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00432}00432\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_\_gnu\_debug::\_\_base(\_First),\ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00433}00433\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \_\_gnu\_debug::\_\_base(\_Last),\ \_Value,\ \_Pred),\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00434}00434\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_unpartitioned\_pred)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00435}00435\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First,\ \#\_First)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00436}00436\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Last,\ \#\_Last)\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00437}00437\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_string(\#\_Pred)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00438}00438\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_string(\#\_Value))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00439}00439\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00440}00440\ \textcolor{comment}{//\ Verify\ that\ the\ iterator\ range\ [\_First,\ \_Last)\ is\ a\ heap}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00441}\mbox{\hyperlink{macros_8h_a582443bad022ae77f8b969c932610e9f}{00441}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_heap(\_First,\_Last)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00442}00442\ \textcolor{preprocessor}{\ \ \_GLIBCXX\_DEBUG\_VERIFY(std::\_\_is\_heap(\_\_gnu\_debug::\_\_base(\_First),\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00443}00443\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_gnu\_debug::\_\_base(\_Last)),\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00444}00444\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_not\_heap)\ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00445}00445\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First,\ \#\_First)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00446}00446\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Last,\ \#\_Last))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00447}00447\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00450}\mbox{\hyperlink{macros_8h_a2f3402923321554f4e9e5e1f5e02e7df}{00450}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_heap\_pred(\_First,\_Last,\_Pred)\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00451}00451\ \textcolor{preprocessor}{\ \ \_GLIBCXX\_DEBUG\_VERIFY(std::\_\_is\_heap(\_\_gnu\_debug::\_\_base(\_First),\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00452}00452\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_\_gnu\_debug::\_\_base(\_Last),\ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00453}00453\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_Pred),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00454}00454\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_not\_heap\_pred)\ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00455}00455\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_First,\ \#\_First)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00456}00456\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_iterator(\_Last,\ \#\_Last)\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00457}00457\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_string(\#\_Pred))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00458}00458\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00459}00459\ \textcolor{comment}{//\ Verify\ that\ load\ factor\ is\ positive}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00460}\mbox{\hyperlink{macros_8h_a49309be7b2cc0e58ebbb4a068498604d}{00460}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_max\_load\_factor(\_F)\ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00461}00461\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\_F\ >\ 0.0f,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00462}00462\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_valid\_load\_factor)\ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00463}00463\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_sequence(*this,\ "{}this"{}))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00464}00464\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00465}\mbox{\hyperlink{macros_8h_a0fffd86ffb57d67b11878baf3b9fec4a}{00465}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_equal\_allocs(\_This,\ \_Other)\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00466}00466\ \textcolor{preprocessor}{\_GLIBCXX\_DEBUG\_VERIFY(\_This.get\_allocator()\ ==\ \_Other.get\_allocator(),\ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00467}00467\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\_\_gnu\_debug::\_\_msg\_equal\_allocs)\ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00468}00468\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_sequence(\_This,\ "{}this"{}))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00469}00469\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00470}\mbox{\hyperlink{macros_8h_a298263bfccc937e49cd5700da80d1543}{00470}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_string(\_String)\ \_GLIBCXX\_DEBUG\_PEDASSERT(\_String\ !=\ 0)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00471}\mbox{\hyperlink{macros_8h_aec89828eb148a9841f7b5b6fbbb5eb21}{00471}}\ \textcolor{preprocessor}{\#define\ \_\_glibcxx\_check\_string\_len(\_String,\_Len)\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00472}00472\ \textcolor{preprocessor}{\ \ \_GLIBCXX\_DEBUG\_PEDASSERT(\_String\ !=\ 0\ ||\ \_Len\ ==\ 0)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00473}00473\ }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00474}00474\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

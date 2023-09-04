@@ -1,0 +1,106 @@
+\doxysection{Shader\+Pool Class Reference}
+\hypertarget{class_shader_pool}{}\label{class_shader_pool}\index{ShaderPool@{ShaderPool}}
+
+
+{\ttfamily \#include "{}Shaderpool.\+h"{}}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_shader_pool_ab12354ef22dba515de45dc9b3d77f535}{Shader\+Pool}} ()
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{class_shader_pool_ac60297f965fb49948e6fab7b46af77e7}{Set\+Pooled\+Shader\+Value}} (std\+::string \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Name}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{loc\+Index}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}Value, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Uniform\+Type}})
+\item 
+\mbox{\hyperlink{struct_shader}{Shader}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_shader_pool_ad1b9f6cb075ccc36ba4baaff1f3c3452}{Get\+Pooled\+Shader}} (std\+::string \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Name}})
+\item 
+\mbox{\hyperlink{class_shader_pool_a0260c824e99b9ac71ff3291e49c12013}{\texorpdfstring{$\sim$}{\string~}\+Shader\+Pool}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{vector}}$<$ \mbox{\hyperlink{structshader__registry__entry}{shader\+\_\+registry\+\_\+entry}} $>$ \mbox{\hyperlink{class_shader_pool_ace28f6cb54b84bae2a2fac746dbf3d75}{shader\+\_\+registry}}
+\item 
+\mbox{\hyperlink{raylib_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} \mbox{\hyperlink{class_shader_pool_ab986cdaa160814e91ed009034a9cfb13}{m\+\_\+delete\+\_\+requested}} = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_shaderpool_8h_source_l00020}{20}} of file \mbox{\hyperlink{_shaderpool_8h_source}{Shaderpool.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_shader_pool_ab12354ef22dba515de45dc9b3d77f535}\label{class_shader_pool_ab12354ef22dba515de45dc9b3d77f535} 
+\index{ShaderPool@{ShaderPool}!ShaderPool@{ShaderPool}}
+\index{ShaderPool@{ShaderPool}!ShaderPool@{ShaderPool}}
+\doxysubsubsection{\texorpdfstring{ShaderPool()}{ShaderPool()}}
+{\footnotesize\ttfamily Shader\+Pool\+::\+Shader\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_shaderpool_8h_source_l00029}{29}} of file \mbox{\hyperlink{_shaderpool_8h_source}{Shaderpool.\+h}}.
+
+\Hypertarget{class_shader_pool_a0260c824e99b9ac71ff3291e49c12013}\label{class_shader_pool_a0260c824e99b9ac71ff3291e49c12013} 
+\index{ShaderPool@{ShaderPool}!````~ShaderPool@{\texorpdfstring{$\sim$}{\string~}ShaderPool}}
+\index{````~ShaderPool@{\texorpdfstring{$\sim$}{\string~}ShaderPool}!ShaderPool@{ShaderPool}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ShaderPool()}{\string~ShaderPool()}}
+{\footnotesize\ttfamily Shader\+Pool\+::\texorpdfstring{$\sim$}{\string~}\+Shader\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_shaderpool_8h_source_l00035}{35}} of file \mbox{\hyperlink{_shaderpool_8h_source}{Shaderpool.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_shader_pool_ad1b9f6cb075ccc36ba4baaff1f3c3452}\label{class_shader_pool_ad1b9f6cb075ccc36ba4baaff1f3c3452} 
+\index{ShaderPool@{ShaderPool}!GetPooledShader@{GetPooledShader}}
+\index{GetPooledShader@{GetPooledShader}!ShaderPool@{ShaderPool}}
+\doxysubsubsection{\texorpdfstring{GetPooledShader()}{GetPooledShader()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_shader}{Shader}} \texorpdfstring{$\ast$}{*} Shader\+Pool\+::\+Get\+Pooled\+Shader (\begin{DoxyParamCaption}\item[{std\+::string}]{Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_shaderpool_8h_source_l00033}{33}} of file \mbox{\hyperlink{_shaderpool_8h_source}{Shaderpool.\+h}}.
+
+\Hypertarget{class_shader_pool_ac60297f965fb49948e6fab7b46af77e7}\label{class_shader_pool_ac60297f965fb49948e6fab7b46af77e7} 
+\index{ShaderPool@{ShaderPool}!SetPooledShaderValue@{SetPooledShaderValue}}
+\index{SetPooledShaderValue@{SetPooledShaderValue}!ShaderPool@{ShaderPool}}
+\doxysubsubsection{\texorpdfstring{SetPooledShaderValue()}{SetPooledShaderValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} Shader\+Pool\+::\+Set\+Pooled\+Shader\+Value (\begin{DoxyParamCaption}\item[{std\+::string}]{Name,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{loc\+Index,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}}]{Value,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}}}]{Uniform\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_shaderpool_8h_source_l00031}{31}} of file \mbox{\hyperlink{_shaderpool_8h_source}{Shaderpool.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_shader_pool_ab986cdaa160814e91ed009034a9cfb13}\label{class_shader_pool_ab986cdaa160814e91ed009034a9cfb13} 
+\index{ShaderPool@{ShaderPool}!m\_delete\_requested@{m\_delete\_requested}}
+\index{m\_delete\_requested@{m\_delete\_requested}!ShaderPool@{ShaderPool}}
+\doxysubsubsection{\texorpdfstring{m\_delete\_requested}{m\_delete\_requested}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_8h_af6a258d8f3ee5206d682d799316314b1}{bool}} Shader\+Pool\+::m\+\_\+delete\+\_\+requested = \mbox{\hyperlink{stdbool_8h_a65e9886d74aaee76545e83dd09011727}{false}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_shaderpool_8h_source_l00024}{24}} of file \mbox{\hyperlink{_shaderpool_8h_source}{Shaderpool.\+h}}.
+
+\Hypertarget{class_shader_pool_ace28f6cb54b84bae2a2fac746dbf3d75}\label{class_shader_pool_ace28f6cb54b84bae2a2fac746dbf3d75} 
+\index{ShaderPool@{ShaderPool}!shader\_registry@{shader\_registry}}
+\index{shader\_registry@{shader\_registry}!ShaderPool@{ShaderPool}}
+\doxysubsubsection{\texorpdfstring{shader\_registry}{shader\_registry}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{vector}}$<$\mbox{\hyperlink{structshader__registry__entry}{shader\+\_\+registry\+\_\+entry}}$>$ Shader\+Pool\+::shader\+\_\+registry\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_shaderpool_8h_source_l00022}{22}} of file \mbox{\hyperlink{_shaderpool_8h_source}{Shaderpool.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/\mbox{\hyperlink{_shaderpool_8h}{Shaderpool.\+h}}\item 
+C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/\mbox{\hyperlink{_shaderpool_8cpp}{Shaderpool.\+cpp}}\end{DoxyCompactItemize}

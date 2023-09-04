@@ -1,0 +1,94 @@
+\doxysection{ext\+\_\+quaternion\+\_\+geometric.\+cpp}
+\hypertarget{ext__quaternion__geometric_8cpp_source}{}\label{ext__quaternion__geometric_8cpp_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/glm/test/ext/ext\_quaternion\_geometric.cpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/glm/test/ext/ext\_quaternion\_geometric.cpp}}
+\mbox{\hyperlink{ext__quaternion__geometric_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{constants_8hpp}{glm/gtc/constants.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{quaternion__geometric_8hpp}{glm/ext/quaternion\_geometric.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{quaternion__float_8hpp}{glm/ext/quaternion\_float.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{quaternion__trigonometric_8hpp}{glm/ext/quaternion\_trigonometric.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{quaternion__float__precision_8hpp}{glm/ext/quaternion\_float\_precision.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{quaternion__double_8hpp}{glm/ext/quaternion\_double.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{quaternion__double__precision_8hpp}{glm/ext/quaternion\_double\_precision.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{vector__float3_8hpp}{glm/ext/vector\_float3.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{vector__float3__precision_8hpp}{glm/ext/vector\_float3\_precision.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{vector__double3_8hpp}{glm/ext/vector\_double3.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{vector__double3__precision_8hpp}{glm/ext/vector\_double3\_precision.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{ext_2scalar__relational_8hpp}{glm/ext/scalar\_relational.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00014}\mbox{\hyperlink{ext__quaternion__geometric_8cpp_af427a1d48b1ac770377fc5bd3a380035}{00014}}\ \textcolor{keywordtype}{float}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{ext__quaternion__geometric_8cpp_af427a1d48b1ac770377fc5bd3a380035}{Epsilon}}\ =\ 0.001f;}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00016}\mbox{\hyperlink{ext__quaternion__geometric_8cpp_ae321db1ec73f5c5b72aaa1cc7d526cd2}{00016}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{ext__quaternion__geometric_8cpp_ae321db1ec73f5c5b72aaa1cc7d526cd2}{test\_length}}()}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00017}00017\ \{}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00018}00018\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00020}00020\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \textcolor{keyword}{const}\ A\ =\ \mbox{\hyperlink{namespaceglm_abcd8538aa95a8963803ec42c2fd654cd}{glm::length}}(\mbox{\hyperlink{structglm_1_1qua}{glm::quat}}(1,\ 0,\ 0,\ 0));}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{group__core__func__vector__relational_gaf539cf490630ba648dfd6e36aef910a1}{glm::equal}}(A,\ 1.0f,\ \mbox{\hyperlink{ext__quaternion__geometric_8cpp_af427a1d48b1ac770377fc5bd3a380035}{Epsilon}})\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00023}00023\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00025}00025\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \textcolor{keyword}{const}\ A\ =\ \mbox{\hyperlink{namespaceglm_abcd8538aa95a8963803ec42c2fd654cd}{glm::length}}(\mbox{\hyperlink{structglm_1_1qua}{glm::quat}}(1,\ \mbox{\hyperlink{structglm_1_1vec}{glm::vec3}}(0)));}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{group__core__func__vector__relational_gaf539cf490630ba648dfd6e36aef910a1}{glm::equal}}(A,\ 1.0f,\ \mbox{\hyperlink{ext__quaternion__geometric_8cpp_af427a1d48b1ac770377fc5bd3a380035}{Epsilon}})\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00030}00030\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \textcolor{keyword}{const}\ A\ =\ \mbox{\hyperlink{namespaceglm_abcd8538aa95a8963803ec42c2fd654cd}{glm::length}}(\mbox{\hyperlink{structglm_1_1qua}{glm::quat}}(\mbox{\hyperlink{structglm_1_1vec}{glm::vec3}}(1,\ 0,\ 0),\ \mbox{\hyperlink{structglm_1_1vec}{glm::vec3}}(0,\ 1,\ 0)));}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{group__core__func__vector__relational_gaf539cf490630ba648dfd6e36aef910a1}{glm::equal}}(A,\ 1.0f,\ \mbox{\hyperlink{ext__quaternion__geometric_8cpp_af427a1d48b1ac770377fc5bd3a380035}{Epsilon}})\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00033}00033\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}};}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00036}00036\ \}}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00038}\mbox{\hyperlink{ext__quaternion__geometric_8cpp_a6c1e588f21870cde3d643ed5f60a12ab}{00038}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{ext__quaternion__geometric_8cpp_a6c1e588f21870cde3d643ed5f60a12ab}{test\_normalize}}()}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00039}00039\ \{}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00042}00042\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structglm_1_1qua}{glm::quat}}\ \textcolor{keyword}{const}\ A\ =\ \mbox{\hyperlink{group__ext__quaternion__float_ga8f3c5f30982cc471ce0ac3eb737113b5}{glm::quat}}(1,\ 0,\ 0,\ 0);}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structglm_1_1qua}{glm::quat}}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{N}}\ =\ \mbox{\hyperlink{group__core__func__geometric_ga5c6c1379961d4589035a390856f2d66c}{glm::normalize}}(A);}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{group__core__func__vector__relational_ga87e53f50b679f5f95c5cb4780311b3dd}{glm::all}}(\mbox{\hyperlink{group__core__func__vector__relational_gaf539cf490630ba648dfd6e36aef910a1}{glm::equal}}(A,\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{N}},\ \mbox{\hyperlink{ext__quaternion__geometric_8cpp_af427a1d48b1ac770377fc5bd3a380035}{Epsilon}}))\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00048}00048\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structglm_1_1qua}{glm::quat}}\ \textcolor{keyword}{const}\ A\ =\ \mbox{\hyperlink{group__ext__quaternion__float_ga8f3c5f30982cc471ce0ac3eb737113b5}{glm::quat}}(1,\ \mbox{\hyperlink{structglm_1_1vec}{glm::vec3}}(0));}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structglm_1_1qua}{glm::quat}}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{N}}\ =\ \mbox{\hyperlink{group__core__func__geometric_ga5c6c1379961d4589035a390856f2d66c}{glm::normalize}}(A);}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{group__core__func__vector__relational_ga87e53f50b679f5f95c5cb4780311b3dd}{glm::all}}(\mbox{\hyperlink{group__core__func__vector__relational_gaf539cf490630ba648dfd6e36aef910a1}{glm::equal}}(A,\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{N}},\ \mbox{\hyperlink{ext__quaternion__geometric_8cpp_af427a1d48b1ac770377fc5bd3a380035}{Epsilon}}))\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00052}00052\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00054}00054\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}};}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00055}00055\ \}}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00057}\mbox{\hyperlink{ext__quaternion__geometric_8cpp_ac793c94349b61696d5060fc8372ab8af}{00057}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{ext__quaternion__geometric_8cpp_ac793c94349b61696d5060fc8372ab8af}{test\_dot}}()}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00058}00058\ \{}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00059}00059\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00061}00061\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structglm_1_1qua}{glm::quat}}\ \textcolor{keyword}{const}\ A\ =\ \mbox{\hyperlink{group__ext__quaternion__float_ga8f3c5f30982cc471ce0ac3eb737113b5}{glm::quat}}(1,\ 0,\ 0,\ 0);}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structglm_1_1qua}{glm::quat}}\ \textcolor{keyword}{const}\ B\ =\ \mbox{\hyperlink{group__ext__quaternion__float_ga8f3c5f30982cc471ce0ac3eb737113b5}{glm::quat}}(1,\ 0,\ 0,\ 0);}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{stb__vorbis_8c_ac4cf4b2ab929bd23951a8676eeac086b}{C}}\ =\ \mbox{\hyperlink{namespaceglm_a40370edb74dec9048258c063b9c091c9}{glm::dot}}(A,\ B);}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{group__core__func__vector__relational_gaf539cf490630ba648dfd6e36aef910a1}{glm::equal}}(\mbox{\hyperlink{stb__vorbis_8c_ac4cf4b2ab929bd23951a8676eeac086b}{C}},\ 1.0f,\ \mbox{\hyperlink{ext__quaternion__geometric_8cpp_af427a1d48b1ac770377fc5bd3a380035}{Epsilon}})\ ?\ 0\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00066}00066\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00068}00068\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}};}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00069}00069\ \}}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00071}\mbox{\hyperlink{ext__quaternion__geometric_8cpp_ac339061abfe2f15e44a68744e0bc8bd2}{00071}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{ext__quaternion__geometric_8cpp_ac339061abfe2f15e44a68744e0bc8bd2}{test\_cross}}()}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00072}00072\ \{}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00073}00073\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00075}00075\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}};}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00076}00076\ \}}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00078}\mbox{\hyperlink{ext__quaternion__geometric_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00078}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{ext__quaternion__geometric_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00079}00079\ \{}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00080}00080\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00082}00082\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{ext__quaternion__geometric_8cpp_ae321db1ec73f5c5b72aaa1cc7d526cd2}{test\_length}}();}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00083}00083\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{ext__quaternion__geometric_8cpp_a6c1e588f21870cde3d643ed5f60a12ab}{test\_normalize}}();}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00084}00084\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{ext__quaternion__geometric_8cpp_ac793c94349b61696d5060fc8372ab8af}{test\_dot}}();}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00085}00085\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}}\ +=\ \mbox{\hyperlink{ext__quaternion__geometric_8cpp_ac339061abfe2f15e44a68744e0bc8bd2}{test\_cross}}();}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00087}00087\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Error}};}
+\DoxyCodeLine{\Hypertarget{ext__quaternion__geometric_8cpp_source_l00088}00088\ \}}
+
+\end{DoxyCode}

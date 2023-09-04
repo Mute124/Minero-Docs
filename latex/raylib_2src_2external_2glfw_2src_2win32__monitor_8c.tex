@@ -1,0 +1,206 @@
+\doxysection{C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/raylib/src/external/glfw/src/win32\+\_\+monitor.c File Reference}
+\hypertarget{raylib_2src_2external_2glfw_2src_2win32__monitor_8c}{}\label{raylib_2src_2external_2glfw_2src_2win32__monitor_8c}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/raylib/src/external/glfw/src/win32\_monitor.c@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/raylib/src/external/glfw/src/win32\_monitor.c}}
+{\ttfamily \#include "{}internal.\+h"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+{\ttfamily \#include $<$malloc.\+h$>$}\newline
+{\ttfamily \#include $<$wchar.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{BOOL}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{CALLBACK}} \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_a9c0b51a38de9b4aef8e41f6e7cf40760}{monitor\+Callback}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{HMONITOR}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a48fc485a2a8834589d1f1afeec65193c}{handle}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{HDC}} dc, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{RECT}} \texorpdfstring{$\ast$}{*}rect, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{LPARAM}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_a89ce72163394e6aef63b551a8806e93f}{data}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{struct___g_l_f_wmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_acaf97036893a6cacc2fb8211548d5c2a}{create\+Monitor}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{DISPLAY\+\_\+\+DEVICEW}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{adapter}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{DISPLAY\+\_\+\+DEVICEW}} \texorpdfstring{$\ast$}{*}display)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_a345b11644c658a9a94b0eeb4ed4a0618}{\+\_\+glfw\+Poll\+Monitors\+Win32}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_a52d8e36bf649dcb15198832d92206ce2}{\+\_\+glfw\+Set\+Video\+Mode\+Win32}} (\mbox{\hyperlink{struct___g_l_f_wmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}monitor, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{struct_g_l_f_wvidmode}{GLFWvidmode}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{desired}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_af4b02765bc562c8265503bb97c0cd8e9}{\+\_\+glfw\+Restore\+Video\+Mode\+Win32}} (\mbox{\hyperlink{struct___g_l_f_wmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}monitor)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_a7f1868535334122b19eefca607adae27}{\+\_\+glfw\+Get\+Monitor\+Content\+Scale\+Win32}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{HMONITOR}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a48fc485a2a8834589d1f1afeec65193c}{handle}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{float}} \texorpdfstring{$\ast$}{*}xscale, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{float}} \texorpdfstring{$\ast$}{*}yscale)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_a0dcf01b53eb877c4e823ba63fe8ecbca}{\+\_\+glfw\+Platform\+Free\+Monitor}} (\mbox{\hyperlink{struct___g_l_f_wmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}monitor)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_ac3047b94f0248b06b160f08992939796}{\+\_\+glfw\+Platform\+Get\+Monitor\+Pos}} (\mbox{\hyperlink{struct___g_l_f_wmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}monitor, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \texorpdfstring{$\ast$}{*}xpos, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \texorpdfstring{$\ast$}{*}ypos)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_acaffbb192928a16cf1742151757a867c}{\+\_\+glfw\+Platform\+Get\+Monitor\+Content\+Scale}} (\mbox{\hyperlink{struct___g_l_f_wmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}monitor, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{float}} \texorpdfstring{$\ast$}{*}xscale, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{float}} \texorpdfstring{$\ast$}{*}yscale)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_ad3bed68d40919e525ddd445bcde90b2b}{\+\_\+glfw\+Platform\+Get\+Monitor\+Workarea}} (\mbox{\hyperlink{struct___g_l_f_wmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}monitor, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \texorpdfstring{$\ast$}{*}xpos, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \texorpdfstring{$\ast$}{*}ypos, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a3ce386e55bbeb900c1b23e064b89bd04}{width}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_aedd0ea77029b98ce91e47c19addcb68f}{height}})
+\item 
+\mbox{\hyperlink{struct_g_l_f_wvidmode}{GLFWvidmode}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_a5efe2824e8779cb098c34a5764cf3c73}{\+\_\+glfw\+Platform\+Get\+Video\+Modes}} (\mbox{\hyperlink{struct___g_l_f_wmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}monitor, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_a22486c0c8d9f7d79a07bf22ecffeeb2f}{count}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_ab8336e546a783459b673772b591ffacd}{\+\_\+glfw\+Platform\+Get\+Video\+Mode}} (\mbox{\hyperlink{struct___g_l_f_wmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}monitor, \mbox{\hyperlink{struct_g_l_f_wvidmode}{GLFWvidmode}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2glad_8h_a1e71d9c196e4683cc06c4b54d53f7ef5}{mode}})
+\item 
+\mbox{\hyperlink{external_2glfw_2src_2internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}} \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_ac4bf2f5025cc6800bbe44615e5404c36}{\+\_\+glfw\+Platform\+Get\+Gamma\+Ramp}} (\mbox{\hyperlink{struct___g_l_f_wmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}monitor, \mbox{\hyperlink{struct_g_l_f_wgammaramp}{GLFWgammaramp}} \texorpdfstring{$\ast$}{*}ramp)
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_abcaf1fc34700bd62b558caccce3ab45b}{\+\_\+glfw\+Platform\+Set\+Gamma\+Ramp}} (\mbox{\hyperlink{struct___g_l_f_wmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}monitor, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{struct_g_l_f_wgammaramp}{GLFWgammaramp}} \texorpdfstring{$\ast$}{*}ramp)
+\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_a811fca2e6d7621e64defdce843da0bec}{glfw\+Get\+Win32\+Adapter}} (\mbox{\hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{GLFWmonitor}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a48fc485a2a8834589d1f1afeec65193c}{handle}})
+\item 
+\mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_ac6be5ad74417778649b67502ebb31f10}{glfw\+Get\+Win32\+Monitor}} (\mbox{\hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{GLFWmonitor}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a48fc485a2a8834589d1f1afeec65193c}{handle}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_a7f1868535334122b19eefca607adae27}\label{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_a7f1868535334122b19eefca607adae27} 
+\index{win32\_monitor.c@{win32\_monitor.c}!\_glfwGetMonitorContentScaleWin32@{\_glfwGetMonitorContentScaleWin32}}
+\index{\_glfwGetMonitorContentScaleWin32@{\_glfwGetMonitorContentScaleWin32}!win32\_monitor.c@{win32\_monitor.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwGetMonitorContentScaleWin32()}{\_glfwGetMonitorContentScaleWin32()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Get\+Monitor\+Content\+Scale\+Win32 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{HMONITOR}}}]{handle,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{float}} \texorpdfstring{$\ast$}{*}}]{xscale,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{float}} \texorpdfstring{$\ast$}{*}}]{yscale }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source_l00315}{315}} of file \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source}{win32\+\_\+monitor.\+c}}.
+
+\Hypertarget{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_a0dcf01b53eb877c4e823ba63fe8ecbca}\label{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_a0dcf01b53eb877c4e823ba63fe8ecbca} 
+\index{win32\_monitor.c@{win32\_monitor.c}!\_glfwPlatformFreeMonitor@{\_glfwPlatformFreeMonitor}}
+\index{\_glfwPlatformFreeMonitor@{\_glfwPlatformFreeMonitor}!win32\_monitor.c@{win32\_monitor.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwPlatformFreeMonitor()}{\_glfwPlatformFreeMonitor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Platform\+Free\+Monitor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}}]{monitor }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source_l00340}{340}} of file \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source}{win32\+\_\+monitor.\+c}}.
+
+\Hypertarget{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_ac4bf2f5025cc6800bbe44615e5404c36}\label{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_ac4bf2f5025cc6800bbe44615e5404c36} 
+\index{win32\_monitor.c@{win32\_monitor.c}!\_glfwPlatformGetGammaRamp@{\_glfwPlatformGetGammaRamp}}
+\index{\_glfwPlatformGetGammaRamp@{\_glfwPlatformGetGammaRamp}!win32\_monitor.c@{win32\_monitor.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwPlatformGetGammaRamp()}{\_glfwPlatformGetGammaRamp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{external_2glfw_2src_2internal_8h_ac5743c31bece872e24528b5a45e354c5}{GLFWbool}} \+\_\+glfw\+Platform\+Get\+Gamma\+Ramp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}}]{monitor,  }\item[{\mbox{\hyperlink{struct_g_l_f_wgammaramp}{GLFWgammaramp}} \texorpdfstring{$\ast$}{*}}]{ramp }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source_l00478}{478}} of file \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source}{win32\+\_\+monitor.\+c}}.
+
+\Hypertarget{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_acaffbb192928a16cf1742151757a867c}\label{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_acaffbb192928a16cf1742151757a867c} 
+\index{win32\_monitor.c@{win32\_monitor.c}!\_glfwPlatformGetMonitorContentScale@{\_glfwPlatformGetMonitorContentScale}}
+\index{\_glfwPlatformGetMonitorContentScale@{\_glfwPlatformGetMonitorContentScale}!win32\_monitor.c@{win32\_monitor.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwPlatformGetMonitorContentScale()}{\_glfwPlatformGetMonitorContentScale()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Platform\+Get\+Monitor\+Content\+Scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}}]{monitor,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{float}} \texorpdfstring{$\ast$}{*}}]{xscale,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{float}} \texorpdfstring{$\ast$}{*}}]{yscale }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source_l00361}{361}} of file \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source}{win32\+\_\+monitor.\+c}}.
+
+\Hypertarget{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_ac3047b94f0248b06b160f08992939796}\label{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_ac3047b94f0248b06b160f08992939796} 
+\index{win32\_monitor.c@{win32\_monitor.c}!\_glfwPlatformGetMonitorPos@{\_glfwPlatformGetMonitorPos}}
+\index{\_glfwPlatformGetMonitorPos@{\_glfwPlatformGetMonitorPos}!win32\_monitor.c@{win32\_monitor.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwPlatformGetMonitorPos()}{\_glfwPlatformGetMonitorPos()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Platform\+Get\+Monitor\+Pos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}}]{monitor,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \texorpdfstring{$\ast$}{*}}]{xpos,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \texorpdfstring{$\ast$}{*}}]{ypos }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source_l00344}{344}} of file \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source}{win32\+\_\+monitor.\+c}}.
+
+\Hypertarget{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_ad3bed68d40919e525ddd445bcde90b2b}\label{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_ad3bed68d40919e525ddd445bcde90b2b} 
+\index{win32\_monitor.c@{win32\_monitor.c}!\_glfwPlatformGetMonitorWorkarea@{\_glfwPlatformGetMonitorWorkarea}}
+\index{\_glfwPlatformGetMonitorWorkarea@{\_glfwPlatformGetMonitorWorkarea}!win32\_monitor.c@{win32\_monitor.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwPlatformGetMonitorWorkarea()}{\_glfwPlatformGetMonitorWorkarea()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Platform\+Get\+Monitor\+Workarea (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}}]{monitor,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \texorpdfstring{$\ast$}{*}}]{xpos,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \texorpdfstring{$\ast$}{*}}]{ypos,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \texorpdfstring{$\ast$}{*}}]{width,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \texorpdfstring{$\ast$}{*}}]{height }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source_l00367}{367}} of file \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source}{win32\+\_\+monitor.\+c}}.
+
+\Hypertarget{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_ab8336e546a783459b673772b591ffacd}\label{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_ab8336e546a783459b673772b591ffacd} 
+\index{win32\_monitor.c@{win32\_monitor.c}!\_glfwPlatformGetVideoMode@{\_glfwPlatformGetVideoMode}}
+\index{\_glfwPlatformGetVideoMode@{\_glfwPlatformGetVideoMode}!win32\_monitor.c@{win32\_monitor.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwPlatformGetVideoMode()}{\_glfwPlatformGetVideoMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Platform\+Get\+Video\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}}]{monitor,  }\item[{\mbox{\hyperlink{struct_g_l_f_wvidmode}{GLFWvidmode}} \texorpdfstring{$\ast$}{*}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source_l00461}{461}} of file \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source}{win32\+\_\+monitor.\+c}}.
+
+\Hypertarget{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_a5efe2824e8779cb098c34a5764cf3c73}\label{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_a5efe2824e8779cb098c34a5764cf3c73} 
+\index{win32\_monitor.c@{win32\_monitor.c}!\_glfwPlatformGetVideoModes@{\_glfwPlatformGetVideoModes}}
+\index{\_glfwPlatformGetVideoModes@{\_glfwPlatformGetVideoModes}!win32\_monitor.c@{win32\_monitor.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwPlatformGetVideoModes()}{\_glfwPlatformGetVideoModes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_l_f_wvidmode}{GLFWvidmode}} \texorpdfstring{$\ast$}{*} \+\_\+glfw\+Platform\+Get\+Video\+Modes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}}]{monitor,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \texorpdfstring{$\ast$}{*}}]{count }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source_l00384}{384}} of file \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source}{win32\+\_\+monitor.\+c}}.
+
+\Hypertarget{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_abcaf1fc34700bd62b558caccce3ab45b}\label{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_abcaf1fc34700bd62b558caccce3ab45b} 
+\index{win32\_monitor.c@{win32\_monitor.c}!\_glfwPlatformSetGammaRamp@{\_glfwPlatformSetGammaRamp}}
+\index{\_glfwPlatformSetGammaRamp@{\_glfwPlatformSetGammaRamp}!win32\_monitor.c@{win32\_monitor.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwPlatformSetGammaRamp()}{\_glfwPlatformSetGammaRamp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Platform\+Set\+Gamma\+Ramp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}}]{monitor,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{struct_g_l_f_wgammaramp}{GLFWgammaramp}} \texorpdfstring{$\ast$}{*}}]{ramp }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source_l00496}{496}} of file \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source}{win32\+\_\+monitor.\+c}}.
+
+\Hypertarget{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_a345b11644c658a9a94b0eeb4ed4a0618}\label{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_a345b11644c658a9a94b0eeb4ed4a0618} 
+\index{win32\_monitor.c@{win32\_monitor.c}!\_glfwPollMonitorsWin32@{\_glfwPollMonitorsWin32}}
+\index{\_glfwPollMonitorsWin32@{\_glfwPollMonitorsWin32}!win32\_monitor.c@{win32\_monitor.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwPollMonitorsWin32()}{\_glfwPollMonitorsWin32()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Poll\+Monitors\+Win32 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source_l00137}{137}} of file \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source}{win32\+\_\+monitor.\+c}}.
+
+\Hypertarget{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_af4b02765bc562c8265503bb97c0cd8e9}\label{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_af4b02765bc562c8265503bb97c0cd8e9} 
+\index{win32\_monitor.c@{win32\_monitor.c}!\_glfwRestoreVideoModeWin32@{\_glfwRestoreVideoModeWin32}}
+\index{\_glfwRestoreVideoModeWin32@{\_glfwRestoreVideoModeWin32}!win32\_monitor.c@{win32\_monitor.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwRestoreVideoModeWin32()}{\_glfwRestoreVideoModeWin32()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Restore\+Video\+Mode\+Win32 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}}]{monitor }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source_l00305}{305}} of file \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source}{win32\+\_\+monitor.\+c}}.
+
+\Hypertarget{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_a52d8e36bf649dcb15198832d92206ce2}\label{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_a52d8e36bf649dcb15198832d92206ce2} 
+\index{win32\_monitor.c@{win32\_monitor.c}!\_glfwSetVideoModeWin32@{\_glfwSetVideoModeWin32}}
+\index{\_glfwSetVideoModeWin32@{\_glfwSetVideoModeWin32}!win32\_monitor.c@{win32\_monitor.c}}
+\doxysubsubsection{\texorpdfstring{\_glfwSetVideoModeWin32()}{\_glfwSetVideoModeWin32()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+glfw\+Set\+Video\+Mode\+Win32 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___g_l_f_wmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*}}]{monitor,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{struct_g_l_f_wvidmode}{GLFWvidmode}} \texorpdfstring{$\ast$}{*}}]{desired }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source_l00247}{247}} of file \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source}{win32\+\_\+monitor.\+c}}.
+
+\Hypertarget{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_acaf97036893a6cacc2fb8211548d5c2a}\label{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_acaf97036893a6cacc2fb8211548d5c2a} 
+\index{win32\_monitor.c@{win32\_monitor.c}!createMonitor@{createMonitor}}
+\index{createMonitor@{createMonitor}!win32\_monitor.c@{win32\_monitor.c}}
+\doxysubsubsection{\texorpdfstring{createMonitor()}{createMonitor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{struct___g_l_f_wmonitor}{\+\_\+\+GLFWmonitor}} \texorpdfstring{$\ast$}{*} create\+Monitor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{DISPLAY\+\_\+\+DEVICEW}} \texorpdfstring{$\ast$}{*}}]{adapter,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{DISPLAY\+\_\+\+DEVICEW}} \texorpdfstring{$\ast$}{*}}]{display }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source_l00062}{62}} of file \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source}{win32\+\_\+monitor.\+c}}.
+
+\Hypertarget{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_a811fca2e6d7621e64defdce843da0bec}\label{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_a811fca2e6d7621e64defdce843da0bec} 
+\index{win32\_monitor.c@{win32\_monitor.c}!glfwGetWin32Adapter@{glfwGetWin32Adapter}}
+\index{glfwGetWin32Adapter@{glfwGetWin32Adapter}!win32\_monitor.c@{win32\_monitor.c}}
+\doxysubsubsection{\texorpdfstring{glfwGetWin32Adapter()}{glfwGetWin32Adapter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*} glfw\+Get\+Win32\+Adapter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{GLFWmonitor}} \texorpdfstring{$\ast$}{*}}]{handle }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source_l00522}{522}} of file \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source}{win32\+\_\+monitor.\+c}}.
+
+\Hypertarget{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_ac6be5ad74417778649b67502ebb31f10}\label{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_ac6be5ad74417778649b67502ebb31f10} 
+\index{win32\_monitor.c@{win32\_monitor.c}!glfwGetWin32Monitor@{glfwGetWin32Monitor}}
+\index{glfwGetWin32Monitor@{glfwGetWin32Monitor}!win32\_monitor.c@{win32\_monitor.c}}
+\doxysubsubsection{\texorpdfstring{glfwGetWin32Monitor()}{glfwGetWin32Monitor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{external_2glfw_2include_2_g_l_f_w_2glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{GLFWAPI}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \texorpdfstring{$\ast$}{*} glfw\+Get\+Win32\+Monitor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{GLFWmonitor}} \texorpdfstring{$\ast$}{*}}]{handle }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source_l00529}{529}} of file \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source}{win32\+\_\+monitor.\+c}}.
+
+\Hypertarget{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_a9c0b51a38de9b4aef8e41f6e7cf40760}\label{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_a9c0b51a38de9b4aef8e41f6e7cf40760} 
+\index{win32\_monitor.c@{win32\_monitor.c}!monitorCallback@{monitorCallback}}
+\index{monitorCallback@{monitorCallback}!win32\_monitor.c@{win32\_monitor.c}}
+\doxysubsubsection{\texorpdfstring{monitorCallback()}{monitorCallback()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{BOOL}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{CALLBACK}} monitor\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{HMONITOR}}}]{handle,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{HDC}}}]{dc,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{RECT}} \texorpdfstring{$\ast$}{*}}]{rect,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{LPARAM}}}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source_l00041}{41}} of file \mbox{\hyperlink{raylib_2src_2external_2glfw_2src_2win32__monitor_8c_source}{win32\+\_\+monitor.\+c}}.
+

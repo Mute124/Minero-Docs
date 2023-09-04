@@ -1,0 +1,273 @@
+\doxysection{find\+\_\+fn\+\_\+imps.\+hpp}
+\hypertarget{pat__trie___2find__fn__imps_8hpp_source}{}\label{pat__trie___2find__fn__imps_8hpp_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/pb\_ds/detail/pat\_trie\_/find\_fn\_imps.hpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/pb\_ds/detail/pat\_trie\_/find\_fn\_imps.hpp}}
+\mbox{\hyperlink{pat__trie___2find__fn__imps_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00001}00001\ \textcolor{comment}{//\ -\/*-\/\ C++\ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00003}00003\ \textcolor{comment}{//\ Copyright\ (C)\ 2005-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00005}00005\ \textcolor{comment}{//\ This\ file\ is\ part\ of\ the\ GNU\ ISO\ C++\ Library.\ \ This\ library\ is\ free}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00006}00006\ \textcolor{comment}{//\ software;\ you\ can\ redistribute\ it\ and/or\ modify\ it\ under\ the\ terms}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00007}00007\ \textcolor{comment}{//\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by\ the\ Free\ Software}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00008}00008\ \textcolor{comment}{//\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)\ any\ later}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00009}00009\ \textcolor{comment}{//\ version.}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00011}00011\ \textcolor{comment}{//\ This\ library\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,\ but}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00012}00012\ \textcolor{comment}{//\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00013}00013\ \textcolor{comment}{//\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the\ GNU}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00014}00014\ \textcolor{comment}{//\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00016}00016\ \textcolor{comment}{//\ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00017}00017\ \textcolor{comment}{//\ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00018}00018\ \textcolor{comment}{//\ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00020}00020\ \textcolor{comment}{//\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00021}00021\ \textcolor{comment}{//\ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00022}00022\ \textcolor{comment}{//\ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00023}00023\ \textcolor{comment}{//\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00025}00025\ \textcolor{comment}{//\ Copyright\ (C)\ 2004\ Ami\ Tavory\ and\ Vladimir\ Dreizin,\ IBM-\/HRL.}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00027}00027\ \textcolor{comment}{//\ Permission\ to\ use,\ copy,\ modify,\ sell,\ and\ distribute\ this\ software}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00028}00028\ \textcolor{comment}{//\ is\ hereby\ granted\ without\ fee,\ provided\ that\ the\ above\ copyright}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00029}00029\ \textcolor{comment}{//\ notice\ appears\ in\ all\ copies,\ and\ that\ both\ that\ copyright\ notice}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00030}00030\ \textcolor{comment}{//\ and\ this\ permission\ notice\ appear\ in\ supporting\ documentation.\ None}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00031}00031\ \textcolor{comment}{//\ of\ the\ above\ authors,\ nor\ IBM\ Haifa\ Research\ Laboratories,\ make\ any}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00032}00032\ \textcolor{comment}{//\ representation\ about\ the\ suitability\ of\ this\ software\ for\ any}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00033}00033\ \textcolor{comment}{//\ purpose.\ It\ is\ provided\ "{}as\ is"{}\ without\ express\ or\ implied}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00034}00034\ \textcolor{comment}{//\ warranty.}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00041}00041\ \textcolor{preprocessor}{\#ifdef\ PB\_DS\_CLASS\_C\_DEC}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00043}00043\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00044}00044\ \textcolor{keyword}{inline}\ \textcolor{keyword}{typename}\ PB\_DS\_CLASS\_C\_DEC::point\_iterator}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00045}00045\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00046}00046\ find(key\_const\_reference\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}})}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00047}00047\ \{}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00048}00048\ \ \ \mbox{\hyperlink{binary__heap___8hpp_aee3eacf80388cda3950a668bc1e40110}{PB\_DS\_ASSERT\_VALID}}((*\textcolor{keyword}{this}))}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00049}00049\ \ \ node\_pointer\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}\ =\ find\_imp(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}});}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00051}00051\ \ \ \mbox{\hyperlink{pconfigintrin_8h_aaca4765a01b6f3cd5edb899a1159f303}{if}}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}\ ==\ 0\ ||\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}-\/>m\_type\ !=\ leaf\_node)}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00052}00052\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00053}00053\ \ \ \ \ \ \ \mbox{\hyperlink{container__base__dispatch_8hpp_aabe976c8ae811576bfa1b0786dcfe377}{PB\_DS\_CHECK\_KEY\_DOES\_NOT\_EXIST}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}})}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00054}00054\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a432111147038972f06e049e18a837002}{end}}();}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00055}00055\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00057}00057\ \ \ \textcolor{keywordflow}{if}\ (synth\_access\_traits::equal\_keys(\mbox{\hyperlink{container__base__dispatch_8hpp_af0c6120ccc52c862d51ab8fdcf9781c8}{PB\_DS\_V2F}}(\textcolor{keyword}{static\_cast<}leaf\_pointer\textcolor{keyword}{>}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}})-\/>\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{value}}()),\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}}))}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00058}00058\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00059}00059\ \ \ \ \ \ \ \mbox{\hyperlink{container__base__dispatch_8hpp_acfae3994df576dbc37edc392d027c7ef}{PB\_DS\_CHECK\_KEY\_EXISTS}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}})}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00060}00060\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ iterator(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}});}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00061}00061\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00063}00063\ \ \ \mbox{\hyperlink{container__base__dispatch_8hpp_aabe976c8ae811576bfa1b0786dcfe377}{PB\_DS\_CHECK\_KEY\_DOES\_NOT\_EXIST}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}})}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00064}00064\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a432111147038972f06e049e18a837002}{end}}();}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00065}00065\ \}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00067}00067\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00068}00068\ \textcolor{keyword}{inline}\ \textcolor{keyword}{typename}\ PB\_DS\_CLASS\_C\_DEC::point\_const\_iterator}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00069}00069\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00070}00070\ find(key\_const\_reference\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}})\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00071}00071\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00072}00072\ \ \ \mbox{\hyperlink{binary__heap___8hpp_aee3eacf80388cda3950a668bc1e40110}{PB\_DS\_ASSERT\_VALID}}((*\textcolor{keyword}{this}))}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00074}00074\ \ \ node\_const\_pointer\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const\_cast}}<\mbox{\hyperlink{bin__search__tree___8hpp_a304b8b73a11afe64bfca54576b91263b}{PB\_DS\_CLASS\_C\_DEC}}*\ >(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{this}})-\/>find\_imp(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}});}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00076}00076\ \ \ \mbox{\hyperlink{pconfigintrin_8h_aaca4765a01b6f3cd5edb899a1159f303}{if}}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}\ ==\ 0\ ||\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}-\/>m\_type\ !=\ leaf\_node)}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00077}00077\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00078}00078\ \ \ \ \ \ \ \mbox{\hyperlink{container__base__dispatch_8hpp_aabe976c8ae811576bfa1b0786dcfe377}{PB\_DS\_CHECK\_KEY\_DOES\_NOT\_EXIST}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}})}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00079}00079\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a432111147038972f06e049e18a837002}{end}}();}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00080}00080\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00082}00082\ \ \ \textcolor{keywordflow}{if}\ (synth\_access\_traits::equal\_keys(\mbox{\hyperlink{container__base__dispatch_8hpp_af0c6120ccc52c862d51ab8fdcf9781c8}{PB\_DS\_V2F}}(\textcolor{keyword}{static\_cast<}leaf\_const\_pointer\textcolor{keyword}{>}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}})-\/>\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{value}}()),\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}}))}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00083}00083\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00084}00084\ \ \ \ \ \ \ \mbox{\hyperlink{container__base__dispatch_8hpp_acfae3994df576dbc37edc392d027c7ef}{PB\_DS\_CHECK\_KEY\_EXISTS}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}})}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00085}00085\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ const\_iterator(\textcolor{keyword}{const\_cast<}node\_pointer\textcolor{keyword}{>}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}));}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00086}00086\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00088}00088\ \ \ \mbox{\hyperlink{container__base__dispatch_8hpp_aabe976c8ae811576bfa1b0786dcfe377}{PB\_DS\_CHECK\_KEY\_DOES\_NOT\_EXIST}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}})}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00089}00089\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a432111147038972f06e049e18a837002}{end}}();}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00090}00090\ \}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00092}00092\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00093}00093\ \textcolor{keyword}{inline}\ \textcolor{keyword}{typename}\ PB\_DS\_CLASS\_C\_DEC::node\_pointer}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00094}00094\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00095}00095\ find\_imp(key\_const\_reference\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}})}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00096}00096\ \{}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00097}00097\ \ \ \textcolor{keywordflow}{if}\ (empty())}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00098}00098\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00100}00100\ \ \ \textcolor{keyword}{typename}\ synth\_access\_traits::const\_iterator\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{b\_it}}\ =}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00101}00101\ \ \ \ \ synth\_access\_traits::begin(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}});}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00102}00102\ \ \ \textcolor{keyword}{typename}\ synth\_access\_traits::const\_iterator\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{e\_it}}\ =}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00103}00103\ \ \ \ \ synth\_access\_traits::end(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}});}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00105}00105\ \ \ node\_pointer\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}\ =\ m\_p\_head-\/>m\_p\_parent;}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00106}00106\ \ \ \mbox{\hyperlink{assertions_8h_aa2bfb4e74c7be93673913edf15f85504}{\_GLIBCXX\_DEBUG\_ASSERT}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}\ !=\ 0);}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00108}00108\ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}-\/>m\_type\ !=\ leaf\_node)}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00109}00109\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00110}00110\ \ \ \ \ \ \ \mbox{\hyperlink{assertions_8h_aa2bfb4e74c7be93673913edf15f85504}{\_GLIBCXX\_DEBUG\_ASSERT}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}-\/>m\_type\ ==\ i\_node);}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00111}00111\ \ \ \ \ \ \ node\_pointer\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_next\_nd}}\ =\ \textcolor{keyword}{static\_cast<}inode\_pointer\textcolor{keyword}{>}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}})-\/>get\_child\_node(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{b\_it}},\ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{e\_it}},\ \ \textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00113}00113\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_next\_nd}}\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00114}00114\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}};}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00115}00115\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_next\_nd}};}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00116}00116\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00117}00117\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}};}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00118}00118\ \}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00120}00120\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00121}00121\ \textcolor{keyword}{inline}\ \textcolor{keyword}{typename}\ PB\_DS\_CLASS\_C\_DEC::node\_pointer}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00122}00122\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00123}00123\ lower\_bound\_imp(key\_const\_reference\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}})}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00124}00124\ \{}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00125}00125\ \ \ \textcolor{keywordflow}{if}\ (empty())}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00126}00126\ \ \ \ \ \textcolor{keywordflow}{return}\ (m\_p\_head);}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00128}00128\ \ \ node\_pointer\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}\ =\ m\_p\_head-\/>m\_p\_parent;}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00129}00129\ \ \ \mbox{\hyperlink{assertions_8h_aa2bfb4e74c7be93673913edf15f85504}{\_GLIBCXX\_DEBUG\_ASSERT}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}\ !=\ 0);}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00130}00130\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00131}00131\ \ \ \textcolor{keyword}{typename}\ PB\_DS\_CLASS\_C\_DEC::a\_const\_iterator\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{b\_it}}\ =}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00132}00132\ \ \ \ \ synth\_access\_traits::begin(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}});}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00134}00134\ \ \ \textcolor{keyword}{typename}\ PB\_DS\_CLASS\_C\_DEC::a\_const\_iterator\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{e\_it}}\ =}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00135}00135\ \ \ \ \ synth\_access\_traits::end(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}});}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00137}00137\ \ \ size\_type\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{checked\_ind}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00138}00138\ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00139}00139\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00140}00140\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}-\/>m\_type\ ==\ leaf\_node)}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00141}00141\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00142}00142\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!synth\_access\_traits::cmp\_keys(\mbox{\hyperlink{container__base__dispatch_8hpp_af0c6120ccc52c862d51ab8fdcf9781c8}{PB\_DS\_V2F}}(\textcolor{keyword}{static\_cast<}leaf\_const\_pointer\textcolor{keyword}{>}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}})-\/>\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{value}}()),\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}}))}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00143}00143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}};}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00144}00144\ \ \ \ \ \ \ iterator\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{it}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}});}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00145}00145\ \ \ \ \ \ \ ++\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{it}};}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00146}00146\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{it}}.m\_p\_nd;}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00147}00147\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00149}00149\ \ \ \ \ \ \ \mbox{\hyperlink{assertions_8h_aa2bfb4e74c7be93673913edf15f85504}{\_GLIBCXX\_DEBUG\_ASSERT}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}-\/>m\_type\ ==\ i\_node);}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00150}00150\ \ \ \ \ \ \ \textcolor{keyword}{const}\ size\_type\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{new\_checked\_ind}}\ =}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00151}00151\ \ \ \ \ \textcolor{keyword}{static\_cast<}inode\_pointer\textcolor{keyword}{>}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}})-\/>get\_e\_ind();}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00153}00153\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}\ =}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00154}00154\ \ \ \ \ \textcolor{keyword}{static\_cast<}inode\_pointer\textcolor{keyword}{>}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}})-\/>get\_lower\_bound\_child\_node(\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{b\_it}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{e\_it}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{checked\_ind}},\ \textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00155}00155\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{checked\_ind}}\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{new\_checked\_ind}};}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00156}00156\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00157}00157\ \}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00158}00158\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00159}00159\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00160}00160\ \textcolor{keyword}{inline}\ \textcolor{keyword}{typename}\ PB\_DS\_CLASS\_C\_DEC::point\_iterator}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00161}00161\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00162}00162\ lower\_bound(key\_const\_reference\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}})}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00163}00163\ \{\ \textcolor{keywordflow}{return}\ point\_iterator(lower\_bound\_imp(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}}));\ \}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00165}00165\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00166}00166\ \textcolor{keyword}{inline}\ \textcolor{keyword}{typename}\ PB\_DS\_CLASS\_C\_DEC::point\_const\_iterator}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00167}00167\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00168}00168\ lower\_bound(key\_const\_reference\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}})\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00169}00169\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00170}00170\ \ \ \textcolor{keywordflow}{return}\ point\_const\_iterator(\textcolor{keyword}{const\_cast<}\mbox{\hyperlink{bin__search__tree___8hpp_a304b8b73a11afe64bfca54576b91263b}{PB\_DS\_CLASS\_C\_DEC}}*\ \textcolor{keyword}{>}(\textcolor{keyword}{this})-\/>lower\_bound\_imp(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}}));}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00171}00171\ \}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00172}00172\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00173}00173\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00174}00174\ \textcolor{keyword}{inline}\ \textcolor{keyword}{typename}\ PB\_DS\_CLASS\_C\_DEC::point\_iterator}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00175}00175\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00176}00176\ upper\_bound(key\_const\_reference\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}})}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00177}00177\ \{}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00178}00178\ \ \ point\_iterator\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{l\_bound\_it}}\ =\ lower\_bound(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}});}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00179}00179\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00180}00180\ \ \ \mbox{\hyperlink{assertions_8h_aa2bfb4e74c7be93673913edf15f85504}{\_GLIBCXX\_DEBUG\_ASSERT}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{l\_bound\_it}}\ ==\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a432111147038972f06e049e18a837002}{end}}()\ ||}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ !synth\_access\_traits::cmp\_keys(\mbox{\hyperlink{container__base__dispatch_8hpp_af0c6120ccc52c862d51ab8fdcf9781c8}{PB\_DS\_V2F}}(*\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{l\_bound\_it}}),}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}}));}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00183}00183\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00184}00184\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{l\_bound\_it}}\ ==\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a432111147038972f06e049e18a837002}{end}}()\ ||}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00185}00185\ \ \ \ \ \ \ synth\_access\_traits::cmp\_keys(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}},\ \mbox{\hyperlink{container__base__dispatch_8hpp_af0c6120ccc52c862d51ab8fdcf9781c8}{PB\_DS\_V2F}}(*\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{l\_bound\_it}})))}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00186}00186\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{l\_bound\_it}};}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00187}00187\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00188}00188\ \ \ \textcolor{keywordflow}{return}\ ++\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{l\_bound\_it}};}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00189}00189\ \}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00190}00190\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00191}00191\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00192}00192\ \textcolor{keyword}{inline}\ \textcolor{keyword}{typename}\ PB\_DS\_CLASS\_C\_DEC::point\_const\_iterator}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00193}00193\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00194}00194\ upper\_bound(key\_const\_reference\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}})\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00195}00195\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00196}00196\ \ \ point\_const\_iterator\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{l\_bound\_it}}\ =\ lower\_bound(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}});}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00197}00197\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00198}00198\ \ \ \mbox{\hyperlink{assertions_8h_aa2bfb4e74c7be93673913edf15f85504}{\_GLIBCXX\_DEBUG\_ASSERT}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{l\_bound\_it}}\ ==\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a432111147038972f06e049e18a837002}{end}}()\ ||}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ !synth\_access\_traits::cmp\_keys(\mbox{\hyperlink{container__base__dispatch_8hpp_af0c6120ccc52c862d51ab8fdcf9781c8}{PB\_DS\_V2F}}(*\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{l\_bound\_it}}),}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}}));}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00201}00201\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00202}00202\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{l\_bound\_it}}\ ==\ \mbox{\hyperlink{raylib_2src_2external_2glad_8h_a432111147038972f06e049e18a837002}{end}}()\ ||}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00203}00203\ \ \ \ \ \ \ synth\_access\_traits::cmp\_keys(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{r\_key}},\ \mbox{\hyperlink{container__base__dispatch_8hpp_af0c6120ccc52c862d51ab8fdcf9781c8}{PB\_DS\_V2F}}(*\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{l\_bound\_it}})))}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00204}00204\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{l\_bound\_it}};}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00205}00205\ \ \ \textcolor{keywordflow}{return}\ ++\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{l\_bound\_it}};}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00206}00206\ \}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00207}00207\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00208}00208\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00209}00209\ \textcolor{keyword}{inline}\ \textcolor{keyword}{typename}\ PB\_DS\_CLASS\_C\_DEC::a\_const\_iterator}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00210}00210\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00211}00211\ pref\_begin(node\_const\_pointer\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}})}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00212}00212\ \{}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00213}00213\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}-\/>m\_type\ ==\ leaf\_node)}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00214}00214\ \ \ \ \ \textcolor{keywordflow}{return}\ (synth\_access\_traits::begin(\mbox{\hyperlink{container__base__dispatch_8hpp_af0c6120ccc52c862d51ab8fdcf9781c8}{PB\_DS\_V2F}}(\textcolor{keyword}{static\_cast<}leaf\_const\_pointer\textcolor{keyword}{>}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}})-\/>\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{value}}())));}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00215}00215\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00216}00216\ \ \ \mbox{\hyperlink{assertions_8h_aa2bfb4e74c7be93673913edf15f85504}{\_GLIBCXX\_DEBUG\_ASSERT}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}-\/>m\_type\ ==\ i\_node);}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00217}00217\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}inode\_const\_pointer\textcolor{keyword}{>}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}})-\/>pref\_b\_it();}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00218}00218\ \}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00219}00219\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00220}00220\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00221}00221\ \textcolor{keyword}{inline}\ \textcolor{keyword}{typename}\ PB\_DS\_CLASS\_C\_DEC::a\_const\_iterator}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00222}00222\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00223}00223\ pref\_end(node\_const\_pointer\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}})}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00224}00224\ \{}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00225}00225\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}-\/>m\_type\ ==\ leaf\_node)}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00226}00226\ \ \ \ \ \textcolor{keywordflow}{return}\ (synth\_access\_traits::end(\mbox{\hyperlink{container__base__dispatch_8hpp_af0c6120ccc52c862d51ab8fdcf9781c8}{PB\_DS\_V2F}}(\textcolor{keyword}{static\_cast<}leaf\_const\_pointer\textcolor{keyword}{>}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}})-\/>\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a6a4f8a1a444e9080b297963b3db29fe0}{value}}())));}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00227}00227\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00228}00228\ \ \ \mbox{\hyperlink{assertions_8h_aa2bfb4e74c7be93673913edf15f85504}{\_GLIBCXX\_DEBUG\_ASSERT}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}-\/>m\_type\ ==\ i\_node);}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00229}00229\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}inode\_const\_pointer\textcolor{keyword}{>}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}})-\/>pref\_e\_it();}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00230}00230\ \}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00231}00231\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00232}00232\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00233}00233\ \textcolor{keyword}{inline}\ \textcolor{keyword}{typename}\ PB\_DS\_CLASS\_C\_DEC::leaf\_const\_pointer}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00234}00234\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00235}00235\ leftmost\_descendant(node\_const\_pointer\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}})}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00236}00236\ \{}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00237}00237\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}-\/>m\_type\ ==\ leaf\_node)}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00238}00238\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}leaf\_const\_pointer\textcolor{keyword}{>}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}});}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00239}00239\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}inode\_const\_pointer\textcolor{keyword}{>}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}})-\/>leftmost\_descendant();}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00240}00240\ \}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00241}00241\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00242}00242\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00243}00243\ \textcolor{keyword}{inline}\ \textcolor{keyword}{typename}\ PB\_DS\_CLASS\_C\_DEC::leaf\_pointer}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00244}00244\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00245}00245\ leftmost\_descendant(node\_pointer\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}})}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00246}00246\ \{}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00247}00247\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}-\/>m\_type\ ==\ leaf\_node)}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00248}00248\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}leaf\_pointer\textcolor{keyword}{>}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}});}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00249}00249\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}inode\_pointer\textcolor{keyword}{>}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}})-\/>leftmost\_descendant();}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00250}00250\ \}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00251}00251\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00252}00252\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00253}00253\ \textcolor{keyword}{inline}\ \textcolor{keyword}{typename}\ PB\_DS\_CLASS\_C\_DEC::leaf\_const\_pointer}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00254}00254\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00255}00255\ rightmost\_descendant(node\_const\_pointer\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}})}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00256}00256\ \{}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00257}00257\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}-\/>m\_type\ ==\ leaf\_node)}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00258}00258\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}leaf\_const\_pointer\textcolor{keyword}{>}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}});}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00259}00259\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}inode\_const\_pointer\textcolor{keyword}{>}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}})-\/>rightmost\_descendant();}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00260}00260\ \}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00261}00261\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00262}00262\ \mbox{\hyperlink{bin__search__tree___8hpp_a6fa497162e8fb54f6d8e2259d4ebd8ff}{PB\_DS\_CLASS\_T\_DEC}}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00263}00263\ \textcolor{keyword}{inline}\ \textcolor{keyword}{typename}\ PB\_DS\_CLASS\_C\_DEC::leaf\_pointer}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00264}00264\ PB\_DS\_CLASS\_C\_DEC::}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00265}00265\ rightmost\_descendant(node\_pointer\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}})}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00266}00266\ \{}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00267}00267\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}}-\/>m\_type\ ==\ leaf\_node)}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00268}00268\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}leaf\_pointer\textcolor{keyword}{>}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}});}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00269}00269\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}inode\_pointer\textcolor{keyword}{>}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{p\_nd}})-\/>rightmost\_descendant();}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00270}00270\ \}}
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00271}00271\ }
+\DoxyCodeLine{\Hypertarget{pat__trie___2find__fn__imps_8hpp_source_l00272}00272\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

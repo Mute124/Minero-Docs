@@ -1,0 +1,37 @@
+\doxysection{quaternion\+\_\+geometric.\+hpp}
+\hypertarget{quaternion__geometric_8hpp_source}{}\label{quaternion__geometric_8hpp_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/glm/glm/ext/quaternion\_geometric.hpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/glm/glm/ext/quaternion\_geometric.hpp}}
+\mbox{\hyperlink{quaternion__geometric_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00015}00015\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00017}00017\ \textcolor{comment}{//\ Dependency:}}
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00018}00018\ \textcolor{preprocessor}{\#include\ "{}../geometric.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00019}00019\ \textcolor{preprocessor}{\#include\ "{}../exponential.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00020}00020\ \textcolor{preprocessor}{\#include\ "{}../ext/vector\_relational.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00022}00022\ \textcolor{preprocessor}{\#if\ GLM\_MESSAGES\ ==\ GLM\_ENABLE\ \&\&\ !defined(GLM\_EXT\_INCLUDED)}}
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00023}00023\ \textcolor{preprocessor}{\#\ \ \ pragma\ message("{}GLM:\ GLM\_EXT\_quaternion\_geometric\ extension\ included"{})}}
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00024}00024\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00026}00026\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceglm}{glm}}}
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00027}00027\ \{}
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00037}00037\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ qualifier\ Q>}
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00038}00038\ \ \ \ \ \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{T}}\ \mbox{\hyperlink{namespacelength}{length}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{qua<T,\ Q>}}\ \textcolor{keyword}{const}\&\ q);}
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00046}00046\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ qualifier\ Q>}
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00047}00047\ \ \ \ \ \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{qua<T,\ Q>}}\ \mbox{\hyperlink{namespacenormalize}{normalize}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{qua<T,\ Q>}}\ \textcolor{keyword}{const}\&\ q);}
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00055}00055\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ qualifier\ Q>}
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00056}00056\ \ \ \ \ \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{T}}\ \mbox{\hyperlink{namespacedot}{dot}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{qua<T,\ Q>}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{qua<T,\ Q>}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a4f27f1eebce8c31db01bb39fab9ef561}{y}});}
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00064}00064\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ qualifier\ Q>}
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00065}00065\ \ \ \ \ \mbox{\hyperlink{setup_8hpp_a33fdea6f91c5f834105f7415e2a64407}{GLM\_FUNC\_QUALIFIER}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{qua<T,\ Q>}}\ \mbox{\hyperlink{namespacecross}{cross}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{qua<T,\ Q>}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{q1}},\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{qua<T,\ Q>}}\ \textcolor{keyword}{const}\&\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{q2}});}
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00068}00068\ \}\ \textcolor{comment}{//namespace\ glm}}
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{quaternion__geometric_8hpp_source_l00070}00070\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{quaternion__geometric_8inl}{quaternion\_geometric.inl}}"{}}}
+
+\end{DoxyCode}

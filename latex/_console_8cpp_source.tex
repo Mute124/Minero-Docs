@@ -1,0 +1,41 @@
+\doxysection{Console.\+cpp}
+\hypertarget{_console_8cpp_source}{}\label{_console_8cpp_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/Console.cpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/Console.cpp}}
+\mbox{\hyperlink{_console_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_console_8h}{Console.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00003}00003\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_console_g_u_i_a984e19339696dc6e3a5ebec7e51710a8}{ConsoleGUI::Draw}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00005}00005\ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_triggerkey\ !=\ \mbox{\hyperlink{external_2miniaudio_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})\ \{}
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00006}00006\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{raylib_8h_aa452c026db4f0f42d59d6af8a612979e}{IsKeyDown}}(m\_triggerkey)\ \&\&\ !\mbox{\hyperlink{class_console_g_u_i_a6da08dfa3d42045788d91a843f28c669}{m\_isopen}})\ \{}
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00007}00007\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_8h_a88487ce9452e4345ac18640ea4ed675c}{DrawRectangle}}(\mbox{\hyperlink{raylib_8h_a687bcb8ffb7754b3943d7aa5777e3473}{GetMonitorHeight}}(\mbox{\hyperlink{raylib_8h_a3428d05541269713d96554048c0c1566}{GetCurrentMonitor}}())\ -\/\ 10,\ \mbox{\hyperlink{raylib_8h_a687bcb8ffb7754b3943d7aa5777e3473}{GetMonitorHeight}}(\mbox{\hyperlink{raylib_8h_a3428d05541269713d96554048c0c1566}{GetCurrentMonitor}}())\ -\/\ 10,\ this-\/>\mbox{\hyperlink{class_console_g_u_i_a74992cab238f6f029efa2ac19ad54c06}{m\_width}},\ this-\/>\mbox{\hyperlink{class_console_g_u_i_aae68798fb8df04ec99e8c8061f1ac5e3}{m\_height}},\ \mbox{\hyperlink{raylib_8h_ae5f70677050eecd8909e0248e07b9e73}{GRAY}});}
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00008}00008\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00009}00009\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00010}00010\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_console_g_u_i_a6da08dfa3d42045788d91a843f28c669}{m\_isopen}})\ \{}
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_8h_a88487ce9452e4345ac18640ea4ed675c}{DrawRectangle}}(\mbox{\hyperlink{raylib_8h_a687bcb8ffb7754b3943d7aa5777e3473}{GetMonitorHeight}}(\mbox{\hyperlink{raylib_8h_a3428d05541269713d96554048c0c1566}{GetCurrentMonitor}}())\ -\/\ 10,\ \mbox{\hyperlink{raylib_8h_a687bcb8ffb7754b3943d7aa5777e3473}{GetMonitorHeight}}(\mbox{\hyperlink{raylib_8h_a3428d05541269713d96554048c0c1566}{GetCurrentMonitor}}())\ -\/\ 10,\ this-\/>\mbox{\hyperlink{class_console_g_u_i_a74992cab238f6f029efa2ac19ad54c06}{m\_width}},\ this-\/>\mbox{\hyperlink{class_console_g_u_i_aae68798fb8df04ec99e8c8061f1ac5e3}{m\_height}},\ \mbox{\hyperlink{raylib_8h_ae5f70677050eecd8909e0248e07b9e73}{GRAY}});}
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00013}00013\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00014}00014\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (m\_triggerkey\ ==\ \mbox{\hyperlink{external_2miniaudio_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})\ \{}
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{stringliteral}{"{}TriggerKey\ not\ set.\ It\ cannot\ equal\ null"{}};}
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00016}00016\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{stringliteral}{"{}Error\ in\ console\ class.\ "{}};}
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00018}00018\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00019}00019\ \}}
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00021}00021\ \mbox{\hyperlink{class_console_g_u_i_a426eca37d34487366aef52c6784cc12e}{ConsoleGUI::ConsoleGUI}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a3ce386e55bbeb900c1b23e064b89bd04}{width}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_aedd0ea77029b98ce91e47c19addcb68f}{height}},\ \mbox{\hyperlink{raylib_8h_a94b4a5e76ed30c0af90a1bbbdc214b2b}{KeyboardKey}}\ Trigger)\ :\ m\_width(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a3ce386e55bbeb900c1b23e064b89bd04}{width}}),\ m\_height(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_aedd0ea77029b98ce91e47c19addcb68f}{height}}),\ m\_triggerkey(Trigger),\ m\_isopen(\mbox{\hyperlink{external_2miniaudio_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})\ \ \{}
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00023}00023\ \}}
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00025}00025\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_console_g_u_i_a1ed6e8f3826a58c23355af5e3759b128}{ConsoleGUI::OnUpdate}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00026}00026\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00027}00027\ \}}
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00029}00029\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_console_g_u_i_a7c6026fcf34e5fec3bc5f5a71ac59683}{ConsoleGUI::SetTriggerKey}}(\mbox{\hyperlink{raylib_8h_a94b4a5e76ed30c0af90a1bbbdc214b2b}{KeyboardKey}}\ key)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00030}00030\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00031}00031\ \}}
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00033}00033\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_console_g_u_i_acd1dc31d6a768816ce53d1e060a04d5c}{ConsoleGUI::ParseInput}}(\textcolor{keywordtype}{char}\ *input)\ \{}
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_console_8cpp_source_l00035}00035\ \}}
+
+\end{DoxyCode}

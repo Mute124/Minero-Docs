@@ -1,0 +1,72 @@
+\doxysection{drwav\+\_\+allocation\+\_\+callbacks Struct Reference}
+\hypertarget{structdrwav__allocation__callbacks}{}\label{structdrwav__allocation__callbacks}\index{drwav\_allocation\_callbacks@{drwav\_allocation\_callbacks}}
+
+
+{\ttfamily \#include "{}dr\+\_\+wav.\+h"{}}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structdrwav__allocation__callbacks_a8a89a9b5010d65bbf19c1cd128c5648c}{p\+User\+Data}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structdrwav__allocation__callbacks_ab126e3faa9bc657f74aaff85b39dceaa}{on\+Malloc}} )(\mbox{\hyperlink{stddef_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sz}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structdrwav__allocation__callbacks_a8a89a9b5010d65bbf19c1cd128c5648c}{p\+User\+Data}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structdrwav__allocation__callbacks_a7bf52e165c07b303c044130900c9a4b1}{on\+Realloc}} )(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}p, \mbox{\hyperlink{stddef_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sz}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structdrwav__allocation__callbacks_a8a89a9b5010d65bbf19c1cd128c5648c}{p\+User\+Data}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structdrwav__allocation__callbacks_a8876068d884a7a7cd7389fce0527c207}{on\+Free}} )(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}p, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structdrwav__allocation__callbacks_a8a89a9b5010d65bbf19c1cd128c5648c}{p\+User\+Data}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{external_2dr__wav_8h_source_l00412}{412}} of file \mbox{\hyperlink{external_2dr__wav_8h_source}{dr\+\_\+wav.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structdrwav__allocation__callbacks_a8876068d884a7a7cd7389fce0527c207}\label{structdrwav__allocation__callbacks_a8876068d884a7a7cd7389fce0527c207} 
+\index{drwav\_allocation\_callbacks@{drwav\_allocation\_callbacks}!onFree@{onFree}}
+\index{onFree@{onFree}!drwav\_allocation\_callbacks@{drwav\_allocation\_callbacks}}
+\doxysubsubsection{\texorpdfstring{onFree}{onFree}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}(\texorpdfstring{$\ast$}{*} drwav\+\_\+allocation\+\_\+callbacks\+::on\+Free) (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}p, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structdrwav__allocation__callbacks_a8a89a9b5010d65bbf19c1cd128c5648c}{p\+User\+Data}})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2dr__wav_8h_source_l00417}{417}} of file \mbox{\hyperlink{external_2dr__wav_8h_source}{dr\+\_\+wav.\+h}}.
+
+\Hypertarget{structdrwav__allocation__callbacks_ab126e3faa9bc657f74aaff85b39dceaa}\label{structdrwav__allocation__callbacks_ab126e3faa9bc657f74aaff85b39dceaa} 
+\index{drwav\_allocation\_callbacks@{drwav\_allocation\_callbacks}!onMalloc@{onMalloc}}
+\index{onMalloc@{onMalloc}!drwav\_allocation\_callbacks@{drwav\_allocation\_callbacks}}
+\doxysubsubsection{\texorpdfstring{onMalloc}{onMalloc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} drwav\+\_\+allocation\+\_\+callbacks\+::on\+Malloc) (\mbox{\hyperlink{stddef_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sz}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structdrwav__allocation__callbacks_a8a89a9b5010d65bbf19c1cd128c5648c}{p\+User\+Data}})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2dr__wav_8h_source_l00415}{415}} of file \mbox{\hyperlink{external_2dr__wav_8h_source}{dr\+\_\+wav.\+h}}.
+
+\Hypertarget{structdrwav__allocation__callbacks_a7bf52e165c07b303c044130900c9a4b1}\label{structdrwav__allocation__callbacks_a7bf52e165c07b303c044130900c9a4b1} 
+\index{drwav\_allocation\_callbacks@{drwav\_allocation\_callbacks}!onRealloc@{onRealloc}}
+\index{onRealloc@{onRealloc}!drwav\_allocation\_callbacks@{drwav\_allocation\_callbacks}}
+\doxysubsubsection{\texorpdfstring{onRealloc}{onRealloc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} drwav\+\_\+allocation\+\_\+callbacks\+::on\+Realloc) (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}p, \mbox{\hyperlink{stddef_8h_aa9d55e2f20e580b7445617d0d12fff6e}{size\+\_\+t}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{sz}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structdrwav__allocation__callbacks_a8a89a9b5010d65bbf19c1cd128c5648c}{p\+User\+Data}})}
+
+
+
+Definition at line \mbox{\hyperlink{external_2dr__wav_8h_source_l00416}{416}} of file \mbox{\hyperlink{external_2dr__wav_8h_source}{dr\+\_\+wav.\+h}}.
+
+\Hypertarget{structdrwav__allocation__callbacks_a8a89a9b5010d65bbf19c1cd128c5648c}\label{structdrwav__allocation__callbacks_a8a89a9b5010d65bbf19c1cd128c5648c} 
+\index{drwav\_allocation\_callbacks@{drwav\_allocation\_callbacks}!pUserData@{pUserData}}
+\index{pUserData@{pUserData}!drwav\_allocation\_callbacks@{drwav\_allocation\_callbacks}}
+\doxysubsubsection{\texorpdfstring{pUserData}{pUserData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}\texorpdfstring{$\ast$}{*} drwav\+\_\+allocation\+\_\+callbacks\+::p\+User\+Data}
+
+
+
+Definition at line \mbox{\hyperlink{external_2dr__wav_8h_source_l00414}{414}} of file \mbox{\hyperlink{external_2dr__wav_8h_source}{dr\+\_\+wav.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/external/\mbox{\hyperlink{external_2dr__wav_8h}{dr\+\_\+wav.\+h}}\end{DoxyCompactItemize}

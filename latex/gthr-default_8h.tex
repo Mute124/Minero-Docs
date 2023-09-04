@@ -1,0 +1,598 @@
+\doxysection{C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/include/c++/x86\+\_\+64-\/w64-\/mingw32/bits/gthr-\/default.h File Reference}
+\hypertarget{gthr-default_8h}{}\label{gthr-default_8h}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/x86\_64-\/w64-\/mingw32/bits/gthr-\/default.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/x86\_64-\/w64-\/mingw32/bits/gthr-\/default.h}}
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{gthr-default_8h_a38f96d5ff005661d81f2fbcd8ee9a477}{\+\_\+\+\_\+\+GTHREADS}}~1
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{gthr-default_8h_aee6e41860e32e0a53d93ae2ca185b277}{\+\_\+\+\_\+\+GTHREADS\+\_\+\+CXX0X}}~1
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{gthr-default_8h_a3029cb8c34354fd8b196bfaf03bb6a96}{\+\_\+\+GTHREAD\+\_\+\+USE\+\_\+\+MUTEX\+\_\+\+TIMEDLOCK}}~0
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{gthr-default_8h_a6919d19c04fa8101b674f361be1b16c1}{\+\_\+\+\_\+\+GTHREAD\+\_\+\+HAS\+\_\+\+COND}}~1
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{gthr-default_8h_abb270f4094b49eb30073f9b92a3bf8a2}{\+\_\+\+\_\+\+GTHREAD\+\_\+\+MUTEX\+\_\+\+INIT}}~\mbox{\hyperlink{pthread_8h_a84e55100366a6a8338a2af3b3f279686}{PTHREAD\+\_\+\+MUTEX\+\_\+\+INITIALIZER}}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{gthr-default_8h_ad44274417fe2cdb160bdb57fa9405e17}{\+\_\+\+\_\+\+GTHREAD\+\_\+\+MUTEX\+\_\+\+INIT\+\_\+\+FUNCTION}}~\mbox{\hyperlink{gthr-default_8h_a5ea34d54329b508cb639623d3eebdf68}{\+\_\+\+\_\+gthread\+\_\+mutex\+\_\+init\+\_\+function}}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{gthr-default_8h_ae6eb0abb371e6119fbdc839178481555}{\+\_\+\+\_\+\+GTHREAD\+\_\+\+ONCE\+\_\+\+INIT}}~\mbox{\hyperlink{pthread_8h_a59e22497b65fc305ddb5cea8b4990b51}{PTHREAD\+\_\+\+ONCE\+\_\+\+INIT}}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{gthr-default_8h_a70b3a42bde7503c4f303115d20020aa2}{\+\_\+\+\_\+\+GTHREAD\+\_\+\+RECURSIVE\+\_\+\+MUTEX\+\_\+\+INIT\+\_\+\+FUNCTION}}~\mbox{\hyperlink{gthr-default_8h_af3cb42d0c293466b327fd824a9fcfd40}{\+\_\+\+\_\+gthread\+\_\+recursive\+\_\+mutex\+\_\+init\+\_\+function}}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{gthr-default_8h_ac8442c6588cdf543eb13d58d151ad7c0}{\+\_\+\+\_\+\+GTHREAD\+\_\+\+COND\+\_\+\+INIT}}~\mbox{\hyperlink{pthread_8h_aa7b867fe46f3660283fcb356c4fcbbf0}{PTHREAD\+\_\+\+COND\+\_\+\+INITIALIZER}}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{gthr-default_8h_a4009b9dc592c4ffe7f28eb235d173a03}{\+\_\+\+\_\+\+GTHREAD\+\_\+\+TIME\+\_\+\+INIT}}~\{0,0\}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{gthr-default_8h_ac1d9d7a8715b321a1d07e71eb5013ac9}{\+\_\+\+\_\+gthrw2}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a14d7642df08c5cb68e4fb90cc8a73509}{name}},  \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{name2}},  \mbox{\hyperlink{_gameobj_8h_a890efa53b3d7deeeced6f3a0d6653ed3}{type}})
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{gthr-default_8h_a95ab2cc62adbe4cd49201197487d272e}{\+\_\+\+\_\+gthrw\+\_\+}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a14d7642df08c5cb68e4fb90cc8a73509}{name}})~\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a14d7642df08c5cb68e4fb90cc8a73509}{name}}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{gthr-default_8h_ae73d59629d2d21a71550a5b8d3160ff1}{\+\_\+\+\_\+gthrw}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a14d7642df08c5cb68e4fb90cc8a73509}{name}})~\mbox{\hyperlink{gthr-default_8h_ac1d9d7a8715b321a1d07e71eb5013ac9}{\+\_\+\+\_\+gthrw2}}(\mbox{\hyperlink{gthr-default_8h_a95ab2cc62adbe4cd49201197487d272e}{\+\_\+\+\_\+gthrw\+\_\+}} \#\# \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a14d7642df08c5cb68e4fb90cc8a73509}{name}},\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a14d7642df08c5cb68e4fb90cc8a73509}{name}},\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a14d7642df08c5cb68e4fb90cc8a73509}{name}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{pthread_8h_a5a968e6376296a133fae83572d4b2efc}{pthread\+\_\+t}} \mbox{\hyperlink{gthr-default_8h_a306ab8a31415e59d7772b24c22ab60dc}{\+\_\+\+\_\+gthread\+\_\+t}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{pthread_8h_ae3576124dcee020fef884de07a48290c}{pthread\+\_\+key\+\_\+t}} \mbox{\hyperlink{gthr-default_8h_a3b3e350644d8ae574a3c842e27c69083}{\+\_\+\+\_\+gthread\+\_\+key\+\_\+t}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{pthread_8h_a4be465d5b536b183b4a9a6e56d67eab4}{pthread\+\_\+once\+\_\+t}} \mbox{\hyperlink{gthr-default_8h_af51081352b97dcd93f8668cc895c1c7f}{\+\_\+\+\_\+gthread\+\_\+once\+\_\+t}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{pthread_8h_a50d9d56f346ce3e4ce711d7d1acea193}{pthread\+\_\+mutex\+\_\+t}} \mbox{\hyperlink{gthr-default_8h_a97856e6b17fbc2936d96d8ea2962eda3}{\+\_\+\+\_\+gthread\+\_\+mutex\+\_\+t}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{pthread_8h_a50d9d56f346ce3e4ce711d7d1acea193}{pthread\+\_\+mutex\+\_\+t}} \mbox{\hyperlink{gthr-default_8h_a3c90aae862e464058c70dcf114373851}{\+\_\+\+\_\+gthread\+\_\+recursive\+\_\+mutex\+\_\+t}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{pthread_8h_a889b578630430003a00009eb9bc682f1}{pthread\+\_\+cond\+\_\+t}} \mbox{\hyperlink{gthr-default_8h_ae8dd15b5bc8c82f0d61fa4063122fdc8}{\+\_\+\+\_\+gthread\+\_\+cond\+\_\+t}}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{timespec}} \mbox{\hyperlink{gthr-default_8h_af7819bed58b3ca9c8a995141339d8a3c}{\+\_\+\+\_\+gthread\+\_\+time\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gthr-default_8h_a53554ea82a8e7f61961842d91d0f3e8d}{\+\_\+\+\_\+gthrw}} (\mbox{\hyperlink{pthread_8h_ad3e2169d99cca6716f63e7a6a815e1f9}{pthread\+\_\+once}}) \+\_\+\+\_\+gthrw(\mbox{\hyperlink{pthread_8h_a118837985ccd3a829c518928ec32c1ac}{pthread\+\_\+getspecific}}) \+\_\+\+\_\+gthrw(\mbox{\hyperlink{pthread_8h_a828266e605ec695f7a5b3096b486e70e}{pthread\+\_\+setspecific}}) \+\_\+\+\_\+gthrw(\mbox{\hyperlink{pthread_8h_ab3431d2d45bf174acdcecde5dac5839c}{pthread\+\_\+create}}) \+\_\+\+\_\+gthrw(\mbox{\hyperlink{pthread_8h_a25b888453922185b872e6c87aee3e214}{pthread\+\_\+join}}) \+\_\+\+\_\+gthrw(\mbox{\hyperlink{pthread_8h_a3bfce84d4d4fd73d4ae6793135412178}{pthread\+\_\+equal}}) \+\_\+\+\_\+gthrw(\mbox{\hyperlink{pthread_8h_a2fdeabafeb422282ee687c9361dde092}{pthread\+\_\+self}}) \+\_\+\+\_\+gthrw(\mbox{\hyperlink{pthread_8h_afd57474cd16075a818e924f5435dd1fe}{pthread\+\_\+detach}}) \+\_\+\+\_\+gthrw(\mbox{\hyperlink{pthread_8h_ad9b32625e1e5bfb65deae5b61b71ecc8}{pthread\+\_\+cancel}}) \+\_\+\+\_\+gthrw(\mbox{\hyperlink{pthread_8h_a6c8d40dba19ab44315a73fa45579e07c}{sched\+\_\+yield}}) \+\_\+\+\_\+gthrw(\mbox{\hyperlink{pthread_8h_a4ca880f3d1afbb33cea07c60934cc49a}{pthread\+\_\+mutex\+\_\+lock}}) \+\_\+\+\_\+gthrw(\mbox{\hyperlink{pthread_8h_a9c7d6c19b9d517190ecd1f4d6fd27d7f}{pthread\+\_\+mutex\+\_\+trylock}}) \+\_\+\+\_\+gthrw(\mbox{\hyperlink{pthread_8h_a7e057138b5fb17da713695ebb25732e1}{pthread\+\_\+mutex\+\_\+unlock}}) \+\_\+\+\_\+gthrw(\mbox{\hyperlink{pthread_8h_a766f78ccf9846265c8f379ee92852a2c}{pthread\+\_\+mutex\+\_\+init}}) \+\_\+\+\_\+gthrw(\mbox{\hyperlink{pthread_8h_a058f31bed045ef535cb482d45ccaebec}{pthread\+\_\+mutex\+\_\+destroy}}) \+\_\+\+\_\+gthrw(\mbox{\hyperlink{pthread_8h_a9ae7756a4d025b42386fc1835efa6975}{pthread\+\_\+cond\+\_\+init}}) \+\_\+\+\_\+gthrw(\mbox{\hyperlink{pthread_8h_abfd2c6ee1cd83fe2e556c696bd140e2f}{pthread\+\_\+cond\+\_\+broadcast}}) \+\_\+\+\_\+gthrw(\mbox{\hyperlink{pthread_8h_a4ba961fe959f9d2c2770e822ae51184f}{pthread\+\_\+cond\+\_\+signal}}) \+\_\+\+\_\+gthrw(\mbox{\hyperlink{pthread_8h_a9eb8d1c21f8f6da4114b33e12dfcd069}{pthread\+\_\+cond\+\_\+wait}}) \+\_\+\+\_\+gthrw(\mbox{\hyperlink{pthread_8h_adce004fdb8b6813b22e5e1ee1b2bf923}{pthread\+\_\+cond\+\_\+timedwait}}) \+\_\+\+\_\+gthrw(\mbox{\hyperlink{pthread_8h_a8855d5ab1f81a02c4e4c7e708bfe3ae6}{pthread\+\_\+cond\+\_\+destroy}}) \+\_\+\+\_\+gthrw(\mbox{\hyperlink{pthread_8h_af2edd6107c5cf7dcff1a40bf878a9a7a}{pthread\+\_\+key\+\_\+create}}) \+\_\+\+\_\+gthrw(\mbox{\hyperlink{pthread_8h_a9b51f8826d51d11e280d16d896ea2050}{pthread\+\_\+key\+\_\+delete}}) \+\_\+\+\_\+gthrw(\mbox{\hyperlink{pthread_8h_ab890b953e5712cbc68601993097ba87c}{pthread\+\_\+mutexattr\+\_\+init}}) \+\_\+\+\_\+gthrw(\mbox{\hyperlink{pthread_8h_ad6de9a4bb74d0cd006d8b9dd4e22ba8b}{pthread\+\_\+mutexattr\+\_\+settype}}) \+\_\+\+\_\+gthrw(\mbox{\hyperlink{pthread_8h_acad46d5d742884ab327f165012ad6d31}{pthread\+\_\+mutexattr\+\_\+destroy}}) \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{inline}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{gthr-single_8h_a7f1120bb8ef943a3935ae4667c9700ef}{\+\_\+\+\_\+gthread\+\_\+active\+\_\+p}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{gthr-default_8h_a4cb92deed6eb22f63fc6ce2f80a973a5}{\+\_\+\+\_\+gthread\+\_\+create}} (\mbox{\hyperlink{gthr-default_8h_a306ab8a31415e59d7772b24c22ab60dc}{\+\_\+\+\_\+gthread\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+threadid}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+func}})(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}), \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+args}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{gthr-default_8h_ac7278b6d972ba67735b4654f0411aa28}{\+\_\+\+\_\+gthread\+\_\+join}} (\mbox{\hyperlink{gthr-default_8h_a306ab8a31415e59d7772b24c22ab60dc}{\+\_\+\+\_\+gthread\+\_\+t}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+threadid}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+value\+\_\+ptr}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{gthr-default_8h_abac77cb382a4463a878075524025143f}{\+\_\+\+\_\+gthread\+\_\+detach}} (\mbox{\hyperlink{gthr-default_8h_a306ab8a31415e59d7772b24c22ab60dc}{\+\_\+\+\_\+gthread\+\_\+t}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+threadid}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{gthr-default_8h_a8b5909184247cd313296f0dcb1951860}{\+\_\+\+\_\+gthread\+\_\+equal}} (\mbox{\hyperlink{gthr-default_8h_a306ab8a31415e59d7772b24c22ab60dc}{\+\_\+\+\_\+gthread\+\_\+t}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+t1}}, \mbox{\hyperlink{gthr-default_8h_a306ab8a31415e59d7772b24c22ab60dc}{\+\_\+\+\_\+gthread\+\_\+t}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+t2}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{gthr-default_8h_a306ab8a31415e59d7772b24c22ab60dc}{\+\_\+\+\_\+gthread\+\_\+t}} \mbox{\hyperlink{gthr-default_8h_ac06708e416f5c40b9b7c75e80217494d}{\+\_\+\+\_\+gthread\+\_\+self}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{gthr-default_8h_aa9f573499d436ed9dc414132d21c7b84}{\+\_\+\+\_\+gthread\+\_\+yield}} (\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{gthr-default_8h_a147dd8d9f19485916e4d65b31b247266}{\+\_\+\+\_\+gthread\+\_\+once}} (\mbox{\hyperlink{gthr-default_8h_af51081352b97dcd93f8668cc895c1c7f}{\+\_\+\+\_\+gthread\+\_\+once\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+once}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}(\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+func}})(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}))
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{gthr-default_8h_a30a6cf5f024209d7b74236c1b932a21c}{\+\_\+\+\_\+gthread\+\_\+key\+\_\+create}} (\mbox{\hyperlink{gthr-default_8h_a3b3e350644d8ae574a3c842e27c69083}{\+\_\+\+\_\+gthread\+\_\+key\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+key}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}(\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+dtor}})(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}))
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{gthr-default_8h_a33c619c5426660d66ee9d9e4e7c3465d}{\+\_\+\+\_\+gthread\+\_\+key\+\_\+delete}} (\mbox{\hyperlink{gthr-default_8h_a3b3e350644d8ae574a3c842e27c69083}{\+\_\+\+\_\+gthread\+\_\+key\+\_\+t}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+key}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{gthr-default_8h_a61fabd78e79a94a0071a10996a1ca86b}{\+\_\+\+\_\+gthread\+\_\+getspecific}} (\mbox{\hyperlink{gthr-default_8h_a3b3e350644d8ae574a3c842e27c69083}{\+\_\+\+\_\+gthread\+\_\+key\+\_\+t}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+key}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{gthr-default_8h_a3afd56a05f2236f21f5a1b75e49ad73f}{\+\_\+\+\_\+gthread\+\_\+setspecific}} (\mbox{\hyperlink{gthr-default_8h_a3b3e350644d8ae574a3c842e27c69083}{\+\_\+\+\_\+gthread\+\_\+key\+\_\+t}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+key}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+ptr}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \mbox{\hyperlink{gthr-default_8h_a5ea34d54329b508cb639623d3eebdf68}{\+\_\+\+\_\+gthread\+\_\+mutex\+\_\+init\+\_\+function}} (\mbox{\hyperlink{gthr-default_8h_a97856e6b17fbc2936d96d8ea2962eda3}{\+\_\+\+\_\+gthread\+\_\+mutex\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+mutex}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{gthr-default_8h_accd35f7db78be5b3f4aee2d3094a6f3a}{\+\_\+\+\_\+gthread\+\_\+mutex\+\_\+destroy}} (\mbox{\hyperlink{gthr-default_8h_a97856e6b17fbc2936d96d8ea2962eda3}{\+\_\+\+\_\+gthread\+\_\+mutex\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+mutex}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{gthr-default_8h_aace64794942c885422fcd3d6f5ccc6ae}{\+\_\+\+\_\+gthread\+\_\+mutex\+\_\+lock}} (\mbox{\hyperlink{gthr-default_8h_a97856e6b17fbc2936d96d8ea2962eda3}{\+\_\+\+\_\+gthread\+\_\+mutex\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+mutex}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{gthr-default_8h_a9f2b6647f8a6476e10e04030314374f7}{\+\_\+\+\_\+gthread\+\_\+mutex\+\_\+trylock}} (\mbox{\hyperlink{gthr-default_8h_a97856e6b17fbc2936d96d8ea2962eda3}{\+\_\+\+\_\+gthread\+\_\+mutex\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+mutex}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{gthr-default_8h_a5bedfcf06fc439459a01951fb2d343c7}{\+\_\+\+\_\+gthread\+\_\+mutex\+\_\+unlock}} (\mbox{\hyperlink{gthr-default_8h_a97856e6b17fbc2936d96d8ea2962eda3}{\+\_\+\+\_\+gthread\+\_\+mutex\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+mutex}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{gthr-default_8h_af3cb42d0c293466b327fd824a9fcfd40}{\+\_\+\+\_\+gthread\+\_\+recursive\+\_\+mutex\+\_\+init\+\_\+function}} (\mbox{\hyperlink{gthr-default_8h_a3c90aae862e464058c70dcf114373851}{\+\_\+\+\_\+gthread\+\_\+recursive\+\_\+mutex\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+mutex}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{gthr-default_8h_afb80562513b8067fb1ad04280cf74edb}{\+\_\+\+\_\+gthread\+\_\+recursive\+\_\+mutex\+\_\+lock}} (\mbox{\hyperlink{gthr-default_8h_a3c90aae862e464058c70dcf114373851}{\+\_\+\+\_\+gthread\+\_\+recursive\+\_\+mutex\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+mutex}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{gthr-default_8h_aea209cb33f52e9714474fcb1a83efe1b}{\+\_\+\+\_\+gthread\+\_\+recursive\+\_\+mutex\+\_\+trylock}} (\mbox{\hyperlink{gthr-default_8h_a3c90aae862e464058c70dcf114373851}{\+\_\+\+\_\+gthread\+\_\+recursive\+\_\+mutex\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+mutex}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{gthr-default_8h_aa642f62eff4410ca4323d8a2d83b21ff}{\+\_\+\+\_\+gthread\+\_\+recursive\+\_\+mutex\+\_\+unlock}} (\mbox{\hyperlink{gthr-default_8h_a3c90aae862e464058c70dcf114373851}{\+\_\+\+\_\+gthread\+\_\+recursive\+\_\+mutex\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+mutex}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{gthr-default_8h_adebc262d235a42dd5ed972c36d6f5f4c}{\+\_\+\+\_\+gthread\+\_\+recursive\+\_\+mutex\+\_\+destroy}} (\mbox{\hyperlink{gthr-default_8h_a3c90aae862e464058c70dcf114373851}{\+\_\+\+\_\+gthread\+\_\+recursive\+\_\+mutex\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+mutex}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{gthr-default_8h_a432bc141efc7aa5c68315700718d287c}{\+\_\+\+\_\+gthread\+\_\+cond\+\_\+broadcast}} (\mbox{\hyperlink{gthr-default_8h_ae8dd15b5bc8c82f0d61fa4063122fdc8}{\+\_\+\+\_\+gthread\+\_\+cond\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+cond}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{gthr-default_8h_a2603a3e8b851b11f3fb60e44accaeef8}{\+\_\+\+\_\+gthread\+\_\+cond\+\_\+signal}} (\mbox{\hyperlink{gthr-default_8h_ae8dd15b5bc8c82f0d61fa4063122fdc8}{\+\_\+\+\_\+gthread\+\_\+cond\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+cond}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{gthr-default_8h_ac5c18bbeb8fa49ae57517b29b4e3617a}{\+\_\+\+\_\+gthread\+\_\+cond\+\_\+wait}} (\mbox{\hyperlink{gthr-default_8h_ae8dd15b5bc8c82f0d61fa4063122fdc8}{\+\_\+\+\_\+gthread\+\_\+cond\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+cond}}, \mbox{\hyperlink{gthr-default_8h_a97856e6b17fbc2936d96d8ea2962eda3}{\+\_\+\+\_\+gthread\+\_\+mutex\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+mutex}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{gthr-default_8h_a1fe70034af8f08ffd1f2341cac9d55b9}{\+\_\+\+\_\+gthread\+\_\+cond\+\_\+timedwait}} (\mbox{\hyperlink{gthr-default_8h_ae8dd15b5bc8c82f0d61fa4063122fdc8}{\+\_\+\+\_\+gthread\+\_\+cond\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+cond}}, \mbox{\hyperlink{gthr-default_8h_a97856e6b17fbc2936d96d8ea2962eda3}{\+\_\+\+\_\+gthread\+\_\+mutex\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+mutex}}, \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{gthr-default_8h_af7819bed58b3ca9c8a995141339d8a3c}{\+\_\+\+\_\+gthread\+\_\+time\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+abs\+\_\+timeout}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{gthr-default_8h_a8d704f65bd931cf0b13d3a786924f059}{\+\_\+\+\_\+gthread\+\_\+cond\+\_\+wait\+\_\+recursive}} (\mbox{\hyperlink{gthr-default_8h_ae8dd15b5bc8c82f0d61fa4063122fdc8}{\+\_\+\+\_\+gthread\+\_\+cond\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+cond}}, \mbox{\hyperlink{gthr-default_8h_a3c90aae862e464058c70dcf114373851}{\+\_\+\+\_\+gthread\+\_\+recursive\+\_\+mutex\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+mutex}})
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \mbox{\hyperlink{gthr-default_8h_a969efaa226d5330de006e9bbc193f445}{\+\_\+\+\_\+gthread\+\_\+cond\+\_\+destroy}} (\mbox{\hyperlink{gthr-default_8h_ae8dd15b5bc8c82f0d61fa4063122fdc8}{\+\_\+\+\_\+gthread\+\_\+cond\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+cond}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{gthr-default_8h_ac8442c6588cdf543eb13d58d151ad7c0}\label{gthr-default_8h_ac8442c6588cdf543eb13d58d151ad7c0} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_GTHREAD\_COND\_INIT@{\_\_GTHREAD\_COND\_INIT}}
+\index{\_\_GTHREAD\_COND\_INIT@{\_\_GTHREAD\_COND\_INIT}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_GTHREAD\_COND\_INIT}{\_\_GTHREAD\_COND\_INIT}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \+\_\+\+\_\+\+GTHREAD\+\_\+\+COND\+\_\+\+INIT~\mbox{\hyperlink{pthread_8h_aa7b867fe46f3660283fcb356c4fcbbf0}{PTHREAD\+\_\+\+COND\+\_\+\+INITIALIZER}}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00069}{69}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_a6919d19c04fa8101b674f361be1b16c1}\label{gthr-default_8h_a6919d19c04fa8101b674f361be1b16c1} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_GTHREAD\_HAS\_COND@{\_\_GTHREAD\_HAS\_COND}}
+\index{\_\_GTHREAD\_HAS\_COND@{\_\_GTHREAD\_HAS\_COND}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_GTHREAD\_HAS\_COND}{\_\_GTHREAD\_HAS\_COND}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \+\_\+\+\_\+\+GTHREAD\+\_\+\+HAS\+\_\+\+COND~1}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00057}{57}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_abb270f4094b49eb30073f9b92a3bf8a2}\label{gthr-default_8h_abb270f4094b49eb30073f9b92a3bf8a2} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_GTHREAD\_MUTEX\_INIT@{\_\_GTHREAD\_MUTEX\_INIT}}
+\index{\_\_GTHREAD\_MUTEX\_INIT@{\_\_GTHREAD\_MUTEX\_INIT}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_GTHREAD\_MUTEX\_INIT}{\_\_GTHREAD\_MUTEX\_INIT}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \+\_\+\+\_\+\+GTHREAD\+\_\+\+MUTEX\+\_\+\+INIT~\mbox{\hyperlink{pthread_8h_a84e55100366a6a8338a2af3b3f279686}{PTHREAD\+\_\+\+MUTEX\+\_\+\+INITIALIZER}}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00059}{59}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_ad44274417fe2cdb160bdb57fa9405e17}\label{gthr-default_8h_ad44274417fe2cdb160bdb57fa9405e17} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_GTHREAD\_MUTEX\_INIT\_FUNCTION@{\_\_GTHREAD\_MUTEX\_INIT\_FUNCTION}}
+\index{\_\_GTHREAD\_MUTEX\_INIT\_FUNCTION@{\_\_GTHREAD\_MUTEX\_INIT\_FUNCTION}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_GTHREAD\_MUTEX\_INIT\_FUNCTION}{\_\_GTHREAD\_MUTEX\_INIT\_FUNCTION}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \+\_\+\+\_\+\+GTHREAD\+\_\+\+MUTEX\+\_\+\+INIT\+\_\+\+FUNCTION~\mbox{\hyperlink{gthr-default_8h_a5ea34d54329b508cb639623d3eebdf68}{\+\_\+\+\_\+gthread\+\_\+mutex\+\_\+init\+\_\+function}}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00060}{60}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_ae6eb0abb371e6119fbdc839178481555}\label{gthr-default_8h_ae6eb0abb371e6119fbdc839178481555} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_GTHREAD\_ONCE\_INIT@{\_\_GTHREAD\_ONCE\_INIT}}
+\index{\_\_GTHREAD\_ONCE\_INIT@{\_\_GTHREAD\_ONCE\_INIT}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_GTHREAD\_ONCE\_INIT}{\_\_GTHREAD\_ONCE\_INIT}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \+\_\+\+\_\+\+GTHREAD\+\_\+\+ONCE\+\_\+\+INIT~\mbox{\hyperlink{pthread_8h_a59e22497b65fc305ddb5cea8b4990b51}{PTHREAD\+\_\+\+ONCE\+\_\+\+INIT}}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00061}{61}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_a70b3a42bde7503c4f303115d20020aa2}\label{gthr-default_8h_a70b3a42bde7503c4f303115d20020aa2} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_GTHREAD\_RECURSIVE\_MUTEX\_INIT\_FUNCTION@{\_\_GTHREAD\_RECURSIVE\_MUTEX\_INIT\_FUNCTION}}
+\index{\_\_GTHREAD\_RECURSIVE\_MUTEX\_INIT\_FUNCTION@{\_\_GTHREAD\_RECURSIVE\_MUTEX\_INIT\_FUNCTION}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_GTHREAD\_RECURSIVE\_MUTEX\_INIT\_FUNCTION}{\_\_GTHREAD\_RECURSIVE\_MUTEX\_INIT\_FUNCTION}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \+\_\+\+\_\+\+GTHREAD\+\_\+\+RECURSIVE\+\_\+\+MUTEX\+\_\+\+INIT\+\_\+\+FUNCTION~\mbox{\hyperlink{gthr-default_8h_af3cb42d0c293466b327fd824a9fcfd40}{\+\_\+\+\_\+gthread\+\_\+recursive\+\_\+mutex\+\_\+init\+\_\+function}}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00067}{67}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_a4009b9dc592c4ffe7f28eb235d173a03}\label{gthr-default_8h_a4009b9dc592c4ffe7f28eb235d173a03} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_GTHREAD\_TIME\_INIT@{\_\_GTHREAD\_TIME\_INIT}}
+\index{\_\_GTHREAD\_TIME\_INIT@{\_\_GTHREAD\_TIME\_INIT}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_GTHREAD\_TIME\_INIT}{\_\_GTHREAD\_TIME\_INIT}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \+\_\+\+\_\+\+GTHREAD\+\_\+\+TIME\+\_\+\+INIT~\{0,0\}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00070}{70}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_a38f96d5ff005661d81f2fbcd8ee9a477}\label{gthr-default_8h_a38f96d5ff005661d81f2fbcd8ee9a477} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_GTHREADS@{\_\_GTHREADS}}
+\index{\_\_GTHREADS@{\_\_GTHREADS}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_GTHREADS}{\_\_GTHREADS}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \+\_\+\+\_\+\+GTHREADS~1}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00032}{32}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_aee6e41860e32e0a53d93ae2ca185b277}\label{gthr-default_8h_aee6e41860e32e0a53d93ae2ca185b277} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_GTHREADS\_CXX0X@{\_\_GTHREADS\_CXX0X}}
+\index{\_\_GTHREADS\_CXX0X@{\_\_GTHREADS\_CXX0X}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_GTHREADS\_CXX0X}{\_\_GTHREADS\_CXX0X}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \+\_\+\+\_\+\+GTHREADS\+\_\+\+CXX0X~1}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00033}{33}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_ae73d59629d2d21a71550a5b8d3160ff1}\label{gthr-default_8h_ae73d59629d2d21a71550a5b8d3160ff1} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthrw@{\_\_gthrw}}
+\index{\_\_gthrw@{\_\_gthrw}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthrw}{\_\_gthrw}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \+\_\+\+\_\+gthrw(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a14d7642df08c5cb68e4fb90cc8a73509}{name}} }\end{DoxyParamCaption})~\mbox{\hyperlink{gthr-default_8h_ac1d9d7a8715b321a1d07e71eb5013ac9}{\+\_\+\+\_\+gthrw2}}(\mbox{\hyperlink{gthr-default_8h_a95ab2cc62adbe4cd49201197487d272e}{\+\_\+\+\_\+gthrw\+\_\+}} \#\# \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a14d7642df08c5cb68e4fb90cc8a73509}{name}},\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a14d7642df08c5cb68e4fb90cc8a73509}{name}},\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a14d7642df08c5cb68e4fb90cc8a73509}{name}})}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00100}{100}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_ac1d9d7a8715b321a1d07e71eb5013ac9}\label{gthr-default_8h_ac1d9d7a8715b321a1d07e71eb5013ac9} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthrw2@{\_\_gthrw2}}
+\index{\_\_gthrw2@{\_\_gthrw2}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthrw2}{\_\_gthrw2}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \+\_\+\+\_\+gthrw2(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a14d7642df08c5cb68e4fb90cc8a73509}{name}},  }\item[{}]{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{name2}},  }\item[{}]{\mbox{\hyperlink{_gameobj_8h_a890efa53b3d7deeeced6f3a0d6653ed3}{type}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00095}{95}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_a95ab2cc62adbe4cd49201197487d272e}\label{gthr-default_8h_a95ab2cc62adbe4cd49201197487d272e} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthrw\_@{\_\_gthrw\_}}
+\index{\_\_gthrw\_@{\_\_gthrw\_}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthrw\_}{\_\_gthrw\_}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \+\_\+\+\_\+gthrw\+\_\+(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a14d7642df08c5cb68e4fb90cc8a73509}{name}} }\end{DoxyParamCaption})~\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a14d7642df08c5cb68e4fb90cc8a73509}{name}}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00096}{96}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_a3029cb8c34354fd8b196bfaf03bb6a96}\label{gthr-default_8h_a3029cb8c34354fd8b196bfaf03bb6a96} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_GTHREAD\_USE\_MUTEX\_TIMEDLOCK@{\_GTHREAD\_USE\_MUTEX\_TIMEDLOCK}}
+\index{\_GTHREAD\_USE\_MUTEX\_TIMEDLOCK@{\_GTHREAD\_USE\_MUTEX\_TIMEDLOCK}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_GTHREAD\_USE\_MUTEX\_TIMEDLOCK}{\_GTHREAD\_USE\_MUTEX\_TIMEDLOCK}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \+\_\+\+GTHREAD\+\_\+\+USE\+\_\+\+MUTEX\+\_\+\+TIMEDLOCK~0}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00043}{43}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{gthr-default_8h_ae8dd15b5bc8c82f0d61fa4063122fdc8}\label{gthr-default_8h_ae8dd15b5bc8c82f0d61fa4063122fdc8} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_cond\_t@{\_\_gthread\_cond\_t}}
+\index{\_\_gthread\_cond\_t@{\_\_gthread\_cond\_t}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_cond\_t}{\_\_gthread\_cond\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{pthread_8h_a889b578630430003a00009eb9bc682f1}{pthread\+\_\+cond\+\_\+t}} \mbox{\hyperlink{gthr-default_8h_ae8dd15b5bc8c82f0d61fa4063122fdc8}{\+\_\+\+\_\+gthread\+\_\+cond\+\_\+t}}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00052}{52}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_a3b3e350644d8ae574a3c842e27c69083}\label{gthr-default_8h_a3b3e350644d8ae574a3c842e27c69083} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_key\_t@{\_\_gthread\_key\_t}}
+\index{\_\_gthread\_key\_t@{\_\_gthread\_key\_t}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_key\_t}{\_\_gthread\_key\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{pthread_8h_ae3576124dcee020fef884de07a48290c}{pthread\+\_\+key\+\_\+t}} \mbox{\hyperlink{gthr-default_8h_a3b3e350644d8ae574a3c842e27c69083}{\+\_\+\+\_\+gthread\+\_\+key\+\_\+t}}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00048}{48}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_a97856e6b17fbc2936d96d8ea2962eda3}\label{gthr-default_8h_a97856e6b17fbc2936d96d8ea2962eda3} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_mutex\_t@{\_\_gthread\_mutex\_t}}
+\index{\_\_gthread\_mutex\_t@{\_\_gthread\_mutex\_t}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_mutex\_t}{\_\_gthread\_mutex\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{pthread_8h_a50d9d56f346ce3e4ce711d7d1acea193}{pthread\+\_\+mutex\+\_\+t}} \mbox{\hyperlink{gthr-default_8h_a97856e6b17fbc2936d96d8ea2962eda3}{\+\_\+\+\_\+gthread\+\_\+mutex\+\_\+t}}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00050}{50}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_af51081352b97dcd93f8668cc895c1c7f}\label{gthr-default_8h_af51081352b97dcd93f8668cc895c1c7f} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_once\_t@{\_\_gthread\_once\_t}}
+\index{\_\_gthread\_once\_t@{\_\_gthread\_once\_t}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_once\_t}{\_\_gthread\_once\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{pthread_8h_a4be465d5b536b183b4a9a6e56d67eab4}{pthread\+\_\+once\+\_\+t}} \mbox{\hyperlink{gthr-default_8h_af51081352b97dcd93f8668cc895c1c7f}{\+\_\+\+\_\+gthread\+\_\+once\+\_\+t}}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00049}{49}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_a3c90aae862e464058c70dcf114373851}\label{gthr-default_8h_a3c90aae862e464058c70dcf114373851} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_recursive\_mutex\_t@{\_\_gthread\_recursive\_mutex\_t}}
+\index{\_\_gthread\_recursive\_mutex\_t@{\_\_gthread\_recursive\_mutex\_t}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_recursive\_mutex\_t}{\_\_gthread\_recursive\_mutex\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{pthread_8h_a50d9d56f346ce3e4ce711d7d1acea193}{pthread\+\_\+mutex\+\_\+t}} \mbox{\hyperlink{gthr-default_8h_a3c90aae862e464058c70dcf114373851}{\+\_\+\+\_\+gthread\+\_\+recursive\+\_\+mutex\+\_\+t}}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00051}{51}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_a306ab8a31415e59d7772b24c22ab60dc}\label{gthr-default_8h_a306ab8a31415e59d7772b24c22ab60dc} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_t@{\_\_gthread\_t}}
+\index{\_\_gthread\_t@{\_\_gthread\_t}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_t}{\_\_gthread\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{pthread_8h_a5a968e6376296a133fae83572d4b2efc}{pthread\+\_\+t}} \mbox{\hyperlink{gthr-default_8h_a306ab8a31415e59d7772b24c22ab60dc}{\+\_\+\+\_\+gthread\+\_\+t}}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00047}{47}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_af7819bed58b3ca9c8a995141339d8a3c}\label{gthr-default_8h_af7819bed58b3ca9c8a995141339d8a3c} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_time\_t@{\_\_gthread\_time\_t}}
+\index{\_\_gthread\_time\_t@{\_\_gthread\_time\_t}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_time\_t}{\_\_gthread\_time\_t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typedef}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{timespec}} \mbox{\hyperlink{gthr-default_8h_af7819bed58b3ca9c8a995141339d8a3c}{\+\_\+\+\_\+gthread\+\_\+time\+\_\+t}}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00053}{53}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{gthr-default_8h_a432bc141efc7aa5c68315700718d287c}\label{gthr-default_8h_a432bc141efc7aa5c68315700718d287c} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_cond\_broadcast@{\_\_gthread\_cond\_broadcast}}
+\index{\_\_gthread\_cond\_broadcast@{\_\_gthread\_cond\_broadcast}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_cond\_broadcast()}{\_\_gthread\_cond\_broadcast()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+\+\_\+gthread\+\_\+cond\+\_\+broadcast (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gthr-default_8h_ae8dd15b5bc8c82f0d61fa4063122fdc8}{\+\_\+\+\_\+gthread\+\_\+cond\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+cond }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00851}{851}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_a969efaa226d5330de006e9bbc193f445}\label{gthr-default_8h_a969efaa226d5330de006e9bbc193f445} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_cond\_destroy@{\_\_gthread\_cond\_destroy}}
+\index{\_\_gthread\_cond\_destroy@{\_\_gthread\_cond\_destroy}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_cond\_destroy()}{\_\_gthread\_cond\_destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+\+\_\+gthread\+\_\+cond\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gthr-default_8h_ae8dd15b5bc8c82f0d61fa4063122fdc8}{\+\_\+\+\_\+gthread\+\_\+cond\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+cond }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00883}{883}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_a2603a3e8b851b11f3fb60e44accaeef8}\label{gthr-default_8h_a2603a3e8b851b11f3fb60e44accaeef8} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_cond\_signal@{\_\_gthread\_cond\_signal}}
+\index{\_\_gthread\_cond\_signal@{\_\_gthread\_cond\_signal}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_cond\_signal()}{\_\_gthread\_cond\_signal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+\+\_\+gthread\+\_\+cond\+\_\+signal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gthr-default_8h_ae8dd15b5bc8c82f0d61fa4063122fdc8}{\+\_\+\+\_\+gthread\+\_\+cond\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+cond }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00857}{857}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_a1fe70034af8f08ffd1f2341cac9d55b9}\label{gthr-default_8h_a1fe70034af8f08ffd1f2341cac9d55b9} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_cond\_timedwait@{\_\_gthread\_cond\_timedwait}}
+\index{\_\_gthread\_cond\_timedwait@{\_\_gthread\_cond\_timedwait}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_cond\_timedwait()}{\_\_gthread\_cond\_timedwait()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+\+\_\+gthread\+\_\+cond\+\_\+timedwait (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gthr-default_8h_ae8dd15b5bc8c82f0d61fa4063122fdc8}{\+\_\+\+\_\+gthread\+\_\+cond\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+cond,  }\item[{\mbox{\hyperlink{gthr-default_8h_a97856e6b17fbc2936d96d8ea2962eda3}{\+\_\+\+\_\+gthread\+\_\+mutex\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+mutex,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{gthr-default_8h_af7819bed58b3ca9c8a995141339d8a3c}{\+\_\+\+\_\+gthread\+\_\+time\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+abs\+\_\+timeout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00869}{869}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_ac5c18bbeb8fa49ae57517b29b4e3617a}\label{gthr-default_8h_ac5c18bbeb8fa49ae57517b29b4e3617a} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_cond\_wait@{\_\_gthread\_cond\_wait}}
+\index{\_\_gthread\_cond\_wait@{\_\_gthread\_cond\_wait}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_cond\_wait()}{\_\_gthread\_cond\_wait()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+\+\_\+gthread\+\_\+cond\+\_\+wait (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gthr-default_8h_ae8dd15b5bc8c82f0d61fa4063122fdc8}{\+\_\+\+\_\+gthread\+\_\+cond\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+cond,  }\item[{\mbox{\hyperlink{gthr-default_8h_a97856e6b17fbc2936d96d8ea2962eda3}{\+\_\+\+\_\+gthread\+\_\+mutex\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+mutex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00863}{863}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_a8d704f65bd931cf0b13d3a786924f059}\label{gthr-default_8h_a8d704f65bd931cf0b13d3a786924f059} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_cond\_wait\_recursive@{\_\_gthread\_cond\_wait\_recursive}}
+\index{\_\_gthread\_cond\_wait\_recursive@{\_\_gthread\_cond\_wait\_recursive}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_cond\_wait\_recursive()}{\_\_gthread\_cond\_wait\_recursive()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+\+\_\+gthread\+\_\+cond\+\_\+wait\+\_\+recursive (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gthr-default_8h_ae8dd15b5bc8c82f0d61fa4063122fdc8}{\+\_\+\+\_\+gthread\+\_\+cond\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+cond,  }\item[{\mbox{\hyperlink{gthr-default_8h_a3c90aae862e464058c70dcf114373851}{\+\_\+\+\_\+gthread\+\_\+recursive\+\_\+mutex\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+mutex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00876}{876}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_a4cb92deed6eb22f63fc6ce2f80a973a5}\label{gthr-default_8h_a4cb92deed6eb22f63fc6ce2f80a973a5} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_create@{\_\_gthread\_create}}
+\index{\_\_gthread\_create@{\_\_gthread\_create}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_create()}{\_\_gthread\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+\+\_\+gthread\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gthr-default_8h_a306ab8a31415e59d7772b24c22ab60dc}{\+\_\+\+\_\+gthread\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+threadid,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*})(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*})}]{\+\_\+\+\_\+func,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00660}{660}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_abac77cb382a4463a878075524025143f}\label{gthr-default_8h_abac77cb382a4463a878075524025143f} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_detach@{\_\_gthread\_detach}}
+\index{\_\_gthread\_detach@{\_\_gthread\_detach}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_detach()}{\_\_gthread\_detach()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+\+\_\+gthread\+\_\+detach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gthr-default_8h_a306ab8a31415e59d7772b24c22ab60dc}{\+\_\+\+\_\+gthread\+\_\+t}}}]{\+\_\+\+\_\+threadid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00673}{673}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_a8b5909184247cd313296f0dcb1951860}\label{gthr-default_8h_a8b5909184247cd313296f0dcb1951860} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_equal@{\_\_gthread\_equal}}
+\index{\_\_gthread\_equal@{\_\_gthread\_equal}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_equal()}{\_\_gthread\_equal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+\+\_\+gthread\+\_\+equal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gthr-default_8h_a306ab8a31415e59d7772b24c22ab60dc}{\+\_\+\+\_\+gthread\+\_\+t}}}]{\+\_\+\+\_\+t1,  }\item[{\mbox{\hyperlink{gthr-default_8h_a306ab8a31415e59d7772b24c22ab60dc}{\+\_\+\+\_\+gthread\+\_\+t}}}]{\+\_\+\+\_\+t2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00679}{679}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_a61fabd78e79a94a0071a10996a1ca86b}\label{gthr-default_8h_a61fabd78e79a94a0071a10996a1ca86b} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_getspecific@{\_\_gthread\_getspecific}}
+\index{\_\_gthread\_getspecific@{\_\_gthread\_getspecific}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_getspecific()}{\_\_gthread\_getspecific()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*} \+\_\+\+\_\+gthread\+\_\+getspecific (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gthr-default_8h_a3b3e350644d8ae574a3c842e27c69083}{\+\_\+\+\_\+gthread\+\_\+key\+\_\+t}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+key}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00718}{718}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_ac7278b6d972ba67735b4654f0411aa28}\label{gthr-default_8h_ac7278b6d972ba67735b4654f0411aa28} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_join@{\_\_gthread\_join}}
+\index{\_\_gthread\_join@{\_\_gthread\_join}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_join()}{\_\_gthread\_join()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+\+\_\+gthread\+\_\+join (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gthr-default_8h_a306ab8a31415e59d7772b24c22ab60dc}{\+\_\+\+\_\+gthread\+\_\+t}}}]{\+\_\+\+\_\+threadid,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+value\+\_\+ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00667}{667}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_a30a6cf5f024209d7b74236c1b932a21c}\label{gthr-default_8h_a30a6cf5f024209d7b74236c1b932a21c} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_key\_create@{\_\_gthread\_key\_create}}
+\index{\_\_gthread\_key\_create@{\_\_gthread\_key\_create}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_key\_create()}{\_\_gthread\_key\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+\+\_\+gthread\+\_\+key\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gthr-default_8h_a3b3e350644d8ae574a3c842e27c69083}{\+\_\+\+\_\+gthread\+\_\+key\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+key,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}(\texorpdfstring{$\ast$}{*})(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*})}]{\+\_\+\+\_\+dtor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00706}{706}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_a33c619c5426660d66ee9d9e4e7c3465d}\label{gthr-default_8h_a33c619c5426660d66ee9d9e4e7c3465d} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_key\_delete@{\_\_gthread\_key\_delete}}
+\index{\_\_gthread\_key\_delete@{\_\_gthread\_key\_delete}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_key\_delete()}{\_\_gthread\_key\_delete()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+\+\_\+gthread\+\_\+key\+\_\+delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gthr-default_8h_a3b3e350644d8ae574a3c842e27c69083}{\+\_\+\+\_\+gthread\+\_\+key\+\_\+t}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+key}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00712}{712}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_accd35f7db78be5b3f4aee2d3094a6f3a}\label{gthr-default_8h_accd35f7db78be5b3f4aee2d3094a6f3a} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_mutex\_destroy@{\_\_gthread\_mutex\_destroy}}
+\index{\_\_gthread\_mutex\_destroy@{\_\_gthread\_mutex\_destroy}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_mutex\_destroy()}{\_\_gthread\_mutex\_destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+\+\_\+gthread\+\_\+mutex\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gthr-default_8h_a97856e6b17fbc2936d96d8ea2962eda3}{\+\_\+\+\_\+gthread\+\_\+mutex\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+mutex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00737}{737}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_a5ea34d54329b508cb639623d3eebdf68}\label{gthr-default_8h_a5ea34d54329b508cb639623d3eebdf68} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_mutex\_init\_function@{\_\_gthread\_mutex\_init\_function}}
+\index{\_\_gthread\_mutex\_init\_function@{\_\_gthread\_mutex\_init\_function}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_mutex\_init\_function()}{\_\_gthread\_mutex\_init\_function()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \+\_\+\+\_\+gthread\+\_\+mutex\+\_\+init\+\_\+function (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gthr-default_8h_a97856e6b17fbc2936d96d8ea2962eda3}{\+\_\+\+\_\+gthread\+\_\+mutex\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+mutex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00730}{730}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_aace64794942c885422fcd3d6f5ccc6ae}\label{gthr-default_8h_aace64794942c885422fcd3d6f5ccc6ae} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_mutex\_lock@{\_\_gthread\_mutex\_lock}}
+\index{\_\_gthread\_mutex\_lock@{\_\_gthread\_mutex\_lock}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_mutex\_lock()}{\_\_gthread\_mutex\_lock()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+\+\_\+gthread\+\_\+mutex\+\_\+lock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gthr-default_8h_a97856e6b17fbc2936d96d8ea2962eda3}{\+\_\+\+\_\+gthread\+\_\+mutex\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+mutex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00746}{746}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_a9f2b6647f8a6476e10e04030314374f7}\label{gthr-default_8h_a9f2b6647f8a6476e10e04030314374f7} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_mutex\_trylock@{\_\_gthread\_mutex\_trylock}}
+\index{\_\_gthread\_mutex\_trylock@{\_\_gthread\_mutex\_trylock}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_mutex\_trylock()}{\_\_gthread\_mutex\_trylock()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+\+\_\+gthread\+\_\+mutex\+\_\+trylock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gthr-default_8h_a97856e6b17fbc2936d96d8ea2962eda3}{\+\_\+\+\_\+gthread\+\_\+mutex\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+mutex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00755}{755}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_a5bedfcf06fc439459a01951fb2d343c7}\label{gthr-default_8h_a5bedfcf06fc439459a01951fb2d343c7} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_mutex\_unlock@{\_\_gthread\_mutex\_unlock}}
+\index{\_\_gthread\_mutex\_unlock@{\_\_gthread\_mutex\_unlock}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_mutex\_unlock()}{\_\_gthread\_mutex\_unlock()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+\+\_\+gthread\+\_\+mutex\+\_\+unlock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gthr-default_8h_a97856e6b17fbc2936d96d8ea2962eda3}{\+\_\+\+\_\+gthread\+\_\+mutex\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+mutex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00776}{776}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_a147dd8d9f19485916e4d65b31b247266}\label{gthr-default_8h_a147dd8d9f19485916e4d65b31b247266} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_once@{\_\_gthread\_once}}
+\index{\_\_gthread\_once@{\_\_gthread\_once}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_once()}{\_\_gthread\_once()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+\+\_\+gthread\+\_\+once (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gthr-default_8h_af51081352b97dcd93f8668cc895c1c7f}{\+\_\+\+\_\+gthread\+\_\+once\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+once,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}(\texorpdfstring{$\ast$}{*})(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}})}]{\+\_\+\+\_\+func }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00697}{697}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_adebc262d235a42dd5ed972c36d6f5f4c}\label{gthr-default_8h_adebc262d235a42dd5ed972c36d6f5f4c} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_recursive\_mutex\_destroy@{\_\_gthread\_recursive\_mutex\_destroy}}
+\index{\_\_gthread\_recursive\_mutex\_destroy@{\_\_gthread\_recursive\_mutex\_destroy}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_recursive\_mutex\_destroy()}{\_\_gthread\_recursive\_mutex\_destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+\+\_\+gthread\+\_\+recursive\+\_\+mutex\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gthr-default_8h_a3c90aae862e464058c70dcf114373851}{\+\_\+\+\_\+gthread\+\_\+recursive\+\_\+mutex\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+mutex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00836}{836}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_af3cb42d0c293466b327fd824a9fcfd40}\label{gthr-default_8h_af3cb42d0c293466b327fd824a9fcfd40} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_recursive\_mutex\_init\_function@{\_\_gthread\_recursive\_mutex\_init\_function}}
+\index{\_\_gthread\_recursive\_mutex\_init\_function@{\_\_gthread\_recursive\_mutex\_init\_function}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_recursive\_mutex\_init\_function()}{\_\_gthread\_recursive\_mutex\_init\_function()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+\+\_\+gthread\+\_\+recursive\+\_\+mutex\+\_\+init\+\_\+function (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gthr-default_8h_a3c90aae862e464058c70dcf114373851}{\+\_\+\+\_\+gthread\+\_\+recursive\+\_\+mutex\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+mutex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00787}{787}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_afb80562513b8067fb1ad04280cf74edb}\label{gthr-default_8h_afb80562513b8067fb1ad04280cf74edb} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_recursive\_mutex\_lock@{\_\_gthread\_recursive\_mutex\_lock}}
+\index{\_\_gthread\_recursive\_mutex\_lock@{\_\_gthread\_recursive\_mutex\_lock}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_recursive\_mutex\_lock()}{\_\_gthread\_recursive\_mutex\_lock()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+\+\_\+gthread\+\_\+recursive\+\_\+mutex\+\_\+lock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gthr-default_8h_a3c90aae862e464058c70dcf114373851}{\+\_\+\+\_\+gthread\+\_\+recursive\+\_\+mutex\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+mutex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00809}{809}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_aea209cb33f52e9714474fcb1a83efe1b}\label{gthr-default_8h_aea209cb33f52e9714474fcb1a83efe1b} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_recursive\_mutex\_trylock@{\_\_gthread\_recursive\_mutex\_trylock}}
+\index{\_\_gthread\_recursive\_mutex\_trylock@{\_\_gthread\_recursive\_mutex\_trylock}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_recursive\_mutex\_trylock()}{\_\_gthread\_recursive\_mutex\_trylock()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+\+\_\+gthread\+\_\+recursive\+\_\+mutex\+\_\+trylock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gthr-default_8h_a3c90aae862e464058c70dcf114373851}{\+\_\+\+\_\+gthread\+\_\+recursive\+\_\+mutex\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+mutex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00815}{815}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_aa642f62eff4410ca4323d8a2d83b21ff}\label{gthr-default_8h_aa642f62eff4410ca4323d8a2d83b21ff} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_recursive\_mutex\_unlock@{\_\_gthread\_recursive\_mutex\_unlock}}
+\index{\_\_gthread\_recursive\_mutex\_unlock@{\_\_gthread\_recursive\_mutex\_unlock}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_recursive\_mutex\_unlock()}{\_\_gthread\_recursive\_mutex\_unlock()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+\+\_\+gthread\+\_\+recursive\+\_\+mutex\+\_\+unlock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gthr-default_8h_a3c90aae862e464058c70dcf114373851}{\+\_\+\+\_\+gthread\+\_\+recursive\+\_\+mutex\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+mutex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00830}{830}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_ac06708e416f5c40b9b7c75e80217494d}\label{gthr-default_8h_ac06708e416f5c40b9b7c75e80217494d} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_self@{\_\_gthread\_self}}
+\index{\_\_gthread\_self@{\_\_gthread\_self}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_self()}{\_\_gthread\_self()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{gthr-default_8h_a306ab8a31415e59d7772b24c22ab60dc}{\+\_\+\+\_\+gthread\+\_\+t}} \+\_\+\+\_\+gthread\+\_\+self (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00685}{685}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_a3afd56a05f2236f21f5a1b75e49ad73f}\label{gthr-default_8h_a3afd56a05f2236f21f5a1b75e49ad73f} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_setspecific@{\_\_gthread\_setspecific}}
+\index{\_\_gthread\_setspecific@{\_\_gthread\_setspecific}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_setspecific()}{\_\_gthread\_setspecific()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+\+\_\+gthread\+\_\+setspecific (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{gthr-default_8h_a3b3e350644d8ae574a3c842e27c69083}{\+\_\+\+\_\+gthread\+\_\+key\+\_\+t}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\+\_\+\+\_\+key}}}]{,  }\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+\_\+ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00724}{724}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_aa9f573499d436ed9dc414132d21c7b84}\label{gthr-default_8h_aa9f573499d436ed9dc414132d21c7b84} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthread\_yield@{\_\_gthread\_yield}}
+\index{\_\_gthread\_yield@{\_\_gthread\_yield}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthread\_yield()}{\_\_gthread\_yield()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}} \+\_\+\+\_\+gthread\+\_\+yield (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a0f7193911e632cd84da4082d5c628fe3}{void}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00691}{691}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+
+\Hypertarget{gthr-default_8h_a53554ea82a8e7f61961842d91d0f3e8d}\label{gthr-default_8h_a53554ea82a8e7f61961842d91d0f3e8d} 
+\index{gthr-\/default.h@{gthr-\/default.h}!\_\_gthrw@{\_\_gthrw}}
+\index{\_\_gthrw@{\_\_gthrw}!gthr-\/default.h@{gthr-\/default.h}}
+\doxysubsubsection{\texorpdfstring{\_\_gthrw()}{\_\_gthrw()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+gthrw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pthread_8h_ad3e2169d99cca6716f63e7a6a815e1f9}{pthread\+\_\+once}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{gthr-default_8h_source_l00102}{102}} of file \mbox{\hyperlink{gthr-default_8h_source}{gthr-\/default.\+h}}.
+

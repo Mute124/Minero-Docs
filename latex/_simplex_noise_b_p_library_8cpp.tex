@@ -1,0 +1,101 @@
+\doxysection{C\+:/\+Git/\+Minero/raylib/projects/\+VSCode/\+Classes/lib/\+Smooth-\/\+Infinite-\/\+Voxel-\/\+Terrain-\/master/\+Simplex\+Noise\+BPLibrary.cpp File Reference}
+\hypertarget{_simplex_noise_b_p_library_8cpp}{}\label{_simplex_noise_b_p_library_8cpp}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/Smooth-\/Infinite-\/Voxel-\/Terrain-\/master/SimplexNoiseBPLibrary.cpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/Smooth-\/Infinite-\/Voxel-\/Terrain-\/master/SimplexNoiseBPLibrary.cpp}}
+{\ttfamily \#include "{}Simplex\+Noise\+Private\+PCH.\+h"{}}\newline
+{\ttfamily \#include "{}Simplex\+Noise\+BPLibrary.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{_simplex_noise_b_p_library_8cpp_ae426292a2a2cac396a07776ed99d6d3f}{FASTFLOOR}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}})~( ((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}})$>$0) ? ((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}})\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}}) \+: (((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}})\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}})-\/1) )
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{_simplex_noise_b_p_library_8cpp_a5368759862ac5fb38772b91eace1205c}{F2}}~0.\+366025403\mbox{\hyperlink{raylib_2src_2external_2glad_8h_a0fdda94b8b7e64884690244028f455ba}{f}}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{_simplex_noise_b_p_library_8cpp_ae62138575e5117b9426bd8bb1830e036}{G2}}~0.\+211324865\mbox{\hyperlink{raylib_2src_2external_2glad_8h_a0fdda94b8b7e64884690244028f455ba}{f}}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{_simplex_noise_b_p_library_8cpp_a79fc770a19406e6876ff9ffd6ce66f3d}{F3}}~0.\+333333333\mbox{\hyperlink{raylib_2src_2external_2glad_8h_a0fdda94b8b7e64884690244028f455ba}{f}}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{_simplex_noise_b_p_library_8cpp_aa18956b1e077aaf1b24bcb4b7eb841f5}{G3}}~0.\+166666667\mbox{\hyperlink{raylib_2src_2external_2glad_8h_a0fdda94b8b7e64884690244028f455ba}{f}}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{_simplex_noise_b_p_library_8cpp_a7fd7918aa90b0ce1dc7ca9fe7a00e9fb}{F4}}~0.\+309016994\mbox{\hyperlink{raylib_2src_2external_2glad_8h_a0fdda94b8b7e64884690244028f455ba}{f}}
+\item 
+\#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} \mbox{\hyperlink{_simplex_noise_b_p_library_8cpp_a6f984a8b01aafc34122cc8bc0d9d5691}{G4}}~0.\+138196601\mbox{\hyperlink{raylib_2src_2external_2glad_8h_a0fdda94b8b7e64884690244028f455ba}{f}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{static}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} \mbox{\hyperlink{_simplex_noise_b_p_library_8cpp_a7f47fa40493dcc75de51931a833927f4}{simplex}} \mbox{[}64\mbox{]}\mbox{[}4\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_simplex_noise_b_p_library_8cpp_a5368759862ac5fb38772b91eace1205c}\label{_simplex_noise_b_p_library_8cpp_a5368759862ac5fb38772b91eace1205c} 
+\index{SimplexNoiseBPLibrary.cpp@{SimplexNoiseBPLibrary.cpp}!F2@{F2}}
+\index{F2@{F2}!SimplexNoiseBPLibrary.cpp@{SimplexNoiseBPLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{F2}{F2}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} F2~0.\+366025403\mbox{\hyperlink{raylib_2src_2external_2glad_8h_a0fdda94b8b7e64884690244028f455ba}{f}}}
+
+\Hypertarget{_simplex_noise_b_p_library_8cpp_a79fc770a19406e6876ff9ffd6ce66f3d}\label{_simplex_noise_b_p_library_8cpp_a79fc770a19406e6876ff9ffd6ce66f3d} 
+\index{SimplexNoiseBPLibrary.cpp@{SimplexNoiseBPLibrary.cpp}!F3@{F3}}
+\index{F3@{F3}!SimplexNoiseBPLibrary.cpp@{SimplexNoiseBPLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{F3}{F3}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} F3~0.\+333333333\mbox{\hyperlink{raylib_2src_2external_2glad_8h_a0fdda94b8b7e64884690244028f455ba}{f}}}
+
+\Hypertarget{_simplex_noise_b_p_library_8cpp_a7fd7918aa90b0ce1dc7ca9fe7a00e9fb}\label{_simplex_noise_b_p_library_8cpp_a7fd7918aa90b0ce1dc7ca9fe7a00e9fb} 
+\index{SimplexNoiseBPLibrary.cpp@{SimplexNoiseBPLibrary.cpp}!F4@{F4}}
+\index{F4@{F4}!SimplexNoiseBPLibrary.cpp@{SimplexNoiseBPLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{F4}{F4}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} F4~0.\+309016994\mbox{\hyperlink{raylib_2src_2external_2glad_8h_a0fdda94b8b7e64884690244028f455ba}{f}}}
+
+\Hypertarget{_simplex_noise_b_p_library_8cpp_ae426292a2a2cac396a07776ed99d6d3f}\label{_simplex_noise_b_p_library_8cpp_ae426292a2a2cac396a07776ed99d6d3f} 
+\index{SimplexNoiseBPLibrary.cpp@{SimplexNoiseBPLibrary.cpp}!FASTFLOOR@{FASTFLOOR}}
+\index{FASTFLOOR@{FASTFLOOR}!SimplexNoiseBPLibrary.cpp@{SimplexNoiseBPLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{FASTFLOOR}{FASTFLOOR}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} FASTFLOOR(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}} }\end{DoxyParamCaption})~( ((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}})$>$0) ? ((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}})\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}}) \+: (((\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{int}})\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_ac916c0825494ac3acd4457effd2823d2}{x}})-\/1) )}
+
+
+
+Definition at line \mbox{\hyperlink{_simplex_noise_b_p_library_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{_simplex_noise_b_p_library_8cpp_source}{Simplex\+Noise\+BPLibrary.\+cpp}}.
+
+\Hypertarget{_simplex_noise_b_p_library_8cpp_ae62138575e5117b9426bd8bb1830e036}\label{_simplex_noise_b_p_library_8cpp_ae62138575e5117b9426bd8bb1830e036} 
+\index{SimplexNoiseBPLibrary.cpp@{SimplexNoiseBPLibrary.cpp}!G2@{G2}}
+\index{G2@{G2}!SimplexNoiseBPLibrary.cpp@{SimplexNoiseBPLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{G2}{G2}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} G2~0.\+211324865\mbox{\hyperlink{raylib_2src_2external_2glad_8h_a0fdda94b8b7e64884690244028f455ba}{f}}}
+
+\Hypertarget{_simplex_noise_b_p_library_8cpp_aa18956b1e077aaf1b24bcb4b7eb841f5}\label{_simplex_noise_b_p_library_8cpp_aa18956b1e077aaf1b24bcb4b7eb841f5} 
+\index{SimplexNoiseBPLibrary.cpp@{SimplexNoiseBPLibrary.cpp}!G3@{G3}}
+\index{G3@{G3}!SimplexNoiseBPLibrary.cpp@{SimplexNoiseBPLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{G3}{G3}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} G3~0.\+166666667\mbox{\hyperlink{raylib_2src_2external_2glad_8h_a0fdda94b8b7e64884690244028f455ba}{f}}}
+
+\Hypertarget{_simplex_noise_b_p_library_8cpp_a6f984a8b01aafc34122cc8bc0d9d5691}\label{_simplex_noise_b_p_library_8cpp_a6f984a8b01aafc34122cc8bc0d9d5691} 
+\index{SimplexNoiseBPLibrary.cpp@{SimplexNoiseBPLibrary.cpp}!G4@{G4}}
+\index{G4@{G4}!SimplexNoiseBPLibrary.cpp@{SimplexNoiseBPLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{G4}{G4}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{avx512fintrin_8h_a1b7950c88593de42a92cc8558f5488f6}{define}} G4~0.\+138196601\mbox{\hyperlink{raylib_2src_2external_2glad_8h_a0fdda94b8b7e64884690244028f455ba}{f}}}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_simplex_noise_b_p_library_8cpp_a7f47fa40493dcc75de51931a833927f4}\label{_simplex_noise_b_p_library_8cpp_a7f47fa40493dcc75de51931a833927f4} 
+\index{SimplexNoiseBPLibrary.cpp@{SimplexNoiseBPLibrary.cpp}!simplex@{simplex}}
+\index{simplex@{simplex}!SimplexNoiseBPLibrary.cpp@{SimplexNoiseBPLibrary.cpp}}
+\doxysubsubsection{\texorpdfstring{simplex}{simplex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{unsigned}} \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{char}} simplex\mbox{[}64\mbox{]}\mbox{[}4\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{\ 0,1,2,3\ \},\{\ 0,1,3,2\ \},\{\ 0,0,0,0\ \},\{\ 0,2,3,1\ \},\{\ 0,0,0,0\ \},\{\ 0,0,0,0\ \},\{\ 0,0,0,0\ \},\{\ 1,2,3,0\ \},}
+\DoxyCodeLine{\ \ \ \ \{\ 0,2,1,3\ \},\{\ 0,0,0,0\ \},\{\ 0,3,1,2\ \},\{\ 0,3,2,1\ \},\{\ 0,0,0,0\ \},\{\ 0,0,0,0\ \},\{\ 0,0,0,0\ \},\{\ 1,3,2,0\ \},}
+\DoxyCodeLine{\ \ \ \ \{\ 0,0,0,0\ \},\{\ 0,0,0,0\ \},\{\ 0,0,0,0\ \},\{\ 0,0,0,0\ \},\{\ 0,0,0,0\ \},\{\ 0,0,0,0\ \},\{\ 0,0,0,0\ \},\{\ 0,0,0,0\ \},}
+\DoxyCodeLine{\ \ \ \ \{\ 1,2,0,3\ \},\{\ 0,0,0,0\ \},\{\ 1,3,0,2\ \},\{\ 0,0,0,0\ \},\{\ 0,0,0,0\ \},\{\ 0,0,0,0\ \},\{\ 2,3,0,1\ \},\{\ 2,3,1,0\ \},}
+\DoxyCodeLine{\ \ \ \ \{\ 1,0,2,3\ \},\{\ 1,0,3,2\ \},\{\ 0,0,0,0\ \},\{\ 0,0,0,0\ \},\{\ 0,0,0,0\ \},\{\ 2,0,3,1\ \},\{\ 0,0,0,0\ \},\{\ 2,1,3,0\ \},}
+\DoxyCodeLine{\ \ \ \ \{\ 0,0,0,0\ \},\{\ 0,0,0,0\ \},\{\ 0,0,0,0\ \},\{\ 0,0,0,0\ \},\{\ 0,0,0,0\ \},\{\ 0,0,0,0\ \},\{\ 0,0,0,0\ \},\{\ 0,0,0,0\ \},}
+\DoxyCodeLine{\ \ \ \ \{\ 2,0,1,3\ \},\{\ 0,0,0,0\ \},\{\ 0,0,0,0\ \},\{\ 0,0,0,0\ \},\{\ 3,0,1,2\ \},\{\ 3,0,2,1\ \},\{\ 0,0,0,0\ \},\{\ 3,1,2,0\ \},}
+\DoxyCodeLine{\ \ \ \ \{\ 2,1,0,3\ \},\{\ 0,0,0,0\ \},\{\ 0,0,0,0\ \},\{\ 0,0,0,0\ \},\{\ 3,1,0,2\ \},\{\ 0,0,0,0\ \},\{\ 3,2,0,1\ \},\{\ 3,2,1,0\ \}\ \}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{_simplex_noise_b_p_library_8cpp_source_l00081}{81}} of file \mbox{\hyperlink{_simplex_noise_b_p_library_8cpp_source}{Simplex\+Noise\+BPLibrary.\+cpp}}.
+

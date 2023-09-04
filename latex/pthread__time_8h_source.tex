@@ -1,0 +1,108 @@
+\doxysection{pthread\+\_\+time.\+h}
+\hypertarget{pthread__time_8h_source}{}\label{pthread__time_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/pthread\_time.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/pthread\_time.h}}
+\mbox{\hyperlink{pthread__time_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00002}00002\ \textcolor{comment}{\ \ \ Copyright\ (c)\ 2011-\/2016\ \ mingw-\/w64\ project}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00003}00003\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00004}00004\ \textcolor{comment}{\ \ \ Permission\ is\ hereby\ granted,\ free\ of\ charge,\ to\ any\ person\ obtaining\ a}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00005}00005\ \textcolor{comment}{\ \ \ copy\ of\ this\ software\ and\ associated\ documentation\ files\ (the\ "{}Software"{}),}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00006}00006\ \textcolor{comment}{\ \ \ to\ deal\ in\ the\ Software\ without\ restriction,\ including\ without\ limitation}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00007}00007\ \textcolor{comment}{\ \ \ the\ rights\ to\ use,\ copy,\ modify,\ merge,\ publish,\ distribute,\ sublicense,}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00008}00008\ \textcolor{comment}{\ \ \ and/or\ sell\ copies\ of\ the\ Software,\ and\ to\ permit\ persons\ to\ whom\ the}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00009}00009\ \textcolor{comment}{\ \ \ Software\ is\ furnished\ to\ do\ so,\ subject\ to\ the\ following\ conditions:}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00010}00010\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00011}00011\ \textcolor{comment}{\ \ \ The\ above\ copyright\ notice\ and\ this\ permission\ notice\ shall\ be\ included\ in}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00012}00012\ \textcolor{comment}{\ \ \ all\ copies\ or\ substantial\ portions\ of\ the\ Software.}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00013}00013\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00014}00014\ \textcolor{comment}{\ \ \ THE\ SOFTWARE\ IS\ PROVIDED\ "{}AS\ IS"{},\ WITHOUT\ WARRANTY\ OF\ ANY\ KIND,\ EXPRESS\ OR}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00015}00015\ \textcolor{comment}{\ \ \ IMPLIED,\ INCLUDING\ BUT\ NOT\ LIMITED\ TO\ THE\ WARRANTIES\ OF\ MERCHANTABILITY,}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00016}00016\ \textcolor{comment}{\ \ \ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE\ AND\ NONINFRINGEMENT.\ IN\ NO\ EVENT\ SHALL\ THE}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00017}00017\ \textcolor{comment}{\ \ \ AUTHORS\ OR\ COPYRIGHT\ HOLDERS\ BE\ LIABLE\ FOR\ ANY\ CLAIM,\ DAMAGES\ OR\ OTHER}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00018}00018\ \textcolor{comment}{\ \ \ LIABILITY,\ WHETHER\ IN\ AN\ ACTION\ OF\ CONTRACT,\ TORT\ OR\ OTHERWISE,\ ARISING}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00019}00019\ \textcolor{comment}{\ \ \ FROM,\ OUT\ OF\ OR\ IN\ CONNECTION\ WITH\ THE\ SOFTWARE\ OR\ THE\ USE\ OR\ OTHER}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00020}00020\ \textcolor{comment}{\ \ \ DEALINGS\ IN\ THE\ SOFTWARE.}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00021}00021\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00023}00023\ \textcolor{preprocessor}{\#include\ <sys/timeb.h>}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00025}00025\ \textcolor{preprocessor}{\#ifndef\ WIN\_PTHREADS\_TIME\_H}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00026}00026\ \textcolor{preprocessor}{\#define\ WIN\_PTHREADS\_TIME\_H}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00028}00028\ \textcolor{comment}{/*\ Posix\ timers\ are\ supported\ */}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00029}00029\ \textcolor{preprocessor}{\#ifndef\ \_POSIX\_TIMERS}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00030}\mbox{\hyperlink{pthread__time_8h_ae6ebdb1de129396e3ee9aeca563e5d19}{00030}}\ \textcolor{preprocessor}{\#define\ \_POSIX\_TIMERS\ \ \ \ \ \ \ \ \ \ \ 200809L}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00031}00031\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00033}00033\ \textcolor{comment}{/*\ Monotonic\ clocks\ are\ available.\ \ */}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00034}00034\ \textcolor{preprocessor}{\#ifndef\ \_POSIX\_MONOTONIC\_CLOCK}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00035}\mbox{\hyperlink{pthread__time_8h_a634bd13ee7a978890e5d98f9108c0f00}{00035}}\ \textcolor{preprocessor}{\#define\ \_POSIX\_MONOTONIC\_CLOCK\ \ 200809L}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00036}00036\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00038}00038\ \textcolor{comment}{/*\ CPU-\/time\ clocks\ are\ available.\ \ */}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00039}00039\ \textcolor{preprocessor}{\#ifndef\ \_POSIX\_CPUTIME}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00040}\mbox{\hyperlink{pthread__time_8h_a380ae2a1bebdfc37b19eabc2095602cd}{00040}}\ \textcolor{preprocessor}{\#define\ \_POSIX\_CPUTIME\ \ \ \ \ \ \ \ \ \ 200809L}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00041}00041\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00043}00043\ \textcolor{comment}{/*\ Clock\ support\ in\ threads\ are\ available.\ \ */}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00044}00044\ \textcolor{preprocessor}{\#ifndef\ \_POSIX\_THREAD\_CPUTIME}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00045}\mbox{\hyperlink{pthread__time_8h_a890fd665f06cd74cebe4a9c274154faf}{00045}}\ \textcolor{preprocessor}{\#define\ \_POSIX\_THREAD\_CPUTIME\ \ \ 200809L}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00046}00046\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00048}00048\ \textcolor{preprocessor}{\#ifndef\ \_\_clockid\_t\_defined}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00049}\mbox{\hyperlink{pthread__time_8h_a6dcac6a5cea7d9c842145e1444d91e22}{00049}}\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{pthread__time_8h_a6dcac6a5cea7d9c842145e1444d91e22}{clockid\_t}};}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00050}\mbox{\hyperlink{pthread__time_8h_af7535c653a4628fc6b6f820c4099edf1}{00050}}\ \textcolor{preprocessor}{\#define\ \_\_clockid\_t\_defined\ 1}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00051}00051\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ \_\_clockid\_t\_defined\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00053}00053\ \textcolor{preprocessor}{\#ifndef\ TIMER\_ABSTIME}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00054}\mbox{\hyperlink{pthread__time_8h_adde83d9ea51f12d4149f016eededde54}{00054}}\ \textcolor{preprocessor}{\#define\ TIMER\_ABSTIME\ \ \ 1}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00055}00055\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00057}00057\ \textcolor{preprocessor}{\#ifndef\ CLOCK\_REALTIME}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00058}\mbox{\hyperlink{pthread__time_8h_a922ce1ae64374c9410c8a999e25e82af}{00058}}\ \textcolor{preprocessor}{\#define\ CLOCK\_REALTIME\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00059}00059\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00061}00061\ \textcolor{preprocessor}{\#ifndef\ CLOCK\_MONOTONIC}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00062}\mbox{\hyperlink{pthread__time_8h_a6fb83f5e91e704391ff796553d5e0f46}{00062}}\ \textcolor{preprocessor}{\#define\ CLOCK\_MONOTONIC\ \ \ \ \ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00063}00063\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00065}00065\ \textcolor{preprocessor}{\#ifndef\ CLOCK\_PROCESS\_CPUTIME\_ID}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00066}\mbox{\hyperlink{pthread__time_8h_ae1c3939a1e7b7cd1e5a4a7fa601cc4e9}{00066}}\ \textcolor{preprocessor}{\#define\ CLOCK\_PROCESS\_CPUTIME\_ID\ \ \ \ 2}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00067}00067\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00069}00069\ \textcolor{preprocessor}{\#ifndef\ CLOCK\_THREAD\_CPUTIME\_ID}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00070}\mbox{\hyperlink{pthread__time_8h_a30114e19c18f57f83727bcaba2458f1e}{00070}}\ \textcolor{preprocessor}{\#define\ CLOCK\_THREAD\_CPUTIME\_ID\ \ \ \ \ 3}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00071}00071\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00073}00073\ \textcolor{preprocessor}{\#ifndef\ CLOCK\_REALTIME\_COARSE}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00074}\mbox{\hyperlink{pthread__time_8h_accb072221e0afcac765ec2bb6e4eca04}{00074}}\ \textcolor{preprocessor}{\#define\ CLOCK\_REALTIME\_COARSE\ \ \ \ \ \ \ 4}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00075}00075\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00077}00077\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00078}00078\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00079}00079\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00081}00081\ \textcolor{comment}{/*\ Make\ sure\ we\ provide\ default\ for\ WINPTHREAD\_API,\ if\ not\ defined.\ \ */}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00082}00082\ \textcolor{preprocessor}{\#pragma\ push\_macro("{}WINPTHREAD\_API"{})}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00083}00083\ \textcolor{preprocessor}{\#ifndef\ WINPTHREAD\_API}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00084}\mbox{\hyperlink{pthread__time_8h_a322901d273e2a229ee61eb5dd3f69b92}{00084}}\ \textcolor{preprocessor}{\#define\ WINPTHREAD\_API}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00085}00085\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00087}00087\ \textcolor{comment}{/*\ These\ should\ really\ be\ dllimport'ed\ if\ using\ winpthread\ dll\ */}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00088}\mbox{\hyperlink{pthread__time_8h_a7d312dd72997b5c427ad9f37888bc543}{00088}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_cdecl}}\ \mbox{\hyperlink{pthread__time_8h_a322901d273e2a229ee61eb5dd3f69b92}{WINPTHREAD\_API}}\ \mbox{\hyperlink{pthread__time_8h_a7d312dd72997b5c427ad9f37888bc543}{nanosleep}}(\textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{timespec}}\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{request}},\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{timespec}}\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{remain}});}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00090}\mbox{\hyperlink{pthread__time_8h_ace66e51d949bb981df82f0af4027278e}{00090}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_cdecl}}\ \mbox{\hyperlink{pthread__time_8h_a322901d273e2a229ee61eb5dd3f69b92}{WINPTHREAD\_API}}\ \mbox{\hyperlink{pthread__time_8h_ace66e51d949bb981df82f0af4027278e}{clock\_nanosleep}}(\mbox{\hyperlink{pthread_8h_a6dcac6a5cea7d9c842145e1444d91e22}{clockid\_t}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{clock\_id}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_e_g_l_2eglext_8h_a3d4f56e54693280c6d9b1177c12c867d}{flags}},\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{timespec}}\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{request}},\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{timespec}}\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{remain}});}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00091}\mbox{\hyperlink{pthread__time_8h_a28639c352abb8559862f676db42f840a}{00091}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_cdecl}}\ \mbox{\hyperlink{pthread__time_8h_a322901d273e2a229ee61eb5dd3f69b92}{WINPTHREAD\_API}}\ \mbox{\hyperlink{pthread__time_8h_a28639c352abb8559862f676db42f840a}{clock\_getres}}(\mbox{\hyperlink{pthread_8h_a6dcac6a5cea7d9c842145e1444d91e22}{clockid\_t}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{clock\_id}},\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{timespec}}\ *\mbox{\hyperlink{raylib_2src_2external_2glad_8h_a1dbb21208b9047cc8031ca9c840d3c2f}{res}});}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00092}\mbox{\hyperlink{pthread__time_8h_a907d36e3ac946c73f25cc3d4cbf44c7a}{00092}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_cdecl}}\ \mbox{\hyperlink{pthread__time_8h_a322901d273e2a229ee61eb5dd3f69b92}{WINPTHREAD\_API}}\ \mbox{\hyperlink{pthread__time_8h_a907d36e3ac946c73f25cc3d4cbf44c7a}{clock\_gettime}}(\mbox{\hyperlink{pthread_8h_a6dcac6a5cea7d9c842145e1444d91e22}{clockid\_t}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{clock\_id}},\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{timespec}}\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{tp}});}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00093}\mbox{\hyperlink{pthread__time_8h_aacc7366adf968b9bf817a281a8f1608f}{00093}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_cdecl}}\ \mbox{\hyperlink{pthread__time_8h_a322901d273e2a229ee61eb5dd3f69b92}{WINPTHREAD\_API}}\ \mbox{\hyperlink{pthread__time_8h_aacc7366adf968b9bf817a281a8f1608f}{clock\_settime}}(\mbox{\hyperlink{pthread_8h_a6dcac6a5cea7d9c842145e1444d91e22}{clockid\_t}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{clock\_id}},\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{timespec}}\ *\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{tp}});}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00095}00095\ \textcolor{preprocessor}{\#pragma\ pop\_macro("{}WINPTHREAD\_API"{})}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00097}00097\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00098}00098\ \}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00099}00099\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00101}00101\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ WIN\_PTHREADS\_TIME\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{pthread__time_8h_source_l00102}00102\ }
+
+\end{DoxyCode}

@@ -1,0 +1,37 @@
+var helper__functions_8h =
+[
+    [ "__gnu_debug::_Distance_traits< _Iterator, typename >", "struct____gnu__debug_1_1___distance__traits.html", "struct____gnu__debug_1_1___distance__traits" ],
+    [ "__gnu_debug::_Distance_traits< _Iterator, typename >::_DiffTraits< _DiffType, typename >", "struct____gnu__debug_1_1___distance__traits_1_1___diff_traits.html", "struct____gnu__debug_1_1___distance__traits_1_1___diff_traits" ],
+    [ "__gnu_debug::_Distance_traits< _Iterator, typename >::_DiffTraits< _DiffType, std::__true_type >", "struct____gnu__debug_1_1___distance__traits_1_1___diff_traits_3_01___diff_type_00_01std_1_1____true__type_01_4.html", "struct____gnu__debug_1_1___distance__traits_1_1___diff_traits_3_01___diff_type_00_01std_1_1____true__type_01_4" ],
+    [ "__gnu_debug::_Distance_traits< _Integral, std::__true_type >", "struct____gnu__debug_1_1___distance__traits_3_01___integral_00_01std_1_1____true__type_01_4.html", "struct____gnu__debug_1_1___distance__traits_3_01___integral_00_01std_1_1____true__type_01_4" ],
+    [ "__gnu_debug::_Unsafe_type< _Iterator >", "struct____gnu__debug_1_1___unsafe__type.html", "struct____gnu__debug_1_1___unsafe__type" ],
+    [ "_Distance_precision", "helper__functions_8h.html#a3817879cb58c2db9f22712a634ef0b92", [
+      [ "__dp_none", "helper__functions_8h.html#a3817879cb58c2db9f22712a634ef0b92a37d3738c89bd46988096fea41ec8150d", null ],
+      [ "__dp_equality", "helper__functions_8h.html#a3817879cb58c2db9f22712a634ef0b92ad6077dcbdce1655fe20dd7afea7768d4", null ],
+      [ "__dp_sign", "helper__functions_8h.html#a3817879cb58c2db9f22712a634ef0b92a470ae4808b59019abc2e7d340b7304b9", null ],
+      [ "__dp_sign_max_size", "helper__functions_8h.html#a3817879cb58c2db9f22712a634ef0b92aa25a8c85b975bc8f00903c6a7b2f8ab2", null ],
+      [ "__dp_exact", "helper__functions_8h.html#a3817879cb58c2db9f22712a634ef0b92a6c017814e9a821fb213f1cde28374a5a", null ]
+    ] ],
+    [ "__base", "helper__functions_8h.html#a462d3f2cc5cb94a7cb98e035cd61b763", null ],
+    [ "__can_advance", "helper__functions_8h.html#a346c18cccaed1159bff97f607e2f9214", null ],
+    [ "__can_advance", "helper__functions_8h.html#a8f5bde6277186e6acade9a3c5a9867a7", null ],
+    [ "__can_advance", "helper__functions_8h.html#aa34c114cfb239720db133abc873f3a7f", null ],
+    [ "__can_advance", "helper__functions_8h.html#abf5ca273d9c149fbde328c6e6127ff7e", null ],
+    [ "__check_singular", "helper__functions_8h.html#af91a5c348f44c548f12858c65f5de6de", null ],
+    [ "__check_singular", "helper__functions_8h.html#a4ee05411c48f57d7a04a7a1d5ee7befa", null ],
+    [ "__check_singular_aux", "helper__functions_8h.html#a1fd55725dcc2e8966031ccb27778e2b8", null ],
+    [ "__get_distance", "helper__functions_8h.html#a481fd8a35f3b6fa46357a78fee211764", null ],
+    [ "__get_distance", "helper__functions_8h.html#a9d77e4b84a7dc6431a6c233aa882358d", null ],
+    [ "__get_distance", "helper__functions_8h.html#a518145bac2cae219ec1ccd6d3f0fbde0", null ],
+    [ "__unsafe", "helper__functions_8h.html#a93a80d764483413811a41139bb6ee4ac", null ],
+    [ "__valid_range", "helper__functions_8h.html#ad5821764925e512153c4fcc303952d97", null ],
+    [ "__valid_range", "helper__functions_8h.html#a9572a31ecdf84000cb4a07f30b49fc7a", null ],
+    [ "__valid_range", "helper__functions_8h.html#ab33c9696c9849a3a4c83310e678faa66", null ],
+    [ "__valid_range", "helper__functions_8h.html#a23a2f44a339d7a9a6ef227cce451e9cd", null ],
+    [ "__valid_range_aux", "helper__functions_8h.html#a87a073e22cbd1f3e4c2c612664e662a7", null ],
+    [ "__valid_range_aux", "helper__functions_8h.html#afdd8e764d39d27c461494300279757c5", null ],
+    [ "__valid_range_aux", "helper__functions_8h.html#ad254e90ad180318a2fd807dd7643d53f", null ],
+    [ "__valid_range_aux", "helper__functions_8h.html#ad5a41fc9b90c4f865313c74d00b6666d", null ],
+    [ "__valid_range_aux", "helper__functions_8h.html#afdeb094e78af635bfe2a0181fb79f905", null ],
+    [ "__valid_range_aux", "helper__functions_8h.html#a762322ab9c0ee2ece23cb3610403e01e", null ]
+];

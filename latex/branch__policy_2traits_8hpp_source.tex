@@ -1,0 +1,94 @@
+\doxysection{traits.\+hpp}
+\hypertarget{branch__policy_2traits_8hpp_source}{}\label{branch__policy_2traits_8hpp_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/pb\_ds/detail/branch\_policy/traits.hpp@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/pb\_ds/detail/branch\_policy/traits.hpp}}
+\mbox{\hyperlink{branch__policy_2traits_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00001}00001\ \textcolor{comment}{//\ -\/*-\/\ C++\ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00003}00003\ \textcolor{comment}{//\ Copyright\ (C)\ 2005-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00005}00005\ \textcolor{comment}{//\ This\ file\ is\ part\ of\ the\ GNU\ ISO\ C++\ Library.\ \ This\ library\ is\ free}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00006}00006\ \textcolor{comment}{//\ software;\ you\ can\ redistribute\ it\ and/or\ modify\ it\ under\ the\ terms}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00007}00007\ \textcolor{comment}{//\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by\ the\ Free\ Software}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00008}00008\ \textcolor{comment}{//\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)\ any\ later}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00009}00009\ \textcolor{comment}{//\ version.}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00011}00011\ \textcolor{comment}{//\ This\ library\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,\ but}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00012}00012\ \textcolor{comment}{//\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00013}00013\ \textcolor{comment}{//\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the\ GNU}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00014}00014\ \textcolor{comment}{//\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00016}00016\ \textcolor{comment}{//\ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00017}00017\ \textcolor{comment}{//\ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00018}00018\ \textcolor{comment}{//\ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00020}00020\ \textcolor{comment}{//\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00021}00021\ \textcolor{comment}{//\ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00022}00022\ \textcolor{comment}{//\ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00023}00023\ \textcolor{comment}{//\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00025}00025\ \textcolor{comment}{//\ Copyright\ (C)\ 2004\ Ami\ Tavory\ and\ Vladimir\ Dreizin,\ IBM-\/HRL.}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00027}00027\ \textcolor{comment}{//\ Permission\ to\ use,\ copy,\ modify,\ sell,\ and\ distribute\ this\ software}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00028}00028\ \textcolor{comment}{//\ is\ hereby\ granted\ without\ fee,\ provided\ that\ the\ above\ copyright}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00029}00029\ \textcolor{comment}{//\ notice\ appears\ in\ all\ copies,\ and\ that\ both\ that\ copyright\ notice}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00030}00030\ \textcolor{comment}{//\ and\ this\ permission\ notice\ appear\ in\ supporting\ documentation.\ None}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00031}00031\ \textcolor{comment}{//\ of\ the\ above\ authors,\ nor\ IBM\ Haifa\ Research\ Laboratories,\ make\ any}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00032}00032\ \textcolor{comment}{//\ representation\ about\ the\ suitability\ of\ this\ software\ for\ any}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00033}00033\ \textcolor{comment}{//\ purpose.\ It\ is\ provided\ "{}as\ is"{}\ without\ express\ or\ implied}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00034}00034\ \textcolor{comment}{//\ warranty.}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00041}00041\ \textcolor{preprocessor}{\#ifndef\ PB\_DS\_NODE\_AND\_IT\_TRAITS\_HPP}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00042}00042\ \textcolor{preprocessor}{\#define\ PB\_DS\_NODE\_AND\_IT\_TRAITS\_HPP}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00044}00044\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{types__traits_8hpp}{ext/pb\_ds/detail/types\_traits.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00045}00045\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{bin__search__tree___2traits_8hpp}{ext/pb\_ds/detail/bin\_search\_tree\_/traits.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00046}00046\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{tree__policy_2node__metadata__selector_8hpp}{ext/pb\_ds/detail/tree\_policy/node\_metadata\_selector.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00047}00047\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{trie__policy_2node__metadata__selector_8hpp}{ext/pb\_ds/detail/trie\_policy/node\_metadata\_selector.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00049}\mbox{\hyperlink{branch__policy_2traits_8hpp_a60a4cde43600043cf4bcfa1ecd9f5e44}{00049}}\ \textcolor{preprocessor}{\#define\ PB\_DS\_DEBUG\_VERIFY(\_Cond)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00050}00050\ \textcolor{preprocessor}{\ \ \_GLIBCXX\_DEBUG\_VERIFY\_AT(\_Cond,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00051}00051\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_M\_message(\#\_Cond"{}\ assertion\ from\ \%1;:\%2;"{})\ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00052}00052\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\_M\_string(\_\_FILE\_\_).\_M\_integer(\_\_LINE\_\_)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00053}00053\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\_\_file,\_\_line)}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00055}00055\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace____gnu__pbds}{\_\_gnu\_pbds}}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00056}00056\ \{}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00057}00057\ \ \ \textcolor{keyword}{namespace\ }detail}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00058}00058\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00060}00060\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Key}},}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Data}},}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ Cmp\_Fn,}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Node\_CItr}},}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Node\_Itr}},}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Cmp\_Fn\_}},}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ \_Alloc>}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Node\_Update}},}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}}\ Tag,}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}}\ \_Alloc>}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00070}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1tree__traits}{00070}}\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}}\ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1tree__traits}{tree\_traits}};}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00073}00073\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Key}},}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Data}},}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ \_ATraits,}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Node\_CItr}},}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Node\_Itr}},}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_ATraits\_}},}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ \_Alloc>}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{Node\_Update}},}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}}\ Tag,}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{typename}}\ \_Alloc>}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00083}\mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1trie__traits}{00083}}\ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{struct}}\ \mbox{\hyperlink{struct____gnu__pbds_1_1detail_1_1trie__traits}{trie\_traits}};}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00085}00085\ \ \ \}\ \textcolor{comment}{//\ namespace\ detail}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00086}00086\ \}\ \textcolor{comment}{//\ namespace\ \_\_gnu\_pbds}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00088}00088\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{rb__tree__map___2traits_8hpp}{ext/pb\_ds/detail/rb\_tree\_map\_/traits.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00089}00089\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{splay__tree___2traits_8hpp}{ext/pb\_ds/detail/splay\_tree\_/traits.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00090}00090\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{ov__tree__map___2traits_8hpp}{ext/pb\_ds/detail/ov\_tree\_map\_/traits.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00091}00091\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{pat__trie___2traits_8hpp}{ext/pb\_ds/detail/pat\_trie\_/traits.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00093}00093\ \textcolor{preprocessor}{\#undef\ PB\_DS\_DEBUG\_VERIFY}}
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{branch__policy_2traits_8hpp_source_l00095}00095\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \#ifndef\ PB\_DS\_NODE\_AND\_IT\_TRAITS\_HPP}}
+
+\end{DoxyCode}

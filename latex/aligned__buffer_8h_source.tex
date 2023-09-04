@@ -1,0 +1,127 @@
+\doxysection{aligned\+\_\+buffer.\+h}
+\hypertarget{aligned__buffer_8h_source}{}\label{aligned__buffer_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/aligned\_buffer.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/include/c++/ext/aligned\_buffer.h}}
+\mbox{\hyperlink{aligned__buffer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00001}00001\ \textcolor{comment}{//\ Aligned\ memory\ buffer\ -\/*-\/\ C++\ -\/*-\/}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00003}00003\ \textcolor{comment}{//\ Copyright\ (C)\ 2013-\/2022\ Free\ Software\ Foundation,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00005}00005\ \textcolor{comment}{//\ This\ file\ is\ part\ of\ the\ GNU\ ISO\ C++\ Library.\ \ This\ library\ is\ free}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00006}00006\ \textcolor{comment}{//\ software;\ you\ can\ redistribute\ it\ and/or\ modify\ it\ under\ the}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00007}00007\ \textcolor{comment}{//\ terms\ of\ the\ GNU\ General\ Public\ License\ as\ published\ by\ the}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00008}00008\ \textcolor{comment}{//\ Free\ Software\ Foundation;\ either\ version\ 3,\ or\ (at\ your\ option)}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00009}00009\ \textcolor{comment}{//\ any\ later\ version.}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00011}00011\ \textcolor{comment}{//\ This\ library\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00012}00012\ \textcolor{comment}{//\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00013}00013\ \textcolor{comment}{//\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00014}00014\ \textcolor{comment}{//\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00016}00016\ \textcolor{comment}{//\ Under\ Section\ 7\ of\ GPL\ version\ 3,\ you\ are\ granted\ additional}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00017}00017\ \textcolor{comment}{//\ permissions\ described\ in\ the\ GCC\ Runtime\ Library\ Exception,\ version}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00018}00018\ \textcolor{comment}{//\ 3.1,\ as\ published\ by\ the\ Free\ Software\ Foundation.}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00020}00020\ \textcolor{comment}{//\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ General\ Public\ License\ and}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00021}00021\ \textcolor{comment}{//\ a\ copy\ of\ the\ GCC\ Runtime\ Library\ Exception\ along\ with\ this\ program;}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00022}00022\ \textcolor{comment}{//\ see\ the\ files\ COPYING3\ and\ COPYING.RUNTIME\ respectively.\ \ If\ not,\ see}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00023}00023\ \textcolor{comment}{//\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00029}00029\ \textcolor{preprocessor}{\#ifndef\ \_ALIGNED\_BUFFER\_H}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00030}00030\ \textcolor{preprocessor}{\#define\ \_ALIGNED\_BUFFER\_H\ 1}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00032}00032\ \textcolor{preprocessor}{\#pragma\ GCC\ system\_header}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00034}00034\ \textcolor{preprocessor}{\#if\ \_\_cplusplus\ >=\ 201103L}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00035}00035\ \textcolor{preprocessor}{\#\ include\ <type\_traits>}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00036}00036\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00037}00037\ \textcolor{preprocessor}{\#\ include\ <\mbox{\hyperlink{c_09_090x__warning_8h}{bits/c++0x\_warning.h}}>}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00038}00038\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00040}00040\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace____gnu__cxx}{\_\_gnu\_cxx}}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00041}00041\ \{}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00042}00042\ \ \ \textcolor{comment}{//\ A\ utility\ type\ containing\ a\ POD\ object\ that\ can\ hold\ an\ object\ of\ type}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00043}00043\ \ \ \textcolor{comment}{//\ \_Tp\ initialized\ via\ placement\ new\ or\ allocator\_traits::construct.}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00044}00044\ \ \ \textcolor{comment}{//\ Intended\ for\ use\ as\ a\ data\ member\ subobject,\ use\ \_\_aligned\_buffer\ for}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00045}00045\ \ \ \textcolor{comment}{//\ complete\ objects.}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00046}00046\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Tp>}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00047}\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__membuf}{00047}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__membuf}{\_\_aligned\_membuf}}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00048}00048\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00049}00049\ \ \ \ \ \ \ \textcolor{comment}{//\ Target\ macro\ ADJUST\_FIELD\_ALIGN\ can\ produce\ different\ alignment\ for}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00050}00050\ \ \ \ \ \ \ \textcolor{comment}{//\ types\ when\ used\ as\ class\ members.\ \_\_aligned\_membuf\ is\ intended}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00051}00051\ \ \ \ \ \ \ \textcolor{comment}{//\ for\ use\ as\ a\ class\ member,\ so\ align\ the\ buffer\ as\ for\ a\ class\ member.}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00052}00052\ \ \ \ \ \ \ \textcolor{comment}{//\ Since\ GCC\ 8\ we\ could\ just\ use\ alignof(\_Tp)\ instead,\ but\ older}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00053}00053\ \ \ \ \ \ \ \textcolor{comment}{//\ versions\ of\ non-\/GNU\ compilers\ might\ still\ need\ this\ trick.}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00054}\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__membuf_1_1___tp2_a264ef645d34c2d9deeffa6c7b9e739a6}{00054}}\ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__membuf_1_1___tp2}{\_Tp2}}\ \{\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}\ \mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__membuf_1_1___tp2_a264ef645d34c2d9deeffa6c7b9e739a6}{\_M\_t}};\ \};}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00056}\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__membuf_ab1b36b8ce97a24fd094f058b8bc1b9aa}{00056}}\ \ \ \ \ \ \ \textcolor{keyword}{alignas}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_alignof\_\_}}(\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__membuf_1_1___tp2_a264ef645d34c2d9deeffa6c7b9e739a6}{\_Tp2::\_M\_t}}))\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__membuf_ab1b36b8ce97a24fd094f058b8bc1b9aa}{\_M\_storage}}[\textcolor{keyword}{sizeof}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}})];}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00058}\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__membuf_a1b0ca934e2ed01f51f3885aaf4ecf2de}{00058}}\ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__membuf_a1b0ca934e2ed01f51f3885aaf4ecf2de}{\_\_aligned\_membuf}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00060}00060\ \ \ \ \ \ \ \textcolor{comment}{//\ Can\ be\ used\ to\ avoid\ value-\/initialization\ zeroing\ \_M\_storage.}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00061}\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__membuf_a657b90893029211920cebe5bc9853363}{00061}}\ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__membuf_a657b90893029211920cebe5bc9853363}{\_\_aligned\_membuf}}(std::nullptr\_t)\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00063}00063\ \ \ \ \ \ \ \textcolor{keywordtype}{void}*}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00064}\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__membuf_a2b9646a5aa6db498e005165d28a7ce6c}{00064}}\ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__membuf_a2b9646a5aa6db498e005165d28a7ce6c}{\_M\_addr}}()\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{noexcept}}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00065}00065\ \ \ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{void}*\textcolor{keyword}{>}(\&\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__membuf_ab1b36b8ce97a24fd094f058b8bc1b9aa}{\_M\_storage}});\ \}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00067}00067\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00068}\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__membuf_ae41e71e75b4a4585e8170dca16cb9bce}{00068}}\ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__membuf_ae41e71e75b4a4585e8170dca16cb9bce}{\_M\_addr}}()\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{noexcept}}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00069}00069\ \ \ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{void}*\textcolor{keyword}{>}(\&\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__membuf_ab1b36b8ce97a24fd094f058b8bc1b9aa}{\_M\_storage}});\ \}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00071}00071\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}*}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00072}\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__membuf_a3434c6ec6478f76db116927a26c4fec9}{00072}}\ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__membuf_a3434c6ec6478f76db116927a26c4fec9}{\_M\_ptr}}()\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{noexcept}}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00073}00073\ \ \ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}*\textcolor{keyword}{>}(\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__membuf_a2b9646a5aa6db498e005165d28a7ce6c}{\_M\_addr}}());\ \}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00075}00075\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}*}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00076}\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__membuf_ac39a4feffcecdff27c0e11662603e3d6}{00076}}\ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__membuf_ac39a4feffcecdff27c0e11662603e3d6}{\_M\_ptr}}()\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{noexcept}}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00077}00077\ \ \ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}*\textcolor{keyword}{>}(\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__membuf_a2b9646a5aa6db498e005165d28a7ce6c}{\_M\_addr}}());\ \}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00078}00078\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00080}00080\ \textcolor{preprocessor}{\#if\ \_GLIBCXX\_INLINE\_VERSION}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00081}00081\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Tp>}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00082}00082\ \ \ \ \ \textcolor{keyword}{using\ }\_\_aligned\_buffer\ =\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_aligned\_membuf<\_Tp>}};}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00083}00083\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00084}00084\ \ \ \textcolor{comment}{//\ Similar\ to\ \_\_aligned\_membuf\ but\ aligned\ for\ complete\ objects,\ not\ members.}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00085}00085\ \ \ \textcolor{comment}{//\ This\ type\ is\ used\ in\ <forward\_list>,\ <future>,\ <bits/shared\_ptr\_base.h>}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00086}00086\ \ \ \textcolor{comment}{//\ and\ <bits/hashtable\_policy.h>,\ but\ ideally\ they\ would\ use\ \_\_aligned\_membuf}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00087}00087\ \ \ \textcolor{comment}{//\ instead,\ as\ it\ has\ smaller\ size\ for\ some\ types\ on\ some\ targets.}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00088}00088\ \ \ \textcolor{comment}{//\ This\ type\ is\ still\ used\ to\ avoid\ an\ ABI\ change.}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00089}00089\ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ \_Tp>}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00090}\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__buffer}{00090}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__buffer}{\_\_aligned\_buffer}}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00091}00091\ \ \ \ \ :\ std::aligned\_storage<sizeof(\_Tp),\ \_\_alignof\_\_(\_Tp)>}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00092}00092\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00093}00093\ \ \ \ \ \ \ \textcolor{keyword}{typename}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00094}\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__buffer_a5dc8d20475763efba4349fd6bf695fb2}{00094}}\ \ \ \ \ std::aligned\_storage<\textcolor{keyword}{sizeof}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}),\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_\_alignof\_\_}}(\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}})>\mbox{\hyperlink{_gameobj_8h_a890efa53b3d7deeeced6f3a0d6653ed3}{::type}}\ \mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__buffer_a5dc8d20475763efba4349fd6bf695fb2}{\_M\_storage}};}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00096}\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__buffer_af767d1991b18fb0d752455f08aed0b05}{00096}}\ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__buffer_af767d1991b18fb0d752455f08aed0b05}{\_\_aligned\_buffer}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00098}00098\ \ \ \ \ \ \ \textcolor{comment}{//\ Can\ be\ used\ to\ avoid\ value-\/initialization}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00099}\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__buffer_ac1bd1f928e26bae12723bb6529ff0811}{00099}}\ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__buffer_ac1bd1f928e26bae12723bb6529ff0811}{\_\_aligned\_buffer}}(std::nullptr\_t)\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00101}00101\ \ \ \ \ \ \ \textcolor{keywordtype}{void}*}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00102}\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__buffer_a1d3a215f88d305fbe28246d64b0a2fda}{00102}}\ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__buffer_a1d3a215f88d305fbe28246d64b0a2fda}{\_M\_addr}}()\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{noexcept}}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00103}00103\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00104}00104\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{void}*\textcolor{keyword}{>}(\&\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__buffer_a5dc8d20475763efba4349fd6bf695fb2}{\_M\_storage}});}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00105}00105\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00107}00107\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00108}\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__buffer_a9d3300c8ab425bbe2f402cfd729527db}{00108}}\ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__buffer_a9d3300c8ab425bbe2f402cfd729527db}{\_M\_addr}}()\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{noexcept}}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00109}00109\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00110}00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const\ }\textcolor{keywordtype}{void}*\textcolor{keyword}{>}(\&\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__buffer_a5dc8d20475763efba4349fd6bf695fb2}{\_M\_storage}});}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00111}00111\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00113}00113\ \ \ \ \ \ \ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}*}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00114}\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__buffer_a4f7396ec827253c1af249edad1c67b06}{00114}}\ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__buffer_a4f7396ec827253c1af249edad1c67b06}{\_M\_ptr}}()\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{noexcept}}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00115}00115\ \ \ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}*\textcolor{keyword}{>}(\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__buffer_a1d3a215f88d305fbe28246d64b0a2fda}{\_M\_addr}}());\ \}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00117}00117\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}*}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00118}\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__buffer_aa12d1b00657c87da2e57164246b3d593}{00118}}\ \ \ \ \ \ \ \mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__buffer_aa12d1b00657c87da2e57164246b3d593}{\_M\_ptr}}()\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{const}}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{noexcept}}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00119}00119\ \ \ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const\ }\mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{\_Tp}}*\textcolor{keyword}{>}(\mbox{\hyperlink{struct____gnu__cxx_1_1____aligned__buffer_a1d3a215f88d305fbe28246d64b0a2fda}{\_M\_addr}}());\ \}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00120}00120\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00121}00121\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00123}00123\ \}\ \textcolor{comment}{//\ namespace}}
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{aligned__buffer_8h_source_l00125}00125\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_ALIGNED\_BUFFER\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

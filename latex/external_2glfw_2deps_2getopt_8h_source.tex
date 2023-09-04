@@ -1,0 +1,63 @@
+\doxysection{getopt.\+h}
+\hypertarget{external_2glfw_2deps_2getopt_8h_source}{}\label{external_2glfw_2deps_2getopt_8h_source}\index{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/external/glfw/deps/getopt.h@{C:/Git/Minero/raylib/projects/VSCode/Classes/lib/external/glfw/deps/getopt.h}}
+\mbox{\hyperlink{external_2glfw_2deps_2getopt_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00001}00001\ \textcolor{comment}{/*\ Copyright\ (c)\ 2012,\ Kim\ Gräsman}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00002}00002\ \textcolor{comment}{\ *\ All\ rights\ reserved.}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00004}00004\ \textcolor{comment}{\ *\ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00005}00005\ \textcolor{comment}{\ *\ modification,\ are\ permitted\ provided\ that\ the\ following\ conditions\ are\ met:}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00006}00006\ \textcolor{comment}{\ *\ \ *\ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright\ notice,}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00007}00007\ \textcolor{comment}{\ *\ \ \ \ this\ list\ of\ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00008}00008\ \textcolor{comment}{\ *\ \ *\ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright\ notice,}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00009}00009\ \textcolor{comment}{\ *\ \ \ \ this\ list\ of\ conditions\ and\ the\ following\ disclaimer\ in\ the\ documentation}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00010}00010\ \textcolor{comment}{\ *\ \ \ \ and/or\ other\ materials\ provided\ with\ the\ distribution.}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00011}00011\ \textcolor{comment}{\ *\ \ *\ Neither\ the\ name\ of\ Kim\ Gräsman\ nor\ the\ names\ of\ contributors\ may\ be\ used}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00012}00012\ \textcolor{comment}{\ *\ \ \ \ to\ endorse\ or\ promote\ products\ derived\ from\ this\ software\ without\ specific}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00013}00013\ \textcolor{comment}{\ *\ \ \ \ prior\ written\ permission.}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00014}00014\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00015}00015\ \textcolor{comment}{\ *\ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ "{}AS\ IS"{}}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00016}00016\ \textcolor{comment}{\ *\ AND\ ANY\ EXPRESS\ OR\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ LIMITED\ TO,\ THE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00017}00017\ \textcolor{comment}{\ *\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00018}00018\ \textcolor{comment}{\ *\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ KIM\ GRÄSMAN\ BE\ LIABLE\ FOR\ ANY\ DIRECT,}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00019}00019\ \textcolor{comment}{\ *\ INDIRECT,\ INCIDENTAL,\ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00020}00020\ \textcolor{comment}{\ *\ (INCLUDING,\ BUT\ NOT\ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00021}00021\ \textcolor{comment}{\ *\ LOSS\ OF\ USE,\ DATA,\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00022}00022\ \textcolor{comment}{\ *\ ON\ ANY\ THEORY\ OF\ LIABILITY,\ WHETHER\ IN\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00023}00023\ \textcolor{comment}{\ *\ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT\ OF\ THE\ USE\ OF\ THIS}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00024}00024\ \textcolor{comment}{\ *\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00025}00025\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00027}00027\ \textcolor{preprocessor}{\#ifndef\ INCLUDED\_GETOPT\_PORT\_H}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00028}00028\ \textcolor{preprocessor}{\#define\ INCLUDED\_GETOPT\_PORT\_H}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00030}00030\ \textcolor{preprocessor}{\#if\ defined(\_\_cplusplus)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00031}00031\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00032}00032\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00034}00034\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{external_2glfw_2deps_2getopt_8h_a69637a51de0bbacf102f8aae7281f6e0}{no\_argument}};}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00035}00035\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{external_2glfw_2deps_2getopt_8h_aea125b304b6afc653fa99511629d1e90}{required\_argument}};}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00036}00036\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{external_2glfw_2deps_2getopt_8h_a7035c1113b17e25706c513375cdfc81a}{optional\_argument}};}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00038}00038\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{external_2glfw_2deps_2getopt_8h_adb50a0eab9fed92fc3bfc7dfa4f2c410}{optarg}};}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00039}\mbox{\hyperlink{external_2glfw_2deps_2getopt_8h_ae30f05ee1e2e5652f174a35c7875d25e}{00039}}\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{external_2glfw_2deps_2getopt_8h_ad5e1c16213bbee2d5e8cc363309f418c}{optind}},\ \mbox{\hyperlink{external_2glfw_2deps_2getopt_8h_ae30f05ee1e2e5652f174a35c7875d25e}{opterr}},\ \mbox{\hyperlink{external_2glfw_2deps_2getopt_8h_a475b8db98445da73e5f62a1ef6324b95}{optopt}};}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00041}\mbox{\hyperlink{structoption}{00041}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structoption}{option}}\ \{}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00042}\mbox{\hyperlink{structoption_ae02f2d0cea6af34951d9008be8bfa625}{00042}}\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{structoption_ae02f2d0cea6af34951d9008be8bfa625}{name}};}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00043}\mbox{\hyperlink{structoption_a90d7ee9a51eea5c002682dbd0af149e4}{00043}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structoption_a90d7ee9a51eea5c002682dbd0af149e4}{has\_arg}};}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00044}\mbox{\hyperlink{structoption_a24ad4639d5d498fdc1c5b38bcaabc263}{00044}}\ \ \ \textcolor{keywordtype}{int}*\ \mbox{\hyperlink{structoption_a24ad4639d5d498fdc1c5b38bcaabc263}{flag}};}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00045}\mbox{\hyperlink{structoption_a13bd155ec3b405d29c41ab8d0793be11}{00045}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structoption_a13bd155ec3b405d29c41ab8d0793be11}{val}};}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00046}00046\ \};}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00048}00048\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{external_2glfw_2deps_2getopt_8h_a5ffa4c677fc71cecd94f140ef9db624c}{getopt}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{argc}},\ \textcolor{keywordtype}{char}*\ \textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{argv}}[],\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{optstring}});}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00050}00050\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{external_2glfw_2deps_2getopt_8h_a19a25d4c484d212220cad56a69c426b0}{getopt\_long}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{argc}},\ \textcolor{keywordtype}{char}*\ \textcolor{keyword}{const}\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{argv}}[],}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00051}00051\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{optstring}},\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structoption}{option}}*\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{longopts}},\ \textcolor{keywordtype}{int}*\ \mbox{\hyperlink{raylib_2src_2external_2_a_n_g_l_e_2_g_l_e_s2_2gl2ext_8h_ae60229696c2ec17c9e00af4899bf738e}{longindex}});}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00053}00053\ \textcolor{preprocessor}{\#if\ defined(\_\_cplusplus)}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00054}00054\ \}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00055}00055\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{external_2glfw_2deps_2getopt_8h_source_l00057}00057\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ INCLUDED\_GETOPT\_PORT\_H}}
+
+\end{DoxyCode}
