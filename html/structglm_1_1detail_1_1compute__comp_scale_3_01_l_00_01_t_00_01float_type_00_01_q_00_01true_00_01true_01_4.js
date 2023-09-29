@@ -1,4 +1,0 @@
-var structglm_1_1detail_1_1compute__comp_scale_3_01_l_00_01_t_00_01float_type_00_01_q_00_01true_00_01true_01_4 =
-[
-    [ "call", "structglm_1_1detail_1_1compute__comp_scale_3_01_l_00_01_t_00_01float_type_00_01_q_00_01true_00_01true_01_4.html#a78ed947ec8bd155163bf031b5c6d3ff0", null ]
-];
